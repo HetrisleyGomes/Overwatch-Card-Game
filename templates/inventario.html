@@ -1,0 +1,91 @@
+{% extends 'index.html' %}
+{% block centro %}
+<link rel="stylesheet" href="../static/styles/inventario.css">
+<link rel="stylesheet" href="../static/styles/carta.css">
+<!-- CENTRO -->
+<div class="main">
+
+<div class="toggle-button">
+    <span>Ver todas as cartas</span>
+    <div class="switch__container">
+        <input id="switch-shadow" class="switch switch--shadow" 
+        type="checkbox"
+        {% if mostrar_todas %}checked{% endif %} />
+        <label for="switch-shadow"></label>
+    </div>
+</div>
+
+<div class="grid-cartas">
+    {% for carta in cartas %}
+        {% if mostrar_todas or carta.possui %}
+        <!-- colocar isso depois de wrapper: -->
+        <div class="card-wrapper {% if not carta.possui %}apagada{% endif %}">
+
+            <div class="card {{ carta.raridade }} {{ carta.classe|lower }}">
+
+                <!-- Nome -->
+                <div class="card-nome">
+                    {% if carta.possui %}
+                    {{ carta.nome }}
+                    {% endif %}
+                </div>
+
+                <!-- Imagem -->
+                {% if carta.possui %}
+                    <div class="card-img">
+                        <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                    </div>
+                {% else %}
+                    <div class="card-img">
+                        <img src="{{ url_for('static', filename='logos/logo.png' ) }}">
+                    </div>
+                {% endif %}
+
+
+                
+
+                <!-- Classe -->
+                <div class="card-classe">
+                    {% if carta.possui %}
+                    {{ carta.classe }} — {{ carta.subclasse }}
+                    {% endif %}
+                </div>
+
+                <!-- Texto -->
+                <div class="card-texto">
+                    {% if carta.possui %}
+                    <p class="entrada">"{{ carta.entrada }}"</p>
+                    <p class="ult">
+                        <strong>{{ carta.ult_nome }}:</strong> {{ carta.ult }}
+                    </p>
+                    {% endif %}
+                </div>
+
+            </div>
+
+            <!-- Info abaixo -->
+            <div class="card-info">
+                {% if carta.possui %}
+                <span>{{ carta.nome }}</span>
+                {% endif %}
+                <span>x{{ carta.quantidade }}</span>
+            </div>
+
+        </div>
+
+        {% endif %}
+    {% endfor %}
+</div>
+</div>
+<div class="space"></div>
+<script>
+const checkbox = document.getElementById("switch-shadow");
+
+checkbox.addEventListener("change", () => {
+    const valor = checkbox.checked ? "1" : "0";
+
+    // redireciona com query param
+    window.location.href = `/inventario?all=${valor}`;
+});
+</script>
+{% endblock %}

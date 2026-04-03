@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "nome": "Hetris",
+    "pontos": 5164,
+    "ultimo_login": "2026-04-02",
+    "profile_img": "logo.png",
+    "packs_diarios_abertos": 1,
+    "contador_packs_comuns": 9,
+    "packs_comprados_comum": 4,
+    "packs_comprados_raro": 27,
+    "has_already_get_daily_bonus": true,
+    "packs_evento": 0
+  },
+  {
+    "id": 2,
+    "nome": "Hetrisley",
+    "pontos": 218,
+    "ultimo_login": "2026-04-02",
+    "profile_img": "logo.png",
+    "packs_diarios_abertos": 0,
+    "contador_packs_comuns": 4,
+    "packs_comprados_comum": 0,
+    "packs_comprados_raro": 0,
+    "has_already_get_daily_bonus": true,
+    "packs_evento": 0
+  }
+]

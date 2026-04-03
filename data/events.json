@@ -1,0 +1,23 @@
+[
+  {
+    "id": "natal",
+    "nome": "Evento de Natal!",
+    "inicio": "12-18",
+    "fim": "12-31",
+    "ativo": false
+  },
+  {
+    "id": "halloween",
+    "nome": "Evento de Halloween!",
+    "inicio": "10-18",
+    "fim": "10-31",
+    "ativo": false
+  },
+  {
+    "id": "april_fools",
+    "nome": "Primeiro de Abril :p",
+    "inicio": "03-30",
+    "fim": "04-14",
+    "ativo": true
+  }
+]

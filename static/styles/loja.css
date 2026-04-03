@@ -1,0 +1,90 @@
+.container {
+    padding: 0 40px;
+}
+
+.prateleira {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    width: 70vw;
+    margin: auto;
+    gap: 20px;
+}
+
+.item {
+    border: 6px solid #3b4f63;
+    width: 28vw;
+    height: 18vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item_name {
+    font-size: 20px;
+    font-weight: 600;
+    height: 20px;
+    padding: 10px;
+}
+
+.item_description {
+    height: 100%;
+}
+
+.item_button {
+    height: 10vh;
+    padding: 10px;
+}
+
+.desativado {
+    opacity: 0.8;
+    cursor: default;
+    transform: none;
+}
+
+.especial {
+    border: 6px solid mediumpurple;
+}
+
+/* RESPONSIVIDADE ========================== */
+@media (max-width: 768px) {
+    .prateleira {
+        width: 80vw;
+        gap: 10px;
+    }
+    .item {
+        width: 34vw;
+        height: 24vh;
+    }
+    .item_name {
+        font-size: 16px;
+    }
+    .item_description {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0 10px;
+    }
+    .prateleira {
+        width: 90vw;
+    }
+    .item {
+        width: 40vw;
+    }
+    .item_name {
+        font-size: 12px;
+    }
+    .item_description {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+    h1 {
+        margin: 2vh 0;
+    }
+}

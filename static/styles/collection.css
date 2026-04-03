@@ -1,0 +1,167 @@
+.set {
+    background: #2b3a4a;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.set_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 1vh 2vw;
+}
+
+.set_head h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.set_head p {
+    margin: 0;
+    font-size: 12px;
+    text-align: right;
+}
+
+.progress_bar {
+    width: 100%;
+    height: 20px;
+    background-color: #1a2530;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress_fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    transition: width 0.4s ease;
+}
+
+.progresso {
+    position: absolute;
+    margin-left: 46.5vw;
+}
+
+.set_body {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 20px;
+}
+
+.personagem, .personagem_apagado {
+    width: 200px;
+    text-align: center;
+    color: white;
+}
+
+.personagem_img img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.personagem_base {
+    background: #1a2530;
+    padding: 5px;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 12px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p_nome {
+    display: block;
+    font-weight: bold;
+}
+
+.raridade {
+    width: 10px;
+    height: 10px;
+    margin: 3px auto 0;
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    box-sizing: border-box;
+    border: 1px solid white;
+}
+
+.raridade.comum { background: black; }
+.raridade.incomum { background: gray; }
+.raridade.raro { background: gold; }
+.raridade.mitico { background: purple; }
+.raridade.especial { background: mediumpurple; 
+    border: 2px dotted lightskyblue; }
+
+.personagem_apagado {
+    opacity: 0.4;
+    filter: grayscale(100%);
+}
+
+.set.completo {
+    border: 2px solid gold;
+    animation: brilho 1s ease;
+}
+
+@keyframes brilho {
+    from { box-shadow: 0 0 10px gold; }
+    to { box-shadow: 0 0 20px orange; }
+}
+
+.personagem:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.space {
+    height: 8vh;
+}
+
+/* RESPONSIVIDADE ========================== */
+@media (max-width: 768px) {
+  .progress_bar {
+    margin: 4px 0;
+  }
+  .set-body {
+    padding: 4px 0;;
+  }
+  .personagem {
+    width: 150px;
+  }
+  .personagem_img img {
+    width: 140px;
+    height: 140px;
+  }
+  .personagem_base {
+    padding: 4px 0;
+    margin-top: 0;
+    font-size: 10px;
+  }
+  .p_nome {
+    margin-right: 10px;
+  }
+  .raridade{
+    right: 6px;
+  }
+
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

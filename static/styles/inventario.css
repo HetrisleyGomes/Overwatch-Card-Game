@@ -1,0 +1,131 @@
+.grid-cartas {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #3b4f63;
+    margin-bottom: 75px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.apagada {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+.card-info {
+    margin-top: 6px;
+    display: flex;
+    font-size: 14px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    background-color: #2c3c4d;
+    border: 1px solid #4f6377;
+    padding: 8px 22px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 14vw;
+    margin-left: auto;
+    padding-bottom: 10px;
+}
+
+/* Switch*/
+.switch {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+
+.switch + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.switch--shadow + label {
+  padding: 2px;
+  width: 60px;
+  height: 30px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+
+.switch--shadow + label:before,
+.switch--shadow + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: '';
+}
+.switch--shadow + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: all 0.4s;
+}
+.switch--shadow + label:after {
+  width: 32px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+
+.switch--shadow:checked + label:before {
+  background-color: #8ce196;
+}
+.switch--shadow:checked + label:after {
+  transform: translateX(30px);
+}
+
+/* RESPONSIVIDADE ========================== */
+@media (max-width: 768px) {
+  .toggle-button {
+    width: 30vw;
+  }
+  .grid-cartas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+  .card-wrapper {
+    width: 200px;
+    height: 360px;
+  }
+  .card-info {
+    font-size: 12px;
+    padding: 8px 8px;
+}
+
+}
+
+@media (max-width: 360px) {
+  .toggle-button {
+    width: 60vw;
+    padding-bottom: 6px;
+  }
+  .card-wrapper {
+    width: 160px;
+    height: 230px;
+  }
+  .grid-cartas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+    padding: 10px 0 20px;
+  }
+  .card-info {
+    font-size: clamp(8px, 1vw, 12px);
+    padding: 8px 8px;
+  }
+}

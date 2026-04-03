@@ -1,0 +1,1184 @@
+[
+  {
+    "id": "ana",
+    "nome": "Ana",
+    "personagens": [
+      "ana_comum",
+      "arqui-comandante_amari",
+      "ana_dourado",
+      "a-7000_Wargod"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "anran",
+    "nome": "Anran",
+    "personagens": [
+      "anran_comum",
+      "anran_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "ashe",
+    "nome": "Ashe",
+    "personagens": [
+      "ashe_comum",
+      "ashe_warlock",
+      "ashe_dourado",
+      "imperatriz_calamidade",
+      "rosa_de_chumbo"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "baptiste",
+    "nome": "Baptiste",
+    "personagens": [
+      "baptiste_comum",
+      "baptiste_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "bastion",
+    "nome": "Bastion",
+    "personagens": [
+      "bastion_comum",
+      "bastion_kishin",
+      "bastion_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "brigitte",
+    "nome": "Brigitte",
+    "personagens": [
+      "brigitte_comum",
+      "brigitte_coracao",
+      "brigitte_talon",
+      "brigitte_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "cassidy",
+    "nome": "Cassidy",
+    "personagens": [
+      "cassidy_comum",
+      "cassidy_van_helsing",
+      "cassidy_dourado",
+      "pistoleiro_divino",
+      "ocaso_flamejante"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "dva",
+    "nome": "D.Va",
+    "personagens": [
+      "dva_comum",
+      "dva_chibi",
+      "dva_dourado",
+      "horang"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "domina",
+    "nome": "Domina",
+    "personagens": [
+      "domina_comum",
+      "domina_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "doomfist",
+    "nome": "Doomfist",
+    "personagens": [
+      "doomfist_comum",
+      "comandante_ataque",
+      "doomfist_dourado",
+      "titan_magma"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "echo",
+    "nome": "Echo",
+    "personagens": [
+      "echo_comum",
+      "echo_furtividade",
+      "echo_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "emre",
+    "nome": "Emre",
+    "personagens": [
+      "emre_comum",
+      "emre_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "freja",
+    "nome": "Freja",
+    "personagens": [
+      "freja_comum",
+      "freja_coracao",
+      "freja_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "genji",
+    "nome": "Genji",
+    "personagens": [
+      "genji_comum",
+      "genji_oni",
+      "genji_baihu",
+      "genji_dourado",
+      "cyber_demonio"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "hanzo",
+    "nome": "Hanzo",
+    "personagens": [
+      "hanzo_comum",
+      "hanzo_okami",
+      "hanzo_dourado",
+      "onryo"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "hazard",
+    "nome": "Hazard",
+    "personagens": [
+      "hazard_comum",
+      "hazard_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "illari",
+    "nome": "Illari",
+    "personagens": [
+      "illari_comum",
+      "illari_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "jetpack_cat",
+    "nome": "Jetpack Cat",
+    "personagens": [
+      "jetpack_cat_comum",
+      "jetpack_cat_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "junkrat",
+    "nome": "Junkrat",
+    "personagens": [
+      "junkrat_comum",
+      "junkrat_junkstein",
+      "junkrat_dourado",
+      "cyber_combustivel"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "juno",
+    "nome": "Juno",
+    "personagens": [
+      "juno_comum",
+      "juno_dourado",
+      "juno_coracao",
+      "atiradora das estrelas"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "kiriko",
+    "nome": "Kiriko",
+    "personagens": [
+      "kiriko_comum",
+      "kiriko_coracao",
+      "kiriko_dourado",
+      "amateratsu",
+      "guardia_espiritual"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "lifeweaver",
+    "nome": "Lifeweaver",
+    "personagens": [
+      "lifeweaver_comum",
+      "lifeweaver_dourado",
+      "druida_divino"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "lucio",
+    "nome": "Lúcio",
+    "personagens": [
+      "lucio_comum",
+      "lucio_hermes",
+      "lucio_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "mauga",
+    "nome": "Mauga",
+    "personagens": [
+      "mauga_comum",
+      "mauga_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "mei",
+    "nome": "Mei",
+    "personagens": [
+      "mei_comum",
+      "mei_dourado",
+      "pulo_online"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "mercy",
+    "nome": "Mercy",
+    "personagens": [
+      "mercy_comum",
+      "mercy_diabrete",
+      "mercy_conjuradora",
+      "mercy_sigrun",
+      "mercy_dourado",
+      "vengeance",
+      "guardia_celestial",
+      "magitecnologia_misericordiosa"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "mizuki",
+    "nome": "Mizuki",
+    "personagens": [
+      "mizuki_comum",
+      "mizuki_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "moira",
+    "nome": "Moira",
+    "personagens": [
+      "moira_comum",
+      "moira_dourado",
+      "invocadora_ancestral"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "orisa",
+    "nome": "Orisa",
+    "personagens": [
+      "orisa_comum",
+      "orisa_dourado",
+      "fera_grandeosa",
+      "canhao_capsulas"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "pharah",
+    "nome": "Pharah",
+    "personagens": [
+      "pharah_comum",
+      "pharah_hades",
+      "pharah_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "rainha_junker",
+    "nome": "Rainha Junker",
+    "personagens": [
+      "rainha_junker_comum",
+      "rainha_junker_executora",
+      "rainha_junker_dourado",
+      "zeus"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "ramattra",
+    "nome": "Ramattra",
+    "personagens": [
+      "ramattra_comum",
+      "ramattra_poseidon",
+      "ramattra_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "reaper",
+    "nome": "Reaper",
+    "personagens": [
+      "reaper_comum",
+      "reaper_abobora",
+      "reaper_dourado",
+      "anubis",
+      "aco_letal"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "reinhardt",
+    "nome": "Reinhardt",
+    "personagens": [
+      "reinhardt_comum",
+      "reinhardt_gridironhardt",
+      "fallen_knight",
+      "reinhardt_dourado",
+      "thor",
+      "demonio_aprisionado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "roadhog",
+    "nome": "Roadhog",
+    "personagens": [
+      "roadhog_comum",
+      "roadhog_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "sigma",
+    "nome": "Sigma",
+    "personagens": [
+      "sigma_comum",
+      "sigma_dourado",
+      "imperador_galatico"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "sojourn",
+    "nome": "Sojourn",
+    "personagens": [
+      "sojourn_comum",
+      "sojourn_dourado",
+      "sentinela_ultra-violeta"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "soldado_76",
+    "nome": "Soldado: 76",
+    "personagens": [
+      "soldado_76_comum",
+      "soldado_76_dourado",
+      "libertacao"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "sombra",
+    "nome": "Sombra",
+    "personagens": [
+      "sombra_comum",
+      "sombra_cacadora_demonios",
+      "sombra_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "symmetra",
+    "nome": "Symmetra",
+    "personagens": [
+      "symmetra_comum",
+      "symmetra_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "torbjorn",
+    "nome": "Torbjörn",
+    "personagens": [
+      "torbjorn_comum",
+      "torbjorn_engenheiro_espacial",
+      "torbjorn_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "tracer",
+    "nome": "Tracer",
+    "personagens": [
+      "tracer_comum",
+      "operadora_oxton",
+      "tracer_dourado",
+      "aventureira"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "vendetta",
+    "nome": "Vendetta",
+    "personagens": [
+      "vendetta_comum",
+      "vendetta_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "venture",
+    "nome": "Venture",
+    "personagens": [
+      "venture_comum",
+      "venture_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "widowmaker",
+    "nome": "Widowmaker",
+    "personagens": [
+      "widowmaker_comum",
+      "widowmaker_cacadora",
+      "widowmaker_coracao",
+      "capita_lacroix",
+      "widowmaker_dourado",
+      "feiticeira",
+      "dame_chance"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "winston",
+    "nome": "Winston",
+    "personagens": [
+      "winston_comum",
+      "winston_extraterreste",
+      "winston_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "wrecking_ball",
+    "nome": "Wrecking Ball",
+    "personagens": [
+      "wrecking_ball_comum",
+      "wrecking_ball_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "wuyang",
+    "nome": "Wuyang",
+    "personagens": [
+      "wuyang_comum",
+      "wuyang_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "zarya",
+    "nome": "Zarya",
+    "personagens": [
+      "zarya_comum",
+      "talon_zarya",
+      "zarya_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "zenyatta",
+    "nome": "Zenyatta",
+    "personagens": [
+      "zenyatta_comum",
+      "zenyatta_cultista",
+      "destruidor_z-3n",
+      "zenyatta_dourado",
+      "pixiu"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
+    "id": "cacador",
+    "nome": "Caçadores",
+    "personagens": [
+      "freja_comum",
+      "cassidy_van_helsing",
+      "hanzo_okami",
+      "sombra_cacadora_demonios",
+      "widowmaker_cacadora"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "campeao",
+    "nome": "Campeões",
+    "personagens": [
+      "rainha_junker_executora",
+      "reinhardt_gridironhardt",
+      "torbjorn_engenheiro_espacial",
+      "winston_extraterreste"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "guerreiro",
+    "nome": "Guerreiros",
+    "personagens": [
+      "genji_baihu",
+      "mercy_sigrun",
+      "aventureira"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "meka",
+    "nome": "Meka",
+    "personagens": [
+      "dva_comum",
+      "horang"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "shimada",
+    "nome": "Clã Shimada",
+    "personagens": [
+      "genji_comum",
+      "hanzo_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "fogo",
+    "nome": "Fogo",
+    "personagens": [
+      "anran_comum",
+      "ashe_comum",
+      "mauga_comum",
+      "ocaso_flamejante",
+      "titan_magma",
+      "demonio_aprisionado"
+    ],
+    "recompensa": {
+      "pontos": 400
+    }
+  },
+  {
+    "id": "sol",
+    "nome": "Guerreiros do sol",
+    "personagens": [
+      "illari_comum",
+      "pistoleiro_divino",
+      "amateratsu"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
+    "id": "escola_elemental",
+    "nome": "Escola elemental",
+    "personagens": [
+      "anran_comum",
+      "wuyang_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "melee",
+    "nome": "Combatentes corpo à corpo",
+    "personagens": [
+      "brigitte_comum",
+      "doomfist_comum",
+      "reinhardt_comum",
+      "vendetta_comum",
+      "venture_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "selvagem",
+    "nome": "Animais selvagens",
+    "personagens": [
+      "jetpack_cat_comum",
+      "winston_comum",
+      "wrecking_ball_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "futurista",
+    "nome": "Cyber-futurista: 2077",
+    "personagens": [
+      "cyber_combustivel",
+      "pulo_online",
+      "sentinela_ultra-violeta"
+    ],
+    "recompensa": {
+      "pontos": 400
+    }
+  },
+  {
+    "id": "espacial",
+    "nome": "Astros espaciais",
+    "personagens": [
+      "juno_comum",
+      "sigma_comum",
+      "winston_comum",
+      "wrecking_ball_comum",
+      "torbjorn_engenheiro_espacial",
+      "winston_extraterreste"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "omnico",
+    "nome": "Omnicos",
+    "personagens": [
+      "bastion_comum",
+      "orisa_comum",
+      "ramattra_comum",
+      "zenyatta_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "deadlock",
+    "nome": "Gangue Deadlock",
+    "personagens": [
+      "ashe_comum",
+      "cassidy_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "vishkar",
+    "nome": "Vishkar inc.",
+    "personagens": [
+      "domina_comum",
+      "lifeweaver_comum",
+      "symmetra_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "ironclad",
+    "nome": "Ironclad clã",
+    "personagens": [
+      "bastion_comum",
+      "brigitte_comum",
+      "jetpack_cat_comum",
+      "reinhardt_comum",
+      "torbjorn_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "junkers",
+    "nome": "Junkers",
+    "personagens": [
+      "junkrat_comum",
+      "rainha_junker_comum",
+      "roadhog_comum",
+      "wrecking_ball_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "talon",
+    "nome": "Talon",
+    "personagens": [
+      "baptiste_comum",
+      "doomfist_comum",
+      "emre_comum",
+      "freja_comum",
+      "mauga_comum",
+      "mizuki_comum",
+      "moira_comum",
+      "sigma_comum",
+      "sombra_comum",
+      "vendetta_comum",
+      "widowmaker_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "overwatch",
+    "nome": "Overwatch",
+    "personagens": [
+      "cassidy_comum",
+      "echo_comum",
+      "emre_comum",
+      "genji_comum",
+      "mei_comum",
+      "mercy_comum",
+      "reinhardt_comum",
+      "sojourn_comum",
+      "soldado_76_comum",
+      "torbjorn_comum",
+      "tracer_comum",
+      "winston_comum"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
+    "id": "blackwatch",
+    "nome": "Blackwatch",
+    "personagens": [
+      "cassidy_comum",
+      "genji_comum",
+      "reaper_comum",
+      "moira_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "classico",
+    "nome": "Hérois clássicos",
+    "personagens": [
+      "bastion_comum",
+      "cassidy_comum",
+      "dva_comum",
+      "genji_comum",
+      "hanzo_comum",
+      "junkrat_comum",
+      "lucio_comum",
+      "mei_comum",
+      "mercy_comum",
+      "pharah_comum",
+      "reaper_comum",
+      "reinhardt_comum",
+      "roadhog_comum",
+      "soldado_76_comum",
+      "symmetra_comum",
+      "tracer_comum",
+      "torbjorn_comum",
+      "winston_comum",
+      "widowmaker_comum",
+      "zarya_comum",
+      "zenyatta_comum"
+    ],
+    "recompensa": {
+      "pontos": 500
+    }
+  },
+  {
+    "id": "nova_era_overwatch",
+    "nome": "Nova Era: Overwatch",
+    "personagens": [
+      "anran_comum",
+      "baptiste_comum",
+      "juno_comum",
+      "lucio_comum",
+      "wuyang_comum",
+      "zarya_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "magica",
+    "nome": "Magia",
+    "personagens": [
+      "ashe_warlock",
+      "mercy_conjuradora",
+      "feiticeira",
+      "imperatriz_calamidade"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
+    "id": "coracao",
+    "nome": "Força Coração",
+    "personagens": [
+      "brigitte_coracao",
+      "kiriko_coracao",
+      "juno_coracao",
+      "freja_coracao",
+      "widowmaker_coracao",
+      "magitecnologia_misericordiosa"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
+    "id": "panteao",
+    "nome": "Panteão",
+    "personagens": [
+      "lucio_hermes",
+      "pharah_hades",
+      "ramattra_poseidon",
+      "zeus"
+    ],
+    "recompensa": {
+      "pontos": 400
+    }
+  },
+  {
+    "id": "yokai",
+    "nome": "Yokais",
+    "personagens": [
+      "genji_comum",
+      "hanzo_comum",
+      "kiriko_comum",
+      "mizuki_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "demonio",
+    "nome": "Poderes demoniacos",
+    "personagens": [
+      "genji_oni",
+      "mercy_diabrete",
+      "ashe_warlock",
+      "cyber_demonio",
+      "onryo",
+      "demonio_aprisionado",
+      "libertacao"
+    ],
+    "recompensa": {
+      "pontos": 400
+    }
+  },
+  {
+    "id": "submundo",
+    "nome": "Forças do Submundo",
+    "personagens": [
+      "reaper_abobora",
+      "zenyatta_cultista",
+      "pharah_hades",
+      "invocadora_ancestral",
+      "fera_grandeosa",
+      "anubis"
+    ],
+    "recompensa": {
+      "pontos": 400
+    }
+  },
+  {
+    "id": "divino",
+    "nome": "Poderes divínos",
+    "personagens": [
+      "pistoleiro_divino",
+      "amateratsu",
+      "druida_divino",
+      "guardia_celestial",
+      "thor"
+    ],
+    "recompensa": {
+      "pontos": 500
+    }
+  },
+  
+   {
+    "id": "mirror",
+    "nome": "Mirrorwatch",
+    "personagens": [
+      "arqui-comandante_amari",
+      "bastion_kishin",
+      "brigitte_talon",
+      "comandante_ataque",
+      "echo_furtividade",
+      "fallen_knight",
+      "operadora_oxton",
+      "capita_lacroix",
+      "talon_zarya",
+      "destruidor_z-3n",
+      "vengeance"
+    ],
+    "recompensa": {
+      "pontos": 600
+    }
+  },
+  {
+    "id": "dourado",
+    "nome": "Armas Douradas",
+    "personagens": [
+      "ana_dourado",
+      "anran_dourado",
+      "ashe_dourado",
+      "baptiste_dourado",
+      "bastion_dourado",
+      "brigitte_dourado",
+      "cassidy_dourado",
+      "dva_dourado",
+      "domina_dourado",
+      "doomfist_dourado",
+      "echo_dourado",
+      "emre_dourado",
+      "freja_dourado",
+      "genji_dourado",
+      "hanzo_dourado",
+      "hazard_dourado",
+      "illari_dourado",
+      "jetpack_cat_dourado",
+      "junkrat_dourado",
+      "juno_dourado",
+      "kiriko_dourado",
+      "lifeweaver_dourado",
+      "lucio_dourado",
+      "mauga_dourado",
+      "mei_dourado",
+      "mercy_dourado",
+      "mizuki_dourado",
+      "moira_dourado",
+      "orisa_dourado",
+      "pharah_dourado",
+      "rainha_junker_dourado",
+      "ramattra_dourado",
+      "reaper_dourado",
+      "reinhardt_dourado",
+      "roadhog_dourado",
+      "sigma_dourado",
+      "sojourn_dourado",
+      "soldado_76_dourado",
+      "sombra_dourado",
+      "symmetra_dourado",
+      "torbjorn_dourado",
+      "tracer_dourado",
+      "vendetta_dourado",
+      "venture_dourado",
+      "widowmaker_dourado",
+      "winston_dourado",
+      "wrecking_ball_dourado",
+      "wuyang_dourado",
+      "zarya_dourado",
+      "zenyatta_dourado"
+    ],
+    "recompensa": {
+      "pontos": 2000
+    }
+  },
+  
+  {
+    "id": "mitico",
+    "nome": "Miticos",
+    "personagens": [
+      "a-7000_Wargod",
+      "imperatriz_calamidade",
+      "pistoleiro_divino",
+      "horang",
+      "titan_magma",
+      "cyber_demonio",
+      "onryo",
+      "cyber_combustivel",
+      "juno_coracao",
+      "amateratsu",
+      "druida_divino",
+      "pulo_online",
+      "vengeance",
+      "guardia_celestial",
+      "invocadora_ancestral",
+      "fera_grandeosa",
+      "zeus",
+      "anubis",
+      "thor",
+      "imperador_galatico",
+      "sentinela_ultra-violeta",
+      "aventureira",
+      "feiticeira",
+      "pixiu"
+    ],
+    "recompensa": {
+      "pontos": 2000
+    }
+  },
+  {
+    "id": "arma_mitica",
+    "nome": "Armas Miticas",
+    "personagens": [
+      "sol_obscuro",
+      "rosa_de_chumbo",
+      "ocaso_flamejante",
+      "atiradora das estrelas",
+      "guardia_espiritual",
+      "magitecnologia_misericordiosa",
+      "canhao_capsulas",
+      "aco_letal",
+      "demonio_aprisionado",
+      "libertacao",
+      "dame_chance"
+    ],
+    "recompensa": {
+      "pontos": 1500
+    }
+  },
+  {
+    "id": "april_fools",
+    "nome": "A zoeira não tem fim! (April Fools 2026)",
+    "personagens": [
+      "cassidy_fool",
+      "lucio_fool",
+      "ramattra_fool",
+      "symmetra_fool",
+      "winston_fool",
+      "wrecking_ball_fool",
+      "zenyatta_fool"
+    ],
+    "recompensa": {
+      "pontos": 1500
+    }
+  }
+]

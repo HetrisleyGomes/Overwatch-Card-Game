@@ -1,0 +1,27 @@
+{
+  "comum": {
+    "cartas_por_pack": 5,
+    "chance": [
+        { "comum": 85, "incomum": 15, "raro": 0 },
+        { "comum": 80, "incomum": 20, "raro": 0 },
+        { "comum": 70, "incomum": 25, "raro": 5 },
+        { "comum": 50, "incomum": 45, "raro": 5 },
+        { "comum": 10, "incomum": 50, "raro": 40 }
+    ]
+  },
+  "raro": {
+    "cartas_por_pack": 4,
+    "chance": [
+      { "comum": 20, "incomum": 60, "raro": 20 },
+      { "comum": 10, "incomum": 60, "raro": 30 },
+      { "incomum": 45, "raro": 55 },
+      { "raro": 5, "mitico": 95 }
+    ]
+  },
+  "especial": {
+    "cartas_por_pack": 1,
+    "chance": [
+      {"especial": 100}
+    ]
+  }
+}

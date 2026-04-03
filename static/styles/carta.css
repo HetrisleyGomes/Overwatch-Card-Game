@@ -1,0 +1,156 @@
+.card {
+    width: 230px;
+    height: 320px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #1e2a38;
+    color: white;
+    box-sizing: border-box;
+    border: 12px solid black;
+    box-shadow: 2px 2px 6px #0e0d14;
+}
+.card-nome {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    font-size: clamp(12px, 1.2vw, 16px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 20px;
+}
+.card-img img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+}
+.card-classe {
+    background-color: #444;
+    text-align: center;
+    font-size: 14px;
+    padding: 4px;
+    height: 20px;
+}
+.card-texto {
+    flex: 1;
+    padding: 10px;
+    font-size: 12px;
+    height: 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.entrada {
+    
+    font-style: italic;
+}
+
+.ult {
+    font-size: clamp(8px, 0.7vw, 12px);
+}
+.dano .card-texto, .dano .card-nome {
+    background-color: #7a1f1f;
+}
+.suporte .card-texto, .suporte .card-nome {
+    background-color: #1f7a3b;
+}
+.tanque .card-texto, .tanque .card-nome {
+    background-color: #1f3f7a;
+}
+.comum {
+    border-color: #121213;
+}
+.incomum {
+    border-color: gray;
+}
+.raro {
+    border-color: #b99f07;
+}
+.mitico {
+    border-image: linear-gradient(45deg, purple, pink, blue, purple) 1;
+    animation: glow 2s infinite alternate;
+}
+.especial {
+    border-color: mediumpurple;
+}
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+    z-index: 10;
+}
+.mitico .card-nome {
+    color: #ffd900;
+    text-shadow: 1px 1px 1px black;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 5px purple; }
+    to { box-shadow: 0 0 10px pink; }
+}
+
+/* RESPONSIVIDADE ========================== */
+@media (max-width: 768px) {
+    .card {
+        width: 200px;
+        height: 290px;
+        border-width: 10px;
+    }
+    .card-nome {
+        padding-top: 8px;
+        height: 17px;
+    }
+    .card-classe {
+        padding-top: 6px;
+        height: 18px;
+    }
+    .card-texto {
+        font-size: 10px;
+        padding: 8px;
+    }
+    .ult {
+        font-size: clamp(8px, 0.7vw, 12px);
+    }
+}
+
+@media (max-width: 360px) {
+    .card {
+        width: 160px;
+        height: 210px;
+        border-width: 8px;
+        box-shadow: 1px 1px 4px #0e0d14;
+
+    }
+    .card-img {
+        width: auto;
+        height: 80px;
+    }
+    .card-nome {
+        padding: 6px;
+        height: 10px;
+        font-size: clamp(8px, 0.5vw, 10px);
+    }
+    .card-classe {
+        padding: 4px;
+        height: 10px;
+        font-size: 10px;
+    }
+    .card-texto {
+        font-size: 8px;
+        padding: 8px 6px;
+        max-height: 60px;
+    }
+    .ult {
+        font-size: clamp(8px, 0.7vw, 12px);
+    }
+    .card-img img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+}

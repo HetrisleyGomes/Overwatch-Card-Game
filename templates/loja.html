@@ -1,0 +1,100 @@
+{% extends 'index.html' %}
+{% block centro %}
+<link rel="stylesheet" href="../static/styles/loja.css">
+<!-- CENTRO -->
+<div class="main">
+
+
+    <h1>Loja</h1>
+
+    <div class="container">
+
+        <div class="prateleira">
+            <!-- Item -->
+            <div class="item">
+                <div class="item_name">Pacote comum</div>
+                <div class="item_description">
+                    Pacote com cartas comuns.
+                </div>
+                <div class="item_button">
+                    <button class="button {% if user.pontos < 100 %}desativado{% endif %}"
+                    {% if user.pontos < 100 %}disabled{% endif %}
+                    onclick="comprarPack('comum')">
+                        100 Coins</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_name">Pacote raro</div>
+                <div class="item_description">
+                    Pacote com maiores chances de cartas raras e míticas.
+                </div>
+                <div class="item_button">
+                    <button class="button {% if user.pontos < 500 %}desativado{% endif %}"
+                    {% if user.pontos < 500 %}disabled{% endif %}
+                    onclick="comprarPack('raro')">
+                    500 Coins</button>
+                </div>
+            </div>
+
+            <!-- Bônus diário -->
+             <div class="item expand-2">
+                <div class="item_name">Bônus diário</div>
+                <div class="item_description">
+                    50 Coins obitíveis diariamente.
+                </div>
+                <div class="item_button">
+                    {% if not user.has_already_get_daily_bonus %}
+                            <button class="button"  onclick="comprarPack('bonus')">Obter</button>
+                    {% else %}
+                            <button class="button desativado" disabled>Obtido</button>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- PACOTE DE EVENTO -->
+             {% if ev %}
+                <div class="item especial">
+                    <div class="item_name">Pacote de {{ ev["nome"] }}</div>
+                    <div class="item_description">
+                        Pacote com uma carta especial.
+                    </div>
+                    <div class="item_button">
+                        <button class="button {% if user.pontos < 300 %}desativado{% endif %}"
+                        {% if user.pontos < 300 %}disabled{% endif %}
+                        onclick="comprarPack('especial')">
+                        300 Coins</button>
+                    </div>
+                </div>
+             {% endif %}
+             
+            
+
+        </div>
+    </div>
+</div>
+
+<script>
+function comprarPack(tipo) {
+    fetch("/comprar-pack", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ tipo: tipo })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.msg);
+            location.reload();
+
+            // 🔥 atualizar UI sem reload
+            atualizarPontos(data.pontos);
+        } else {
+            alert(data.erro);
+        }
+    });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<link rel="stylesheet" href="../static/styles/login.css">
+
+
+<form class="login-container" method="POST">
+    <div class="img-div">
+        <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img">
+    </div>
+
+    <h1>Entrar</h1>
+
+    <input 
+        type="text" 
+        name="nome" 
+        placeholder="Digite seu nome"
+        required
+    >
+
+    <button type="submit">Continuar</button>
+
+    {% if erro %}
+        <div class="erro">{{ erro }}</div>
+    {% endif %}
+</form>
+{% endblock %}

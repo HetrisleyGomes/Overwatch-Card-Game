@@ -1,0 +1,79 @@
+https://www.gamersdecide.com/articles/overwatch-2-best-gold-guns-revealed
+
+Dourado claro 1
+RGB(255, 241, 184) – um dourado bem claro, quase creme, com luminosidade alta.
+#fff1b8
+
+Dourado claro 2
+RGB(255, 232, 150) – um dourado suave com brilho dourado-amarelado.
+#ffe896
+
+Dourado médio 1
+RGB(255, 215, 100) – o clássico tom de dourado metálico.
+#ffd764
+
+Dourado médio 2
+RGB(230, 180, 70) – um tom um pouco mais neutro e realista.
+#e6b446
+
+Dourado intenso
+RGB(245, 165, 30) – um tom vibrante, alaranjado, com aparência rica.
+#f5a51e
+
+Dourado escuro 1
+RGB(180, 135, 50) – ideal para áreas em sombra suave.
+#b48732
+
+Dourado escuro 2
+RGB(130, 100, 40) – mais escuro, mas ainda dourado perceptível.
+#826428
+
+Dourado queimado
+RGB(150, 80, 20) – puxado para o cobre, com saturação intensa.
+#965014
+
+Dourado acinzentado 1 (mais claro e suave)
+RGB(190, 175, 135)
+#beaf87
+
+Dourado acinzentado 2 (mais escuro e neutro)
+RGB(140, 125, 90)
+#8c7d5a
+
+Dourado amarronzado
+RGB(160, 100, 50)
+#a06432
+
+Contorno
+RGB(90, 60, 20) – um tom escuro, quente, ótimo para delinear dourado.
+#5a3c14
+
+
+Um tom verde metálico neutro para a base. Um verde bem claro, para areas com luminosidade alta. Dois tons escuros, um  para áreas em sombra suave e um mais escuro, mas ainda verde perceptível. Um tom verde-azulado de tom medio-claro para contraste em ambiente claro. Um tom verde-azulado de tom medio-escuro para contraste em ambiente escuro. Um tom de verde acinzentado. e por fim um tom escuro para contorno e delinear o verde.
+
+
+Verde metálico neutro (Base):
+Hex: #4B7F47 - Um tom de verde suave e metálico, ideal para a base da esmeralda ou para áreas de maior destaque.
+
+Verde bem claro (Altas luminosidades):
+Hex: #A2C9A1 - Um verde suave e bem claro, perfeito para áreas que precisam de destaque e brilho.
+
+Verde escuro 1 (Sombra suave):
+Hex: #3C5A3A - Um verde escuro que ainda possui um toque de saturação, bom para sombras mais suaves.
+
+Verde escuro 2 (Sombra profunda, mas ainda perceptível):
+Hex: #2A4731 - Um tom mais profundo de verde, bom para sombras mais intensas, mas ainda com uma sensação de verde.
+
+Verde-azulado médio-claro (Contraste em ambiente claro):
+Hex: #4F7D6A - Um verde com toques de azul, criando um contraste mais suave para um ambiente mais claro.
+
+Verde-azulado médio-escuro (Contraste em ambiente escuro):
+Hex: #2E5C4A - Um verde-azulado mais escuro, bom para contrastar em áreas com menos luz.
+
+Verde acinzentado (Para áreas mais neutras ou desgaste):
+Hex: #7A8B7D - Um tom mais acinzentado que pode ser usado para criar uma sensação de desgaste ou para transições mais sutis.
+
+Tom escuro para contorno/delineado (Para destacar o verde):
+Hex: #1D3C2A - Um tom escuro, quase preto, mas com um toque verde, ideal para contornos e delineamentos.
+
+

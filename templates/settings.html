@@ -1,0 +1,101 @@
+{% extends 'index.html' %}
+{% block centro %}
+<link rel="stylesheet" href="../static/styles/settings.css">
+<style>
+    .space {
+    height: 8vh;
+}
+</style>
+<!-- CENTRO -->
+<div class="main">
+
+    <div class="config-container">
+
+        <!-- 👤 PERFIL -->
+        <div class="profile-section">
+
+            <h2>Perfil</h2>
+
+            <!-- 🖼️ Foto atual -->
+            <div class="profile-img-container">
+                <img id="profile-preview"
+                    src="{{ url_for('static', filename='logos/' + user.profile_img) }}"
+                    alt="Foto de perfil">
+            </div>
+
+            <!-- 📂 Seleção de imagem -->
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    Escolher imagem
+                </button>
+
+                <div id="dropdown-menu" class="dropdown-content">
+                    {% for img in imgs %}
+                        {% if img.possui %}
+                            <img src="{{ url_for('static', filename='logos/' + img.img) }}"
+                                class="option-img"
+                                onclick="selecionarImagem('{{ img.img }}')">
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ✏️ NOME -->
+        <div class="name-section">
+
+            <h2>Nome</h2>
+
+            <div class="name-display">
+                <span id="nome-texto">{{ user.nome }}</span>
+                <button onclick="editarNome()">✏️</button>
+            </div>
+
+            <!-- input escondido -->
+            <form method="POST" action="/atualizar-nome" id="nome-form" style="display: none;">
+                <input type="text" name="novo_nome" id="nome-input" value="{{ user.nome }}">
+                <button type="submit">Salvar</button>
+            </form>
+
+        </div>
+
+        <div>
+            <a href="{{ url_for('main.logoff') }}">
+                <button class="button">
+                    Sair
+                </button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+<div class="space"></div>
+
+<script>
+function editarNome() {
+    document.getElementById("nome-form").style.display = "block";
+}
+
+function toggleDropdown() {
+    const menu = document.getElementById("dropdown-menu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+function selecionarImagem(img) {
+    // atualiza preview
+    document.getElementById("profile-preview").src =
+        "/static/logos/" + img;
+
+    // envia para backend (opcional via fetch)
+    fetch("/atualizar-foto", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ imagem: img })
+    });
+}
+</script>
+{% endblock %}

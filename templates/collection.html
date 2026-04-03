@@ -1,0 +1,56 @@
+{% extends 'index.html' %}
+{% block centro %}
+
+<link rel="stylesheet" href="../static/styles/collection.css">
+<div class="main">
+    {% for set in sets %}
+    {% if set.progresso_percent != 0 %}
+        <div class="set {% if set.completo %}completo{% endif %}">
+            <div class="set_head">
+                <h3>{{ set.nome }}</h3>
+                {% if set.completo %}
+                    <div>
+                        <p>✅ Completo!</p>
+                        <p>Recompensa: {{ set.recompensa.pontos }} pontos</p>
+                    </div>
+                {% else %}
+                    <p>❌ Incompleto</p>
+                {% endif %}
+            </div>
+            <div class="progress_bar">
+                <div class="progress_fill" style="width: {{ set.progresso_percent }}%">
+                    <span class="progresso">
+                        {{ set.progresso }}
+                    </span>
+                </div>
+            </div>
+            <div class="set_body">
+                {% for carta in set.cartas %}
+                    {% if carta.possui %}
+                        <div class="personagem">
+                            <div class="personagem_img">
+                                <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                            </div>
+                            <div class="personagem_base">
+                                <span class="p_nome">{{ carta.nome }}</span> <div class="raridade {{ carta.raridade }}"></div>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="personagem_apagado">
+                            <div class="personagem_img">
+                                <img src="{{ url_for('static', filename='logos/logo.png' ) }}">
+                            </div>
+                            <div class="personagem_base">
+                                ???
+                            </div>
+                        </div>
+                    {% endif %}
+                    
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="space"></div>
+{% endblock %}

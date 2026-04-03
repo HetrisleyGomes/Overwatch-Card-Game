@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+{% block centro %}
+<link rel="stylesheet" href="../static/styles/home.css">
+
+<!-- CENTRO -->
+<div class="main">
+    <div class="packs" id="packs-container">
+        {% if user.packs_diarios_abertos > 0 or user.packs_comprados_comum > 0 %}
+            {% if user.packs_diarios_abertos == 2 %}
+                <div class="common pack"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img"></div>
+            {% endif %}
+            <div class="common pack">
+                <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img">
+                {% if user.packs_comprados_comum > 0 %}    
+                    <div class="bolinha-vermelha">{{ user.packs_comprados_comum }}</div>
+                {% endif %}                
+            </div>
+        {% endif %}
+        {% if user.contador_packs_comuns == 20 or user.packs_comprados_raro > 0 %}
+            <div class="rare pack">
+                <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img">
+                {% if user.packs_comprados_raro > 0 %}
+                    <div class="bolinha-vermelha">{{ user.packs_comprados_raro }}</div>
+                {% endif %}
+            </div>
+        {% endif %}
+        {% if user.packs_diarios_abertos == 0 and user.packs_comprados_comum == 0 and user.contador_packs_comuns < 20 and user.packs_comprados_raro == 0 and user.packs_evento == 0 %}
+            <span class="no-packs-msg">
+                Você não possui mais pacotes por hoje!
+            </span>
+        {% endif %}
+        {% if ev and user.packs_evento > 0 %}
+            <div class="event pack {{ ev.id }}">
+                <span>{{ ev["nome"] }}</span><br>
+                <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img">
+                {% if user.packs_evento > 1 %}    
+                    <div class="bolinha-vermelha">{{ user.packs_evento }}</div>
+                {% endif %}  
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="buttons">
+        {% if user.packs_diarios_abertos >= 1 or user.packs_comprados_comum > 0 %}
+            <form method="POST" action="/abrir-pack-comum">
+                <button class="button">Abrir pacote</button>
+            </form> 
+        {% endif %}
+        {% if user.contador_packs_comuns == 20 or user.packs_comprados_raro > 0 %}
+            <form method="POST" action="/abrir-pack-raro">
+                <button class="button">Abrir pacote raro</button>
+            </form>
+        {% endif %}
+        {% if ev and user.packs_evento > 0 %}
+            <form method="POST" action="/abrir-pack-evento">
+                <button class="button" name="evento_id" value="{{ ev.id }}">Abrir pacote de evento</button>
+            </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,145 @@
+.packs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.pack {
+    width: 170px;
+    height: 230px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 2px 6px #000;
+    position: relative;
+}
+
+.bolinha-vermelha {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    background-color: #ac2b2b;
+    color: white;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    animation: pulso 0.5s ease-in-out infinite both;
+
+}
+
+
+@keyframes pulso {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+
+.img {
+    width: 120px;
+}
+
+.pack.common {
+    background-color: #2f6fd6;
+}
+
+.pack.rare {
+    background-color: #e65022;
+}
+
+/* EVENTOS */
+.pack.april_fools {
+    background-color: #e2d667;
+    color: #3b4f63;
+}
+
+.pack.natal {
+    background-color: #16831f;
+}
+
+.pack.halloween {
+    background-color: #442f6b;
+}
+
+.no-packs-msg {
+    font-weight: 600;
+    color: #3b4f63;
+    margin-top: 100px;
+}
+
+/* BOTÕES */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 40vw;
+}
+
+
+
+.buttons .button {
+    width: 170px;
+    margin: 8px;
+}
+
+
+
+/* RESPONSIVIDADE ========================== */
+@media (max-width: 768px) {
+    /* BOTÕES */
+    .buttons {
+        width: 60vw;
+    }
+
+    .buttons .button {
+        width: 150px;
+    }
+
+    .pack {
+        width: 150px;
+        height: 210px;
+    }
+}
+
+@media (max-width: 360px) {
+    .packs {
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .pack {
+        width: 110px;
+        height: 160px;
+    }
+    .img {
+        width: 80px;
+        padding: 10px;
+    }
+    .buttons {
+        width: 65vw;
+    }
+    .buttons .button {
+        width: 110px;
+        padding: 4px;
+    }
+}

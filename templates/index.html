@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<link rel="stylesheet" href="../static/styles/index.css">
+
+<!-- TOPO -->
+<div class="header">
+    <div class="header-item" id="username">
+        <div><img src="{{ url_for('static', filename='logos/' + user.profile_img ) }}"></div>
+        <div>Usuário: <span>{{ user.nome }}</span></div>
+    </div>
+    <div class="header-item" id="points">Pontos: <div class="points_box"><span id="pontos">{{ user.pontos }}</span></div></div>
+</div>
+
+{% if ev %}
+    <div class="subhead-event">
+        <span class="event">
+            {{ ev["nome"] }}
+        </span>
+    </div>
+{% endif %}
+
+
+
+{% block centro %}
+
+{% endblock %}
+
+<!-- RODAPÉ -->
+<div class="footer">
+    <a href="{{ url_for('main.home') }}">
+        <button class="button {% if request.endpoint == 'main.home' %}ativo{% endif %}"
+                {% if request.endpoint == 'main.home' %}disabled{% endif %}>
+            Início
+        </button>
+    </a>
+    <a href="{{ url_for('main.inventario') }}">
+        <button class="button {% if request.endpoint == 'main.inventario' %}ativo{% endif %}"
+                {% if request.endpoint == 'main.inventario' %}disabled{% endif %}>
+            Inventário
+        </button>
+    </a>
+    
+    <a href="{{ url_for('main.collection') }}">
+        <button class="button {% if request.endpoint == 'main.collection' %}ativo{% endif %}"
+                {% if request.endpoint == 'main.collection' %}disabled{% endif %}>
+            Coleções
+        </button>
+    </a>
+    <a href="{{ url_for('main.loja') }}">
+        <button class="button {% if request.endpoint == 'main.loja' %}ativo{% endif %}"
+                {% if request.endpoint == 'main.loja' %}disabled{% endif %}>
+            Loja
+            {% if not user.has_already_get_daily_bonus and request.endpoint != 'main.loja' %}
+                <div class="notification"></div>
+            {% endif %}
+        </button>
+    </a>
+    <a href="{{ url_for('main.settings') }}">
+        <button class="button {% if request.endpoint == 'main.settings' %}ativo{% endif %}"
+                {% if request.endpoint == 'main.settings' %}disabled{% endif %}>
+            Opções
+        </button>
+    </a>
+</div>
+
+{% endblock %}

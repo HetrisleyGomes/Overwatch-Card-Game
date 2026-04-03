@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<link rel="stylesheet" href="../static/styles/resultado.css">
+<link rel="stylesheet" href="../static/styles/carta.css">
+<div class="container">
+    <h1>Cartas recebidas</h1>
+
+    <div class="area">
+        <!-- PACK -->
+        <div id="pack" class="pack {{ tipo_pack }}"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img"></div>
+
+        <div class="area-cards">
+            {% for carta in cartas %}
+                <div class="carta-container" data-index="{{ loop.index0 }}">
+                    <div class="carta-inner">
+                        <!-- Verso -->
+                        <div class="carta-back">
+                            <div class="card card-pack back">
+                                <img src="{{ url_for('static', filename='logos/logo.png') }}">
+                            </div>
+                        </div>
+
+                        <!-- Frente -->
+                        <div class="carta-front">
+                            <div class="card card-pack {{ carta.raridade }} {{ carta.classe|lower }}">
+                                <div class="card-nome">
+                                    {{ carta.nome }}
+                                </div>
+
+                                <div class="card-img">
+                                    <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                                </div>
+
+                                <div class="card-classe">
+                                    {{ carta.classe }} — {{ carta.subclasse }}
+                                </div>
+
+                                <div class="card-texto">
+                                    <p class="entrada">"{{ carta.entrada }}"</p>
+                                    <p>
+                                        <strong>{{ carta.ult_nome }}:</strong> {{ carta.ult }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="pontos_div" id="pontos" style="display:none;">
+        {% if pontos %}
+            <div class="pontos_subdiv">
+                Pontos de cartas repetidas: <span class="pontos">+{{ pontos }} pontos!</span>
+            </div>
+        {% endif %}
+        {% if pontos_sets %}
+            <div class="pontos_subdiv">
+                Pontos de coleções completadas: <span class="pontos">+{{ pontos_sets }} pontos!</span>
+            </div>
+        {% endif %}
+        {% if sets %}
+            <div class="pontos_subdiv">
+                Coleções completadas: 
+                {% for set in sets %}
+                    <span class="pontos">{{ set }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    
+    <div class="buttons" id="botoes" style="display:none;">
+        <!-- Voltar -->
+        <a href="{{ url_for('main.home') }}">
+            <button class="button">Voltar</button>
+        </a>
+
+        <!-- Abrir próximo pack -->
+        {% if (user.packs_diarios_abertos > 0 or user.packs_comprados_comum > 0) and tipo_pack == "comum" %}
+        <form method="POST" action="{{ url_for('main.abrir_pack_route') }}" style="display:inline;">
+            <button class="button">Abrir próximo pacote</button>
+        </form>
+        {% elif user.packs_comprados_raro > 0 and tipo_pack == "raro" %}
+        <form method="POST" action="{{ url_for('main.abrir_pack_raro_route') }}" style="display:inline;">
+            <button class="button">Abrir próximo pacote</button>
+        </form>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+const pack = document.getElementById("pack");
+const cartas = document.querySelectorAll(".carta-container");
+const botoes = document.getElementById("botoes");
+const pontos = document.getElementById("pontos")
+
+function calcularPosicao(index, total) {
+    const isMobile = window.innerWidth <= 480;
+
+    if (!isMobile) {
+        // 💻 desktop (seu atual)
+        const offset = (index - (total - 1) / 2) * 180;
+        return { x: offset, y: 0 };
+    }
+
+    // 📱 MOBILE
+    if (total === 5) {
+        // 3 em cima, 2 embaixo
+        if (index < 3) {
+            return {
+                x: (index - 1) * 120,
+                y: -80
+            };
+        } else {
+            return {
+                x: (index - 3.5) * 120,
+                y: 80
+            };
+        }
+    }
+
+    if (total === 4) {
+        // 2x2
+        if (index < 2) {
+            return {
+                x: (index - 0.5) * 120,
+                y: -80
+            };
+        } else {
+            return {
+                x: (index - 2.5) * 120,
+                y: 80
+            };
+        }
+    }
+
+    if (total === 1) {
+        return { x: 0, y: 0 };
+    }
+
+    // fallback (linha)
+    return {
+        x: (index - (total - 1) / 2) * 120,
+        y: 0
+    };
+}
+
+function iniciarAnimacao() {
+
+    // 🎁 1. Abrir pack
+    setTimeout(() => {
+        pack.classList.add("abrir");
+    }, 500);
+
+    // 🎴 2. Mostrar cartas depois do pack
+    setTimeout(() => {
+        pack.style.display = "none";
+
+        cartas.forEach((carta, i) => {
+            setTimeout(() => {
+
+                carta.style.opacity = "1";
+                carta.style.top = "50%";
+
+                // espalhar
+                const pos = calcularPosicao(i, cartas.length);
+
+                carta.style.transform = `
+                    translate(
+                        calc(-50% + ${pos.x}px),
+                        calc(-50% + ${pos.y}px)
+                    )
+                `;
+                // 🌀 virar carta
+                setTimeout(() => {
+                    carta.classList.add("flip");
+                }, 400);
+
+                // última carta → mostrar botões
+                if (i === cartas.length - 1) {
+                    setTimeout(() => {
+                        botoes.style.display = "flex";
+                        pontos.style.display = "flex";
+                        removerPorClasse("carta-back");
+                    }, 1000);
+                }
+
+            }, i * 600);
+        });
+
+    }, 1000);
+}
+
+function removerPorClasse(classe) {
+    const elementos = document.querySelectorAll("." + classe);
+
+    elementos.forEach(el => el.remove());
+}
+window.onload = iniciarAnimacao;
+</script>
+{% endblock %}

@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d9e1e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #3b4f63;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px;
+    text-align: center;
+    color: white;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.login-container button {
+    width: 96%;
+    padding: 10px;
+    background-color: #2f6fd6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.img {
+    width: 140px;
+}
+
+.login-container button:hover {
+    opacity: 0.9;
+}
+
+.erro {
+    color: #ffb3b3;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* RESPONSIVIDADE ========================== */
+@media (max-width: 480px) {
+    .login-container {
+       width: 250px;
+    }
+}

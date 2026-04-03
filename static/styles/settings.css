@@ -1,0 +1,56 @@
+.config-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    color: #3b4f63;
+}
+
+.profile-img-container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #3b4f63;
+    padding: 10px;
+    object-fit: cover;
+}
+
+.dropdown {
+    margin-top: 10px;
+    position: relative;
+}
+
+.dropdown-btn {
+    background: #3b4f63;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.option-img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: #3b4f63;
+}
+
+.option-img:hover {
+    border-color: #fff;
+}
+
+.name-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: #3b4f63;
+}

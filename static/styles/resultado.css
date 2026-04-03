@@ -1,0 +1,234 @@
+.container {
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #3b4f63;
+    text-align: center;
+    
+}
+
+/* AREA */
+.area {
+    position: relative;
+    height: 300px;
+    margin-top: 50px;
+}
+
+/* PACK */
+.pack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 210px;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+    top: 100px;
+    animation: packEntrada 0.6s ease;
+}
+
+.pack.comum {
+    background-color: #2f6fd6;
+}
+
+.pack.raro {
+    background-color: #e67e22;
+}
+
+/* EVENTOS */
+.pack.april_fools {
+    background-color: #e2d667;
+    color: #3b4f63;
+}
+
+.pack.natal {
+    background-color: #16831f;
+}
+
+.pack.halloween {
+    background-color: #442f6b;
+}
+
+/* PACK ABRINDO */
+.pack.abrir {
+    animation: packAbrir 0.5s forwards;
+}
+
+@keyframes packAbrir {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+/* CARTAS */
+.area-cards {
+    width: 100%;
+}
+
+.carta-container {
+    position: absolute;
+    left: 50%;
+    top: 120%;
+    transform: translate(-50%, 0);
+    perspective: 1000px;
+    opacity: 0;
+    width: 230px;
+    height: 320px;
+}
+
+.carta-container.flip {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.card-pack {
+    transform: scale(0.7);
+    transform-origin: center;
+}
+
+/* CARTA INTERNA (flip) */
+.carta-inner {
+    width: 120px;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* VIRAR */
+.carta-container.flip .carta-inner {
+    transform: rotateY(180deg);
+}
+
+/* FACES */
+.carta-front, .carta-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* FRENTE */
+.carta-front {
+    transform: rotateY(180deg);
+}
+
+/* VERSO */
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
+}
+
+.card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pontos_div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 0;
+    gap: 50px;
+    margin: auto;
+    font-weight: 600;
+    color: #3b4f63;
+}
+
+.pontos_subdiv {
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.pontos {
+    color: #e67e22;
+    margin-left: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+    width: 500px;
+    margin: auto;
+}
+
+.button {
+    background-color: #3b4f63;
+    border: none;
+    width: 180px;
+    padding: 20px 0;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #4f6377;
+}
+
+/* RESPONSIVIDADE ========================== */
+@media (max-width: 768px) {
+    /* AREA */
+    .area {
+        height: 140px;
+    }
+    /* CARTAS */
+    .area-cards {
+        transform: scale(0.9);
+        margin-top: 20vh;
+    }
+    .pack {
+        width: 150px;
+        height: 210px;
+    }
+
+    /* BOTÕES */
+    .button {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .pontos_div {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .buttons {
+        width: 270px;
+    }
+    .button {
+        width: 120px;
+    }
+    .pontos_div {
+        font-size: 14px;
+        align-items: flex-start
+    }
+    .pontos_subdiv {
+        width: 300px;
+        text-align: center;
+    }
+    /* CARTAS */
+    .area-cards {
+        margin-top: 30vh;
+    }
+    .carta-container {
+        width: 160px;
+        height: 210px;
+    }
+    .carta-inner {
+        width: 100px;
+        height: 160px;
+    }
+}
