@@ -34,17 +34,25 @@
     margin-top: 10px;
 }
 
-.option-img {
+.img-container {
+    border-radius: 50%;
     width: 60px;
     height: 60px;
     cursor: pointer;
-    border-radius: 50%;
-    border: 2px solid transparent;
+    border: 5px solid transparent;
     background-color: #3b4f63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.option-img:hover {
-    border-color: #fff;
+.option-img {
+    height: 52px;
+    width: auto;
+}
+
+.img-container:hover {
+    border-color: #4f6377;
 }
 
 .name-display {

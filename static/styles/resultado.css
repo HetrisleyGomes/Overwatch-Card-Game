@@ -176,6 +176,14 @@ h1 {
 }
 
 /* RESPONSIVIDADE ========================== */
+@media (max-width: 1380px) {
+    .carta-front, .carta-back{
+        width: auto;
+    }
+    .carta-container {
+        width: 0;
+    }
+}
 @media (max-width: 768px) {
     /* AREA */
     .area {
@@ -189,6 +197,12 @@ h1 {
     .pack {
         width: 150px;
         height: 210px;
+    }
+    .carta-front, .carta-back {
+        width: 100%;
+    }
+    .carta-inner {
+        width: 120px;
     }
 
     /* BOTÕES */

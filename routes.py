@@ -1,5 +1,5 @@
 from flask import blueprints, render_template, request, session, redirect, url_for
-from services.user_service import criar_usuario, carregar_usuarios, verify_date, salvar_usuarios, get_img_logos
+from services.user_service import criar_usuario, carregar_usuarios, verify_date, salvar_usuarios, get_img_logos, user_get_inventory, icon_view, get_new_img
 from services.progress_service import registry_cards
 from services.pack_sevice import abrir_pack, abrir_pack_evento
 from services.collection_service import verificar_sets, formatar_inventario, listar_sets_usuario
@@ -119,13 +119,15 @@ def loja():
     user = next((u for u in usuarios if u["id"] == session["usuario_id"]), None)
 
     ev = get_eventos_ativos()
+    imgs = icon_view(user["id"], ev["id"])
 
-    return render_template('loja.html', user = user, ev=ev)
+    return render_template('loja.html', user = user, ev=ev, imgs=imgs)
 
 @main.route("/comprar-pack", methods=["POST"])
 def comprar_pack():
     data = request.get_json()
     tipo = data.get("tipo")
+    id = data.get("id")
 
     usuarios = carregar_usuarios()
     user = next((u for u in usuarios if u["id"] == session["usuario_id"]), None)
@@ -149,6 +151,13 @@ def comprar_pack():
     elif tipo == "especial":
         preco = 300
         user["packs_evento"] += 1
+    elif tipo == 'icone':
+        imgs = get_img_logos()
+        img = next(i for i in imgs if i["id"] == id)
+        preco = img["price"]
+        get_new_img(user["id"], id)
+        msg = "Icone " + img["nome"] + ' adquirido!'
+
 
     user["pontos"] -= preco
 
@@ -167,9 +176,9 @@ def settings():
     usuarios = carregar_usuarios()
     user = next((u for u in usuarios if u["id"] == session["usuario_id"]), None)
 
-    imgs = get_img_logos()
+    inv = user_get_inventory(user["id"])
 
-    return render_template('settings.html', user = user, imgs=imgs)
+    return render_template('settings.html', user = user, inv= inv)
 
 @main.route("/atualizar-nome", methods=["POST"])
 def atualizar_nome():

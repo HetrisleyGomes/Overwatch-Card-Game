@@ -81,8 +81,7 @@ def make_new_progress(all_progress):
     novo_progress = {
     "user_id": session["usuario_id"],
     "personagens": {},
-    "sets_completos": [],
-    "img_logos" : []
+    "sets_completos": []
     }
     all_progress.append(novo_progress)
     return novo_progress

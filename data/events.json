@@ -1,23 +1,30 @@
 [
   {
     "id": "natal",
-    "nome": "Evento de Natal!",
-    "inicio": "12-18",
+    "nome": "Natal!",
+    "inicio": "12-19",
     "fim": "12-31",
     "ativo": false
   },
   {
     "id": "halloween",
-    "nome": "Evento de Halloween!",
-    "inicio": "10-18",
+    "nome": "Halloween!",
+    "inicio": "10-19",
     "fim": "10-31",
+    "ativo": false
+  },
+  {
+    "id": "aniversary",
+    "nome": "Aniversário!",
+    "inicio": "05-18",
+    "fim": "05-30",
     "ativo": false
   },
   {
     "id": "april_fools",
     "nome": "Primeiro de Abril :p",
-    "inicio": "03-30",
-    "fim": "04-14",
+    "inicio": "04-01",
+    "fim": "04-13",
     "ativo": true
   }
 ]
