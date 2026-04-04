@@ -89,12 +89,17 @@
 }
 
 /* RESPONSIVIDADE ========================== */
+@media (max-width: 1380px) {
+  .grid-cartas {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+}
 @media (max-width: 768px) {
   .toggle-button {
     width: 30vw;
   }
   .grid-cartas {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     justify-items: center;

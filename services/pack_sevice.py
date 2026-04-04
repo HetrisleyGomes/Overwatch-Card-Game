@@ -32,7 +32,6 @@ def abrir_pack(tipo_pack):
     for i in range(pack["cartas_por_pack"]):
         # 1. sortear raridade
         chances_slot = pack["chance"][i]
-        print(chances_slot)
         raridade = sortear_raridade(chances_slot)
 
         # 2. filtrar personagens dessa raridade

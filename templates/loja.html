@@ -4,11 +4,10 @@
 <!-- CENTRO -->
 <div class="main">
 
-
     <h1>Loja</h1>
 
     <div class="container">
-
+        <h2 class="sessao">Pacotes</h2>
         <div class="prateleira">
             <!-- Item -->
             <div class="item">
@@ -57,7 +56,7 @@
                 <div class="item especial">
                     <div class="item_name">Pacote de {{ ev["nome"] }}</div>
                     <div class="item_description">
-                        Pacote com uma carta especial.
+                        Pacote com uma carta especial de evento.
                     </div>
                     <div class="item_button">
                         <button class="button {% if user.pontos < 300 %}desativado{% endif %}"
@@ -71,17 +70,51 @@
             
 
         </div>
+
+        <div class="prateleira-divider"></div>
+
+        <h2 class="sessao">Icones</h2>
+        <div class="prateleira">
+            {% for img in imgs %}
+            {% if img.disponivel %}
+            <div class="item item-img">
+                <div class="item_name">Ícone {{img.nome}}</div>
+                <div class="item_img">
+                    <img src="{{ url_for('static', filename='logos/' + img.img) }}" class="img">
+                </div>
+                <div class="item_description">
+                    {{ img.descricao }}
+                </div>
+                <div class="item_button">
+                    <button class="button {% if user.pontos < img.price or img.possui %}desativado{% endif %}"
+                    {% if user.pontos < img.price or img.possui %}disabled{% endif %}
+                    onclick="comprarPack('icone',{{img.id}})">
+                        {% if not img.possui %}
+                            {{ img.price }} Coins
+                        {% else %}
+                            Obtido
+                        {% endif %}
+                        
+                    </button>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            
+            
+        </div>
     </div>
 </div>
 
+
 <script>
-function comprarPack(tipo) {
+function comprarPack(tipo, id=0) {
     fetch("/comprar-pack", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ tipo: tipo })
+        body: JSON.stringify({ tipo: tipo, id: id })
     })
     .then(res => res.json())
     .then(data => {

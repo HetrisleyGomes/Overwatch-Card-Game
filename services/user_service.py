@@ -26,6 +26,8 @@ def criar_usuario(nome, has_event):
         "packs_evento": has_event
     }
 
+    criar_inventory(novo_usuario["id"])
+
     usuarios.append(novo_usuario)
 
     salvar_usuarios(usuarios)
@@ -89,6 +91,69 @@ def delete_events_packs():
 
     salvar_usuarios(usuarios)
 
+
+# INVENTÁRIOS ==================================================
 def get_img_logos():
     imgs = read_json("./data/icons.json")
     return imgs
+
+def user_get_inventory(user_id):
+    icons = read_json("./data/icons.json")
+    inventory = read_json("./data/inventory.json")
+    user_inv = next((i for i in inventory if i["user_id"] == user_id), None)
+    icons_user = []
+
+    for icon in icons:
+        possui = icon["id"] in user_inv["icons"]
+        icons_user.append({
+            **icon,
+            "possui": possui
+        })
+    return icons_user
+
+def icon_view(id, event):
+    icons = read_json("./data/icons.json")
+    inventory = read_json("./data/inventory.json")
+    user_inv = next((i for i in inventory if i["user_id"] == id), None)
+    all_progress = read_json("./data/progress.json")
+    progress = next((u for u in all_progress if u["user_id"] == id))
+
+    result = []
+
+    for icon in icons:
+        possui = icon["id"] in user_inv["icons"]
+        unlock = icon.get("unlock",{"type":"free"})
+        disponivel = False
+
+        if unlock["type"] == "free" or unlock["type"] == "purchase":
+            disponivel = True
+        elif unlock["type"] == "set":
+            if unlock["value"] in progress["sets_completos"]:
+                disponivel = True
+        elif unlock["type"] == "event":
+            if event == unlock["value"]:
+                disponivel = True
+
+        result.append({
+            **icon,
+            "possui": possui,
+            "disponivel": disponivel
+        })
+
+    return result
+
+def criar_inventory(id):
+    inventory = read_json("./data/inventory.json")
+    inv = {
+        "user_id": id,
+        "icons": [1]
+    }
+    inventory.append(inv)
+    write_json("./data/inventory.json", inventory)
+
+def get_new_img(user_id, img_id):
+    inventory = read_json("./data/inventory.json")
+    user_inv = next((i for i in inventory if i["user_id"] == user_id), None)
+    user_inv["icons"].append(img_id)
+    write_json("./data/inventory.json", inventory)
+

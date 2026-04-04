@@ -936,8 +936,8 @@
     "id": "magica",
     "nome": "Magia",
     "personagens": [
-      "ashe_warlock",
       "mercy_conjuradora",
+      "ashe_warlock",
       "feiticeira",
       "imperatriz_calamidade"
     ],

@@ -8,7 +8,6 @@
 </style>
 <!-- CENTRO -->
 <div class="main">
-
     <div class="config-container">
 
         <!-- 👤 PERFIL -->
@@ -30,11 +29,13 @@
                 </button>
 
                 <div id="dropdown-menu" class="dropdown-content">
-                    {% for img in imgs %}
+                    {% for img in inv %}
                         {% if img.possui %}
+                        <div class="img-container">
                             <img src="{{ url_for('static', filename='logos/' + img.img) }}"
-                                class="option-img"
-                                onclick="selecionarImagem('{{ img.img }}')">
+                            class="option-img"
+                            onclick="selecionarImagem('{{ img.img }}')">
+                        </div>
                         {% endif %}
                     {% endfor %}
                 </div>

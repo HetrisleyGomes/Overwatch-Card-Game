@@ -4,64 +4,85 @@
         "nome": "Overwatch",
         "img": "logo.png",
         "descricao": "Logo Overwatch.",
-        "possui": true,
-        "price": 0
+        "price": 0,
+        "unlock": {
+            "type": "free"
+        }
     },{
         "id": 2,
         "nome": "Pachimari",
         "img": "Pachimari_ow.png",
         "descricao": "Pachimari's são os melhores.",
-        "possui": false,
-        "price": 500
+        "price": 500,
+        "unlock": {
+            "type": "purchase"
+        }
     },{
         "id": 3,
         "nome": "Coelhinha",
         "img": "dva_logo.png",
         "descricao": "Com amor, D.Va!",
-        "possui": false,
-        "price": 500
+        "price": 500,
+        "unlock": {
+            "type": "purchase"
+        }
     },{
         "id": 4,
         "nome": "Hackeado",
         "img": "sombra_logo.png",
         "descricao": "Teje, hackeado.",
-        "possui": false,
-        "price": 500
+        "price": 500,
+        "unlock": {
+            "type": "purchase"
+        }
     },{
         "id": 5,
         "nome": "8-bits",
         "img": "8bits_logo.png",
-        "descricao": "Teje, hackeado (em 8-bits).",
-        "possui": false,
-        "price": 500
+        "descricao": "Teje, hackeado. (em 8-bits)",
+        "price": 500,
+        "unlock": {
+            "type": "purchase"
+        }
     },{
         "id": 6,
         "nome": "Setor Nulo",
         "img": "null_sector_logo.png",
-        "descricao": "Logo Overwatch.",
-        "possui": false,
-        "price": 500
+        "descricao": "A força da resistência omnica.",
+        "price": 500,
+        "unlock": {
+            "type": "purchase"
+        }
     },{
         "id": 7,
         "nome": "Blackwatch",
         "img": "blackwatch_logo.png",
         "descricao": "Das sombras, para o mundo.",
-        "possui": false,
-        "price": 0
+        "price": 500,
+        "unlock": {
+            "type": "set",
+            "value": "blackwatch"
+        }
     },{
         "id": 8,
         "nome": "Talon",
         "img": "talon_logo.png",
         "descricao": "O novo império, Talon!",
-        "possui": false,
-        "price": 0
+        "price": 500,
+        "unlock": {
+            "type": "set",
+            "value": "talon"
+        }
     },
     {
-        "id": 8,
+        "id": 9,
         "nome": "Ouroverwatch",
         "img": "gold_watch.png",
         "descricao": "Brilhe, com Overwatch.",
-        "possui": false,
-        "price": 0
+        "price": 500,
+        "unlock": {
+            "type": "event",
+            "value": "aniversary"
+        }
     }
 ]
