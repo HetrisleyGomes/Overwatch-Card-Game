@@ -15,6 +15,25 @@
 * ❌ Eventos ainda simples
 * ❌ Moeda única (economia rasa)
 
+
+
+
+
+
+### Ideias: 
+
+- [ ] Missões;
+- [x] Nivel;
+- [ ] Variação de cartas, como foils, arte alternativa, e eventos;
+- [ ] Craft de cartas;
+- [x] Álbum;
+- [ ] Conquistas;
+- [ ] Pacotes com escolha de cartas;
+- [ ] Mais variedade na loja;
+- [ ] Personalização (Moldura de perfil, Título de jogador)
+
+
+
 ---
 
 # 🚀 Sugestões de novas funcionalidades
@@ -43,6 +62,7 @@ Cria progressão contínua.
 
   * abrir pacotes
   * completar coleções
+  
 * Ao subir de nível:
 
   * ganha moedas
@@ -246,10 +266,8 @@ Então tudo que você adicionar deve:
 
 ---
 
-Se quiser, posso:
+
 
 * montar o **modelo de banco de dados**
 * sugerir **algoritmo de drop de cartas**
 * ou desenhar um **roadmap completo de desenvolvimento**
-
-Só me fala 👍

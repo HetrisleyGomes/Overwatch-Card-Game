@@ -8,28 +8,38 @@ body {
     height: 100vh;
 }
 
+/* container */
 .login-container {
-    background-color: #3b4f63;
+    background: linear-gradient(135deg, #3b4f63, #2c3e50);
     padding: 30px;
     border-radius: 12px;
     width: 300px;
     text-align: center;
     color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 .login-container h1 {
     margin-bottom: 20px;
 }
 
+/* inputs */
 .login-container input {
     width: 90%;
     padding: 10px;
     border: none;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-size: 14px;
+    outline: none;
 }
 
+/* foco bonito */
+.login-container input:focus {
+    box-shadow: 0 0 0 2px #2f6fd6;
+}
+
+/* botão */
 .login-container button {
     width: 96%;
     padding: 10px;
@@ -39,25 +49,60 @@ body {
     color: white;
     font-size: 14px;
     cursor: pointer;
-}
-
-.img {
-    width: 140px;
+    transition: 0.2s;
 }
 
 .login-container button:hover {
-    opacity: 0.9;
+    transform: scale(1.03);
 }
 
+/* logo */
+.img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/* erro */
 .erro {
     color: #ffb3b3;
     margin-top: 10px;
     font-size: 13px;
 }
 
-/* RESPONSIVIDADE ========================== */
+/* link extra */
+.extra {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.extra a {
+    color: #8ab4ff;
+    text-decoration: none;
+}
+
+.extra a:hover {
+    text-decoration: underline;
+}
+
+
+/* pequeno ajuste para diferenciar */
+.login-container h1 {
+    margin-bottom: 15px;
+}
+
+/* inputs mais espaçados */
+.login-container input {
+    margin-bottom: 10px;
+}
+
+/* botão destaque */
+.login-container button {
+    margin-top: 5px;
+}
+
+/* 📱 responsivo */
 @media (max-width: 480px) {
     .login-container {
-       width: 250px;
+        width: 250px;
     }
 }

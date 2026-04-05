@@ -12,13 +12,13 @@
   "raro": {
     "cartas_por_pack": 4,
     "chance": [
-      { "comum": 20, "incomum": 60, "raro": 20 },
-      { "comum": 10, "incomum": 60, "raro": 30 },
-      { "incomum": 45, "raro": 55 },
-      { "raro": 5, "mitico": 95 }
+      { "comum": 25, "incomum": 50, "raro": 25 },
+      { "comum": 10, "incomum": 40, "raro": 50 },
+      { "incomum": 35, "raro": 65 },
+      { "mitico": 100 }
     ]
   },
-  "especial": {
+  "april_fools": {
     "cartas_por_pack": 1,
     "chance": [
       {"especial": 100}

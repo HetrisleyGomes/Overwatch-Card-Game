@@ -1,9 +1,11 @@
 from flask import blueprints, render_template, request, session, redirect, url_for
-from services.user_service import criar_usuario, carregar_usuarios, verify_date, salvar_usuarios, get_img_logos, user_get_inventory, icon_view, get_new_img
+from services.user_service import criar_usuario, carregar_usuarios, verify_date, salvar_usuarios, sum_xp,get_img_logos, user_get_inventory, icon_view, get_new_img
 from services.progress_service import registry_cards
 from services.pack_sevice import abrir_pack, abrir_pack_evento
 from services.collection_service import verificar_sets, formatar_inventario, listar_sets_usuario
 from services.eventos_service import check_event_activation, get_eventos_ativos
+
+from werkzeug.security import check_password_hash, generate_password_hash
 
 main = blueprints.Blueprint('main', __name__, static_folder='static', template_folder='templates')
 
@@ -86,9 +88,12 @@ def resultado_pack():
     cartas = session.pop("ultimo_pack")
     rarity = session.pop("ultimo_pack_rarity")
     pontos = session.pop("pontos_obtidos")
+    xp_obtido = session.pop("xp_obtido")
     sets, pontos_sets = session.pop("sets")
 
-    return render_template("resultado.html", cartas = cartas, user = user, tipo_pack=rarity, pontos=pontos, sets=sets, pontos_sets=pontos_sets)
+    xp_final, nivel, level_uped = sum_xp(user["id"], xp_obtido)
+
+    return render_template("resultado.html", cartas = cartas, user = user, tipo_pack=rarity, pontos=pontos, sets=sets, pontos_sets=pontos_sets, xp_obtido=xp_obtido, xp_final=xp_final, nivel=nivel, level_uped=level_uped)
 
 
 # Inventario =================================
@@ -215,10 +220,10 @@ def logoff():
 # LOGIN ==============================================
 @main.before_request
 def verificar_usuario():
-    rotas_livres = ["login", "criar_usuario", "static"]
+    rotas_livres = ["main.login", "main.registrar", "static", "main.registro"]
 
     if 'usuario_id' not in session:
-        if not any(r in str(request.path) for r in rotas_livres):
+        if request.endpoint not in rotas_livres:
             return redirect(url_for('main.login'))
 
     else:
@@ -232,20 +237,65 @@ def verificar_usuario():
 @main.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        nome = request.form["nome"]
+        nome = request.form.get("nome")
+        senha = request.form.get("senha")
+
         usuarios = carregar_usuarios()
 
         usuario = next((u for u in usuarios if u["nome"] == nome), None)
 
+        if usuario is None:
+            return render_template("login.html", erro="Usuário não encontrado")
+        
+        if not check_password_hash(usuario["senha"], senha):
+            return render_template("login.html", erro="Senha incorreta")
+        
         if usuario:
             session["usuario_id"] = usuario["id"]
             return redirect(url_for("main.home"))
-        else:
-            has_event = 0
-            if get_eventos_ativos():
-                has_event = 1
-            usuario = criar_usuario(nome, has_event)
-            session["usuario_id"] = usuario
-            return redirect(url_for("main.home"))
+        
+        session["usuario_id"] = usuario["id"]
+        return redirect(url_for("main.home"))
 
     return render_template("login.html")
+
+@main.route("/registrar", methods=["GET"])
+def registro():
+    return render_template("registro.html")
+
+@main.route("/registrar", methods=["GET", "POST"])
+def registrar():
+    if request.method == "POST":
+        nome = request.form.get("nome")
+        email = request.form.get("email")
+        senha = request.form.get("senha")
+        confirmar = request.form.get("confirmar_senha")
+
+        usuarios = carregar_usuarios()
+
+        # ❌ validar senha
+        if senha != confirmar:
+            return render_template("registrar.html", erro="As senhas não coincidem")
+
+        if len(senha) < 4:
+            return render_template("registrar.html", erro="Senha muito curta")
+
+        # ❌ email já existe
+        if any(u["email"] == email for u in usuarios):
+            return render_template("registrar.html", erro="Email já cadastrado")
+
+        # 🔐 hash da senha
+        senha_hash = generate_password_hash(senha)
+
+        has_event = 0 
+        if get_eventos_ativos(): 
+            has_event = 1
+
+        usuario_id = criar_usuario(nome, email, senha_hash, has_event)
+
+        # 🔓 login automático
+        session["usuario_id"] = usuario_id
+
+        return redirect(url_for("main.home"))
+
+    return render_template("registrar.html")

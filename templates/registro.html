@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<link rel="stylesheet" href="../static/styles/login.css">
+
+<form class="login-container" method="POST">
+
+    <div class="img-div">
+        <img src="../static/logos/logo.png" alt="Logo" class="img">
+    </div>
+
+    <h1>Criar Conta</h1>
+
+    <!-- 👤 NOME -->
+    <input 
+        type="text" 
+        name="nome" 
+        placeholder="Nome de usuário"
+        required
+    >
+
+    <!-- 📧 EMAIL -->
+    <input 
+        type="email" 
+        name="email" 
+        placeholder="Email"
+        required
+    >
+
+    <!-- 🔒 SENHA -->
+    <input 
+        type="password" 
+        name="senha" 
+        placeholder="Senha"
+        required
+    >
+
+    <!-- 🔒 CONFIRMAR SENHA -->
+    <input 
+        type="password" 
+        name="confirmar_senha" 
+        placeholder="Confirmar senha"
+        required
+    >
+
+    <label class="show-pass">
+        <input type="checkbox" onclick="toggleSenha()"> Mostrar senha
+    </label>
+
+    <button type="submit">Registrar</button>
+
+    <!-- 🔁 Link para login -->
+    <div class="extra">
+        <span>Já tem conta?</span>
+        <a href="/login">Entrar</a>
+    </div>
+
+    {% if erro %}
+        <div class="erro">{{ erro }}</div>
+    {% endif %}
+
+</form>
+
+
+<script>
+function toggleSenha() {
+    const senhas = document.querySelectorAll('input[type="password"]');
+    senhas.forEach(input => {
+        input.type = input.type === "password" ? "text" : "password";
+    });
+}
+</script>
+{% endblock %}

@@ -2,7 +2,7 @@ from utils.json_utils import read_json, write_json
 from flask import session
 from datetime import datetime, timedelta
 
-def criar_usuario(nome, has_event):
+def criar_usuario(nome, email, senha, has_event):
     """Cria um registro de usuário novo caso não exista.
     
     Keyword arguments:
@@ -15,9 +15,13 @@ def criar_usuario(nome, has_event):
     novo_usuario = {
         "id": len(usuarios) + 1,
         "nome": nome,
+        "email": email,
+        "senha": senha,
         "pontos": 0,
+        "xp": 0,
+        "nivel": 1,
         "ultimo_login": data,
-        "img_logo": "logo.png",
+        "profile_img": "logo.png",
         "packs_diarios_abertos": 2,
         "contador_packs_comuns": 0,
         "packs_comprados_comum": 0,
@@ -74,6 +78,36 @@ def verify_date(usuarios, user, evento = False):
             user["packs_evento"] += 1
 
         salvar_usuarios(usuarios)
+
+# XP e Nivel ===========================
+def sum_xp(id, xp):
+    usuarios = carregar_usuarios()
+    user = next((u for u in usuarios if u["id"] == id), None)
+
+    has_level_uped = False
+    user["xp"] += xp
+    
+    while True:
+        nivel_cap = 100 + (user["nivel"] * 50)
+
+        if user["xp"] >= nivel_cap:
+            user["xp"] -= nivel_cap
+            user["nivel"] += 1
+            user["pontos"] += nivel_cap
+            level_up_pack(user, user["nivel"])
+            has_level_uped = True
+        else:
+            break
+
+    salvar_usuarios(usuarios)
+    return (user["xp"], user["nivel"], has_level_uped)
+
+def level_up_pack(user, nivel):
+    if nivel % 2 == 0:
+        user["packs_comprados_comum"] += 3
+    else:
+        user["packs_comprados_comum"] += 1
+        user["packs_comprados_raro"] += 1
 
 # Remove pacotes de evento
 def delete_events_packs():

@@ -62,3 +62,40 @@
     margin-top: 20px;
     color: #3b4f63;
 }
+
+.xp_field {
+    background: linear-gradient(135deg, #3b4f63, #2c3e50);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+
+.logoff_button {
+    padding: 10px;
+}
+
+.progress_xp_bar {
+    width: 20vw;
+    height: 20px;
+    background-color: #1a2530;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress_xp {
+    height: 100%;
+    background: linear-gradient(90deg, #4caf50, #81c784);
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    transition: width 0.4s ease;
+}

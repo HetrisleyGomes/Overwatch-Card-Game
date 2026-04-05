@@ -36,6 +36,7 @@ def set_cards(progress, cartas, rarity):
     usuarios = carregar_usuarios()
     user = next((u for u in usuarios if u["id"] == session["usuario_id"]), None)
     pontos = 0
+    xp = 0
 
     # Registra as cartas
     for c in cartas:
@@ -48,6 +49,8 @@ def set_cards(progress, cartas, rarity):
 
         if progress["personagens"][cid] > 1:
             pontos += rarity_convert(c["raridade"])
+        
+        xp += get_xp_calc(c['raridade'], pack_rarity=rarity)
     
     # Faz o controle dos pacotes
     if rarity == "comum":
@@ -67,6 +70,7 @@ def set_cards(progress, cartas, rarity):
         pass
     
     user["pontos"] += pontos
+    session["xp_obtido"] = xp
     session["pontos_obtidos"] = pontos
     salvar_usuarios(usuarios)
 
@@ -105,3 +109,27 @@ def rarity_convert(rarity):
             return 10
         case "especial":
             return 10
+        
+def get_xp_calc(rarity, pack_rarity):
+    value = 0
+    match rarity:
+        case "comum":
+            value = 1
+        case "incomum":
+            value = 2
+        case "raro":
+            value = 3
+        case "mitico":
+            value = 3
+        case "especial":
+            value = 2
+    match pack_rarity:
+        case "comum":
+            return value
+        case "raro":
+            return value * 2
+        case "especial":
+            return value * 2
+        
+        
+    

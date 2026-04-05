@@ -50,6 +50,14 @@
     </div>
 
     <div class="pontos_div" id="pontos" style="display:none;">
+        <div class="pontos_subdiv">
+            XP obtido: +<span>{{ xp_obtido }}</span> >> <span class="pontos">{{ xp_final }}</span> |
+            {% if level_uped %}
+                Subiu de nível! 
+            {% endif %}
+            Nível atual {{ nivel }}
+        </div>
+        
         {% if pontos %}
             <div class="pontos_subdiv">
                 Pontos de cartas repetidas: <span class="pontos">+{{ pontos }} pontos!</span>
@@ -182,7 +190,7 @@ function iniciarAnimacao() {
                     setTimeout(() => {
                         botoes.style.display = "flex";
                         pontos.style.display = "flex";
-                        //removerPorClasse("carta-back");
+                        removerPorClasse("carta-back");
                     }, 1000);
                 }
 

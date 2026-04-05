@@ -52,6 +52,10 @@ h1 {
     background-color: #442f6b;
 }
 
+.pack.aniversary {
+    background-color: gold;
+}
+
 /* PACK ABRINDO */
 .pack.abrir {
     animation: packAbrir 0.5s forwards;

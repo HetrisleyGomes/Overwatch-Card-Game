@@ -43,6 +43,16 @@
 
         </div>
 
+
+        <div class="xp_field">
+            <span>Nível {{ user["nivel"] }}</span>
+            <span>|</span>
+            <span>{{ user["xp"] }} XP</span>
+            <div class="progress_xp_bar">
+                <div class="progress_xp" style="width: {{ ((user['xp']) / (100 + user['nivel'] * 50)) * 100 }}%;"></div>
+            </div>
+        </div>
+
         <!-- ✏️ NOME -->
         <div class="name-section">
 
@@ -58,10 +68,9 @@
                 <input type="text" name="novo_nome" id="nome-input" value="{{ user.nome }}">
                 <button type="submit">Salvar</button>
             </form>
-
         </div>
 
-        <div>
+        <div class="logoff_button">
             <a href="{{ url_for('main.logoff') }}">
                 <button class="button">
                     Sair

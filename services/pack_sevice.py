@@ -56,7 +56,7 @@ def abrir_pack_evento(ids_eventos):
     # 1. sortear raridade
     
     packs = read_json("./data/packs.json")
-    pack = packs["especial"]
+    pack = packs["id_evento"]
     raridade = sortear_raridade(pack["chance"][0])
 
     # 2. filtrar personagens dessa raridade

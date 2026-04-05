@@ -78,7 +78,7 @@ def formatar_inventario():
 
         possui = cid in personagens_usuario
         quantidade = personagens_usuario.get(cid, 0)
-
+        golden_weapon = c.get("golden_weapon", False)
         cartas_view.append({
             "id": cid,
             "base": c["base"],
@@ -91,6 +91,7 @@ def formatar_inventario():
             "raridade": c["raridade"],
             "img": c["img"],
             "brilha": c["raridade"] == "mitico",
+            "golden_weapon": golden_weapon,
             "possui": possui,
             "quantidade": quantidade
         })

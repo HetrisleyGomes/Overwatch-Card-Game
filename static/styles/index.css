@@ -112,6 +112,11 @@
 }
 
 /* RESPONSIVIDADE ========================== */
+@media (max-width: 1380px){
+    .button {
+        width: 150px;
+    }
+}
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
