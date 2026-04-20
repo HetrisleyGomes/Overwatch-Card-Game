@@ -4,7 +4,7 @@
 
 h1 {
     margin-bottom: 30px;
-    color: #3b4f63;
+    color: var(--main-color);
     text-align: center;
     
 }
@@ -30,18 +30,19 @@ h1 {
     animation: packEntrada 0.6s ease;
 }
 
+
 .pack.comum {
     background-color: #2f6fd6;
 }
 
 .pack.raro {
-    background-color: #e67e22;
+    background-color: #e65022;
 }
 
 /* EVENTOS */
 .pack.april_fools {
     background-color: #e2d667;
-    color: #3b4f63;
+    color: var(--main-color);
 }
 
 .pack.natal {
@@ -142,7 +143,7 @@ h1 {
     gap: 50px;
     margin: auto;
     font-weight: 600;
-    color: #3b4f63;
+    color: var(--main-color);
 }
 
 .pontos_subdiv {
@@ -165,7 +166,7 @@ h1 {
 }
 
 .button {
-    background-color: #3b4f63;
+    background-color: var(--main-color);
     border: none;
     width: 180px;
     padding: 20px 0;
@@ -176,7 +177,7 @@ h1 {
 }
 
 .button:hover {
-    background-color: #4f6377;
+    background-color: var(--main-light-color);
 }
 
 /* RESPONSIVIDADE ========================== */
@@ -222,7 +223,7 @@ h1 {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
     .buttons {
         width: 270px;
     }

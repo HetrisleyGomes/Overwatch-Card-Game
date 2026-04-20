@@ -77,8 +77,10 @@ def formatar_inventario():
         cid = c["id"]
 
         possui = cid in personagens_usuario
-        quantidade = personagens_usuario.get(cid, 0)
         golden_weapon = c.get("golden_weapon", False)
+        foil = c.get("foil", False)
+        is_event = c.get("evento", False)
+
         cartas_view.append({
             "id": cid,
             "base": c["base"],
@@ -90,10 +92,10 @@ def formatar_inventario():
             "ult": c["ult"],
             "raridade": c["raridade"],
             "img": c["img"],
-            "brilha": c["raridade"] == "mitico",
+            "is_evento": is_event,
             "golden_weapon": golden_weapon,
-            "possui": possui,
-            "quantidade": quantidade
+            "foil": foil,
+            "possui": possui
         })
 
     return cartas_view
@@ -122,7 +124,9 @@ def listar_sets_usuario():
 
     for s in sets:
         personagens_set = s["personagens"]
+        personagens_set_extra = s.get("other_personagens", [])
 
+        # ToDo: Troca\r isso para conferir a lista de progress invés da quantidade de cartas.
         completo = all(
             personagem in personagens_usuario
             for personagem in personagens_set
@@ -141,20 +145,43 @@ def listar_sets_usuario():
                 continue
 
             possui = cid in personagens_usuario
+            is_event = c.get("evento", False)
+            golden_weapon = c.get("golden_weapon", False)
 
             cartas_detalhadas.append({
             "id": cid,
             "nome": c["nome"],
             "raridade": c["raridade"],
             "img": c["img"],
+            "evento": is_event,
+            "golden_weapon": golden_weapon,
             "possui": possui,
         })
+            
+        cartas_extras = []
+        if personagens_set_extra is not None:
+            for cid in personagens_set_extra:
+                
+                c = mapa_characters.get(cid)
 
+                if not c:
+                    continue
+
+                possui = cid in personagens_usuario
+
+                cartas_extras.append({
+                "id": cid,
+                "nome": c["nome"],
+                "raridade": c["raridade"],
+                "img": c["img"],
+                "possui": possui,
+            })
 
         set_info = {
             "nome": s["nome"],
             "completo": completo,
             "cartas": cartas_detalhadas,
+            "cartas_extra": cartas_extras,
             "progresso": f"{progresso}/{len(personagens_set)}",
             "progresso_percent": int((progresso/len(personagens_set))*100)
         }

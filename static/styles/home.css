@@ -1,3 +1,7 @@
+body {
+    overflow-y: hidden;
+}
+
 .packs {
     display: flex;
     justify-content: center;
@@ -15,7 +19,7 @@
     flex-direction: column;
     color: white;
     font-weight: bold;
-    box-shadow: 0px 2px 6px #000;
+    box-shadow: 0px 2px 6px var(--darkest-color);
     position: relative;
 }
 
@@ -51,7 +55,40 @@
   }
 }
 
+/* ASIDE */
+.aside-area {
+    position: fixed;
+    width: 20vw;
+    height: 50vh;
+    right: 1vw;
+    top: 18vh;
+    background-color: var(--darkest-color);
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    overflow-y: auto;
+}
 
+.container {
+    padding: 10px;
+    text-align: left;
+}
+
+.aside-box{
+    border: var(--main-light-color) 1px solid;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    padding: 4px 6px 6px;
+}
+
+.aside-box .title {
+    font-weight: 600;
+}
+.aside-box .texto {
+    font-size: 12px;
+    margin-left: 4px;
+}
+/* end ASIDE */
 .img {
     width: 120px;
 }
@@ -67,7 +104,7 @@
 /* EVENTOS */
 .pack.april_fools {
     background-color: #e2d667;
-    color: #3b4f63;
+    color: var(--main-color);
 }
 
 .pack.natal {
@@ -84,7 +121,7 @@
 
 .no-packs-msg {
     font-weight: 600;
-    color: #3b4f63;
+    color: var(--main-color);
     margin-top: 100px;
 }
 
@@ -98,13 +135,14 @@
     width: 40vw;
 }
 
-
-
 .buttons .button {
     width: 170px;
     margin: 8px;
 }
 
+#toggle-aside {
+    display: none;
+}
 
 
 /* RESPONSIVIDADE ========================== */
@@ -122,9 +160,36 @@
         width: 150px;
         height: 210px;
     }
+    /* ASIDE */
+    .aside-area {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80vw;
+        height: 100vh;
+        z-index: 1000;
+    }
+
+    .aside-area.active {
+        display: block;
+    }
+    #toggle-aside {
+        display: block;
+        position: fixed;
+        bottom: 100px;
+        right: 15px;
+        background: #3b4f63;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
     .packs {
         flex-wrap: wrap;
         flex-direction: row;
@@ -146,4 +211,5 @@
         width: 110px;
         padding: 4px;
     }
+    
 }

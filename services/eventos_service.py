@@ -71,3 +71,7 @@ def desativar_evento(nome_evento):
 
     write_json("./data/events.json", eventos)
     write_json("./data/characters.json", personagens)
+
+def get_last_log():
+    logs = read_json("./logs.json")
+    return logs[len(logs)-1]

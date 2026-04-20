@@ -16,7 +16,7 @@
                 {% endif %}                
             </div>
         {% endif %}
-        {% if user.contador_packs_comuns == 20 or user.packs_comprados_raro > 0 %}
+        {% if user.contador_packs_comuns == 10 or user.packs_comprados_raro > 0 %}
             <div class="rare pack">
                 <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img">
                 {% if user.packs_comprados_raro > 0 %}
@@ -24,7 +24,7 @@
                 {% endif %}
             </div>
         {% endif %}
-        {% if user.packs_diarios_abertos == 0 and user.packs_comprados_comum == 0 and user.contador_packs_comuns < 20 and user.packs_comprados_raro == 0 and user.packs_evento == 0 %}
+        {% if user.packs_diarios_abertos == 0 and user.packs_comprados_comum == 0 and user.contador_packs_comuns < 10 and user.packs_comprados_raro == 0 and user.packs_evento == 0 %}
             <span class="no-packs-msg">
                 Você não possui mais pacotes por hoje!
             </span>
@@ -46,7 +46,7 @@
                 <button class="button">Abrir pacote</button>
             </form> 
         {% endif %}
-        {% if user.contador_packs_comuns == 20 or user.packs_comprados_raro > 0 %}
+        {% if user.contador_packs_comuns == 10 or user.packs_comprados_raro > 0 %}
             <form method="POST" action="/abrir-pack-raro">
                 <button class="button">Abrir pacote raro</button>
             </form>
@@ -57,5 +57,72 @@
             </form>
         {% endif %}
     </div>
+    <button id="toggle-aside">ℹ️</button>
+    <aside class="aside-area">
+        <div class="header">
+            Notificações
+        </div>
+
+        <div class="container">
+            <div class="aside-box">
+                <p class="title">
+                    v.{{ log.version }} Data: {{ log.date }}
+                </p>
+                <span class="texto">
+                    {{ log.description }}
+                </span>
+            </div>
+            {% if ev %}
+                <div class="aside-box">
+                    <p class="title">
+                        Evento: {{ ev.nome }}
+                    </p>
+                    <span class="texto">
+                        De {{ ev.inicio }} à {{ ev.fim }}
+                    </span>
+                </div>
+            {% endif %}
+
+            {% if prom %}
+                <div class="aside-box">
+                    <p class="title">
+                        Pacote promocional disponível na loja! 
+                        {% if prom.last_days %}
+                                (Últimos dias)
+                        {% endif %}
+                        
+                    </p>
+                    <span class="texto">
+                        Aproveite o pacotaço {{ prom.nome }}, {{ prom. description }}
+                    </span>
+                </div>
+            {% endif %}
+
+
+            <div class="aside-box">
+                <p class="title">
+                    Duelo!
+                </p>
+                <span class="texto">
+                        <a href="{{ url_for('main.inventario') }}">
+                        <button class="button">
+                            Batalha
+                        </button>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </aside>
 </div>
+<script>
+    const aside = document.querySelector(".aside-area");
+    const btn = document.getElementById("toggle-aside");
+
+    btn.addEventListener("click", () => {
+        aside.classList.toggle("active");
+    });
+    aside.addEventListener("click", () => {
+        aside.classList.remove("active");
+    })
+</script>
 {% endblock %}

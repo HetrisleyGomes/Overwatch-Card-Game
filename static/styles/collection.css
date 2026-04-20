@@ -1,5 +1,5 @@
 .set {
-    background: #2b3a4a;
+    background: var(--main-dark-color);
     border-radius: 12px;
     padding: 10px;
     margin-bottom: 20px;
@@ -28,7 +28,7 @@
 .progress_bar {
     width: 100%;
     height: 20px;
-    background-color: #1a2530;
+    background-color: var(--darkest-color);
     border-radius: 10px;
     overflow: hidden;
     margin: 10px 0;
@@ -36,7 +36,7 @@
 
 .progress_fill {
     height: 100%;
-    background: linear-gradient(90deg, #4caf50, #81c784);
+    background: linear-gradient(90deg, var(--sucess-color-2), var(--sucess-color-1));
     color: white;
     font-size: 12px;
     display: flex;
@@ -62,16 +62,18 @@
     text-align: center;
     color: white;
 }
+.personagem_img {
+    position: relative;
+}
 
 .personagem_img img {
     width: 180px;
     height: 180px;
     object-fit: contain;
-    image-rendering: pixelated;
 }
 
 .personagem_base {
-    background: #1a2530;
+    background: var(--darkest-color);
     padding: 5px;
     border-radius: 6px;
     margin-top: 5px;
@@ -81,6 +83,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.base_extra {
+    background: var(--main-light-color);
+
 }
 
 .p_nome {
@@ -102,11 +109,19 @@
 
 .raridade.comum { background: black; }
 .raridade.incomum { background: gray; }
-.raridade.raro { background: gold; }
+.raridade.epico { background-color: silver; }
+.raridade.lendario { background: gold; }
 .raridade.mitico { background: purple; }
 .raridade.especial { background: mediumpurple; 
-    border: 2px dotted lightskyblue; }
+    border: 2px dotted lightskyblue; 
+}
 
+.raridade.comum.raridade-extra, .raridade.incomum.raridade-extra {
+    border: 2px dotted lightskyblue; 
+}
+.raridade.raro.raridade-extra {
+    border: 2px dotted teal; 
+}
 .personagem_apagado {
     opacity: 0.4;
     filter: grayscale(100%);
@@ -129,6 +144,17 @@
 
 .space {
     height: 8vh;
+}
+
+.golden_weapon_icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    
+}
+.golden_weapon_icon img{
+    width: 15px;
+    height: 15px;
 }
 
 /* RESPONSIVIDADE ========================== */
@@ -160,8 +186,3 @@
 
 }
 
-@media (max-width: 480px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}

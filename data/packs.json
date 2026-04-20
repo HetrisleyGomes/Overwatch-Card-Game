@@ -2,26 +2,33 @@
   "comum": {
     "cartas_por_pack": 5,
     "chance": [
-        { "comum": 85, "incomum": 15, "raro": 0 },
-        { "comum": 80, "incomum": 20, "raro": 0 },
-        { "comum": 70, "incomum": 25, "raro": 5 },
-        { "comum": 50, "incomum": 45, "raro": 5 },
-        { "comum": 10, "incomum": 50, "raro": 40 }
+        { "comum": 100 },
+        { "comum": 80, "incomum": 20 },
+        { "comum": 50, "incomum": 40, "epico": 10 },
+        { "comum": 30, "incomum": 55, "epico": 25 },
+        { "incomum": 20, "epico": 40, "lendario": 40 }
     ]
   },
   "raro": {
     "cartas_por_pack": 4,
     "chance": [
-      { "comum": 25, "incomum": 50, "raro": 25 },
-      { "comum": 10, "incomum": 40, "raro": 50 },
-      { "incomum": 35, "raro": 65 },
+      { "incomum": 60, "epico": 40 },
+      { "incomum": 10, "epico": 60, "lendario": 30 },
+      { "epico": 20, "lendario": 80 },
       { "mitico": 100 }
     ]
   },
   "april_fools": {
     "cartas_por_pack": 1,
     "chance": [
-      {"especial": 100}
+      { "comum": 40, "incomum": 35, "epico": 25 }
+    ]
+  },
+  "aniversary":{
+    "cartas_por_pack": 2,
+    "chance": [
+      { "lendario": 100 },
+      { "epico": 100 }
     ]
   }
 }

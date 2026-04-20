@@ -1,0 +1,23 @@
+:root {
+  --main-color: #3b4f63;
+  --main-dark-color: #2c3c4d;
+  --main-light-color: #4f6377;
+  --cinza: #444;
+  --darkest-color: #1e2a38;
+
+  --sucess-color-1: #81c784;
+  --sucess-color-2: #4caf50;
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #d9e1e8;
+}
+img{
+    image-rendering: pixelated;
+}
+.space {
+    height: 8vh;
+}

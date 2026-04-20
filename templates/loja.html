@@ -7,6 +7,32 @@
     <h1>Loja</h1>
 
     <div class="container">
+    {% if prom %}
+        <h2 class="sessao">Pacotaço</h2>
+
+        <div class="prateleira">
+            <div class="item promotion_pack">
+                <div class="item_name">{{ prom.nome }} {% if prom.last_days %}(Últimos dias){% endif %}</div>
+                <div class="item_description">
+                    {{ prom.description }}
+                </div>
+
+                <div class="item_button">
+                    <button class="button {% if (user.pontos < prom.value and not prom.buy_with_impeto) or (prom.buy_with_impeto and user.impetos < prom.value) or user['id'] in prom.has_buy %}desativado{% endif %}"
+                    {% if (user.pontos < prom.value and not prom.buy_with_impeto) or (prom.buy_with_impeto and user.impetos < prom.value) or user['id'] in prom.has_buy %}disabled{% endif %}
+                    onclick="comprarPack('promotion_pack', {{prom.buy_with_impeto}})">
+                        {% if not user['id'] in prom.has_buy %}
+                            {{ prom.value }} {% if prom.buy_with_impeto %}Impetos{% else %}Pontos{% endif %}
+                        {% else %}
+                            Obtido
+                        {% endif %}
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="prateleira-divider"></div>
+    {% endif %}
         <h2 class="sessao">Pacotes</h2>
         <div class="prateleira">
             <!-- Item -->
@@ -19,7 +45,7 @@
                     <button class="button {% if user.pontos < 100 %}desativado{% endif %}"
                     {% if user.pontos < 100 %}disabled{% endif %}
                     onclick="comprarPack('comum')">
-                        100 Coins</button>
+                        100 Pontos</button>
                 </div>
             </div>
 
@@ -32,15 +58,15 @@
                     <button class="button {% if user.pontos < 500 %}desativado{% endif %}"
                     {% if user.pontos < 500 %}disabled{% endif %}
                     onclick="comprarPack('raro')">
-                    500 Coins</button>
+                    500 Pontos</button>
                 </div>
             </div>
 
             <!-- Bônus diário -->
-             <div class="item expand-2">
+             <div class="item">
                 <div class="item_name">Bônus diário</div>
                 <div class="item_description">
-                    50 Coins obitíveis diariamente.
+                    50 Pontos obitíveis diariamente.
                 </div>
                 <div class="item_button">
                     {% if not user.has_already_get_daily_bonus %}
@@ -52,7 +78,7 @@
             </div>
 
             <!-- PACOTE DE EVENTO -->
-             {% if ev %}
+            {% if ev %}
                 <div class="item especial">
                     <div class="item_name">Pacote de {{ ev["nome"] }}</div>
                     <div class="item_description">
@@ -62,15 +88,42 @@
                         <button class="button {% if user.pontos < 300 %}desativado{% endif %}"
                         {% if user.pontos < 300 %}disabled{% endif %}
                         onclick="comprarPack('especial')">
-                        300 Coins</button>
+                        300 Pontos</button>
                     </div>
                 </div>
-             {% endif %}
-             
-            
-
+            {% endif %}   
         </div>
+        <div class="prateleira-divider"></div>
 
+        <h2 class="sessao">Pontos</h2>
+        <div class="prateleira">
+            <!-- COMPRAR PONTOS -->
+            <div class="item">
+                <div class="item_name">600 Pontos</div>
+                <div class="item_description">
+                    Compre 600 Pontos pelo preço de 1 Impeto!
+                </div>
+                <div class="item_button">
+                    <button class="button {% if user.impetos < 1 %}desativado{% endif %}"
+                    {% if user.impetos < 1 %}disabled{% endif %}
+                    onclick="comprarPack('pontos', true)">
+                    1  Impeto</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_name">2000 Pontos</div>
+                <div class="item_description">
+                    Compre 2000 Pontos pelo preço de 3 Impetos!
+                </div>
+                <div class="item_button">
+                    <button class="button {% if user.impetos < 3 %}desativado{% endif %}"
+                    {% if user.impetos < 3 %}disabled{% endif %}
+                    onclick="comprarPack('pontos2k', true)">
+                    3  Impetos</button>
+                </div>
+            </div>
+        </div>
         <div class="prateleira-divider"></div>
 
         <h2 class="sessao">Icones</h2>
@@ -88,9 +141,9 @@
                 <div class="item_button">
                     <button class="button {% if user.pontos < img.price or img.possui %}desativado{% endif %}"
                     {% if user.pontos < img.price or img.possui %}disabled{% endif %}
-                    onclick="comprarPack('icone',{{img.id}})">
+                    onclick="comprarPack('icone', false, {{img.id}})">
                         {% if not img.possui %}
-                            {{ img.price }} Coins
+                            {{ img.price }} Pontos
                         {% else %}
                             Obtido
                         {% endif %}
@@ -100,21 +153,19 @@
             </div>
             {% endif %}
             {% endfor %}
-            
-            
         </div>
     </div>
 </div>
 
 
 <script>
-function comprarPack(tipo, id=0) {
+function comprarPack(tipo, buy_with_impetos=false, id=0) {
     fetch("/comprar-pack", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ tipo: tipo, id: id })
+        body: JSON.stringify({ tipo: tipo, buy_with_impetos: buy_with_impetos, id: id })
     })
     .then(res => res.json())
     .then(data => {

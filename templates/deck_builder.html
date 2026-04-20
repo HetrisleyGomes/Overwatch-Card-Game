@@ -1,0 +1,247 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<link rel="stylesheet" href="../static/styles/deck_builder.css">
+<link rel="stylesheet" href="../static/styles/carta.css">
+
+<div class="deck-container">
+
+    <!-- TOPO -->
+    <div class="deck-header">
+        <h2>Montar Baralho</h2>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="deck-main">
+
+        <!-- CARTAS DISPONÍVEIS -->
+        <div class="card-pool">
+            <h3>Cartas disponíveis</h3>
+
+            <div class="card-grid">
+                {% for carta in cartas %}
+                    {% if carta.possui %}
+                        <div class="card {{ carta.raridade }} {{ carta.classe|lower }}
+                        {% if carta.id in deck %} selected {% endif %}" 
+                        data-id="{{ carta.id }}"
+                        data-nome="{{ carta.nome }}"
+                        data-img="{{ url_for('static', filename='images/' + carta.img ) }}"
+                        data-classe="{{ carta.classe }}"
+                        data-base="{{ carta.base }}"     
+                        >
+                            <div class="card-nome">{{ carta.nome }}</div>
+
+                            <div class="card-img">
+                                <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                                {% if carta.golden_weapon %}
+                                    <div class="golden_weapon_icon">
+                                        <img src="{{ url_for('static', filename='logos/golden_star.png' ) }}">
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="card-classe">
+                                {{ carta.classe }} - {{ carta.subclasse }}
+                            </div>
+
+                            <div class="card-texto">
+                                <p class="entrada">{{ carta.entrada }}</p>
+                                <p><strong>{{ carta.ult_nome }}:</strong> {{ carta.ult }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+        <aside class="aside-area">
+            <!-- SEU DECK -->
+            <div class="deck-area">
+                <h3>Seu baralho</h3>
+                
+                <div class="deck-slots">
+                    {% for i in range(12) %}
+                    <div class="deck-slot" data-empty="true"></div>
+                    {% endfor %}
+                </div>
+            </div>
+                <!-- RODAPÉ -->
+            <div class="deck-footer">
+                <form id="deck-form" method="POST" action="/save-deck">
+                    <input type="hidden" name="deck_data" id="deck-data">
+
+                    <button type="submit" class="btn salvar">
+                        Salvar Deck
+                    </button>
+                </form>
+                <button class="btn cancelar" onclick="window.location.href='/inventario'">
+                    Cancelar
+                </button>
+            </div>
+        </aside>
+    </div>
+
+
+
+</div>
+
+<script>
+const cards = document.querySelectorAll(".card");
+const slots = document.querySelectorAll(".deck-slot");
+const form = document.getElementById("deck-form");
+const inputDeck = document.getElementById("deck-data");
+const deckIds = {{ deck | tojson }};
+
+let deck = [];
+
+// 👉 função de validação
+function podeAdicionar(carta) {
+
+    // limite total
+    if (deck.length >= 12) {
+        alert("O deck já tem 12 cartas!");
+        return false;
+    }
+
+    // limite de tanques
+    const tanques = deck.filter(c => c.classe === "Tanque").length;
+    if (carta.classe === "Tanque" && tanques >= 3) {
+        alert("Você só pode ter 3 Tanques!");
+        return false;
+    }
+
+    // base repetida
+    const baseExiste = deck.some(c => c.base === carta.base);
+    if (baseExiste) {
+        alert("Você não pode repetir personagens!");
+        return false;
+    }
+
+    return true;
+}
+// 👉 clicar na carta
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        const carta = {
+            id: card.dataset.id,
+            nome: card.dataset.nome,
+            img: card.dataset.img,
+            classe: card.dataset.classe,
+            base: card.dataset.base
+        };
+        if (!podeAdicionar(carta)) return;
+
+        // acha primeiro slot vazio
+        const emptySlot = [...slots].find(s => s.dataset.empty === "true");
+
+        if (!emptySlot) {
+            alert("Deck cheio!");
+            return;
+        }
+
+        // pegar dados
+        const nome = card.dataset.nome;
+        const img = card.dataset.img;
+
+        // criar mini carta
+        const mini = document.createElement("div");
+        mini.classList.add("mini-card");
+
+        mini.innerHTML = `
+            <img src="${carta.img}">
+            <span class="${carta.classe.toLowerCase()}">${carta.nome}</span>
+        `;
+
+        // limpar slot
+        emptySlot.innerHTML = "";
+        emptySlot.appendChild(mini);
+        emptySlot.dataset.empty = "false";
+
+        // salvar no deck
+        deck.push(carta);
+        card.classList.add("selected");
+
+        // remover carta ao clicar no slot
+        emptySlot.onclick = () => {
+            emptySlot.innerHTML = "";
+            emptySlot.dataset.empty = "true";
+            // remove do array
+            deck = deck.filter(c => c.id !== carta.id);
+            card.classList.remove("selected");
+        };
+    });
+});
+
+form.addEventListener("submit", (e) => {
+
+    if (deck.length !== 12) {
+        e.preventDefault();
+        alert("O deck precisa ter exatamente 12 cartas!");
+        return;
+    }
+
+    // enviar apenas IDs (melhor prática)
+    const deckIds = deck.map(c => c.id);
+
+    inputDeck.value = JSON.stringify(deckIds);
+});
+
+
+let cartasData = {};
+
+function carregamento() {
+
+    document.querySelectorAll(".card").forEach(card => {
+        cartasData[card.dataset.id] = {
+            id: card.dataset.id,
+            nome: card.dataset.nome,
+            img: card.dataset.img,
+            classe: card.dataset.classe,
+            base: card.dataset.base
+        };
+    });
+
+    deck = deckIds.map(id => cartasData[id]).filter(c => c !== undefined);
+
+    deck.forEach((carta, index) => {
+        const slot = slots[index];
+        if (!slot) return;
+
+        const mini = document.createElement("div");
+        mini.classList.add("mini-card");
+
+        mini.innerHTML = `
+            <img src="${carta.img}">
+            <span class="${carta.classe.toLowerCase()}">${carta.nome}</span>
+        `;
+
+        slot.innerHTML = "";
+        slot.appendChild(mini);
+        slot.dataset.empty = "false";
+
+        // 🔥 marcar como selecionada
+        const original = document.querySelector(`[data-id="${carta.id}"]`);
+        if (original) original.classList.add("selected");
+
+        // remover ao clicar
+        slot.onclick = () => {
+            slot.innerHTML = "";
+            slot.dataset.empty = "true";
+
+            deck = deck.filter(c => c.id !== carta.id);
+
+            if (original) original.classList.remove("selected");
+        };
+    });
+}
+
+
+
+document.addEventListener("DOMContentLoaded", ()=>{
+    if (deckIds.length != 0){
+        carregamento()
+    }
+});
+
+</script>
+
+{% endblock %}

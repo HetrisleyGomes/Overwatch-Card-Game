@@ -10,15 +10,33 @@
         }
     },{
         "id": 2,
+        "nome": "Overwatch Dark",
+        "img": "logo_dark.png",
+        "descricao": "Logo Overwatch.",
+        "price": 0,
+        "unlock": {
+            "type": "free"
+        }
+    },{
+        "id": 3,
         "nome": "Pachimari",
         "img": "Pachimari_ow.png",
-        "descricao": "Pachimari's são os melhores.",
-        "price": 500,
+        "descricao": "Todo mundo ama o Pachimari.",
+        "price": 200,
         "unlock": {
             "type": "purchase"
         }
     },{
-        "id": 3,
+        "id": 4,
+        "nome": "Overwatch Ecopoint",
+        "img": "logo_ecopoint.png",
+        "descricao": "Logo Ecopoint Overwatch.",
+        "price": 200,
+        "unlock": {
+            "type": "purchase"
+        }
+    },{
+        "id": 5,
         "nome": "Coelhinha",
         "img": "dva_logo.png",
         "descricao": "Com amor, D.Va!",
@@ -27,7 +45,7 @@
             "type": "purchase"
         }
     },{
-        "id": 4,
+        "id": 6,
         "nome": "Hackeado",
         "img": "sombra_logo.png",
         "descricao": "Teje, hackeado.",
@@ -35,17 +53,18 @@
         "unlock": {
             "type": "purchase"
         }
-    },{
-        "id": 5,
-        "nome": "8-bits",
-        "img": "8bits_logo.png",
-        "descricao": "Teje, hackeado. (em 8-bits)",
+    },
+    {
+        "id": 7,
+        "nome": "Soldadinho",
+        "img": "GLHF.png",
+        "descricao": "Boa sorte e se divirta!",
         "price": 500,
         "unlock": {
             "type": "purchase"
         }
     },{
-        "id": 6,
+        "id": 8,
         "nome": "Setor Nulo",
         "img": "null_sector_logo.png",
         "descricao": "A força da resistência omnica.",
@@ -54,7 +73,7 @@
             "type": "purchase"
         }
     },{
-        "id": 7,
+        "id": 9,
         "nome": "Blackwatch",
         "img": "blackwatch_logo.png",
         "descricao": "Das sombras, para o mundo.",
@@ -64,7 +83,7 @@
             "value": "blackwatch"
         }
     },{
-        "id": 8,
+        "id": 10,
         "nome": "Talon",
         "img": "talon_logo.png",
         "descricao": "O novo império, Talon!",
@@ -75,7 +94,7 @@
         }
     },
     {
-        "id": 9,
+        "id": 11,
         "nome": "Ouroverwatch",
         "img": "gold_watch.png",
         "descricao": "Brilhe, com Overwatch.",
@@ -83,6 +102,94 @@
         "unlock": {
             "type": "event",
             "value": "aniversary"
+        }
+    },
+    {
+        "id": 12,
+        "nome": "Grande amiga",
+        "img": "Orisa_icon.png",
+        "descricao": "Orisa, a grande amiga de Efi.",
+        "price": 200,
+        "unlock": {
+            "type": "nivel",
+            "value": 2
+        }
+    },
+    {
+        "id": 13,
+        "nome": "Hacker 8-bits",
+        "img": "8bits_logo.png",
+        "descricao": "Teje, hackeado. (em 8-bits)",
+        "price": 500,
+        "unlock": {
+            "type": "nivel",
+            "value": 3
+        }
+    },
+    {
+        "id": 14,
+        "nome": "Pachimari 8-bits",
+        "img": "8-Bitmari.png",
+        "descricao": "Agora você pode amar o pachimari em 8-bits.",
+        "price": 500,
+        "unlock": {
+            "type": "nivel",
+            "value": 3
+        }
+    },
+    {
+        "id": 15,
+        "nome": "Ganimedes perigoso",
+        "img": "Ganymede_icon.png",
+        "descricao": "Ganimedes anda muito preocupado esses dias.",
+        "price": 750,
+        "unlock": {
+            "type": "nivel",
+            "value": 4
+        }
+    },
+    {
+        "id": 16,
+        "nome": "Questwatch",
+        "img": "Questwatch_logo.png",
+        "descricao": "Embarque em missões divertidas com Questwatch.",
+        "price": 500,
+        "unlock": {
+            "type": "nivel",
+            "value": 5
+        }
+    },
+    {
+        "id": 17,
+        "nome": "Pachimari Questwatch",
+        "img": "Questwatch_Pachimari.png",
+        "descricao": "O pachimari, mais adorável do que nunca.",
+        "price": 500,
+        "unlock": {
+            "type": "nivel",
+            "value": 5
+        }
+    },
+    {
+        "id": 18,
+        "nome": "Tracer Questwatch",
+        "img": "Questwatch_Tracer.png",
+        "descricao": "A aventureira dos reinos de Questwatch.",
+        "price": 750,
+        "unlock": {
+            "type": "nivel",
+            "value": 5
+        }
+    },
+    {
+        "id": 19,
+        "nome": "Mercymari",
+        "img": "Mercy_mari.png",
+        "descricao": "Um pachimari misericordioso.",
+        "price": 750,
+        "unlock": {
+            "type": "nivel",
+            "value": 6
         }
     }
 ]

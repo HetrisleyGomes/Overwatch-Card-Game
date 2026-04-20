@@ -8,7 +8,10 @@
         <div><img src="{{ url_for('static', filename='logos/' + user.profile_img ) }}"></div>
         <div>Usuário: <span>{{ user.nome }}</span></div>
     </div>
-    <div class="header-item" id="points">Pontos: <div class="points_box"><span id="pontos">{{ user.pontos }}</span></div></div>
+    <div class="header-item">
+        <div class="header-item" id="points">Ímpetos: <div class="points_box"><span id="pontos">{{ user.impetos }}</span></div></div>
+        <div class="header-item" id="points">Pontos: <div class="points_box"><span id="pontos">{{ user.pontos }}</span></div></div>
+    </div>
 </div>
 
 {% if ev %}

@@ -1,0 +1,15 @@
+{
+  "nome": "Temporada 2: Apogeu",
+  "description": "Pacote especial com: Sierra, Soldado Churrasqueiro: 76, e Cassidy Salva-vidas!",
+  "value": 1000,
+  "last_days": true,
+  "buy_with_impeto": false,
+  "has_buy": [
+    1
+  ],
+  "itens": [
+    "sierra_comum",
+    "cassidy_salvavidas",
+    "soldado_76_churrasqueiro"
+  ]
+}

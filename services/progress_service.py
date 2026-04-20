@@ -1,6 +1,7 @@
 from .user_service import carregar_usuarios, salvar_usuarios
 from utils.json_utils import read_json, write_json
 from flask import session
+import json
 
 # REGISTRAR ============================================================
 def registry_cards(cartas, rarity):
@@ -39,15 +40,15 @@ def set_cards(progress, cartas, rarity):
     xp = 0
 
     # Registra as cartas
+    personagens_set = set(progress["personagens"])
+
     for c in cartas:
         cid = c["id"]
 
-        if cid not in progress["personagens"]:
-            progress["personagens"][cid] = 1
+        if cid not in personagens_set:
+            personagens_set.add(cid)
+            progress["personagens"].append(cid)
         else:
-            progress["personagens"][cid] += 1
-
-        if progress["personagens"][cid] > 1:
             pontos += rarity_convert(c["raridade"])
         
         xp += get_xp_calc(c['raridade'], pack_rarity=rarity)
@@ -55,20 +56,23 @@ def set_cards(progress, cartas, rarity):
     # Faz o controle dos pacotes
     if rarity == "comum":
         if user["packs_diarios_abertos"] > 0:
-            if user["contador_packs_comuns"] < 20:
+            if user["contador_packs_comuns"] < 10:
                 user["contador_packs_comuns"] += 1
             user["packs_diarios_abertos"] -= 1
         elif user["packs_comprados_comum"] > 0:
             user["packs_comprados_comum"] -= 1
     elif rarity == "raro":
-        if user["contador_packs_comuns"] == 20:
+        if user["contador_packs_comuns"] == 10:
             user["contador_packs_comuns"] = 0
         elif user["packs_comprados_raro"] > 0:
             user["packs_comprados_raro"] -= 1
     elif rarity == "especial":
         user["packs_evento"] -= 1
         pass
-    
+    if user["nivel"] <= 5:
+        pontos = int(pontos*2)
+    elif user['nivel'] <=8:
+        pontos = int(pontos * 1.5)
     user["pontos"] += pontos
     session["xp_obtido"] = xp
     session["pontos_obtidos"] = pontos
@@ -84,8 +88,9 @@ def make_new_progress(all_progress):
     
     novo_progress = {
     "user_id": session["usuario_id"],
-    "personagens": {},
-    "sets_completos": []
+    "personagens": [],
+    "sets_completos": [],
+    "deck": []
     }
     all_progress.append(novo_progress)
     return novo_progress
@@ -103,8 +108,10 @@ def rarity_convert(rarity):
             return 1
         case "incomum":
             return 2
-        case "raro":
-            return 5
+        case "epico":
+            return 4
+        case "lendario":
+            return 6
         case "mitico":
             return 10
         case "especial":
@@ -117,19 +124,36 @@ def get_xp_calc(rarity, pack_rarity):
             value = 1
         case "incomum":
             value = 2
-        case "raro":
+        case "epico":
             value = 3
+        case "lendario":
+            value = 4
         case "mitico":
-            value = 3
-        case "especial":
-            value = 2
+            value = 5
     match pack_rarity:
         case "comum":
-            return value
+            return int(value * 2)
         case "raro":
-            return value * 2
+            return value
         case "especial":
-            return value * 2
-        
-        
+            return int(value * 2)
+
+def save_deck_progress(deck_json):
+    deck_ids = json.loads(deck_json)
+    # buscar usuário
+    progress_list = read_json("./data/progress.json")
+    user_progress = next((p for p in progress_list if p["user_id"] == session["usuario_id"]), None)
+
+    # garantir que existe lista
+    if "deck" not in user_progress:
+        user_progress["deck"] = []
+    
+    user_progress["deck"] = deck_ids
+    write_json("./data/progress.json", progress_list)
+
+def get_deck():
+    progress_list = read_json("./data/progress.json")
+    user_progress = next((p for p in progress_list if p["user_id"] == session["usuario_id"]), None)
+
+    return user_progress["deck"]
     

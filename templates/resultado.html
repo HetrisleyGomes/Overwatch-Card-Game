@@ -22,13 +22,18 @@
 
                         <!-- Frente -->
                         <div class="carta-front">
-                            <div class="card card-pack {{ carta.raridade }} {{ carta.classe|lower }}">
+                            <div class="card card-pack {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.is_evento }}">
                                 <div class="card-nome">
                                     {{ carta.nome }}
                                 </div>
 
                                 <div class="card-img">
                                     <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                                    {% if carta.golden_weapon %}
+                                        <div class="golden_weapon_icon">
+                                            <img src="{{ url_for('static', filename='logos/golden_star.png' ) }}">
+                                        </div>
+                                    {% endif %}
                                 </div>
 
                                 <div class="card-classe">
@@ -51,29 +56,39 @@
 
     <div class="pontos_div" id="pontos" style="display:none;">
         <div class="pontos_subdiv">
-            XP obtido: +<span>{{ xp_obtido }}</span> >> <span class="pontos">{{ xp_final }}</span> |
-            {% if level_uped %}
-                Subiu de nível! 
-            {% endif %}
-            Nível atual {{ nivel }}
+            <p>
+                <span>XP obtido: +{{ xp_obtido }} >></span>
+                <span class="pontos">{{ xp_final }}</span> XP
+            </p>
+            <p>
+                {% if level_uped %}
+                    <span>Subiu de nível!</span>
+                {% endif %}
+                <span>Nível atual {{ nivel }}</span>
+            </p>
+            
         </div>
         
         {% if pontos %}
             <div class="pontos_subdiv">
-                Pontos de cartas repetidas: <span class="pontos">+{{ pontos }} pontos!</span>
+                <p>
+                    <span>Pontos de cartas repetidas: </span>
+                    <span class="pontos">+{{ pontos }} pontos!</span>
+                </p>
             </div>
         {% endif %}
-        {% if pontos_sets %}
+        {% if pontos_sets or sets %}
             <div class="pontos_subdiv">
-                Pontos de coleções completadas: <span class="pontos">+{{ pontos_sets }} pontos!</span>
-            </div>
-        {% endif %}
-        {% if sets %}
-            <div class="pontos_subdiv">
-                Coleções completadas: 
-                {% for set in sets %}
+                <p>
+                    <span>Pontos de coleções completadas: </span>
+                    <span class="pontos">+{{ pontos_sets }} pontos!</span>
+                </p>
+                <p>
+                    <span>Coleções completadas: </span>
+                    {% for set in sets %}
                     <span class="pontos">{{ set }}</span>
-                {% endfor %}
+                    {% endfor %}
+                </p>
             </div>
         {% endif %}
     </div>

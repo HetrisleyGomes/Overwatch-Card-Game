@@ -171,3 +171,10 @@ marimo/_lsp/
 __marimo__/
 
 .vscode
+
+
+
+
+data/user.json
+data/progress.json
+data/inventory.json

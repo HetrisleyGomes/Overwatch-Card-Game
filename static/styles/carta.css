@@ -5,11 +5,11 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: #1e2a38;
+    background-color: var(--darkest-color);
     color: white;
     box-sizing: border-box;
     border: 12px solid black;
-    box-shadow: 2px 2px 6px #0e0d14;
+    box-shadow: 2px 2px 6px var(--darkest-color);
 }
 .card-nome {
     text-align: center;
@@ -21,13 +21,19 @@
     text-overflow: ellipsis;
     height: 20px;
 }
+.card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 .card-img img {
     width: 140px;
     height: 140px;
     object-fit: contain;
 }
 .card-classe {
-    background-color: #444;
+    background-color: var(--cinza);
     text-align: center;
     font-size: 14px;
     padding: 4px;
@@ -65,15 +71,29 @@
 .incomum {
     border-color: gray;
 }
-.raro {
+.epico {
+    border-color: silver;
+}
+.lendario {
     border-color: #b99f07;
 }
 .mitico {
     border-image: linear-gradient(45deg, purple, pink, blue, purple) 1;
     animation: glow 2s infinite alternate;
 }
-.especial {
+.april_fools {
     border-color: mediumpurple;
+}
+
+.golden_weapon_icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    
+}
+.golden_weapon_icon img{
+    width: 15px;
+    height: 15px;
 }
 p {
     margin-block-start: 0;
@@ -82,7 +102,6 @@ p {
 .card:hover {
     transform: scale(1.1);
     transition: 0.2s;
-    z-index: 10;
 }
 .mitico .card-nome {
     color: #ffd900;
@@ -118,12 +137,12 @@ p {
     }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
     .card {
         width: 160px;
         height: 210px;
         border-width: 8px;
-        box-shadow: 1px 1px 4px #0e0d14;
+        box-shadow: 1px 1px 4px var(--darkest-color);
 
     }
     .card-img {

@@ -18,9 +18,11 @@ def criar_usuario(nome, email, senha, has_event):
         "email": email,
         "senha": senha,
         "pontos": 0,
+        "impetos": 0,
         "xp": 0,
         "nivel": 1,
         "ultimo_login": data,
+        "streak": 1,
         "profile_img": "logo.png",
         "packs_diarios_abertos": 2,
         "contador_packs_comuns": 0,
@@ -69,15 +71,37 @@ def verify_date(usuarios, user, evento = False):
     ultimo_login_str = user["ultimo_login"]
     hoje = datetime.now().date()
     ultimo_login = datetime.strptime(ultimo_login_str, "%Y-%m-%d").date()
-
+    
     if ultimo_login != hoje:
         user["ultimo_login"] = hoje.strftime("%Y-%m-%d")
         user["packs_diarios_abertos"] = 2
         user["has_already_get_daily_bonus"] = False
+
+        ontem = hoje - timedelta(days=1)
+        if ultimo_login == ontem:
+            user["streak"] += 1
+            user["pontos"] += int(user["streak"])
+            if (user["streak"] % 7) == 0:
+                get_streak_bonus(user)
+
+        else:
+            user["streak"] = 1
+
         if evento:
             user["packs_evento"] += 1
 
         salvar_usuarios(usuarios)
+
+def get_streak_bonus(user):
+    streak = user["streak"]
+    semanas = streak / 7
+    if semanas < 4:
+        user["packs_comprados_comum"] += 4
+    elif semanas < 8:
+        user["packs_comprados_raro"] += 3
+    else:
+        user["packs_comprados_raro"] += 6
+
 
 # XP e Nivel ===========================
 def sum_xp(id, xp):
@@ -88,12 +112,13 @@ def sum_xp(id, xp):
     user["xp"] += xp
     
     while True:
-        nivel_cap = 100 + (user["nivel"] * 50)
+        nivel_cap = 50 + (user["nivel"] * 25)
 
         if user["xp"] >= nivel_cap:
             user["xp"] -= nivel_cap
             user["nivel"] += 1
             user["pontos"] += nivel_cap
+            user["impetos"] += 1
             level_up_pack(user, user["nivel"])
             has_level_uped = True
         else:
@@ -145,7 +170,7 @@ def user_get_inventory(user_id):
         })
     return icons_user
 
-def icon_view(id, event):
+def icon_view(id, nivel, event):
     icons = read_json("./data/icons.json")
     inventory = read_json("./data/inventory.json")
     user_inv = next((i for i in inventory if i["user_id"] == id), None)
@@ -167,6 +192,9 @@ def icon_view(id, event):
         elif unlock["type"] == "event":
             if event == unlock["value"]:
                 disponivel = True
+        elif unlock["type"] == "nivel":
+            if unlock["value"] <= nivel:
+                disponivel = True
 
         result.append({
             **icon,
@@ -180,7 +208,7 @@ def criar_inventory(id):
     inventory = read_json("./data/inventory.json")
     inv = {
         "user_id": id,
-        "icons": [1]
+        "icons": [1, 2]
     }
     inventory.append(inv)
     write_json("./data/inventory.json", inventory)

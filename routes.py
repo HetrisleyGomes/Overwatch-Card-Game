@@ -1,14 +1,18 @@
 from flask import blueprints, render_template, request, session, redirect, url_for
 from services.user_service import criar_usuario, carregar_usuarios, verify_date, salvar_usuarios, sum_xp,get_img_logos, user_get_inventory, icon_view, get_new_img
-from services.progress_service import registry_cards
+from services.progress_service import registry_cards, save_deck_progress, get_deck
 from services.pack_sevice import abrir_pack, abrir_pack_evento
 from services.collection_service import verificar_sets, formatar_inventario, listar_sets_usuario
-from services.eventos_service import check_event_activation, get_eventos_ativos
+from services.eventos_service import check_event_activation, get_eventos_ativos, get_last_log
+from services.loja_services import get_promocoes, set_promocoes, comprar_pack_prom
+from server import socketio
 
+from flask_socketio import join_room, emit
 from werkzeug.security import check_password_hash, generate_password_hash
 
 main = blueprints.Blueprint('main', __name__, static_folder='static', template_folder='templates')
 
+salas = {}  
 
 # Rota principal ========================================
 @main.route('/')
@@ -21,9 +25,13 @@ def home():
     ev_validator = False
     if ev:
         ev_validator = True
+
     verify_date(usuarios, user, ev_validator)
 
-    return render_template('home.html', user=user, ev=ev)
+    log = get_last_log()
+    prom = get_promocoes()
+
+    return render_template('home.html', user=user, ev=ev, log=log, prom=prom if prom else None)
 
 # Abrir pacote ========================================
 @main.route("/abrir-pack-comum", methods=["POST"])
@@ -117,6 +125,21 @@ def collection():
 
     return render_template('collection.html', user = user, sets =sets_usuario)
 
+@main.route("/deck-builder")
+def deck_builder():
+    cartas = formatar_inventario()
+    deck = get_deck()
+    print(deck)
+    return render_template('deck_builder.html', cartas=cartas, deck=deck)
+
+@main.route("/save-deck", methods=["POST"])
+def save_deck():
+    deck_json = request.form.get("deck_data")
+    
+    save_deck_progress(deck_json)
+
+    return redirect(url_for("main.inventario"))
+
 # LOJINHAAAAAA =======================================
 @main.route("/loja")
 def loja():
@@ -124,14 +147,17 @@ def loja():
     user = next((u for u in usuarios if u["id"] == session["usuario_id"]), None)
 
     ev = get_eventos_ativos()
-    imgs = icon_view(user["id"], ev["id"])
+    imgs = icon_view(user["id"], user["nivel"], ev["id"] if ev else None)
 
-    return render_template('loja.html', user = user, ev=ev, imgs=imgs)
+    prom = get_promocoes()
+
+    return render_template('loja.html', user = user, ev=ev, prom=prom, imgs=imgs)
 
 @main.route("/comprar-pack", methods=["POST"])
 def comprar_pack():
     data = request.get_json()
     tipo = data.get("tipo")
+    buy_with_impetos = data.get("buy_with_impetos")
     id = data.get("id")
 
     usuarios = carregar_usuarios()
@@ -156,15 +182,26 @@ def comprar_pack():
     elif tipo == "especial":
         preco = 300
         user["packs_evento"] += 1
+    elif tipo == 'pontos':
+        preco = 1
+        user["pontos"] += 600
+    elif tipo == 'pontos2k':
+        preco = 3
+        user["pontos"] += 2000
     elif tipo == 'icone':
         imgs = get_img_logos()
         img = next(i for i in imgs if i["id"] == id)
         preco = img["price"]
         get_new_img(user["id"], id)
         msg = "Icone " + img["nome"] + ' adquirido!'
+    elif tipo == 'promotion_pack':
+        preco = comprar_pack_prom(user['id'])
+        msg = "Pack promocional adquirido!"
 
-
-    user["pontos"] -= preco
+    if buy_with_impetos:
+        user["impetos"] -= preco
+    else:
+        user["pontos"] -= preco
 
     salvar_usuarios(usuarios)
 
@@ -210,6 +247,50 @@ def atualizar_foto():
 
     return {"status": "ok"}
 
+
+# BATALHAS
+import uuid
+@main.route("/buscar-partida")
+def buscar_partida():
+    user_id = session["usuario_id"]
+
+    # procurar sala disponível
+    for room_id, room in salas.items():
+        if len(room["players"]) == 1:
+            room["players"].append(user_id)
+            room["status"] = "full"
+            return redirect(url_for("main.battle", room_id=room_id))
+
+    # nenhuma sala → criar nova
+    room_id = str(uuid.uuid4())
+
+    salas[room_id] = {
+        "players": [user_id],
+        "status": "waiting"
+    }
+
+    return redirect(url_for("main.aguardando", room_id=room_id))
+
+@main.route("/aguardando/<room_id>")
+def aguardando(room_id):
+    return render_template("waiting.html", room_id=room_id)
+
+@main.route("/battle/<room_id>")
+def battle(room_id):
+    return render_template("battle.html", room_id=room_id)
+
+@socketio.on("join")
+def on_join(data):
+    room_id = data["room"]
+    user_id = session["usuario_id"]
+
+    join_room(room_id)
+
+    room = salas.get(room_id)
+
+    if room and len(room["players"]) == 2:
+        emit("start_game", {"room": room_id}, room=room_id)
+
 # LOGOFF =========================================
 @main.route("/sair")
 def logoff():
@@ -237,12 +318,12 @@ def verificar_usuario():
 @main.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        nome = request.form.get("nome")
+        email = request.form.get("email")
         senha = request.form.get("senha")
 
         usuarios = carregar_usuarios()
 
-        usuario = next((u for u in usuarios if u["nome"] == nome), None)
+        usuario = next((u for u in usuarios if u["email"] == email), None)
 
         if usuario is None:
             return render_template("login.html", erro="Usuário não encontrado")
@@ -283,7 +364,6 @@ def registrar():
         # ❌ email já existe
         if any(u["email"] == email for u in usuarios):
             return render_template("registrar.html", erro="Email já cadastrado")
-
         # 🔐 hash da senha
         senha_hash = generate_password_hash(senha)
 

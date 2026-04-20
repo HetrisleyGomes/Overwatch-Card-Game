@@ -58,7 +58,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "bastion_classic"
+    ]
   },
   {
     "id": "brigitte",
@@ -79,13 +82,17 @@
     "personagens": [
       "cassidy_comum",
       "cassidy_van_helsing",
+      "cassidy_salvavidas",
       "cassidy_dourado",
       "pistoleiro_divino",
       "ocaso_flamejante"
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "cassidy_fool"
+    ]
   },
   {
     "id": "dva",
@@ -122,7 +129,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "doomfist_classic"
+    ]
   },
   {
     "id": "echo",
@@ -167,7 +177,8 @@
       "genji_oni",
       "genji_baihu",
       "genji_dourado",
-      "cyber_demonio"
+      "cyber_demonio",
+      "sumiichimonji"
     ],
     "recompensa": {
       "pontos": 100
@@ -281,7 +292,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "lucio_fool"
+    ]
   },
   {
     "id": "mauga",
@@ -357,7 +371,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "orisa_classic"
+    ]
   },
   {
     "id": "pharah",
@@ -389,12 +406,16 @@
     "nome": "Ramattra",
     "personagens": [
       "ramattra_comum",
+      "ramattra_nemesis",
       "ramattra_poseidon",
       "ramattra_dourado"
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "ramattra_fool"
+    ]
   },
   {
     "id": "reaper",
@@ -436,6 +457,17 @@
       "pontos": 100
     }
   },
+    {
+    "id": "sierra",
+    "nome": "Sierra",
+    "personagens": [
+      "sierra_comum",
+      "sierra_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
   {
     "id": "sigma",
     "nome": "Sigma",
@@ -465,7 +497,9 @@
     "nome": "Soldado: 76",
     "personagens": [
       "soldado_76_comum",
+      "soldado_76_churrasqueiro",
       "soldado_76_dourado",
+      "voltagem_maxima",
       "libertacao"
     ],
     "recompensa": {
@@ -493,7 +527,11 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "symmetra_classic",
+      "symmetra_fool"
+    ]
   },
   {
     "id": "torbjorn",
@@ -505,7 +543,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "torbjorn_classic"
+    ]
   },
   {
     "id": "tracer",
@@ -568,7 +609,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "winston_fool"
+    ]
   },
   {
     "id": "wrecking_ball",
@@ -579,7 +623,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "wrecking_ball_fool"
+    ]
   },
   {
     "id": "wuyang",
@@ -616,57 +663,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
-  },
-  {
-    "id": "cacador",
-    "nome": "Caçadores",
-    "personagens": [
-      "freja_comum",
-      "cassidy_van_helsing",
-      "hanzo_okami",
-      "sombra_cacadora_demonios",
-      "widowmaker_cacadora"
-    ],
-    "recompensa": {
-      "pontos": 200
-    }
-  },
-  {
-    "id": "campeao",
-    "nome": "Campeões",
-    "personagens": [
-      "rainha_junker_executora",
-      "reinhardt_gridironhardt",
-      "torbjorn_engenheiro_espacial",
-      "winston_extraterreste"
-    ],
-    "recompensa": {
-      "pontos": 200
-    }
-  },
-  {
-    "id": "guerreiro",
-    "nome": "Guerreiros",
-    "personagens": [
-      "genji_baihu",
-      "mercy_sigrun",
-      "aventureira"
-    ],
-    "recompensa": {
-      "pontos": 200
-    }
-  },
-  {
-    "id": "meka",
-    "nome": "Meka",
-    "personagens": [
-      "dva_comum",
-      "horang"
-    ],
-    "recompensa": {
-      "pontos": 200
-    }
+    },
+    "other_personagens":[
+      "zenyatta_fool"
+    ]
   },
   {
     "id": "shimada",
@@ -677,33 +677,6 @@
     ],
     "recompensa": {
       "pontos": 200
-    }
-  },
-  {
-    "id": "fogo",
-    "nome": "Fogo",
-    "personagens": [
-      "anran_comum",
-      "ashe_comum",
-      "mauga_comum",
-      "ocaso_flamejante",
-      "titan_magma",
-      "demonio_aprisionado"
-    ],
-    "recompensa": {
-      "pontos": 400
-    }
-  },
-  {
-    "id": "sol",
-    "nome": "Guerreiros do sol",
-    "personagens": [
-      "illari_comum",
-      "pistoleiro_divino",
-      "amateratsu"
-    ],
-    "recompensa": {
-      "pontos": 300
     }
   },
   {
@@ -744,27 +717,13 @@
     }
   },
   {
-    "id": "futurista",
-    "nome": "Cyber-futurista: 2077",
+    "id": "yokai",
+    "nome": "Yokais",
     "personagens": [
-      "cyber_combustivel",
-      "pulo_online",
-      "sentinela_ultra-violeta"
-    ],
-    "recompensa": {
-      "pontos": 400
-    }
-  },
-  {
-    "id": "espacial",
-    "nome": "Astros espaciais",
-    "personagens": [
-      "juno_comum",
-      "sigma_comum",
-      "winston_comum",
-      "wrecking_ball_comum",
-      "torbjorn_engenheiro_espacial",
-      "winston_extraterreste"
+      "genji_comum",
+      "hanzo_comum",
+      "kiriko_comum",
+      "mizuki_comum"
     ],
     "recompensa": {
       "pontos": 200
@@ -875,6 +834,22 @@
     }
   },
   {
+    "id": "nova_era_overwatch",
+    "nome": "Nova Era: Overwatch",
+    "personagens": [
+      "anran_comum",
+      "baptiste_comum",
+      "juno_comum",
+      "lucio_comum",
+      "sierra_comum",
+      "wuyang_comum",
+      "zarya_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
     "id": "blackwatch",
     "nome": "Blackwatch",
     "personagens": [
@@ -918,18 +893,106 @@
     }
   },
   {
-    "id": "nova_era_overwatch",
-    "nome": "Nova Era: Overwatch",
+    "id": "cacador",
+    "nome": "Caçadores",
     "personagens": [
-      "anran_comum",
-      "baptiste_comum",
-      "juno_comum",
-      "lucio_comum",
-      "wuyang_comum",
-      "zarya_comum"
+      "freja_comum",
+      "cassidy_van_helsing",
+      "hanzo_okami",
+      "sombra_cacadora_demonios",
+      "widowmaker_cacadora"
     ],
     "recompensa": {
       "pontos": 200
+    }
+  },
+  {
+    "id": "campeao",
+    "nome": "Campeões",
+    "personagens": [
+      "reinhardt_gridironhardt",
+      "rainha_junker_executora",
+      "torbjorn_engenheiro_espacial",
+      "winston_extraterreste"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "guerreiro",
+    "nome": "Guerreiros",
+    "personagens": [
+      "genji_baihu",
+      "mercy_sigrun",
+      "aventureira"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "espacial",
+    "nome": "Astros espaciais",
+    "personagens": [
+      "juno_comum",
+      "sigma_comum",
+      "winston_comum",
+      "wrecking_ball_comum",
+      "torbjorn_engenheiro_espacial",
+      "winston_extraterreste"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "meka",
+    "nome": "Meka",
+    "personagens": [
+      "dva_comum",
+      "horang"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "ferias",
+    "nome": "Curtindo o Verão",
+    "personagens": [
+      "soldado_76_churrasqueiro",
+      "cassidy_salvavidas"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "fogo",
+    "nome": "Fogo",
+    "personagens": [
+      "anran_comum",
+      "ashe_comum",
+      "mauga_comum",
+      "ocaso_flamejante",
+      "titan_magma",
+      "demonio_aprisionado"
+    ],
+    "recompensa": {
+      "pontos": 400
+    }
+  },
+  {
+    "id": "sol",
+    "nome": "Guerreiros do sol",
+    "personagens": [
+      "illari_comum",
+      "pistoleiro_divino",
+      "amateratsu"
+    ],
+    "recompensa": {
+      "pontos": 300
     }
   },
   {
@@ -973,17 +1036,17 @@
       "pontos": 400
     }
   },
-  {
-    "id": "yokai",
-    "nome": "Yokais",
+    {
+    "id": "futurista",
+    "nome": "Cyber-futurista: 2077",
     "personagens": [
-      "genji_comum",
-      "hanzo_comum",
-      "kiriko_comum",
-      "mizuki_comum"
+      "cyber_combustivel",
+      "pulo_online",
+      "sentinela_ultra-violeta",
+      "voltagem_maxima"
     ],
     "recompensa": {
-      "pontos": 200
+      "pontos": 400
     }
   },
   {
@@ -1011,7 +1074,8 @@
       "pharah_hades",
       "invocadora_ancestral",
       "fera_grandeosa",
-      "anubis"
+      "anubis",
+      "sumiichimonji"
     ],
     "recompensa": {
       "pontos": 400
@@ -1036,16 +1100,16 @@
     "id": "mirror",
     "nome": "Mirrorwatch",
     "personagens": [
-      "arqui-comandante_amari",
       "bastion_kishin",
       "brigitte_talon",
-      "comandante_ataque",
       "echo_furtividade",
-      "fallen_knight",
       "operadora_oxton",
-      "capita_lacroix",
       "talon_zarya",
       "destruidor_z-3n",
+      "arqui-comandante_amari",
+      "comandante_ataque",
+      "fallen_knight",
+      "capita_lacroix",
       "vengeance"
     ],
     "recompensa": {
@@ -1091,6 +1155,7 @@
       "reaper_dourado",
       "reinhardt_dourado",
       "roadhog_dourado",
+      "sierra_dourado",
       "sigma_dourado",
       "sojourn_dourado",
       "soldado_76_dourado",
@@ -1137,6 +1202,7 @@
       "thor",
       "imperador_galatico",
       "sentinela_ultra-violeta",
+      "voltagem_maxima",
       "aventureira",
       "feiticeira",
       "pixiu"
@@ -1152,6 +1218,7 @@
       "sol_obscuro",
       "rosa_de_chumbo",
       "ocaso_flamejante",
+      "sumiichimonji",
       "atiradora das estrelas",
       "guardia_espiritual",
       "magitecnologia_misericordiosa",
@@ -1166,7 +1233,7 @@
     }
   },
   {
-    "id": "april_fools",
+    "id": "april_fools_2026",
     "nome": "A zoeira não tem fim! (April Fools 2026)",
     "personagens": [
       "cassidy_fool",
@@ -1176,6 +1243,20 @@
       "winston_fool",
       "wrecking_ball_fool",
       "zenyatta_fool"
+    ],
+    "recompensa": {
+      "pontos": 1500
+    }
+  },
+  {
+    "id": "aniversary_2026",
+    "nome": "10 anos de história!",
+    "personagens": [
+      "bastion_classic",
+      "doomfist_classic",
+      "orisa_classic",
+      "symmetra_classic",
+      "torbjorn_classic"
     ],
     "recompensa": {
       "pontos": 1500

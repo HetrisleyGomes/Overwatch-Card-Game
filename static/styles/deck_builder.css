@@ -1,0 +1,199 @@
+
+.deck-container {
+    padding: 20px;
+}
+
+/* HEADER */
+.deck-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.deck-name {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    width: 200px;
+}
+
+/* MAIN */
+.deck-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* CARTAS DISPONÍVEIS */
+.card-pool {
+    background-color: var(--main-dark-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+    padding: 0 30px 0 0;
+    
+}
+
+.card {
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+.card:hover {
+     transform: scale(0.9) !important;
+}
+
+.aside-area {
+    position: fixed;
+    width: 32vw;
+    height: auto;
+    right: 1vw;
+}
+
+/* DECK */
+.deck-area {
+    background-color: var(--darkest-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.deck-slots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.deck-slot {
+    height: 100px;
+    border: 2px dashed #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #aaa;
+    border-radius: 8px;
+}
+
+
+/* FOOTER */
+.deck-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.salvar {
+    background-color: #2f6fd6;
+    color: white;
+}
+
+.cancelar {
+    background-color: var(--cinza);
+    color: white;
+}
+
+.selected{
+    opacity: 0.4;
+}
+
+.mini-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 153px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.mini-card img {
+    width: 100%;
+    height: 74px;
+    object-fit: contain;
+    background-color: var(--main-light-color);
+    border-radius: 8px 8px 0 0;
+}
+
+.mini-card span {
+    width: 100%;
+    padding: 6px 0;
+    border-radius: 0 0 8px 8px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dano {
+    background-color: #7a1f1f;
+}
+.suporte {
+    background-color: #1f7a3b;
+}
+.tanque {
+    background-color: #1f3f7a;
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+    .deck-main {
+        grid-template-columns: 1fr;
+    }
+
+    .deck-main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .aside-area{
+        position: relative;
+        width: 90vw;
+        right: auto;
+    }
+    .deck-slots {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px 0;
+        margin-top: 6px;
+        justify-items: center;
+    }
+    .deck-slot {
+        width: 70px;
+        height: 60px;
+        border: 2px dashed #aaa;
+        display: flex;
+    }
+    .mini-card {
+        width: 70px;
+        font-size: 10px;
+    }
+    .mini-card img {
+        height: 40px;
+    }
+
+    .card-pool {
+        position: relative;
+    }
+    .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        padding: 0;
+        gap: 0;
+        justify-items: center;
+    }
+}

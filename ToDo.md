@@ -1,46 +1,19 @@
-# 🧠 Análise do que você já tem
+# Proximas funcionalidades
 
-### ✅ Pontos fortes
+### Sumário: 
 
-* ✔ Sistema de duplicatas → evita frustração
-* ✔ Coleções com recompensa → dá objetivo claro
-* ✔ Limite diário de pacotes → cria hábito de login
-* ✔ Loja simples → fácil de entender
-
-### ⚠️ Pontos fracos (oportunidades)
-
-* ❌ Falta “decisão” do jogador (tudo é meio automático)
-* ❌ Pouca personalização
-* ❌ Sem progressão de longo prazo (tipo nível/conta)
-* ❌ Eventos ainda simples
-* ❌ Moeda única (economia rasa)
-
-
-
-
-
-
-### Ideias: 
-
-- [ ] Missões;
-- [x] Nivel;
-- [ ] Variação de cartas, como foils, arte alternativa, e eventos;
-- [ ] Craft de cartas;
-- [x] Álbum;
-- [ ] Conquistas;
-- [ ] Pacotes com escolha de cartas;
-- [ ] Mais variedade na loja;
-- [ ] Personalização (Moldura de perfil, Título de jogador)
+- [ ] [Missões](#1-missões);
+- [x] [Nivel](#2-sistema-de-nível-do-jogador);
+- [ ] [Variação de cartas, como foils, arte alternativa, e eventos](#3-cartas-com-variação);
+- [x] [Inventário/Coleções](#4-inventário-coleções);
+- [ ] [Pacotes](#5-novos-pacotes);
+- [x] [Mais variedade na loja](#7-loja);
+- [ ] [Personalização](#8-personalização);
 
 
 
 ---
-
-# 🚀 Sugestões de novas funcionalidades
-
-## 1. 🎯 MISSÕES / OBJETIVOS (ALTA PRIORIDADE)
-
-Dá propósito diário.
+## 1. MISSÕES
 
 **Exemplos:**
 
@@ -48,13 +21,10 @@ Dá propósito diário.
 * Obtenha 3 cartas raras → +100 moedas
 * Complete 1 conjunto → +200 moedas
 
-👉 Isso aumenta MUITO retenção.
-
 ---
 
-## 2. ⭐ SISTEMA DE NÍVEL DO JOGADOR
-
-Cria progressão contínua.
+## 2. SISTEMA DE NÍVEL DO JOGADOR
+**FEITO**
 
 **Como funciona:**
 
@@ -71,73 +41,55 @@ Cria progressão contínua.
 
 ---
 
-## 3. 🔥 CARTAS COM VARIAÇÃO (SIMPLES MAS PODEROSO)
+## 3. CARTAS COM VARIAÇÃO
 
-Hoje suas cartas são fixas → isso limita o fator “colecionável”.
+Adicionar variantes:
 
-Adicione variantes:
-
-* ✨ **Foil / holográfica**
+* ✨ Foil / holográfica (Em progresso)
 * 🌈 Versão alternativa (arte diferente)
+
+Variantes já feitas:
+
 * 🏆 Edição limitada (evento)
-
-👉 Mesma carta, mas mais rara → aumenta MUITO o grind saudável.
-
----
-
-## 4. 🧩 SISTEMA DE “CRAFT” (USANDO DUPLICATAS)
-
-Hoje duplicata vira moeda — isso é bom, mas pode ser melhor.
-
-Nova opção:
-
-* Transformar duplicatas em **fragmentos**
-* Usar fragmentos para criar cartas específicas
-
-**Exemplo:**
-
-* 50 fragmentos = carta comum
-* 200 = rara
-
-👉 Dá controle ao jogador (importante!)
+* 🥇 Versão Arma dourada
 
 ---
 
-## 5. 🗂️ ÁLBUM / BOOK VISUAL
-
-Transformar o inventário em algo mais bonito:
-
+## 4. INVENTÁRIO COLEÇÕES
+**FEITO**
 * Estilo “álbum de figurinhas”
-* Mostrar:
+* Mostra:
 
   * espaços vazios
   * progresso por coleção
   * % completado
 
-👉 Isso ativa o “instinto de completar”.
+---
+
+## 5. NOVOS PACOTES
+
+**Pacotes atuais:**
+  
+  * Pacote comum (5 cartas com variações de comum à lendárias)
+  * Pacote raro (4 cartas com variações de incomum à lendárias com uma mítica garantida)
+
+* Pacote de evento: 
+  * April fools (1 carta exclusiva do evento)
+  * Aniversário Overwatch (2 cartas, sendo uma carta de arma dourada e uma carta exclusiva do evento)
+  
+**Novas ideia:**
+  * Pacote supremo (4 cartas com variações de raro à mítico)
+  * Pacote de seleção (O jogador vê 3 cartas e escolhe 1. Cartas com variações de comum a mítico, todas com a mesma probabilidade)
 
 ---
 
-## 6. 🎲 PACOTES COM ESCOLHA (DECISÃO DO PLAYER)
-
-Ao invés de só abrir:
-
-💡 Nova ideia:
-
-* O jogador vê 3 cartas e escolhe 1
-* Ou escolhe entre 2 pacotes com bônus diferentes
-
-👉 Adiciona estratégia leve sem complicar.
-
----
-
-## 7. 🏆 CONQUISTAS (ACHIEVEMENTS)
+## 6. CONQUISTAS (ACHIEVEMENTS)
 
 Exemplo:
 
 * Colete 100 cartas
 * Complete 5 coleções
-* Pegue uma carta lendária
+* Pegue uma carta mítica
 
 Recompensas:
 
@@ -146,39 +98,31 @@ Recompensas:
 
 ---
 
-## 8. 🛍️ LOJA MAIS INTERESSANTE
+## 7. LOJA
 
-Hoje:
+**Atualmente possui:**
 
-> só compra pacote ou ícone
+* Pacotes
+* Bônus diário
+* Pacotaço (Pacote especial com recompensas pré-definidas)
+* Pontos
+* Ícones
 
-Você pode adicionar:
+**Ideias para adicionar:**
 
-* 🎟️ Pacotes com desconto diário
-* 📦 “Oferta misteriosa”
-* 🧪 Boost temporário:
-
+* Pacotes com desconto diário
+* “Oferta misteriosa”
+* Boost temporário:
   * +10% chance de rara
-* 🖼️ Molduras de carta
-* 🎨 Temas de interface
+* Molduras de carta
+* Temas de interface
 
 ---
 
-## 9. 📅 EVENTOS MELHORES
 
-Você já tem evento, mas pode expandir:
+## 8. PERSONALIZAÇÃO
 
-* Evento com coleção exclusiva
-* Missões temporárias
-* Ranking de quem completou mais rápido
-
-👉 Eventos = picos de engajamento
-
----
-
-## 10. 🧑‍🎨 PERSONALIZAÇÃO
-
-* Ícone (já tem 👍)
+* Ícone (já tem)
 * Moldura de perfil
 * Título:
 
@@ -187,87 +131,77 @@ Você já tem evento, mas pode expandir:
 
 ---
 
-## 11. 📊 ESTATÍSTICAS DO JOGADOR
+## 9. ESTATÍSTICAS DO JOGADOR
 
-Mostre:
+Mostraar:
 
 * Total de cartas
 * % completado
 * cartas mais raras
 * pacotes abertos
 
-👉 Isso gera apego ao progresso
-
 ---
 
-## 12. 💰 SEGUNDA MOEDA (OPCIONAL)
+## 10. MULTIPLAYER
 
-Se quiser evoluir mais:
 
-* 🪙 Moeda comum
-* 💎 moeda premium (rara)
+#### SISTEMA DE COMBATE
+* montar decks
+* batalhar contra outros jogadores
 
-Usos:
-
-* comprar pacotes especiais
-* eventos
-
----
-
-## 13. 🔄 SISTEMA DE TROCA (SEMPRE MUITO FORTE)
-
-Se for multiplayer:
-
+#### SISTEMA DE TROCA DE CARTAS
 * trocar cartas com outros jogadores
 * mercado simples
 
-👉 Isso sozinho pode dobrar retenção
-
 ---
 
-# 🧩 Sugestões técnicas (Python + Flask)
+# Banco de dados
 
-Algumas ideias simples de implementar:
+Ideias para implementar:
 
-* Tabela `user_progress`
 * Tabela `missions`
 * Tabela `achievements`
+* Tabela `títulos de jogador`
 * Campo `is_variant` nas cartas
-* Sistema de seed/random controlado (pra balancear drop)
-
----
-
-# 🧠 Prioridade recomendada (ordem ideal)
-
-Se você quiser crescer o jogo sem se perder:
-
-1. Missões ✅
-2. Nível do jogador ✅
-3. Variantes de cartas ✅
-4. Álbum visual ✅
-5. Conquistas ✅
-6. Craft com duplicatas
-7. Eventos melhores
-8. Personalização
-
----
-
-# 💡 Insight importante
-
-Seu jogo é tipo:
-
-> “abrir pacote = dopamina”
-
-Então tudo que você adicionar deve:
-
-* aumentar expectativa
-* dar sensação de progresso
-* evitar frustração
-
----
-
-
-
 * montar o **modelo de banco de dados**
 * sugerir **algoritmo de drop de cartas**
 * ou desenhar um **roadmap completo de desenvolvimento**
+
+---
+
+# Próximas cartas:
+- Ashe: Intergalactic Smuggler (espacial);
+- Baptiste: Bounty Hunter (caçador);
+- brigitte: Royal Captain (guerreiro); médica ();
+- DVa: Cruzador (Campeão);
+- Doom: Bonebreaker(Espacial);
+- Hanzo: Ryu (Especial);
+- Kiriko: Divinator (mágica);
+- Lucio: Jazzy (); Space Prince (espacial);
+- Mei: Mei-rry (NATAL)
+- Mercy: Vitoria alada (Pantão);
+- Moira: Lilith (submundo);
+- Pharah: Inarius;
+- Rein: All Mighty (Campeão especial); Minotaur (animais , monstro)
+- Roadhog: Cyclops (olimpo, monstro);
+- Sojourn: Detetive;
+- Soldado 76: Infinity guard (cosmico, guerreiro)
+- Symmetra: Junker ();
+- Torb: Santaclad (NATAL);
+- Tracer: Jungle (Natal); Comic book ();
+- Widow: Medusa (olimpo, monstro);
+- Wuyang: Joker ();
+- Zen: Dhalsim (Especial); Quebra nozes (NATAL)
+---
+### COLEÇÕES
+- [x] Criar set férias com soldado churrasquieiro e cassidy salva vidas. (set 'Curtindo o verão' feito)
+- [ ] Set Monstros com: Rein Minotauro, Widow e Roadhog.
+- [ ] Set rebeldes espaciais com Ahse, Baptiste, Doom, e as cartas existentes do torb engenheiro espacial, e winston extraterrestre.
+- [ ] Set Ordem cósmica, com brigg royal, soldado e lúcio principe, com a carta existente Sigma imperador intergalactico.
+- [ ] Set natalino com Torb, tracer, e Zen quebra nozes.
+
+### PACOTAÇOS
+- [ ] Pacotaço de aniversário: Cartas clássicas.
+- [ ] Pacotaço Street Fighers: Hanzo ryu e Zen Dhalsim.
+- [ ] Pacotaço Panteão: Lúcio, Pharah, Ramattra e Mercy Vitoriosa
+- [ ] Pacotaço NieR:Automata: Wuyang Joker e icone de jogador robozinho.

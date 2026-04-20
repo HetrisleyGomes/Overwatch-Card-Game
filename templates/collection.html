@@ -30,9 +30,14 @@
                         <div class="personagem">
                             <div class="personagem_img">
                                 <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                                {% if carta.golden_weapon %}
+                                <div class="golden_weapon_icon">
+                                        <img src="{{ url_for('static', filename='logos/golden_star.png' ) }}">
+                                    </div>
+                                {% endif %}
                             </div>
                             <div class="personagem_base">
-                                <span class="p_nome">{{ carta.nome }}</span> <div class="raridade {{ carta.raridade }}"></div>
+                                <span class="p_nome">{{ carta.nome }}</span> <div class="raridade {{ carta.raridade }} {% if carta.evento %}raridade-extra{% endif %}"></div>
                             </div>
                         </div>
                     {% else %}
@@ -45,8 +50,20 @@
                             </div>
                         </div>
                     {% endif %}
-                    
                 {% endfor %}
+                {% for carta in set.cartas_extra %}
+                    {% if carta.possui %}
+                        <div class="personagem">
+                            <div class="personagem_img">
+                                <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                            </div>
+                            <div class="personagem_base base_extra">
+                                <span class="p_nome">{{ carta.nome }}</span> <div class="raridade {{ carta.raridade }} raridade-extra"></div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                
             </div>
         </div>
     {% endif %}

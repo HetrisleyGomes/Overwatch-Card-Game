@@ -20,7 +20,7 @@
     "entrada": "Eu não vou deixar um mundo pacífico para trás.",
     "ult_nome": "Nano Boost",
     "ult": "Você está energizado, acabe com eles!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Ana_ow_mirror.png"
   },
   {
@@ -32,7 +32,7 @@
     "entrada": "Eu não vou deixar um mundo partido para trás.",
     "ult_nome": "Nano Boost",
     "ult": "Você está energizado, acabe com eles!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Ana_ow_gold.png",
     "golden_weapon": true
   },
@@ -81,7 +81,7 @@
     "entrada": "O fogo do meu coração nunca vai se apagar.",
     "ult_nome": "Ascenção do pássaro vermelho.",
     "ult": "Incendiando os céus!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Anran_ow_gold.png",
     "golden_weapon": true
   },
@@ -103,10 +103,10 @@
     "nome": "Ashe Feiticeira",
     "classe": "Dano",
     "subclasse": "Perverso",
-    "entrada": "Minhas trevas, minhas runas.*",
+    "entrada": "Meus ódios, minhas runas.",
     "ult_nome": "B.O.B.",
     "ult": "Beelzebob, faça alguma coisa!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Ashe_ow_feiticeira.png"
   },
   {
@@ -118,7 +118,7 @@
     "entrada": "No meu caminho, não fica um pra contar história.",
     "ult_nome": "B.O.B.",
     "ult": "BOB, faça alguma coisa!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Ashe_ow_gold.png",
     "golden_weapon": true
   },
@@ -167,7 +167,7 @@
     "entrada": "Outro dia, outro campo de batalha.",
     "ult_nome": "Matriz amplificadora",
     "ult": "Acionando a matriz!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Baptiste_ow_gold.png",
     "golden_weapon": true
   },
@@ -192,7 +192,7 @@
     "entrada": "(Beeps pensativos)",
     "ult_nome": "Configuração: Reforço",
     "ult": "(Beeps musicais)!",
-    "raridade": "raro",
+    "raridade": "epico",
     "img": "Bastion_ow_mirror.png"
   },
   {
@@ -204,7 +204,7 @@
     "entrada": "(Beeps pensativos)",
     "ult_nome": "Configuração: Artilharia",
     "ult": "(Beeps musicais)!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Bastion_ow_gold.png",
     "golden_weapon": true
   },
@@ -217,7 +217,7 @@
     "entrada": "Doo-woo!",
     "ult_nome": "Configuração: Tanque",
     "ult": "Woo woo woo whee woo whee!",
-    "raridade": "especial",
+    "raridade": "epico",
     "img": "Bastion_ow.png",
     "foil": true,
     "evento": "aniversary",
@@ -256,7 +256,7 @@
     "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
     "ult_nome": "Reagrupar",
     "ult": "Venham a mim!",
-    "raridade": "raro",
+    "raridade": "epico",
     "img": "Brigitte_ow_mirror.png"
   },
   {
@@ -268,7 +268,7 @@
     "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
     "ult_nome": "Reagrupar",
     "ult": "Venham a mim!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Brigitte_ow_gold.png",
     "golden_weapon": true
   },
@@ -297,6 +297,18 @@
     "img": "Cassidy_ow_vanhelsin.png"
   },
   {
+    "id": "cassidy_salvavidas",
+    "base": "cassidy",
+    "nome": "Cassidy Salva-vidas",
+    "classe": "Dano",
+    "subclasse": "Férias",
+    "entrada": "Alguém tem que montar nessa sela.",
+    "ult_nome": "Tiro certeiro",
+    "ult": "É hora de acertar uns mergulhos!",
+    "raridade": "epico",
+    "img": "Cassidy_ow_salvavidas.png"
+  },
+  {
     "id": "cassidy_dourado",
     "base": "cassidy",
     "nome": "Cassidy Dourado",
@@ -305,7 +317,7 @@
     "entrada": "Alguém tem que montar nessa sela.",
     "ult_nome": "Tiro certeiro",
     "ult": "É hora de acertar as contas!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Cassidy_ow_gold.png",
     "golden_weapon": true
   },
@@ -342,10 +354,10 @@
     "entrada": "É, o boleto já venceu.",
     "ult_nome": "Tiro certeiro",
     "ult": "É, hora de mandar um pix!",
-    "raridade": "especial",
+    "raridade": "comum",
     "img": "Cassidy_ow_fool.png",
     "evento": "april_fools",
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "dva_comum",
@@ -380,7 +392,7 @@
     "entrada": "Hora de salvar o mundo? Bora lá.",
     "ult_nome": "Auto destruição",
     "ult": "Pede pra nerfar, noob!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "DVa_ow_gold.png",
     "golden_weapon": true
   },
@@ -417,7 +429,7 @@
     "entrada": "O mundo perfeito será moldado pelas minhas mãos.",
     "ult_nome": "Panóptico",
     "ult": "Sirvam a minha visão!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Domina_ow_gold.png",
     "golden_weapon": true
   },
@@ -442,7 +454,7 @@
     "entrada": "Nosso futuro será forjado pela união.",
     "ult_nome": "Impacto meteoro",
     "ult": "Impacto meteoro!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Doomfist_ow_mirror.png"
   },
   {
@@ -454,7 +466,7 @@
     "entrada": "Nosso futuro será forjado pelo conflito.",
     "ult_nome": "Impacto meteoro",
     "ult": "Impacto meteoro!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Doomfist_ow_gold.png",
     "golden_weapon": true
   },
@@ -469,6 +481,21 @@
     "ult": "Impacto ardente!",
     "raridade": "mitico",
     "img": "Doomfist_ow_myth.png"
+  },
+  {
+    "id": "doomfist_classic",
+    "base": "doomfist",
+    "nome": "Doomfist Classico",
+    "classe": "Dano",
+    "subclasse": "Classic",
+    "entrada": "Só por meio do conflito, podemos evoluir.",
+    "ult_nome": "Impacto meteoro",
+    "ult": "Impacto meteoro!",
+    "raridade": "epico",
+    "img": "Doomfist_ow.png",
+    "foil": true,
+    "evento": "aniversary",
+    "disponivel": false
   },
   {
     "id": "echo_comum",
@@ -491,7 +518,7 @@
     "entrada": "Estou sempre pronta para executar.",
     "ult_nome": "Eficiência máxima",
     "ult": "Circuitos adaptativos ativados: Echo!",
-    "raridade": "raro",
+    "raridade": "epico",
     "img": "Echo_ow_mirror.png"
   },
   {
@@ -503,7 +530,7 @@
     "entrada": "Estou sempre pronta para aprender.",
     "ult_nome": "Duplicação",
     "ult": "Circuitos adaptativos ativados: (Héroi)!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Echo_ow_gold.png",
     "golden_weapon": true
   },
@@ -528,7 +555,7 @@
     "entrada": "Eu os colocari na linha*.",
     "ult_nome": "Protocolo de automação",
     "ult": "Localizar e destruir!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Emre_ow_gold.png",
     "golden_weapon": true
   },
@@ -565,7 +592,7 @@
     "entrada": "Eu sempre entrego.",
     "ult_nome": "Disparo de boleadeira",
     "ult": "Eu vou caçar você!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Freja_ow_gold.png",
     "golden_weapon": true
   },
@@ -614,7 +641,7 @@
     "entrada": "A paz retorna àqueles que a procuram.",
     "ult_nome": "Lâmina do dragão",
     "ult": "Ryūjin no ken o kurae!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Genji_ow_gold.png",
     "golden_weapon": true
   },
@@ -629,6 +656,18 @@
     "ult": "Denki no ken o kurae!",
     "raridade": "mitico",
     "img": "Genji_ow_myth.png"
+  },
+  {
+    "id": "sumiichimonji",
+    "base": "genji",
+    "nome": "Ganji: Sumi-Ichimonji",
+    "classe": "Dano",
+    "subclasse": "Flanco",
+    "entrada": "A paz retorna àqueles que procuram.",
+    "ult_nome": "Lâmina do dragão",
+    "ult": "Ryūjin no ken o kurae!",
+    "raridade": "mitico",
+    "img": "Genji_ow_weapon.png"
   },
   {
     "id": "hanzo_comum",
@@ -663,7 +702,7 @@
     "entrada": "Honra é tudo o que me resta.",
     "ult_nome": "Golpe do dragão",
     "ult": "Ryū ga waga teki o kurau!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Hanzo_ow_gold.png",
     "golden_weapon": true
   },
@@ -700,7 +739,7 @@
     "entrada": "Se você tá comigo, é pra vida toda.",
     "ult_nome": "Dilúvio",
     "ult": "Olha a chuva!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Hazard_ow_gold.png",
     "golden_weapon": true
   },
@@ -725,7 +764,7 @@
     "entrada": "Eu carrego meus fardos sozinha.",
     "ult_nome": "Sol aprisionado",
     "ult": "Encare a aurora!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Illari_ow_gold.png",
     "golden_weapon": true
   },
@@ -750,7 +789,7 @@
     "entrada": "Meow meow meow.",
     "ult_nome": "Pulo do gato",
     "ult": "Meoweoweew!!!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Jetpack_Cat_ow_gold.png",
     "golden_weapon": true
   },
@@ -787,7 +826,7 @@
     "entrada": "Tantas bombas para colocar por aí.",
     "ult_nome": "Pneu da morte",
     "ult": "Vai explodir!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Junkrat_ow_gold.png",
     "golden_weapon": true
   },
@@ -824,7 +863,7 @@
     "entrada": "Um passo de cada vez.",
     "ult_nome": "Raio Orbital",
     "ult": "Bem-vindos à orbita!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Juno_ow_gold.png",
     "golden_weapon": true
   },
@@ -885,7 +924,7 @@
     "entrada": "Eu vou encontrar o meu próprio caminho.",
     "ult_nome": "Corrida da kitsune",
     "ult": "Deixe a Kitsune guiar você!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Kiriko_ow_gold.png",
     "golden_weapon": true
   },
@@ -904,7 +943,7 @@
   {
     "id": "guardia_espiritual",
     "base": "kiriko",
-    "nome": "Guardiã espiritual",
+    "nome": "Kiriko: Guardiã espiritual",
     "classe": "Suporte",
     "subclasse": "Socorrista",
     "entrada": "Eu vou encontrar o meu próprio caminho.",
@@ -934,7 +973,7 @@
     "entrada": "Passe cada momento da vida cultivando quem realmente é.",
     "ult_nome": "Árvore da vida",
     "ult": "A vida protege a vida!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Lifeweaver_ow_gold.png",
     "golden_weapon": true
   },
@@ -971,7 +1010,7 @@
     "entrada": "A gente chegou pra vencer.",
     "ult_nome": "Barreira de som",
     "ult": "Bora acelerar!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Lucio_ow_hermes.png"
   },
   {
@@ -983,7 +1022,7 @@
     "entrada": "A gente chegou pra esculachar.",
     "ult_nome": "Barreira de som",
     "ult": "Vamo esculachar!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Lucio_ow_gold.png",
     "golden_weapon": true
   },
@@ -996,10 +1035,10 @@
     "entrada": "Bora violar a lei do silêncio!",
     "ult_nome": "Barreira de som",
     "ult": "Quem quer UM BILHÃO de pontos de vida?",
-    "raridade": "especial",
+    "raridade": "incomum",
     "img": "Lucio_ow_fool.png",
     "evento": "april_fools",
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "mauga_comum",
@@ -1022,7 +1061,7 @@
     "entrada": "Uma arma em cada mão, e um sorriso no rosto.",
     "ult_nome": "Mano à mano",
     "ult": "Se se'i koikiiki!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Mauga_ow_gold.png",
     "golden_weapon": true
   },
@@ -1047,7 +1086,7 @@
     "entrada": "Vamos bola de neve, precisam de nós.",
     "ult_nome": "Nevasca",
     "ult": "Parados! Não se movam!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Mei_ow_gold.png",
     "golden_weapon": true
   },
@@ -1120,7 +1159,7 @@
     "entrada": "Não se preocupem, estarei atrás de vocês.",
     "ult_nome": "Valkíria",
     "ult": "Hérois nunca morrem!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Mercy_ow_gold.png",
     "golden_weapon": true
   },
@@ -1181,7 +1220,7 @@
     "entrada": "Vou decidir o meu destino.",
     "ult_nome": "Santuário Tekkai",
     "ult": "Proteja-nos, kekkai!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Mizuki_ow_gold.png",
     "golden_weapon": true
   },
@@ -1206,7 +1245,7 @@
     "entrada": "A humanidade está acorrentada. Eu encontrarei a chave.",
     "ult_nome": "Coalecência",
     "ult": "Submetam-se a minha vontade!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Moira_ow_gold.png",
     "golden_weapon": true
   },
@@ -1243,7 +1282,7 @@
     "entrada": "A força reside na união.",
     "ult_nome": "Rompante Terrano",
     "ult": "Aceite o seu destino!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Orisa_ow_gold.png",
     "golden_weapon": true
   },
@@ -1280,7 +1319,7 @@
     "entrada": "A sua proteção é o meu dever principal.",
     "ult_nome": "Amplificador",
     "ult": "Não resistam",
-    "raridade": "especial",
+    "raridade": "epico",
     "img": "Orisa_ow.png",
     "foil": true,
     "evento": "aniversary",
@@ -1307,7 +1346,7 @@
     "entrada": "A morte vem de cima.",
     "ult_nome": "Bombardeio",
     "ult": "O fogo do inferno vem de cima!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Pharah_ow_hades.png"
   },
   {
@@ -1319,7 +1358,7 @@
     "entrada": "Ataquem de cima.",
     "ult_nome": "Bombardeio",
     "ult": "A justiça vem de cima!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Pharah_ow_gold.png",
     "golden_weapon": true
   },
@@ -1344,7 +1383,7 @@
     "entrada": "A tortura acaba quando eu disser.",
     "ult_nome": "Chacina",
     "ult": "Vamos levar eles para a forca!",
-    "raridade": "incomum",
+    "raridade": "epico",
     "img": "Junker_Queen_ow_executora.png"
   },
   {
@@ -1356,7 +1395,7 @@
     "entrada": "Meu trono fica onde eu quiser.",
     "ult_nome": "Chacina",
     "ult": "Aí vem a desforra!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Junker_Queen_ow_gold.png",
     "golden_weapon": true
   },
@@ -1385,6 +1424,18 @@
     "img": "Ramattra_ow.png"
   },
   {
+    "id": "ramattra_nemesis",
+    "base": "ramattra",
+    "nome": "Ramattra Nêmesis",
+    "classe": "Tanque",
+    "subclasse": "Robusto",
+    "entrada": "Teremos a paz, custe o que custar.",
+    "ult_nome": "Aniquilação",
+    "ult": "Sofra, como eu sofri!",
+    "raridade": "comum",
+    "img": "Ramattra_ow_nemesis.png"
+  },
+  {
     "id": "ramattra_poseidon",
     "base": "ramattra",
     "nome": "Poseidon",
@@ -1393,7 +1444,7 @@
     "entrada": "O Olímpo será meu, custe o que custar.",
     "ult_nome": "Aniquilação",
     "ult": "Submerja, como eu submergi!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Ramattra_ow_poseidon.png"
   },
   {
@@ -1405,7 +1456,7 @@
     "entrada": "Teremos a paz, custe o que custar.",
     "ult_nome": "Aniquilação",
     "ult": "Sofra, como eu sofri!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Ramattra_ow_gold.png",
     "golden_weapon": true
   },
@@ -1418,10 +1469,10 @@
     "entrada": "A agonia tem sabor de uva.",
     "ult_nome": "Aniquilação",
     "ult": "Você sofrerá como eu, Ramattra, sofri. Seu tormento viverá mais que as estrelas, e quando o universo se tornar pó, lá estará você, ainda sofrendo, como EU sofri!",
-    "raridade": "especial",
+    "raridade": "epico",
     "img": "Ramattra_ow_fool.png",
     "evento": "april_fools",
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "reaper_comum",
@@ -1456,7 +1507,7 @@
     "entrada": "Você não pode escapar da morte.",
     "ult_nome": "Desabrochar da morte",
     "ult": "Morram, morram, morram!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Reaper_ow_gold.png",
     "golden_weapon": true
   },
@@ -1517,7 +1568,7 @@
     "entrada": "Juntos, derrubaremos eles.",
     "ult_nome": "Abalo terrestre",
     "ult": "Sinta o peso do martelo!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Reinhardt_ow_mirror.png"
   },
   {
@@ -1529,7 +1580,7 @@
     "entrada": "Juntos, acabaremos com eles.",
     "ult_nome": "Abalo terrestre",
     "ult": "Sinta o peso do martelo!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Reinhardt_ow_gold.png",
     "golden_weapon": true
   },
@@ -1578,7 +1629,7 @@
     "entrada": "O apocalipse não acabou.",
     "ult_nome": "Cair matando",
     "ult": "(Risos)!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Roadhog_ow_gold.png",
     "golden_weapon": true
   },
@@ -1603,7 +1654,7 @@
     "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
     "ult_nome": "Fluxo gravitacional",
     "ult": "O universo canta para mim!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Sigma_ow_gold.png",
     "golden_weapon": true
   },
@@ -1618,6 +1669,31 @@
     "ult": "O universo se curva à mim!",
     "raridade": "mitico",
     "img": "Sigma_ow_myth.png"
+  },
+  {
+    "id": "sierra_comum",
+    "base": "sierra",
+    "nome": "Sierra",
+    "classe": "Dano",
+    "subclasse": "Reconhecimento",
+    "entrada": "Pra cima sempre, nunca pra baixo.",
+    "ult_nome": "Vanguarda explosiva",
+    "ult": "De olho no céu!",
+    "raridade": "comum",
+    "img": "Sierra_ow.png"
+  },
+  {
+    "id": "sierra_dourado",
+    "base": "sierra",
+    "nome": "Sierra Dourada",
+    "classe": "Dano",
+    "subclasse": "Reconhecimento",
+    "entrada": "Pra cima sempre, nunca pra baixo.",
+    "ult_nome": "Vanguarda explosiva",
+    "ult": "De olho no céu!",
+    "raridade": "lendario",
+    "img": "Sierra_ow_gold.png",
+    "golden_weapon": true
   },
   {
     "id": "sojourn_comum",
@@ -1640,7 +1716,7 @@
     "entrada": "Estamos nessa juntos. Todos nós.",
     "ult_nome": "Sobrecarga",
     "ult": "Isso termina agora!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Sojourn_ow_gold.png",
     "golden_weapon": true
   },
@@ -1669,6 +1745,18 @@
     "img": "Soldier_76_ow.png"
   },
   {
+    "id": "soldado_76_churrasqueiro",
+    "base": "soldado_76",
+    "nome": "Soldado Churrasqueiro: 76",
+    "classe": "Dano",
+    "subclasse": "Férias",
+    "entrada": "Todo soldado precisa de uma causa.",
+    "ult_nome": "Óculos de sol",
+    "ult": "Você está na minha mira!",
+    "raridade": "incomum",
+    "img": "Soldier_76_ow_grillmaster.png"
+  },
+  {
     "id": "soldado_76_dourado",
     "base": "soldado_76",
     "nome": "Soldado: 76 Dourado",
@@ -1677,14 +1765,26 @@
     "entrada": "Todo soldado precisa de uma causa.",
     "ult_nome": "Visor tático",
     "ult": "Você está na minha mira!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Soldier_76_ow_gold.png",
     "golden_weapon": true
   },
   {
+    "id": "voltagem_maxima",
+    "base": "soldado_76",
+    "nome": "Voltagem Máxima",
+    "classe": "Dano",
+    "subclasse": "Especialista",
+    "entrada": "Somos todos soldados elétricos agora.",
+    "ult_nome": "Visor tático",
+    "ult": "Você está na minha sobrecarga!",
+    "raridade": "mitico",
+    "img": "Soldier_76_ow_myth.png"
+  },
+  {
     "id": "libertacao",
     "base": "soldado_76",
-    "nome": "Soldado: 76, Libertação",
+    "nome": "Soldado: 76 Libertação",
     "classe": "Dano",
     "subclasse": "Especialista",
     "entrada": "Todo soldado precisa de uma causa.",
@@ -1726,7 +1826,7 @@
     "entrada": "No meu mundo, não existem segredos.",
     "ult_nome": "P.E.M.",
     "ult": "¡Apagando las luces!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Sombra_ow_gold.png",
     "golden_weapon": true
   },
@@ -1751,7 +1851,7 @@
     "entrada": "Da imperfeição, construiremos um novo mundo.",
     "ult_nome": "Barreira de fótons",
     "ult": "Essa é a realidade absoluta!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Symmetra_ow_gold.png",
     "golden_weapon": true
   },
@@ -1764,7 +1864,7 @@
     "entrada": "O verdadeiro inimigo da humanidade, é a desordem.",
     "ult_nome": "Teleportador",
     "ult": "Teletransportador online, eu abri caminho!",
-    "raridade": "especial",
+    "raridade": "epico",
     "img": "Symmetra_ow.png",
     "foil": true,
     "evento": "aniversary",
@@ -1779,10 +1879,10 @@
     "entrada": "Melhor que RGB!",
     "ult_nome": "Barreira de fótons",
     "ult": "Uma barreira de gratiluz!",
-    "raridade": "especial",
+    "raridade": "incomum",
     "img": "Symmetra_ow_fool.png",
     "evento": "april_fools",
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "torbjorn_comum",
@@ -1805,7 +1905,7 @@
     "entrada": "Took wun huk. Brees'tin gree!",
     "ult_nome": "Núcleo fundido",
     "ult": "Núcleo fundido!",
-    "raridade": "incomum",
+    "raridade": "epico",
     "img": "Torbjorn_ow_espacial.png"
   },
   {
@@ -1817,7 +1917,7 @@
     "entrada": "Ferramenta na mão. Cabeça a todo vapor.",
     "ult_nome": "Núcleo fundido",
     "ult": "Núcleo fundido!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Torbjorn_ow_gold.png",
     "golden_weapon": true
   },
@@ -1828,9 +1928,9 @@
     "classe": "Dano",
     "subclasse": "Classic",
     "entrada": "Construir, para destruir.",
-    "ult_nome": "Núcleo fundido",
+    "ult_nome": "Sobrecarga",
     "ult": "Núcleo fundido!",
-    "raridade": "especial",
+    "raridade": "epico",
     "img": "Torbjorn_ow.png",
     "foil": true,
     "evento": "aniversary",
@@ -1857,7 +1957,7 @@
     "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
     "ult_nome": "Bomba eletromagnética",
     "ult": "Hahaha!",
-    "raridade": "raro",
+    "raridade": "epico",
     "img": "Tracer_ow_mirror.png"
   },
   {
@@ -1869,7 +1969,7 @@
     "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
     "ult_nome": "Bomba eletromagnética",
     "ult": "Uma lembrancinha!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Tracer_ow_gold.png",
     "golden_weapon": true
   },
@@ -1906,7 +2006,7 @@
     "entrada": "O império sou eu.",
     "ult_nome": "Lâmina retalhadora",
     "ult": "Arriva la punizione!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Vendetta_ow_gold.png",
     "golden_weapon": true
   },
@@ -1931,7 +2031,7 @@
     "entrada": "Vamo fazer história!",
     "ult_nome": "Shoque tectônico",
     "ult": "Iniciando escavação!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Venture_ow_gold.png",
     "golden_weapon": true
   },
@@ -1980,7 +2080,7 @@
     "entrada": "Minha mira é libertadora.",
     "ult_nome": "Visão infravermelha",
     "ult": "O mal não se esconde da minha mira!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Widowmaker_ow_mirror.png"
   },
   {
@@ -1992,7 +2092,7 @@
     "entrada": "Minha mira é devastadora.",
     "ult_nome": "Visão infravermelha",
     "ult": "Ninguém se esconde da minha mira!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Widowmaker_ow_gold.png",
     "golden_weapon": true
   },
@@ -2041,7 +2141,7 @@
     "entrada": "Uma galáxia melhor é possível hoje.",
     "ult_nome": "Fúria primata",
     "ult": "(Rugido)!",
-    "raridade": "incomum",
+    "raridade": "epico",
     "img": "Winston_ow_extraterrestre.png"
   },
   {
@@ -2053,23 +2153,23 @@
     "entrada": "Um mundo melhor é possível hoje.",
     "ult_nome": "Fúria primata",
     "ult": "(Rugido)!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Winston_ow_gold.png",
     "golden_weapon": true
   },
   {
     "id": "winston_fool",
     "base": "winston",
-    "nome": "Winston!",
+    "nome": "Winton!",
     "classe": "Tanque",
     "subclasse": "Fool",
     "entrada": "Winston!",
     "ult_nome": "Winston!",
     "ult": "Winston!",
-    "raridade": "especial",
+    "raridade": "comum",
     "img": "Winston_ow_fool.png",
     "evento": "april_fools",
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "wrecking_ball_comum",
@@ -2092,23 +2192,23 @@
     "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
     "ult_nome": "Campo minado",
     "ult": "Área negada!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Wrecking_ball_ow_gold.png",
     "golden_weapon": true
   },
   {
     "id": "wrecking_ball_fool",
     "base": "wrecking_ball",
-    "nome": "Wrecking ball",
+    "nome": "Wrecking ball (& filhos)",
     "classe": "Tanque",
     "subclasse": "Fool",
     "entrada": "Junte todas as bolinhas e troque por um prêmio!",
     "ult_nome": "Campo minado",
     "ult": "Comtemplem, os filhos de Wrecking Ball!",
-    "raridade": "especial",
+    "raridade": "incomum",
     "img": "Wrecking_ball_ow_fool.png",
     "evento": "april_fools",
-    "disponivel": true
+    "disponivel": false
   },
   {
     "id": "wuyang_comum",
@@ -2131,7 +2231,7 @@
     "entrada": "Sabe o que dizem. É só seguir o fluxo.",
     "ult_nome": "Maré explosiva",
     "ult": "Mudando a maré!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Wuyang_ow_gold.png",
     "golden_weapon": true
   },
@@ -2156,7 +2256,7 @@
     "entrada": "Vamos atropelar todos.",
     "ult_nome": "Zona expulsiva",
     "ult": "Abrir fogo!",
-    "raridade": "raro",
+    "raridade": "epico",
     "img": "Zarya_ow_mirror.png"
   },
   {
@@ -2168,7 +2268,7 @@
     "entrada": "Vamos atropelar todos.",
     "ult_nome": "Fluxo de gravitons",
     "ult": "Ogon' po gotovnosti!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Zarya_ow_gold.png",
     "golden_weapon": true
   },
@@ -2193,7 +2293,7 @@
     "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
     "ult_nome": "Transcendência",
     "ult": "Sintam o vazio!",
-    "raridade": "incomum",
+    "raridade": "epico",
     "img": "Zenyatta_ow_cultista.png"
   },
   {
@@ -2205,7 +2305,7 @@
     "entrada": "Em meio a discórdia, encontraremos o triunfo.",
     "ult_nome": "Transcendência",
     "ult": "Sintam a tranquilidade!",
-    "raridade": "raro",
+    "raridade": "epico",
     "img": "Zenyatta_ow_mirror.png"
   },
   {
@@ -2217,7 +2317,7 @@
     "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
     "ult_nome": "Transcendência",
     "ult": "Sintam a tranquilidade!",
-    "raridade": "raro",
+    "raridade": "lendario",
     "img": "Zenyatta_ow_gold.png",
     "golden_weapon": true
   },
@@ -2242,9 +2342,9 @@
     "entrada": "Aceita.",
     "ult_nome": "Transcendência",
     "ult": "Tornem-se invencíveis. Algumas condições se aplicam.",
-    "raridade": "especial",
+    "raridade": "incomum",
     "img": "Zenyatta_ow_fool.png",
     "evento": "april_fools",
-    "disponivel": true
+    "disponivel": false
   }
 ]

@@ -4,14 +4,21 @@
 <link rel="stylesheet" href="../static/styles/carta.css">
 <!-- CENTRO -->
 <div class="main">
+<div class="container">
+    <a href="{{ url_for('main.deck_builder') }}">
+        <button class="smll-btn">
+            Deck Builder
+        </button>
+    </a>
 
-<div class="toggle-button">
-    <span>Ver todas as cartas</span>
-    <div class="switch__container">
-        <input id="switch-shadow" class="switch switch--shadow" 
-        type="checkbox"
-        {% if mostrar_todas %}checked{% endif %} />
-        <label for="switch-shadow"></label>
+    <div class="toggle-button">
+        <span>Ver todas as cartas</span>
+        <div class="switch__container">
+            <input id="switch-shadow" class="switch switch--shadow" 
+            type="checkbox"
+            {% if mostrar_todas %}checked{% endif %} />
+            <label for="switch-shadow"></label>
+        </div>
     </div>
 </div>
 
@@ -21,7 +28,7 @@
         <!-- colocar isso depois de wrapper: -->
         <div class="card-wrapper {% if not carta.possui %}apagada{% endif %}">
 
-            <div class="card {{ carta.raridade }} {{ carta.classe|lower }}">
+            <div class="card {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.is_evento }}">
 
                 <!-- Nome -->
                 <div class="card-nome">
@@ -34,15 +41,17 @@
                 {% if carta.possui %}
                     <div class="card-img">
                         <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                        {% if carta.golden_weapon %}
+                            <div class="golden_weapon_icon">
+                                <img src="{{ url_for('static', filename='logos/golden_star.png' ) }}">
+                            </div>
+                        {% endif %}
                     </div>
                 {% else %}
                     <div class="card-img">
                         <img src="{{ url_for('static', filename='logos/logo.png' ) }}">
                     </div>
                 {% endif %}
-
-
-                
 
                 <!-- Classe -->
                 <div class="card-classe">
@@ -69,7 +78,6 @@
                 <span>{{ carta.nome }}</span>
                 {% endif %}
                 {{ carta.golden_weapon }}
-                <span>x{{ carta.quantidade }}</span>
             </div>
 
         </div>

@@ -35,7 +35,7 @@ def abrir_pack(tipo_pack):
         raridade = sortear_raridade(chances_slot)
 
         # 2. filtrar personagens dessa raridade
-        possiveis = [p for p in personagens if p["raridade"] == raridade and p not in cartas]
+        possiveis = [p for p in personagens if p["raridade"] == raridade and p.get("evento") is None and p not in cartas]
 
         # 3. escolher personagem
         carta = random.choice(possiveis)
@@ -44,27 +44,51 @@ def abrir_pack(tipo_pack):
 
     return cartas
 
-def abrir_pack_evento(ids_eventos):
+def abrir_pack_evento(id_evento):
     personagens = read_json("./data/characters.json")
 
     personagens_filtrados = [
         p for p in personagens
-        if p.get("evento") is None or p.get("evento") in ids_eventos
+        if p.get("evento") in [id_evento]
     ]
 
-    cartas = []
-    # 1. sortear raridade
+    if id_evento == "aniversary":
+        golden = [
+            p for p in personagens
+            if p.get("golden_weapon")
+        ]
     
+    # 1. sortear raridade
     packs = read_json("./data/packs.json")
-    pack = packs["id_evento"]
-    raridade = sortear_raridade(pack["chance"][0])
+    pack = packs[id_evento]
+    
+    cartas = []
 
-    # 2. filtrar personagens dessa raridade
-    possiveis = [p for p in personagens_filtrados if p["raridade"] == raridade]
+    # 🎁 Caso especial: aniversário
+    if id_evento == "aniversary":
+        possiveis_golden = [p for p in golden if p["raridade"] == "lendario"]
+        possiveis_evento = [p for p in personagens_filtrados if p["raridade"] == "epico"]
 
-    # 3. escolher personagem
-    carta = random.choice(possiveis)
+        carta1 = random.choice(possiveis_golden)
+        carta2 = random.choice(possiveis_evento)
 
-    cartas.append(carta)
+        carta2["is_evento"] = id_evento
+
+        cartas.extend([carta1, carta2])
+
+    # 🎴 Lógica padrão (todos os outros casos)
+    else:
+        for i in range(pack["cartas_por_pack"]):
+            raridade = sortear_raridade(pack["chance"][i])
+
+            possiveis = [
+                p for p in personagens_filtrados
+                if p["raridade"] == raridade
+            ]
+
+            carta = random.choice(possiveis)
+            carta["is_evento"] = id_evento
+
+        cartas.append(carta)
 
     return cartas

@@ -3,7 +3,7 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     padding: 20px;
-    background-color: #3b4f63;
+    background-color: var(--main-color);
     margin-bottom: 75px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
@@ -19,11 +19,27 @@
     border-radius: 10px;
     color: white;
     font-weight: 600;
-    background-color: #2c3c4d;
-    border: 1px solid #4f6377;
+    background-color: var(--main-dark-color);
+    border: 1px solid var(--main-light-color);
     padding: 8px 22px;
     justify-content: space-between;
     align-items: center;
+}
+
+.container {
+  display: flex;
+}
+
+.smll-btn {
+    background-color: var(--main-color);
+    border: none;
+    width: 100px;
+    padding: 10px 0;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
 }
 
 .toggle-button {
@@ -82,7 +98,7 @@
 }
 
 .switch--shadow:checked + label:before {
-  background-color: #8ce196;
+  background-color: var(--sucess-color-1);
 }
 .switch--shadow:checked + label:after {
   transform: translateX(30px);
@@ -115,7 +131,7 @@
 
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .toggle-button {
     width: 60vw;
     padding-bottom: 6px;
