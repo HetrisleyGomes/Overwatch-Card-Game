@@ -146,13 +146,13 @@
     height: 8vh;
 }
 
-.golden_weapon_icon {
+.icon_ref {
     position: absolute;
     right: 10px;
     top: 10px;
     
 }
-.golden_weapon_icon img{
+.icon_ref img{
     width: 15px;
     height: 15px;
 }

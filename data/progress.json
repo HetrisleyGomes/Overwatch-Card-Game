@@ -405,7 +405,21 @@
       "ocaso_flamejante",
       "echo_furtividade",
       "cassidy_salvavidas",
-      "druida_divino"
+      "druida_divino",
+      "soldado_76_comum",
+      "soldado_76_churrasqueiro",
+      "reaper_dourado",
+      "talon_zarya",
+      "sentinela_ultra-violeta",
+      "mauga_dourado",
+      "hanzo_dourado",
+      "feiticeira",
+      "vendetta_dourado",
+      "cyber_demonio",
+      "guardia_espiritual",
+      "ramattra_poseidon",
+      "reinhardt_minotauro",
+      "roadhog_ciclope"
     ],
     "sets_completos": [
       "deadlock",
@@ -440,7 +454,14 @@
       "bastion",
       "tracer",
       "moira",
-      "echo"
+      "echo",
+      "overwatch",
+      "ferias",
+      "sojourn",
+      "zarya",
+      "mauga",
+      "hanzo",
+      "vendetta"
     ],
     "deck": [
       "a-7000_Wargod",

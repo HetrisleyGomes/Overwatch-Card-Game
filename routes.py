@@ -31,7 +31,7 @@ def home():
     log = get_last_log()
     prom = get_promocoes()
 
-    return render_template('home.html', user=user, ev=ev, log=log, prom=prom if prom else None)
+    return render_template('home.html', user=user, ev=ev, log=log, proms=prom if prom else None)
 
 # Abrir pacote ========================================
 @main.route("/abrir-pack-comum", methods=["POST"])
@@ -129,7 +129,6 @@ def collection():
 def deck_builder():
     cartas = formatar_inventario()
     deck = get_deck()
-    print(deck)
     return render_template('deck_builder.html', cartas=cartas, deck=deck)
 
 @main.route("/save-deck", methods=["POST"])
@@ -151,12 +150,13 @@ def loja():
 
     prom = get_promocoes()
 
-    return render_template('loja.html', user = user, ev=ev, prom=prom, imgs=imgs)
+    return render_template('loja.html', user = user, ev=ev, proms=prom, imgs=imgs)
 
 @main.route("/comprar-pack", methods=["POST"])
 def comprar_pack():
     data = request.get_json()
     tipo = data.get("tipo")
+    pacote = data.get("pacote", None)
     buy_with_impetos = data.get("buy_with_impetos")
     id = data.get("id")
 
@@ -184,10 +184,10 @@ def comprar_pack():
         user["packs_evento"] += 1
     elif tipo == 'pontos':
         preco = 1
-        user["pontos"] += 600
+        user["pontos"] += 300
     elif tipo == 'pontos2k':
         preco = 3
-        user["pontos"] += 2000
+        user["pontos"] += 1000
     elif tipo == 'icone':
         imgs = get_img_logos()
         img = next(i for i in imgs if i["id"] == id)
@@ -195,7 +195,9 @@ def comprar_pack():
         get_new_img(user["id"], id)
         msg = "Icone " + img["nome"] + ' adquirido!'
     elif tipo == 'promotion_pack':
-        preco = comprar_pack_prom(user['id'])
+        preco, pontos = comprar_pack_prom(user['id'], pacote)
+        if pontos > 0:
+            user["pontos"] += pontos
         msg = "Pack promocional adquirido!"
 
     if buy_with_impetos:
@@ -238,7 +240,6 @@ def atualizar_nome():
 def atualizar_foto():
     data = request.get_json()
     img = data.get("imagem")
-    print(img)
     usuarios = carregar_usuarios()
     user = next(u for u in usuarios if u["id"] == session["usuario_id"])
 

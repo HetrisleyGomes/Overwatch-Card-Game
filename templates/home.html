@@ -83,7 +83,8 @@
                 </div>
             {% endif %}
 
-            {% if prom %}
+            {% if proms %}
+                {% for prom in proms %}
                 <div class="aside-box">
                     <p class="title">
                         Pacote promocional disponível na loja! 
@@ -93,11 +94,41 @@
                         
                     </p>
                     <span class="texto">
-                        Aproveite o pacotaço {{ prom.nome }}, {{ prom. description }}
+                        Aproveite o pacotaço {{ prom.nome }}; {{ prom.description }}
                     </span>
                 </div>
+                {% endfor %}
             {% endif %}
 
+                <div class="aside-box">
+                    <p class="title">
+                        Pacote Raro
+                    </p>
+                    <span class="texto">
+                        Ganhe um pacote raro após abrir 10 pacotes comuns diários. 
+                        <br/>
+                        > {{ user.contador_packs_comuns }}/10 Pacotes abertos.
+                    </span>
+                </div>
+                <div class="aside-box">
+                    <p class="title">
+                        Bônus semanal
+                    </p>
+                    <span class="texto">
+                    {% if user.streak <= 21 %}
+                        A cada uma semana, consiga 4 pacotes comuns!
+                    {% elif user.streak <= 49 %}
+                        A cada uma semana, consiga 3 pacotes raros!
+                    {% else %}
+                        A cada uma semana, consiga 6 pacotes raros!
+                    {% endif %}
+                    <br>
+                    > Dias de sequência: {{ user.streak }}.
+                    <br/>
+                    > Faltam {{ 7 - (user.streak % 7) }} para receber uma recompensa.
+                    </span>
+                </div>
+            
 
             <div class="aside-box">
                 <p class="title">

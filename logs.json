@@ -1,42 +1,52 @@
 [
     {
-        "version": 0.1,
+        "version": "0.0.1",
         "date": "29-03-2026",
         "description": "Primeira versão do projeto, inclui as features: Dois packs (comum e raro), inventário de cartas, coleções, loja para comprar pacotes."
     },
     {
-        "version": 0.2,
+        "version": "0.0.2",
         "date": "31-03-2026",
         "description": "FEAT: Adição de cartas e evento de primeiro de abril. O usuário agora possui um perfil com um icone de jogador. Adicionados icones de jogador à loja. Responsividade para telas menores."
     },
     {
-        "version": 0.3,
+        "version": "0.0.3",
         "date": "05-04-2026",
         "description": "FEAT: Adição do sistema de nivel e experiência. Adição de cartas para o evento de aniversário. FIX: Melhoria no sistema de sorteio de cartas. Alterado a raridade das cartas de evento de 'especial' para raridades padrões. Raridade 'especial' removida."
     },
     {
-        "version": 0.4,
+        "version": "0.0.4",
         "date": "07-04-2026",
         "description": "FEAT: Adicionado novos icones de jogador. Adicionado novas recompensas de nivel. FIX: Alteração no tamanho máximo para responsividade começar."
     },
     {
-        "version": 0.5,
+        "version": "0.0.5",
         "date": "09-04-2026",
         "description": "FEAT: Adicionado novos icones de jogador. Adicionado variação de Ramattra em sua forma nêmesis."
     },
     {
-        "version": 0.6,
+        "version": "0.0.6",
         "date": "14-04-2026",
         "description": "FEAT: Adicionado aside com notificações e noticias. Adicionado pacote promocional à loja. Adicionado: Pacote promocional: Apogeu. Adicionado novas cartas: Sierra, Sierra dourada, Soldado churrasqueiro: 76 e Cassidy Salva-vidas. Fix: Corrigido código que busca as imagens na rota de loja."
     },
     {
-        "version": 0.7,
+        "version": "0.0.7",
         "date": "18-04-2026",
         "description": "FEAT: Adicionado novas cartas míticas, Soldado Voltagem máxima, e Genji sumi-Ichimonji; Melhoria na quantidade de pontos obtidos em níveis baixos. Removido a radidade de cartas 'raro'; Adicionado novas raridades de carts, 'epico' e 'lendario'. STYLE: Cartas de 'arma dourada' possuem um selo especial."
     },
     {
-        "version": 0.8,
+        "version": "0.0.8",
         "date": "20-04-2026",
         "description": "FEAT: Sequência de login, com bônus semanais; Alterado o número de pacotes comuns necessários para o pacote raro de 20 para 10; Adicionado a opção de compra de Pontos com Impetos na loja."
+    },
+    {
+        "version": "0.0.9",
+        "date": "23-04-2026",
+        "description": "FEAT: Adicionado dois novos ícones de jogador. ALT: Mudança na quantidade de experiência necessária para subir de nível; Alterada a quantidade de pontos comprados com Impetos."
+    },
+    {
+        "version": "0.1.0",
+        "date": "25-04-2026",
+        "description": "FEAT: Adicionado Reinhardt Minotauro e Roadhog Ciclope. ALT: Lúcio Hermes foi alterado de Lendário para Épico; Alterado a estrutura de promoções; Agora promoções são agendadas."
     }
 ]

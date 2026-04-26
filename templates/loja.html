@@ -7,30 +7,37 @@
     <h1>Loja</h1>
 
     <div class="container">
-    {% if prom %}
-        <h2 class="sessao">Pacotaço</h2>
+    {% if proms %}
+    <h2 class="sessao">Pacotaço</h2>
+        {% for prom in proms %}
 
-        <div class="prateleira">
-            <div class="item promotion_pack">
-                <div class="item_name">{{ prom.nome }} {% if prom.last_days %}(Últimos dias){% endif %}</div>
-                <div class="item_description">
-                    {{ prom.description }}
-                </div>
+            <div class="prateleira pacotaco">
+                <div class="item promotion_pack">
+                    <div class="item_name">{{ prom.nome }} {% if prom.last_days %}(Últimos dias){% endif %}</div>
+                    <div class="item_description">
+                        {{ prom.description }}
+                    </div>
 
-                <div class="item_button">
-                    <button class="button {% if (user.pontos < prom.value and not prom.buy_with_impeto) or (prom.buy_with_impeto and user.impetos < prom.value) or user['id'] in prom.has_buy %}desativado{% endif %}"
-                    {% if (user.pontos < prom.value and not prom.buy_with_impeto) or (prom.buy_with_impeto and user.impetos < prom.value) or user['id'] in prom.has_buy %}disabled{% endif %}
-                    onclick="comprarPack('promotion_pack', {{prom.buy_with_impeto}})">
-                        {% if not user['id'] in prom.has_buy %}
-                            {{ prom.value }} {% if prom.buy_with_impeto %}Impetos{% else %}Pontos{% endif %}
-                        {% else %}
-                            Obtido
-                        {% endif %}
-                    </button>
+                    <div class="item_button">
+                        {% set desativado = 
+                            (user.pontos < prom.value and not prom.buy_with_impeto)
+                            or (prom.buy_with_impeto and user.impetos < prom.value)
+                            or user['id'] in prom.has_buy
+                        %}
+                        <button class="button {% if desativado %}desativado{% endif %}"
+                        {% if desativado %}disabled{% endif %}
+                        onclick="comprarPromotionPack('promotion_pack', '{{ prom.id }}', {{ prom.buy_with_impeto | tojson }})">
+                            {% if not user['id'] in prom.has_buy %}
+                                {{ prom.value }} {% if prom.buy_with_impeto %}Impetos{% else %}Pontos{% endif %}
+                            {% else %}
+                                Obtido
+                            {% endif %}
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-
+        {% endfor %}
+    
         <div class="prateleira-divider"></div>
     {% endif %}
         <h2 class="sessao">Pacotes</h2>
@@ -99,9 +106,9 @@
         <div class="prateleira">
             <!-- COMPRAR PONTOS -->
             <div class="item">
-                <div class="item_name">600 Pontos</div>
+                <div class="item_name">300 Pontos</div>
                 <div class="item_description">
-                    Compre 600 Pontos pelo preço de 1 Impeto!
+                    Compre 300 Pontos pelo preço de 1 Impeto!
                 </div>
                 <div class="item_button">
                     <button class="button {% if user.impetos < 1 %}desativado{% endif %}"
@@ -112,9 +119,9 @@
             </div>
 
             <div class="item">
-                <div class="item_name">2000 Pontos</div>
+                <div class="item_name">1000 Pontos</div>
                 <div class="item_description">
-                    Compre 2000 Pontos pelo preço de 3 Impetos!
+                    Compre 1000 Pontos pelo preço de 3 Impetos!
                 </div>
                 <div class="item_button">
                     <button class="button {% if user.impetos < 3 %}desativado{% endif %}"
@@ -160,12 +167,41 @@
 
 <script>
 function comprarPack(tipo, buy_with_impetos=false, id=0) {
+    const btn = event.target;
+
+    if (btn.disabled) return;
+    
     fetch("/comprar-pack", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({ tipo: tipo, buy_with_impetos: buy_with_impetos, id: id })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.msg);
+            location.reload();
+
+            // 🔥 atualizar UI sem reload
+            atualizarPontos(data.pontos);
+        } else {
+            alert(data.erro);
+        }
+    });
+};
+function comprarPromotionPack(tipo, pack, buy_with_impetos){
+    const btn = event.target;
+
+    if (btn.disabled) return;
+
+    fetch("/comprar-pack", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ tipo: tipo, pacote: pack,  buy_with_impetos: buy_with_impetos})
     })
     .then(res => res.json())
     .then(data => {

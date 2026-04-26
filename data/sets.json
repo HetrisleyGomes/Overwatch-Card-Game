@@ -437,6 +437,7 @@
     "personagens": [
       "reinhardt_comum",
       "reinhardt_gridironhardt",
+      "reinhardt_minotauro",
       "fallen_knight",
       "reinhardt_dourado",
       "thor",
@@ -451,6 +452,7 @@
     "nome": "Roadhog",
     "personagens": [
       "roadhog_comum",
+      "roadhog_ciclope",
       "roadhog_dourado"
     ],
     "recompensa": {
@@ -1025,9 +1027,10 @@
   },
   {
     "id": "panteao",
-    "nome": "Panteão",
+    "nome": "Deuses do Panteão",
     "personagens": [
       "lucio_hermes",
+      "extra",
       "pharah_hades",
       "ramattra_poseidon",
       "zeus"
@@ -1036,7 +1039,19 @@
       "pontos": 400
     }
   },
-    {
+  {
+    "id": "monstros",
+    "nome": "Monstros do Panteão",
+    "personagens": [
+      "reinhardt_minotauro",
+      "roadhog_ciclope",
+      "extra"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
     "id": "futurista",
     "nome": "Cyber-futurista: 2077",
     "personagens": [

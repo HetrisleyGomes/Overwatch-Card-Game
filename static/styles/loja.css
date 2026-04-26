@@ -75,6 +75,9 @@
     border: 6px solid mediumpurple;
 }
 
+.prateleira.pacotaco {
+    margin-bottom: 20px;
+}
 .item.promotion_pack {
     grid-column: 1 / span 2;
     width: 64vw;

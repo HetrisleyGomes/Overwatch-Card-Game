@@ -191,5 +191,27 @@
             "type": "nivel",
             "value": 6
         }
+    },
+    {
+        "id": 20,
+        "nome": "Mitzi",
+        "img": "Mitzi.png",
+        "descricao": "Irmã mais velha de Jetpack Cat.",
+        "price": 500,
+        "unlock": {
+            "type": "nivel",
+            "value": 6
+        }
+    },
+    {
+        "id": 21,
+        "nome": "Ladina",
+        "img": "Ladina.png",
+        "descricao": "Uma Ladina astuta se esconde por aqui.",
+        "price": 750,
+        "unlock": {
+            "type": "nivel",
+            "value": 7
+        }
     }
 ]

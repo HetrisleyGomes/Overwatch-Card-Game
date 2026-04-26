@@ -132,11 +132,11 @@ def get_xp_calc(rarity, pack_rarity):
             value = 5
     match pack_rarity:
         case "comum":
-            return int(value * 2)
+            return int(value * 1.5)
         case "raro":
             return value
         case "especial":
-            return int(value * 2)
+            return int(value * 1.5)
 
 def save_deck_progress(deck_json):
     deck_ids = json.loads(deck_json)

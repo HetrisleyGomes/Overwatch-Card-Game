@@ -170,32 +170,31 @@ Ideias para implementar:
 ---
 
 # Próximas cartas:
-- Ashe: Intergalactic Smuggler (espacial);
-- Baptiste: Bounty Hunter (caçador);
-- brigitte: Royal Captain (guerreiro); médica ();
+- Ashe: Contrabandista intergalactica (espacial);
+- Baptiste: Caçador de Recompensas (caçador);
+- brigitte: Capitã Real (guerreiro); médica ();
 - DVa: Cruzador (Campeão);
-- Doom: Bonebreaker(Espacial);
+- Doom: Quebra-ossos(Espacial);
+- Echo: Automata?
 - Hanzo: Ryu (Especial);
-- Kiriko: Divinator (mágica);
-- Lucio: Jazzy (); Space Prince (espacial);
+- Kiriko: Bruxa (mágica);
+- Lucio: Jazzy (); Príncipe do espaço (espacial);
 - Mei: Mei-rry (NATAL)
 - Mercy: Vitoria alada (Pantão);
 - Moira: Lilith (submundo);
 - Pharah: Inarius;
-- Rein: All Mighty (Campeão especial); Minotaur (animais , monstro)
-- Roadhog: Cyclops (olimpo, monstro);
+- Rein: All Mighty (Campeão especial);
 - Sojourn: Detetive;
-- Soldado 76: Infinity guard (cosmico, guerreiro)
+- Soldado 76: Guarda Infinito: 76 (cosmico, guerreiro)
 - Symmetra: Junker ();
 - Torb: Santaclad (NATAL);
 - Tracer: Jungle (Natal); Comic book ();
-- Widow: Medusa (olimpo, monstro);
 - Wuyang: Joker ();
 - Zen: Dhalsim (Especial); Quebra nozes (NATAL)
 ---
 ### COLEÇÕES
 - [x] Criar set férias com soldado churrasquieiro e cassidy salva vidas. (set 'Curtindo o verão' feito)
-- [ ] Set Monstros com: Rein Minotauro, Widow e Roadhog.
+- [ ] Set Monstros com: Rein Minotauro, Widow Medusa e Roadhog Ciclope.
 - [ ] Set rebeldes espaciais com Ahse, Baptiste, Doom, e as cartas existentes do torb engenheiro espacial, e winston extraterrestre.
 - [ ] Set Ordem cósmica, com brigg royal, soldado e lúcio principe, com a carta existente Sigma imperador intergalactico.
 - [ ] Set natalino com Torb, tracer, e Zen quebra nozes.

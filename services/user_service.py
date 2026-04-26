@@ -71,7 +71,7 @@ def verify_date(usuarios, user, evento = False):
     ultimo_login_str = user["ultimo_login"]
     hoje = datetime.now().date()
     ultimo_login = datetime.strptime(ultimo_login_str, "%Y-%m-%d").date()
-    
+
     if ultimo_login != hoje:
         user["ultimo_login"] = hoje.strftime("%Y-%m-%d")
         user["packs_diarios_abertos"] = 2
@@ -83,7 +83,6 @@ def verify_date(usuarios, user, evento = False):
             user["pontos"] += int(user["streak"])
             if (user["streak"] % 7) == 0:
                 get_streak_bonus(user)
-
         else:
             user["streak"] = 1
 
@@ -112,7 +111,7 @@ def sum_xp(id, xp):
     user["xp"] += xp
     
     while True:
-        nivel_cap = 50 + (user["nivel"] * 25)
+        nivel_cap = 100 + (user["nivel"] * 50)
 
         if user["xp"] >= nivel_cap:
             user["xp"] -= nivel_cap

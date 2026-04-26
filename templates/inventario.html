@@ -41,9 +41,9 @@
                 {% if carta.possui %}
                     <div class="card-img">
                         <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
-                        {% if carta.golden_weapon %}
-                            <div class="golden_weapon_icon">
-                                <img src="{{ url_for('static', filename='logos/golden_star.png' ) }}">
+                        {% if carta.icon_ref %}
+                            <div class="icon_ref">
+                                <img src="{{ url_for('static', filename='icon/' + carta.icon_ref ) }}">
                             </div>
                         {% endif %}
                     </div>

@@ -1,15 +1,57 @@
-{
-  "nome": "Temporada 2: Apogeu",
-  "description": "Pacote especial com: Sierra, Soldado Churrasqueiro: 76, e Cassidy Salva-vidas!",
-  "value": 1000,
-  "last_days": true,
-  "buy_with_impeto": false,
-  "has_buy": [
-    1
-  ],
-  "itens": [
-    "sierra_comum",
-    "cassidy_salvavidas",
-    "soldado_76_churrasqueiro"
-  ]
-}
+[
+  {
+    "id": "prom01",
+    "nome": "Apogeu: Caçadores",
+    "description": "Pacote especial com: Cassidy Van Helsing, Hanzo Okami, Sombra Caçadora de Demônios, Widowmaker Caçadora.",
+    "value": 400,
+    "buy_with_impeto": false,
+    "inicio": "04-20",
+    "fim": "04-27",
+    "has_buy": [
+      1
+    ],
+    "itens": [
+      "cassidy_van_helsing",
+      "hanzo_okami",
+      "sombra_cacadora_demonios",
+      "widowmaker_cacadora"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "promOlimpo1",
+    "nome": "Deuses e Monstros do Olimpo pt.1",
+    "description": "Pacote especial com: Ramattra Poseidon, Reinhardt Minotauro, e Roadhog Ciclope. +300 Pontos!",
+    "value": 1,
+    "buy_with_impeto": true,
+    "inicio": "04-26",
+    "fim": "05-02",
+    "has_buy": [
+      2
+    ],
+    "itens": [
+      "ramattra_poseidon",
+      "reinhardt_minotauro",
+      "roadhog_ciclope",
+      "points"
+    ],
+    "was_points": 300
+  },
+  {
+    "id": "promOlimpo2",
+    "nome": "Deuses e Monstros do Olimpo pt.2",
+    "description": "Pacote especial com: Pharah Hades, Mercy vitória alada, e Widowmaker Medusa. +300 Pontos!",
+    "value": 1,
+    "buy_with_impeto": true,
+    "inicio": "05-03",
+    "fim": "05-09",
+    "has_buy": [],
+    "itens": [
+      "pharah_hades",
+      "mercy_vitoria_alada",
+      "widowmaker_medusa",
+      "points"
+    ],
+    "was_points": 300
+  }
+]

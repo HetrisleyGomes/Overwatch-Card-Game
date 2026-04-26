@@ -77,6 +77,7 @@ def formatar_inventario():
         cid = c["id"]
 
         possui = cid in personagens_usuario
+        icon_ref = c.get("icon_ref", False)
         golden_weapon = c.get("golden_weapon", False)
         foil = c.get("foil", False)
         is_event = c.get("evento", False)
@@ -92,6 +93,7 @@ def formatar_inventario():
             "ult": c["ult"],
             "raridade": c["raridade"],
             "img": c["img"],
+            "icon_ref": icon_ref,
             "is_evento": is_event,
             "golden_weapon": golden_weapon,
             "foil": foil,
@@ -147,12 +149,15 @@ def listar_sets_usuario():
             possui = cid in personagens_usuario
             is_event = c.get("evento", False)
             golden_weapon = c.get("golden_weapon", False)
+            icon_ref = c.get("icon_ref", False)
+
 
             cartas_detalhadas.append({
             "id": cid,
             "nome": c["nome"],
             "raridade": c["raridade"],
             "img": c["img"],
+            "icon_ref": icon_ref,
             "evento": is_event,
             "golden_weapon": golden_weapon,
             "possui": possui,
