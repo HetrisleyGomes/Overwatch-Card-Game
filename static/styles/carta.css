@@ -88,12 +88,11 @@
 .icon_ref {
     position: absolute;
     right: 10px;
-    top: 10px;
-    
+    top: 10px; 
 }
 .icon_ref img{
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
 }
 p {
     margin-block-start: 0;
@@ -171,5 +170,14 @@ p {
         width: 80px;
         height: 80px;
         object-fit: contain;
+    }
+    .icon_ref {
+        position: absolute;
+        right: 6px;
+        top: 6px; 
+    }
+    .icon_ref img{
+        width: 14px;
+        height: 14px;
     }
 }
