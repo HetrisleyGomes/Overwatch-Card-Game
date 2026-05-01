@@ -16,7 +16,7 @@ class UserRepository:
                 user["nome"],
                 user["email"],
                 user["senha"],
-                0,
+                150,
                 0,
                 0,
                 1,
@@ -26,7 +26,7 @@ class UserRepository:
                 2,
                 0,
                 0,
-                0,
+                1,
                 False,
                 user["packs_evento"]
             )
