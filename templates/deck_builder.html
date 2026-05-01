@@ -31,12 +31,7 @@
                             <div class="card-nome">{{ carta.nome }}</div>
 
                             <div class="card-img">
-                                <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
-                                {% if carta.golden_weapon %}
-                                    <div class="golden_weapon_icon">
-                                        <img src="{{ url_for('static', filename='logos/golden_star.png' ) }}">
-                                    </div>
-                                {% endif %}
+                                <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
                             </div>
 
                             <div class="card-classe">

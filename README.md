@@ -10,7 +10,9 @@ O **Overwatch Card Game** é um projeto pessoal criado com o objetivo de pratica
 
 * Backend com **Flask (Python)**
 * Frontend com **HTML, CSS e JavaScript**
-* Persistência de dados em arquivos `.json`
+* Informações internas em arquivos `.json`
+* Persistência em banco de dados externo `sql`
+  
 
 O jogo simula a experiência de abrir pacotes de cartas, com diferentes raridades, progresso de coleção e sistema de recompensas.
 
@@ -37,19 +39,21 @@ O jogo simula a experiência de abrir pacotes de cartas, com diferentes raridade
     characters.json
     events.json
     icons.json
-    inventory.json
     packs.json
-    progress.json
     sets.json
-    user.json
 
 /static
     /css
     /images
     /logos
+    /icons
 
 /templates
     *.html
+
+/sql
+    /controller
+    /repository
 
 /routes
 /services
@@ -99,7 +103,7 @@ E então ative-o:
 3. Instale as dependências:
 
 ```bash
-pip install flask
+pip install requirements.txt
 ```
 
 4. Execute o projeto:
@@ -118,11 +122,11 @@ http://127.0.0.1:5000
 
 ## 🔮 Melhorias futuras
 
-* Sistema de raridades mais avançado
+* ~~Sistema de raridades mais avançado~~
 * Cartas especiais de eventos
 * Sistema de marketplace entre jogadores
 * Melhorias visuais e animações
-* Banco de dados real (SQLite ou PostgreSQL)
+* ~~Banco de dados real (SQLite ou PostgreSQL)~~
 
 ---
 

@@ -1,0 +1,34 @@
+MODO PVP:
+
+<div class="aside-box">
+    <p class="title">
+        Duelo!
+    </p>
+    <span class="texto">
+            <a href="{{ url_for('main.inventario') }}">
+            <button class="button">
+                Batalha
+            </button>
+        </a>
+    </span>
+</div>
+
+---
+
+EXEMPLO PACOTAÇO:
+{
+"id": string, "id",
+"nome": string, "nome",
+"description": string, "descrição",
+"value": int, valor da compra,
+"buy_with_impeto": bool, é comprado com impeto?,
+"inicio": string, mês-dia,
+"fim": string, mês-dia,
+"has_buy": [
+    int, id de quem já comprou
+],
+"itens": [
+    strings, id das cartas
+],
+"was_points": int, caso tenha pontos para serem ganhos
+}

@@ -7,10 +7,10 @@
     <div class="packs" id="packs-container">
         {% if user.packs_diarios_abertos > 0 or user.packs_comprados_comum > 0 %}
             {% if user.packs_diarios_abertos == 2 %}
-                <div class="common pack"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img"></div>
+                <div class="common pack"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy"></div>
             {% endif %}
             <div class="common pack">
-                <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img">
+                <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy">
                 {% if user.packs_comprados_comum > 0 %}    
                     <div class="bolinha-vermelha">{{ user.packs_comprados_comum }}</div>
                 {% endif %}                
@@ -18,7 +18,7 @@
         {% endif %}
         {% if user.contador_packs_comuns == 10 or user.packs_comprados_raro > 0 %}
             <div class="rare pack">
-                <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img">
+                <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy">
                 {% if user.packs_comprados_raro > 0 %}
                     <div class="bolinha-vermelha">{{ user.packs_comprados_raro }}</div>
                 {% endif %}
@@ -32,7 +32,7 @@
         {% if ev and user.packs_evento > 0 %}
             <div class="event pack {{ ev.id }}">
                 <span>{{ ev["nome"] }}</span><br>
-                <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img">
+                <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy">
                 {% if user.packs_evento > 1 %}    
                     <div class="bolinha-vermelha">{{ user.packs_evento }}</div>
                 {% endif %}  
@@ -41,22 +41,31 @@
     </div>
 
     <div class="buttons">
+
         {% if user.packs_diarios_abertos >= 1 or user.packs_comprados_comum > 0 %}
-            <form method="POST" action="/abrir-pack-comum">
+            <form method="POST" action="/abrir-pack">
+                <input type="hidden" name="tipo" value="comum">
                 <button class="button">Abrir pacote</button>
             </form> 
         {% endif %}
+
         {% if user.contador_packs_comuns == 10 or user.packs_comprados_raro > 0 %}
-            <form method="POST" action="/abrir-pack-raro">
+            <form method="POST" action="/abrir-pack">
+                <input type="hidden" name="tipo" value="raro">
                 <button class="button">Abrir pacote raro</button>
             </form>
         {% endif %}
+
         {% if ev and user.packs_evento > 0 %}
-            <form method="POST" action="/abrir-pack-evento">
-                <button class="button" name="evento_id" value="{{ ev.id }}">Abrir pacote de evento</button>
+            <form method="POST" action="/abrir-pack">
+                <input type="hidden" name="tipo" value="evento">
+                <input type="hidden" name="evento_id" value="{{ ev.id }}">
+                <button class="button">Abrir pacote de evento</button>
             </form>
         {% endif %}
+
     </div>
+
     <button id="toggle-aside">ℹ️</button>
     <aside class="aside-area">
         <div class="header">
@@ -64,14 +73,6 @@
         </div>
 
         <div class="container">
-            <div class="aside-box">
-                <p class="title">
-                    v.{{ log.version }} Data: {{ log.date }}
-                </p>
-                <span class="texto">
-                    {{ log.description }}
-                </span>
-            </div>
             {% if ev %}
                 <div class="aside-box">
                     <p class="title">
@@ -100,46 +101,40 @@
                 {% endfor %}
             {% endif %}
 
-                <div class="aside-box">
-                    <p class="title">
-                        Pacote Raro
-                    </p>
-                    <span class="texto">
-                        Ganhe um pacote raro após abrir 10 pacotes comuns diários. 
-                        <br/>
-                        > {{ user.contador_packs_comuns }}/10 Pacotes abertos.
-                    </span>
-                </div>
-                <div class="aside-box">
-                    <p class="title">
-                        Bônus semanal
-                    </p>
-                    <span class="texto">
-                    {% if user.streak <= 21 %}
-                        A cada uma semana, consiga 4 pacotes comuns!
-                    {% elif user.streak <= 49 %}
-                        A cada uma semana, consiga 3 pacotes raros!
-                    {% else %}
-                        A cada uma semana, consiga 6 pacotes raros!
-                    {% endif %}
-                    <br>
-                    > Dias de sequência: {{ user.streak }}.
-                    <br/>
-                    > Faltam {{ 7 - (user.streak % 7) }} para receber uma recompensa.
-                    </span>
-                </div>
-            
-
             <div class="aside-box">
                 <p class="title">
-                    Duelo!
+                    Pacote Raro
                 </p>
                 <span class="texto">
-                        <a href="{{ url_for('main.inventario') }}">
-                        <button class="button">
-                            Batalha
-                        </button>
-                    </a>
+                    Ganhe um pacote raro após abrir 10 pacotes comuns diários. 
+                    <br/>
+                    > {{ user.contador_packs_comuns }}/10 Pacotes abertos.
+                </span>
+            </div>
+            <div class="aside-box">
+                <p class="title">
+                    Bônus semanal
+                </p>
+                <span class="texto">
+                {% if user.streak <= 21 %}
+                    A cada uma semana, consiga 4 pacotes comuns!
+                {% elif user.streak <= 49 %}
+                    A cada uma semana, consiga 3 pacotes raros!
+                {% else %}
+                    A cada uma semana, consiga 6 pacotes raros!
+                {% endif %}
+                <br>
+                > Dias de sequência: {{ user.streak }}.
+                <br/>
+                > Faltam {{ 7 - (user.streak % 7) }} para receber uma recompensa.
+                </span>
+            </div>
+            <div class="aside-box">
+                <p class="title">
+                    v.{{ log.version }} Data: {{ log.date }}
+                </p>
+                <span class="texto">
+                    {{ log.description }}
                 </span>
             </div>
         </div>

@@ -1,81 +1,37 @@
 # Proximas funcionalidades
 
-### Sumário: 
-
-- [ ] [Missões](#1-missões);
-- [x] [Nivel](#2-sistema-de-nível-do-jogador);
-- [ ] [Variação de cartas, como foils, arte alternativa, e eventos](#3-cartas-com-variação);
-- [x] [Inventário/Coleções](#4-inventário-coleções);
-- [ ] [Pacotes](#5-novos-pacotes);
-- [x] [Mais variedade na loja](#7-loja);
-- [ ] [Personalização](#8-personalização);
-
-
-
 ---
-## 1. MISSÕES
-
-**Exemplos:**
+### 01. MISSÕES
+Missões diárias. Exemplos:
 
 * Abra 2 pacotes → +50 moedas
 * Obtenha 3 cartas raras → +100 moedas
 * Complete 1 conjunto → +200 moedas
-
 ---
 
-## 2. SISTEMA DE NÍVEL DO JOGADOR
-**FEITO**
-
-**Como funciona:**
-
-* Ganha XP ao:
-
-  * abrir pacotes
-  * completar coleções
-  
-* Ao subir de nível:
-
-  * ganha moedas
-  * desbloqueia pacotes especiais
-  * libera novos ícones
-
----
-
-## 3. CARTAS COM VARIAÇÃO
+### 02. CARTAS COM VARIAÇÃO
 
 Adicionar variantes:
 
-* ✨ Foil / holográfica (Em progresso)
-* 🌈 Versão alternativa (arte diferente)
+* Foil / holográfica (Em progresso)
+* Versão alternativa (arte diferente, ou pelo menos um selo 'alternativo'.)
 
 Variantes já feitas:
 
-* 🏆 Edição limitada (evento)
-* 🥇 Versão Arma dourada
+* Edição limitada (evento)
+* Versão Arma dourada, com selo 'arma dourada'.
 
 ---
 
-## 4. INVENTÁRIO COLEÇÕES
-**FEITO**
-* Estilo “álbum de figurinhas”
-* Mostra:
-
-  * espaços vazios
-  * progresso por coleção
-  * % completado
-
----
-
-## 5. NOVOS PACOTES
+### 03. NOVOS PACOTES
 
 **Pacotes atuais:**
   
   * Pacote comum (5 cartas com variações de comum à lendárias)
   * Pacote raro (4 cartas com variações de incomum à lendárias com uma mítica garantida)
-
-* Pacote de evento: 
-  * April fools (1 carta exclusiva do evento)
-  * Aniversário Overwatch (2 cartas, sendo uma carta de arma dourada e uma carta exclusiva do evento)
+  * Pacote de evento: 
+    * April fools (1 carta exclusiva do evento)
+    * Aniversário Overwatch (2 cartas, sendo uma carta de arma dourada e uma carta exclusiva do evento)
   
 **Novas ideia:**
   * Pacote supremo (4 cartas com variações de raro à mítico)
@@ -83,22 +39,7 @@ Variantes já feitas:
 
 ---
 
-## 6. CONQUISTAS (ACHIEVEMENTS)
-
-Exemplo:
-
-* Colete 100 cartas
-* Complete 5 coleções
-* Pegue uma carta mítica
-
-Recompensas:
-
-* moedas
-* ícones exclusivos
-
----
-
-## 7. LOJA
+### 04. LOJA
 
 **Atualmente possui:**
 
@@ -112,29 +53,25 @@ Recompensas:
 
 * Pacotes com desconto diário
 * “Oferta misteriosa”
-* Boost temporário:
-  * +10% chance de rara
+* Boost temporário
 * Molduras de carta
 * Temas de interface
 
 ---
 
 
-## 8. PERSONALIZAÇÃO
-
+### 05. PERSONALIZAÇÃO
 * Ícone (já tem)
 * Moldura de perfil
 * Título:
-
   * “Colecionador Lendário”
   * “Mestre das Raras”
 
 ---
 
-## 9. ESTATÍSTICAS DO JOGADOR
+### 06. ESTATÍSTICAS DO JOGADOR
 
-Mostraar:
-
+Mostrar:
 * Total de cartas
 * % completado
 * cartas mais raras
@@ -142,34 +79,20 @@ Mostraar:
 
 ---
 
-## 10. MULTIPLAYER
+### 07. MULTIPLAYER
 
-
-#### SISTEMA DE COMBATE
+**SISTEMA DE COMBATE**
 * montar decks
 * batalhar contra outros jogadores
 
-#### SISTEMA DE TROCA DE CARTAS
+**SISTEMA DE TROCA DE CARTAS**
 * trocar cartas com outros jogadores
 * mercado simples
 
 ---
 
-# Banco de dados
 
-Ideias para implementar:
-
-* Tabela `missions`
-* Tabela `achievements`
-* Tabela `títulos de jogador`
-* Campo `is_variant` nas cartas
-* montar o **modelo de banco de dados**
-* sugerir **algoritmo de drop de cartas**
-* ou desenhar um **roadmap completo de desenvolvimento**
-
----
-
-# Próximas cartas:
+### 08. Próximas cartas:
 - Ashe: Contrabandista intergalactica (espacial);
 - Baptiste: Caçador de Recompensas (caçador);
 - brigitte: Capitã Real (guerreiro); médica ();
@@ -192,14 +115,13 @@ Ideias para implementar:
 - Wuyang: Joker ();
 - Zen: Dhalsim (Especial); Quebra nozes (NATAL)
 ---
-### COLEÇÕES
-- [x] Criar set férias com soldado churrasquieiro e cassidy salva vidas. (set 'Curtindo o verão' feito)
-- [ ] Set Monstros com: Rein Minotauro, Widow Medusa e Roadhog Ciclope.
-- [ ] Set rebeldes espaciais com Ahse, Baptiste, Doom, e as cartas existentes do torb engenheiro espacial, e winston extraterrestre.
-- [ ] Set Ordem cósmica, com brigg royal, soldado e lúcio principe, com a carta existente Sigma imperador intergalactico.
+### 09. COLEÇÕES (SETs)
+- [X] Set Monstros com: Rein Minotauro, Widow Medusa e Roadhog Ciclope.
+- [ ] Set Watchers rebeldes, com Ahse, Baptiste, Doom, lúcio principe, e as cartas existentes do torb engenheiro espacial, e winston extraterrestre.
+- [ ] Set Império Infinito, com brigg royal, soldado infinito, e com a carta existente Sigma imperador intergalactico. (Talvez D.va Ás infinito e Sojorn General Infinito)
 - [ ] Set natalino com Torb, tracer, e Zen quebra nozes.
 
-### PACOTAÇOS
+### 11. PACOTAÇOS
 - [ ] Pacotaço de aniversário: Cartas clássicas.
 - [ ] Pacotaço Street Fighers: Hanzo ryu e Zen Dhalsim.
 - [ ] Pacotaço Panteão: Lúcio, Pharah, Ramattra e Mercy Vitoriosa

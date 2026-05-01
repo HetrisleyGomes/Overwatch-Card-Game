@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "f1",
         "nome": "Overwatch",
         "img": "logo.png",
         "descricao": "Logo Overwatch.",
@@ -9,7 +9,7 @@
             "type": "free"
         }
     },{
-        "id": 2,
+        "id": "f2",
         "nome": "Overwatch Dark",
         "img": "logo_dark.png",
         "descricao": "Logo Overwatch.",
@@ -18,7 +18,7 @@
             "type": "free"
         }
     },{
-        "id": 3,
+        "id": "c1",
         "nome": "Pachimari",
         "img": "Pachimari_ow.png",
         "descricao": "Todo mundo ama o Pachimari.",
@@ -27,7 +27,7 @@
             "type": "purchase"
         }
     },{
-        "id": 4,
+        "id": "c2",
         "nome": "Overwatch Ecopoint",
         "img": "logo_ecopoint.png",
         "descricao": "Logo Ecopoint Overwatch.",
@@ -36,7 +36,7 @@
             "type": "purchase"
         }
     },{
-        "id": 5,
+        "id": "c3",
         "nome": "Coelhinha",
         "img": "dva_logo.png",
         "descricao": "Com amor, D.Va!",
@@ -45,7 +45,7 @@
             "type": "purchase"
         }
     },{
-        "id": 6,
+        "id": "c4",
         "nome": "Hackeado",
         "img": "sombra_logo.png",
         "descricao": "Teje, hackeado.",
@@ -55,7 +55,7 @@
         }
     },
     {
-        "id": 7,
+        "id": "c5",
         "nome": "Soldadinho",
         "img": "GLHF.png",
         "descricao": "Boa sorte e se divirta!",
@@ -64,16 +64,16 @@
             "type": "purchase"
         }
     },{
-        "id": 8,
+        "id": "s-01",
         "nome": "Setor Nulo",
         "img": "null_sector_logo.png",
         "descricao": "A força da resistência omnica.",
         "price": 500,
         "unlock": {
-            "type": "purchase"
+            "type": "null_sector"
         }
     },{
-        "id": 9,
+        "id": "s-02",
         "nome": "Blackwatch",
         "img": "blackwatch_logo.png",
         "descricao": "Das sombras, para o mundo.",
@@ -83,7 +83,7 @@
             "value": "blackwatch"
         }
     },{
-        "id": 10,
+        "id": "s-03",
         "nome": "Talon",
         "img": "talon_logo.png",
         "descricao": "O novo império, Talon!",
@@ -94,7 +94,7 @@
         }
     },
     {
-        "id": 11,
+        "id": "e-aniv-1",
         "nome": "Ouroverwatch",
         "img": "gold_watch.png",
         "descricao": "Brilhe, com Overwatch.",
@@ -105,7 +105,7 @@
         }
     },
     {
-        "id": 12,
+        "id": "l2-1",
         "nome": "Grande amiga",
         "img": "Orisa_icon.png",
         "descricao": "Orisa, a grande amiga de Efi.",
@@ -116,7 +116,7 @@
         }
     },
     {
-        "id": 13,
+        "id": "l3-1",
         "nome": "Hacker 8-bits",
         "img": "8bits_logo.png",
         "descricao": "Teje, hackeado. (em 8-bits)",
@@ -127,7 +127,7 @@
         }
     },
     {
-        "id": 14,
+        "id": "l3-2",
         "nome": "Pachimari 8-bits",
         "img": "8-Bitmari.png",
         "descricao": "Agora você pode amar o pachimari em 8-bits.",
@@ -138,7 +138,7 @@
         }
     },
     {
-        "id": 15,
+        "id": "l4-1",
         "nome": "Ganimedes perigoso",
         "img": "Ganymede_icon.png",
         "descricao": "Ganimedes anda muito preocupado esses dias.",
@@ -149,7 +149,7 @@
         }
     },
     {
-        "id": 16,
+        "id": "l5-1",
         "nome": "Questwatch",
         "img": "Questwatch_logo.png",
         "descricao": "Embarque em missões divertidas com Questwatch.",
@@ -160,7 +160,7 @@
         }
     },
     {
-        "id": 17,
+        "id": "l5-2",
         "nome": "Pachimari Questwatch",
         "img": "Questwatch_Pachimari.png",
         "descricao": "O pachimari, mais adorável do que nunca.",
@@ -171,7 +171,7 @@
         }
     },
     {
-        "id": 18,
+        "id": "l5-3",
         "nome": "Tracer Questwatch",
         "img": "Questwatch_Tracer.png",
         "descricao": "A aventureira dos reinos de Questwatch.",
@@ -182,7 +182,7 @@
         }
     },
     {
-        "id": 19,
+        "id": "l6-1",
         "nome": "Mercymari",
         "img": "Mercy_mari.png",
         "descricao": "Um pachimari misericordioso.",
@@ -193,7 +193,7 @@
         }
     },
     {
-        "id": 20,
+        "id": "l6-2",
         "nome": "Mitzi",
         "img": "Mitzi.png",
         "descricao": "Irmã mais velha de Jetpack Cat.",
@@ -204,7 +204,7 @@
         }
     },
     {
-        "id": 21,
+        "id": "l7-1",
         "nome": "Ladina",
         "img": "Ladina.png",
         "descricao": "Uma Ladina astuta se esconde por aqui.",

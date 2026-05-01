@@ -1,4 +1,4 @@
-from utils.json_utils import read_json
+from utils.json_utils import get_packs, get_characters
 import random
 
 #SORTEIO ======================================================
@@ -23,8 +23,8 @@ def abrir_pack(tipo_pack):
     Return: Retorna o conjunto de cartas sorteadas.
     """
     
-    packs = read_json("./data/packs.json")
-    personagens = read_json("./data/characters.json")
+    packs = get_packs()
+    personagens = get_characters()
 
     pack = packs[tipo_pack]
     cartas = []
@@ -45,7 +45,7 @@ def abrir_pack(tipo_pack):
     return cartas
 
 def abrir_pack_evento(id_evento):
-    personagens = read_json("./data/characters.json")
+    personagens = get_characters()
 
     personagens_filtrados = [
         p for p in personagens
@@ -59,7 +59,7 @@ def abrir_pack_evento(id_evento):
         ]
     
     # 1. sortear raridade
-    packs = read_json("./data/packs.json")
+    packs = get_packs()
     pack = packs[id_evento]
     
     cartas = []

@@ -29,10 +29,10 @@
                     {% if carta.possui %}
                         <div class="personagem">
                             <div class="personagem_img">
-                                <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                                <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
                                 {% if carta.icon_ref %}
                                 <div class="icon_ref">
-                                        <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}">
+                                        <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}" loading="lazy">
                                     </div>
                                 {% endif %}
                             </div>
@@ -43,7 +43,7 @@
                     {% else %}
                         <div class="personagem_apagado">
                             <div class="personagem_img">
-                                <img src="{{ url_for('static', filename='logos/logo.png' ) }}">
+                                <img src="{{ url_for('static', filename='logos/logo.png' ) }}" loading="lazy">
                             </div>
                             <div class="personagem_base">
                                 ???
@@ -55,7 +55,7 @@
                     {% if carta.possui %}
                         <div class="personagem">
                             <div class="personagem_img">
-                                <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                                <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
                             </div>
                             <div class="personagem_base base_extra">
                                 <span class="p_nome">{{ carta.nome }}</span> <div class="raridade {{ carta.raridade }} raridade-extra"></div>

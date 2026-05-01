@@ -7,7 +7,7 @@
 
     <div class="area">
         <!-- PACK -->
-        <div id="pack" class="pack {{ tipo_pack }}"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img"></div>
+        <div id="pack" class="pack {{ tipo_pack }}"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy"></div>
 
         <div class="area-cards">
             {% for carta in cartas %}
@@ -16,7 +16,7 @@
                         <!-- Verso -->
                         <div class="carta-back">
                             <div class="card card-pack back">
-                                <img src="{{ url_for('static', filename='logos/logo.png') }}">
+                                <img src="{{ url_for('static', filename='logos/logo.png') }}" loading="lazy">
                             </div>
                         </div>
 
@@ -28,10 +28,10 @@
                                 </div>
 
                                 <div class="card-img">
-                                    <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                                    <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
                                     {% if carta.icon_ref %}
                                         <div class="icon_ref">
-                                            <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}">
+                                            <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}" loading="lazy">
                                         </div>
                                     {% endif %}
                                 </div>
@@ -101,10 +101,12 @@
         <!-- Abrir próximo pack -->
         {% if (user.packs_diarios_abertos > 0 or user.packs_comprados_comum > 0) and tipo_pack == "comum" %}
         <form method="POST" action="{{ url_for('main.abrir_pack_route') }}" style="display:inline;">
+            <input type="hidden" name="tipo" value="comum">
             <button class="button">Abrir próximo pacote</button>
         </form>
         {% elif user.packs_comprados_raro > 0 and tipo_pack == "raro" %}
-        <form method="POST" action="{{ url_for('main.abrir_pack_raro_route') }}" style="display:inline;">
+        <form method="POST" action="{{ url_for('main.abrir_pack_route') }}" style="display:inline;">
+            <input type="hidden" name="tipo" value="raro">
             <button class="button">Abrir próximo pacote</button>
         </form>
         {% endif %}

@@ -1,28 +1,23 @@
-from utils.json_utils import read_json, write_json
-from services.user_service import carregar_usuarios, salvar_usuarios
-from flask import session
+from utils.json_utils import get_characters, get_sets
+from sql.controller.progress_controller import ProgressController
+from sql.repositories.progress_repository import ProgressRepository
 
-def verificar_sets():
+
+def verificar_sets(conn, user_id):
     """Verifica se um conjunto de cartas foi completado.
     
     Keyword arguments:
+    - conn: Conexão com o banco de dados.
+    - user_id: Identificação do usuário.
     Return: Retorna o nome dos sets completados, e a quantidade de pontos obtidas
     """
-    
-    progress_list = read_json("./data/progress.json")
-    usuarios = carregar_usuarios()
-    sets = read_json("./data/sets.json")
 
-    user_id = session["usuario_id"]
+    repo = ProgressRepository(conn)
+    ctll = ProgressController(repo)
 
-    user_progress = next((p for p in progress_list if p["user_id"] == user_id), None)
-    user = next((u for u in usuarios if u["id"] == user_id), None)
-
-    if user_progress is None or user is None:
-        return
-    
-    personagens_usuario = user_progress["personagens"]
-    sets_completos = user_progress["sets_completos"]
+    sets = get_sets()
+    personagens_usuario = ctll.get_all_cards_id(user_id)
+    sets_completos = ctll.get_all_sets(user_id)
     
     sets_nomes = []
     pontos_sets = 0
@@ -47,29 +42,24 @@ def verificar_sets():
             recompensa = s.get("recompensa", {})
             pontos_sets += recompensa.get("pontos", 0)
         
-    
-    user["pontos"] += pontos_sets
-    
-    write_json("./data/progress.json", progress_list)
-    salvar_usuarios(usuarios)
 
+    
     return sets_nomes, pontos_sets
 
-def formatar_inventario():
-    usuarios = carregar_usuarios()
-
-    characters = read_json("./data/characters.json")
-    progress_list = read_json("./data/progress.json")
-
-    user_id = session["usuario_id"]
-
-    user_progress = next((p for p in progress_list if p["user_id"] == user_id), None)
-    user = next((u for u in usuarios if u["id"] == user_id), None)
-
-    if user_progress is None or user is None:
-        return
+def formatar_inventario(conn, user_id):
+    """Formata as cartas do usuário em um dicionário.
     
-    personagens_usuario = user_progress["personagens"] if user_progress else {}
+    Keyword arguments:
+    - conn: Conexão com o banco de dados.
+    - user_id: Identificação do usuário.
+    Return: Retorna um dicionário com as cartas.
+    """
+    repo = ProgressRepository(conn)
+    ctll = ProgressController(repo)
+
+    characters = get_characters()
+
+    personagens_usuario = ctll.get_all_cards_id(user_id)
 
     cartas_view = []
 
@@ -103,22 +93,22 @@ def formatar_inventario():
     return cartas_view
 
 
-def listar_sets_usuario():
-    sets = read_json("./data/sets.json")
-    progress_list = read_json("./data/progress.json")
-    characters = read_json("./data/characters.json")
+def listar_sets_usuario(conn, user_id):
+    """Formata os sets e as cartas do usuário em um dicionário.
+    
+    Keyword arguments:
+    - conn: Conexão com o banco de dados.
+    - user_id: Identificação do usuário.
+    Return: Retorna um dicionário com os sets, cada set tem um dicionário de cartas.
+    """
 
-    user_id = session["usuario_id"]
+    repo = ProgressRepository(conn)
+    ctll = ProgressController(repo)
 
-    user_progress = next(
-        (p for p in progress_list if p["user_id"] == user_id),
-        None
-    )
+    sets = get_sets()
+    characters = get_characters()
 
-    if user_progress is None:
-        return []
-
-    personagens_usuario = user_progress["personagens"]
+    personagens_usuario = ctll.get_all_cards_id(user_id)
 
     resultado = []
     

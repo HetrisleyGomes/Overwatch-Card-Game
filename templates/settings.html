@@ -19,7 +19,7 @@
             <div class="profile-img-container">
                 <img id="profile-preview"
                     src="{{ url_for('static', filename='logos/' + user.profile_img) }}"
-                    alt="Foto de perfil">
+                    alt="Foto de perfil" loading="lazy">
             </div>
 
             <!-- 📂 Seleção de imagem -->
@@ -33,7 +33,7 @@
                         {% if img.possui %}
                         <div class="img-container">
                             <img src="{{ url_for('static', filename='logos/' + img.img) }}"
-                            class="option-img"
+                            class="option-img" loading="lazy"
                             onclick="selecionarImagem('{{ img.img }}')">
                         </div>
                         {% endif %}

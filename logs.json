@@ -45,8 +45,13 @@
         "description": "FEAT: Adicionado dois novos ícones de jogador. ALT: Mudança na quantidade de experiência necessária para subir de nível; Alterada a quantidade de pontos comprados com Impetos."
     },
     {
-        "version": "0.1.0",
+        "version": "0.0.10",
         "date": "25-04-2026",
         "description": "FEAT: Adicionado Reinhardt Minotauro e Roadhog Ciclope. ALT: Lúcio Hermes foi alterado de Lendário para Épico; Alterado a estrutura de promoções; Agora promoções são agendadas."
+    },
+    {
+        "version": "0.1.0",
+        "date": "30-04-2026",
+        "description": "FEAT: Adicionado banco de dados externo para melhor persistência dos dados de usuários. ALTER: Todo o projeto foi alterado para se adequar ao novo sistema; Ícones de usuário tem um novo identificador."
     }
 ]

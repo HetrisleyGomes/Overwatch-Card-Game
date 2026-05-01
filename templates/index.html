@@ -5,7 +5,7 @@
 <!-- TOPO -->
 <div class="header">
     <div class="header-item" id="username">
-        <div><img src="{{ url_for('static', filename='logos/' + user.profile_img ) }}"></div>
+        <div><img src="{{ url_for('static', filename='logos/' + user.profile_img ) }}" loading="lazy"></div>
         <div>Usuário: <span>{{ user.nome }}</span></div>
     </div>
     <div class="header-item">

@@ -40,16 +40,16 @@
                 <!-- Imagem -->
                 {% if carta.possui %}
                     <div class="card-img">
-                        <img src="{{ url_for('static', filename='images/' + carta.img ) }}">
+                        <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
                         {% if carta.icon_ref %}
                             <div class="icon_ref">
-                                <img src="{{ url_for('static', filename='icon/' + carta.icon_ref ) }}">
+                                <img src="{{ url_for('static', filename='icon/' + carta.icon_ref ) }}" loading="lazy">
                             </div>
                         {% endif %}
                     </div>
                 {% else %}
                     <div class="card-img">
-                        <img src="{{ url_for('static', filename='logos/logo.png' ) }}">
+                        <img src="{{ url_for('static', filename='logos/logo.png' ) }}" loading="lazy">
                     </div>
                 {% endif %}
 

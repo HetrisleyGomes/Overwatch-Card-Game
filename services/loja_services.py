@@ -1,7 +1,10 @@
-from utils.json_utils import read_json, write_json
+from utils.json_utils import write_json, get_promocao, get_characters
 from datetime import datetime
+from sql.controller.progress_controller import ProgressController
+from sql.repositories.progress_repository import ProgressRepository
+
 def get_promocoes():
-    proms = read_json("./data/promocao.json")
+    proms = get_promocao()
     hoje = datetime.now().date()
     hoje_md = (hoje.month, hoje.day)
     
@@ -18,13 +21,17 @@ def get_promocoes():
         return prom
     return False
 
-def set_promocoes(prom_data):
-    write_json("./data/promocao.json", prom_data)
+def get_user_prom_logs(conn, user_id):
+    repo = ProgressRepository(conn)
+    ctll = ProgressController(repo)
 
-def comprar_pack_prom(id, pack_id):
-    proms = read_json("./data/promocao.json")
+    return ctll.get_user_prom(user_id)
+
+
+def comprar_pack_prom(id, pack_id, conn):
+    proms = get_promocao()
     prom = next((p for p in proms if p["id"] == pack_id), None)
-    personagens = read_json("./data/characters.json")
+    personagens = get_characters()
     cartas = []
     points = 0
     for i in prom['itens']:
@@ -34,22 +41,12 @@ def comprar_pack_prom(id, pack_id):
             carta = next((p for p in personagens if p["id"] == i), None)
             cartas.append(carta)
 
-    all_progress = read_json("./data/progress.json")
-    progress = next((u for u in all_progress if u["user_id"] == id), None)
 
-    personagens_set = set(progress["personagens"])
+    repo = ProgressRepository(conn)
+    ctll = ProgressController(repo)
 
-    for c in cartas:
-        cid = c["id"]
-        if cid not in personagens_set:
-            personagens_set.add(cid)
-            progress["personagens"].append(cid)
-
-    write_json("./data/progress.json", all_progress)
-    prom["has_buy"].append(id)
-    set_promocoes(proms)
-
-    return prom['value'], points
+    ctll.buy_big_pack(id, pack_id)
+    return prom['value'], points, cartas
 
 def format_promotion(prom):
     hoje = datetime.now().date()
@@ -67,23 +64,8 @@ def format_promotion(prom):
         "buy_with_impeto": prom["buy_with_impeto"],
         "inicio": prom["inicio"],
         "fim": prom["fim"],
-        "has_buy": prom["has_buy"],
         "itens": prom["itens"],
         "was_points": prom["was_points"],
         "last_days": dias_restantes <= 3
     }
     return set
-# Exemplo de promoção:
-#  "nome": "Temporada 2: Apogeu",
-#  "description": "Pacote especial com: Sierra, Soldado Churrasqueiro: 76, e Cassidy Salva-vidas!",
-#  "value": 1000,
-#  "last_days": true,
-#  "buy_with_impeto": false,
-#  "has_buy": [
-#    1
-#  ],
-#  "itens": [
-#    "sierra_comum",
-#    "cassidy_salvavidas",
-#    "soldado_76_churrasqueiro"
-#  ]

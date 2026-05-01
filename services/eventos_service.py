@@ -1,9 +1,8 @@
-from utils.json_utils import read_json, write_json
-from services.user_service import delete_events_packs
+from utils.json_utils import read_json, write_json, get_events, get_characters
 from datetime import datetime
 
 def check_event_activation():
-    eventos = read_json("./data/events.json")
+    eventos = get_events()
     hoje = datetime.now()
     hoje_md = (hoje.month, hoje.day)
 
@@ -16,11 +15,12 @@ def check_event_activation():
         if inicio_md <= hoje_md <= fim_md:
             ativar_evento(e["id"])
         elif e["ativo"]:
-            delete_events_packs()
+            #TODO: Alterar delete events_pack
+            #delete_events_packs()
             desativar_evento(e["id"])
 
 def get_eventos_ativos():
-    eventos = read_json("./data/events.json")
+    eventos = get_events()
     hoje = datetime.now().date()
     hoje_md = (hoje.month, hoje.day)
 
@@ -41,8 +41,8 @@ def get_eventos_ativos():
     return ativos
 
 def ativar_evento(nome_evento):
-    personagens = read_json("./data/characters.json")
-    eventos = read_json("./data/events.json")
+    personagens = get_characters()
+    eventos = get_events()
 
     evento = next((e for e in eventos if e["id"] == nome_evento), None)
 
@@ -57,8 +57,8 @@ def ativar_evento(nome_evento):
     write_json("./data/characters.json", personagens)
 
 def desativar_evento(nome_evento):
-    personagens = read_json("./data/characters.json")
-    eventos = read_json("./data/events.json")
+    personagens = get_characters()
+    eventos = get_events()
 
     evento = next((e for e in eventos if e["id"] == nome_evento), None)
 

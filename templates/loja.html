@@ -22,13 +22,13 @@
                         {% set desativado = 
                             (user.pontos < prom.value and not prom.buy_with_impeto)
                             or (prom.buy_with_impeto and user.impetos < prom.value)
-                            or user['id'] in prom.has_buy
+                            or prom['id'] in prom_log
                         %}
                         <button class="button {% if desativado %}desativado{% endif %}"
                         {% if desativado %}disabled{% endif %}
                         onclick="comprarPromotionPack('promotion_pack', '{{ prom.id }}', {{ prom.buy_with_impeto | tojson }})">
-                            {% if not user['id'] in prom.has_buy %}
-                                {{ prom.value }} {% if prom.buy_with_impeto %}Impetos{% else %}Pontos{% endif %}
+                            {% if not prom['id'] in prom_log %}
+                                {{ prom.value }} {% if prom.buy_with_impeto %}Impeto{% else %}Ponto{% endif %}{% if prom.value > 1 %}s{% endif %}
                             {% else %}
                                 Obtido
                             {% endif %}
@@ -140,7 +140,7 @@
             <div class="item item-img">
                 <div class="item_name">Ícone {{img.nome}}</div>
                 <div class="item_img">
-                    <img src="{{ url_for('static', filename='logos/' + img.img) }}" class="img">
+                    <img src="{{ url_for('static', filename='logos/' + img.img) }}" class="img" loading="lazy">
                 </div>
                 <div class="item_description">
                     {{ img.descricao }}
