@@ -481,3 +481,7 @@ def registrar():
         return redirect(url_for("main.home"))
 
     return render_template("registro.html")
+
+@main.route("/ping")
+def ping():
+    return "ok", 200
