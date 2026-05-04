@@ -14,6 +14,7 @@ from sql.repositories.user_repository import UserRepository
 from server import socketio, app
 from config import db_connection_handler
 
+from datetime import datetime
 from flask_socketio import join_room, emit
 from werkzeug.security import check_password_hash, generate_password_hash
 
@@ -445,18 +446,17 @@ def registrar():
         repo = UserRepository(connection)
         ctll = UserController(repo)
 
-        usuarios = ctll.get_users()
-
         # ❌ validar senha
         if senha != confirmar:
-            return render_template("registrar.html", erro="As senhas não coincidem")
+            return render_template("registro.html", erro="As senhas não coincidem")
 
         if len(senha) < 4:
-            return render_template("registrar.html", erro="Senha muito curta")
-
+            return render_template("registro.html", erro="Senha muito curta")
+        print(email)
+        print(ctll.check_email(email))
         # ❌ email já existe
-        if any(u["email"] == email for u in usuarios):
-            return render_template("registrar.html", erro="Email já cadastrado")
+        if ctll.check_email(email):
+            return render_template("registro.html", erro="Email já cadastrado")
         # 🔐 hash da senha
         senha_hash = generate_password_hash(senha)
 
@@ -467,10 +467,11 @@ def registrar():
         user = {
             "nome": nome,
             "email": email,
-            "senha": senha,
-            "ultimo_login": False,
+            "senha": senha_hash,
+            "ultimo_login": datetime.now().strftime("%Y-%m-%d"),
             "packs_evento": has_event
         }
+        
         usuario_id = ctll.create_user(user)
         get_new_img(connection, usuario_id, "f1")
         get_new_img(connection, usuario_id, "f2")
@@ -479,4 +480,4 @@ def registrar():
 
         return redirect(url_for("main.home"))
 
-    return render_template("registrar.html")
+    return render_template("registro.html")

@@ -52,6 +52,6 @@
     {
         "version": "0.1.0",
         "date": "30-04-2026",
-        "description": "FEAT: Adicionado banco de dados externo para melhor persistência dos dados de usuários. ALTER: Todo o projeto foi alterado para se adequar ao novo sistema; Ícones de usuário tem um novo identificador. HOTFIX: Problemas com ícone de carts e responsividade."
+        "description": "FEAT: Adicionado banco de dados externo para melhor persistência dos dados de usuários. ALTER: Todo o projeto foi alterado para se adequar ao novo sistema; Ícones de usuário tem um novo identificador. HOTFIX: Problemas com ícone de cartas e responsividade; Problemas no metodo gerador de conta."
     }
 ]

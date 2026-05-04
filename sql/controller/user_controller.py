@@ -1,4 +1,4 @@
-from datetime import datetime
+
 
 class UserController:
     def __init__(self, repository):
@@ -6,9 +6,9 @@ class UserController:
 
     def create_user(self, user):
         try:
-            user['ultimo_login'] = datetime.now().strftime("%Y-%m-%d")
             self.__repository.set_user(user)
-            return user['id']
+            id = self.__repository.get_id_by_email(user['email'])
+            return id
         except Exception as e:
             return str(e)
         
@@ -27,6 +27,13 @@ class UserController:
             return data
         except Exception as e:
             return str(e)
+        
+    def check_email(self, email):
+        try:
+            return self.__repository.check_email(email)
+        except Exception as e:
+            print(e)
+            return False
 
     def edit_user(self, id, user):
         try:

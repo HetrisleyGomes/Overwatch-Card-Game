@@ -10,8 +10,8 @@ class UserRepository:
         cursor.execute(
             """
                INSERT INTO "user"
-                   (id, nome, email, senha, pontos, impetos, xp, nivel, ultimo_login, streak, profile_img, packs_diarios_abertos, contador_packs_comuns, packs_comprados_comum, packs_comprados_raro, has_already_get_daily_bonus, packs_evento)
-               VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                (nome, email, senha, pontos, impetos, xp, nivel, ultimo_login, streak, profile_img, packs_diarios_abertos, contador_packs_comuns, packs_comprados_comum, packs_comprados_raro, has_already_get_daily_bonus, packs_evento)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
            """, (
                 user["nome"],
                 user["email"],
@@ -60,6 +60,35 @@ class UserRepository:
         cursor.close()
         columns = [col[0] for col in cursor.description]
         return data, columns
+    
+    
+    def check_email(self, email):
+        cursor = self.__conn.cursor()
+        cursor.execute(
+            """
+            SELECT EXISTS (
+                SELECT 1 FROM "user" WHERE "email" = %s
+            )
+            """,
+            (email,)
+        )
+        exists = cursor.fetchone()[0]
+        cursor.close()
+        return exists
+    
+    def get_id_by_email(self, user_email):
+        cursor = self.__conn.cursor()
+        cursor.execute(
+            """
+            SELECT "id"
+            FROM "user"
+            WHERE email = %s
+            """,
+            (user_email,),
+        )
+        data = cursor.fetchone()
+        cursor.close()
+        return data
 
     def find_login(self, email):
         cursor = self.__conn.cursor()
