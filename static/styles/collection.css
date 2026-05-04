@@ -186,3 +186,14 @@
 
 }
 
+@media (max-width: 480px) {
+    .icon_ref {
+        position: absolute;
+        right: 6px;
+        top: 6px; 
+    }
+    .icon_ref img{
+        width: 14px;
+        height: 14px;
+    }
+}
