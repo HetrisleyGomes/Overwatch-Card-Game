@@ -40,7 +40,7 @@
         "nome": "Coelhinha",
         "img": "dva_logo.png",
         "descricao": "Com amor, D.Va!",
-        "price": 500,
+        "price": 200,
         "unlock": {
             "type": "purchase"
         }
@@ -49,7 +49,7 @@
         "nome": "Hackeado",
         "img": "sombra_logo.png",
         "descricao": "Teje, hackeado.",
-        "price": 500,
+        "price": 200,
         "unlock": {
             "type": "purchase"
         }
@@ -59,7 +59,7 @@
         "nome": "Soldadinho",
         "img": "GLHF.png",
         "descricao": "Boa sorte e se divirta!",
-        "price": 500,
+        "price": 200,
         "unlock": {
             "type": "purchase"
         }
@@ -106,9 +106,20 @@
     },
     {
         "id": "l2-1",
-        "nome": "Grande amiga",
-        "img": "Orisa_icon.png",
-        "descricao": "Orisa, a grande amiga de Efi.",
+        "nome": "Retrato Tracer",
+        "img": "Tracer_Portrait.png",
+        "descricao": "Tracer, a esperança do futuro.",
+        "price": 200,
+        "unlock": {
+            "type": "nivel",
+            "value": 2
+        }
+    },
+    {
+        "id": "l2-2",
+        "nome": "Retrato Widowmaker",
+        "img": "Widowmaker_Portrait.png",
+        "descricao": "Widowmaker, a ruína do passado.",
         "price": 200,
         "unlock": {
             "type": "nivel",
@@ -138,11 +149,11 @@
         }
     },
     {
-        "id": "l4-1",
-        "nome": "Ganimedes perigoso",
-        "img": "Ganymede_icon.png",
-        "descricao": "Ganimedes anda muito preocupado esses dias.",
-        "price": 750,
+        "id": "l4-2",
+        "nome": "Patinhas",
+        "img": "Patinhas.png",
+        "descricao": "Olha o bichinho.",
+        "price": 200,
         "unlock": {
             "type": "nivel",
             "value": 4
@@ -153,7 +164,7 @@
         "nome": "Questwatch",
         "img": "Questwatch_logo.png",
         "descricao": "Embarque em missões divertidas com Questwatch.",
-        "price": 500,
+        "price": 200,
         "unlock": {
             "type": "nivel",
             "value": 5
@@ -194,10 +205,10 @@
     },
     {
         "id": "l6-2",
-        "nome": "Mitzi",
-        "img": "Mitzi.png",
-        "descricao": "Irmã mais velha de Jetpack Cat.",
-        "price": 500,
+        "nome": "Anamari",
+        "img": "Ana_mari.png",
+        "descricao": "Um pachimari brilhante.",
+        "price": 750,
         "unlock": {
             "type": "nivel",
             "value": 6
@@ -208,10 +219,43 @@
         "nome": "Ladina",
         "img": "Ladina.png",
         "descricao": "Uma Ladina astuta se esconde por aqui.",
-        "price": 750,
+        "price": 500,
         "unlock": {
             "type": "nivel",
             "value": 7
+        }
+    },
+    {
+        "id": "l7-2",
+        "nome": "Mitzi",
+        "img": "Mitzi.png",
+        "descricao": "Irmã mais velha de Jetpack Cat.",
+        "price": 200,
+        "unlock": {
+            "type": "nivel",
+            "value": 7
+        }
+    },
+    {
+        "id": "l8-1",
+        "nome": "Ganimedes perigoso",
+        "img": "Ganymede_icon.png",
+        "descricao": "Ganimedes anda muito preocupado esses dias.",
+        "price": 750,
+        "unlock": {
+            "type": "nivel",
+            "value": 8
+        }
+    },
+    {
+        "id": "l8-2",
+        "nome": "Fika",
+        "img": "Fika.png",
+        "descricao": "A gata à jato.",
+        "price": 750,
+        "unlock": {
+            "type": "nivel",
+            "value": 8
         }
     }
 ]

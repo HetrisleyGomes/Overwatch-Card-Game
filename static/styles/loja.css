@@ -87,7 +87,7 @@
 .item.promotion_pack .item_name {
     font-size: 24px;
     height: 24px;
-    padding: 12px 12px 36px;
+    padding: 12px;
 }
 
 /* RESPONSIVIDADE ========================== */
@@ -162,6 +162,6 @@
     .item.promotion_pack .item_name {
         font-size: 20px;
         height: 20px;
-        padding: 12px;
+        padding: 12px 12px 36px;
     }
 }
