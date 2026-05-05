@@ -38,7 +38,7 @@ def verificar_sets(conn, user_id):
         if completo:
             sets_nomes.append(s["nome"])
             sets_completos.append(set_id)
-
+            ctll.set_set(user_id, set_id)
             recompensa = s.get("recompensa", {})
             pontos_sets += recompensa.get("pontos", 0)
         
