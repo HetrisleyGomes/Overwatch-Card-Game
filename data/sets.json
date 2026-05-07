@@ -328,6 +328,7 @@
       "mercy_diabrete",
       "mercy_conjuradora",
       "mercy_sigrun",
+      "mercy_vitoria_alada",
       "mercy_dourado",
       "vengeance",
       "guardia_celestial",
@@ -593,6 +594,7 @@
       "widowmaker_cacadora",
       "widowmaker_coracao",
       "capita_lacroix",
+      "widowmaker_medusa",
       "widowmaker_dourado",
       "feiticeira",
       "dame_chance"
@@ -1030,7 +1032,7 @@
     "nome": "Deuses do Panteão",
     "personagens": [
       "lucio_hermes",
-      "extra",
+      "mercy_vitoria_alada",
       "pharah_hades",
       "ramattra_poseidon",
       "zeus"
@@ -1045,7 +1047,7 @@
     "personagens": [
       "reinhardt_minotauro",
       "roadhog_ciclope",
-      "extra"
+      "widowmaker_medusa"
     ],
     "recompensa": {
       "pontos": 300

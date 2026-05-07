@@ -388,7 +388,8 @@
     "ult_nome": "Chamar mecha",
     "ult": "Todos os sistemas ligados!",
     "raridade": "comum",
-    "img": "DVa_Chibi_ow.png"
+    "img": "DVa_Chibi_ow.png",
+    "icon_ref": "alter.png"
   },
   {
     "id": "dva_dourado",
@@ -1176,6 +1177,18 @@
     "img": "Mercy_ow_sigrun.png"
   },
   {
+    "id": "mercy_vitoria_alada",
+    "base": "mercy",
+    "nome": "Mercy Vitória Alada",
+    "classe": "Suporte",
+    "subclasse": "Campeão",
+    "entrada": "Não se preocupem, estarei atrás de vocês.",
+    "ult_nome": "Valkíria",
+    "ult": "Avante para a vitória!",
+    "raridade": "epico",
+    "img": "Mercy_ow_vitoria_alada.png"
+  },
+  {
     "id": "mercy_dourado",
     "base": "mercy",
     "nome": "Mercy Dourada",
@@ -1464,7 +1477,8 @@
     "ult_nome": "Aniquilação",
     "ult": "Sofra, como eu sofri!",
     "raridade": "comum",
-    "img": "Ramattra_ow_nemesis.png"
+    "img": "Ramattra_ow_nemesis.png",
+    "icon_ref": "alter.png"
   },
   {
     "id": "ramattra_poseidon",
@@ -2151,6 +2165,18 @@
     "ult": "O mal não se esconde da minha mira!",
     "raridade": "lendario",
     "img": "Widowmaker_ow_mirror.png"
+  },
+  {
+    "id": "widowmaker_medusa",
+    "base": "widowmaker",
+    "nome": "Medusa",
+    "classe": "Dano",
+    "subclasse": "Artilharia",
+    "entrada": "Minha mira pode paralizar.",
+    "ult_nome": "Visão infravermelha",
+    "ult": "Ninguém sobrevive à minha visão!",
+    "raridade": "lendario",
+    "img": "Widowmaker_ow_medusa.png"
   },
   {
     "id": "widowmaker_dourado",
