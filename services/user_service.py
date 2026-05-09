@@ -1,4 +1,6 @@
 from datetime import datetime, timedelta
+from sql.controller.progress_controller import ProgressController
+from sql.repositories.progress_repository import ProgressRepository
 
 # Atualizar data ===========================================
 def verify_date(user, evento = False):
@@ -92,3 +94,10 @@ def level_up_pack(user, nivel):
     else:
         user["packs_comprados_comum"] += 1
         user["packs_comprados_raro"] += 1
+
+def get_battle_cards(conn, user_id):
+    repo = ProgressRepository(conn)
+    ctll = ProgressController(repo)
+
+    cartas = ctll.get_deck(user_id)
+    return cartas

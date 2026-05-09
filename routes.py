@@ -1,8 +1,8 @@
 from flask import blueprints, render_template, request, session, redirect, url_for, g
-from services.user_service import verify_date, sum_xp
+from services.user_service import verify_date, sum_xp, get_battle_cards
 from services.progress_service import registry_cards, save_deck_progress, get_deck
 from services.pack_sevice import abrir_pack, abrir_pack_evento
-from services.collection_service import verificar_sets, formatar_inventario, listar_sets_usuario
+from services.collection_service import verificar_sets, formatar_inventario, listar_sets_usuario, format_carta
 from services.eventos_service import check_event_activation, get_eventos_ativos, get_last_log
 from services.loja_services import get_promocoes, comprar_pack_prom, get_user_prom_logs
 from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img
@@ -19,11 +19,19 @@ from flask_socketio import join_room, emit
 from werkzeug.security import check_password_hash, generate_password_hash
 
 import psycopg2
+import random
 
 main = blueprints.Blueprint('main', __name__, static_folder='static', template_folder='templates')
 
-salas = {}  
-
+salas = {
+    "123": {
+        "players": [
+            {"id": 1, "ready": True},
+            {"id": 2, "ready": True}
+        ],
+        "status": "full"
+    }
+}
 
 # Função para conectar ao banco de dados
 def get_db_connection():
@@ -337,39 +345,134 @@ def buscar_partida():
     # procurar sala disponível
     for room_id, room in salas.items():
         if len(room["players"]) == 1:
-            room["players"].append(user_id)
+            room["players"].append({"id": user_id, "ready": False})
             room["status"] = "full"
-            return redirect(url_for("main.battle", room_id=room_id))
+            return redirect(url_for("main.aguardando", room_id=room_id))
 
     # nenhuma sala → criar nova
     room_id = str(uuid.uuid4())
 
     salas[room_id] = {
-        "players": [user_id],
+        "players": [
+            {"id": user_id, "ready": False}
+        ],
         "status": "waiting"
     }
-
     return redirect(url_for("main.aguardando", room_id=room_id))
 
 @main.route("/aguardando/<room_id>")
 def aguardando(room_id):
-    return render_template("waiting.html", room_id=room_id)
+    connection = get_db_connection()
+    if connection is None:
+        return "Erro ao conectar ao banco de dados.", 500
+
+    repo = UserRepository(connection)
+    ctll = UserController(repo)
+
+    user = ctll.get_user(session["usuario_id"])
+    return render_template("waiting.html", room_id=room_id, user=user)
 
 @main.route("/battle/<room_id>")
 def battle(room_id):
-    return render_template("battle.html", room_id=room_id)
+    connection = get_db_connection()
+    if connection is None:
+        return "Erro ao conectar ao banco de dados.", 500
 
-@socketio.on("join")
-def on_join(data):
-    room_id = data["room"]
-    user_id = session["usuario_id"]
+    repo = UserRepository(connection)
+    ctll = UserController(repo)
+
+    game_state = {
+        "room_id": room_id,
+        "round": 1,
+        "phase": "pre_game",
+        'host': salas[room_id]['players'][0]['id']
+    }
+
+    jogadores = []
+
+    for user in salas[room_id]['players']:
+        id = user['id']
+        user = ctll.get_user_battle(id)
+        modelo = {
+        'id': id,
+        'nome': user['nome'],
+        'icone': user['profile_img'],
+        'hp': 20,
+        'hand': [],
+        'deck': [],
+        'discarted': []
+        }
+
+        cartas = get_battle_cards(connection, id)
+        for carta_id in cartas:
+            carta = format_carta(carta_id)
+            molde = {
+            'carta_id': carta['carta_id'],
+            'carta_nome': carta['carta_nome'],
+            'carta_img': carta['carta_img'],
+            'raridade': carta['raridade'],
+            'classe': carta['classe'],
+            'subclasse': carta['subclasse'],
+            'icon_ref': carta['icon_ref'],
+            }
+            modelo["deck"].append(molde)
+        jogadores.append(modelo)
+
+    salas[room_id]['game_state'] = game_state.copy()
+    salas[room_id]['jogadores'] = jogadores.copy()
+    return render_template("battle.html", room_id=room_id, game_state=game_state, jogadores=jogadores)
+
+@socketio.on("join_room")
+def handle_join(data):
+    room_id = data["room_id"]
+    user_id = data["user_id"]
 
     join_room(room_id)
 
     room = salas.get(room_id)
 
-    if room and len(room["players"]) == 2:
-        emit("start_game", {"room": room_id}, room=room_id)
+    emit("room_update", room, to=room_id)
+
+@socketio.on("player_ready")
+def handle_ready(data):
+    room_id = data["room_id"]
+    user_id = data["user_id"]
+    room = salas.get(room_id)
+    for p in room["players"]:
+        if int(p["id"]) == int(user_id):
+            print('veio')
+            p["ready"] = True
+    emit("room_update", room, to=room_id)
+
+    # se todos prontos → iniciar
+    if len(room["players"]) == 2 and all(p["ready"] for p in room["players"]):
+        emit("start_game", {"room_id": room_id}, to=room_id)
+
+
+@socketio.on("fist_draw")
+def fist_draw(data):
+    room_id = data["room_id"]
+    room = salas[room_id]
+
+    jogadores = room["jogadores"]
+    game_state = room["game_state"]
+
+    for jogador in jogadores:
+        random.shuffle(jogador["deck"])
+
+        if "hand" not in jogador:
+            jogador["hand"] = []
+        
+        for i in range(5):
+            if jogador["deck"]:
+                carta = jogador["deck"].pop()
+                jogador["hand"].append(carta)
+    game_state["phase"] = "fist_choose"
+
+    emit("game_state", {
+        "game_state": game_state,
+        "jogadores": jogadores
+    }, to=room_id)
 
 # LOGOFF =========================================
 @main.route("/sair")
@@ -452,8 +555,7 @@ def registrar():
 
         if len(senha) < 4:
             return render_template("registro.html", erro="Senha muito curta")
-        print(email)
-        print(ctll.check_email(email))
+
         # ❌ email já existe
         if ctll.check_email(email):
             return render_template("registro.html", erro="Email já cadastrado")

@@ -61,6 +61,20 @@ class UserRepository:
         columns = [col[0] for col in cursor.description]
         return data, columns
     
+    def get_user_battle(self, user_id):
+        cursor = self.__conn.cursor()
+        cursor.execute(
+            """
+            SELECT "nome", "profile_img"
+            FROM "user"
+            WHERE id = %s
+            """,
+            (user_id,),
+        )
+        data = cursor.fetchone()
+        cursor.close()
+        columns = [col[0] for col in cursor.description]
+        return data, columns
     
     def check_email(self, email):
         cursor = self.__conn.cursor()

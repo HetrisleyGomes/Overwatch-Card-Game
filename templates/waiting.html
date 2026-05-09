@@ -1,0 +1,113 @@
+{% extends 'index.html' %}
+{% block centro %}
+<style>
+.lobby {
+    text-align: center;
+    color: white;
+}
+
+.players {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.player {
+    background: #3b4f63;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.vs {
+    font-size: 24px;
+    font-weight: bold;
+}
+h2, .vs {
+    color: #3b4f63;
+}
+.status {
+    margin-top: 10px;
+}
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 10px 0;
+}
+</style>
+<div class="lobby main">
+    <h2>SALA DE COMBATE</h2>
+
+    <div class="players">
+        <div class="player" id="p1">
+            <div class="name">Jogador 1</div>
+            <div class="status">⏳ Aguardando</div>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="player" id="p2">
+            <div class="name">Aguardando...</div>
+            <div class="status">⏳</div>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button id="readyBtn" class="button">Estou pronto</button>
+        <a href="/"><button class="button">Sair</button></a>
+    </div>
+</div>
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+
+<script>
+const socket = io();
+
+const roomId = "{{ room_id }}";
+const userId = "{{ session['usuario_id'] }}";
+
+socket.emit("join_room", {
+    room_id: roomId,
+    user_id: userId
+});
+
+// atualizar UI
+socket.on("room_update", (room) => {
+    const players = room.players;
+
+    const p1 = players[0];
+    const p2 = players[1];
+
+    // player 1
+    document.querySelector("#p1 .name").innerText =
+        p1.id == userId ? "Você" : "Jogador 1";
+
+    document.querySelector("#p1 .status").innerText =
+        p1.ready ? "✔ Pronto" : "⏳ Aguardando";
+
+    // player 2
+    if (p2) {
+        document.querySelector("#p2 .name").innerText =
+            p2.id == userId ? "Você" : "Jogador 2";
+
+        document.querySelector("#p2 .status").innerText =
+            p2.ready ? "✔ Pronto" : "⏳ Aguardando";
+    }
+});
+
+// botão ready
+document.getElementById("readyBtn").onclick = () => {
+    socket.emit("player_ready", {
+        room_id: roomId,
+        user_id: userId
+    });
+};
+
+// iniciar jogo
+socket.on("start_game", (data) => {
+    window.location.href = `/battle/${data.room_id}`;
+});
+</script>
+{% endblock %}
