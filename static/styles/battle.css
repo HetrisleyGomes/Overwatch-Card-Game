@@ -68,12 +68,13 @@ body {
 
 /* SLOT CARTA */
 .card-slot {
-    width: 140px;
-    height: 200px;
+    width: 180px;
+    height: 250px;
     background-color: #1f2a38;
     border: 2px dashed #555;
     border-radius: 10px;
-
+    
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,6 +171,11 @@ body {
 .hand {
     display: flex;
     gap: 10px;
+}
+
+.card.selected {
+    box-shadow: 0 0 20px 5px #dcffffb3;
+    transform: translateY(-10px);
 }
 
 /* CARTA NA MÃO */
@@ -292,11 +298,12 @@ body {
         gap: 10px;
 
         overflow-x: auto;
-        overflow-y: hidden;
+        overflow-y: visible;
 
         width: 100%;
 
-        padding-bottom: 10px;
+        padding-top: 15px;
+        padding-bottom: 25px;
 
         /* suaviza no mobile */
         -webkit-overflow-scrolling: touch;

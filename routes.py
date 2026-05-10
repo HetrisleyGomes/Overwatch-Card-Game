@@ -406,20 +406,12 @@ def battle(room_id):
         cartas = get_battle_cards(connection, id)
         for carta_id in cartas:
             carta = format_carta(carta_id)
-            molde = {
-            'carta_id': carta['carta_id'],
-            'carta_nome': carta['carta_nome'],
-            'carta_img': carta['carta_img'],
-            'raridade': carta['raridade'],
-            'classe': carta['classe'],
-            'subclasse': carta['subclasse'],
-            'icon_ref': carta['icon_ref'],
-            }
-            modelo["deck"].append(molde)
+            modelo["deck"].append(carta)
         jogadores.append(modelo)
 
     salas[room_id]['game_state'] = game_state.copy()
     salas[room_id]['jogadores'] = jogadores.copy()
+    salas[room_id]["selected_cards"] = {}
     return render_template("battle.html", room_id=room_id, game_state=game_state, jogadores=jogadores)
 
 @socketio.on("join_room")
@@ -473,6 +465,34 @@ def fist_draw(data):
         "game_state": game_state,
         "jogadores": jogadores
     }, to=room_id)
+
+@socketio.on("select_card")
+def select_card(data):
+
+    room_id = data["room_id"]
+    card_id = data["card_id"]
+
+    user_id = session["usuario_id"]
+
+    room = salas[room_id]
+
+    # cria dict se não existir
+    if "selected_cards" not in room:
+        room["selected_cards"] = {}
+
+    room["selected_cards"][user_id] = format_carta(card_id)
+
+    print(room["selected_cards"])
+
+    # verifica se os 2 escolheram
+    if len(room["selected_cards"]) == 2:
+        print(room["game_state"])
+        room["game_state"]["phase"] = "battle"
+
+        emit("start_battle", {
+            "game_state_phase": room["game_state"]["phase"],
+            "selected_cards": room["selected_cards"]
+        }, to=room_id)
 
 # LOGOFF =========================================
 @main.route("/sair")

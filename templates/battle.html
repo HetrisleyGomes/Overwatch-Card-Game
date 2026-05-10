@@ -7,7 +7,7 @@
     <!-- 🔝 TOPO (players + vida + timer) -->
     <div class="top-bar">
         <div class="player player-left">
-            <img src="{{ url_for('static', filename='logos/' + jogadores[0].icone ) }}" class="avatar">
+            <img src="" class="avatar" id="avatar-1">
             <div class="hp-bar">
                 <div class="hp-fill" id="hp-p1"></div>
             </div>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="player player-right">
-            <img src="{{ url_for('static', filename='logos/' + jogadores[1].icone ) }}" class="avatar">
+            <img src="" class="avatar" id="avatar-2">
             <div class="hp-bar">
                 <div class="hp-fill" id="hp-p2"></div>
             </div>
@@ -84,84 +84,34 @@ const PHASES = {
     RESULT: "result",
     END: "end"
 };
-/*
-function drawCard(player) {
 
-    if (player.deck.length === 0) return;
+const avatar1 = document.getElementById('avatar-1');
+const avatar2 = document.getElementById('avatar-2');
 
-    const card = player.deck.shift();
+const hp1 = document.getElementById('hp-p1');
+const hp2 = document.getElementById('hp-p2');
 
-    player.hand.push(card);
+function configUserView() {
+    avatar1.src = STATIC_URL + "logos/" + jogador_1.icone;
+    avatar2.src = STATIC_URL + "logos/" + jogador_2.icone;
 
-    renderHand();
+    hp1.style.width = `${(jogador_1.hp / 20) * 100}%`;
+    hp2.style.width = `${(jogador_2.hp / 20) * 100}%`;
 }
 
-function startPreGame() {
-
-    gameState.player.deck = shuffle([...playerDeck]);
-    gameState.enemy.deck = shuffle([...enemyDeck]);
-
-    for (let i = 0; i < 4; i++) {
-        drawCard(gameState.player);
-        drawCard(gameState.enemy);
-    }
-
-    startDrawPhase();
-}
-
-function startDrawPhase() {
-
-    gameState.phase = PHASES.DRAW;
-
-    drawCard(gameState.player);
-    drawCard(gameState.enemy);
-
-    startChoosePhase();
-}
-
-function startChoosePhase() {
-
-    gameState.phase = PHASES.CHOOSE;
-
-    enableCardSelection();
-}
-
-function selectCard(cardId) {
-
-    if (gameState.phase !== PHASES.CHOOSE) return;
-
-    const card = gameState.player.hand.find(c => c.id == cardId);
-
-    gameState.player.selectedCard = card;
-
-    sendSelectedCard(card);
-}
-*/
 async function gameFlow() {
     if (game_state.phase == "pre_game" && game_state.host == userId) {
         await shuffle_animation();
         socket.emit("fist_draw", {
             room_id: game_state.room_id
         });
-    } else if (game_state['phase'] == "choose") {
+    } else if (game_state['phase'] == "choose" || game_state['phase'] == "fist_choose") {
         enableCardSelection();
     }
 }
 
-socket.on("game_state", async (data) => {
-    game_state = data.game_state;
-
-    jogador_1 = data.jogadores.find(j => j.id == userId);
-    jogador_2 = data.jogadores.find(j => j.id != userId);
-
-    if (game_state.phase == "fist_choose") {
-        await draw_five_cards_animation(jogador_1);
-    }
-
-    gameFlow();
-});
-
 function createCardElement(cardData) {
+    console.log(cardData)
     const card = document.createElement("div");
 
     // classes da carta
@@ -170,6 +120,7 @@ function createCardElement(cardData) {
         cardData.classe.toLowerCase(),
         cardData.raridade?.toLowerCase() || "comum"
     );
+    card.dataset.id = cardData.carta_id;
 
     card.innerHTML = `
         <div class="card-nome">
@@ -185,9 +136,53 @@ function createCardElement(cardData) {
             <span>${cardData.subclasse}</span>
         </div>
     `;
-
     return card;
 }
+
+function enableCardSelection() {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.onclick = () => {
+            // evita múltiplos cliques
+            if (game_state.phase !== "choose" && game_state.phase !== "fist_choose") return;
+            const cardId = card.dataset.id;
+
+            // destaque visual
+            document.querySelectorAll(".card").forEach(c => {
+                c.classList.remove("selected");
+            });
+
+            card.classList.add("selected");
+
+            // enviar ao backend
+            socket.emit("select_card", {
+                room_id: game_state.room_id,
+                card_id: cardId
+            });
+
+        };
+
+    });
+
+}
+// SOCKETS =================================================
+socket.on("game_state", async (data) => {
+    game_state = data.game_state;
+
+    jogador_1 = data.jogadores.find(j => j.id == userId);
+    jogador_2 = data.jogadores.find(j => j.id != userId);
+
+    if (game_state.phase == "fist_choose") {
+        await draw_five_cards_animation(jogador_1);
+    }
+
+    gameFlow();
+});
+
+socket.on("start_battle", (data) => {
+    game_state.phase = data.game_state_phase
+    startBattleAnimation(data.selected_cards);
+});
 
 // ANIMAÇÕES ==============================================
 function shuffle_animation() {
@@ -273,11 +268,114 @@ async function draw_five_cards_animation(player) {
         await new Promise(resolve => setTimeout(resolve, 150));
     }
 }
+
+function animateCardToTarget(cardElement, targetElement) {
+    return new Promise((resolve) => {
+        const rectStart = cardElement.getBoundingClientRect();
+        const rectTarget = targetElement.getBoundingClientRect();
+
+        // clona a carta
+        const animatedCard = cardElement.cloneNode(true);
+
+        animatedCard.classList.add("draw-card");
+        animatedCard.style.position = "fixed";
+        animatedCard.style.left = `${rectStart.left}px`;
+        animatedCard.style.top = `${rectStart.top}px`;
+        animatedCard.style.width = `${rectStart.width}px`;
+        animatedCard.style.height = `${rectStart.height}px`;
+        animatedCard.style.zIndex = "9999";
+
+        document.body.appendChild(animatedCard);
+
+        // esconde original
+        cardElement.style.visibility = "hidden";
+
+        requestAnimationFrame(() => {
+            animatedCard.style.transition = `
+                left 0.5s ease,
+                top 0.5s ease,
+                transform 0.5s ease
+            `;
+
+            animatedCard.style.left = `${rectTarget.left}px`;
+            animatedCard.style.top = `${rectTarget.top}px`;
+            animatedCard.style.transform = "scale(1.05)";
+        });
+
+        setTimeout(() => {
+            animatedCard.remove();
+            resolve();
+        }, 500);
+    });
+}
+
+async function startBattleAnimation(battleData) {
+    const player1Card = battleData[jogador_1.id];
+    const player2Card = battleData[jogador_2.id];
+
+    const slotP1 = document.getElementById("slot-p1");
+    const slotP2 = document.getElementById("slot-p2");
+
+    // =========================
+    // CARTA DO JOGADOR
+    // =========================
+    console.log(player1Card)
+    const playerCard = document.querySelector(
+        `.hand .card[data-id="${player1Card.carta_id}"]`
+    );
+    playerCard.classList.remove("selected");
+
+
+    // =========================
+    // CARTA DO OPONENTE
+    // =========================
+    const enemyCard = createCardElement(player2Card);
+
+    // cria perto do avatar inimigo
+    const avatar2 = document.getElementById("avatar-2");
+    const avatarRect = avatar2.getBoundingClientRect();
+
+    enemyCard.classList.add("draw-card");
+    enemyCard.style.position = "fixed";
+    enemyCard.style.left = `${avatarRect.left}px`;
+    enemyCard.style.top = `${avatarRect.top}px`;
+    enemyCard.style.width = "180px";
+    enemyCard.style.height = "250px";
+    enemyCard.style.zIndex = "9999";
+
+    document.body.appendChild(enemyCard);
+
+    // =========================
+    // ANIMAÇÕES AO MESMO TEMPO
+    // =========================
+    await Promise.all([
+        animateCardToTarget(playerCard, slotP1),
+        animateCardToTarget(enemyCard, slotP2)
+    ]);
+
+    // =========================
+    // ADICIONA CARTAS NOS SLOTS
+    // =========================
+
+    slotP1.innerHTML = "";
+    slotP2.innerHTML = "";
+
+    // carta jogador
+    slotP1.appendChild(playerCard);
+    playerCard.style.visibility = "visible";
+
+    // carta inimiga
+    const enemyFinalCard = createCardElement(player2Card);
+    slotP2.appendChild(enemyFinalCard);
+}
+
+// JOGO ==================
 socket.emit("join_room", {
     room_id: game_state.room_id,
     user_id: jogador_1.id
 });
 
+configUserView();
 gameFlow();
 </script>
 {% endblock %}
