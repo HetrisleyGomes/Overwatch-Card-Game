@@ -259,8 +259,11 @@ def comprar_pack():
         get_new_img(connection, user["id"], id)
         msg = "Icone " + img["nome"] + ' adquirido!'
     elif tipo == 'promotion_pack':
-        preco, pontos, cartas = comprar_pack_prom(user['id'], pacote, connection)
+        preco, pontos, cartas, icons = comprar_pack_prom(user['id'], pacote, connection)
         user = registry_cards(connection, cartas, "none", user)
+        if icons:
+            for id in icons:
+                get_new_img(connection, user["id"], id)
         if pontos > 0:
             user["pontos"] += pontos
         msg = "Pack promocional adquirido!"

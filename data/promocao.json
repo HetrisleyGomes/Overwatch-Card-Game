@@ -53,7 +53,7 @@
     "description": "Pacote especial com: Pharah Hades, Mercy vitória alada, e Widowmaker Medusa. +1000 Pontos!",
     "value": 3,
     "buy_with_impeto": true,
-    "inicio": "05-18",
+    "inicio": "05-16",
     "fim": "05-28",
     "itens": [
       "bastion_classic",
@@ -61,6 +61,22 @@
       "orisa_classic",
       "symmetra_classic",
       "torbjorn_classic"
+    ],
+    "was_points": 1000
+  },
+  {
+    "id": "dezanosoverwatch",
+    "nome": "Pacotaço de 10 anos Overwatch!",
+    "description": "Pacote especial com: Tracer especial de 10 anos e icone de jogador exclusivo!",
+    "value": 100,
+    "buy_with_impeto": false,
+    "inicio": "05-16",
+    "fim": "05-28",
+    "itens": [
+      "tracer_decanio"
+    ],
+    "icon": [
+      "logo_10_anos"
     ],
     "was_points": 1000
   }

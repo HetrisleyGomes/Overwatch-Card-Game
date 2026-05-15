@@ -105,6 +105,17 @@
         }
     },
     {
+        "id": "logo_10_anos",
+        "nome": "Decânio",
+        "img": "logo_10_anos.png",
+        "descricao": "10 anos de Overwatch.",
+        "price": 0,
+        "unlock": {
+            "type": "none",
+            "value": "none"
+        }
+    },
+    {
         "id": "l2-1",
         "nome": "Retrato Tracer",
         "img": "Tracer_Portrait.png",

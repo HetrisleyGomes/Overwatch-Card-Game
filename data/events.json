@@ -15,10 +15,10 @@
   },
   {
     "id": "aniversary",
-    "nome": "Aniversário!",
-    "inicio": "05-18",
-    "fim": "05-30",
-    "ativo": false
+    "nome": "Aniversário Overwatch!",
+    "inicio": "05-16",
+    "fim": "05-28",
+    "ativo": true
   },
   {
     "id": "april_fools",

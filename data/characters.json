@@ -226,7 +226,7 @@
     "img": "Bastion_ow.png",
     "foil": true,
     "evento": "aniversary",
-    "disponivel": false
+    "disponivel": true
   },
   {
     "id": "brigitte_comum",
@@ -506,7 +506,7 @@
     "img": "Doomfist_ow.png",
     "foil": true,
     "evento": "aniversary",
-    "disponivel": false
+    "disponivel": true
   },
   {
     "id": "echo_comum",
@@ -1365,7 +1365,7 @@
     "img": "Orisa_ow.png",
     "foil": true,
     "evento": "aniversary",
-    "disponivel": false
+    "disponivel": true
   },
   {
     "id": "pharah_comum",
@@ -1947,7 +1947,7 @@
     "img": "Symmetra_ow.png",
     "foil": true,
     "evento": "aniversary",
-    "disponivel": false
+    "disponivel": true
   },
   {
     "id": "symmetra_fool",
@@ -2014,7 +2014,7 @@
     "img": "Torbjorn_ow.png",
     "foil": true,
     "evento": "aniversary",
-    "disponivel": false
+    "disponivel": true
   },
   {
     "id": "tracer_comum",
@@ -2039,6 +2039,20 @@
     "ult": "Hahaha!",
     "raridade": "epico",
     "img": "Tracer_ow_mirror.png"
+  },
+  {
+    "id": "tracer_decanio",
+    "base": "tracer",
+    "nome": "Tracer Decânio",
+    "classe": "Dano",
+    "subclasse": "Flanco",
+    "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+    "ult_nome": "Bomba eletromagnética",
+    "ult": "Pega essa!",
+    "raridade": "lendario",
+    "img": "Tracer_ow_10_anos.png",
+    "evento": "espacial10anos",
+    "disponivel": false
   },
   {
     "id": "tracer_dourado",

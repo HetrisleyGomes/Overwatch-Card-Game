@@ -562,7 +562,9 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    }, "other_personagens":[
+      "tracer_decanio"
+    ]
   },
   {
     "id": "vendetta",
