@@ -487,12 +487,79 @@ def select_card(data):
     # verifica se os 2 escolheram
     if len(room["selected_cards"]) == 2:
         print(room["game_state"])
-        room["game_state"]["phase"] = "battle"
+        room["game_state"]["phase"] = "pre_battle"
 
         emit("start_battle", {
             "game_state_phase": room["game_state"]["phase"],
             "selected_cards": room["selected_cards"]
         }, to=room_id)
+
+@socketio.on("combate_1")
+def combate_1(data):
+    room_id = data["room_id"]
+    room = salas[room_id]
+
+    # pegar o room selected cards
+    # fzer os calculos do que retornar
+
+    room["game_state"]["phase"] = "battle"
+    emit("battle_phase_two", {
+        "game_state_phase": room["game_state"]["phase"],
+    }, to=room_id)
+
+@socketio.on("combate_resolver")
+def combate_2(data):
+    room_id = data["room_id"]
+    room = salas[room_id]
+
+    # calcula o dano que cada jogador vai tomar
+    # altera o room jogadores
+
+    room["game_state"]["phase"] = "battle_end"
+    emit("battle_phase_one", {
+        "game_state_phase": room["game_state"]["phase"],
+    }, to=room_id)
+
+@socketio.on("end_turn")
+def fim_de_turno(data):
+    room_id = data["room_id"]
+    room = salas[room_id]
+
+    # vê se é o turno 7:
+        # Sim? Finalizar o jogo, o ganhador vai ser quem tiver mais vida
+        # Não? Aumenta o tuno e volta pra fase de compra
+        
+    room["game_state"]["phase"] = "end_turn"
+    emit("end_turn", {
+        "game_state_phase": room["game_state"]["phase"],
+    }, to=room_id)
+
+@socketio.on("draw")
+def draw(data):
+    room_id = data["room_id"]
+    room = salas[room_id]
+
+    # vê se é o turno 7:
+        # Sim? Finalizar o jogo, o ganhador vai ser quem tiver mais vida
+        # Não? Aumenta o tuno e volta pra fase de compra
+
+    jogadores = room["jogadores"]
+    game_state = room["game_state"]
+
+    for jogador in jogadores:
+        random.shuffle(jogador["deck"])
+
+        if "hand" not in jogador:
+            jogador["hand"] = []
+
+        if jogador["deck"]:
+            carta = jogador["deck"].pop()
+            jogador["hand"].append(carta)
+        
+    room["game_state"]["phase"] = "choose"
+    emit("end_turn", {
+        "game_state_phase": room["game_state"]["phase"],
+    }, to=room_id)
 
 # LOGOFF =========================================
 @main.route("/sair")

@@ -107,7 +107,24 @@ async function gameFlow() {
         });
     } else if (game_state['phase'] == "choose" || game_state['phase'] == "fist_choose") {
         enableCardSelection();
+    } else if (game_state['phase'] == "pre_battle") {
+        socket.emit("combate_1", {
+            room_id: game_state.room_id
+        })
+    } else if (game_state['phase'] == "battle") {
+        socket.emit("combate_resolver", {
+            room_id: game_state.room_id
+        })
+    } else if (game_state['phase'] == "battle_end") {
+        socket.emit("end_turn", {
+            room_id: game_state.room_id
+        })
+    } else if (game_state['phase'] == "end_turn") {
+        socket.emit("draw", {
+            room_id: game_state.room_id
+        })
     }
+}
 }
 
 function createCardElement(cardData) {
@@ -294,7 +311,7 @@ function animateCardToTarget(cardElement, targetElement) {
             animatedCard.style.transition = `
                 left 0.5s ease,
                 top 0.5s ease,
-                transform 0.5s ease
+                transform 1s ease
             `;
 
             animatedCard.style.left = `${rectTarget.left}px`;
@@ -367,6 +384,8 @@ async function startBattleAnimation(battleData) {
     // carta inimiga
     const enemyFinalCard = createCardElement(player2Card);
     slotP2.appendChild(enemyFinalCard);
+
+    gameFlow()
 }
 
 // JOGO ==================
