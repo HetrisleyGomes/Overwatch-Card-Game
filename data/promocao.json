@@ -50,8 +50,8 @@
   {
     "id": "aniversaryPack",
     "nome": "Pacotaço de aniversário Overwatch!",
-    "description": "Pacote especial com: Pharah Hades, Mercy vitória alada, e Widowmaker Medusa. +1000 Pontos!",
-    "value": 3,
+    "description": "Pacote especial com os 5 personagens do evento Aniversário Overwatch!",
+    "value": 2,
     "buy_with_impeto": true,
     "inicio": "05-16",
     "fim": "05-28",

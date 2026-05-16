@@ -32,7 +32,7 @@
     {
         "version": "0.0.7",
         "date": "18-04-2026",
-        "description": "FEAT: Adicionado novas cartas míticas, Soldado Voltagem máxima, e Genji sumi-Ichimonji; Melhoria na quantidade de pontos obtidos em níveis baixos. Removido a radidade de cartas 'raro'; Adicionado novas raridades de carts, 'epico' e 'lendario'. STYLE: Cartas de 'arma dourada' possuem um selo especial."
+        "description": "FEAT: Adicionado novas cartas míticas, Soldado Voltagem máxima, e Genji sumi-Ichimonji; Melhoria na quantidade de pontos obtidos em níveis baixos. Removido a radidade de cartas 'raro'; Adicionado novas raridades de carts, 'epico' e 'lendario'. STYLE: Cartas de 'arma dourada' possuem um selo especial; [2] Corrigida descrição de pacote especial de aniversário."
     },
     {
         "version": "0.0.8",
