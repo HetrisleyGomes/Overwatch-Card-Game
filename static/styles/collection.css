@@ -112,15 +112,12 @@
 .raridade.epico { background-color: silver; }
 .raridade.lendario { background: gold; }
 .raridade.mitico { background: purple; }
-.raridade.especial { background: mediumpurple; 
-    border: 2px dotted lightskyblue; 
-}
 
 .raridade.comum.raridade-extra, .raridade.incomum.raridade-extra {
     border: 2px dotted lightskyblue; 
 }
-.raridade.raro.raridade-extra {
-    border: 2px dotted teal; 
+.raridade.epico.raridade-extra, .raridade.lendario.raridade-extra {
+    border: 2px dotted green; 
 }
 .personagem_apagado {
     opacity: 0.4;

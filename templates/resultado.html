@@ -22,7 +22,7 @@
 
                         <!-- Frente -->
                         <div class="carta-front">
-                            <div class="card card-pack {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.is_evento }}">
+                            <div class="card card-pack {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.evento }}  {{ carta.is_evento }} {% if carta.foil %}foil{% endif %}">
                                 <div class="card-nome">
                                     {{ carta.nome }}
                                 </div>

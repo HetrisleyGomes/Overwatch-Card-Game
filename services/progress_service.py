@@ -25,7 +25,6 @@ def registry_cards(conn, cartas, rarity, user):
 
     for c in cartas:
         cid = c["id"]
-        print(cid in personagens_set)
         if cid not in personagens_set:
             personagens_set.append(cid)
             ctll.set_card(user['id'], cid)
@@ -33,7 +32,7 @@ def registry_cards(conn, cartas, rarity, user):
             pontos += rarity_convert(c["raridade"])
         
         xp += get_xp_calc(c['raridade'], pack_rarity=rarity)
-    
+
     # Faz o controle dos pacotes
     if rarity == "comum":
         if user["packs_diarios_abertos"] > 0:
@@ -47,7 +46,7 @@ def registry_cards(conn, cartas, rarity, user):
             user["contador_packs_comuns"] = 0
         elif user["packs_comprados_raro"] > 0:
             user["packs_comprados_raro"] -= 1
-    elif rarity == "especial":
+    elif rarity == "evento":
         user["packs_evento"] -= 1
 
     if user["nivel"] <= 5:
@@ -102,7 +101,7 @@ def get_xp_calc(rarity, pack_rarity):
             return int(value * 1.5)
         case "raro":
             return value
-        case "especial":
+        case "evento":
             return int(value * 1.5)
         case "none":
             return 0

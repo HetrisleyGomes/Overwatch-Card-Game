@@ -41,12 +41,12 @@ def comprar_pack_prom(id, pack_id, conn):
             carta = next((p for p in personagens if p["id"] == i), None)
             cartas.append(carta)
 
-    imgs = next((p for p in proms if p.get("icon")), None)
+    icon = next((p.get("icon") for p in proms if p.get("icon")), None)
     repo = ProgressRepository(conn)
     ctll = ProgressController(repo)
 
     ctll.buy_big_pack(id, pack_id)
-    return prom['value'], points, cartas, imgs
+    return prom['value'], points, cartas, icon
 
 def format_promotion(prom):
     hoje = datetime.now().date()

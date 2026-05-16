@@ -121,7 +121,7 @@ class ProgressRepository:
         cursor.execute(
             """
                INSERT INTO user_icons
-                   (user_id, set_id)
+                   (user_id, icon_id)
                VALUES (%s, %s)
            """, (
                 user_id,

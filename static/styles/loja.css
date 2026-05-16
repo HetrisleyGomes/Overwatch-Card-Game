@@ -157,7 +157,8 @@
         width: auto;
     }
     .item.promotion_pack {
-        width: 86vw;
+        width: 84vw;
+        height: 28vh;
     }
     .item.promotion_pack .item_name {
         font-size: 20px;

@@ -22,7 +22,7 @@
     background-color: var(--main-dark-color);
     border: 1px solid var(--main-light-color);
     padding: 8px 22px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 

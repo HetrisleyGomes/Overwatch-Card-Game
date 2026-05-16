@@ -225,8 +225,7 @@
     "raridade": "epico",
     "img": "Bastion_ow.png",
     "foil": true,
-    "evento": "aniversary",
-    "disponivel": true
+    "evento": "aniversary"
   },
   {
     "id": "brigitte_comum",
@@ -363,8 +362,7 @@
     "ult": "É, hora de mandar um pix!",
     "raridade": "comum",
     "img": "Cassidy_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "dva_comum",
@@ -505,8 +503,7 @@
     "raridade": "epico",
     "img": "Doomfist_ow.png",
     "foil": true,
-    "evento": "aniversary",
-    "disponivel": true
+    "evento": "aniversary"
   },
   {
     "id": "echo_comum",
@@ -1061,8 +1058,7 @@
     "ult": "Quem quer UM BILHÃO de pontos de vida?",
     "raridade": "incomum",
     "img": "Lucio_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "mauga_comum",
@@ -1364,8 +1360,7 @@
     "raridade": "epico",
     "img": "Orisa_ow.png",
     "foil": true,
-    "evento": "aniversary",
-    "disponivel": true
+    "evento": "aniversary"
   },
   {
     "id": "pharah_comum",
@@ -1517,8 +1512,7 @@
     "ult": "Você sofrerá como eu, Ramattra, sofri. Seu tormento viverá mais que as estrelas, e quando o universo se tornar pó, lá estará você, ainda sofrendo, como EU sofri!",
     "raridade": "epico",
     "img": "Ramattra_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "reaper_comum",
@@ -1946,8 +1940,7 @@
     "raridade": "epico",
     "img": "Symmetra_ow.png",
     "foil": true,
-    "evento": "aniversary",
-    "disponivel": true
+    "evento": "aniversary"
   },
   {
     "id": "symmetra_fool",
@@ -1960,8 +1953,7 @@
     "ult": "Uma barreira de gratiluz!",
     "raridade": "incomum",
     "img": "Symmetra_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "torbjorn_comum",
@@ -2013,8 +2005,7 @@
     "raridade": "epico",
     "img": "Torbjorn_ow.png",
     "foil": true,
-    "evento": "aniversary",
-    "disponivel": true
+    "evento": "aniversary"
   },
   {
     "id": "tracer_comum",
@@ -2051,8 +2042,7 @@
     "ult": "Pega essa!",
     "raridade": "lendario",
     "img": "Tracer_ow_10_anos.png",
-    "evento": "espacial10anos",
-    "disponivel": false
+    "evento": "espacial10anos"
   },
   {
     "id": "tracer_dourado",
@@ -2279,8 +2269,7 @@
     "ult": "Winston!",
     "raridade": "comum",
     "img": "Winston_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "wrecking_ball_comum",
@@ -2319,8 +2308,7 @@
     "ult": "Comtemplem, os filhos de Wrecking Ball!",
     "raridade": "incomum",
     "img": "Wrecking_ball_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "wuyang_comum",
@@ -2459,8 +2447,7 @@
     "ult": "Tornem-se invencíveis. Algumas condições se aplicam.",
     "raridade": "incomum",
     "img": "Zenyatta_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "extra",
@@ -2472,7 +2459,6 @@
     "ult_nome": ".",
     "ult": ".",
     "raridade": ".",
-    "img": ".",
-    "disponivel": false
+    "img": "."
   }
 ]

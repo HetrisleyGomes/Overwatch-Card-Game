@@ -57,6 +57,6 @@
     {
         "version": "0.1.1",
         "date": "15-05-2026",
-        "description": "FEAT: Adicionado Tracer especial de 10 anos overwatch e icone de jogador exclusivo de evento; Melhorias no evento de aniversário. FIX: Varias pequenas correções de layout."
+        "description": "FEAT: Adicionado Tracer especial de 10 anos overwatch e icone de jogador exclusivo de evento; Melhorias no evento de aniversário. FIX: Varias pequenas correções de layout. HOTFIX: Corrigido problema no registro de compra de icones de jogador; Resolvido problema no sorteio de pacotes de evento; Melhoria de layout no inventário."
     }
 ]
