@@ -148,7 +148,7 @@
                 <div class="item_button">
                     <button class="button {% if user.pontos < img.price or img.possui %}desativado{% endif %}"
                     {% if user.pontos < img.price or img.possui %}disabled{% endif %}
-                    onclick="comprarPack('icone', false, {{img.id}})">
+                    onclick="comprarPack('icone', false, '{{img.id}}')">
                         {% if not img.possui %}
                             {{ img.price }} Pontos
                         {% else %}
