@@ -7,7 +7,7 @@
     "subclasse": "Tático",
     "entrada": "Eu não vou deixar um mundo partido para trás.",
     "ult_nome": "Nano Boost",
-    "ult": "Você está energizado, acabe com eles!",
+    "ult": "Você está energizado! Vá para o combate!",
     "raridade": "comum",
     "img": "Ana_ow.png"
   },
@@ -19,7 +19,7 @@
     "subclasse": "Mirror",
     "entrada": "Eu não vou deixar um mundo pacífico para trás.",
     "ult_nome": "Nano Boost",
-    "ult": "Você está energizado, acabe com eles!",
+    "ult": "Você está energizado! Vá para o combate!",
     "raridade": "lendario",
     "img": "Ana_ow_mirror.png"
   },
@@ -31,7 +31,7 @@
     "subclasse": "Tático",
     "entrada": "Eu não vou deixar um mundo partido para trás.",
     "ult_nome": "Nano Boost",
-    "ult": "Você está energizado, acabe com eles!",
+    "ult": "Você está energizado! Vá para o combate!",
     "raridade": "lendario",
     "img": "Ana_ow_gold.png",
     "golden_weapon": true,
@@ -45,9 +45,21 @@
     "subclasse": "Tático",
     "entrada": "Eu destruirei este mundo.",
     "ult_nome": "Nano Boost",
-    "ult": "Você está energizado, destrua eles!",
+    "ult": "Está energizado! Destrua eles!",
     "raridade": "mitico",
     "img": "Ana_ow_myth.png"
+  },
+  {
+    "id": "ana_ra",
+    "base": "ana",
+    "nome": "Rá",
+    "classe": "Suporte",
+    "subclasse": "Tático",
+    "entrada": "Não vou deixar sem líder, um céu sem sol.",
+    "ult_nome": "Nano Boost",
+    "ult": "Está energizado! Aniquile eles!",
+    "raridade": "mitico",
+    "img": "Ana_ow_myth_ra.png"
   },
   {
     "id": "sol_obscuro",
@@ -57,7 +69,7 @@
     "subclasse": "Tático",
     "entrada": "Eu não vou deixar um mundo partido para trás.",
     "ult_nome": "Nano Boost",
-    "ult": "Você está energizado, acabe com eles!",
+    "ult": "Você está energizado! Vá para o combate!",
     "raridade": "mitico",
     "img": "Ana_ow_weapon.png"
   },
@@ -176,6 +188,18 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "bastion_null_sector",
+    "base": "bastion",
+    "nome": "Bastion Setor Nulo",
+    "classe": "Dano",
+    "subclasse": "Perigo",
+    "entrada": "(Beeps pensativos)",
+    "ult_nome": "Configuração: Artilharia",
+    "ult": "(Beeps musicais)!",
+    "raridade": "incomum",
+    "img": "Bastion_ow_null_sector.png"
+  },
+  {
     "id": "bastion_comum",
     "base": "bastion",
     "nome": "Bastion",
@@ -225,8 +249,7 @@
     "raridade": "epico",
     "img": "Bastion_ow.png",
     "foil": true,
-    "evento": "aniversary",
-    "disponivel": false
+    "evento": "aniversary"
   },
   {
     "id": "brigitte_comum",
@@ -263,6 +286,18 @@
     "ult": "Venham a mim!",
     "raridade": "epico",
     "img": "Brigitte_ow_mirror.png"
+  },
+  {
+    "id": "brigitte_capita_real",
+    "base": "brigitte",
+    "nome": "Brigitte Capitã Real",
+    "classe": "Suporte",
+    "subclasse": "Guerreiro",
+    "entrada": "Quanto mais eles sofrem, mais eu me fortaleço.",
+    "ult_nome": "Reagrupar",
+    "ult": "Venham a mim!",
+    "raridade": "epico",
+    "img": "Brigitte_ow_capita_real.png"
   },
   {
     "id": "brigitte_dourado",
@@ -363,8 +398,7 @@
     "ult": "É, hora de mandar um pix!",
     "raridade": "comum",
     "img": "Cassidy_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "dva_comum",
@@ -505,8 +539,7 @@
     "raridade": "epico",
     "img": "Doomfist_ow.png",
     "foil": true,
-    "evento": "aniversary",
-    "disponivel": false
+    "evento": "aniversary"
   },
   {
     "id": "echo_comum",
@@ -552,11 +585,24 @@
     "nome": "Emre",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Eu os colocari na linha*.",
+    "entrada": "Agora é tudo ou nada.",
     "ult_nome": "Protocolo de automação",
     "ult": "Localizar e destruir!",
     "raridade": "comum",
     "img": "Emre_ow.png"
+  },
+  {
+    "id": "emre_alter",
+    "base": "emre",
+    "nome": "Antigo Emre",
+    "classe": "Dano",
+    "subclasse": "Especialista",
+    "entrada": "Agora é tudo ou nada.",
+    "ult_nome": "Protocolo de automação",
+    "ult": "Localizar e destruir!",
+    "raridade": "comum",
+    "img": "Emre_ow_classic.png",
+    "icon_ref": "alter.png"
   },
   {
     "id": "emre_dourado",
@@ -564,7 +610,7 @@
     "nome": "Emre Dourado",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Eu os colocari na linha*.",
+    "entrada": "Agora é tudo ou nada.",
     "ult_nome": "Protocolo de automação",
     "ult": "Localizar e destruir!",
     "raridade": "lendario",
@@ -937,6 +983,18 @@
     "img": "Kiriko_ow_heart_of_passion.png"
   },
   {
+    "id": "kiriko_hashimoto",
+    "base": "kiriko",
+    "nome": "Kiriko Hashimoto",
+    "classe": "Suporte",
+    "subclasse": "Socorrista",
+    "entrada": "Eu vou encontrar o meu próprio caminho.",
+    "ult_nome": "Corrida da kitsune",
+    "ult": "Deixe a Kitsune guiar você!",
+    "raridade": "incomum",
+    "img": "Kiriko_ow_hashimoto.png"
+  },
+  {
     "id": "kiriko_dourado",
     "base": "kiriko",
     "nome": "Kiriko Dourada",
@@ -1061,8 +1119,7 @@
     "ult": "Quem quer UM BILHÃO de pontos de vida?",
     "raridade": "incomum",
     "img": "Lucio_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "mauga_comum",
@@ -1315,6 +1372,18 @@
     "img": "Orisa_ow.png"
   },
   {
+    "id": "orisa_null_sector",
+    "base": "orisa",
+    "nome": "Orisa Setor Nulo",
+    "classe": "Tanque",
+    "subclasse": "Perigo",
+    "entrada": "A força reside na união.",
+    "ult_nome": "Rompante Terrano",
+    "ult": "Aceite o seu destino!",
+    "raridade": "incomum",
+    "img": "Orisa_ow_null_sector.png"
+  },
+  {
     "id": "orisa_dourado",
     "base": "orisa",
     "nome": "Orisa Dourada",
@@ -1364,8 +1433,7 @@
     "raridade": "epico",
     "img": "Orisa_ow.png",
     "foil": true,
-    "evento": "aniversary",
-    "disponivel": false
+    "evento": "aniversary"
   },
   {
     "id": "pharah_comum",
@@ -1517,8 +1585,7 @@
     "ult": "Você sofrerá como eu, Ramattra, sofri. Seu tormento viverá mais que as estrelas, e quando o universo se tornar pó, lá estará você, ainda sofrendo, como EU sofri!",
     "raridade": "epico",
     "img": "Ramattra_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "reaper_comum",
@@ -1783,6 +1850,18 @@
     "img": "Sojourn_ow.png"
   },
   {
+    "id": "sojourn_almirante_infinito",
+    "base": "sojourn",
+    "nome": "Almirante infinito",
+    "classe": "Dano",
+    "subclasse": "Guerreiro",
+    "entrada": "Estamos nessa juntos. Todos nós.",
+    "ult_nome": "Sobrecarga",
+    "ult": "Isso termina agora!",
+    "raridade": "incomum",
+    "img": "Sojourn_ow_almirante_infinito.png"
+  },
+  {
     "id": "sojourn_dourado",
     "base": "sojourn",
     "nome": "Sojourn Dourada",
@@ -1823,7 +1902,7 @@
   {
     "id": "soldado_76_churrasqueiro",
     "base": "soldado_76",
-    "nome": "Soldado Churrasqueiro: 76",
+    "nome": "Churrasqueiro: 76",
     "classe": "Dano",
     "subclasse": "Férias",
     "entrada": "Todo soldado precisa de uma causa.",
@@ -1831,6 +1910,18 @@
     "ult": "Você está na minha mira!",
     "raridade": "incomum",
     "img": "Soldier_76_ow_grillmaster.png"
+  },
+  {
+    "id": "soldado_76_guarda_infinito",
+    "base": "soldado_76",
+    "nome": "Guarda Infinito: 76",
+    "classe": "Dano",
+    "subclasse": "Guerreiro",
+    "entrada": "Todo império precisa de um cão de guarda.",
+    "ult_nome": "Visor tático",
+    "ult": "Você está na minha mira!",
+    "raridade": "epico",
+    "img": "Soldier_76_ow_guarda_infinito.png"
   },
   {
     "id": "soldado_76_dourado",
@@ -1946,8 +2037,7 @@
     "raridade": "epico",
     "img": "Symmetra_ow.png",
     "foil": true,
-    "evento": "aniversary",
-    "disponivel": false
+    "evento": "aniversary"
   },
   {
     "id": "symmetra_fool",
@@ -1960,8 +2050,7 @@
     "ult": "Uma barreira de gratiluz!",
     "raridade": "incomum",
     "img": "Symmetra_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "torbjorn_comum",
@@ -2013,8 +2102,7 @@
     "raridade": "epico",
     "img": "Torbjorn_ow.png",
     "foil": true,
-    "evento": "aniversary",
-    "disponivel": false
+    "evento": "aniversary"
   },
   {
     "id": "tracer_comum",
@@ -2039,6 +2127,19 @@
     "ult": "Hahaha!",
     "raridade": "epico",
     "img": "Tracer_ow_mirror.png"
+  },
+  {
+    "id": "tracer_decanio",
+    "base": "tracer",
+    "nome": "Tracer Decênio",
+    "classe": "Dano",
+    "subclasse": "Flanco",
+    "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+    "ult_nome": "Bomba eletromagnética",
+    "ult": "Pega essa!",
+    "raridade": "lendario",
+    "img": "Tracer_ow_10_anos.png",
+    "evento": "espacial10anos"
   },
   {
     "id": "tracer_dourado",
@@ -2265,8 +2366,7 @@
     "ult": "Winston!",
     "raridade": "comum",
     "img": "Winston_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "wrecking_ball_comum",
@@ -2305,8 +2405,7 @@
     "ult": "Comtemplem, os filhos de Wrecking Ball!",
     "raridade": "incomum",
     "img": "Wrecking_ball_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "wuyang_comum",
@@ -2445,8 +2544,7 @@
     "ult": "Tornem-se invencíveis. Algumas condições se aplicam.",
     "raridade": "incomum",
     "img": "Zenyatta_ow_fool.png",
-    "evento": "april_fools",
-    "disponivel": false
+    "evento": "april_fools"
   },
   {
     "id": "extra",
@@ -2458,7 +2556,6 @@
     "ult_nome": ".",
     "ult": ".",
     "raridade": ".",
-    "img": ".",
-    "disponivel": false
+    "img": "."
   }
 ]

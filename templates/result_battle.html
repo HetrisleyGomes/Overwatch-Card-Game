@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<link rel="stylesheet" href="../static/styles/combat_result.css">
+
+<div class="result-container">
+    <div id="result-title" class="result-title {{ 'draw' if result == 'empate' else 'victory' if user_id == winner_id else 'defeat' }}">
+        {{ "Empate" if result == "empate" else "Vitória" if user_id == winner_id else "Derrota" }}
+    </div>
+
+    <div class="result-avatar">
+        <img id="winner-avatar" src="" alt="Avatar">
+    </div>
+
+    <div class="player-name" id="player-name">
+    </div>
+
+    <div class="result-divider"></div>
+
+    <div class="battle-summary">
+        <div class="cards-side">
+            <h3>Suas Cartas</h3>
+            <div class="cards-stack" id="player-discard">
+                <!-- Mini cartas -->
+            </div>
+        </div>
+
+        <div class="vs-container">
+            <span>VS</span>
+        </div>
+
+        <div class="cards-side">
+            <h3>Oponente</h3>
+            <div class="cards-stack" id="enemy-discard">
+                <!-- Mini cartas -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="result-divider"></div>
+
+    <div class="result-buttons">
+        <a href="{{ url_for('main.home') }}">
+            <button class="button">
+                Início
+            </button>
+        </a>
+    </div>
+</div>
+
+<script>
+const STATIC_URL = "{{ url_for('static', filename='') }}";
+const jogadores = {{ jogadores | tojson }};
+const userId = {{ session["usuario_id"] }};
+
+var jogador_1 = jogadores.find(j => j.id == userId);
+var jogador_2 = jogadores.find(j => j.id != userId);
+
+function configUserView() {
+    document.getElementById("player-name").innerText = jogador_1.nome;
+    avatar = document.getElementById("winner-avatar");
+    avatar.src = STATIC_URL + "logos/" + jogador_1.icone;
+}
+const playerDiscard = document.getElementById("player-discard");
+const enemyDiscard = document.getElementById("enemy-discard");
+
+function cards_sets(){
+    jogador_1.discarded.forEach(card => {
+        const img = document.createElement("img");
+        img.src =
+            STATIC_URL + "images/" + card.carta_img;
+        img.classList.add("mini-card");
+        playerDiscard.appendChild(img);
+    });
+    jogador_2.discarded.forEach(card => {
+        const img = document.createElement("img");
+        img.src =
+            STATIC_URL + "images/" + card.carta_img;
+        img.classList.add("mini-card");
+        enemyDiscard.appendChild(img);
+    });
+};
+configUserView()
+cards_sets()
+</script>
+{% endblock %}

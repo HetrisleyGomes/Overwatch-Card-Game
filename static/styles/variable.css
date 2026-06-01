@@ -3,21 +3,97 @@
   --main-dark-color: #2c3c4d;
   --main-light-color: #4f6377;
   --cinza: #444;
+  --cinza-claro: #aaa;
   --darkest-color: #1e2a38;
 
-  --sucess-color-1: #81c784;
-  --sucess-color-2: #4caf50;
+  --xp-color-1: #81c784;
+  --xp-color-2: #4caf50;
+
+  --pack-common-color: #2f6fd6;
+  --pack-rare-color: #e65022;
+
+  --dano-type: #7a1f1f;
+  --suporte-type: #1f7a3b;
+  --tanque-type: #1f3f7a;
+
+  --comum-rarity:#121213;
+  --incomum-rarity: #808080;
+  --epico-rarity: silver;
+  --lendario-rarity: #b99f07;
+  --mitico-rarity: #800080;
+  --event-rarity: #9370d8;
+
+  --blue-extra-color: #87cefa; 
+  --green-extra-color: #008000;
+
+  --notification-color: #ac2b2b;
+
+  --combat-red-color: #d64545;
+  --combat-blue-color: #4a8dff;
+  --combat-green-color: #4fd67a;
+
 }
 
-
+@font-face {
+    font-family: "Big Noodle Titling";
+    src: url("/static/fonts/bignoodletitling/big_noodle_titling.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Big Noodle Titling Oblique";
+    src: url("/static/fonts/bignoodletitling/big_noodle_titling_oblique.ttf") format("truetype");
+    font-weight: normal;
+    font-style: oblique;
+}
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Big Noodle Titling";
+    font-size: 20px;
     background-color: #d9e1e8;
+}
+button, a {
+    font-family: "Big Noodle Titling";
+    font-size: 20px;
 }
 img{
     image-rendering: pixelated;
 }
 .space {
     height: 8vh;
+}
+.oblique {
+    font-family: "Big Noodle Titling Oblique";
+}
+
+#global-tooltip {
+    position: fixed;
+    max-width: 260px;
+    padding: 12px;
+    border-radius: 12px;
+    background:rgba(15,15,20,0.96);
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
+    pointer-events: none;
+    z-index: 999999;
+    opacity: 0;
+    transform:
+        translateY(8px)
+        scale(0.95);
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.4);
+    border:
+        1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+}
+
+#global-tooltip.show {
+    opacity: 1;
+    transform:
+        translateY(0px)
+        scale(1);
 }

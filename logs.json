@@ -32,7 +32,7 @@
     {
         "version": "0.0.7",
         "date": "18-04-2026",
-        "description": "FEAT: Adicionado novas cartas míticas, Soldado Voltagem máxima, e Genji sumi-Ichimonji; Melhoria na quantidade de pontos obtidos em níveis baixos. Removido a radidade de cartas 'raro'; Adicionado novas raridades de carts, 'epico' e 'lendario'. STYLE: Cartas de 'arma dourada' possuem um selo especial."
+        "description": "FEAT: Adicionado novas cartas míticas, Soldado Voltagem máxima, e Genji sumi-Ichimonji; Melhoria na quantidade de pontos obtidos em níveis baixos. Removido a radidade de cartas 'raro'; Adicionado novas raridades de carts, 'epico' e 'lendario'. STYLE: Cartas de 'arma dourada' possuem um selo especial; [2] Corrigida descrição de pacote especial de aniversário."
     },
     {
         "version": "0.0.8",
@@ -53,5 +53,15 @@
         "version": "0.1.0",
         "date": "30-04-2026",
         "description": "FEAT: Adicionado banco de dados externo para melhor persistência dos dados de usuários. ALTER: Todo o projeto foi alterado para se adequar ao novo sistema; Ícones de usuário tem um novo identificador. HOTFIX: Problemas com ícone de cartas e responsividade; Problemas no metodo gerador de conta."
+    },
+    {
+        "version": "0.1.1",
+        "date": "15-05-2026",
+        "description": "FEAT: Adicionado Tracer especial de 10 anos overwatch e icone de jogador exclusivo de evento; Melhorias no evento de aniversário. FIX: Varias pequenas correções de layout. HOTFIX: Corrigido problema no registro de compra de icones de jogador; Resolvido problema no sorteio de pacotes de evento; Melhoria de layout no inventário."
+    },
+    {
+        "version": "0.1.2",
+        "date": "01-06-2026",
+        "description": "COMBATE UPDATE pt1. [FEAT]: Adicionado modo duelo player vs player; Adicionados 8 personagens novos incluindo 1 Variante e 1 Mítica; Adicionados 3 Sets novos; Adicionados 3 Novos Ícones de jogador; Nova fonte tipográfica adicionada. [FIX]: Várias pequenas correções no back-end do sistema; Várias pequenas correções de layout."
     }
 ]

@@ -15,8 +15,6 @@ def check_event_activation():
         if inicio_md <= hoje_md <= fim_md:
             ativar_evento(e["id"])
         elif e["ativo"]:
-            #TODO: Alterar delete events_pack
-            #delete_events_packs()
             desativar_evento(e["id"])
 
 def get_eventos_ativos():
@@ -41,23 +39,17 @@ def get_eventos_ativos():
     return ativos
 
 def ativar_evento(nome_evento):
-    personagens = get_characters()
     eventos = get_events()
 
     evento = next((e for e in eventos if e["id"] == nome_evento), None)
 
     if evento:
         evento["ativo"] = True
-        
-    for p in personagens:
-        if p.get("evento") == nome_evento:
-            p["disponivel"] = True
 
     write_json("./data/events.json", eventos)
-    write_json("./data/characters.json", personagens)
+
 
 def desativar_evento(nome_evento):
-    personagens = get_characters()
     eventos = get_events()
 
     evento = next((e for e in eventos if e["id"] == nome_evento), None)
@@ -65,12 +57,7 @@ def desativar_evento(nome_evento):
     if evento:
         evento["ativo"] = False
 
-    for p in personagens:
-        if p.get("evento") == nome_evento:
-            p["disponivel"] = False
-
     write_json("./data/events.json", eventos)
-    write_json("./data/characters.json", personagens)
 
 def get_last_log():
     logs = read_json("./logs.json")

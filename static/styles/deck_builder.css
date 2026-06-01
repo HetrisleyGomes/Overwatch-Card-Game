@@ -74,12 +74,12 @@
 
 .deck-slot {
     height: 100px;
-    border: 2px dashed #aaa;
+    border: 2px dashed var(--cinza-claro);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: #aaa;
+    color: var(--cinza-claro);
     border-radius: 8px;
 }
 
@@ -100,13 +100,20 @@
 }
 
 .salvar {
-    background-color: #2f6fd6;
+    background-color: var(--main-color);
     color: white;
 }
 
+.salvar:hover {
+    background-color: var(--main-light-color);
+
+}
 .cancelar {
     background-color: var(--cinza);
     color: white;
+}
+.cancelar:hover {
+    background-color: var(--main-light-color);
 }
 
 .selected{
@@ -119,7 +126,7 @@
     align-items: center;
     justify-content: center;
     width: 153px;
-    font-size: 12px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -152,6 +159,14 @@
 }
 
 /* RESPONSIVO */
+@media (max-width: 768px) {
+    .deck-slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .deck-main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 @media (max-width: 480px) {
     .deck-main {
         grid-template-columns: 1fr;

@@ -52,25 +52,23 @@ def abrir_pack_evento(id_evento):
         if p.get("evento") in [id_evento]
     ]
 
+    golden = []
     if id_evento == "aniversary":
         golden = [
             p for p in personagens
             if p.get("golden_weapon")
         ]
-    
+
     # 1. sortear raridade
     packs = get_packs()
     pack = packs[id_evento]
-    
+
     cartas = []
 
     # 🎁 Caso especial: aniversário
     if id_evento == "aniversary":
-        possiveis_golden = [p for p in golden if p["raridade"] == "lendario"]
-        possiveis_evento = [p for p in personagens_filtrados if p["raridade"] == "epico"]
-
-        carta1 = random.choice(possiveis_golden)
-        carta2 = random.choice(possiveis_evento)
+        carta1 = random.choice(golden)
+        carta2 = random.choice(personagens_filtrados)
 
         carta2["is_evento"] = id_evento
 

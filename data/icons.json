@@ -70,7 +70,8 @@
         "descricao": "A força da resistência omnica.",
         "price": 500,
         "unlock": {
-            "type": "null_sector"
+            "type": "set",
+            "value": "null_sector"
         }
     },{
         "id": "s-02",
@@ -102,6 +103,17 @@
         "unlock": {
             "type": "event",
             "value": "aniversary"
+        }
+    },
+    {
+        "id": "e-10-anos",
+        "nome": "Decênio",
+        "img": "logo_10_anos.png",
+        "descricao": "10 anos de Overwatch.",
+        "price": 0,
+        "unlock": {
+            "type": "none",
+            "value": "none"
         }
     },
     {
@@ -238,24 +250,57 @@
     },
     {
         "id": "l8-1",
-        "nome": "Ganimedes perigoso",
-        "img": "Ganymede_icon.png",
-        "descricao": "Ganimedes anda muito preocupado esses dias.",
-        "price": 750,
+        "nome": "Império Infinito",
+        "img": "Imperio_infinito_icon.png",
+        "descricao": "O Império que domina a galáxia.",
+        "price": 500,
         "unlock": {
             "type": "nivel",
             "value": 8
         }
     },
     {
-        "id": "l8-2",
+        "id": "l9-1",
+        "nome": "Bola de neve",
+        "img": "Bola_de_neve.png",
+        "descricao": "Prepare-se para entrar numa fria.",
+        "price": 500,
+        "unlock": {
+            "type": "nivel",
+            "value": 9
+        }
+    },
+    {
+        "id": "l9-2",
+        "nome": "Dragões",
+        "img": "Dragons_icon.png",
+        "descricao": "Prepare-se para entrar numa fria.",
+        "price": 500,
+        "unlock": {
+            "type": "nivel",
+            "value": 9
+        }
+    },
+    {
+        "id": "l10-1",
+        "nome": "Ganimedes perigoso",
+        "img": "Ganymede_icon.png",
+        "descricao": "Ganimedes anda muito preocupado esses dias.",
+        "price": 750,
+        "unlock": {
+            "type": "nivel",
+            "value": 10
+        }
+    },
+    {
+        "id": "l10-2",
         "nome": "Fika",
         "img": "Fika.png",
         "descricao": "A gata à jato.",
         "price": 750,
         "unlock": {
             "type": "nivel",
-            "value": 8
+            "value": 10
         }
     }
 ]

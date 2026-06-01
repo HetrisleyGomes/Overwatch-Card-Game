@@ -28,7 +28,7 @@
         <!-- colocar isso depois de wrapper: -->
         <div class="card-wrapper {% if not carta.possui %}apagada{% endif %}">
 
-            <div class="card {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.is_evento }}">
+            <div class="card {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.is_evento }} {% if carta.foil %}foil{% endif %}">
 
                 <!-- Nome -->
                 <div class="card-nome">
@@ -65,7 +65,7 @@
                     {% if carta.possui %}
                     <p class="entrada">"{{ carta.entrada }}"</p>
                     <p class="ult">
-                        <strong>{{ carta.ult_nome }}:</strong> {{ carta.ult }}
+                        {{ carta.ult_nome }}: {{ carta.ult }}
                     </p>
                     {% endif %}
                 </div>
@@ -78,7 +78,6 @@
                 <span>{{ carta.nome }}</span>
                 {% endif %}
             </div>
-
         </div>
 
         {% endif %}

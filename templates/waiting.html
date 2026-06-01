@@ -14,7 +14,7 @@
 }
 
 .player {
-    background: #3b4f63;
+    background: var(--main-color);
     padding: 20px;
     border-radius: 10px;
     width: 200px;
@@ -25,7 +25,7 @@
     font-weight: bold;
 }
 h2, .vs {
-    color: #3b4f63;
+    color: var(--main-color);
 }
 .status {
     margin-top: 10px;
@@ -57,7 +57,7 @@ h2, .vs {
 
     <div class="actions">
         <button id="readyBtn" class="button">Estou pronto</button>
-        <a href="/"><button class="button">Sair</button></a>
+        <button id="sairBtn" class="button">Sair</button>
     </div>
 </div>
 <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
@@ -75,15 +75,15 @@ socket.emit("join_room", {
 
 // atualizar UI
 socket.on("room_update", (room) => {
+    console.log(room)
     const players = room.players;
 
     const p1 = players[0];
     const p2 = players[1];
-
+    console.log(players)
     // player 1
     document.querySelector("#p1 .name").innerText =
         p1.id == userId ? "Você" : "Jogador 1";
-
     document.querySelector("#p1 .status").innerText =
         p1.ready ? "✔ Pronto" : "⏳ Aguardando";
 
@@ -91,9 +91,11 @@ socket.on("room_update", (room) => {
     if (p2) {
         document.querySelector("#p2 .name").innerText =
             p2.id == userId ? "Você" : "Jogador 2";
-
         document.querySelector("#p2 .status").innerText =
             p2.ready ? "✔ Pronto" : "⏳ Aguardando";
+    } else {
+        document.querySelector("#p2 .name").innerText = "Aguardando...";
+        document.querySelector("#p2 .status").innerText = "⏳";
     }
 });
 
@@ -103,6 +105,14 @@ document.getElementById("readyBtn").onclick = () => {
         room_id: roomId,
         user_id: userId
     });
+};
+// Botão sair
+document.getElementById("sairBtn").onclick = () => {
+    socket.emit("leave_room", {
+        room_id: roomId,
+        user_id: userId
+    });
+    window.location.href = "/";
 };
 
 // iniciar jogo
