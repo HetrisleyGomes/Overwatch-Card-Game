@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Big Noodle Titling";
     background-color: #d9e1e8;
     display: flex;
     justify-content: center;
@@ -30,7 +30,6 @@ body {
     border: none;
     border-radius: 8px;
     margin-bottom: 12px;
-    font-size: 14px;
     outline: none;
 }
 
@@ -47,7 +46,6 @@ body {
     border: none;
     border-radius: 8px;
     color: white;
-    font-size: 14px;
     cursor: pointer;
     transition: 0.2s;
 }
@@ -57,22 +55,32 @@ body {
 }
 
 /* logo */
+.img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .img {
     width: 120px;
     margin-bottom: 10px;
 }
-
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 1vh;
+}
 /* erro */
 .erro {
     color: #ffb3b3;
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 /* link extra */
 .extra {
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 .extra a {
@@ -83,7 +91,6 @@ body {
 .extra a:hover {
     text-decoration: underline;
 }
-
 
 /* pequeno ajuste para diferenciar */
 .login-container h1 {

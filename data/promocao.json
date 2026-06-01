@@ -1,12 +1,42 @@
 [
   {
-    "id": "prom01",
-    "nome": "Apogeu: Caçadores",
-    "description": "Pacote especial com: Cassidy Van Helsing, Hanzo Okami, Sombra Caçadora de Demônios, Widowmaker Caçadora.",
-    "value": 400,
+    "id": "promjun01",
+    "nome": "Defensores Hélix: Dourados",
+    "description": "Pacote especial com: Pharah dourada, Sierra dourada e Soldado: 76 dourado.",
+    "value": 600,
     "buy_with_impeto": false,
-    "inicio": "04-20",
-    "fim": "04-27",
+    "inicio": "06-01",
+    "fim": "06-10",
+    "itens": [
+      "pharah_dourado",
+      "sierra_dourado",
+      "soldado_76_dourado"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "promjun02",
+    "nome": "Caos em Nova Junkcity: Dourados",
+    "description": "Pacote especial com: Junkrat dourado, Roadhog dourado e Rainha Junker dourada.",
+    "value": 600,
+    "buy_with_impeto": false,
+    "inicio": "06-10",
+    "fim": "06-20",
+    "itens": [
+      "junkrat_dourado",
+      "hoadhog_dourado",
+      "rainha_junker_dourado"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "promjun03",
+    "nome": "Caçada fatal",
+    "description": "Pacote especial com: Cassidy: Van Helsing, Hanzo: Okami, Sombra: Caçadora de demônio e Widowmaker: Caçadora.",
+    "value": 300,
+    "buy_with_impeto": false,
+    "inicio": "06-20",
+    "fim": "06-30",
     "itens": [
       "cassidy_van_helsing",
       "hanzo_okami",
@@ -16,68 +46,18 @@
     "was_points": 0
   },
   {
-    "id": "promOlimpo1",
-    "nome": "Deuses e Monstros do Olimpo pt.1",
-    "description": "Pacote especial com: Ramattra Poseidon, Reinhardt Minotauro, e Roadhog Ciclope. +300 Pontos!",
-    "value": 1,
-    "buy_with_impeto": true,
-    "inicio": "04-26",
-    "fim": "05-06",
-    "itens": [
-      "ramattra_poseidon",
-      "reinhardt_minotauro",
-      "roadhog_ciclope",
-      "points"
-    ],
-    "was_points": 300
-  },
-  {
-    "id": "promOlimpo2",
-    "nome": "Deuses e Monstros do Olimpo pt.2",
-    "description": "Pacote especial com: Pharah Hades, Mercy vitória alada, e Widowmaker Medusa. +300 Pontos!",
-    "value": 700,
+    "id": "promjun04",
+    "nome": "Copa 2026",
+    "description": "Pacote especial de copa homenageando os países cede, com: Sojourn dourada do Canadá, Cassidy dourado dos Estados Unidos e Sombra dourada do México.",
+    "value": 600,
     "buy_with_impeto": false,
-    "inicio": "05-07",
-    "fim": "05-17",
+    "inicio": "06-20",
+    "fim": "07-10",
     "itens": [
-      "pharah_hades",
-      "mercy_vitoria_alada",
-      "widowmaker_medusa",
-      "points"
+      "sojourn_dourado",
+      "cassidy_dourado",
+      "sombra_dourado"
     ],
     "was_points": 0
-  },
-  {
-    "id": "aniversaryPack",
-    "nome": "Pacotaço de aniversário Overwatch!",
-    "description": "Pacote especial com os 5 personagens do evento Aniversário Overwatch!",
-    "value": 2,
-    "buy_with_impeto": true,
-    "inicio": "05-16",
-    "fim": "05-28",
-    "itens": [
-      "bastion_classic",
-      "doomfist_classic",
-      "orisa_classic",
-      "symmetra_classic",
-      "torbjorn_classic"
-    ],
-    "was_points": 1000
-  },
-  {
-    "id": "dezanosoverwatch",
-    "nome": "Pacotaço de 10 anos Overwatch!",
-    "description": "Pacote especial com: Tracer especial de 10 anos e icone de jogador exclusivo!",
-    "value": 100,
-    "buy_with_impeto": false,
-    "inicio": "05-16",
-    "fim": "05-28",
-    "itens": [
-      "tracer_decanio"
-    ],
-    "icon": [
-      "e-10-anos"
-    ],
-    "was_points": 1000
   }
 ]

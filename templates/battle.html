@@ -1,0 +1,721 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<link rel="stylesheet" href="../static/styles/battle.css">
+
+<div class="battle-container">
+
+    <!-- 🔝 TOPO (players + vida + timer) -->
+    <div class="top-bar">
+        <div class="player player-left">
+            <img src="" class="avatar" id="avatar-1">
+            <div class="hp-bar">
+                <div class="hp-fill" id="hp-p1"></div>
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="timer" id="timer">
+                30
+            </div>
+            <span class="phase-view" id="phase-view">Pré Game</span>
+        </div>
+
+        <div class="player player-right">
+            <img src="" class="avatar" id="avatar-2">
+            <div class="hp-bar">
+                <div class="hp-fill" id="hp-p2"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ⚔️ ÁREA DE COMBATE -->
+    <div class="arena">
+        <div class="players_spaces">
+            <div class="card-slot" id="slot-p1">
+                <span>Carta Jogador 1</span>
+            </div>
+            <div class="effects-slot" id="effects-p1"></div>
+        </div>
+
+        <div class="players_spaces">
+            <div class="card-slot" id="slot-p2">
+                <span>Carta Jogador 2</span>
+            </div>
+            <div class="effects-slot" id="effects-p2"></div>
+        </div>
+    </div>
+
+
+    <!-- 🧩 ÁREA DO PLAYER -->
+    <div class="bottom-area">
+
+        <!-- 🃏 Deck -->
+        <div class="deck" id="deck">
+            <div class="card-layer"></div>
+            <div class="card-layer"></div>
+            <div class="card-layer"></div>
+            <span>Deck</span>
+        </div>
+
+        <!-- ✋ Mão -->
+        <div class="hand" id="hand">
+            <!-- cartas via JS -->
+        </div>
+
+        <!-- 🗑️ Descarte -->
+        <div class="discard">
+            <span>Descarte</span>
+        </div>
+
+    </div>
+    <div id="global-tooltip"></div>
+</div>
+
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+<script>
+const socket = io();
+const STATIC_URL = "{{ url_for('static', filename='') }}";
+
+var game_state = {{ game_state | tojson }};
+const jogadores = {{ jogadores | tojson }};
+var userId = {{ session["usuario_id"] }};
+
+var jogador_1 = jogadores.find(j => j.id == userId);
+var jogador_2 = jogadores.find(j => j.id != userId);
+
+const PHASES = {
+    PRE_GAME: "pre_game",
+    DRAW: "draw",
+    CHOOSE: "choose",
+    BATTLE: "battle",
+    RESULT: "result",
+    END: "end"
+};
+
+const avatar1 = document.getElementById('avatar-1');
+const avatar2 = document.getElementById('avatar-2');
+
+const hp1 = document.getElementById('hp-p1');
+const hp2 = document.getElementById('hp-p2');
+
+const tooltip = document.getElementById("global-tooltip");
+const fase = document.getElementById("phase-view");
+
+function initializeTooltips() {
+    document.addEventListener("mousemove", (e) => {
+        const card = e.target.closest(".card");
+        const hpbar1 = e.target.closest(".player-left");
+        const hpbar2 = e.target.closest(".player-right");
+        if ((!card || !card.dataset.tooltip) && !hpbar1 && !hpbar2) {
+            tooltip.classList.remove("show");
+            return;
+        } 
+        
+        if (card) {
+            tooltip.innerHTML = card.dataset.tooltip.replace(/\n/g, "<br>");
+        } else if (hpbar1) {
+            tooltip.innerHTML = jogador_1['hp']+"/20";
+        } else if (hpbar2) {
+            tooltip.innerHTML = jogador_2['hp']+"/20";
+        }
+        
+        tooltip.style.left = `${e.clientX + 16}px`;
+        tooltip.style.top = `${e.clientY + 16}px`;
+        tooltip.classList.add("show");
+    });
+
+    document.addEventListener("mouseleave", () => {
+        tooltip.classList.remove("show");
+    });
+}
+
+function configUserView() {
+    avatar1.src = STATIC_URL + "logos/" + jogador_1.icone;
+    avatar2.src = STATIC_URL + "logos/" + jogador_2.icone;
+
+    hp1.style.width = `${(jogador_1.hp / 20) * 100}%`;
+    hp2.style.width = `${(jogador_2.hp / 20) * 100}%`;
+}
+
+async function gameFlow() {
+    if (game_state['phase'] == "pre_game") {
+        await shuffle_animation();
+        if (game_state.host == userId){
+            socket.emit("fist_draw", {
+                room_id: game_state.room_id
+            });
+        };
+    } else if (game_state['phase'] == "choose" || game_state['phase'] == "fist_choose") {
+        enableCardSelection();
+    } else if (game_state['phase'] == "battle" && game_state.host == userId) {
+        socket.emit("combate_resolver", {
+            room_id: game_state.room_id
+        })
+    } else if (game_state['phase'] == "battle_resolve" && game_state.host == userId) {
+        socket.emit("end_turn", {
+            room_id: game_state.room_id
+        })
+    } else if (game_state['phase'] == "draw" && game_state.host == userId) {
+        socket.emit("draw", {
+            room_id: game_state.room_id
+        })
+    }
+}
+
+function get_description(cardData){
+    text = "";
+    switch (cardData.classe){
+        case 'Tanque':
+            text = text + "Escudo x2, Ataque x1";
+            break;
+        case 'Dano':
+            text = text + "Ataque x3";
+            break;
+        case 'Suporte':
+            text = text + "Cura x2";
+            break;
+    }
+    text = text + "."
+    return text
+}
+
+function createCardElement(cardData) {
+    const card = document.createElement("div");
+
+    // classes da carta
+    card.classList.add(
+        "card",
+        cardData.classe.toLowerCase(),
+        cardData.raridade?.toLowerCase() || "comum"
+    );
+    card.dataset.id = cardData.carta_id;
+
+    card.innerHTML = `
+        <div class="card-nome">
+            ${cardData.carta_nome}
+        </div>
+
+        <div class="card-img">
+            <img src="${STATIC_URL}images/${cardData.carta_img}" alt="${cardData.carta_nome}">
+        </div>
+
+        <div class="card-texto">
+            <span>${cardData.classe}</span>
+            <span>${cardData.subclasse}</span>
+        </div>
+    `;
+    card.dataset.tooltip = get_description(cardData);
+    return card;
+}
+
+function enableCardSelection() {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        card.onclick = () => {
+            // evita múltiplos cliques
+            if (game_state.phase !== "choose" && game_state.phase !== "fist_choose") return;
+            const cardId = card.dataset.id;
+
+            // destaque visual
+            document.querySelectorAll(".card").forEach(c => {
+                c.classList.remove("selected");
+            });
+
+            card.classList.add("selected");
+
+            // enviar ao backend
+            socket.emit("select_card", {
+                room_id: game_state.room_id,
+                card_id: cardId
+            });
+        };
+    });
+}
+
+function start_turn(){
+    fase.innerText = "Turno " + game_state['round']
+}
+
+function update_life() {
+    hp1.style.width = ((jogador_1.hp / 20) * 100) + "%";
+    hp2.style.width = ((jogador_2.hp / 20) * 100) + "%";
+}
+
+// SOCKETS =================================================
+socket.on("game_state", async (data) => {
+    game_state = data.game_state;
+    start_turn();
+    jogador_1 = data.jogadores.find(j => j.id == userId);
+    jogador_2 = data.jogadores.find(j => j.id != userId);
+
+    if (game_state.phase == "fist_choose") {
+        await draw_five_cards_animation(jogador_1);
+    } else {
+        await drawCard(jogador_1['hand'][4]);
+    }
+    gameFlow();
+});
+
+socket.on("battle_phase_one", async (data) => {
+    game_state.phase = data.game_state_phase;
+    start_turn();
+    await startBattleAnimation(data.selected_cards);
+    await createEffectsBattleOne(data.result_values);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    gameFlow();
+});
+
+socket.on("battle_phase_two", async (data) => {
+    game_state = data.game_state;
+    jogador_1 = data.jogadores.find(j => j.id == userId);
+    jogador_2 = data.jogadores.find(j => j.id != userId);
+    const changes = data.changes
+    start_turn();
+    showBattleChange(
+        hp1,
+        changes[jogador_1.id]
+    );
+    showBattleChange(
+        hp2,
+        changes[jogador_2.id]
+    );
+    update_life()
+    gameFlow();
+});
+
+socket.on("end_turn", async (data) => {
+    game_state = data.game_state;
+    start_turn();
+    await drop_cards_animation();
+    gameFlow();
+});
+
+socket.on("enemy_disconnect", () => {
+    alert("Seu adversário desconectou!");
+    fetch("/set-battle-result", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            result: "victory",
+            winner: userId,
+            sala: game_state.room_id
+        })
+    }).then(() => {
+        window.location.href = "/battle/finally";
+    });
+});
+
+socket.on("victory", async(data) => {
+    await drop_cards_animation();
+    id_winner = data.winner_id
+    if (id_winner == userId) {
+        fetch("/set-battle-result", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                result: "victory",
+                winner: id_winner,
+                sala: game_state.room_id
+            })
+        }).then(() => {
+            window.location.href = "/battle/finally";
+        });
+    } else {
+        fetch("/set-battle-result", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                result: "lose",
+                winner: id_winner,
+                sala: game_state.room_id
+            })
+        }).then(() => {
+            window.location.href = "/battle/finally";
+        });
+    }
+
+});
+socket.on("empate", () => {
+    fetch("/set-battle-result", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            result: "empate",
+            sala: game_state.room_id
+        })
+    }).then(() => {
+        window.location.href = "/battle/finally";
+    });
+});
+
+// ANIMAÇÕES ==============================================
+function shuffle_animation() {
+    return new Promise((resolve) => {
+        const deck = document.getElementById("deck");
+
+        // Remove caso já tenha
+        deck.classList.remove("shuffling");
+
+        // Força reflow pra reiniciar animação
+        void deck.offsetWidth;
+
+        // Adiciona animação
+        deck.classList.add("shuffling");
+
+        // Tempo da animação
+        setTimeout(() => {
+            deck.classList.remove("shuffling");
+            resolve();
+        }, 800);
+    });
+}
+
+async function drawCard(cardData) {
+    return new Promise((resolve) => {
+        console.log(cardData)
+        const deck = document.getElementById("deck");
+        const hand = document.getElementById("hand");
+
+        // posição do deck
+        const deckRect = deck.getBoundingClientRect();
+
+        // cria carta animada
+        const animatedCard = createCardElement(cardData);
+        animatedCard.classList.add("draw-card");
+
+        // começa em cima do deck
+        animatedCard.style.left = `${deckRect.left}px`;
+        animatedCard.style.top = `${deckRect.top}px`;
+        animatedCard.style.transform = "scale(0.3) rotate(-10deg)";
+        animatedCard.style.opacity = "0";
+        document.body.appendChild(animatedCard);
+
+        // força render
+        requestAnimationFrame(() => {
+            // aparece
+            animatedCard.style.opacity = "1";
+
+            // posição alvo (final da mão)
+            const handRect = hand.getBoundingClientRect();
+            const cardIndex = hand.children.length;
+            const targetX = handRect.left + (cardIndex * 240);
+            const targetY = handRect.top;
+            animatedCard.style.left = `${targetX}px`;
+            animatedCard.style.top = `${targetY}px`;
+            animatedCard.style.transform = "scale(1) rotate(0deg)";
+        });
+
+        // terminou animação
+        setTimeout(() => {
+            // adiciona carta real na mão
+            const realCard = createCardElement(cardData);
+            hand.appendChild(realCard);
+            // remove temporária
+            animatedCard.remove();
+            resolve();
+        }, 500);
+    });
+}
+
+async function draw_five_cards_animation(player) {
+    const hand = document.getElementById("hand");
+
+    // limpa mão antes
+    hand.innerHTML = "";
+    for (const card of player.hand) {
+        await drawCard(card);
+
+        // pequeno delay entre compras
+        await new Promise(resolve => setTimeout(resolve, 150));
+    }
+}
+
+function animateCardToTarget(cardElement, targetElement) {
+    return new Promise((resolve) => {
+        const rectStart = cardElement.getBoundingClientRect();
+        const rectTarget = targetElement.getBoundingClientRect();
+
+        // clona a carta
+        const animatedCard = cardElement.cloneNode(true);
+
+        animatedCard.classList.add("draw-card");
+        animatedCard.style.position = "fixed";
+        animatedCard.style.left = `${rectStart.left}px`;
+        animatedCard.style.top = `${rectStart.top}px`;
+        animatedCard.style.width = `${rectStart.width}px`;
+        animatedCard.style.height = `${rectStart.height}px`;
+        animatedCard.style.zIndex = "9999";
+
+        document.body.appendChild(animatedCard);
+
+        // esconde original
+        cardElement.style.visibility = "hidden";
+
+        requestAnimationFrame(() => {
+            animatedCard.style.transition = `
+                left 0.5s ease,
+                top 0.5s ease,
+                transform 1s ease
+            `;
+
+            animatedCard.style.left = `${rectTarget.left}px`;
+            animatedCard.style.top = `${rectTarget.top}px`;
+            animatedCard.style.transform = "scale(1.05)";
+        });
+
+        setTimeout(() => {
+            animatedCard.remove();
+            resolve();
+        }, 500);
+    });
+}
+
+async function startBattleAnimation(battleData) {
+    const player1Card = battleData[jogador_1.id];
+    const player2Card = battleData[jogador_2.id];
+
+    const slotP1 = document.getElementById("slot-p1");
+    const slotP2 = document.getElementById("slot-p2");
+
+    // =========================
+    // CARTA DO JOGADOR
+    // =========================
+    console.log(player1Card)
+    const playerCard = document.querySelector(
+        `.hand .card[data-id="${player1Card.carta_id}"]`
+    );
+    playerCard.classList.remove("selected");
+
+
+    // =========================
+    // CARTA DO OPONENTE
+    // =========================
+    const enemyCard = createCardElement(player2Card);
+
+    // cria perto do avatar inimigo
+    const avatar2 = document.getElementById("avatar-2");
+    const avatarRect = avatar2.getBoundingClientRect();
+
+    enemyCard.classList.add("draw-card");
+    enemyCard.style.position = "fixed";
+    enemyCard.style.left = `${avatarRect.left}px`;
+    enemyCard.style.top = `${avatarRect.top}px`;
+    enemyCard.style.width = "180px";
+    enemyCard.style.height = "250px";
+    enemyCard.style.zIndex = "9999";
+
+    document.body.appendChild(enemyCard);
+
+    // =========================
+    // ANIMAÇÕES AO MESMO TEMPO
+    // =========================
+    await Promise.all([
+        animateCardToTarget(playerCard, slotP1),
+        animateCardToTarget(enemyCard, slotP2)
+    ]);
+
+    // =========================
+    // ADICIONA CARTAS NOS SLOTS
+    // =========================
+    slotP1.innerHTML = "";
+    slotP2.innerHTML = "";
+
+    // carta jogador
+    slotP1.appendChild(playerCard);
+    playerCard.style.visibility = "visible";
+
+    // carta inimiga
+    const enemyFinalCard = createCardElement(player2Card);
+    slotP2.appendChild(enemyFinalCard);
+    enemyCard.remove()
+}
+
+function animateDrop(cardElement) {
+    return new Promise((resolve) => {
+        const rect = cardElement.getBoundingClientRect();
+
+        // clone animado
+        const clone = cardElement.cloneNode(true);
+
+        clone.classList.add("dropping-card");
+        clone.style.left = `${rect.left}px`;
+        clone.style.top = `${rect.top}px`;
+        clone.style.width = `${rect.width}px`;
+        clone.style.height = `${rect.height}px`;
+        clone.style.animation = `
+            dropCard 0.8s forwards
+        `;
+
+        document.body.appendChild(clone);
+
+        // remove original
+        cardElement.remove();
+        setTimeout(() => {
+            clone.remove();
+            resolve();
+        }, 800);
+    });
+}
+async function drop_cards_animation() {
+    const slotP1 = document.getElementById("slot-p1");
+    const slotP2 = document.getElementById("slot-p2");
+    const discard = document.querySelector(".discard");
+
+    // pega cartas
+    const card1 = slotP1.querySelector(".card");
+    const card2 = slotP2.querySelector(".card");
+
+    // guarda clones para descarte
+    const discardCards = [];
+
+    if (card1) {
+        discardCards.push(card1.cloneNode(true));
+    }
+
+    // anima simultaneamente
+    await Promise.all([
+        card1 ? animateDrop(card1) : Promise.resolve(),
+        card2 ? animateDrop(card2) : Promise.resolve()
+
+    ]);
+
+    // adiciona mini pilha no descarte
+    discardCards.forEach((card, index) => {
+        const mini = card.cloneNode(true);
+        mini.style.position = "absolute";
+        mini.style.left = `${(index * 4) -40}px`;
+        mini.style.top = `${(index * -4) -50}px`;
+        mini.style.transform = `
+            scale(0.6)
+            rotate(${(Math.random() * 16) - 8}deg)
+            translateY(${Math.random() * 6}px)
+        `;
+        discard.appendChild(mini);
+    });
+
+    document.getElementById("effects-p1").innerHTML = "";
+    document.getElementById("effects-p2").innerHTML = "";
+}
+
+function createEffectElement(effectName, amount) {
+    const effect = document.createElement("div");
+    effect.classList.add("mini-effect");
+    effect.innerHTML = `
+        <div class="mini-effect-orb ${effectName}"></div>
+        <span>${amount}x ${effectName}</span>
+    `;
+
+    return effect;
+};
+
+async function createEffectsBattleOne(effectsData) {
+    const effectsP1 = document.getElementById("effects-p1");
+    const effectsP2 = document.getElementById("effects-p2");
+
+    // limpa efeitos antigos
+    effectsP1.innerHTML = "";
+    effectsP2.innerHTML = "";
+
+    // pega ids recebidos
+    const playerIds = Object.keys(effectsData);
+
+    const player1Id = playerIds[0];
+    const player2Id = playerIds[1];
+
+    // define visão do jogador
+    const myEffects =
+        userId == player1Id
+            ? effectsData[player1Id]
+            : effectsData[player2Id];
+
+    const enemyEffects =
+        userId == player1Id
+            ? effectsData[player2Id]
+            : effectsData[player1Id];
+
+    // remove efeitos zerados
+    const myEffectsArray = Object.entries(myEffects)
+        .filter(([_, amount]) => amount > 0);
+
+    const enemyEffectsArray = Object.entries(enemyEffects)
+        .filter(([_, amount]) => amount > 0);
+
+    // pega maior quantidade
+    const maxEffects = Math.max(
+        myEffectsArray.length,
+        enemyEffectsArray.length
+    );
+
+    // renderiza em ondas
+    for (let i = 0; i < maxEffects; i++) {
+        // PLAYER
+        if (myEffectsArray[i]) {
+            const [effectName, amount] = myEffectsArray[i];
+            const effectElement =
+                createEffectElement(effectName, amount);
+            effectsP1.appendChild(effectElement);
+        }
+
+        // OPONENTE
+        if (enemyEffectsArray[i]) {
+            const [effectName, amount] = enemyEffectsArray[i];
+            const effectElement =
+                createEffectElement(effectName, amount);
+            effectsP2.appendChild(effectElement);
+        }
+
+        await new Promise(resolve => setTimeout(resolve, 500));
+    }
+};
+
+function showBattleChange(targetElement, changeData) {
+    const number = document.createElement("div");
+    number.classList.add("floating-number");
+    // tipo
+    if (changeData.type === "damaged") {
+        number.classList.add("damage");
+        number.textContent = `-${changeData.value}`;
+    }
+    else if (changeData.type === "healed") {
+        number.classList.add("heal");
+        number.textContent = `+${changeData.value}`;
+    }
+    else {
+        number.classList.add("neutral");
+        number.textContent = "0";
+    }
+
+    // posição
+    const rect = targetElement.getBoundingClientRect();
+    number.style.left = `${rect.left + rect.width / 2}px`;
+    number.style.top = `${rect.top}px`;
+    number.style.fontSize = "40px";
+    number.style.fontWeight = 700;
+    document.body.appendChild(number);
+
+    // remover depois
+    setTimeout(() => {
+        number.remove();
+    }, 1000);
+};
+
+// JOGO ==================
+socket.emit("join_room", {
+    room_id: game_state.room_id,
+    user_id: jogador_1.id
+});
+
+initializeTooltips();
+configUserView();
+gameFlow();
+</script>
+{% endblock %}

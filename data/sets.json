@@ -6,7 +6,8 @@
       "ana_comum",
       "arqui-comandante_amari",
       "ana_dourado",
-      "a-7000_Wargod"
+      "a-7000_Wargod",
+      "ana_ra"
     ],
     "recompensa": {
       "pontos": 100
@@ -53,6 +54,7 @@
     "nome": "Bastion",
     "personagens": [
       "bastion_comum",
+      "bastion_null_sector",
       "bastion_kishin",
       "bastion_dourado"
     ],
@@ -70,6 +72,7 @@
       "brigitte_comum",
       "brigitte_coracao",
       "brigitte_talon",
+      "brigitte_capita_real",
       "brigitte_dourado"
     ],
     "recompensa": {
@@ -151,6 +154,7 @@
     "nome": "Emre",
     "personagens": [
       "emre_comum",
+      "emre_alter",
       "emre_dourado"
     ],
     "recompensa": {
@@ -262,6 +266,7 @@
     "personagens": [
       "kiriko_comum",
       "kiriko_coracao",
+      "kiriko_hashimoto",
       "kiriko_dourado",
       "amateratsu",
       "guardia_espiritual"
@@ -366,6 +371,7 @@
     "nome": "Orisa",
     "personagens": [
       "orisa_comum",
+      "orisa_null_sector",
       "orisa_dourado",
       "fera_grandeosa",
       "canhao_capsulas"
@@ -488,6 +494,7 @@
     "nome": "Sojourn",
     "personagens": [
       "sojourn_comum",
+      "sojourn_almirante_infinito",
       "sojourn_dourado",
       "sentinela_ultra-violeta"
     ],
@@ -501,6 +508,7 @@
     "personagens": [
       "soldado_76_comum",
       "soldado_76_churrasqueiro",
+      "soldado_76_guarda_infinito",
       "soldado_76_dourado",
       "voltagem_maxima",
       "libertacao"
@@ -697,6 +705,18 @@
     }
   },
   {
+    "id": "helix_force",
+    "nome": "Forças de defesa Helix",
+    "personagens": [
+      "pharah_comum",
+      "sierra_comum",
+      "soldado_76_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
     "id": "melee",
     "nome": "Combatentes corpo à corpo",
     "personagens": [
@@ -857,7 +877,7 @@
   },
   {
     "id": "blackwatch",
-    "nome": "Blackwatch",
+    "nome": "Agentes Blackwatch",
     "personagens": [
       "cassidy_comum",
       "genji_comum",
@@ -899,6 +919,20 @@
     }
   },
   {
+    "id": "null_sector",
+    "nome": "Ameaça do Setor Nulo",
+    "personagens": [
+      "ramattra_comum",
+      "bastion_null_sector",
+      "orisa_null_sector",
+      "destruidor_z-3n",
+      "a-7000_Wargod"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
     "id": "cacador",
     "nome": "Caçadores",
     "personagens": [
@@ -929,12 +963,15 @@
     "id": "guerreiro",
     "nome": "Guerreiros",
     "personagens": [
+      "brigitte_capita_real",
       "genji_baihu",
       "mercy_sigrun",
+      "sojourn_almirante_infinito",
+      "soldado_76_guarda_infinito",
       "aventureira"
     ],
     "recompensa": {
-      "pontos": 200
+      "pontos": 300
     }
   },
   {
@@ -975,6 +1012,19 @@
     }
   },
   {
+    "id": "imperio_infinito",
+    "nome": "Império Infinito",
+    "personagens": [
+      "sojourn_almirante_infinito",
+      "brigitte_capita_real",
+      "soldado_76_guarda_infinito",
+      "imperador_galatico"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
     "id": "fogo",
     "nome": "Fogo",
     "personagens": [
@@ -994,11 +1044,12 @@
     "nome": "Guerreiros do sol",
     "personagens": [
       "illari_comum",
+      "ana_ra",
       "pistoleiro_divino",
       "amateratsu"
     ],
     "recompensa": {
-      "pontos": 300
+      "pontos": 400
     }
   },
   {
@@ -1201,6 +1252,7 @@
     "nome": "Miticos",
     "personagens": [
       "a-7000_Wargod",
+      "ana_ra",
       "imperatriz_calamidade",
       "pistoleiro_divino",
       "horang",

@@ -33,7 +33,6 @@
 }
 
 .item_name {
-    font-size: 20px;
     font-weight: 600;
     height: 20px;
     padding: 10px;
@@ -41,6 +40,7 @@
 
 .item_description {
     height: 100%;
+    font-size: 16px;
 }
 
 .item_button {
@@ -85,9 +85,9 @@
     border-color: #e65022;
 }
 .item.promotion_pack .item_name {
-    font-size: 24px;
+    font-size: 30px;
     height: 24px;
-    padding: 12px 12px 36px;
+    padding: 12px 12px 30px;
 }
 
 /* RESPONSIVIDADE ========================== */
@@ -119,11 +119,15 @@
         height: 24vh;
     }
     .item_name {
-        font-size: 16px;
+        font-size: 18px;
     }
     .item_description {
-        font-size: 12px;
+        font-size: 14px;
         padding: 0 10px;
+    }
+    .item.promotion_pack .item_name {
+        font-size: 24px;
+        padding: 12px;
     }
 
 }
@@ -142,10 +146,10 @@
         height: 32vh;
     }
     .item_name {
-        font-size: 12px;
+        font-size: 16px;
     }
     .item_description {
-        font-size: 10px;
+        font-size: 14px;
         padding: 6px 10px;
     }
     .item_img {

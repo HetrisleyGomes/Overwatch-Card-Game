@@ -15,10 +15,8 @@
 .card-info {
     margin-top: 6px;
     display: flex;
-    font-size: 14px;
     border-radius: 10px;
     color: white;
-    font-weight: 600;
     background-color: var(--main-dark-color);
     border: 1px solid var(--main-light-color);
     padding: 8px 22px;
@@ -34,10 +32,9 @@
     background-color: var(--main-color);
     border: none;
     width: 100px;
-    padding: 10px 0;
+    padding: 6px 0;
     border-radius: 8px;
     color: white;
-    font-size: 12px;
     cursor: pointer;
     position: relative;
 }
@@ -125,7 +122,7 @@
     height: 360px;
   }
   .card-info {
-    font-size: 12px;
+    font-size: 16px;
     padding: 8px 8px;
 }
 
@@ -133,8 +130,8 @@
 
 @media (max-width: 480px) {
   .toggle-button {
-    width: 60vw;
-    padding-bottom: 6px;
+    width: 45vw;
+
   }
   .card-wrapper {
     width: 160px;
@@ -146,7 +143,7 @@
     padding: 10px 0 20px;
   }
   .card-info {
-    font-size: clamp(8px, 1vw, 12px);
+    font-size: 12px;
     padding: 8px 8px;
   }
 }

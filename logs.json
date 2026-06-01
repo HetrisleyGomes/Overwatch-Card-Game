@@ -58,5 +58,10 @@
         "version": "0.1.1",
         "date": "15-05-2026",
         "description": "FEAT: Adicionado Tracer especial de 10 anos overwatch e icone de jogador exclusivo de evento; Melhorias no evento de aniversário. FIX: Varias pequenas correções de layout. HOTFIX: Corrigido problema no registro de compra de icones de jogador; Resolvido problema no sorteio de pacotes de evento; Melhoria de layout no inventário."
+    },
+    {
+        "version": "0.1.2",
+        "date": "01-06-2026",
+        "description": "COMBATE UPDATE pt1. [FEAT]: Adicionado modo duelo player vs player; Adicionados 8 personagens novos incluindo 1 Variante e 1 Mítica; Adicionados 3 Sets novos; Adicionados 3 Novos Ícones de jogador; Nova fonte tipográfica adicionada. [FIX]: Várias pequenas correções no back-end do sistema; Várias pequenas correções de layout."
     }
 ]

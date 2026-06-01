@@ -85,7 +85,14 @@ class UserController:
         except Exception as e:
             return str(e)
 
-    
+    def get_user_battle(self, user_id):
+        try:
+            cursor, columns = self.__repository.get_user_battle(user_id)
+            data = self.dict_convert(cursor, columns)
+            return data
+        except Exception as e:
+            return str(e)
+        
     def dict_convert(self, value, columns):
         data = dict(zip(columns, value))
         return data

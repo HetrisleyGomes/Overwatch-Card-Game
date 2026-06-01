@@ -187,3 +187,19 @@ def listar_sets_usuario(conn, user_id):
         resultado.append(set_info)
 
     return resultado
+
+def format_carta(carta_id):
+    characters = get_characters()
+    mapa_characters = {c["id"]: c for c in characters}
+    carta = mapa_characters[carta_id]
+    icon_ref = carta.get("icon_ref", False)
+    itens = {
+    'carta_id': carta['id'],
+    'carta_nome': carta['nome'],
+    'carta_img': carta['img'],
+    'raridade': carta['raridade'],
+    'classe': carta['classe'],
+    'subclasse': carta['subclasse'],
+    'icon_ref': icon_ref
+    }
+    return itens
