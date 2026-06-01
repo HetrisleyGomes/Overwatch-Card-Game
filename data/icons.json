@@ -64,6 +64,15 @@
             "type": "purchase"
         }
     },{
+        "id": "c6",
+        "nome": "Colorido",
+        "img": "logo_rainbow.png",
+        "descricao": "Mais cores que nunca.",
+        "price": 100,
+        "unlock": {
+            "type": "purchase"
+        }
+    },{
         "id": "s-01",
         "nome": "Setor Nulo",
         "img": "null_sector_logo.png",
