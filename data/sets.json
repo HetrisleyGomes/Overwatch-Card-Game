@@ -7,7 +7,8 @@
       "arqui-comandante_amari",
       "ana_dourado",
       "a-7000_Wargod",
-      "ana_ra"
+      "ana_ra",
+      "sol_obscuro"
     ],
     "recompensa": {
       "pontos": 100
@@ -254,7 +255,7 @@
       "juno_comum",
       "juno_dourado",
       "juno_coracao",
-      "atiradora das estrelas"
+      "atiradora_das_estrelas"
     ],
     "recompensa": {
       "pontos": 100
@@ -1043,6 +1044,7 @@
     "id": "sol",
     "nome": "Guerreiros do sol",
     "personagens": [
+      "sol_obscuro",
       "illari_comum",
       "ana_ra",
       "pistoleiro_divino",
@@ -1290,7 +1292,7 @@
       "rosa_de_chumbo",
       "ocaso_flamejante",
       "sumiichimonji",
-      "atiradora das estrelas",
+      "atiradora_das_estrelas",
       "guardia_espiritual",
       "magitecnologia_misericordiosa",
       "canhao_capsulas",

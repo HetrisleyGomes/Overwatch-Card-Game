@@ -146,11 +146,11 @@ body {
 }
 
 .battle-div {
-    position: fixed;
-    bottom: 100px;
     display: flex;
     justify-content: center;
     width: 96vw;
+    margin-top: 10vh
+
 }
 /* RESPONSIVIDADE ========================== */
 @media (max-width: 768px) {

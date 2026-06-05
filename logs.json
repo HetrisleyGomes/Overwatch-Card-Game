@@ -63,5 +63,10 @@
         "version": "0.1.2",
         "date": "01-06-2026",
         "description": "COMBATE UPDATE pt1. [FEAT]: Adicionado modo duelo player vs player; Adicionados 8 personagens novos incluindo 1 Variante e 1 Mítica; Adicionados 3 Sets novos; Adicionados 4 Novos Ícones de jogador; Nova fonte tipográfica adicionada. [FIX]: Várias pequenas correções no back-end do sistema; Várias pequenas correções de layout."
+    },
+    {
+        "version": "0.1.3",
+        "date": "15-06-2026",
+        "description": "COMBATE UPDATE pt1. [FEAT]: Melhoria de performasse, agora os códigos de combate ficam em um arquivo separado; Legenda em ícones de cartas; [FIX]: A skin mítica de arma da Ana agora aparece em seu set; Progressão de set agora aparecem normalmente; A skin mítica de arma da Juno agora aparace nos sets."
     }
 ]

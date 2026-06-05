@@ -65,7 +65,7 @@
     </div>
 
     <div class="battle-div">
-        <a href="{{ url_for('main.buscar_partida') }}">
+        <a href="{{ url_for('combate.buscar_partida') }}">
             <button class="button">
                 <strong>Duelo</strong>
             </button>
@@ -145,38 +145,10 @@
             </div>
         </div>
     </aside>
-    <div id="global-tooltip"></div>
 </div>
 <script>
     const aside = document.querySelector(".aside-area");
     const btn = document.getElementById("toggle-aside");
-
-    const tooltip = document.getElementById("global-tooltip");
-
-    function initializeTooltips() {
-        document.addEventListener("mousemove", (e) => {
-            const pacote = e.target.closest(".pack");
-            const duelo = e.target.closest(".battle-div");
-            if ((!pacote || !pacote.dataset.tooltip) && !duelo) {
-                tooltip.classList.remove("show");
-                return;
-            } 
-            
-            if (pacote) {
-                tooltip.innerHTML = pacote.dataset.tooltip.replace(/\n/g, "<br>");
-            } else if (duelo) {
-                tooltip.innerHTML = "Entrada apenas para baralhos prontos";
-            }
-            
-            tooltip.style.left = `${e.clientX + 16}px`;
-            tooltip.style.top = `${e.clientY + 16}px`;
-            tooltip.classList.add("show");
-        });
-
-        document.addEventListener("mouseleave", () => {
-            tooltip.classList.remove("show");
-        });
-    }
 
     btn.addEventListener("click", () => {
         aside.classList.toggle("active");
@@ -184,6 +156,5 @@
     aside.addEventListener("click", () => {
         aside.classList.remove("active");
     })
-    initializeTooltips()
 </script>
 {% endblock %}

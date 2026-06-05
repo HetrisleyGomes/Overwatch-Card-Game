@@ -42,7 +42,7 @@
                     <div class="card-img">
                         <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
                         {% if carta.icon_ref %}
-                            <div class="icon_ref">
+                            <div class="icon_ref" data-tooltip="{{ carta.icon_ref }}">
                                 <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}" loading="lazy">
                             </div>
                         {% endif %}
