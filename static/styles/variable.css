@@ -31,7 +31,11 @@
   --combat-red-color: #d64545;
   --combat-blue-color: #4a8dff;
   --combat-green-color: #4fd67a;
-
+  --combat-purple-color: #8c4be8;
+  --combat-yellow-color: #ffcf33;
+  --combat-dark_red-color: #8b2f4d;
+  --combat-cyan-color: #43d9e8;
+  
 }
 
 @font-face {

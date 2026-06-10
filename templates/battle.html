@@ -107,7 +107,8 @@ function initializeTooltips() {
         const card = e.target.closest(".card");
         const hpbar1 = e.target.closest(".player-left");
         const hpbar2 = e.target.closest(".player-right");
-        if ((!card || !card.dataset.tooltip) && !hpbar1 && !hpbar2) {
+        const ler_tooltip = e.target.closest(".ler_tooltip");
+        if ((!card || !card.dataset.tooltip) && !hpbar1 && !hpbar2 && !ler_tooltip) {
             tooltip.classList.remove("show");
             return;
         } 
@@ -118,6 +119,8 @@ function initializeTooltips() {
             tooltip.innerHTML = jogador_1['hp']+"/20";
         } else if (hpbar2) {
             tooltip.innerHTML = jogador_2['hp']+"/20";
+        } else if (ler_tooltip) {
+            tooltip.innerHTML = ler_tooltip.dataset.tooltip
         }
         
         tooltip.style.left = `${e.clientX + 16}px`;
@@ -167,15 +170,85 @@ function get_description(cardData){
     text = "";
     switch (cardData.classe){
         case 'Tanque':
-            text = text + "Escudo x2, Ataque x1";
+            text = text + "Tanque: Escudo x2, Ataque x1";
             break;
         case 'Dano':
-            text = text + "Ataque x3";
+            text = text + "Dano: Ataque x3";
             break;
         case 'Suporte':
-            text = text + "Cura x2";
+            text = text + "Suporte: Cura x2";
             break;
     }
+    text = text + "\n"
+    switch (cardData.subclasse){
+        case 'Incursor':
+            text = text + "Incursor: Golpe Veloz x2, Ataque x1";
+            break;
+        case 'Combatente':
+            text = text + "Combatente: Ataque x3";
+            break;
+        case 'Robusto':
+            text = text + "Robusto: Escudo x3";
+            break;
+
+        case 'Especialista':
+            text = text + "Especialista: Anti-cura x2";
+            break;
+        case 'Artilharia':
+            text = text + "Artilharia: Ataque x2";
+            break;
+        case 'Flanco':
+            text = text + "Flanco: Golpe veloz x2";
+            break;
+        case 'Reconhecimento':
+            text = text + "Reconhecimento: Golpe veloz x1, Ataque x1";
+            break;
+
+        case 'Tático':
+            text = text + "Tático: Anti-cura x3";
+            break;
+        case 'Socorrista':
+            text = text + "Socorrista: Cura x3";
+            break;
+        case 'Sobrevivente':
+            text = text + "Sobrevivente: Ataque x2, e Cura x1";
+            break;
+
+        case 'Campeão':
+            text = text + "Campeão: Escudo x2, Ataque x1";
+            break;
+        case 'Caçador':
+            text = text + "Caçador: Ataque futuro x1, Anti-cura x2";
+            break;
+        case 'Classic':
+            text = text + "Classic: Escudo, Ataque e Cura x1";
+            break;
+        case 'Coração':
+            text = text + "Classic: Escudo x2, revitalizar";
+            break;
+        case 'Fool':
+            text = text + "Fool: 3 pontos aleatórios entre Escudo, Ataque e Cura";
+            break;
+        case 'Férias':
+            text = text + "Férias: Ataque x1, revitalizar";
+            break;
+        case 'Guerreiro':
+            text = text + "Guerreiro: Escudo x1, Ataque x2";
+            break;
+        case 'Mirror':
+            text = text + "Mirror: Transforma cura em Escudo, escudo em Ataque, e ataque em Cura";
+            break;
+        case 'Monstro':
+            text = text + "Monstro: Escudo -1, Ataque x3";
+            break;
+        case 'Perigo':
+            text = text + "Perigo: Golpe Veloz x1, Ataque futuro x2";
+            break;
+        case 'Perverso':
+            text = text + "Perverso: Ataque x2, Anti-cura x2, e zera a Cura e Escudo";
+            break;
+    }
+
     text = text + "."
     return text
 }
@@ -660,16 +733,28 @@ async function createEffectsBattleOne(effectsData) {
         // PLAYER
         if (myEffectsArray[i]) {
             const [effectName, amount] = myEffectsArray[i];
-            const effectElement =
-                createEffectElement(effectName, amount);
+            const effectElement = createEffectElement(effectName, amount);
+            if (effectName == 'ataque futuro'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'Receberá Ataque x1 no próximo turno.';
+            } else if (effectName == 'revitalizar'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'A cura será dobrada no próximo turno.';
+            }
             effectsP1.appendChild(effectElement);
         }
 
         // OPONENTE
         if (enemyEffectsArray[i]) {
             const [effectName, amount] = enemyEffectsArray[i];
-            const effectElement =
-                createEffectElement(effectName, amount);
+            const effectElement = createEffectElement(effectName, amount);
+            if (effectName == 'ataque futuro'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'Receberá Ataque x1 no próximo turno.';
+            } else if (effectName == 'revitalizar'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'A cura será dobrada no próximo turno.';
+            }
             effectsP2.appendChild(effectElement);
         }
 
