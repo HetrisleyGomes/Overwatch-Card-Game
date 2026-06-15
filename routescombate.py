@@ -439,9 +439,8 @@ def combate_2(data):
         "changes": changes,
     }, to=room_id)
 
+
 # END COMBATE ======================================================================
-
-
 @socketio.on("end_turn")
 def fim_de_turno(data):
     room_id = data["room_id"]
@@ -539,6 +538,40 @@ def finalize_battle(room):
             jogador["discarded"].append(card)
     
     room["selected_cards"] = {}
+
+@socketio.on("time_out")
+def time_out(data):
+    room_id = data["room_id"]
+    user_id = data["user_id"]
+
+    room = salas.get(room_id)
+    if not room:
+        return
+
+    room.setdefault("timeouts", {})
+    room["timeouts"][user_id] = True
+
+
+    timeouts = room.get("timeouts", {})
+    if len(timeouts) < 2:
+        return
+    
+    selected = room.get("selected_cards", {})
+    jogadores = [j["id"] for j in room["jogadores"]]
+
+    p1 = jogadores[0]
+    p2 = jogadores[1]
+
+    p1_escolheu = p1 in selected
+    p2_escolheu = p2 in selected
+
+    if not p1_escolheu and not p2_escolheu:
+        emit("empate", to=room_id)
+    elif not p1_escolheu:
+        emit("victory", {"winner_id": p2}, to=room_id)
+    elif not p2_escolheu:
+        emit("victory", {"winner_id": p1}, to=room_id)
+
 
 # Paginas de fim de batalha =================================================
 @combate.route("/set-battle-result", methods=["POST"])

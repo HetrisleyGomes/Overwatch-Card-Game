@@ -102,6 +102,12 @@ const hp2 = document.getElementById('hp-p2');
 const tooltip = document.getElementById("global-tooltip");
 const fase = document.getElementById("phase-view");
 
+// TIMER
+let timerValue = 30;
+let timerInterval = null;
+let playerReady = false;
+const timerElement = document.getElementById("timer");
+
 function initializeTooltips() {
     document.addEventListener("mousemove", (e) => {
         const card = e.target.closest(".card");
@@ -150,6 +156,7 @@ async function gameFlow() {
             });
         };
     } else if (game_state['phase'] == "choose" || game_state['phase'] == "fist_choose") {
+        startCrono();
         enableCardSelection();
     } else if (game_state['phase'] == "battle" && game_state.host == userId) {
         socket.emit("combate_resolver", {
@@ -297,6 +304,8 @@ function enableCardSelection() {
 
             card.classList.add("selected");
 
+            stopCrono();
+
             // enviar ao backend
             socket.emit("select_card", {
                 room_id: game_state.room_id,
@@ -333,6 +342,7 @@ socket.on("game_state", async (data) => {
 socket.on("battle_phase_one", async (data) => {
     game_state.phase = data.game_state_phase;
     start_turn();
+    resetCrono();
     await startBattleAnimation(data.selected_cards);
     await createEffectsBattleOne(data.result_values);
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -365,7 +375,7 @@ socket.on("end_turn", async (data) => {
 });
 
 socket.on("enemy_disconnect", () => {
-    alert("Seu adversário desconectou!");
+    alert("Seu adversário não respondeu a tempo ou desconectou!");
     fetch("/set-battle-result", {
         method: "POST",
         headers: {
@@ -793,6 +803,38 @@ function showBattleChange(targetElement, changeData) {
     }, 1000);
 };
 
+// TIMER ==============
+function startCrono() {
+    playerReady = false;
+    timerValue = 30;
+
+    timerElement.textContent = timerValue;
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(() => {
+        timerValue--;
+        timerElement.textContent = timerValue;
+        if (timerValue <= 0) {
+            clearInterval(timerInterval);
+            socket.emit("time_out", {
+                room_id: game_state.room_id,
+                user_id: userId,
+                has_selected: playerReady
+            });
+        }
+    }, 1000);
+}
+
+function stopCrono() {
+    playerReady = true;
+}
+
+function resetCrono() {
+    clearInterval(timerInterval);
+    timerValue = 30;
+    playerReady = false;
+    timerElement.textContent = "30";
+}
 // JOGO ==================
 socket.emit("join_room", {
     room_id: game_state.room_id,
