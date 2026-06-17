@@ -1,0 +1,188 @@
+{% extends 'index.html' %}
+{% block centro %}
+<link rel="stylesheet" href="../static/styles/vault.css">
+<!-- CENTRO -->
+<style>
+    .main {
+        background: linear-gradient(0, var(--notification-color), var(--main-light-color) 30%, var(--main-dark-color))
+    }
+.title, .subtitle {
+    text-align: left;
+    padding-left: 8vw;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-left: 8vw;
+    color: white;
+}
+.subtitle {
+    margin-top: 10px;
+    margin-bottom: revert;
+}
+.cards-display {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+    margin: auto;
+    gap: 16px;
+}
+.card-slot {
+    width: 15vw;
+    height: 42vh;
+    aspect-ratio: 3 / 4;
+    border: 6px solid;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(0, var(--darkest-color), var(--main-color) 35%);
+    box-shadow: 0 5px 4px 0px black;
+
+}
+.card-slot:hover {
+    transform: scale(1.075);
+    animation: glow 0.75s infinite alternate;
+}
+@keyframes glow {
+    from { box-shadow: 0 0 10px var(--event-rarity); }
+    to { box-shadow: 0 0 15px var(--lendario-rarity); }
+}
+.lendario {
+    border-color: var(--lendario-rarity);
+    color: var(--lendario-rarity);
+}
+.mitico {
+    border-color: var(--mitico-rarity);
+    color: var(--mitico-rarity);
+}
+.card-area {
+    display: flex;
+    justify-content: center;
+    height: 23vh;
+    padding: 10px;
+}
+.img-card {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+.carta_raridade {
+    padding: 0;
+    font-size: 18px;
+}
+.carta_nome {
+    color: white;
+    text-shadow: 0 0 2px black;
+    padding: 4px;
+}
+.item_button {
+    background-color: var(--lendario-rarity);
+    padding: 14px 0;
+    box-shadow: 0 2px 2px 1px black;
+}
+.item_button:hover {
+    background-color: var(--combat-yellow-color);
+}
+
+.max-img {
+    position: absolute;
+    right: 20px;
+    bottom: 20vh;
+}
+.max {
+    width: 8vw;
+    z-index: 10;
+    position: relative;
+}
+.max-shadow {
+    border-radius: 100%;
+    width: 105px;
+    height: 16px;
+    background-color: #000000;
+    box-shadow: 0 0px 6px 8px #000000;
+    opacity: 0.7;
+    position: relative;
+    bottom: 25px;
+    z-index: 0;
+}
+</style>
+<div class="main">
+    <h1 class="title oblique">Cofre do Maximilien</h1>
+    <h3 class="subtitle">Termina em 10 dias</h3>
+    
+    <div class="cards-display">
+        {% for carta in cartas %}
+            <div class="card-slot {{ carta.raridade }}">
+                <div class="card-area">
+                    <img class="img-card" src="{{ url_for('static', filename='images/' + carta.carta_img) }}" alt="{{ carta.carta_nome}}">
+                </div>
+                <div class="carta_raridade {{ carta.raridade }}">{{ carta['raridade']}}</div>
+                <div class="carta_nome">{{ carta['carta_nome']}}</div>
+                <div class="button-area">
+                    <button class="button item_button">
+                        1000 Pontos
+                    </button>
+                </div>
+            </div>
+        {% endfor %}
+    
+    </div>
+
+    <div class="max-img">
+        <img src="{{ url_for('static', filename='extras/Maximilien.png') }}" alt="Maximilien" class="max tooltipClass" data-tooltip="Bem-vindo ao meu cofre!">
+        <div class="max-shadow"></div>
+    </div>
+</div>
+
+
+<script>
+function comprarPack(tipo, buy_with_impetos=false, id=0) {
+    const btn = event.target;
+
+    if (btn.disabled) return;
+    
+    fetch("/comprar-pack", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ tipo: tipo, buy_with_impetos: buy_with_impetos, id: id })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.msg);
+            location.reload();
+
+            // 🔥 atualizar UI sem reload
+            atualizarPontos(data.pontos);
+        } else {
+            alert(data.erro);
+        }
+    });
+};
+function comprarPromotionPack(tipo, pack, buy_with_impetos){
+    const btn = event.target;
+
+    if (btn.disabled) return;
+
+    fetch("/comprar-pack", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ tipo: tipo, pacote: pack,  buy_with_impetos: buy_with_impetos})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.msg);
+            location.reload();
+
+            // 🔥 atualizar UI sem reload
+            atualizarPontos(data.pontos);
+        } else {
+            alert(data.erro);
+        }
+    });
+}
+</script>
+{% endblock %}

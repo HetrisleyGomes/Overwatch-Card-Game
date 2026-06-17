@@ -2,7 +2,7 @@ from flask import blueprints, render_template, request, session, redirect, url_f
 from services.user_service import verify_date, sum_xp
 from services.progress_service import registry_cards, save_deck_progress, get_deck
 from services.pack_sevice import abrir_pack, abrir_pack_evento
-from services.collection_service import verificar_sets, formatar_inventario, listar_sets_usuario
+from services.collection_service import verificar_sets, formatar_inventario, listar_sets_usuario, format_carta
 from services.eventos_service import check_event_activation, get_eventos_ativos, get_last_log
 from services.loja_services import get_promocoes, comprar_pack_prom, get_user_prom_logs
 from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img
@@ -204,7 +204,9 @@ def loja():
     prom = get_promocoes()
     prom_log = get_user_prom_logs(connection, user["id"])
 
-    return render_template('loja.html', user = user, ev=ev, proms=prom, prom_log=prom_log, imgs=imgs)
+    max_is_here = True
+
+    return render_template('loja.html', user = user, ev=ev, proms=prom, prom_log=prom_log, imgs=imgs, max_is_here= max_is_here)
 
 @main.route("/comprar-pack", methods=["POST"])
 def comprar_pack():
@@ -277,6 +279,20 @@ def comprar_pack():
         "msg": msg
     }
 
+@main.route("/maximilien-vault")
+def maximilien():
+    connection = get_db_connection()
+    if connection is None:
+       return "Erro ao conectar ao banco de dados.", 500
+
+    repo = UserRepository(connection)
+    ctll = UserController(repo)
+
+    user = ctll.get_user(session["usuario_id"])
+
+    cartas = [format_carta("feiticeira"), format_carta("ana_ra"), format_carta("rosa_de_chumbo"), format_carta("thor"), format_carta("titan_magma")]
+
+    return render_template('vault.html', user = user, cartas=cartas)
 
 # Configurações =========================================
 @main.route("/settings")

@@ -18,7 +18,7 @@
 
   --comum-rarity:#121213;
   --incomum-rarity: #808080;
-  --epico-rarity: silver;
+  --epico-rarity: #c0c0c0;
   --lendario-rarity: #b99f07;
   --mitico-rarity: #800080;
   --event-rarity: #9370d8;
@@ -55,6 +55,7 @@ body {
     font-family: "Big Noodle Titling";
     font-size: 20px;
     background-color: #d9e1e8;
+    overflow-x: hidden;
 }
 button, a {
     font-family: "Big Noodle Titling";

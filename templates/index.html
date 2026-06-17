@@ -69,16 +69,16 @@
 
     function initializeTooltips() {
         document.addEventListener("mousemove", (e) => {
-            const pacote = e.target.closest(".pack");
+            const tooltipClass = e.target.closest(".tooltipClass");
             const duelo = e.target.closest(".battle-div");
             const icon = e.target.closest(".icon_ref")
-            if ((!pacote || !pacote.dataset.tooltip) && !duelo && !icon) {
+            if ((!tooltipClass || !tooltipClass.dataset.tooltip) && !duelo && !icon) {
                 tooltip.classList.remove("show");
                 return;
             } 
             
-            if (pacote) {
-                tooltip.innerHTML = pacote.dataset.tooltip.replace(/\n/g, "<br>");
+            if (tooltipClass) {
+                tooltip.innerHTML = tooltipClass.dataset.tooltip.replace(/\n/g, "<br>");
             } else if (duelo) {
                 tooltip.innerHTML = "Entrada apenas para baralhos prontos";
             } else if (icon){

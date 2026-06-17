@@ -2,13 +2,36 @@
 {% block centro %}
 <link rel="stylesheet" href="../static/styles/loja.css">
 <!-- CENTRO -->
-<div class="main">
+<nav class="loja_nav">
+    {% if max_is_here %}
+        <a href="{{ url_for('main.maximilien') }}">
+        <button>
+            Maximilien
+        </button>
+        </a>
+    {% endif %}
+    
+    <a href="#pacotaco">
+        <button>Pacotaço</button>
+    </a>
+    <a href="#pacotes">
+        <button>Pacotes</button>
+    </a>
+    <a href="#trocarpontos">
+        <button>Pontos</button>
+    </a>
+    <a href="#icones">
+        <button>Ícones</button>
+    </a>
+</nav>
 
+
+<div class="main">
     <h1 class="oblique">Loja</h1>
 
     <div class="container">
     {% if proms %}
-    <h2 class="sessao">Pacotaço</h2>
+    <h2 class="sessao" id="pacotaco">Pacotaço</h2>
         {% for prom in proms %}
 
             <div class="prateleira pacotaco">
@@ -40,7 +63,7 @@
     
         <div class="prateleira-divider"></div>
     {% endif %}
-        <h2 class="sessao">Pacotes</h2>
+    <h2 class="sessao" id="pacotes">Pacotes</h2>
         <div class="prateleira">
             <!-- Item -->
             <div class="item">
@@ -102,7 +125,7 @@
         </div>
         <div class="prateleira-divider"></div>
 
-        <h2 class="sessao">Pontos</h2>
+    <h2 class="sessao" id="trocarpontos">Pontos</h2>
         <div class="prateleira">
             <!-- COMPRAR PONTOS -->
             <div class="item">
@@ -133,7 +156,7 @@
         </div>
         <div class="prateleira-divider"></div>
 
-        <h2 class="sessao">Ícones</h2>
+    <h2 class="sessao" id="icones">Ícones</h2>
         <div class="prateleira">
             {% for img in imgs %}
             {% if img.disponivel %}

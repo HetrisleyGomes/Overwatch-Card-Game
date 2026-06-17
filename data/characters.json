@@ -38,6 +38,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "ana_legado",
+    "base": "ana",
+    "nome": "Ana: Legado",
+    "classe": "Suporte",
+    "subclasse": "Origem",
+    "entrada": "Nunca deixe de lutar pelo o que você acredita!",
+    "ult_nome": "Nano Boost",
+    "ult": "Você está energizado! Vá para o combate!",
+    "raridade": "legado",
+    "img": "Ana_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "a-7000_Wargod",
     "base": "ana",
     "nome": "Unidade suprema A-7000",
@@ -188,18 +201,6 @@
     "icon_ref": "golden.png"
   },
   {
-    "id": "bastion_null_sector",
-    "base": "bastion",
-    "nome": "Bastion Setor Nulo",
-    "classe": "Dano",
-    "subclasse": "Perigo",
-    "entrada": "(Beeps pensativos)",
-    "ult_nome": "Configuração: Artilharia",
-    "ult": "(Beeps musicais)!",
-    "raridade": "incomum",
-    "img": "Bastion_ow_null_sector.png"
-  },
-  {
     "id": "bastion_comum",
     "base": "bastion",
     "nome": "Bastion",
@@ -210,6 +211,18 @@
     "ult": "(Beeps musicais)!",
     "raridade": "comum",
     "img": "Bastion_ow.png"
+  },
+  {
+    "id": "bastion_null_sector",
+    "base": "bastion",
+    "nome": "Bastion Setor Nulo",
+    "classe": "Dano",
+    "subclasse": "Perigo",
+    "entrada": "(Beeps pensativos)",
+    "ult_nome": "Configuração: Artilharia",
+    "ult": "(Beeps musicais)!",
+    "raridade": "incomum",
+    "img": "Bastion_ow_null_sector.png"
   },
   {
     "id": "bastion_kishin",
@@ -236,6 +249,19 @@
     "img": "Bastion_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "bastion_legado",
+    "base": "bastion",
+    "nome": "Bastion: Legado",
+    "classe": "Defensor",
+    "subclasse": "Origem",
+    "entrada": "Doo-woo!",
+    "ult_nome": "Configuração: Tanque",
+    "ult": "Woo woo woo whee woo whee!",
+    "raridade": "legado",
+    "img": "Bastion_ow_jade.png",
+    "icon_ref": "jade.png"
   },
   {
     "id": "bastion_classic",
@@ -364,6 +390,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "cassidy_legado",
+    "base": "cassidy",
+    "nome": "Cassidy: Legado",
+    "classe": "Atacante",
+    "subclasse": "Origem",
+    "entrada": "A justiça não vai se fazer sozinha!",
+    "ult_nome": "Tiro certeiro",
+    "ult": "É hora de acertar as contas!",
+    "raridade": "legado",
+    "img": "Cassidy_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "pistoleiro_divino",
     "base": "cassidy",
     "nome": "Pistoleiro Divíno",
@@ -438,6 +477,19 @@
     "img": "DVa_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "dva_legado",
+    "base": "dva",
+    "nome": "D.Va: Legado",
+    "classe": "Tanque",
+    "subclasse": "Origem",
+    "entrada": "Eu jogo pra ganhar! :)",
+    "ult_nome": "Auto destruição",
+    "ult": "Pede pra nerfar, noob!",
+    "raridade": "legado",
+    "img": "Dva_ow_jade.png",
+    "icon_ref": "jade.png"
   },
   {
     "id": "horang",
@@ -707,6 +759,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "genji_legado",
+    "base": "genji",
+    "nome": "Genji: Legado",
+    "classe": "Atacante",
+    "subclasse": "Origem",
+    "entrada": "Você pode abandonar seu corpo, mas nunca a sua honra!",
+    "ult_nome": "Lâmina do dragão",
+    "ult": "Ryūjin no ken o kurae!",
+    "raridade": "legado",
+    "img": "Genji_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "cyber_demonio",
     "base": "genji",
     "nome": "Cyber Demônio",
@@ -767,6 +832,19 @@
     "img": "Hanzo_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "hanzo_legado",
+    "base": "hanzo",
+    "nome": "Hanzo: Legado",
+    "classe": "Defensor",
+    "subclasse": "Origem",
+    "entrada": "Com cada morte vem honra, com honra, redenção!",
+    "ult_nome": "Golpe do dragão",
+    "ult": "Ryū ga waga teki o kurau!",
+    "raridade": "legado",
+    "img": "Hanzo_ow_jade.png",
+    "icon_ref": "jade.png"
   },
   {
     "id": "onryo",
@@ -895,6 +973,19 @@
     "img": "Junkrat_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "junkrat_legado",
+    "base": "junkrat",
+    "nome": "Junkrat: Legado",
+    "classe": "Defensor",
+    "subclasse": "Origem",
+    "entrada": "O dia está ótimo para um pouco de caos!",
+    "ult_nome": "Pneu da morte",
+    "ult": "Vai explodir!",
+    "raridade": "legado",
+    "img": "Junkrat_ow_jade.png",
+    "icon_ref": "jade.png"
   },
   {
     "id": "cyber_combustivel",
@@ -1109,6 +1200,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "lucio_legado",
+    "base": "lucio",
+    "nome": "Lúcio: Legado",
+    "classe": "Suporte",
+    "subclasse": "Origem",
+    "entrada": "Bora meu povo, essa é nossa!",
+    "ult_nome": "Barreira de som",
+    "ult": "Vamo esculachar!",
+    "raridade": "legado",
+    "img": "Lucio_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "lucio_fool",
     "base": "lucio",
     "nome": "Lúcio'Oh",
@@ -1174,6 +1278,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "mei_legado",
+    "base": "mei",
+    "nome": "Mei: Legado",
+    "classe": "Defensor",
+    "subclasse": "Origem",
+    "entrada": "Vale a pena lutar pelo nosso mundo!",
+    "ult_nome": "Nevasca",
+    "ult": "Dòng zhù! Bù xǔ zǒu!",
+    "raridade": "legado",
+    "img": "Mei_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "pulo_online",
     "base": "mei",
     "nome": "Pulo Online",
@@ -1193,7 +1310,7 @@
     "subclasse": "Socorrista",
     "entrada": "Não se preocupem, estarei atrás de vocês.",
     "ult_nome": "Valkíria",
-    "ult": "Hérois nunca morrem!",
+    "ult": "Heróis nunca morrem!",
     "raridade": "comum",
     "img": "Mercy_ow.png"
   },
@@ -1205,7 +1322,7 @@
     "subclasse": "Perverso",
     "entrada": "Não se preocupem, estarei atrás de vocês.",
     "ult_nome": "Valkíria",
-    "ult": "Hérois nunca morrem... pelo preço certo!",
+    "ult": "Heróis nunca morrem... pelo preço certo!",
     "raridade": "incomum",
     "img": "Mercy_ow_diabolica.png"
   },
@@ -1253,11 +1370,24 @@
     "subclasse": "Socorrista",
     "entrada": "Não se preocupem, estarei atrás de vocês.",
     "ult_nome": "Valkíria",
-    "ult": "Hérois nunca morrem!",
+    "ult": "Heróis nunca morrem!",
     "raridade": "lendario",
     "img": "Mercy_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "mercy_legado",
+    "base": "mercy",
+    "nome": "Mercy: Legado",
+    "classe": "Suporte",
+    "subclasse": "Origem",
+    "entrada": "Eu cuidarei de você!",
+    "ult_nome": "Ressurreição",
+    "ult": "Heróis nunca morrem!",
+    "raridade": "legado",
+    "img": "Mercy_ow_jade.png",
+    "icon_ref": "jade.png"
   },
   {
     "id": "vengeance",
@@ -1291,7 +1421,7 @@
     "subclasse": "Socorrista",
     "entrada": "Não se preocupem, estarei atrás de vocês.",
     "ult_nome": "Valkíria",
-    "ult": "Hérois nunca morrem!",
+    "ult": "Heróis nunca morrem!",
     "raridade": "mitico",
     "img": "Mercy_ow_weapon.png"
   },
@@ -1474,6 +1604,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "pharah_legado",
+    "base": "pharah",
+    "nome": "Pharah: Legado",
+    "classe": "Atacante",
+    "subclasse": "Origem",
+    "entrada": "Eu protegerei os inocentes!",
+    "ult_nome": "Bombardeio",
+    "ult": "A justiça vem de cima!",
+    "raridade": "legado",
+    "img": "Pharah_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "rainha_junker_comum",
     "base": "rainha_junker",
     "nome": "Rainha Junker",
@@ -1626,6 +1769,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "reaper_legado",
+    "base": "reaper",
+    "nome": "Reaper: Legado",
+    "classe": "Atacante",
+    "subclasse": "Origem",
+    "entrada": "A morte caminha entre vocês!",
+    "ult_nome": "Desabrochar da morte",
+    "ult": "Morram, morram, morram!",
+    "raridade": "legado",
+    "img": "Reaper_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "anubis",
     "base": "reaper",
     "nome": "Anúbis",
@@ -1712,6 +1868,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "reinhardt_legado",
+    "base": "reinhardt",
+    "nome": "Reinhardt: Legado",
+    "classe": "Tanque",
+    "subclasse": "Origem",
+    "entrada": "A justiça será feita!",
+    "ult_nome": "Abalo terrestre",
+    "ult": "Sinta o peso do martelo!",
+    "raridade": "legado",
+    "img": "Reinhardt_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "thor",
     "base": "reinhardt",
     "nome": "Thor",
@@ -1772,6 +1941,43 @@
     "img": "Roadhog_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "roadhog_legado",
+    "base": "roadhog",
+    "nome": "Roadhog: Legado",
+    "classe": "Tanque",
+    "subclasse": "Origem",
+    "entrada": "Eu sou o apocalipse de um homen só!",
+    "ult_nome": "Cair matando",
+    "ult": "(Risos maníacos)!",
+    "raridade": "legado",
+    "img": "Roadhog_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
+    "id": "shion_comum",
+    "base": "shion",
+    "nome": "Shion",
+    "classe": "Dano",
+    "subclasse": "Flanco",
+    "entrada": "A dor obedece a mim.",
+    "ult_nome": "Sequência Satsuriku",
+    "ult": "Vejam o que eu me tornei!",
+    "raridade": "comum",
+    "img": "Shion_ow.png"
+  },
+  {
+    "id": "shion_dourado",
+    "base": "shion",
+    "nome": "Shion Dourada",
+    "classe": "Dano",
+    "subclasse": "Flanco",
+    "entrada": "A dor obedece a mim.",
+    "ult_nome": "Sequência Satsuriku",
+    "ult": "Vejam o que eu me tornei!",
+    "raridade": "lendario",
+    "img": "Shion_ow.png"
   },
   {
     "id": "sigma_comum",
@@ -1938,6 +2144,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "soldado_76_legado",
+    "base": "soldado_76",
+    "nome": "Soldado: Legado 76",
+    "classe": "Atacante",
+    "subclasse": "Origem",
+    "entrada": "Somos todos soldados agora!",
+    "ult_nome": "Visor tático",
+    "ult": "Você está na minha mira!",
+    "raridade": "legado",
+    "img": "Soldado_76_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "voltagem_maxima",
     "base": "soldado_76",
     "nome": "Voltagem Máxima",
@@ -2026,6 +2245,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "symmetra_legado",
+    "base": "symmetra",
+    "nome": "Symmetra: Legado",
+    "classe": "Suporte",
+    "subclasse": "Origem",
+    "entrada": "O verdadeiro inimigo da humanidade, é a desordem!",
+    "ult_nome": "Teleportador",
+    "ult": "Teletransportador online, eu abri caminho!",
+    "raridade": "legado",
+    "img": "Symmetra_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "symmetra_classic",
     "base": "symmetra",
     "nome": "Symmetra Classica",
@@ -2091,6 +2323,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "torbjorn_legado",
+    "base": "torbjorn",
+    "nome": "Torbjörn: Legado",
+    "classe": "Defensor",
+    "subclasse": "Origem",
+    "entrada": "Construir, para destruir!",
+    "ult_nome": "Sobrecarga",
+    "ult": "Núcleo fundido!",
+    "raridade": "legado",
+    "img": "Torbjorn_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "torbjorn_classic",
     "base": "torbjorn",
     "nome": "Torbjörn Classico",
@@ -2154,6 +2399,19 @@
     "img": "Tracer_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "tracer_legado",
+    "base": "tracer",
+    "nome": "Tracer: Legado",
+    "classe": "Atacante",
+    "subclasse": "Origem",
+    "entrada": "Não se preocupem queridos, a cavalaria chegou!",
+    "ult_nome": "Bomba eletromagnética",
+    "ult": "Lá vai bomba!",
+    "raridade": "legado",
+    "img": "Tracer_ow_jade.png",
+    "icon_ref": "jade.png"
   },
   {
     "id": "aventureira",
@@ -2294,6 +2552,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "widowmaker_legado",
+    "base": "widowmaker",
+    "nome": "Widowmaker: Legado",
+    "classe": "Defensor",
+    "subclasse": "Origem",
+    "entrada": "Um tiro, uma morte!",
+    "ult_nome": "Visão infravermelha",
+    "ult": "Ninguém se esconde da minha mira!",
+    "raridade": "legado",
+    "img": "Widowmaker_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "feiticeira",
     "base": "widowmaker",
     "nome": "Feiticeira",
@@ -2354,6 +2625,19 @@
     "img": "Winston_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "winston_legado",
+    "base": "winston",
+    "nome": "Winston: Legado",
+    "classe": "Tanque",
+    "subclasse": "Origem",
+    "entrada": "A imaginação é a essência da descoberta!",
+    "ult_nome": "Fúria primata",
+    "ult": "(Rugido)!",
+    "raridade": "legado",
+    "img": "Winston_ow_jade.png",
+    "icon_ref": "jade.png"
   },
   {
     "id": "winston_fool",
@@ -2472,6 +2756,19 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "zarya_legado",
+    "base": "zarya",
+    "nome": "Zarya: Legado",
+    "classe": "Tanque",
+    "subclasse": "Origem",
+    "entrada": "Juntos nós somos fortes!",
+    "ult_nome": "Fluxo de gravitons",
+    "ult": "Ogon' po gotovnosti!",
+    "raridade": "legado",
+    "img": "Zarya_ow_jade.png",
+    "icon_ref": "jade.png"
+  },
+  {
     "id": "zenyatta_comum",
     "base": "zenyatta",
     "nome": "Zenyatta",
@@ -2520,6 +2817,19 @@
     "img": "Zenyatta_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "zenyatta_legado",
+    "base": "zenyatta",
+    "nome": "Zenyatta: Legado",
+    "classe": "Suporte",
+    "subclasse": "Origem",
+    "entrada": "O verdadeiro eu, não possui forma!",
+    "ult_nome": "Transcendência",
+    "ult": "Sintam a tranquilidade!",
+    "raridade": "legado",
+    "img": "Zenyatta_ow_jade.png",
+    "icon_ref": "jade.png"
   },
   {
     "id": "pixiu",
