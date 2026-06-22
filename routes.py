@@ -4,7 +4,7 @@ from services.progress_service import registry_cards, save_deck_progress, get_de
 from services.pack_sevice import abrir_pack, abrir_pack_evento
 from services.collection_service import verificar_sets, formatar_inventario, listar_sets_usuario, format_carta
 from services.eventos_service import check_event_activation, get_eventos_ativos, get_last_log
-from services.loja_services import get_promocoes, comprar_pack_prom, get_user_prom_logs
+from services.loja_services import get_promocoes, comprar_pack_prom, get_user_prom_logs, get_max_vault_infos, get_vault, generate_vault, buy_vault_item, get_vault_data_format
 from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img
 
 from sql.controller.user_controller import UserController
@@ -62,8 +62,12 @@ def home():
         ctll.daily_update(user)
     log = get_last_log()
     prom = get_promocoes()
+    vault = get_max_vault_infos()
+    vault_data = None
+    if vault:
+        vault_data = get_vault_data_format(vault)
 
-    return render_template('home.html', user=user, ev=ev, log=log, proms=prom if prom else None)
+    return render_template('home.html', user=user, ev=ev, log=log, proms=prom, vault=vault, vault_data=vault_data)
 
 # Abrir pacote ========================================
 # TODO: Transformar tudo isso em uma rota só
@@ -204,7 +208,7 @@ def loja():
     prom = get_promocoes()
     prom_log = get_user_prom_logs(connection, user["id"])
 
-    max_is_here = True
+    max_is_here = True if get_max_vault_infos() else False
 
     return render_template('loja.html', user = user, ev=ev, proms=prom, prom_log=prom_log, imgs=imgs, max_is_here= max_is_here)
 
@@ -290,9 +294,63 @@ def maximilien():
 
     user = ctll.get_user(session["usuario_id"])
 
-    cartas = [format_carta("feiticeira"), format_carta("ana_ra"), format_carta("rosa_de_chumbo"), format_carta("thor"), format_carta("titan_magma")]
+    cartas = []
+    vault_atual = get_max_vault_infos()
 
-    return render_template('vault.html', user = user, cartas=cartas)
+    #cards_raw = ctll.get_vault_cards_data(user['id'], vault_atual)
+    cards_raw = get_vault(connection, user['id'], vault_atual)
+    print("card-raw")
+    print(cards_raw)
+    if cards_raw is None:
+        return "Erro ao carregar o cofre do Maximilien.", 500
+
+    if len(cards_raw) == 0:
+        #cards_raw = ctll.generate_new_vault(user['id'], vault_atual)
+        cards_raw = generate_vault(connection, user['id'], vault_atual)
+
+    for carta in cards_raw:
+        data = format_carta(carta[0])
+        print(data)
+        data['has_purshased'] = carta[1]
+        cartas.append(data)
+
+    connection.close()
+    vault_data = get_vault_data_format(vault_atual)
+    return render_template('vault.html', user = user, cartas=cartas, vault_data=vault_data)
+
+
+@main.route("/comprar-carta-vault", methods=["POST"])
+def comprar_vault():
+    data = request.get_json()
+    carta_id = data.get("id")
+    print('primeiro')
+    print(carta_id)
+    connection = get_db_connection()
+    if connection is None:
+        return "Erro ao conectar ao banco de dados.", 500
+
+    repo = UserRepository(connection)
+    ctll = UserController(repo)
+
+    user = ctll.get_user(session["usuario_id"])
+
+    if not user:
+        return {"success": False, "erro": "Usuário não encontrado"}
+
+    preco = 1000
+    msg = "Agradeço a sua compra!"
+    # 💰 regra de compra
+
+    user = registry_cards(connection, [format_carta(carta_id)], "none", user)
+    buy_vault_item(connection, user['id'], carta_id)
+    user["pontos"] -= preco
+    ctll.edit_user(user['id'], user)
+
+    return {
+        "success": True,
+        "pontos": user["pontos"],
+        "msg": msg
+    }
 
 # Configurações =========================================
 @main.route("/settings")

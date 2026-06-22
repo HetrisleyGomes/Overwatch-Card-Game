@@ -46,3 +46,19 @@ CREATE TABLE IF NOT EXISTS "user_icons"(
   FOREIGN KEY (user_id) REFERENCES "user"(id)
 );
 ALTER TABLE "user_icons" ADD PRIMARY KEY (user_id, icon_id)
+
+CREATE TABLE IF NOT EXISTS "user_promotion"(
+  user_id INTEGER,
+  promotion_id TEXT,
+  FOREIGN KEY (user_id) REFERENCES "user"(id)
+);
+ALTER TABLE "user_promotion" ADD PRIMARY KEY (user_id, promotion_id)
+
+CREATE TABLE IF NOT EXISTS "user_vault"(
+  user_id INTEGER,
+  vault_id TEXT,
+  card_id TEXT,
+  has_purchased BOOL,
+  FOREIGN KEY (user_id) REFERENCES "user"(id)
+);
+ALTER TABLE "user_vault" ADD PRIMARY KEY (user_id, card_id)

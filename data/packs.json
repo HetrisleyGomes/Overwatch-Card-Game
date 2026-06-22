@@ -5,8 +5,8 @@
         { "comum": 100 },
         { "comum": 80, "incomum": 20 },
         { "comum": 50, "incomum": 40, "epico": 10 },
-        { "comum": 30, "incomum": 55, "epico": 25 },
-        { "incomum": 20, "epico": 40, "lendario": 40 }
+        { "comum": 20, "incomum": 45, "epico": 30, "lendario": 5 },
+        { "incomum": 15, "epico": 45, "lendario": 40 }
     ]
   },
   "raro": {

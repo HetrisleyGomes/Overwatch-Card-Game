@@ -50,3 +50,7 @@ def get_packs():
 def get_promocao():
     with open('./data/promocao.json', "r", encoding="utf-8") as f:
         return json.load(f)
+
+def get_vault_max():
+    with open('./data/max_vault.json', "r", encoding="utf-8") as f:
+        return json.load(f)

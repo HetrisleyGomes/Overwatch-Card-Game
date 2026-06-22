@@ -72,6 +72,6 @@
     {
         "version": "0.1.4",
         "date": "01-07-2026",
-        "description": "COMBATE UPDATE pt3 (Final). [FEAT]: Finalizado sistema de combate; As subclasses agora tambem influenciam nos combates; Novas ações de combate: Golpe veloz, Anti-cura, Ataque futuro, e Rejuvenecer."
+        "description": "COMBATE UPDATE pt3 (Final). [FEAT]: <Combate> Finalizado sistema de combate; As subclasses agora tambem influênciam nos combates; Novas ações de combate: Golpe veloz, Anti-cura, Ataque futuro, e Rejuvenecer. <Evento> Novo evento mensal: Cofre do Maximilien."
     }
 ]

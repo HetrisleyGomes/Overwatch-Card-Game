@@ -38,19 +38,6 @@
     "icon_ref": "golden.png"
   },
   {
-    "id": "ana_legado",
-    "base": "ana",
-    "nome": "Ana: Legado",
-    "classe": "Suporte",
-    "subclasse": "Origem",
-    "entrada": "Nunca deixe de lutar pelo o que você acredita!",
-    "ult_nome": "Nano Boost",
-    "ult": "Você está energizado! Vá para o combate!",
-    "raridade": "legado",
-    "img": "Ana_ow_jade.png",
-    "icon_ref": "jade.png"
-  },
-  {
     "id": "a-7000_Wargod",
     "base": "ana",
     "nome": "Unidade suprema A-7000",

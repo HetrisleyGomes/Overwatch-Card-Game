@@ -64,3 +64,29 @@ class ProgressController:
             self.__repository.set_user_prom(user_id, pacotaco_id)
         except Exception as e:
             return str(e)
+        
+    def get_vault_cards_data(self, user_id, vault_id):
+        try:
+            data = self.__repository.get_vault_cards(user_id, vault_id)
+            return data
+        except Exception as e:
+            print(e)
+            return None
+    
+    def generate_new_vault(self, user_id, vault_id):
+        try:
+            self.__repository.delete_user_vault(user_id)
+            from services.loja_services import get_new_vault
+            cartas = get_new_vault()
+            for carta in cartas:
+                self.__repository.set_vault_item(user_id, vault_id, carta)
+            data = self.__repository.get_vault_cards(user_id, vault_id)
+            return data
+        except Exception as e:
+            return str(e)
+
+    def buy_vault(self, user_id, carta_id):
+        try:
+            self.__repository.set_vault_card(user_id, carta_id)
+        except Exception as e:
+            return str(e)

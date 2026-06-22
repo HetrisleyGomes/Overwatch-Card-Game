@@ -57,7 +57,8 @@
       "bastion_comum",
       "bastion_null_sector",
       "bastion_kishin",
-      "bastion_dourado"
+      "bastion_dourado",
+      "bastion_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -88,6 +89,7 @@
       "cassidy_van_helsing",
       "cassidy_salvavidas",
       "cassidy_dourado",
+      "cassidy_legado",
       "pistoleiro_divino",
       "ocaso_flamejante"
     ],
@@ -105,6 +107,7 @@
       "dva_comum",
       "dva_chibi",
       "dva_dourado",
+      "dva_legado",
       "horang"
     ],
     "recompensa": {
@@ -182,6 +185,7 @@
       "genji_oni",
       "genji_baihu",
       "genji_dourado",
+      "genji_legado",
       "cyber_demonio",
       "sumiichimonji"
     ],
@@ -196,6 +200,7 @@
       "hanzo_comum",
       "hanzo_okami",
       "hanzo_dourado",
+      "hanzo_legado",
       "onryo"
     ],
     "recompensa": {
@@ -242,6 +247,7 @@
       "junkrat_comum",
       "junkrat_junkstein",
       "junkrat_dourado",
+      "junkrat_legado",
       "cyber_combustivel"
     ],
     "recompensa": {
@@ -294,7 +300,8 @@
     "personagens": [
       "lucio_comum",
       "lucio_hermes",
-      "lucio_dourado"
+      "lucio_dourado",
+      "lucio_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -320,6 +327,7 @@
     "personagens": [
       "mei_comum",
       "mei_dourado",
+      "mei_legado",
       "pulo_online"
     ],
     "recompensa": {
@@ -336,6 +344,7 @@
       "mercy_sigrun",
       "mercy_vitoria_alada",
       "mercy_dourado",
+      "mercy_legado",
       "vengeance",
       "guardia_celestial",
       "magitecnologia_misericordiosa"
@@ -390,7 +399,8 @@
     "personagens": [
       "pharah_comum",
       "pharah_hades",
-      "pharah_dourado"
+      "pharah_dourado",
+      "pharah_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -432,6 +442,7 @@
       "reaper_comum",
       "reaper_abobora",
       "reaper_dourado",
+      "reaper_legado",
       "anubis",
       "aco_letal"
     ],
@@ -448,6 +459,7 @@
       "reinhardt_minotauro",
       "fallen_knight",
       "reinhardt_dourado",
+      "reinhardt_legado",
       "thor",
       "demonio_aprisionado"
     ],
@@ -461,7 +473,8 @@
     "personagens": [
       "roadhog_comum",
       "roadhog_ciclope",
-      "roadhog_dourado"
+      "roadhog_dourado",
+      "roadhog_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -511,6 +524,7 @@
       "soldado_76_churrasqueiro",
       "soldado_76_guarda_infinito",
       "soldado_76_dourado",
+      "soldado_76_legado",
       "voltagem_maxima",
       "libertacao"
     ],
@@ -535,7 +549,8 @@
     "nome": "Symmetra",
     "personagens": [
       "symmetra_comum",
-      "symmetra_dourado"
+      "symmetra_dourado",
+      "symmetra_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -551,7 +566,8 @@
     "personagens": [
       "torbjorn_comum",
       "torbjorn_engenheiro_espacial",
-      "torbjorn_dourado"
+      "torbjorn_dourado",
+      "torbjorn_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -567,6 +583,7 @@
       "tracer_comum",
       "operadora_oxton",
       "tracer_dourado",
+      "tracer_legado",
       "aventureira"
     ],
     "recompensa": {
@@ -607,6 +624,7 @@
       "capita_lacroix",
       "widowmaker_medusa",
       "widowmaker_dourado",
+      "widowmaker_legado",
       "feiticeira",
       "dame_chance"
     ],
@@ -620,7 +638,8 @@
     "personagens": [
       "winston_comum",
       "winston_extraterreste",
-      "winston_dourado"
+      "winston_dourado",
+      "winston_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -660,7 +679,8 @@
     "personagens": [
       "zarya_comum",
       "talon_zarya",
-      "zarya_dourado"
+      "zarya_dourado",
+      "zarya_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -674,6 +694,7 @@
       "zenyatta_cultista",
       "destruidor_z-3n",
       "zenyatta_dourado",
+      "zenyatta_legado",
       "pixiu"
     ],
     "recompensa": {
@@ -1246,6 +1267,64 @@
     ],
     "recompensa": {
       "pontos": 2000
+    }
+  },
+
+  {
+    "id": "legado_tanque",
+    "nome": "Legado: Tanques",
+    "personagens": [
+      "dva_legado",
+      "reinhardt_legado",
+      "roadhog_legado",
+      "winston_legado",
+      "zarya_legado"
+    ],
+    "recompensa": {
+      "pontos": 3000
+    }
+  },
+  {
+    "id": "legado_ataque",
+    "nome": "Legado: Atacantes",
+    "personagens": [
+      "cassidy_legado",
+      "genji_legado",
+      "pharah_legado",
+      "reaper_legado",
+      "soldado_76_legado",
+      "tracer_legado"
+    ],
+    "recompensa": {
+      "pontos": 3600
+    }
+  },
+  {
+    "id": "legado_defesa",
+    "nome": "Legado: Defensores",
+    "personagens": [
+      "bastion_legado",
+      "hanzo_legado",
+      "junkrat_legado",
+      "mei_legado",
+      "torbjorn_legado",
+      "widowmaker_legado"
+    ],
+    "recompensa": {
+      "pontos": 3600
+    }
+  },
+  {
+    "id": "legado_suporte",
+    "nome": "Legado: Suporte",
+    "personagens": [
+      "lucio_legado",
+      "mercy_legado",
+      "symmetra_legado",
+      "zenyatta_legado"
+    ],
+    "recompensa": {
+      "pontos": 2400
     }
   },
   

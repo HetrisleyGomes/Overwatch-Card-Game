@@ -131,7 +131,7 @@ class ProgressRepository:
         self.__conn.commit()
         cursor.close()
     
-    # Pacotaço
+    # Pacotaço -----------
     def get_user_prom(self, user_id):
         cursor = self.__conn.cursor()
         cursor.execute(
@@ -157,6 +157,63 @@ class ProgressRepository:
                 user_id,
                 promotion_id
             )
+        )
+        self.__conn.commit()
+        cursor.close()
+
+    
+    def get_vault_cards(self, user_id, vault_id):
+        cursor = self.__conn.cursor()
+
+        cursor.execute("""
+            SELECT card_id, has_purchased
+            FROM user_vault
+            WHERE user_id = %s AND vault_id = %s
+        """, (user_id, vault_id))
+
+        data = cursor.fetchall()
+        cursor.close()
+        print(data)
+        return data
+    
+    def set_vault_item(self, user_id, vault_id, card_id):
+        cursor = self.__conn.cursor()
+        cursor.execute(
+            """
+               INSERT INTO user_vault
+                   (user_id, vault_id, card_id, has_purchased)
+               VALUES (%s, %s, %s, %s)
+           """, (
+                user_id,
+                vault_id,
+                card_id,
+                False
+            )
+        )
+        self.__conn.commit()
+        cursor.close()
+
+    def delete_user_vault(self, user_id):
+        cursor = self.__conn.cursor()
+        cursor.execute(
+            "DELETE FROM user_vault WHERE user_id = %s",
+            (user_id,)
+        )
+        self.__conn.commit()
+        cursor.close()
+
+    def set_vault_card(self, user_id, card_id):
+        cursor = self.__conn.cursor()
+        cursor.execute(
+        """
+            UPDATE "user_vault"
+            SET has_purchased = %s
+            WHERE user_id = %s AND card_id = %s
+        """, (
+            True,
+            user_id,
+            card_id
+        )
         )
         self.__conn.commit()
         cursor.close()

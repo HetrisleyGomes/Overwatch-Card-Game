@@ -49,10 +49,15 @@
     border-color: var(--lendario-rarity);
     color: var(--lendario-rarity);
 }
+.legado {
+    border-color: var(--legado-rarity);
+    color: var(--legado-rarity);
+}
 .mitico {
     border-color: var(--mitico-rarity);
     color: var(--mitico-rarity);
 }
+
 .card-area {
     display: flex;
     justify-content: center;
@@ -103,10 +108,18 @@
     bottom: 25px;
     z-index: 0;
 }
+.desativado {
+    opacity: 0.8;
+    background-color: var(--main-color);
+}
+.desativado:hover {
+    background-color: var(--main-color);
+}
 </style>
 <div class="main">
     <h1 class="title oblique">Cofre do Maximilien</h1>
-    <h3 class="subtitle">Termina em 10 dias</h3>
+    <h3 class="subtitle">Termina em {{ vault_data[1] }} dia{% if vault_data[1] > 1 %}s{% endif %}
+    </h3>
     
     <div class="cards-display">
         {% for carta in cartas %}
@@ -117,8 +130,15 @@
                 <div class="carta_raridade {{ carta.raridade }}">{{ carta['raridade']}}</div>
                 <div class="carta_nome">{{ carta['carta_nome']}}</div>
                 <div class="button-area">
-                    <button class="button item_button">
+                    {% set desativado = user.pontos < 1000 or carta.has_purshased %}
+                    <button class="button item_button {% if desativado %}desativado{% endif %}"
+                        {% if desativado %}disabled{% endif %}
+                    onclick="comprarCartaVault('{{ carta.carta_id }}')">
+                    {% if carta.has_purshased %}
+                        Comprado
+                    {% else %}
                         1000 Pontos
+                    {% endif %}
                     </button>
                 </div>
             </div>
@@ -134,17 +154,17 @@
 
 
 <script>
-function comprarPack(tipo, buy_with_impetos=false, id=0) {
+function comprarCartaVault(id) {
     const btn = event.target;
 
     if (btn.disabled) return;
     
-    fetch("/comprar-pack", {
+    fetch("/comprar-carta-vault", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ tipo: tipo, buy_with_impetos: buy_with_impetos, id: id })
+        body: JSON.stringify({ id: id })
     })
     .then(res => res.json())
     .then(data => {
@@ -159,30 +179,5 @@ function comprarPack(tipo, buy_with_impetos=false, id=0) {
         }
     });
 };
-function comprarPromotionPack(tipo, pack, buy_with_impetos){
-    const btn = event.target;
-
-    if (btn.disabled) return;
-
-    fetch("/comprar-pack", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ tipo: tipo, pacote: pack,  buy_with_impetos: buy_with_impetos})
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.msg);
-            location.reload();
-
-            // 🔥 atualizar UI sem reload
-            atualizarPontos(data.pontos);
-        } else {
-            alert(data.erro);
-        }
-    });
-}
 </script>
 {% endblock %}

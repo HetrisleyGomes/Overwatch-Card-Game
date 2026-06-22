@@ -107,6 +107,17 @@
                 {% endfor %}
             {% endif %}
 
+            {% if vault %}
+                <div class="aside-box">
+                    <p class="title">
+                        Cofre do Maximilien disponível
+                    </p>
+                    <span class="texto">
+                       Maximilien está de volta, trazendo consigo um novo lote de cartas Míticas e Legado exclusivas. Não perca a oportunidade de adicioná-las à sua coleção. Disponível até {{ vault_data[0] }}.
+                    </span>
+                </div>
+            {% endif %}
+
             <div class="aside-box">
                 <p class="title">
                     Pacote Raro
