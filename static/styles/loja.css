@@ -111,7 +111,7 @@
     grid-column: 1 / span 2;
     width: 64vw;
     height: 26vh;
-    border-color: #e65022;
+    border-color: var(--green-extra-color);
 }
 .item.promotion_pack .item_name {
     font-size: 30px;
@@ -211,6 +211,10 @@
         height: 20px;
     }
     .loja_nav button {
+        font-size: 14px;
         width: 20vw;
+    }
+    .loja_nav {
+        gap: 0;
     }
 }

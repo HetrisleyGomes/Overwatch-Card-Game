@@ -133,12 +133,24 @@
                     Bônus semanal
                 </p>
                 <span class="texto">
-                {% if user.streak <= 21 %}
-                    A cada uma semana, consiga 4 pacotes comuns!
-                {% elif user.streak <= 49 %}
-                    A cada uma semana, consiga 3 pacotes raros!
+                {% if semana == 0 %}
+                    Consiga 2 pacotes comuns e 100 pontos ao completar essa semana!
+                {% elif semana == 1 %}
+                    Consiga 3 pacotes comuns e 250 pontos ao completar essa semana!
+                {% elif semana == 2 %}
+                    Consiga 3 pacotes comuns e 500 pontos ao completar essa semana!
+                {% elif semana == 3 %}
+                    Consiga 1 pacote raro e 1 ponto de Ímpeto ao completar essa semana!
+                {% elif semana == 4 %}
+                    Consiga 2 pacotes raros e 1 ponto de Ímpeto ao completar essa semana!
+                {% elif semana == 5 %}
+                    Consiga 3 pacotes raros e 2 pontos de Ímpeto ao completar essa semana!
+                {% elif semana == 6 %}
+                    Consiga 4 pacotes raros e 2 pontos de Ímpeto ao completar essa semana!
+                {% elif semana == 7 %}
+                    Consiga 4 pacotes raros e 3 pontos de Ímpeto ao completar essa semana!
                 {% else %}
-                    A cada uma semana, consiga 6 pacotes raros!
+                    Consiga 5 pontos de Ímpeto ao completar essa semana!
                 {% endif %}
                 <br>
                 > Dias de sequência: {{ user.streak }}.

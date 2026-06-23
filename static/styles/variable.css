@@ -20,9 +20,10 @@
   --incomum-rarity: #808080;
   --epico-rarity: #c0c0c0;
   --lendario-rarity: #b99f07;
-  --mitico-rarity: #800080;
+  --mitico-rarity: linear-gradient(45deg, #c1269a, #ffc0cb, #01a1c1, #c1269a);
   --event-rarity: #9370d8;
   --legado-rarity: #009529;
+  --ultra-rarity: #ff1c00;
 
   --blue-extra-color: #87cefa; 
   --green-extra-color: #008000;
@@ -70,6 +71,13 @@ img{
 }
 .oblique {
     font-family: "Big Noodle Titling Oblique";
+}
+
+.teste {
+    
+    background: linear-gradient(#01c19d, #dddddd, #c1269a);
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
 }
 
 #global-tooltip {

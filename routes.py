@@ -10,13 +10,12 @@ from services.inventory_service import get_img_logos, user_get_inventory, icon_v
 from sql.controller.user_controller import UserController
 from sql.repositories.user_repository import UserRepository
 
-from server import socketio, app
+from server import app
 from config import db_connection_handler
 
 from datetime import datetime
-from flask_socketio import join_room, emit
 from werkzeug.security import check_password_hash, generate_password_hash
-
+from math import floor
 import psycopg2
 
 main = blueprints.Blueprint('main', __name__, static_folder='static', template_folder='templates')
@@ -59,7 +58,8 @@ def home():
 
     user, was_change = verify_date(ctll.get_user(session["usuario_id"]), ev_validator)
     if was_change:
-        ctll.daily_update(user)
+        ctll.daily_update(user) 
+    semana = floor(user['streak'] / 7)
     log = get_last_log()
     prom = get_promocoes()
     vault = get_max_vault_infos()
@@ -67,7 +67,7 @@ def home():
     if vault:
         vault_data = get_vault_data_format(vault)
 
-    return render_template('home.html', user=user, ev=ev, log=log, proms=prom, vault=vault, vault_data=vault_data)
+    return render_template('home.html', user=user, semana=semana, ev=ev, log=log, proms=prom, vault=vault, vault_data=vault_data)
 
 # Abrir pacote ========================================
 # TODO: Transformar tudo isso em uma rota só
