@@ -112,6 +112,18 @@
     "img": "Ashe_ow.png"
   },
   {
+    "id": "ashe_contrabandista",
+    "base": "ashe",
+    "nome": "Contrabandista Intergaláctica",
+    "classe": "Dano",
+    "subclasse": "Cósmico",
+    "entrada": "Eu sou a última contrabandista espacial que você vai encontrar.",
+    "ult_nome": "B.O.B.",
+    "ult": "BOB, faça alguma coisa!",
+    "raridade": "epico",
+    "img": "Ashe_ow_contrabandista.png"
+  },
+  {
     "id": "ashe_warlock",
     "base": "ashe",
     "nome": "Ashe Feiticeira",
@@ -169,9 +181,21 @@
     "subclasse": "Tático",
     "entrada": "Outro dia, outro campo de batalha.",
     "ult_nome": "Matriz de amplificação",
-    "ult": "Acionando a matriz!*",
+    "ult": "Acionando matriz!",
     "raridade": "comum",
     "img": "Baptiste_ow.png"
+  },
+  {
+    "id": "baptiste_cacador",
+    "base": "baptiste",
+    "nome": "Caçador de Recompensas",
+    "classe": "Suporte",
+    "subclasse": "Caçador",
+    "entrada": "Outro dia, outra recompensa.",
+    "ult_nome": "Matriz de amplificação",
+    "ult": "Acionando matriz!",
+    "raridade": "epico",
+    "img": "Baptiste_ow_cacador_de_recompensas.png"
   },
   {
     "id": "baptiste_dourado",
@@ -181,7 +205,7 @@
     "subclasse": "Tático",
     "entrada": "Outro dia, outro campo de batalha.",
     "ult_nome": "Matriz amplificadora",
-    "ult": "Acionando a matriz!",
+    "ult": "Acionando matriz!",
     "raridade": "lendario",
     "img": "Baptiste_ow_gold.png",
     "golden_weapon": true,
@@ -253,7 +277,7 @@
   {
     "id": "bastion_classic",
     "base": "bastion",
-    "nome": "Bastion Classico",
+    "nome": "Bastion Clássico",
     "classe": "Dano",
     "subclasse": "Classic",
     "entrada": "Doo-woo!",
@@ -303,7 +327,7 @@
   {
     "id": "brigitte_capita_real",
     "base": "brigitte",
-    "nome": "Brigitte Capitã Real",
+    "nome": "Capitã Real",
     "classe": "Suporte",
     "subclasse": "Guerreiro",
     "entrada": "Quanto mais eles sofrem, mais eu me fortaleço.",
@@ -529,6 +553,18 @@
     "img": "Doomfist_ow.png"
   },
   {
+    "id": "doomfist-quebraossos",
+    "base": "doomfist",
+    "nome": "Doomfist Quebra-ossos",
+    "classe": "Tanque",
+    "subclasse": "Cósmico",
+    "entrada": "Nosso futuro será forjado com rebelião.",
+    "ult_nome": "Impacto meteoro",
+    "ult": "Impacto meteoro!",
+    "raridade": "epico",
+    "img": "Doomfist_ow_bonebreaker.png"
+  },
+  {
     "id": "comandante_ataque",
     "base": "doomfist",
     "nome": "Comandante de ataque",
@@ -569,7 +605,7 @@
   {
     "id": "doomfist_classic",
     "base": "doomfist",
-    "nome": "Doomfist Classico",
+    "nome": "Doomfist Clássico",
     "classe": "Dano",
     "subclasse": "Classic",
     "entrada": "Só por meio do conflito, podemos evoluir.",
@@ -846,6 +882,18 @@
     "img": "Hanzo_ow_myth.png"
   },
   {
+    "id": "rebelde_toquio",
+    "base": "hanzo",
+    "nome": "Hanzo: Rebelde de Tóquio",
+    "classe": "Dano",
+    "subclasse": "Artilharia",
+    "entrada": "Vingança é tudo o que me resta.",
+    "ult_nome": "Golpe do dragão",
+    "ult": "Ryū ga waga teki o kurau!",
+    "raridade": "mitico",
+    "img": "Hanzo_ow_myth_weapon.png" 
+  },
+  {
     "id": "hazard_comum",
     "base": "hazard",
     "nome": "Hazard",
@@ -896,6 +944,18 @@
     "img": "Illari_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "fenix_ascendida",
+    "base": "illari",
+    "nome": "Fênix Ascendida",
+    "classe": "Suporte",
+    "subclasse": "Sobrevivente",
+    "entrada": "Cuido desse fogo sozinha.",
+    "ult_nome": "Sol aprisionado",
+    "ult": "Encarem a fênix!",
+    "raridade": "mitico",
+    "img": "Illari_ow_myth.png"
   },
   {
     "id": "jetpack_cat_comum",
@@ -1087,6 +1147,18 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "kiriko_miaumiau",
+    "base": "kiriko",
+    "nome": "Kiriko Miau-miau",
+    "classe": "Suporte",
+    "subclasse": "Socorrista",
+    "entrada": "Eu vou encontrar o meu próprio caminho.",
+    "ult_nome": "Corrida da kitsune",
+    "ult": "Deixe a Kitsune guiar você!",
+    "raridade": "ultra",
+    "img": "Kiriko_ow_miaumiau.png"
+  },
+  {
     "id": "amateratsu",
     "base": "kiriko",
     "nome": "Amateratsu",
@@ -1161,6 +1233,18 @@
     "img": "Lucio_ow.png"
   },
   {
+    "id": "lucio_principe_espaco",
+    "base": "lucio",
+    "nome": "Príncipe do Espaço",
+    "classe": "Suporte",
+    "subclasse": "Cósmico",
+    "entrada": "Eu cheguei pra esculachar.",
+    "ult_nome": "Barreira de som",
+    "ult": "Vamo esculachar!",
+    "raridade": "epico",
+    "img": "Lucio_ow.png"
+  },
+  {
     "id": "lucio_hermes",
     "base": "lucio",
     "nome": "Hermes",
@@ -1169,7 +1253,7 @@
     "entrada": "A gente chegou pra vencer.",
     "ult_nome": "Barreira de som",
     "ult": "Bora acelerar!",
-    "raridade": "epico",
+    "raridade": "lendario",
     "img": "Lucio_ow_hermes.png"
   },
   {
@@ -1322,7 +1406,7 @@
     "entrada": "Não se preocupem, estarei atrás de vocês.",
     "ult_nome": "Valkíria",
     "ult": "Meus servos nunca morrem!",
-    "raridade": "incomum",
+    "raridade": "epico",
     "img": "Mercy_ow_conjuradora.png"
   },
   {
@@ -1334,13 +1418,13 @@
     "entrada": "Não se preocupem, estarei atrás de vocês.",
     "ult_nome": "Valkíria",
     "ult": "Até Valhalla!",
-    "raridade": "incomum",
+    "raridade": "epico",
     "img": "Mercy_ow_sigrun.png"
   },
   {
     "id": "mercy_vitoria_alada",
     "base": "mercy",
-    "nome": "Mercy Vitória Alada",
+    "nome": "Vitória Alada",
     "classe": "Suporte",
     "subclasse": "Campeão",
     "entrada": "Não se preocupem, estarei atrás de vocês.",
@@ -1472,7 +1556,7 @@
     "subclasse": "Socorrista",
     "entrada": "Nossas mentes estão atadas. Submissão é a chave.",
     "ult_nome": "Coalecência",
-    "ult": "Submeta a sua alma!*",
+    "ult": "Renda sua alma!",
     "raridade": "mitico",
     "img": "Moira_ow_myth.png"
   },
@@ -1979,6 +2063,18 @@
     "img": "Sigma_ow.png"
   },
   {
+    "id": "sigma_scuba",
+    "base": "sigma",
+    "nome": "Sigma Scuba",
+    "classe": "Tanque",
+    "subclasse": "Férias",
+    "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
+    "ult_nome": "Fluxo gravitacional",
+    "ult": "O universo canta para mim!",
+    "raridade": "incomum",
+    "img": "Sigma_ow_scuba.png"
+  },
+  {
     "id": "sigma_dourado",
     "base": "sigma",
     "nome": "Sigma Dourado",
@@ -2029,6 +2125,18 @@
     "img": "Sierra_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "sierra_miaumiau",
+    "base": "sierra",
+    "nome": "Sierra Miau-miau",
+    "classe": "Dano",
+    "subclasse": "Reconhecimento",
+    "entrada": "Pra cima sempre, nunca pra baixo.",
+    "ult_nome": "Vanguarda explosiva",
+    "ult": "De olho no céu!",
+    "raridade": "ultra",
+    "img": "Sierra_ow_miaumiau.png"
   },
   {
     "id": "sojourn_comum",
@@ -2247,7 +2355,7 @@
   {
     "id": "symmetra_classic",
     "base": "symmetra",
-    "nome": "Symmetra Classica",
+    "nome": "Symmetra Clássica",
     "classe": "Suporte",
     "subclasse": "Classic",
     "entrada": "O verdadeiro inimigo da humanidade, é a desordem.",
@@ -2288,7 +2396,7 @@
     "base": "torbjorn",
     "nome": "Engenheiro Espacial",
     "classe": "Dano",
-    "subclasse": "Guerreiro",
+    "subclasse": "Cósmico",
     "entrada": "Took wun huk. Brees'tin gree!",
     "ult_nome": "Núcleo fundido",
     "ult": "Núcleo fundido!",
@@ -2325,7 +2433,7 @@
   {
     "id": "torbjorn_classic",
     "base": "torbjorn",
-    "nome": "Torbjörn Classico",
+    "nome": "Torbjörn Clássico",
     "classe": "Dano",
     "subclasse": "Classic",
     "entrada": "Construir, para destruir.",
@@ -2592,7 +2700,7 @@
     "base": "winston",
     "nome": "Winston Extraterrestre",
     "classe": "Tanque",
-    "subclasse": "Guerreiro",
+    "subclasse": "Cósmico",
     "entrada": "Uma galáxia melhor é possível hoje.",
     "ult_nome": "Fúria primata",
     "ult": "(Rugido)!",
@@ -2689,6 +2797,18 @@
     "ult": "Mudando a maré!",
     "raridade": "comum",
     "img": "Wuyang_ow.png"
+  },
+  {
+    "id": "wuyang_piscina",
+    "base": "wuyang",
+    "nome": "Wuyang Piscina",
+    "classe": "Suporte",
+    "subclasse": "Férias",
+    "entrada": "Sabe o que dizem. É só seguir o fluxo.",
+    "ult_nome": "Maré explosiva",
+    "ult": "Mudando a maré!",
+    "raridade": "incomum",
+    "img": "Wuyang_ow_piscina.png"
   },
   {
     "id": "wuyang_dourado",

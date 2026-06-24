@@ -269,6 +269,17 @@
         }
     },
     {
+        "id": "l8-2",
+        "nome": "Rebeldes Watchers",
+        "img": "Rebeldes_watcher.png",
+        "descricao": "A rebelião que surge contra o Ímperio tirano.",
+        "price": 500,
+        "unlock": {
+            "type": "nivel",
+            "value": 8
+        }
+    },
+    {
         "id": "l9-1",
         "nome": "Bola de neve",
         "img": "Bola_de_neve.png",

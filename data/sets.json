@@ -30,6 +30,7 @@
     "nome": "Ashe",
     "personagens": [
       "ashe_comum",
+      "ashe_contrabandista",
       "ashe_warlock",
       "ashe_dourado",
       "imperatriz_calamidade",
@@ -44,6 +45,7 @@
     "nome": "Baptiste",
     "personagens": [
       "baptiste_comum",
+      "baptiste_cacador",
       "baptiste_dourado"
     ],
     "recompensa": {
@@ -130,6 +132,7 @@
     "nome": "Doomfist",
     "personagens": [
       "doomfist_comum",
+      "doomfist-quebraossos",
       "comandante_ataque",
       "doomfist_dourado",
       "titan_magma"
@@ -201,7 +204,8 @@
       "hanzo_okami",
       "hanzo_dourado",
       "hanzo_legado",
-      "onryo"
+      "onryo",
+      "rebelde_toquio"
     ],
     "recompensa": {
       "pontos": 100
@@ -223,7 +227,8 @@
     "nome": "Illari",
     "personagens": [
       "illari_comum",
-      "illari_dourado"
+      "illari_dourado",
+      "fenix_ascendida"
     ],
     "recompensa": {
       "pontos": 100
@@ -275,6 +280,7 @@
       "kiriko_coracao",
       "kiriko_hashimoto",
       "kiriko_dourado",
+      "kiriko_miaumiau",
       "amateratsu",
       "guardia_espiritual"
     ],
@@ -299,6 +305,7 @@
     "nome": "Lúcio",
     "personagens": [
       "lucio_comum",
+      "lucio_principe_espaco",
       "lucio_hermes",
       "lucio_dourado",
       "lucio_legado"
@@ -480,12 +487,24 @@
       "pontos": 100
     }
   },
-    {
+  {
+    "id": "shion",
+    "nome": "Shion",
+    "personagens": [
+      "shion_comum",
+      "shion_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
     "id": "sierra",
     "nome": "Sierra",
     "personagens": [
       "sierra_comum",
-      "sierra_dourado"
+      "sierra_dourado",
+      "sierra_miaumiau"
     ],
     "recompensa": {
       "pontos": 100
@@ -496,6 +515,7 @@
     "nome": "Sigma",
     "personagens": [
       "sigma_comum",
+      "sigma_scuba",
       "sigma_dourado",
       "imperador_galatico"
     ],
@@ -667,6 +687,7 @@
     "nome": "Wuyang",
     "personagens": [
       "wuyang_comum",
+      "wuyang_piscina",
       "wuyang_dourado"
     ],
     "recompensa": {
@@ -771,7 +792,8 @@
       "genji_comum",
       "hanzo_comum",
       "kiriko_comum",
-      "mizuki_comum"
+      "mizuki_comum",
+      "shion_comum"
     ],
     "recompensa": {
       "pontos": 200
@@ -1003,9 +1025,7 @@
       "juno_comum",
       "sigma_comum",
       "winston_comum",
-      "wrecking_ball_comum",
-      "torbjorn_engenheiro_espacial",
-      "winston_extraterreste"
+      "wrecking_ball_comum"
     ],
     "recompensa": {
       "pontos": 200
@@ -1026,7 +1046,9 @@
     "id": "ferias",
     "nome": "Curtindo o Verão",
     "personagens": [
+      "sigma_scuba",
       "soldado_76_churrasqueiro",
+      "wuyang_piscina",
       "cassidy_salvavidas"
     ],
     "recompensa": {
@@ -1047,6 +1069,21 @@
     }
   },
   {
+    "id": "watchers_rebeldes",
+    "nome": "Watchers Rebeldes",
+    "personagens": [
+      "ashe_contrabandista",
+      "baptiste_cacador",
+      "doomfist-quebraossos",
+      "lucio_principe_espaco",
+      "torbjorn_engenheiro_espacial",
+      "winston_extraterreste"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
     "id": "fogo",
     "nome": "Fogo",
     "personagens": [
@@ -1055,10 +1092,11 @@
       "mauga_comum",
       "ocaso_flamejante",
       "titan_magma",
+      "fenix_ascendida",
       "demonio_aprisionado"
     ],
     "recompensa": {
-      "pontos": 400
+      "pontos": 500
     }
   },
   {
@@ -1248,6 +1286,7 @@
       "reaper_dourado",
       "reinhardt_dourado",
       "roadhog_dourado",
+      "shion_dourado",
       "sierra_dourado",
       "sigma_dourado",
       "sojourn_dourado",
@@ -1269,6 +1308,7 @@
       "pontos": 2000
     }
   },
+
 
   {
     "id": "legado_tanque",
@@ -1329,6 +1369,19 @@
   },
   
   {
+    "id": "ultra_miaumiau",
+    "nome": "Ultra: Café Miau-miau",
+    "personagens": [
+      "sierra_miaumiau",
+      "kiriko_miaumiau"
+    ],
+    "recompensa": {
+      "pontos": 1600
+    }
+  },
+
+
+  {
     "id": "mitico",
     "nome": "Miticos",
     "personagens": [
@@ -1340,6 +1393,7 @@
       "titan_magma",
       "cyber_demonio",
       "onryo",
+      "fenix_ascendida",
       "cyber_combustivel",
       "juno_coracao",
       "amateratsu",
@@ -1371,6 +1425,7 @@
       "rosa_de_chumbo",
       "ocaso_flamejante",
       "sumiichimonji",
+      "rebelde_toquio",
       "atiradora_das_estrelas",
       "guardia_espiritual",
       "magitecnologia_misericordiosa",

@@ -3,16 +3,18 @@
     "id": "watchesrebeldes",
     "nome": "Watchwers Rebeldes",
     "description": "Pacote especial com: Domina dourada, Symmetra dourada e Lifeweaver dourado.",
-    "value": 1,
-    "buy_with_impeto": true,
+    "value": 1000,
+    "buy_with_impeto": false,
     "inicio": "07-01",
     "fim": "07-08",
     "itens": [
-      "domina_dourado",
-      "symmetra_dourado",
-      "lifeweaver_dourado"
+      "ashe_contrabandista",
+      "baptiste_cacador",
+      "doomfist-quebraossos",
+      "torbjorn_engenheiro_espacial",
+      "winston_extraterreste"
     ],
-    "was_points": 500
+    "was_points": 0
   },
   {
     "id": "vishkardourados",
