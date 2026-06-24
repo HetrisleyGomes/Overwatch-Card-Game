@@ -274,7 +274,8 @@ def check_class_and_subclass(classe, subclasse):
         "anti-cura": 0,
         "cura": 0,
         "ataque futuro": 0,
-        "revitalizar": 0
+        "revitalizar": 0,
+        "descuido": 0
     }
     match classe:
         case 'Tanque':
@@ -326,6 +327,9 @@ def check_class_and_subclass(classe, subclasse):
         case 'Coração':
             template['escudo'] += 2
             template['revitalizar'] += 1
+        case 'Cósmico':
+            template['escudo'] += 2
+            template['cura'] += 1
         case 'Fool':
             for i in range(2):
                 a = random.randrange(1,4)
@@ -355,8 +359,8 @@ def check_class_and_subclass(classe, subclasse):
         case 'Perverso':
             template["ataque"] += 2
             template["anti-cura"] += 2
+            template["descuido"] += 2
             template["cura"] = 0
-            template["escudo"] = 0
     return template
 
 @socketio.on("combate_resolver")
@@ -398,7 +402,7 @@ def combate_2(data):
         ataque_futuro = effect_oponent.get("ataque futuro", 0) 
         revitalizar = effect_player.get("revitalizar", 0)
 
-        dano_final = ataque_veloz_recebido + max(0, ataque_recebido - escudo)
+        dano_final = ataque_veloz_recebido + max(0, ataque_recebido - escudo) + effect_player.get("descuido", 0)
         cura_final = max(0, cura - anticura_recebido)
 
         jogador["hp"] -= dano_final

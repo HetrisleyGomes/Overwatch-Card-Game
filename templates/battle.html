@@ -233,6 +233,9 @@ function get_description(cardData){
         case 'Coração':
             text = text + "Classic: Escudo x2, revitalizar";
             break;
+        case 'Cósmico':
+            text = text + "Cósmico: Escudo x2, Cura x1";
+            break;
         case 'Fool':
             text = text + "Fool: 3 pontos aleatórios entre Escudo, Ataque e Cura";
             break;
@@ -252,7 +255,7 @@ function get_description(cardData){
             text = text + "Perigo: Golpe Veloz x1, Ataque futuro x2";
             break;
         case 'Perverso':
-            text = text + "Perverso: Ataque x2, Anti-cura x2, e zera a Cura e Escudo";
+            text = text + "Perverso: Ataque x2, Anti-cura x2, Descuido x2 e zera a Cura";
             break;
     }
 
@@ -750,6 +753,9 @@ async function createEffectsBattleOne(effectsData) {
             } else if (effectName == 'revitalizar'){
                 effectElement.classList.add("ler_tooltip");
                 effectElement.dataset.tooltip = 'A cura será dobrada no próximo turno.';
+            } else if (effectName == 'descuido'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'Se auto infringe dano.';
             }
             effectsP1.appendChild(effectElement);
         }
@@ -764,6 +770,9 @@ async function createEffectsBattleOne(effectsData) {
             } else if (effectName == 'revitalizar'){
                 effectElement.classList.add("ler_tooltip");
                 effectElement.dataset.tooltip = 'A cura será dobrada no próximo turno.';
+            } else if (effectName == 'descuido'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'Se auto infringe dano.';
             }
             effectsP2.appendChild(effectElement);
         }

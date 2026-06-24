@@ -381,6 +381,12 @@ body {
     background: var(--combat-cyan-color);
     box-shadow: 0 0 10px var(--combat-cyan-color);
 }
+
+.descuido {
+    background: var(--notification-color);
+    box-shadow: 0 0 10px var(--notification-color);
+}
+
 @keyframes effectAppear {
     from {
         opacity: 0;
