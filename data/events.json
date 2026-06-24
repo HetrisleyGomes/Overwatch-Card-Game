@@ -4,6 +4,8 @@
     "nome": "Natal!",
     "inicio": "12-19",
     "fim": "12-31",
+    "description": "",
+    "pack_description": "",
     "ativo": false
   },
   {
@@ -11,6 +13,8 @@
     "nome": "Halloween!",
     "inicio": "10-19",
     "fim": "10-31",
+    "description": "",
+    "pack_description": "",
     "ativo": false
   },
   {
@@ -18,6 +22,8 @@
     "nome": "Aniversário Overwatch!",
     "inicio": "05-16",
     "fim": "05-28",
+    "description": "Comemore mais um ano de Overwatch com recompensas especiais e oportunidades únicas para expandir sua coleção.",
+    "pack_description": "Pacote que garante 1 carta especial do evento e 1 carta lendária de Arma Dourada.",
     "ativo": false
   },
   {
@@ -25,6 +31,17 @@
     "nome": "Primeiro de Abril :p",
     "inicio": "04-01",
     "fim": "04-13",
+    "description": "Falas estranhas? Sprites esquisitos? Tudo normal neste evento de primeiro de abril!",
+    "pack_description": "Pacote com uma carta exclusiva de evento.",
+    "ativo": false
+  },
+  {
+    "id": "summergames",
+    "nome": "Jogos de Verão (no inverno)!",
+    "inicio": "07-01",
+    "fim": "07-15",
+    "description": "Aproveite o clima competitivo dos Jogos de Verão e abra pacotes especiais com 5% a mais de chance de obter cartas épicas e lendárias.",
+    "pack_description": "Pacote com 5 cartas variadas, podendo conter cartas comuns, incomuns, épicas ou lendárias.",
     "ativo": false
   }
 ]

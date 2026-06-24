@@ -66,7 +66,7 @@
 
     <div class="battle-div">
         <a href="{{ url_for('combate.buscar_partida') }}">
-            <button class="button">
+            <button class="button tooltipClass" data-tooltip="Entrada apenas para baralhos prontos.">
                 <strong>Duelo</strong>
             </button>
         </a>
@@ -86,6 +86,8 @@
                     </p>
                     <span class="texto">
                         De {{ ev.inicio }} à {{ ev.fim }}
+                        <br/>
+                        {{ ev.description }}
                     </span>
                 </div>
             {% endif %}

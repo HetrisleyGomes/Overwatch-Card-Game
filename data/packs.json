@@ -6,7 +6,7 @@
         { "comum": 80, "incomum": 20 },
         { "comum": 50, "incomum": 40, "epico": 10 },
         { "comum": 20, "incomum": 45, "epico": 30, "lendario": 5 },
-        { "incomum": 15, "epico": 45, "lendario": 40 }
+        { "epico": 50, "ultra": 10,"lendario": 40 }
     ]
   },
   "raro": {
@@ -14,7 +14,7 @@
     "chance": [
       { "incomum": 60, "epico": 40 },
       { "incomum": 10, "epico": 60, "lendario": 30 },
-      { "epico": 20, "lendario": 80 },
+      { "epico": 20, "ultra": 15, "lendario": 65 },
       { "mitico": 100 }
     ]
   },
@@ -29,6 +29,16 @@
     "chance": [
       { "lendario": 100 },
       { "epico": 100 }
+    ]
+  },
+  "summergames": {
+    "cartas_por_pack": 5,
+    "chance": [
+        { "comum": 100 },
+        { "comum": 80, "incomum": 15, "epico": 5 },
+        { "comum": 40, "incomum": 40, "epico": 15, "lendario": 5 },
+        { "comum": 20, "incomum": 35, "epico": 30, "ultra": 5, "lendario": 10 },
+        { "epico": 55, "lendario": 45 }
     ]
   }
 }

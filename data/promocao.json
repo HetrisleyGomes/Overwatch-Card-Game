@@ -1,62 +1,63 @@
 [
   {
-    "id": "promjun01",
-    "nome": "Defensores Hélix: Dourados",
-    "description": "Pacote especial com: Pharah dourada, Sierra dourada e Soldado: 76 dourado.",
+    "id": "watchesrebeldes",
+    "nome": "Watchwers Rebeldes",
+    "description": "Pacote especial com: Domina dourada, Symmetra dourada e Lifeweaver dourado.",
+    "value": 1,
+    "buy_with_impeto": true,
+    "inicio": "07-01",
+    "fim": "07-08",
+    "itens": [
+      "domina_dourado",
+      "symmetra_dourado",
+      "lifeweaver_dourado"
+    ],
+    "was_points": 500
+  },
+  {
+    "id": "vishkardourados",
+    "nome": "Elite Vishkar: Dourados",
+    "description": "Pacote especial com: Domina dourada, Symmetra dourada e Lifeweaver dourado.",
     "value": 600,
     "buy_with_impeto": false,
-    "inicio": "06-01",
-    "fim": "06-10",
+    "inicio": "07-08",
+    "fim": "07-15",
     "itens": [
-      "pharah_dourado",
-      "sierra_dourado",
-      "soldado_76_dourado"
+      "domina_dourado",
+      "symmetra_dourado",
+      "lifeweaver_dourado"
     ],
     "was_points": 0
   },
   {
-    "id": "promjun02",
-    "nome": "Caos em Nova Junkcity: Dourados",
-    "description": "Pacote especial com: Junkrat dourado, Roadhog dourado e Rainha Junker dourada.",
-    "value": 600,
+    "id": "inversowatch",
+    "nome": "Líderes Inversowatch",
+    "description": "Pacote especial com: Arqui-comandante Amari, Doomfist: Comandante de ataque, Reinhardt: Cavaleiro Caído e Widowmaker: Capitã Lacorix.",
+    "value": 800,
     "buy_with_impeto": false,
-    "inicio": "06-10",
-    "fim": "06-20",
+    "inicio": "07-15",
+    "fim": "07-22",
     "itens": [
-      "junkrat_dourado",
-      "hoadhog_dourado",
-      "rainha_junker_dourado"
+      "arqui-comandante_amari",
+      "comandante_ataque",
+      "fallen_knight",
+      "capita_lacroix"
     ],
     "was_points": 0
   },
   {
-    "id": "promjun03",
-    "nome": "Caçada fatal",
-    "description": "Pacote especial com: Cassidy: Van Helsing, Hanzo: Okami, Sombra: Caçadora de demônio e Widowmaker: Caçadora.",
+    "id": "blackwatch",
+    "nome": "Agentes Blackwatch: Dourados",
+    "description": "Pacote especial com: Cassidy dourado, Genji dourado, Moira dourada e Reaper dourado.",
     "value": 300,
     "buy_with_impeto": false,
-    "inicio": "06-20",
-    "fim": "06-30",
+    "inicio": "07-26",
+    "fim": "07-30",
     "itens": [
-      "cassidy_van_helsing",
-      "hanzo_okami",
-      "sombra_cacadora_demonios",
-      "widowmaker_cacadora"
-    ],
-    "was_points": 0
-  },
-  {
-    "id": "promjun04",
-    "nome": "Copa 2026",
-    "description": "Pacote especial de copa homenageando os países cede, com: Sojourn dourada do Canadá, Cassidy dourado dos Estados Unidos e Sombra dourada do México.",
-    "value": 600,
-    "buy_with_impeto": false,
-    "inicio": "06-20",
-    "fim": "07-10",
-    "itens": [
-      "sojourn_dourado",
       "cassidy_dourado",
-      "sombra_dourado"
+      "genji_dourado",
+      "moira_dourado",
+      "reaper_dourado"
     ],
     "was_points": 0
   }

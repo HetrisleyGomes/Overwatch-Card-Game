@@ -112,7 +112,7 @@
                 <div class="item especial">
                     <div class="item_name">Pacote de {{ ev["nome"] }}</div>
                     <div class="item_description">
-                        Pacote com uma carta especial de evento.
+                        {{ ev.pack_description }}
                     </div>
                     <div class="item_button">
                         <button class="button {% if user.pontos < 300 %}desativado{% endif %}"

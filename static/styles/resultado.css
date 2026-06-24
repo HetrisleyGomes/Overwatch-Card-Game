@@ -32,17 +32,21 @@ h1 {
 
 
 .pack.comum {
-    background-color: #2f6fd6;
+    background-color: var(--pack-common-color);
 }
 
 .pack.raro {
-    background-color: #e65022;
+    background-color: var(--pack-rare-color);
 }
 
 /* EVENTOS */
 .pack.april_fools {
     background-color: #e2d667;
     color: var(--main-color);
+}
+
+.pack.summergames {
+    background-color: var(--blue-extra-color);
 }
 
 .pack.natal {
