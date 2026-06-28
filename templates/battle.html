@@ -177,13 +177,19 @@ function get_description(cardData){
     text = "";
     switch (cardData.classe){
         case 'Tanque':
-            text = text + "Tanque: Escudo x2, Ataque x1";
+            text = text + "Tanque: Escudo x2, Ataque x2";
             break;
         case 'Dano':
             text = text + "Dano: Ataque x3";
             break;
         case 'Suporte':
-            text = text + "Suporte: Cura x2";
+            text = text + "Suporte: Ataque x1, Cura x2";
+            break;
+        case 'Defensor':
+            text = text + "Defensor: Escudo x1, Ataque x2";
+            break;
+        case 'Atacante':
+            text = text + "Atacante: Golpe Veloz x1, Ataque x2";
             break;
     }
     text = text + "\n"
@@ -256,6 +262,9 @@ function get_description(cardData){
             break;
         case 'Perverso':
             text = text + "Perverso: Ataque x2, Anti-cura x2, Descuido x2 e zera a Cura";
+            break;
+        case 'Origem':
+            text = text + "Origem: Fortalece os atributos existentes em +2";
             break;
     }
 

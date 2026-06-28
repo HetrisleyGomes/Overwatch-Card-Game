@@ -115,6 +115,17 @@
         }
     },
     {
+        "id": "e-games-1",
+        "nome": "Lucioball",
+        "img": "lucioball.png",
+        "descricao": "Viva o espírito esportivo, e vibre a emoção do Lucioball.",
+        "price": 200,
+        "unlock": {
+            "type": "event",
+            "value": "summergames"
+        }
+    },
+    {
         "id": "e-10-anos",
         "nome": "Decênio",
         "img": "logo_10_anos.png",

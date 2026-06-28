@@ -280,11 +280,19 @@ def check_class_and_subclass(classe, subclasse):
     match classe:
         case 'Tanque':
             template['escudo'] += 2
-            template['ataque'] += 1
+            template['ataque'] += 2
         case 'Dano':
             template['ataque'] += 3
         case 'Suporte':
             template["cura"] += 2
+            template['ataque'] += 1
+        case 'Defensor':
+            template['escudo'] += 1
+            template['ataque'] += 2
+        case 'Atacante':
+            template['ataque'] += 2
+            template["golpe veloz"] += 1
+
 
     match subclasse:
         case 'Incursor':
@@ -361,6 +369,10 @@ def check_class_and_subclass(classe, subclasse):
             template["anti-cura"] += 2
             template["descuido"] += 2
             template["cura"] = 0
+        case 'Origem':
+            template["escudo"] += 2 if template["escudo"] > 0 else 0
+            template["ataque"] += 2 if template["ataque"] > 0 else 0
+            template['cura'] += 2 if template['cura'] > 0 else 0
     return template
 
 @socketio.on("combate_resolver")
