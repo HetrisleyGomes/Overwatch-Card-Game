@@ -30,6 +30,7 @@
     "nome": "Ashe",
     "personagens": [
       "ashe_comum",
+      "ashe_contrabandista",
       "ashe_warlock",
       "ashe_dourado",
       "imperatriz_calamidade",
@@ -44,6 +45,7 @@
     "nome": "Baptiste",
     "personagens": [
       "baptiste_comum",
+      "baptiste_cacador",
       "baptiste_dourado"
     ],
     "recompensa": {
@@ -57,7 +59,8 @@
       "bastion_comum",
       "bastion_null_sector",
       "bastion_kishin",
-      "bastion_dourado"
+      "bastion_dourado",
+      "bastion_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -88,6 +91,7 @@
       "cassidy_van_helsing",
       "cassidy_salvavidas",
       "cassidy_dourado",
+      "cassidy_legado",
       "pistoleiro_divino",
       "ocaso_flamejante"
     ],
@@ -105,6 +109,7 @@
       "dva_comum",
       "dva_chibi",
       "dva_dourado",
+      "dva_legado",
       "horang"
     ],
     "recompensa": {
@@ -127,6 +132,7 @@
     "nome": "Doomfist",
     "personagens": [
       "doomfist_comum",
+      "doomfist-quebraossos",
       "comandante_ataque",
       "doomfist_dourado",
       "titan_magma"
@@ -182,6 +188,7 @@
       "genji_oni",
       "genji_baihu",
       "genji_dourado",
+      "genji_legado",
       "cyber_demonio",
       "sumiichimonji"
     ],
@@ -196,7 +203,9 @@
       "hanzo_comum",
       "hanzo_okami",
       "hanzo_dourado",
-      "onryo"
+      "hanzo_legado",
+      "onryo",
+      "rebelde_toquio"
     ],
     "recompensa": {
       "pontos": 100
@@ -218,7 +227,8 @@
     "nome": "Illari",
     "personagens": [
       "illari_comum",
-      "illari_dourado"
+      "illari_dourado",
+      "fenix_ascendida"
     ],
     "recompensa": {
       "pontos": 100
@@ -242,6 +252,7 @@
       "junkrat_comum",
       "junkrat_junkstein",
       "junkrat_dourado",
+      "junkrat_legado",
       "cyber_combustivel"
     ],
     "recompensa": {
@@ -269,6 +280,7 @@
       "kiriko_coracao",
       "kiriko_hashimoto",
       "kiriko_dourado",
+      "kiriko_miaumiau",
       "amateratsu",
       "guardia_espiritual"
     ],
@@ -293,8 +305,10 @@
     "nome": "Lúcio",
     "personagens": [
       "lucio_comum",
+      "lucio_principe_espaco",
       "lucio_hermes",
-      "lucio_dourado"
+      "lucio_dourado",
+      "lucio_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -320,6 +334,7 @@
     "personagens": [
       "mei_comum",
       "mei_dourado",
+      "mei_legado",
       "pulo_online"
     ],
     "recompensa": {
@@ -336,6 +351,7 @@
       "mercy_sigrun",
       "mercy_vitoria_alada",
       "mercy_dourado",
+      "mercy_legado",
       "vengeance",
       "guardia_celestial",
       "magitecnologia_misericordiosa"
@@ -390,7 +406,8 @@
     "personagens": [
       "pharah_comum",
       "pharah_hades",
-      "pharah_dourado"
+      "pharah_dourado",
+      "pharah_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -432,6 +449,7 @@
       "reaper_comum",
       "reaper_abobora",
       "reaper_dourado",
+      "reaper_legado",
       "anubis",
       "aco_letal"
     ],
@@ -448,6 +466,7 @@
       "reinhardt_minotauro",
       "fallen_knight",
       "reinhardt_dourado",
+      "reinhardt_legado",
       "thor",
       "demonio_aprisionado"
     ],
@@ -461,18 +480,31 @@
     "personagens": [
       "roadhog_comum",
       "roadhog_ciclope",
-      "roadhog_dourado"
+      "roadhog_dourado",
+      "roadhog_legado"
     ],
     "recompensa": {
       "pontos": 100
     }
   },
-    {
+  {
+    "id": "shion",
+    "nome": "Shion",
+    "personagens": [
+      "shion_comum",
+      "shion_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
     "id": "sierra",
     "nome": "Sierra",
     "personagens": [
       "sierra_comum",
-      "sierra_dourado"
+      "sierra_dourado",
+      "sierra_miaumiau"
     ],
     "recompensa": {
       "pontos": 100
@@ -483,6 +515,7 @@
     "nome": "Sigma",
     "personagens": [
       "sigma_comum",
+      "sigma_scuba",
       "sigma_dourado",
       "imperador_galatico"
     ],
@@ -511,6 +544,7 @@
       "soldado_76_churrasqueiro",
       "soldado_76_guarda_infinito",
       "soldado_76_dourado",
+      "soldado_76_legado",
       "voltagem_maxima",
       "libertacao"
     ],
@@ -535,7 +569,8 @@
     "nome": "Symmetra",
     "personagens": [
       "symmetra_comum",
-      "symmetra_dourado"
+      "symmetra_dourado",
+      "symmetra_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -551,7 +586,8 @@
     "personagens": [
       "torbjorn_comum",
       "torbjorn_engenheiro_espacial",
-      "torbjorn_dourado"
+      "torbjorn_dourado",
+      "torbjorn_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -567,6 +603,7 @@
       "tracer_comum",
       "operadora_oxton",
       "tracer_dourado",
+      "tracer_legado",
       "aventureira"
     ],
     "recompensa": {
@@ -607,6 +644,7 @@
       "capita_lacroix",
       "widowmaker_medusa",
       "widowmaker_dourado",
+      "widowmaker_legado",
       "feiticeira",
       "dame_chance"
     ],
@@ -620,7 +658,8 @@
     "personagens": [
       "winston_comum",
       "winston_extraterreste",
-      "winston_dourado"
+      "winston_dourado",
+      "winston_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -648,6 +687,7 @@
     "nome": "Wuyang",
     "personagens": [
       "wuyang_comum",
+      "wuyang_piscina",
       "wuyang_dourado"
     ],
     "recompensa": {
@@ -660,7 +700,8 @@
     "personagens": [
       "zarya_comum",
       "talon_zarya",
-      "zarya_dourado"
+      "zarya_dourado",
+      "zarya_legado"
     ],
     "recompensa": {
       "pontos": 100
@@ -674,6 +715,7 @@
       "zenyatta_cultista",
       "destruidor_z-3n",
       "zenyatta_dourado",
+      "zenyatta_legado",
       "pixiu"
     ],
     "recompensa": {
@@ -750,7 +792,8 @@
       "genji_comum",
       "hanzo_comum",
       "kiriko_comum",
-      "mizuki_comum"
+      "mizuki_comum",
+      "shion_comum"
     ],
     "recompensa": {
       "pontos": 200
@@ -982,9 +1025,7 @@
       "juno_comum",
       "sigma_comum",
       "winston_comum",
-      "wrecking_ball_comum",
-      "torbjorn_engenheiro_espacial",
-      "winston_extraterreste"
+      "wrecking_ball_comum"
     ],
     "recompensa": {
       "pontos": 200
@@ -1005,7 +1046,9 @@
     "id": "ferias",
     "nome": "Curtindo o Verão",
     "personagens": [
+      "sigma_scuba",
       "soldado_76_churrasqueiro",
+      "wuyang_piscina",
       "cassidy_salvavidas"
     ],
     "recompensa": {
@@ -1026,6 +1069,21 @@
     }
   },
   {
+    "id": "watchers_rebeldes",
+    "nome": "Watchers Rebeldes",
+    "personagens": [
+      "ashe_contrabandista",
+      "baptiste_cacador",
+      "doomfist-quebraossos",
+      "lucio_principe_espaco",
+      "torbjorn_engenheiro_espacial",
+      "winston_extraterreste"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
     "id": "fogo",
     "nome": "Fogo",
     "personagens": [
@@ -1034,10 +1092,11 @@
       "mauga_comum",
       "ocaso_flamejante",
       "titan_magma",
+      "fenix_ascendida",
       "demonio_aprisionado"
     ],
     "recompensa": {
-      "pontos": 400
+      "pontos": 500
     }
   },
   {
@@ -1227,6 +1286,7 @@
       "reaper_dourado",
       "reinhardt_dourado",
       "roadhog_dourado",
+      "shion_dourado",
       "sierra_dourado",
       "sigma_dourado",
       "sojourn_dourado",
@@ -1248,7 +1308,79 @@
       "pontos": 2000
     }
   },
+
+
+  {
+    "id": "legado_tanque",
+    "nome": "Legado: Tanques",
+    "personagens": [
+      "dva_legado",
+      "reinhardt_legado",
+      "roadhog_legado",
+      "winston_legado",
+      "zarya_legado"
+    ],
+    "recompensa": {
+      "pontos": 3000
+    }
+  },
+  {
+    "id": "legado_ataque",
+    "nome": "Legado: Atacantes",
+    "personagens": [
+      "cassidy_legado",
+      "genji_legado",
+      "pharah_legado",
+      "reaper_legado",
+      "soldado_76_legado",
+      "tracer_legado"
+    ],
+    "recompensa": {
+      "pontos": 3600
+    }
+  },
+  {
+    "id": "legado_defesa",
+    "nome": "Legado: Defensores",
+    "personagens": [
+      "bastion_legado",
+      "hanzo_legado",
+      "junkrat_legado",
+      "mei_legado",
+      "torbjorn_legado",
+      "widowmaker_legado"
+    ],
+    "recompensa": {
+      "pontos": 3600
+    }
+  },
+  {
+    "id": "legado_suporte",
+    "nome": "Legado: Suportes",
+    "personagens": [
+      "lucio_legado",
+      "mercy_legado",
+      "symmetra_legado",
+      "zenyatta_legado"
+    ],
+    "recompensa": {
+      "pontos": 2400
+    }
+  },
   
+  {
+    "id": "ultra_miaumiau",
+    "nome": "Ultra: Café Miau-miau",
+    "personagens": [
+      "sierra_miaumiau",
+      "kiriko_miaumiau"
+    ],
+    "recompensa": {
+      "pontos": 1600
+    }
+  },
+
+
   {
     "id": "mitico",
     "nome": "Miticos",
@@ -1261,6 +1393,7 @@
       "titan_magma",
       "cyber_demonio",
       "onryo",
+      "fenix_ascendida",
       "cyber_combustivel",
       "juno_coracao",
       "amateratsu",
@@ -1292,6 +1425,7 @@
       "rosa_de_chumbo",
       "ocaso_flamejante",
       "sumiichimonji",
+      "rebelde_toquio",
       "atiradora_das_estrelas",
       "guardia_espiritual",
       "magitecnologia_misericordiosa",

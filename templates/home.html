@@ -7,9 +7,9 @@
     <div class="packs" id="packs-container">
         {% if user.packs_diarios_abertos > 0 or user.packs_comprados_comum > 0 %}
             {% if user.packs_diarios_abertos == 2 %}
-                <div class="common pack" data-tooltip="5 cartas"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy"></div>
+                <div class="common pack tooltipClass" data-tooltip="5 cartas"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy"></div>
             {% endif %}
-            <div class="common pack" data-tooltip="5 cartas">
+            <div class="common pack tooltipClass" data-tooltip="5 cartas">
                 <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy">
                 {% if user.packs_comprados_comum > 0 %}    
                     <div class="bolinha-vermelha">{{ user.packs_comprados_comum }}</div>
@@ -17,7 +17,7 @@
             </div>
         {% endif %}
         {% if user.contador_packs_comuns == 10 or user.packs_comprados_raro > 0 %}
-            <div class="rare pack" data-tooltip="4 cartas, 1 mítica garantida">
+            <div class="rare pack tooltipClass" data-tooltip="4 cartas, 1 mítica garantida">
                 <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy">
                 {% if user.packs_comprados_raro > 0 %}
                     <div class="bolinha-vermelha">{{ user.packs_comprados_raro }}</div>
@@ -30,7 +30,7 @@
             </span>
         {% endif %}
         {% if ev and user.packs_evento > 0 %}
-            <div class="event pack {{ ev.id }}" data-tooltip="Cartas sortidas do evento">
+            <div class="event pack tooltipClass {{ ev.id }}" data-tooltip="Cartas sortidas do evento">
                 <span>{{ ev["nome"] }}</span><br>
                 <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy">
                 {% if user.packs_evento > 1 %}    
@@ -66,7 +66,7 @@
 
     <div class="battle-div">
         <a href="{{ url_for('combate.buscar_partida') }}">
-            <button class="button">
+            <button class="button tooltipClass" data-tooltip="Entrada apenas para baralhos prontos.">
                 <strong>Duelo</strong>
             </button>
         </a>
@@ -86,6 +86,8 @@
                     </p>
                     <span class="texto">
                         De {{ ev.inicio }} à {{ ev.fim }}
+                        <br/>
+                        {{ ev.description }}
                     </span>
                 </div>
             {% endif %}
@@ -107,6 +109,17 @@
                 {% endfor %}
             {% endif %}
 
+            {% if vault %}
+                <div class="aside-box">
+                    <p class="title">
+                        Cofre do Maximilien disponível
+                    </p>
+                    <span class="texto">
+                       Maximilien está de volta, trazendo consigo um novo lote de cartas Míticas e Legado exclusivas. Não perca a oportunidade de adicioná-las à sua coleção. Disponível até {{ vault_data[0] }}.
+                    </span>
+                </div>
+            {% endif %}
+
             <div class="aside-box">
                 <p class="title">
                     Pacote Raro
@@ -122,12 +135,24 @@
                     Bônus semanal
                 </p>
                 <span class="texto">
-                {% if user.streak <= 21 %}
-                    A cada uma semana, consiga 4 pacotes comuns!
-                {% elif user.streak <= 49 %}
-                    A cada uma semana, consiga 3 pacotes raros!
+                {% if semana == 0 %}
+                    Consiga 2 pacotes comuns e 100 pontos ao completar essa semana!
+                {% elif semana == 1 %}
+                    Consiga 3 pacotes comuns e 250 pontos ao completar essa semana!
+                {% elif semana == 2 %}
+                    Consiga 3 pacotes comuns e 500 pontos ao completar essa semana!
+                {% elif semana == 3 %}
+                    Consiga 1 pacote raro e 1 ponto de Ímpeto ao completar essa semana!
+                {% elif semana == 4 %}
+                    Consiga 2 pacotes raros e 1 ponto de Ímpeto ao completar essa semana!
+                {% elif semana == 5 %}
+                    Consiga 3 pacotes raros e 2 pontos de Ímpeto ao completar essa semana!
+                {% elif semana == 6 %}
+                    Consiga 4 pacotes raros e 2 pontos de Ímpeto ao completar essa semana!
+                {% elif semana == 7 %}
+                    Consiga 4 pacotes raros e 3 pontos de Ímpeto ao completar essa semana!
                 {% else %}
-                    A cada uma semana, consiga 6 pacotes raros!
+                    Consiga 5 pontos de Ímpeto ao completar essa semana!
                 {% endif %}
                 <br>
                 > Dias de sequência: {{ user.streak }}.
@@ -139,7 +164,7 @@
                 <p class="title">
                     v.{{ log.version }} Data: {{ log.date }}
                 </p>
-                <span class="texto">
+                <span class="texto" style="white-space: pre-line;">
                     {{ log.description }}
                 </span>
             </div>

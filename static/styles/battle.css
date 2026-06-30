@@ -362,6 +362,31 @@ body {
     box-shadow: 0 0 10px var(--combat-green-color);
 }
 
+.futuro {
+    background: var(--combat-dark_red-color);
+    box-shadow: 0 0 10px var(--combat-dark_red-color);
+}
+
+.anti-cura {
+    background: var(--combat-purple-color);
+    box-shadow: 0 0 10px var(--combat-purple-color);
+}
+
+.veloz {
+    background: var(--combat-yellow-color);
+    box-shadow: 0 0 10px var(--combat-yellow-color);
+}
+
+.revitalizar {
+    background: var(--combat-cyan-color);
+    box-shadow: 0 0 10px var(--combat-cyan-color);
+}
+
+.descuido {
+    background: var(--notification-color);
+    box-shadow: 0 0 10px var(--notification-color);
+}
+
 @keyframes effectAppear {
     from {
         opacity: 0;

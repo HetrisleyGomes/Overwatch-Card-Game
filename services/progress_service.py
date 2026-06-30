@@ -22,9 +22,8 @@ def registry_cards(conn, cartas, rarity, user):
 
     # Registra as cartas
     personagens_set = ctll.get_all_cards_id(user['id'])
-
     for c in cartas:
-        cid = c["id"]
+        cid = c["id"] if c.get("id") else c["carta_id"]
         if cid not in personagens_set:
             personagens_set.append(cid)
             ctll.set_card(user['id'], cid)

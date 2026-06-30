@@ -47,11 +47,13 @@ def abrir_pack(tipo_pack):
 def abrir_pack_evento(id_evento):
     personagens = get_characters()
 
-    personagens_filtrados = [
-        p for p in personagens
-        if p.get("evento") in [id_evento]
-    ]
-
+    if id_evento != "summergames":
+        personagens_filtrados = [
+            p for p in personagens
+            if p.get("evento") in [id_evento]
+        ]
+    else:
+        personagens_filtrados = [p for p in personagens if p.get("evento") is None]
     golden = []
     if id_evento == "aniversary":
         golden = [
@@ -86,7 +88,6 @@ def abrir_pack_evento(id_evento):
 
             carta = random.choice(possiveis)
             carta["is_evento"] = id_evento
-
-        cartas.append(carta)
+            cartas.append(carta)
 
     return cartas

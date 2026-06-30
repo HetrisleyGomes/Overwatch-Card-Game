@@ -58,6 +58,7 @@
     width: 100vw;
     height: 10vh;
     bottom: 0;
+    z-index: 3;
 }
 
 .button {

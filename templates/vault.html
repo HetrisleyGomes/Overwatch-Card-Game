@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% block centro %}
+<link rel="stylesheet" href="../static/styles/vault.css">
+<!-- CENTRO -->
+<style>
+
+</style>
+<div class="main">
+    <h1 class="title oblique">Cofre do Maximilien</h1>
+    <h3 class="subtitle">Termina em {{ vault_data[1] }} dia{% if vault_data[1] > 1 %}s{% endif %}
+    </h3>
+    
+    <div class="cards-display">
+        {% for carta in cartas %}
+            <div class="card-slot {{ carta.raridade }}">
+                <div class="card-area">
+                    <img class="img-card" src="{{ url_for('static', filename='images/' + carta.carta_img) }}" alt="{{ carta.carta_nome}}">
+                </div>
+                <div class="carta_raridade {{ carta.raridade }}">{{ carta['raridade']}}</div>
+                <div class="carta_nome">{{ carta['carta_nome']}}</div>
+                <div class="button-area">
+                    {% set desativado = user.pontos < 1000 or carta.has_purshased %}
+                    <button class="button item_button {% if desativado %}desativado{% endif %}"
+                        {% if desativado %}disabled{% endif %}
+                    onclick="comprarCartaVault('{{ carta.carta_id }}')">
+                    {% if carta.has_purshased %}
+                        Comprado
+                    {% else %}
+                        1000 Pontos
+                    {% endif %}
+                    </button>
+                </div>
+            </div>
+        {% endfor %}
+    
+    </div>
+
+    <div class="max-img">
+        <img src="{{ url_for('static', filename='extras/Maximilien.png') }}" alt="Maximilien" class="max tooltipClass" data-tooltip="Bem-vindo ao meu cofre!">
+        <div class="max-shadow"></div>
+    </div>
+</div>
+
+
+<script>
+function comprarCartaVault(id) {
+    const btn = event.target;
+
+    if (btn.disabled) return;
+    
+    fetch("/comprar-carta-vault", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ id: id })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.msg);
+            location.reload();
+
+            // 🔥 atualizar UI sem reload
+            atualizarPontos(data.pontos);
+        } else {
+            alert(data.erro);
+        }
+    });
+};
+</script>
+{% endblock %}

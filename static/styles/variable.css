@@ -18,10 +18,12 @@
 
   --comum-rarity:#121213;
   --incomum-rarity: #808080;
-  --epico-rarity: silver;
+  --epico-rarity: #c0c0c0;
   --lendario-rarity: #b99f07;
-  --mitico-rarity: #800080;
+  --mitico-rarity: linear-gradient(45deg, #c1269a, #ffc0cb, #01a1c1, #c1269a);
   --event-rarity: #9370d8;
+  --legado-rarity: #009529;
+  --ultra-rarity: #ff1c00;
 
   --blue-extra-color: #87cefa; 
   --green-extra-color: #008000;
@@ -31,7 +33,11 @@
   --combat-red-color: #d64545;
   --combat-blue-color: #4a8dff;
   --combat-green-color: #4fd67a;
-
+  --combat-purple-color: #8c4be8;
+  --combat-yellow-color: #ffcf33;
+  --combat-dark_red-color: #8b2f4d;
+  --combat-cyan-color: #43d9e8;
+  
 }
 
 @font-face {
@@ -51,6 +57,7 @@ body {
     font-family: "Big Noodle Titling";
     font-size: 20px;
     background-color: #d9e1e8;
+    overflow-x: hidden;
 }
 button, a {
     font-family: "Big Noodle Titling";
@@ -64,6 +71,12 @@ img{
 }
 .oblique {
     font-family: "Big Noodle Titling Oblique";
+}
+
+.teste {
+    background: linear-gradient(#01c19d, #dddddd, #c1269a);
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
 }
 
 #global-tooltip {

@@ -36,7 +36,7 @@ def buscar_partida():
         return "Erro ao conectar ao banco de dados.", 500
     deck = get_deck(connection)
     if len(deck) < 12:
-        return redirect(url_for("combate.home"))
+        return redirect(url_for("main.home"))
 
     user_id = session["usuario_id"]
 
@@ -124,9 +124,6 @@ def leave_room_handler(data):
 @combate.route("/battle/<room_id>")
 def battle(room_id):
     room = salas.get(room_id)
-    gs = room.get("game_state")
-    if gs:
-        return redirect(url_for("combate.home"))
     
     connection = get_db_connection()
     if connection is None:
@@ -250,7 +247,9 @@ def select_card(data):
 
     if len(room["selected_cards"]) == 2:
         combate_1(room_id,room)
+        
 
+# COMBATE =========================================================================
 def combate_1(room_id, room):
     jogadores = room["jogadores"]
     selected_cards = room["selected_cards"]
@@ -269,18 +268,111 @@ def combate_1(room_id, room):
 
 def check_class_and_subclass(classe, subclasse):
     template = {
+        "golpe veloz": 0,
         "escudo": 0,
         "ataque": 0,
-        "cura": 0
+        "anti-cura": 0,
+        "cura": 0,
+        "ataque futuro": 0,
+        "revitalizar": 0,
+        "descuido": 0
     }
     match classe:
         case 'Tanque':
             template['escudo'] += 2
-            template['ataque'] += 1
+            template['ataque'] += 2
         case 'Dano':
             template['ataque'] += 3
         case 'Suporte':
             template["cura"] += 2
+            template['ataque'] += 1
+        case 'Defensor':
+            template['escudo'] += 1
+            template['ataque'] += 2
+        case 'Atacante':
+            template['ataque'] += 2
+            template["golpe veloz"] += 1
+
+
+    match subclasse:
+        case 'Incursor':
+            template["golpe veloz"] += 2
+            template["ataque"] += 1
+        case 'Combatente':
+            template["ataque"] += 3
+        case 'Robusto':
+            template['escudo'] += 3
+
+        case 'Especialista':
+            template["anti-cura"] += 2
+        case 'Artilharia':
+            template["ataque"] += 2
+        case 'Flanco':
+            template["golpe veloz"] += 2
+        case 'Reconhecimento':
+            template["golpe veloz"] += 1
+            template["ataque"] += 1
+
+        case 'Tático':
+            template["anti-cura"] += 3
+        case 'Socorrista':
+            template["cura"] += 3
+        case 'Sobrevivente':
+            template["ataque"] += 2
+            template["cura"] += 1
+
+
+        case 'Campeão':
+            template["escudo"] += 2
+            template["ataque"] += 1
+        case 'Caçador':
+            template["ataque futuro"] += 1
+            template["anti-cura"] += 2
+        case 'Classic':
+            template["escudo"] += 1
+            template["ataque"] += 1
+            template['cura'] += 1
+        case 'Coração':
+            template['escudo'] += 2
+            template['revitalizar'] += 1
+        case 'Cósmico':
+            template['escudo'] += 2
+            template['cura'] += 1
+        case 'Fool':
+            for i in range(2):
+                a = random.randrange(1,4)
+                if a == 1:
+                    template["escudo"] += 1
+                elif a == 2:
+                    template["ataque"] += 1
+                else:
+                    template['cura'] += 1
+        case 'Férias':
+            template["ataque"] += 1
+            template["revitalizar"] += 1
+        case 'Guerreiro':
+            template["escudo"] += 1
+            template["ataque"] += 2
+        case 'Mirror':
+            re, rd, rc = template["escudo"], template["ataque"], template['cura']
+            template["escudo"] += rc
+            template["ataque"] += re
+            template['cura'] += rd
+        case 'Monstro':
+            template["escudo"] -= 1 if template["escudo"] > 1 else 0
+            template["ataque"] += 3
+        case 'Perigo':
+            template["golpe veloz"] += 1
+            template["ataque futuro"] += 2
+        case 'Perverso':
+            template["ataque"] += 2
+            template["anti-cura"] += 2
+            template["descuido"] += 2
+            template["cura"] = 0
+        case 'Origem':
+            template["escudo"] += 2 if template["escudo"] > 0 else 0
+            template["ataque"] += 2 if template["ataque"] > 0 else 0
+            template['cura'] += 2 if template['cura'] > 0 else 0
     return template
 
 @socketio.on("combate_resolver")
@@ -290,6 +382,11 @@ def combate_2(data):
     jogadores = room["jogadores"]
     effects = room["battle_effects"]
     changes = {}
+
+    if "battle_continue" not in room:
+        room["battle_continue"] = {}
+
+    continuo = room.get("battle_continue", {})
 
     for jogador in jogadores:
         player_id = jogador["id"]
@@ -303,16 +400,25 @@ def combate_2(data):
             ),
             None
         )
+        efeitos = continuo.get(player_id, {})
+        af = efeitos.get("ataque_futuro", 0)
+        rev = efeitos.get("revitalizar", 0)
 
         if not effect_oponent:
             continue
-        ataque_recebido = effect_oponent.get("ataque", 0)
+        ataque_veloz_recebido = effect_oponent.get("golpe veloz", 0)
+        ataque_recebido = effect_oponent.get("ataque", 0) + af
+        anticura_recebido = effect_oponent.get("anti-cura", 0)
         escudo = effect_player.get("escudo", 0)
-        cura = effect_player.get("cura", 0)
-        dano = max(0, ataque_recebido - escudo)
+        cura = effect_player.get("cura", 0) * 2 if rev > 0 else effect_player.get("cura", 0)
+        ataque_futuro = effect_oponent.get("ataque futuro", 0) 
+        revitalizar = effect_player.get("revitalizar", 0)
 
-        jogador["hp"] -= dano
-        jogador["hp"] += cura
+        dano_final = ataque_veloz_recebido + max(0, ataque_recebido - escudo) + effect_player.get("descuido", 0)
+        cura_final = max(0, cura - anticura_recebido)
+
+        jogador["hp"] -= dano_final
+        jogador["hp"] += cura_final
 
         if jogador["hp"] > 20:
             jogador["hp"] = 20
@@ -322,12 +428,12 @@ def combate_2(data):
         if vida_inicial > jogador["hp"]:
             changes[player_id] = {
                 "type": "damaged",
-                "value": max(0, dano - cura)
+                "value": max(0, dano_final - cura_final)
             }
         elif vida_inicial < jogador["hp"]:
             changes[player_id] = {
                 "type": "healed",
-                "value": max(0, cura - dano)
+                "value": max(0, cura_final - dano_final)
             }
         else:
             changes[player_id] = {
@@ -335,6 +441,12 @@ def combate_2(data):
                 "value": 0
             }
 
+        room["battle_continue"][player_id] = {
+            "ataque_futuro": ataque_futuro,
+            "revitalizar": revitalizar
+        }
+        room["atum"] = [ataque_futuro, revitalizar]
+        
     finalize_battle(room)
     room["game_state"]["phase"] = "battle_resolve"
     emit("battle_phase_two", {
@@ -343,6 +455,8 @@ def combate_2(data):
         "changes": changes,
     }, to=room_id)
 
+
+# END COMBATE ======================================================================
 @socketio.on("end_turn")
 def fim_de_turno(data):
     room_id = data["room_id"]
@@ -350,9 +464,7 @@ def fim_de_turno(data):
     game_state = room["game_state"]
     jogadores = room["jogadores"]
 
-    # =========================
     # VERIFICAR DERROTA POR HP
-    # =========================
     losers = [p for p in jogadores if p["hp"] <= 0]
     room["finished"] = True
     if len(losers) == 2:
@@ -389,9 +501,8 @@ def fim_de_turno(data):
                 "winner_id": winner["id"]
             }, to=room_id)
         return
-    # =========================
+
     # PRÓXIMA RODADA
-    # =========================
     room["finished"] = False
     game_state["round"] += 1
     game_state["phase"] = "draw"
@@ -444,7 +555,41 @@ def finalize_battle(room):
     
     room["selected_cards"] = {}
 
-# Paginas de fim de batalha ==========================
+@socketio.on("time_out")
+def time_out(data):
+    room_id = data["room_id"]
+    user_id = data["user_id"]
+
+    room = salas.get(room_id)
+    if not room:
+        return
+
+    room.setdefault("timeouts", {})
+    room["timeouts"][user_id] = True
+
+
+    timeouts = room.get("timeouts", {})
+    if len(timeouts) < 2:
+        return
+    
+    selected = room.get("selected_cards", {})
+    jogadores = [j["id"] for j in room["jogadores"]]
+
+    p1 = jogadores[0]
+    p2 = jogadores[1]
+
+    p1_escolheu = p1 in selected
+    p2_escolheu = p2 in selected
+
+    if not p1_escolheu and not p2_escolheu:
+        emit("empate", to=room_id)
+    elif not p1_escolheu:
+        emit("victory", {"winner_id": p2}, to=room_id)
+    elif not p2_escolheu:
+        emit("victory", {"winner_id": p1}, to=room_id)
+
+
+# Paginas de fim de batalha =================================================
 @combate.route("/set-battle-result", methods=["POST"])
 def set_battle_result():
     data = request.get_json()
@@ -457,7 +602,7 @@ def set_battle_result():
 @combate.route("/battle/finally")
 def battle_victory():
     if not session.get("battle_result"):
-        return redirect(url_for("combate.home"))
+        return redirect(url_for("main.home"))
 
     result = session.pop("battle_result", None)
     winner_id = session.pop("winner_id", None)

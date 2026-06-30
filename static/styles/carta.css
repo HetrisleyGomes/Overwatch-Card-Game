@@ -65,6 +65,14 @@
 .tanque .card-texto, .tanque .card-nome {
     background-color: var(--tanque-type);
 }
+
+.atacante .card-texto, .atacante .card-nome {
+    background-color: var(--pack-rare-color);
+}
+.defensor .card-texto, .defensor .card-nome {
+    background-color: var(--blue-extra-color);
+}
+
 .comum {
     border-color: var(--comum-rarity);
 }
@@ -77,8 +85,11 @@
 .lendario {
     border-color: var(--lendario-rarity);
 }
+.legado {
+    border-color: var(--legado-rarity);
+}
 .mitico {
-    border-image: linear-gradient(45deg, purple, pink, blue, purple) 1;
+    border-image: var(--mitico-rarity) 1;
     animation: glow 2s infinite alternate;
 }
 .april_fools, .aniversary {

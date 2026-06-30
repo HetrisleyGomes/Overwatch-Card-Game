@@ -47,15 +47,33 @@ def get_streak_bonus(user):
     """
     streak = user["streak"]
     semanas = streak / 7
-    if semanas < 4:
-        user["packs_comprados_comum"] += 4
-    elif semanas < 8:
-        user["packs_comprados_raro"] += 3
-        user["impetos"] += 1
-    else:
-        user["packs_comprados_raro"] += 6
-        user["impetos"] += 2
-
+    match semanas:
+        case 1:
+            user["packs_comprados_comum"] += 2
+            user["pontos"] += 100
+        case 2:
+            user["packs_comprados_comum"] += 3
+            user["pontos"] += 250
+        case 3:
+            user["packs_comprados_comum"] += 4
+            user["pontos"] += 500
+        case 4:
+            user["packs_comprados_raro"] += 1
+            user["impetos"] += 1
+        case 5:
+            user["packs_comprados_raro"] += 2
+            user["impetos"] += 1
+        case 6:
+            user["packs_comprados_raro"] += 3
+            user["impetos"] += 2
+        case 7:
+            user["packs_comprados_raro"] += 4
+            user["impetos"] += 2
+        case 8:
+            user["packs_comprados_raro"] += 4
+            user["impetos"] += 3
+        case _:
+            user["impetos"] += 5
 
 # XP e Nivel ===========================
 def sum_xp(user, xp):

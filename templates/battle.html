@@ -102,12 +102,19 @@ const hp2 = document.getElementById('hp-p2');
 const tooltip = document.getElementById("global-tooltip");
 const fase = document.getElementById("phase-view");
 
+// TIMER
+let timerValue = 30;
+let timerInterval = null;
+let playerReady = false;
+const timerElement = document.getElementById("timer");
+
 function initializeTooltips() {
     document.addEventListener("mousemove", (e) => {
         const card = e.target.closest(".card");
         const hpbar1 = e.target.closest(".player-left");
         const hpbar2 = e.target.closest(".player-right");
-        if ((!card || !card.dataset.tooltip) && !hpbar1 && !hpbar2) {
+        const ler_tooltip = e.target.closest(".ler_tooltip");
+        if ((!card || !card.dataset.tooltip) && !hpbar1 && !hpbar2 && !ler_tooltip) {
             tooltip.classList.remove("show");
             return;
         } 
@@ -118,6 +125,8 @@ function initializeTooltips() {
             tooltip.innerHTML = jogador_1['hp']+"/20";
         } else if (hpbar2) {
             tooltip.innerHTML = jogador_2['hp']+"/20";
+        } else if (ler_tooltip) {
+            tooltip.innerHTML = ler_tooltip.dataset.tooltip
         }
         
         tooltip.style.left = `${e.clientX + 16}px`;
@@ -147,6 +156,7 @@ async function gameFlow() {
             });
         };
     } else if (game_state['phase'] == "choose" || game_state['phase'] == "fist_choose") {
+        startCrono();
         enableCardSelection();
     } else if (game_state['phase'] == "battle" && game_state.host == userId) {
         socket.emit("combate_resolver", {
@@ -167,15 +177,97 @@ function get_description(cardData){
     text = "";
     switch (cardData.classe){
         case 'Tanque':
-            text = text + "Escudo x2, Ataque x1";
+            text = text + "Tanque: Escudo x2, Ataque x2";
             break;
         case 'Dano':
-            text = text + "Ataque x3";
+            text = text + "Dano: Ataque x3";
             break;
         case 'Suporte':
-            text = text + "Cura x2";
+            text = text + "Suporte: Ataque x1, Cura x2";
+            break;
+        case 'Defensor':
+            text = text + "Defensor: Escudo x1, Ataque x2";
+            break;
+        case 'Atacante':
+            text = text + "Atacante: Golpe Veloz x1, Ataque x2";
             break;
     }
+    text = text + "\n"
+    switch (cardData.subclasse){
+        case 'Incursor':
+            text = text + "Incursor: Golpe Veloz x2, Ataque x1";
+            break;
+        case 'Combatente':
+            text = text + "Combatente: Ataque x3";
+            break;
+        case 'Robusto':
+            text = text + "Robusto: Escudo x3";
+            break;
+
+        case 'Especialista':
+            text = text + "Especialista: Anti-cura x2";
+            break;
+        case 'Artilharia':
+            text = text + "Artilharia: Ataque x2";
+            break;
+        case 'Flanco':
+            text = text + "Flanco: Golpe veloz x2";
+            break;
+        case 'Reconhecimento':
+            text = text + "Reconhecimento: Golpe veloz x1, Ataque x1";
+            break;
+
+        case 'Tático':
+            text = text + "Tático: Anti-cura x3";
+            break;
+        case 'Socorrista':
+            text = text + "Socorrista: Cura x3";
+            break;
+        case 'Sobrevivente':
+            text = text + "Sobrevivente: Ataque x2, e Cura x1";
+            break;
+
+        case 'Campeão':
+            text = text + "Campeão: Escudo x2, Ataque x1";
+            break;
+        case 'Caçador':
+            text = text + "Caçador: Ataque futuro x1, Anti-cura x2";
+            break;
+        case 'Classic':
+            text = text + "Classic: Escudo, Ataque e Cura x1";
+            break;
+        case 'Coração':
+            text = text + "Classic: Escudo x2, revitalizar";
+            break;
+        case 'Cósmico':
+            text = text + "Cósmico: Escudo x2, Cura x1";
+            break;
+        case 'Fool':
+            text = text + "Fool: 3 pontos aleatórios entre Escudo, Ataque e Cura";
+            break;
+        case 'Férias':
+            text = text + "Férias: Ataque x1, revitalizar";
+            break;
+        case 'Guerreiro':
+            text = text + "Guerreiro: Escudo x1, Ataque x2";
+            break;
+        case 'Mirror':
+            text = text + "Mirror: Transforma cura em Escudo, escudo em Ataque, e ataque em Cura";
+            break;
+        case 'Monstro':
+            text = text + "Monstro: Escudo -1, Ataque x3";
+            break;
+        case 'Perigo':
+            text = text + "Perigo: Golpe Veloz x1, Ataque futuro x2";
+            break;
+        case 'Perverso':
+            text = text + "Perverso: Ataque x2, Anti-cura x2, Descuido x2 e zera a Cura";
+            break;
+        case 'Origem':
+            text = text + "Origem: Fortalece os atributos existentes em +2";
+            break;
+    }
+
     text = text + "."
     return text
 }
@@ -224,6 +316,8 @@ function enableCardSelection() {
 
             card.classList.add("selected");
 
+            stopCrono();
+
             // enviar ao backend
             socket.emit("select_card", {
                 room_id: game_state.room_id,
@@ -260,6 +354,7 @@ socket.on("game_state", async (data) => {
 socket.on("battle_phase_one", async (data) => {
     game_state.phase = data.game_state_phase;
     start_turn();
+    resetCrono();
     await startBattleAnimation(data.selected_cards);
     await createEffectsBattleOne(data.result_values);
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -292,7 +387,7 @@ socket.on("end_turn", async (data) => {
 });
 
 socket.on("enemy_disconnect", () => {
-    alert("Seu adversário desconectou!");
+    alert("Seu adversário não respondeu a tempo ou desconectou!");
     fetch("/set-battle-result", {
         method: "POST",
         headers: {
@@ -660,16 +755,34 @@ async function createEffectsBattleOne(effectsData) {
         // PLAYER
         if (myEffectsArray[i]) {
             const [effectName, amount] = myEffectsArray[i];
-            const effectElement =
-                createEffectElement(effectName, amount);
+            const effectElement = createEffectElement(effectName, amount);
+            if (effectName == 'ataque futuro'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'Receberá Ataque x1 no próximo turno.';
+            } else if (effectName == 'revitalizar'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'A cura será dobrada no próximo turno.';
+            } else if (effectName == 'descuido'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'Se auto infringe dano.';
+            }
             effectsP1.appendChild(effectElement);
         }
 
         // OPONENTE
         if (enemyEffectsArray[i]) {
             const [effectName, amount] = enemyEffectsArray[i];
-            const effectElement =
-                createEffectElement(effectName, amount);
+            const effectElement = createEffectElement(effectName, amount);
+            if (effectName == 'ataque futuro'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'Receberá Ataque x1 no próximo turno.';
+            } else if (effectName == 'revitalizar'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'A cura será dobrada no próximo turno.';
+            } else if (effectName == 'descuido'){
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = 'Se auto infringe dano.';
+            }
             effectsP2.appendChild(effectElement);
         }
 
@@ -708,6 +821,38 @@ function showBattleChange(targetElement, changeData) {
     }, 1000);
 };
 
+// TIMER ==============
+function startCrono() {
+    playerReady = false;
+    timerValue = 30;
+
+    timerElement.textContent = timerValue;
+    clearInterval(timerInterval);
+
+    timerInterval = setInterval(() => {
+        timerValue--;
+        timerElement.textContent = timerValue;
+        if (timerValue <= 0) {
+            clearInterval(timerInterval);
+            socket.emit("time_out", {
+                room_id: game_state.room_id,
+                user_id: userId,
+                has_selected: playerReady
+            });
+        }
+    }, 1000);
+}
+
+function stopCrono() {
+    playerReady = true;
+}
+
+function resetCrono() {
+    clearInterval(timerInterval);
+    timerValue = 30;
+    playerReady = false;
+    timerElement.textContent = "30";
+}
 // JOGO ==================
 socket.emit("join_room", {
     room_id: game_state.room_id,
