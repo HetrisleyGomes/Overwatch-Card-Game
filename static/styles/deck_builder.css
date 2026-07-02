@@ -157,6 +157,12 @@
 .tanque {
     background-color: #1f3f7a;
 }
+.atacante {
+    background-color: var(--pack-rare-color);
+}
+.defensor {
+    background-color: var(--blue-extra-color);
+}
 
 /* RESPONSIVO */
 @media (max-width: 768px) {

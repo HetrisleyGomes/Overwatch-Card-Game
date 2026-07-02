@@ -253,7 +253,12 @@ body {
 .tanque .card-texto, .tanque .card-nome {
     background-color: var(--tanque-type);
 }
-
+.atacante .card-texto, .atacante .card-nome {
+    background-color: var(--pack-rare-color);
+}
+.defensor .card-texto, .defensor .card-nome {
+    background-color: var(--blue-extra-color);
+}
 /* Borda das cartas */
 .comum {
     border-color: var(--comum-rarity);
@@ -266,6 +271,9 @@ body {
 }
 .lendario {
     border-color: var(--lendario-rarity);
+}
+.ultra {
+    border-color: var(--ultra-rarity);
 }
 .mitico {
     border-image: linear-gradient(45deg, purple, pink, blue, purple) 1;

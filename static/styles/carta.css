@@ -85,6 +85,9 @@
 .lendario {
     border-color: var(--lendario-rarity);
 }
+.ultra {
+    border-color: var(--ultra-rarity);
+}
 .legado {
     border-color: var(--legado-rarity);
 }
