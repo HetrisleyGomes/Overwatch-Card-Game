@@ -75,6 +75,8 @@ def rarity_convert(rarity):
             return 4
         case "lendario":
             return 6
+        case "ultra":
+            return 8
         case "mitico":
             return 10
         case "especial":
@@ -91,6 +93,8 @@ def get_xp_calc(rarity, pack_rarity):
             value = 3
         case "lendario":
             value = 4
+        case "ultra":
+            value = 5
         case "mitico":
             value = 5
         case _:

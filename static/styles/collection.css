@@ -108,10 +108,10 @@
 
 .raridade.comum { background: var(--comum-rarity); }
 .raridade.incomum { background: var(--incomum-rarity); }
-.raridade.epico { background-color: var(--epico-rarity); }
+.raridade.epico { background: var(--epico-rarity); }
 .raridade.lendario { background: var(--lendario-rarity); }
-.raridade.ultra {border-color: var(--ultra-rarity);w }
-.raridade.legado { background-color: var(--legado-rarity); }
+.raridade.ultra { background: var(--ultra-rarity); }
+.raridade.legado { background: var(--legado-rarity); }
 .raridade.mitico { background: var(--mitico-rarity); ;
 }
 

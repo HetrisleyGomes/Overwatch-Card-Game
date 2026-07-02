@@ -6,7 +6,7 @@
         { "comum": 80, "incomum": 20 },
         { "comum": 50, "incomum": 40, "epico": 10 },
         { "comum": 20, "incomum": 45, "epico": 30, "lendario": 5 },
-        { "epico": 50, "ultra": 10,"lendario": 40 }
+        { "epico": 55, "ultra": 5,"lendario": 40 }
     ]
   },
   "raro": {
@@ -14,7 +14,7 @@
     "chance": [
       { "incomum": 60, "epico": 40 },
       { "incomum": 10, "epico": 60, "lendario": 30 },
-      { "epico": 20, "ultra": 15, "lendario": 65 },
+      { "epico": 25, "ultra": 10, "lendario": 65 },
       { "mitico": 100 }
     ]
   },
