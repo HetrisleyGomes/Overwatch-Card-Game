@@ -12,16 +12,16 @@
     {% endif %}
     
     <a href="#pacotaco">
-        <button>Pacotaço</button>
+        <button>{{ _('bundle') }}</button>
     </a>
     <a href="#pacotes">
-        <button>Pacotes</button>
+        <button>{{ _('packs') }}</button>
     </a>
     <a href="#trocarpontos">
-        <button>Pontos</button>
+        <button>{{ _('points') }}</button>
     </a>
     <a href="#icones">
-        <button>Ícones</button>
+        <button>{{ _('icons') }}</button>
     </a>
 </nav>
 
@@ -31,7 +31,7 @@
 
     <div class="container">
     {% if proms %}
-    <h2 class="sessao" id="pacotaco">Pacotaço</h2>
+    <h2 class="sessao" id="pacotaco">{{ _('bundle') }}</h2>
         {% for prom in proms %}
 
             <div class="prateleira pacotaco">
@@ -51,9 +51,9 @@
                         {% if desativado %}disabled{% endif %}
                         onclick="comprarPromotionPack('promotion_pack', '{{ prom.id }}', {{ prom.buy_with_impeto | tojson }})">
                             {% if not prom['id'] in prom_log %}
-                                {{ prom.value }} {% if prom.buy_with_impeto %}Impeto{% else %}Ponto{% endif %}{% if prom.value > 1 %}s{% endif %}
+                                {{ prom.value }} {% if prom.buy_with_impeto %}{{ _('prism') }}{% else %}{{ _('point') }}{% endif %}{% if prom.value > 1 %}s{% endif %}
                             {% else %}
-                                Obtido
+                                {{ _('obtained') }}
                             {% endif %}
                         </button>
                     </div>
@@ -63,11 +63,11 @@
     
         <div class="prateleira-divider"></div>
     {% endif %}
-    <h2 class="sessao" id="pacotes">Pacotes</h2>
+    <h2 class="sessao" id="pacotes">{{ _('packs') }}</h2>
         <div class="prateleira">
             <!-- Item -->
             <div class="item">
-                <div class="item_name">Pacote comum</div>
+                <div class="item_name">{{ _('common pack') }}</div>
                 <div class="item_description">
                     Pacote com cartas comuns.
                 </div>
@@ -75,12 +75,12 @@
                     <button class="button {% if user.pontos < 100 %}desativado{% endif %}"
                     {% if user.pontos < 100 %}disabled{% endif %}
                     onclick="comprarPack('comum')">
-                        100 Pontos</button>
+                        100 {{ _('points') }}</button>
                 </div>
             </div>
 
             <div class="item">
-                <div class="item_name">Pacote raro</div>
+                <div class="item_name">{{ _('rare pack') }}</div>
                 <div class="item_description">
                     Pacote com maiores chances de cartas raras e míticas.
                 </div>
@@ -88,21 +88,21 @@
                     <button class="button {% if user.pontos < 500 %}desativado{% endif %}"
                     {% if user.pontos < 500 %}disabled{% endif %}
                     onclick="comprarPack('raro')">
-                    500 Pontos</button>
+                    500 {{ _('points') }}</button>
                 </div>
             </div>
 
             <!-- Bônus diário -->
              <div class="item">
-                <div class="item_name">Bônus diário</div>
+                <div class="item_name">{{ _('daily bonus') }}</div>
                 <div class="item_description">
                     50 Pontos obitíveis diariamente.
                 </div>
                 <div class="item_button">
                     {% if not user.has_already_get_daily_bonus %}
-                            <button class="button"  onclick="comprarPack('bonus')">Obter</button>
+                            <button class="button"  onclick="comprarPack('bonus')">{{ _('get') }}</button>
                     {% else %}
-                            <button class="button desativado" disabled>Obtido</button>
+                            <button class="button desativado" disabled>{{ _('obtained') }}</button>
                     {% endif %}
                 </div>
             </div>
@@ -110,7 +110,7 @@
             <!-- PACOTE DE EVENTO -->
             {% if ev %}
                 <div class="item especial">
-                    <div class="item_name">Pacote de {{ ev["nome"] }}</div>
+                    <div class="item_name">{{ _('pack') }} {{ ev["nome"] }}</div>
                     <div class="item_description">
                         {{ ev.pack_description }}
                     </div>
@@ -118,50 +118,50 @@
                         <button class="button {% if user.pontos < 300 %}desativado{% endif %}"
                         {% if user.pontos < 300 %}disabled{% endif %}
                         onclick="comprarPack('especial')">
-                        300 Pontos</button>
+                        300 {{ _('points') }}</button>
                     </div>
                 </div>
             {% endif %}   
         </div>
         <div class="prateleira-divider"></div>
 
-    <h2 class="sessao" id="trocarpontos">Pontos</h2>
+    <h2 class="sessao" id="trocarpontos">{{ _('points') }}</h2>
         <div class="prateleira">
             <!-- COMPRAR PONTOS -->
             <div class="item">
-                <div class="item_name">300 Pontos</div>
+                <div class="item_name">300 {{ _('points') }}</div>
                 <div class="item_description">
-                    Compre 300 Pontos pelo preço de 1 Impeto!
+                    {{ _('buy_1_prism') }}
                 </div>
                 <div class="item_button">
                     <button class="button {% if user.impetos < 1 %}desativado{% endif %}"
                     {% if user.impetos < 1 %}disabled{% endif %}
                     onclick="comprarPack('pontos', true)">
-                    1  Impeto</button>
+                    1  {{ _('prism') }}</button>
                 </div>
             </div>
 
             <div class="item">
                 <div class="item_name">1000 Pontos</div>
                 <div class="item_description">
-                    Compre 1000 Pontos pelo preço de 3 Impetos!
+                    {{ _('buy_3_prism') }}
                 </div>
                 <div class="item_button">
                     <button class="button {% if user.impetos < 3 %}desativado{% endif %}"
                     {% if user.impetos < 3 %}disabled{% endif %}
                     onclick="comprarPack('pontos2k', true)">
-                    3  Impetos</button>
+                    3  {{ _('prisms') }}</button>
                 </div>
             </div>
         </div>
         <div class="prateleira-divider"></div>
 
-    <h2 class="sessao" id="icones">Ícones</h2>
+    <h2 class="sessao" id="icones">{{ _('icons') }}</h2>
         <div class="prateleira">
             {% for img in imgs %}
             {% if img.disponivel %}
             <div class="item item-img">
-                <div class="item_name">Ícone {{img.nome}}</div>
+                <div class="item_name">{{ _('icon') }} {{img.nome}}</div>
                 <div class="item_img">
                     <img src="{{ url_for('static', filename='logos/' + img.img) }}" class="img" loading="lazy">
                 </div>
@@ -173,9 +173,9 @@
                     {% if user.pontos < img.price or img.possui %}disabled{% endif %}
                     onclick="comprarPack('icone', false, '{{img.id}}')">
                         {% if not img.possui %}
-                            {{ img.price }} Pontos
+                            {{ img.price }} {{ _('points') }}
                         {% else %}
-                            Obtido
+                            {{ _('obtained') }}
                         {% endif %}
                         
                     </button>

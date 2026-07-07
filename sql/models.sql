@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS "user"(
     ultimo_login TEXT,
     streak INTEGER,
     profile_img TEXT,
+    language VARCHAR(5),
     packs_diarios_abertos INTEGER,
     contador_packs_comuns INTEGER,
     packs_comprados_comum INTEGER,
@@ -62,3 +63,4 @@ CREATE TABLE IF NOT EXISTS "user_vault"(
   FOREIGN KEY (user_id) REFERENCES "user"(id)
 );
 ALTER TABLE "user_vault" ADD PRIMARY KEY (user_id, card_id)
+

@@ -10,7 +10,7 @@ class UserRepository:
         cursor.execute(
             """
                INSERT INTO "user"
-                (nome, email, senha, pontos, impetos, xp, nivel, ultimo_login, streak, profile_img, packs_diarios_abertos, contador_packs_comuns, packs_comprados_comum, packs_comprados_raro, has_already_get_daily_bonus, packs_evento)
+                (nome, email, senha, pontos, impetos, xp, nivel, language, ultimo_login, streak, profile_img, packs_diarios_abertos, contador_packs_comuns, packs_comprados_comum, packs_comprados_raro, has_already_get_daily_bonus, packs_evento)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
            """, (
                 user["nome"],
@@ -20,6 +20,7 @@ class UserRepository:
                 0,
                 0,
                 1,
+                user["lang"],
                 user["ultimo_login"],
                 1,
                 'logo.png',
@@ -50,7 +51,7 @@ class UserRepository:
         cursor = self.__conn.cursor()
         cursor.execute(
             """
-            SELECT "id", "nome", "pontos", "impetos", "xp", "nivel", "ultimo_login", "streak", "profile_img", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "has_already_get_daily_bonus", "packs_evento"
+            SELECT "id", "nome", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "has_already_get_daily_bonus", "packs_evento"
             FROM "user"
             WHERE id = %s
             """,
@@ -108,8 +109,7 @@ class UserRepository:
         cursor = self.__conn.cursor()
         cursor.execute(
             """
-            SELECT "id", "nome", "email", "senha", "pontos", "impetos", "xp", "nivel", "ultimo_login", "streak", "profile_img", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "has_already_get_daily_bonus", "packs_evento"
-            FROM "user"
+            SELECT "id", "nome", "email", "senha", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "has_already_get_daily_bonus", "packs_evento"            FROM "user"
             WHERE email = %s
             """,
             (email,),
@@ -205,6 +205,19 @@ class UserRepository:
         self.__conn.commit()
         cursor.close()
 
+    def set_lang(self, id, lang):
+        cursor = self.__conn.cursor()
+        cursor.execute(
+            """
+            UPDATE "user"
+            SET language = %s
+            WHERE id = %s
+            """,
+            (lang, id)
+        )
+        self.__conn.commit()
+        cursor.close()
+    
     def set_img(self, id, value):
         cursor = self.__conn.cursor()
         cursor.execute(

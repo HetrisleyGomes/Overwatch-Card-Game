@@ -1,20 +1,13 @@
 {% extends 'index.html' %}
 {% block centro %}
 <link rel="stylesheet" href="../static/styles/settings.css">
-<style>
-    .space {
-    height: 8vh;
-}
-</style>
 <!-- CENTRO -->
 <div class="main">
     <div class="config-container">
-
         <!-- 👤 PERFIL -->
         <div class="profile-section">
 
-            <h2>Perfil</h2>
-
+            <h2>{{ _('profile') }}</h2>
             <!-- 🖼️ Foto atual -->
             <div class="profile-img-container">
                 <img id="profile-preview"
@@ -25,7 +18,7 @@
             <!-- 📂 Seleção de imagem -->
             <div class="dropdown">
                 <button class="dropdown-btn" onclick="toggleDropdown()">
-                    Escolher imagem
+                    {{ _('choose image') }}
                 </button>
 
                 <div id="dropdown-menu" class="dropdown-content">
@@ -45,7 +38,7 @@
 
 
         <div class="xp_field">
-            <span>Nível {{ user["nivel"] }}</span>
+            <span>{{ _('level') }} {{ user["nivel"] }}</span>
             <span>|</span>
             <span>{{ user["xp"] }} XP</span>
             <div class="progress_xp_bar">
@@ -55,25 +48,23 @@
 
         <!-- ✏️ NOME -->
         <div class="name-section">
-
-            <h2>Nome</h2>
-
+            <h2>{{ _('name') }}</h2>
             <div class="name-display">
                 <span id="nome-texto">{{ user.nome }}</span>
                 <button onclick="editarNome()">✏️</button>
             </div>
-
             <!-- input escondido -->
-            <form method="POST" action="/atualizar-nome" id="nome-form" style="display: none;">
-                <input type="text" name="novo_nome" id="nome-input" value="{{ user.nome }}">
-                <button type="submit">Salvar</button>
+            <form method="POST" action="/atualizar-nome" id="nome-form" style="display: none;" class="nome-edit-area">
+                <input type="text" name="novo_nome" id="nome-input" value="{{ user.nome }}" class="nome-edit" autocomplete="off">
+                <button type="submit" class="nome-edit-btn">{{ _('save') }}</button>
             </form>
         </div>
 
+        <!-- LOGOFF -->
         <div class="logoff_button">
             <a href="{{ url_for('main.logoff') }}">
                 <button class="button">
-                    Sair
+                    {{ _('logoff') }}
                 </button>
             </a>
         </div>
@@ -81,20 +72,23 @@
     </div>
 
 
-
     <div class="container">
-        <p>© 2026 Overwatch-Card-Game — Projeto independente e sem fins lucrativos, desenvolvido para fins educacionais e de entretenimento.</p>
-        <p>Overwatch, seus personagens, nomes, marcas e elementos visuais originais são propriedade da Blizzard Entertainment. Todos os direitos pertencem aos seus respectivos detentores.</p>
-        <p>As artes e variações de cartas apresentadas neste projeto foram desenvolvidas de forma independente, sem vínculo oficial com a Blizzard. Parte do conteúdo foi inspirada em criações compartilhadas por membros da comunidade, incluindo usuários do Reddit.</p>
-        <p>Para solicitações relacionadas a direitos autorais ou ajustes de créditos, entre em contato.</p>
-
+        {% for msg in _('copyrights disclaimer') %}
+            <p>{{ msg }}</p>
+        {% endfor %}
     </div>
+    <div class="space"></div>
+    <div class="space"></div>
 </div>
-<div class="space"></div>
 
 <script>
 function editarNome() {
-    document.getElementById("nome-form").style.display = "block";
+    display = document.getElementById("nome-form");
+    if (display.style.display != "flex"){
+        display.style.display = "flex";
+    } else {
+        display.style.display = "None";
+    }
 }
 
 function toggleDropdown() {

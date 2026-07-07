@@ -54,6 +54,13 @@ class UserController:
         except Exception as e:
             return str(e)
     
+    def set_lang(self, id, lang):
+        try:
+            self.__repository.set_nome(id, lang)
+            return True
+        except Exception as e:
+            return str(e)
+    
     def set_foto(self, id, img):
         try:
             self.__repository.set_img(id, img)
@@ -105,15 +112,16 @@ class UserController:
                 "impetos": i[3],
                 "xp": i[4],
                 "nivel": i[5],
-                "ultimo_login": i[6],
-                "streak": i[7],
-                "profile_img": i[8],
-                "packs_diarios_abertos": i[9],
-                "contador_packs_comuns": i[10],
-                "packs_comprados_comum": i[11],
-                "packs_comprados_raro": i[12],
-                "has_already_get_daily_bonus": i[13],
-                "packs_evento": i[14],
+                "lang": i[6],
+                "ultimo_login": i[7],
+                "streak": i[8],
+                "profile_img": i[9],
+                "packs_diarios_abertos": i[10],
+                "contador_packs_comuns": i[11],
+                "packs_comprados_comum": i[12],
+                "packs_comprados_raro": i[13],
+                "has_already_get_daily_bonus": i[14],
+                "packs_evento": i[15],
             }
             formated.append(user)
         return formated

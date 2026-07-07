@@ -7,15 +7,16 @@
 
     <!-- TOPO -->
     <div class="deck-header">
-        <h2>Montar Baralho</h2>
+        <h2>Deck Builder</h2>
     </div>
+
+
 
     <!-- CONTEÚDO -->
     <div class="deck-main">
-
         <!-- CARTAS DISPONÍVEIS -->
         <div class="card-pool">
-            <h3>Cartas disponíveis</h3>
+            <h3>{{ _('cards') }}</h3>
 
             <div class="card-grid">
                 {% for carta in cartas %}
@@ -51,7 +52,7 @@
         <aside class="aside-area">
             <!-- SEU DECK -->
             <div class="deck-area">
-                <h3>Seu baralho</h3>
+                <h3>Deck</h3>
                 
                 <div class="deck-slots">
                     {% for i in range(12) %}
@@ -65,11 +66,11 @@
                     <input type="hidden" name="deck_data" id="deck-data">
 
                     <button type="submit" class="btn salvar">
-                        Salvar Deck
+                        {{ _('save') }} Deck
                     </button>
                 </form>
                 <button class="btn cancelar" onclick="window.location.href='/inventario'">
-                    Cancelar
+                    {{ _('cancel') }}
                 </button>
             </div>
         </aside>

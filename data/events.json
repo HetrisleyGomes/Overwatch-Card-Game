@@ -42,6 +42,6 @@
     "fim": "07-15",
     "description": "Aproveite o clima competitivo dos Jogos de Verão e abra pacotes especiais com 5% a mais de chance de obter cartas épicas e lendárias.",
     "pack_description": "Pacote com 5 cartas variadas, podendo conter cartas comuns, incomuns, épicas ou lendárias.",
-    "ativo": false
+    "ativo": true
   }
 ]

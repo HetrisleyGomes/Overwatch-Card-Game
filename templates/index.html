@@ -6,11 +6,11 @@
 <div class="header">
     <div class="header-item" id="username">
         <div><img src="{{ url_for('static', filename='logos/' + user.profile_img ) }}" loading="lazy"></div>
-        <div>Usuário: <span>{{ user.nome }}</span></div>
+        <div><span>{{ user.nome }}</span>{{lang}}</div>
     </div>
     <div class="header-item">
-        <div class="header-item" id="points">Ímpetos: <div class="points_box"><span id="pontos">{{ user.impetos }}</span></div></div>
-        <div class="header-item" id="points">Pontos: <div class="points_box"><span id="pontos">{{ user.pontos }}</span></div></div>
+        <div class="header-item" id="points">{{ _('prisms') }}: <div class="points_box"><span id="pontos">{{ user.impetos }}</span></div></div>
+        <div class="header-item" id="points">{{ _('points') }}: <div class="points_box"><span id="pontos">{{ user.pontos }}</span></div></div>
     </div>
 </div>
 
@@ -31,26 +31,26 @@
     <a href="{{ url_for('main.home') }}">
         <button class="button {% if request.endpoint == 'main.home' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.home' %}disabled{% endif %}>
-            Início
+            {{ _('home') }}
         </button>
     </a>
     <a href="{{ url_for('main.inventario') }}">
         <button class="button {% if request.endpoint == 'main.inventario' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.inventario' %}disabled{% endif %}>
-            Inventário
+            {{ _('inventory') }}
         </button>
     </a>
     
     <a href="{{ url_for('main.collection') }}">
         <button class="button {% if request.endpoint == 'main.collection' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.collection' %}disabled{% endif %}>
-            Coleções
+            {{ _('collections') }}
         </button>
     </a>
     <a href="{{ url_for('main.loja') }}">
         <button class="button {% if request.endpoint == 'main.loja' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.loja' %}disabled{% endif %}>
-            Loja
+            {{ _('store') }}
             {% if not user.has_already_get_daily_bonus and request.endpoint != 'main.loja' %}
                 <div class="notification"></div>
             {% endif %}
@@ -59,7 +59,7 @@
     <a href="{{ url_for('main.settings') }}">
         <button class="button {% if request.endpoint == 'main.settings' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.settings' %}disabled{% endif %}>
-            Opções
+            {{ _('settings') }}
         </button>
     </a>
 </div>

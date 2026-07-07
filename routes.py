@@ -6,7 +6,7 @@ from services.collection_service import verificar_sets, formatar_inventario, lis
 from services.eventos_service import check_event_activation, get_eventos_ativos, get_last_log
 from services.loja_services import get_promocoes, comprar_pack_prom, get_user_prom_logs, get_max_vault_infos, get_vault, generate_vault, buy_vault_item, get_vault_data_format
 from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img
-
+from services.translates import get_lang
 from sql.controller.user_controller import UserController
 from sql.repositories.user_repository import UserRepository
 
@@ -40,6 +40,15 @@ def close_db_connection(e=None):
         db_conn.close()
         print("Conexão com o banco fechada.")
 
+# Função de tradução
+@app.context_processor
+def inject_translations():
+    lang = session.get("lang", "br")
+    return {
+        "_": lambda key: get_lang(lang).get(key, key)
+    }
+
+
 # Rota principal ========================================
 @main.route('/')
 def home():
@@ -66,8 +75,8 @@ def home():
     vault_data = None
     if vault:
         vault_data = get_vault_data_format(vault)
-
-    return render_template('home.html', user=user, semana=semana, ev=ev, log=log, proms=prom, vault=vault, vault_data=vault_data)
+    lang = session["lang"]
+    return render_template('home.html', user=user, semana=semana, ev=ev, log=log, proms=prom, vault=vault, vault_data=vault_data, lang=lang)
 
 # Abrir pacote ========================================
 # TODO: Transformar tudo isso em uma rota só
@@ -454,6 +463,8 @@ def login():
         
         if user:
             session["usuario_id"] = user["id"]
+            print(user)
+            session["lang"] = user["language"]
             return redirect(url_for("main.home"))
         
     return render_template("login.html")
@@ -468,6 +479,7 @@ def registrar():
         nome = request.form.get("nome")
         email = request.form.get("email")
         senha = request.form.get("senha")
+        lang = request.form.get("lang")
         confirmar = request.form.get("confirmar_senha")
 
         connection = get_db_connection()
@@ -498,6 +510,7 @@ def registrar():
             "nome": nome,
             "email": email,
             "senha": senha_hash,
+            "lang": lang,
             "ultimo_login": datetime.now().strftime("%Y-%m-%d"),
             "packs_evento": has_event
         }
@@ -515,3 +528,4 @@ def registrar():
 @main.route("/ping")
 def ping():
     return "ok", 200
+

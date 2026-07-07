@@ -146,16 +146,18 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 .dano {
-    background-color: #7a1f1f;
+    background-color: var(--dano-type);
 }
 .suporte {
-    background-color: #1f7a3b;
+    background-color: var(--suporte-type);
 }
 .tanque {
-    background-color: #1f3f7a;
+    background-color: var(--tanque-type);
 }
 .atacante {
     background-color: var(--pack-rare-color);

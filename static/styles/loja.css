@@ -47,7 +47,7 @@
 .item {
     border: 6px solid var(--main-color);
     width: 28vw;
-    height: 18vh;
+    height: 22vh;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

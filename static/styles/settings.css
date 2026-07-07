@@ -3,6 +3,15 @@
     margin: auto;
     padding: 20px;
     color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-img-container img {
@@ -55,14 +64,6 @@
     border-color: var(--main-light-color);
 }
 
-.name-display {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    color: var(--main-color);
-}
-
 .xp_field {
     background: linear-gradient(135deg, var(--main-color), var(--main-dark-color));
     color: white;
@@ -74,11 +75,9 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     letter-spacing: 0.5px;
     margin-top: 20px;
+    width: 320px;
 }
 
-.logoff_button {
-    padding: 10px;
-}
 
 .progress_xp_bar {
     width: 20vw;
@@ -97,3 +96,52 @@
     align-items: center;
     transition: width 0.4s ease;
 }
+
+.name-section {
+    display: block;
+}
+.name-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: var(--main-color);
+    width: 320px;
+    border-bottom: 1px solid var(--main-color);
+}
+.name-display button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nome-edit-area {
+    width: 320px;
+    margin-top: 4px;
+
+}
+.nome-edit {
+    border-color: var(--main-color);
+    border-radius: 20px 0 0 20px;
+    width: 20vw;
+    font-size: 14px;
+    padding-left: 18px;
+}
+.nome-edit-btn {
+    border: var(--main-color) 2px solid;
+    background-color: white;
+    border-radius: 0 20px 20px 0;
+    padding: 10px;
+}
+
+.logoff_button {
+    padding: 10px;
+}
+
+.container > p {
+    text-align: justify;
+    width: 80vw;
+    margin: auto;
+    padding-bottom: 10px;
+}
+

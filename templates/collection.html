@@ -10,11 +10,11 @@
                 <h3>{{ set.nome }}</h3>
                 {% if set.completo %}
                     <div>
-                        <p>✅ Completo!</p>
-                        <p>Recompensa: {{ set.recompensa.pontos }} pontos</p>
+                        <p>✅ {{ _('complete') }}!</p>
+                        <p>{{ _('reward') }}: {{ set.recompensa.pontos }} {{ _('points') }}</p>
                     </div>
                 {% else %}
-                    <p>❌ Incompleto</p>
+                    <p>❌ {{ _('incomplete') }}</p>
                 {% endif %}
             </div>
             <div class="progress_bar">

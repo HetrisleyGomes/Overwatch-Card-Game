@@ -11,44 +11,37 @@
     <h1>Criar Conta</h1>
 
     <!-- 👤 NOME -->
-    <input 
-        type="text" 
-        name="nome" 
-        placeholder="Nome de usuário"
-        required
-    >
+    <input type="text" name="nome" placeholder="Nome de usuário"requiredautocomplete="off">
 
     <!-- 📧 EMAIL -->
-    <input 
-        type="email" 
-        name="email" 
-        placeholder="Email"
-        required
-    >
+    <input type="email" name="email" placeholder="Email"requiredautocomplete="off">
 
     <!-- 🔒 SENHA -->
-    <input 
-        type="password" 
-        name="senha" 
-        placeholder="Senha"
-        required
-    >
+    <input type="password" name="senha" placeholder="Senha"requiredclass="senha">
 
     <!-- 🔒 CONFIRMAR SENHA -->
-    <input 
-        type="password" 
-        name="confirmar_senha" 
-        placeholder="Confirmar senha"
-        required
-    >
+    <input type="password" name="confirmar_senha" placeholder="Confirmar senha"requiredclass="senha">
 
     <label class="show-pass">
         <input type="checkbox" onclick="toggleSenha()"> Mostrar senha
     </label>
 
+    <!-- LINGUAGEM -->
+    <p class="label">Linguagem</p>
+    <div class="radio-inputs">
+        <label class="radio">
+            <input type="radio" name="lang" checked value="br">
+            <span class="name">br</span>
+        </label>
+        <label class="radio">
+            <input type="radio" name="lang" value="en">
+            <span class="name">en</span>
+        </label>
+    </div>
+
     <button type="submit">Registrar</button>
 
-    <!-- 🔁 Link para login -->
+    <!-- Link para login -->
     <div class="extra">
         <span>Já tem conta?</span>
         <a href="/login">Entrar</a>
@@ -63,9 +56,13 @@
 
 <script>
 function toggleSenha() {
-    const senhas = document.querySelectorAll('input[type="password"]');
+    const senhas = document.querySelectorAll('input.senha');
     senhas.forEach(input => {
-        input.type = input.type === "password" ? "text" : "password";
+        if (input.type == "password"){
+            input.type = "text"
+        } else {
+            input.type = "password"
+        };
     });
 }
 </script>
