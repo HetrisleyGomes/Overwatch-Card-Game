@@ -76,6 +76,7 @@ def home():
     if vault:
         vault_data = get_vault_data_format(vault)
     lang = session["lang"]
+    
     return render_template('home.html', user=user, semana=semana, ev=ev, log=log, proms=prom, vault=vault, vault_data=vault_data, lang=lang)
 
 # Abrir pacote ========================================
@@ -174,8 +175,8 @@ def collection():
     ctll = UserController(repo)
 
     user = ctll.get_user(session["usuario_id"])
-
-    sets_usuario  = listar_sets_usuario(connection, user['id'])
+    lang = session["lang"]
+    sets_usuario  = listar_sets_usuario(connection, user['id'], lang)
 
     return render_template('collection.html', user = user, sets =sets_usuario)
 
@@ -210,9 +211,9 @@ def loja():
     ctll = UserController(repo)
 
     user = ctll.get_user(session["usuario_id"])
-
+    lang = session["lang"]
     ev = get_eventos_ativos()
-    imgs = icon_view(connection, user["id"], user["nivel"], ev["id"] if ev else None)
+    imgs = icon_view(connection, user["id"], user["nivel"], ev["id"] if ev else None, lang)
 
     prom = get_promocoes()
     prom_log = get_user_prom_logs(connection, user["id"])
@@ -372,10 +373,10 @@ def settings():
     ctll = UserController(repo)
 
     user = ctll.get_user(session["usuario_id"])
-
     inv = user_get_inventory(connection, user["id"])
+    lang = session["lang"]
 
-    return render_template('settings.html', user = user, inv= inv)
+    return render_template('settings.html', user = user, inv=inv, lang=lang)
 
 @main.route("/atualizar-nome", methods=["POST"])
 def atualizar_nome():
@@ -390,6 +391,23 @@ def atualizar_nome():
     novo_nome = request.form.get("novo_nome")
 
     ctll.set_nome(session["usuario_id"], novo_nome)
+
+    return redirect(url_for("main.settings"))
+
+@main.route("/atualizar-lang", methods=["POST"])
+def atualizar_lang():
+    connection = get_db_connection()
+    if connection is None:
+        return "Erro ao conectar ao banco de dados.", 500
+
+    repo = UserRepository(connection)
+    ctll = UserController(repo)
+
+
+    new_lang = request.form.get("lang")
+    print(new_lang)
+    session["lang"] = new_lang
+    ctll.set_lang(session["usuario_id"], new_lang)
 
     return redirect(url_for("main.settings"))
 

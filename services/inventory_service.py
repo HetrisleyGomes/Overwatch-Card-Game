@@ -23,7 +23,7 @@ def user_get_inventory(conn, user_id):
         })
     return icons_user
 
-def icon_view(conn, user_id, nivel, event):
+def icon_view(conn, user_id, nivel, event, lang):
     repo = ProgressRepository(conn)
     ctll = ProgressController(repo)
 
@@ -51,7 +51,11 @@ def icon_view(conn, user_id, nivel, event):
                 disponivel = True
 
         result.append({
-            **icon,
+            "id": icon['id'],
+            "nome": icon["lang"][lang]["nome"],
+            "descricao": icon["lang"][lang]["descricao"],
+            "img": icon['img'],
+            "price": icon['price'],
             "possui": possui,
             "disponivel": disponivel
         })

@@ -56,7 +56,7 @@ class UserController:
     
     def set_lang(self, id, lang):
         try:
-            self.__repository.set_nome(id, lang)
+            self.__repository.set_lang(id, lang)
             return True
         except Exception as e:
             return str(e)

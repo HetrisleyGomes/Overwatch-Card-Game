@@ -17,7 +17,7 @@
     "rare": "Rare",
     "rare pack": "Rare Pack",
     "event": "Event",
-    "events pack": "Event Packs",
+    "events pack": "Event Pack",
     "show_all": "Show all cards",
     "complete": "Complete",
     "incomplete": "Incomplete",
@@ -33,6 +33,7 @@
     "profile": "Profile",
     "choose image": "Choose image",
     "name": "Name",
+    "language": "Language",
     "save": "Save",
     "logoff": "Logoff",
     "copyrights disclaimer": [
@@ -45,6 +46,7 @@
 
     "msg_no_packs": "You have no more packs to open today!",
     "bundle_ad": "Bundle available in the store!",
+    "last days": "last days",
     "ate": "until",
     "available": "available",
     "maxs vault": "Maximilien Vaults",
@@ -63,6 +65,8 @@
         "Get 4 Rare Packs and 3 Prisms Points by completing this week!",
         "Get 5 Prisms Points by completing this week!"
     ],
+    "sequence": "Consecutive days",
+    "days remaining": "days left until the reward",
 
     "get": "Get",
     "obtained": "Obtained",

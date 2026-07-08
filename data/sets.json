@@ -1,7 +1,10 @@
 [
   {
     "id": "ana",
-    "nome": "Ana",
+    "lang":{
+      "br": {"nome":"Ana"},
+      "en": {"nome":"Ana"}
+    },
     "personagens": [
       "ana_comum",
       "arqui-comandante_amari",
@@ -16,7 +19,10 @@
   },
   {
     "id": "anran",
-    "nome": "Anran",
+    "lang":{
+      "br": {"nome":"Anran"},
+      "en": {"nome":"Anran"}
+    },
     "personagens": [
       "anran_comum",
       "anran_dourado"
@@ -27,7 +33,10 @@
   },
   {
     "id": "ashe",
-    "nome": "Ashe",
+    "lang":{
+      "br": {"nome":"Ashe"},
+      "en": {"nome":"Ashe"}
+    },
     "personagens": [
       "ashe_comum",
       "ashe_contrabandista",
@@ -42,7 +51,10 @@
   },
   {
     "id": "baptiste",
-    "nome": "Baptiste",
+    "lang":{
+      "br": {"nome":"Baptiste"},
+      "en": {"nome":"Baptiste"}
+    },
     "personagens": [
       "baptiste_comum",
       "baptiste_cacador",
@@ -54,7 +66,10 @@
   },
   {
     "id": "bastion",
-    "nome": "Bastion",
+    "lang":{
+      "br": {"nome":"Bastion"},
+      "en": {"nome":"Bastion"}
+    },
     "personagens": [
       "bastion_comum",
       "bastion_null_sector",
@@ -71,7 +86,10 @@
   },
   {
     "id": "brigitte",
-    "nome": "Brigitte",
+    "lang":{
+      "br": {"nome":"Brigitte"},
+      "en": {"nome":"Brigitte"}
+    },
     "personagens": [
       "brigitte_comum",
       "brigitte_coracao",
@@ -85,7 +103,10 @@
   },
   {
     "id": "cassidy",
-    "nome": "Cassidy",
+    "lang":{
+      "br": {"nome":"Cassidy"},
+      "en": {"nome":"Cassidy"}
+    },
     "personagens": [
       "cassidy_comum",
       "cassidy_van_helsing",
@@ -104,7 +125,10 @@
   },
   {
     "id": "dva",
-    "nome": "D.Va",
+    "lang":{
+      "br": {"nome":"D.Va"},
+      "en": {"nome":"D.Va"}
+    },
     "personagens": [
       "dva_comum",
       "dva_chibi",
@@ -118,7 +142,10 @@
   },
   {
     "id": "domina",
-    "nome": "Domina",
+    "lang":{
+      "br": {"nome":"Domina"},
+      "en": {"nome":"Domina"}
+    },
     "personagens": [
       "domina_comum",
       "domina_dourado"
@@ -129,7 +156,10 @@
   },
   {
     "id": "doomfist",
-    "nome": "Doomfist",
+    "lang":{
+      "br": {"nome":"Doomfist"},
+      "en": {"nome":"Doomfist"}
+    },
     "personagens": [
       "doomfist_comum",
       "doomfist-quebraossos",
@@ -146,7 +176,10 @@
   },
   {
     "id": "echo",
-    "nome": "Echo",
+    "lang":{
+      "br": {"nome":"Echo"},
+      "en": {"nome":"Echo"}
+    },
     "personagens": [
       "echo_comum",
       "echo_furtividade",
@@ -158,7 +191,10 @@
   },
   {
     "id": "emre",
-    "nome": "Emre",
+    "lang":{
+      "br": {"nome":"Emre"},
+      "en": {"nome":"Emre"}
+    },
     "personagens": [
       "emre_comum",
       "emre_alter",
@@ -170,7 +206,10 @@
   },
   {
     "id": "freja",
-    "nome": "Freja",
+    "lang":{
+      "br": {"nome":"Freja"},
+      "en": {"nome":"Freja"}
+    },
     "personagens": [
       "freja_comum",
       "freja_coracao",
@@ -182,7 +221,10 @@
   },
   {
     "id": "genji",
-    "nome": "Genji",
+    "lang":{
+      "br": {"nome":"Genji"},
+      "en": {"nome":"Genji"}
+    },
     "personagens": [
       "genji_comum",
       "genji_oni",
@@ -198,7 +240,10 @@
   },
   {
     "id": "hanzo",
-    "nome": "Hanzo",
+    "lang":{
+      "br": {"nome":"Hanzo"},
+      "en": {"nome":"Hanzo"}
+    },
     "personagens": [
       "hanzo_comum",
       "hanzo_okami",
@@ -213,7 +258,10 @@
   },
   {
     "id": "hazard",
-    "nome": "Hazard",
+    "lang":{
+      "br": {"nome":"Hazard"},
+      "en": {"nome":"Hazard"}
+    },
     "personagens": [
       "hazard_comum",
       "hazard_dourado"
@@ -224,7 +272,10 @@
   },
   {
     "id": "illari",
-    "nome": "Illari",
+    "lang":{
+      "br": {"nome":"Illari"},
+      "en": {"nome":"Illari"}
+    },
     "personagens": [
       "illari_comum",
       "illari_dourado",
@@ -236,7 +287,10 @@
   },
   {
     "id": "jetpack_cat",
-    "nome": "Jetpack Cat",
+    "lang":{
+      "br": {"nome":"Jetpack Cat"},
+      "en": {"nome":"Jetpack Cat"}
+    },
     "personagens": [
       "jetpack_cat_comum",
       "jetpack_cat_dourado"
@@ -247,7 +301,10 @@
   },
   {
     "id": "junkrat",
-    "nome": "Junkrat",
+    "lang":{
+      "br": {"nome":"Junkrat"},
+      "en": {"nome":"Junkrat"}
+    },
     "personagens": [
       "junkrat_comum",
       "junkrat_junkstein",
@@ -261,7 +318,10 @@
   },
   {
     "id": "juno",
-    "nome": "Juno",
+    "lang":{
+      "br": {"nome":"Juno"},
+      "en": {"nome":"Juno"}
+    },
     "personagens": [
       "juno_comum",
       "juno_dourado",
@@ -274,7 +334,10 @@
   },
   {
     "id": "kiriko",
-    "nome": "Kiriko",
+    "lang":{
+      "br": {"nome":"Kiriko"},
+      "en": {"nome":"Kiriko"}
+    },
     "personagens": [
       "kiriko_comum",
       "kiriko_coracao",
@@ -290,7 +353,10 @@
   },
   {
     "id": "lifeweaver",
-    "nome": "Lifeweaver",
+    "lang":{
+      "br": {"nome":"Lifeweaver"},
+      "en": {"nome":"Lifeweaver"}
+    },
     "personagens": [
       "lifeweaver_comum",
       "lifeweaver_dourado",
@@ -302,7 +368,10 @@
   },
   {
     "id": "lucio",
-    "nome": "Lúcio",
+    "lang":{
+      "br": {"nome":"Lúcio"},
+      "en": {"nome":"Lúcio"}
+    },
     "personagens": [
       "lucio_comum",
       "lucio_principe_espaco",
@@ -319,7 +388,10 @@
   },
   {
     "id": "mauga",
-    "nome": "Mauga",
+    "lang":{
+      "br": {"nome":"Mauga"},
+      "en": {"nome":"Mauga"}
+    },
     "personagens": [
       "mauga_comum",
       "mauga_dourado"
@@ -330,7 +402,10 @@
   },
   {
     "id": "mei",
-    "nome": "Mei",
+    "lang":{
+      "br": {"nome":"Mei"},
+      "en": {"nome":"Mei"}
+    },
     "personagens": [
       "mei_comum",
       "mei_dourado",
@@ -343,7 +418,10 @@
   },
   {
     "id": "mercy",
-    "nome": "Mercy",
+    "lang":{
+      "br": {"nome":"Mercy"},
+      "en": {"nome":"Mercy"}
+    },
     "personagens": [
       "mercy_comum",
       "mercy_diabrete",
@@ -362,7 +440,10 @@
   },
   {
     "id": "mizuki",
-    "nome": "Mizuki",
+    "lang":{
+      "br": {"nome":"Mizuki"},
+      "en": {"nome":"Mizuki"}
+    },
     "personagens": [
       "mizuki_comum",
       "mizuki_dourado"
@@ -373,7 +454,10 @@
   },
   {
     "id": "moira",
-    "nome": "Moira",
+    "lang":{
+      "br": {"nome":"Moira"},
+      "en": {"nome":"Moira"}
+    },
     "personagens": [
       "moira_comum",
       "moira_dourado",
@@ -385,7 +469,10 @@
   },
   {
     "id": "orisa",
-    "nome": "Orisa",
+    "lang":{
+      "br": {"nome":"Orisa"},
+      "en": {"nome":"Orisa"}
+    },
     "personagens": [
       "orisa_comum",
       "orisa_null_sector",
@@ -402,7 +489,10 @@
   },
   {
     "id": "pharah",
-    "nome": "Pharah",
+    "lang":{
+      "br": {"nome":"Pharah"},
+      "en": {"nome":"Pharah"}
+    },
     "personagens": [
       "pharah_comum",
       "pharah_hades",
@@ -415,7 +505,10 @@
   },
   {
     "id": "rainha_junker",
-    "nome": "Rainha Junker",
+    "lang":{
+      "br": {"nome":"Rainha Junker"},
+      "en": {"nome":"Junker Queen"}
+    },
     "personagens": [
       "rainha_junker_comum",
       "rainha_junker_executora",
@@ -428,7 +521,10 @@
   },
   {
     "id": "ramattra",
-    "nome": "Ramattra",
+    "lang":{
+      "br": {"nome":"Ramattra"},
+      "en": {"nome":"Ramattra"}
+    },
     "personagens": [
       "ramattra_comum",
       "ramattra_nemesis",
@@ -444,7 +540,10 @@
   },
   {
     "id": "reaper",
-    "nome": "Reaper",
+    "lang":{
+      "br": {"nome":"Reaper"},
+      "en": {"nome":"Reaper"}
+    },
     "personagens": [
       "reaper_comum",
       "reaper_abobora",
@@ -459,7 +558,10 @@
   },
   {
     "id": "reinhardt",
-    "nome": "Reinhardt",
+    "lang":{
+      "br": {"nome":"Reinhardt"},
+      "en": {"nome":"Reinhardt"}
+    },
     "personagens": [
       "reinhardt_comum",
       "reinhardt_gridironhardt",
@@ -476,7 +578,10 @@
   },
   {
     "id": "roadhog",
-    "nome": "Roadhog",
+    "lang":{
+      "br": {"nome":"Roadhog"},
+      "en": {"nome":"Roadhog"}
+    },
     "personagens": [
       "roadhog_comum",
       "roadhog_ciclope",
@@ -489,7 +594,10 @@
   },
   {
     "id": "shion",
-    "nome": "Shion",
+    "lang":{
+      "br": {"nome":"Shion"},
+      "en": {"nome":"Shion"}
+    },
     "personagens": [
       "shion_comum",
       "shion_dourado"
@@ -500,7 +608,10 @@
   },
   {
     "id": "sierra",
-    "nome": "Sierra",
+    "lang":{
+      "br": {"nome":"Sierra"},
+      "en": {"nome":"Sierra"}
+    },
     "personagens": [
       "sierra_comum",
       "sierra_dourado",
@@ -512,7 +623,10 @@
   },
   {
     "id": "sigma",
-    "nome": "Sigma",
+    "lang":{
+      "br": {"nome":"Sigma"},
+      "en": {"nome":"Sigma"}
+    },
     "personagens": [
       "sigma_comum",
       "sigma_scuba",
@@ -525,7 +639,10 @@
   },
   {
     "id": "sojourn",
-    "nome": "Sojourn",
+    "lang":{
+      "br": {"nome":"Sojourn"},
+      "en": {"nome":"Sojourn"}
+    },
     "personagens": [
       "sojourn_comum",
       "sojourn_almirante_infinito",
@@ -538,7 +655,10 @@
   },
   {
     "id": "soldado_76",
-    "nome": "Soldado: 76",
+    "lang":{
+      "br": {"nome":"Soldado: 76"},
+      "en": {"nome":"Soldado: 76"}
+    },
     "personagens": [
       "soldado_76_comum",
       "soldado_76_churrasqueiro",
@@ -554,7 +674,10 @@
   },
   {
     "id": "sombra",
-    "nome": "Sombra",
+    "lang":{
+      "br": {"nome":"Sombra"},
+      "en": {"nome":"Sombra"}
+    },
     "personagens": [
       "sombra_comum",
       "sombra_cacadora_demonios",
@@ -566,7 +689,10 @@
   },
   {
     "id": "symmetra",
-    "nome": "Symmetra",
+    "lang":{
+      "br": {"nome":"Symmetra"},
+      "en": {"nome":"Symmetra"}
+    },
     "personagens": [
       "symmetra_comum",
       "symmetra_dourado",
@@ -582,7 +708,10 @@
   },
   {
     "id": "torbjorn",
-    "nome": "Torbjörn",
+    "lang":{
+      "br": {"nome":"Torbjörn"},
+      "en": {"nome":"Torbjörn"}
+    },
     "personagens": [
       "torbjorn_comum",
       "torbjorn_engenheiro_espacial",
@@ -598,7 +727,10 @@
   },
   {
     "id": "tracer",
-    "nome": "Tracer",
+    "lang":{
+      "br": {"nome":"Tracer"},
+      "en": {"nome":"Tracer"}
+    },
     "personagens": [
       "tracer_comum",
       "operadora_oxton",
@@ -614,7 +746,10 @@
   },
   {
     "id": "vendetta",
-    "nome": "Vendetta",
+    "lang":{
+      "br": {"nome":"Vendetta"},
+      "en": {"nome":"Vendetta"}
+    },
     "personagens": [
       "vendetta_comum",
       "vendetta_dourado"
@@ -625,7 +760,10 @@
   },
   {
     "id": "venture",
-    "nome": "Venture",
+    "lang":{
+      "br": {"nome":"Venture"},
+      "en": {"nome":"Venture"}
+    },
     "personagens": [
       "venture_comum",
       "venture_dourado"
@@ -636,7 +774,10 @@
   },
   {
     "id": "widowmaker",
-    "nome": "Widowmaker",
+    "lang":{
+      "br": {"nome":"Widowmaker"},
+      "en": {"nome":"Widowmaker"}
+    },
     "personagens": [
       "widowmaker_comum",
       "widowmaker_cacadora",
@@ -654,7 +795,10 @@
   },
   {
     "id": "winston",
-    "nome": "Winston",
+    "lang":{
+      "br": {"nome":"Winston"},
+      "en": {"nome":"Winston"}
+    },
     "personagens": [
       "winston_comum",
       "winston_extraterreste",
@@ -670,7 +814,10 @@
   },
   {
     "id": "wrecking_ball",
-    "nome": "Wrecking Ball",
+    "lang":{
+      "br": {"nome":"Wrecking Ball"},
+      "en": {"nome":"Wrecking Ball"}
+    },
     "personagens": [
       "wrecking_ball_comum",
       "wrecking_ball_dourado"
@@ -684,7 +831,10 @@
   },
   {
     "id": "wuyang",
-    "nome": "Wuyang",
+    "lang":{
+      "br": {"nome":"Wuyang"},
+      "en": {"nome":"Wuyang"}
+    },
     "personagens": [
       "wuyang_comum",
       "wuyang_piscina",
@@ -696,7 +846,10 @@
   },
   {
     "id": "zarya",
-    "nome": "Zarya",
+    "lang":{
+      "br": {"nome":"Zarya"},
+      "en": {"nome":"Zarya"}
+    },
     "personagens": [
       "zarya_comum",
       "talon_zarya",
@@ -709,7 +862,10 @@
   },
   {
     "id": "zenyatta",
-    "nome": "Zenyatta",
+    "lang":{
+      "br": {"nome":"Zenyatta"},
+      "en": {"nome":"Zenyatta"}
+    },
     "personagens": [
       "zenyatta_comum",
       "zenyatta_cultista",
@@ -727,7 +883,10 @@
   },
   {
     "id": "shimada",
-    "nome": "Clã Shimada",
+    "lang":{
+      "br": {"nome":"Clã Shimada"},
+      "en": {"nome":"Shimada Clan"}
+    },
     "personagens": [
       "genji_comum",
       "hanzo_comum"
@@ -738,7 +897,10 @@
   },
   {
     "id": "escola_elemental",
-    "nome": "Escola elemental",
+    "lang":{
+      "br": {"nome":"Escola elemental"},
+      "en": {"nome":"Elemental School"}
+    },
     "personagens": [
       "anran_comum",
       "wuyang_comum"
@@ -749,7 +911,10 @@
   },
   {
     "id": "helix_force",
-    "nome": "Forças de defesa Helix",
+    "lang":{
+      "br": {"nome":"Forças de defesa Helix"},
+      "en": {"nome":"Helix Defense Forces"}
+    },
     "personagens": [
       "pharah_comum",
       "sierra_comum",
@@ -761,7 +926,10 @@
   },
   {
     "id": "melee",
-    "nome": "Combatentes corpo à corpo",
+    "lang":{
+      "br": {"nome":"Combatentes corpo à corpo"},
+      "en": {"nome":"Melee fighters"}
+    },
     "personagens": [
       "brigitte_comum",
       "doomfist_comum",
@@ -775,7 +943,10 @@
   },
   {
     "id": "selvagem",
-    "nome": "Animais selvagens",
+    "lang":{
+      "br": {"nome":"Animais selvagens"},
+      "en": {"nome":"Wild animals"}
+    },
     "personagens": [
       "jetpack_cat_comum",
       "winston_comum",
@@ -787,7 +958,10 @@
   },
   {
     "id": "yokai",
-    "nome": "Yokais",
+    "lang":{
+      "br": {"nome":"Yokais"},
+      "en": {"nome":"Yokais"}
+    },
     "personagens": [
       "genji_comum",
       "hanzo_comum",
@@ -801,7 +975,10 @@
   },
   {
     "id": "omnico",
-    "nome": "Omnicos",
+    "lang":{
+      "br": {"nome":"Omnicos"},
+      "en": {"nome":"Omnics"}
+    },
     "personagens": [
       "bastion_comum",
       "orisa_comum",
@@ -814,7 +991,10 @@
   },
   {
     "id": "deadlock",
-    "nome": "Gangue Deadlock",
+    "lang":{
+      "br": {"nome":"Gangue Deadlock"},
+      "en": {"nome":"Deadlock Gang"}
+    },
     "personagens": [
       "ashe_comum",
       "cassidy_comum"
@@ -825,7 +1005,10 @@
   },
   {
     "id": "vishkar",
-    "nome": "Vishkar inc.",
+    "lang":{
+      "br": {"nome":"Vishkar inc."},
+      "en": {"nome":"Vishkar inc."}
+    },
     "personagens": [
       "domina_comum",
       "lifeweaver_comum",
@@ -837,7 +1020,10 @@
   },
   {
     "id": "ironclad",
-    "nome": "Ironclad clã",
+    "lang":{
+      "br": {"nome":"Clã Ironclad"},
+      "en": {"nome":"Ironclad clan"}
+    },
     "personagens": [
       "bastion_comum",
       "brigitte_comum",
@@ -851,7 +1037,10 @@
   },
   {
     "id": "junkers",
-    "nome": "Junkers",
+    "lang":{
+      "br": {"nome":"Junkers"},
+      "en": {"nome":"Junkers"}
+    },
     "personagens": [
       "junkrat_comum",
       "rainha_junker_comum",
@@ -864,7 +1053,10 @@
   },
   {
     "id": "talon",
-    "nome": "Talon",
+    "lang":{
+      "br": {"nome":"Talon"},
+      "en": {"nome":"Talon"}
+    },
     "personagens": [
       "baptiste_comum",
       "doomfist_comum",
@@ -884,7 +1076,10 @@
   },
   {
     "id": "overwatch",
-    "nome": "Overwatch",
+    "lang":{
+      "br": {"nome":"Overwatch"},
+      "en": {"nome":"Overwatch"}
+    },
     "personagens": [
       "cassidy_comum",
       "echo_comum",
@@ -905,7 +1100,10 @@
   },
   {
     "id": "nova_era_overwatch",
-    "nome": "Nova Era: Overwatch",
+    "lang":{
+      "br": {"nome":"Nova Era: Overwatch"},
+      "en": {"nome":"New Era: Overwatch"}
+    },
     "personagens": [
       "anran_comum",
       "baptiste_comum",
@@ -921,7 +1119,10 @@
   },
   {
     "id": "blackwatch",
-    "nome": "Agentes Blackwatch",
+    "lang":{
+      "br": {"nome":"Agentes Blackwatch"},
+      "en": {"nome":"Blackwatch Agents"}
+    },
     "personagens": [
       "cassidy_comum",
       "genji_comum",
@@ -934,7 +1135,10 @@
   },
   {
     "id": "classico",
-    "nome": "Hérois clássicos",
+    "lang":{
+      "br": {"nome":"Hérois clássicos"},
+      "en": {"nome":"Classic Heroes"}
+    },
     "personagens": [
       "bastion_comum",
       "cassidy_comum",
@@ -964,7 +1168,10 @@
   },
   {
     "id": "null_sector",
-    "nome": "Ameaça do Setor Nulo",
+    "lang":{
+      "br": {"nome":"Ameaça do Setor Nulo"},
+      "en": {"nome":"Danger: Null Sector"}
+    },
     "personagens": [
       "ramattra_comum",
       "bastion_null_sector",
@@ -978,7 +1185,10 @@
   },
   {
     "id": "cacador",
-    "nome": "Caçadores",
+    "lang":{
+      "br": {"nome":"Caçadores"},
+      "en": {"nome":"Hunters"}
+    },
     "personagens": [
       "freja_comum",
       "cassidy_van_helsing",
@@ -992,7 +1202,10 @@
   },
   {
     "id": "campeao",
-    "nome": "Campeões",
+    "lang":{
+      "br": {"nome":"Campeões"},
+      "en": {"nome":"Champions"}
+    },
     "personagens": [
       "reinhardt_gridironhardt",
       "rainha_junker_executora",
@@ -1005,7 +1218,10 @@
   },
   {
     "id": "guerreiro",
-    "nome": "Guerreiros",
+    "lang":{
+      "br": {"nome":"Guerreiros"},
+      "en": {"nome":"Warriors"}
+    },
     "personagens": [
       "brigitte_capita_real",
       "genji_baihu",
@@ -1020,7 +1236,10 @@
   },
   {
     "id": "espacial",
-    "nome": "Astros espaciais",
+    "lang":{
+      "br": {"nome":"Astros espaciais"},
+      "en": {"nome":"Spacial Stars"}
+    },
     "personagens": [
       "juno_comum",
       "sigma_comum",
@@ -1033,7 +1252,10 @@
   },
   {
     "id": "meka",
-    "nome": "Meka",
+    "lang":{
+      "br": {"nome":"Força M.E.K.A."},
+      "en": {"nome":"M.E.K.A. Forces"}
+    },
     "personagens": [
       "dva_comum",
       "horang"
@@ -1044,7 +1266,10 @@
   },
   {
     "id": "ferias",
-    "nome": "Curtindo o Verão",
+    "lang":{
+      "br": {"nome":"Curtindo o Verão"},
+      "en": {"nome":"Summer days"}
+    },
     "personagens": [
       "sigma_scuba",
       "soldado_76_churrasqueiro",
@@ -1057,7 +1282,10 @@
   },
   {
     "id": "imperio_infinito",
-    "nome": "Império Infinito",
+    "lang":{
+      "br": {"nome":"Império Infinito"},
+      "en": {"nome":"Infinite Empire"}
+    },
     "personagens": [
       "sojourn_almirante_infinito",
       "brigitte_capita_real",
@@ -1070,7 +1298,10 @@
   },
   {
     "id": "watchers_rebeldes",
-    "nome": "Watchers Rebeldes",
+    "lang":{
+      "br": {"nome":"Watchers Rebeldes"},
+      "en": {"nome":"Watchers Rebellion"}
+    },
     "personagens": [
       "ashe_contrabandista",
       "baptiste_cacador",
@@ -1085,7 +1316,10 @@
   },
   {
     "id": "fogo",
-    "nome": "Fogo",
+    "lang":{
+      "br": {"nome":"Fogo"},
+      "en": {"nome":"Fire"}
+    },
     "personagens": [
       "anran_comum",
       "ashe_comum",
@@ -1101,7 +1335,10 @@
   },
   {
     "id": "sol",
-    "nome": "Guerreiros do sol",
+    "lang":{
+      "br": {"nome":"Guerreiros do sol"},
+      "en": {"nome":"Sun Guardians"}
+    },
     "personagens": [
       "sol_obscuro",
       "illari_comum",
@@ -1115,7 +1352,10 @@
   },
   {
     "id": "magica",
-    "nome": "Magia",
+    "lang":{
+      "br": {"nome":"Magia"},
+      "en": {"nome":"Magic"}
+    },
     "personagens": [
       "mercy_conjuradora",
       "ashe_warlock",
@@ -1128,7 +1368,10 @@
   },
   {
     "id": "coracao",
-    "nome": "Força Coração",
+    "lang":{
+      "br": {"nome":"Força Coração"},
+      "en": {"nome":"Dokiwatch"}
+    },
     "personagens": [
       "brigitte_coracao",
       "kiriko_coracao",
@@ -1143,7 +1386,10 @@
   },
   {
     "id": "panteao",
-    "nome": "Deuses do Panteão",
+    "lang":{
+      "br": {"nome":"Deuses do Panteão"},
+      "en": {"nome":"Pantheon of Gods"}
+    },
     "personagens": [
       "lucio_hermes",
       "mercy_vitoria_alada",
@@ -1157,7 +1403,10 @@
   },
   {
     "id": "monstros",
-    "nome": "Monstros do Panteão",
+    "lang":{
+      "br": {"nome":"Monstros do Panteão"},
+      "en": {"nome":"Pantheon of Monsters"}
+    },
     "personagens": [
       "reinhardt_minotauro",
       "roadhog_ciclope",
@@ -1169,7 +1418,10 @@
   },
   {
     "id": "futurista",
-    "nome": "Cyber-futurista: 2077",
+    "lang":{
+      "br": {"nome":"Cyber-futurista: 2077"},
+      "en": {"nome":"Cyber-futurist: 2077"}
+    },
     "personagens": [
       "cyber_combustivel",
       "pulo_online",
@@ -1182,7 +1434,10 @@
   },
   {
     "id": "demonio",
-    "nome": "Poderes demoniacos",
+    "lang":{
+      "br": {"nome":"Poderes demoniacos"},
+      "en": {"nome":"Evil powers"}
+    },
     "personagens": [
       "genji_oni",
       "mercy_diabrete",
@@ -1198,7 +1453,10 @@
   },
   {
     "id": "submundo",
-    "nome": "Forças do Submundo",
+    "lang":{
+      "br": {"nome":"Forças do Submundo"},
+      "en": {"nome":"Underworld Forces"}
+    },
     "personagens": [
       "reaper_abobora",
       "zenyatta_cultista",
@@ -1214,7 +1472,10 @@
   },
   {
     "id": "divino",
-    "nome": "Poderes divínos",
+    "lang":{
+      "br": {"nome":"Poderes divínos"},
+      "en": {"nome":"Divine powers"}
+    },
     "personagens": [
       "pistoleiro_divino",
       "amateratsu",
@@ -1229,7 +1490,10 @@
   
    {
     "id": "mirror",
-    "nome": "Mirrorwatch",
+    "lang":{
+      "br": {"nome":"Mirrorwatch"},
+      "en": {"nome":"Mirrorwatch"}
+    },
     "personagens": [
       "bastion_kishin",
       "brigitte_talon",
@@ -1249,7 +1513,10 @@
   },
   {
     "id": "dourado",
-    "nome": "Armas Douradas",
+    "lang":{
+      "br": {"nome":"Armas Douradas"},
+      "en": {"nome":"Golden Weapons"}
+    },
     "personagens": [
       "ana_dourado",
       "anran_dourado",
@@ -1312,7 +1579,10 @@
 
   {
     "id": "legado_tanque",
-    "nome": "Legado: Tanques",
+    "lang":{
+      "br": {"nome":"Legado: Tanques"},
+      "en": {"nome":"Legacy: Tank"}
+    },
     "personagens": [
       "dva_legado",
       "reinhardt_legado",
@@ -1326,7 +1596,10 @@
   },
   {
     "id": "legado_ataque",
-    "nome": "Legado: Atacantes",
+    "lang":{
+      "br": {"nome":"Legado: Atacantes"},
+      "en": {"nome":"Legacy: Offense"}
+    },
     "personagens": [
       "cassidy_legado",
       "genji_legado",
@@ -1341,7 +1614,10 @@
   },
   {
     "id": "legado_defesa",
-    "nome": "Legado: Defensores",
+    "lang":{
+      "br": {"nome":"Legado: Defensores"},
+      "en": {"nome":"Legacy: Defense"}
+    },
     "personagens": [
       "bastion_legado",
       "hanzo_legado",
@@ -1356,7 +1632,10 @@
   },
   {
     "id": "legado_suporte",
-    "nome": "Legado: Suportes",
+    "lang":{
+      "br": {"nome":"Legado: Suportes"},
+      "en": {"nome":"Legacy: Support"}
+    },
     "personagens": [
       "lucio_legado",
       "mercy_legado",
@@ -1370,7 +1649,10 @@
   
   {
     "id": "ultra_miaumiau",
-    "nome": "Ultra: Café Miau-miau",
+    "lang":{
+      "br": {"nome":"Ultra: Café Miau-miau"},
+      "en": {"nome":"Ultra: Nyan Café"}
+    },
     "personagens": [
       "sierra_miaumiau",
       "kiriko_miaumiau"
@@ -1383,7 +1665,10 @@
 
   {
     "id": "mitico",
-    "nome": "Miticos",
+    "lang":{
+      "br": {"nome":"Miticos"},
+      "en": {"nome":"Mythics"}
+    },
     "personagens": [
       "a-7000_Wargod",
       "ana_ra",
@@ -1419,7 +1704,10 @@
   },
   {
     "id": "arma_mitica",
-    "nome": "Armas Miticas",
+    "lang":{
+      "br": {"nome":"Armas Miticas"},
+      "en": {"nome":"Mythic Weapons"}
+    },
     "personagens": [
       "sol_obscuro",
       "rosa_de_chumbo",
@@ -1441,7 +1729,10 @@
   },
   {
     "id": "april_fools_2026",
-    "nome": "A zoeira não tem fim! (April Fools 2026)",
+    "lang":{
+      "br": {"nome":"A zoeira não tem fim! (April Fools 2026)"},
+      "en": {"nome":"Soldier: 67?! (April Fools 2026)"}
+    },
     "personagens": [
       "cassidy_fool",
       "lucio_fool",
@@ -1457,7 +1748,10 @@
   },
   {
     "id": "aniversary_2026",
-    "nome": "10 anos de história!",
+    "lang":{
+      "br": {"nome":"10 Anos de história!"},
+      "en": {"nome":"10 Years of history!"}
+    },
     "personagens": [
       "bastion_classic",
       "doomfist_classic",

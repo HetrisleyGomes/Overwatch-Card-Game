@@ -98,7 +98,7 @@
                     <p class="title">
                         {{ _('bundle_ad') }}
                         {% if prom.last_days %}
-                                (Últimos dias)
+                            ({{ _('last days') }})
                         {% endif %}
                     </p>
                     <span class="texto">
@@ -155,9 +155,9 @@
                     {{ _('weekly_rewards')[8] }}
                 {% endif %}
                 <br>
-                > Dias de sequência: {{ user.streak }}.
+                > {{ _('sequence') }}: {{ user.streak }}.
                 <br/>
-                > Faltam {{ 7 - (user.streak % 7) }} para receber uma recompensa.
+                > {{ 7 - (user.streak % 7) }} {{ _('days remaining') }}.
                 </span>
             </div>
             <div class="aside-box">

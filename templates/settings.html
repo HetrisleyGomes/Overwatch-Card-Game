@@ -60,6 +60,28 @@
             </form>
         </div>
 
+        <div class="language-section">
+            <h2>{{ _('language') }}</h2>
+            <form action="/atualizar-lang" method="post" id="lang-form">
+                <div class="radio-inputs">
+                    <label class="radio">
+                        <input type="radio" name="lang" value="br"
+                        {% if lang == 'br' %}checked{% endif %}
+                        onclick="showBtn('br')">
+                        <span class="name">br</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="lang" value="en"
+                        {% if lang == 'en' %}checked{% endif %}
+                        onclick="showBtn('en')">
+                        <span class="name">en</span>
+                    </label>
+                </div>
+            
+                <button id="lang-btn" class="lang-edit-btn" style="display: none;">✅</button>
+            </form>
+        </div>
+
         <!-- LOGOFF -->
         <div class="logoff_button">
             <a href="{{ url_for('main.logoff') }}">
@@ -82,6 +104,16 @@
 </div>
 
 <script>
+var lang_atual = {{ lang | tojson }};
+function showBtn(lang_btn) {
+    display = document.getElementById("lang-btn")
+    if (lang_btn == lang_atual){
+        display.style.display = "none"
+    } else {
+        display.style.display = "block"
+    }
+}
+
 function editarNome() {
     display = document.getElementById("nome-form");
     if (display.style.display != "flex"){

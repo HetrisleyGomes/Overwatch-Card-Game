@@ -33,6 +33,7 @@
     "profile": "Perfil",
     "choose image": "Escolher imagem",
     "name": "Nome",
+    "language": "Idioma",
     "save": "Salvar",
     "logoff": "Sair",
     "copyrights disclaimer": [
@@ -45,6 +46,7 @@
 
     "msg_no_packs": "Você não possui mais pacotes por hoje!",
     "bundle_ad": "Pacote promocional disponível na loja!",
+    "last days": "últimos dias",
     "ate": "até",
     "available": "disponível",
     "maxs vault": "Cofre do Maximilien",
@@ -63,6 +65,8 @@
         "Consiga 4 pacotes raros e 3 pontos de Ímpeto ao completar essa semana!",
         "Consiga 5 pontos de Ímpeto ao completar essa semana!"
     ],
+    "sequence": "Dias de sequência",
+    "days remaining": "dias para a recompensa",
 
     "get": "Obter",
     "obtained": "Obtido",

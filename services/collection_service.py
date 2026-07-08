@@ -93,7 +93,7 @@ def formatar_inventario(conn, user_id):
     return cartas_view
 
 
-def listar_sets_usuario(conn, user_id):
+def listar_sets_usuario(conn, user_id, lang):
     """Formata os sets e as cartas do usuário em um dicionário.
     
     Keyword arguments:
@@ -115,6 +115,7 @@ def listar_sets_usuario(conn, user_id):
     mapa_characters = {c["id"]: c for c in characters}
 
     for s in sets:
+        set_name = s["lang"][lang]["nome"]
         personagens_set = s["personagens"]
         personagens_set_extra = s.get("other_personagens", [])
 
@@ -173,7 +174,7 @@ def listar_sets_usuario(conn, user_id):
             })
 
         set_info = {
-            "nome": s["nome"],
+            "nome": set_name,
             "completo": completo,
             "cartas": cartas_detalhadas,
             "cartas_extra": cartas_extras,

@@ -1,54 +1,96 @@
 [
     {
         "id": "f1",
-        "nome": "Overwatch",
+        "lang": {
+            "br":{
+                "nome": "Overwatch",
+                "descricao": "Logo Overwatch." 
+            }, "en":{
+                "nome": "Overwatch",
+                "descricao": "Overwatch logo."
+            }
+        },
         "img": "logo.png",
-        "descricao": "Logo Overwatch.",
         "price": 0,
         "unlock": {
             "type": "free"
         }
     },{
         "id": "f2",
-        "nome": "Overwatch Dark",
+        "lang": {
+            "br":{
+                "nome": "Overwatch Dark",
+                "descricao": "Logo Overwatch." 
+            }, "en":{
+                "nome": "Overwatch Dark",
+                "descricao": "Overwatch logo."
+            }
+        },
         "img": "logo_dark.png",
-        "descricao": "Logo Overwatch.",
         "price": 0,
         "unlock": {
             "type": "free"
         }
     },{
         "id": "c1",
-        "nome": "Pachimari",
+        "lang": {
+            "br":{
+                "nome": "Pachimari",
+                "descricao": "Todo mundo ama o Pachimari." 
+            }, "en":{
+                "nome": "Pachimari",
+                "descricao": "Everyone loves Pachimari."
+            }
+        },
         "img": "Pachimari_ow.png",
-        "descricao": "Todo mundo ama o Pachimari.",
         "price": 200,
         "unlock": {
             "type": "purchase"
         }
     },{
         "id": "c2",
-        "nome": "Overwatch Ecopoint",
+        "lang": {
+            "br":{
+                "nome": "Overwatch Ecoponto",
+                "descricao": "Logo Ecoponto Overwatch."
+            }, "en":{
+                "nome": "Overwatch Ecopoint",
+                "descricao": "Overwatch Ecopoint logo."
+            }
+        },
         "img": "logo_ecopoint.png",
-        "descricao": "Logo Ecopoint Overwatch.",
         "price": 200,
         "unlock": {
             "type": "purchase"
         }
     },{
         "id": "c3",
-        "nome": "Coelhinha",
+        "lang": {
+            "br":{
+                "nome": "Coelhinha",
+                "descricao": "Com amor, D.Va!" 
+            }, "en":{
+                "nome": "Bunny",
+                "descricao": "Love, D.Va."
+            }
+        },
         "img": "dva_logo.png",
-        "descricao": "Com amor, D.Va!",
         "price": 200,
         "unlock": {
             "type": "purchase"
         }
     },{
         "id": "c4",
-        "nome": "Hackeado",
+        "lang": {
+            "br":{
+                "nome": "Hackeado",
+                "descricao": "Teje, hackeado." 
+            }, "en":{
+                "nome": "Hacked",
+                "descricao": "Bonk! Hacked."
+            }
+        },
         "img": "sombra_logo.png",
-        "descricao": "Teje, hackeado.",
         "price": 200,
         "unlock": {
             "type": "purchase"
@@ -56,27 +98,48 @@
     },
     {
         "id": "c5",
-        "nome": "Soldadinho",
+        "lang": {
+            "br":{
+                "nome": "Soldadinho",
+                "descricao": "Boa sorte e se divirta!" 
+            }, "en":{
+                "nome": "Lil Guy",
+                "descricao": "Good luck and have fun!"
+            }
+        },
         "img": "GLHF.png",
-        "descricao": "Boa sorte e se divirta!",
         "price": 200,
         "unlock": {
             "type": "purchase"
         }
     },{
         "id": "c6",
-        "nome": "Colorido",
+        "lang": {
+            "br":{
+                "nome": "Colorido",
+                "descricao": "Mais cores que nunca."   
+            }, "en":{
+                "nome": "Colorful",
+                "descricao": "With more colors than ever."
+            }
+        },
         "img": "logo_rainbow.png",
-        "descricao": "Mais cores que nunca.",
         "price": 100,
         "unlock": {
             "type": "purchase"
         }
     },{
         "id": "s-01",
-        "nome": "Setor Nulo",
+        "lang": {
+            "br":{
+                "nome": "Setor Nulo",
+                "descricao": "A força da resistência omnica."  
+            }, "en":{
+                "nome": "Null Sector",
+                "descricao": "The power of Omnica's resistance."
+            }
+        },
         "img": "null_sector_logo.png",
-        "descricao": "A força da resistência omnica.",
         "price": 500,
         "unlock": {
             "type": "set",
@@ -84,9 +147,16 @@
         }
     },{
         "id": "s-02",
-        "nome": "Blackwatch",
+        "lang": {
+            "br":{
+                "nome": "Blackwatch",
+                "descricao": "Das sombras, para o mundo."  
+            }, "en":{
+                "nome": "Blackwatch",
+                "descricao": "The shadows, for the world."
+            }
+        },
         "img": "blackwatch_logo.png",
-        "descricao": "Das sombras, para o mundo.",
         "price": 500,
         "unlock": {
             "type": "set",
@@ -94,9 +164,16 @@
         }
     },{
         "id": "s-03",
-        "nome": "Talon",
+        "lang": {
+            "br":{
+                "nome": "Talon",
+                "descricao": "O novo império, Talon!"  
+            }, "en":{
+                "nome": "Talon",
+                "descricao": "The new reign, Talon!"
+            }
+        },
         "img": "talon_logo.png",
-        "descricao": "O novo império, Talon!",
         "price": 500,
         "unlock": {
             "type": "set",
@@ -105,9 +182,16 @@
     },
     {
         "id": "e-aniv-1",
-        "nome": "Ouroverwatch",
+        "lang": {
+            "br":{
+                "nome": "Ouroverwatch",
+                "descricao": "Brilhe, com Overwatch."  
+            }, "en":{
+                "nome": "Goldwatch",
+                "descricao": "Shine, with Overwatch."
+            }
+        },
         "img": "gold_watch.png",
-        "descricao": "Brilhe, com Overwatch.",
         "price": 500,
         "unlock": {
             "type": "event",
@@ -116,9 +200,16 @@
     },
     {
         "id": "e-games-1",
-        "nome": "Lucioball",
+        "lang": {
+            "br":{
+                "nome": "Lucioball",
+                "descricao": "Viva o espírito esportivo, e vibre a emoção do Lucioball."   
+            }, "en":{
+                "nome": "Lucioball",
+                "descricao": "Long live competitive spirit, and feel the thrill of Lucioball."
+            }
+        },
         "img": "lucioball.png",
-        "descricao": "Viva o espírito esportivo, e vibre a emoção do Lucioball.",
         "price": 200,
         "unlock": {
             "type": "event",
@@ -127,9 +218,16 @@
     },
     {
         "id": "e-10-anos",
-        "nome": "Decênio",
+        "lang": {
+            "br":{
+                "nome": "Decênio",
+                "descricao": "10 anos de Overwatch."   
+            }, "en":{
+                "nome": "Decennium",
+                "descricao": "10 Years of Overwatch."
+            }
+        },
         "img": "logo_10_anos.png",
-        "descricao": "10 anos de Overwatch.",
         "price": 0,
         "unlock": {
             "type": "none",
@@ -138,9 +236,16 @@
     },
     {
         "id": "l2-1",
-        "nome": "Retrato Tracer",
+        "lang": {
+            "br":{
+                "nome": "Retrato Tracer",
+                "descricao": "Tracer, a esperança do futuro."  
+            }, "en":{
+                "nome": "Tracer portrait",
+                "descricao": "Tracer, the hope for the future."
+            }
+        },
         "img": "Tracer_Portrait.png",
-        "descricao": "Tracer, a esperança do futuro.",
         "price": 200,
         "unlock": {
             "type": "nivel",
@@ -149,9 +254,16 @@
     },
     {
         "id": "l2-2",
-        "nome": "Retrato Widowmaker",
+        "lang": {
+            "br":{
+                "nome": "Retrato Widowmaker",
+                "descricao": "Widowmaker, a ruína do passado." 
+            }, "en":{
+                "nome": "Widowmaker portrait",
+                "descricao": "Widowmaker, the ruins of the past"
+            }
+        },
         "img": "Widowmaker_Portrait.png",
-        "descricao": "Widowmaker, a ruína do passado.",
         "price": 200,
         "unlock": {
             "type": "nivel",
@@ -160,9 +272,16 @@
     },
     {
         "id": "l3-1",
-        "nome": "Hacker 8-bits",
+        "lang": {
+            "br":{
+                "nome": "Hacker 8-bits",
+                "descricao": "Teje, hackeado. (em 8-bits)" 
+            }, "en":{
+                "nome": "8-bit Hacker",
+                "descricao": "Bonk! Hacked. (in 8-bits)" 
+            }
+        },
         "img": "8bits_logo.png",
-        "descricao": "Teje, hackeado. (em 8-bits)",
         "price": 500,
         "unlock": {
             "type": "nivel",
@@ -171,9 +290,16 @@
     },
     {
         "id": "l3-2",
-        "nome": "Pachimari 8-bits",
+        "lang": {
+            "br":{
+                "nome": "Pachimari 8-bits",
+                "descricao": "Agora você pode amar o Pachimari em 8-bits." 
+            }, "en":{
+                "nome": "8-Bitmari",
+                "descricao": "Now you can love the Pachimari in 8-bit."
+            }
+        },
         "img": "8-Bitmari.png",
-        "descricao": "Agora você pode amar o pachimari em 8-bits.",
         "price": 500,
         "unlock": {
             "type": "nivel",
@@ -182,9 +308,16 @@
     },
     {
         "id": "l4-2",
-        "nome": "Patinhas",
+        "lang": {
+            "br":{
+                "nome": "Patinhas",
+                "descricao": "Olha o bichinho."
+            }, "en":{
+                "nome": "Pixel Paws",
+                "descricao": "Look the puppy."
+            }
+        },
         "img": "Patinhas.png",
-        "descricao": "Olha o bichinho.",
         "price": 200,
         "unlock": {
             "type": "nivel",
@@ -193,9 +326,16 @@
     },
     {
         "id": "l5-1",
-        "nome": "Questwatch",
+        "lang": {
+            "br":{
+                "nome": "Questwatch",
+                "descricao": "Embarque em missões divertidas com Questwatch."  
+            }, "en":{
+                "nome": "Questwatch",
+                "descricao": "Embark on fun missions with Questwatch."
+            }
+        },
         "img": "Questwatch_logo.png",
-        "descricao": "Embarque em missões divertidas com Questwatch.",
         "price": 200,
         "unlock": {
             "type": "nivel",
@@ -204,9 +344,16 @@
     },
     {
         "id": "l5-2",
-        "nome": "Pachimari Questwatch",
+        "lang": {
+            "br":{
+                "nome": "Pachimari Questwatch",
+                "descricao": "O Pachimari, mais adorável do que nunca."
+            }, "en":{
+                "nome": "Questwatch Pachimari",
+                "descricao": "Pachimari, more adorable than ever."
+            }
+        },
         "img": "Questwatch_Pachimari.png",
-        "descricao": "O pachimari, mais adorável do que nunca.",
         "price": 500,
         "unlock": {
             "type": "nivel",
@@ -215,9 +362,16 @@
     },
     {
         "id": "l5-3",
-        "nome": "Tracer Questwatch",
+        "lang": {
+            "br":{
+                "nome": "Tracer Questwatch",
+                "descricao": "A aventureira dos reinos de Questwatch." 
+            }, "en":{
+                "nome": "Questwatch Tracer",
+                "descricao": "The adventurer from the realms of Questwatch."
+            }
+        },
         "img": "Questwatch_Tracer.png",
-        "descricao": "A aventureira dos reinos de Questwatch.",
         "price": 750,
         "unlock": {
             "type": "nivel",
@@ -226,9 +380,16 @@
     },
     {
         "id": "l6-1",
-        "nome": "Mercymari",
+        "lang": {
+            "br":{
+                "nome": "Mercymari",
+                "descricao": "Um Pachimari misericordioso."
+            }, "en":{
+                "nome": "Mercymari",
+                "descricao": "A merciful Pachimari."
+            }
+        },
         "img": "Mercy_mari.png",
-        "descricao": "Um pachimari misericordioso.",
         "price": 750,
         "unlock": {
             "type": "nivel",
@@ -237,9 +398,16 @@
     },
     {
         "id": "l6-2",
-        "nome": "Anamari",
+        "lang": {
+            "br":{
+                "nome": "Anamari",
+                "descricao": "Um pachimari brilhante." 
+            }, "en":{
+                "nome": "Anamari",
+                "descricao": "A brilliant Pachimari."
+            }
+        },
         "img": "Ana_mari.png",
-        "descricao": "Um pachimari brilhante.",
         "price": 750,
         "unlock": {
             "type": "nivel",
@@ -248,9 +416,16 @@
     },
     {
         "id": "l7-1",
-        "nome": "Ladina",
+        "lang": {
+            "br":{
+                "nome": "Ladina",
+                "descricao": "Uma Ladina astuta se esconde por aqui."  
+            }, "en":{
+                "nome": "Rogue",
+                "descricao": "A cunning rogue is hiding around here."
+            }
+        },
         "img": "Ladina.png",
-        "descricao": "Uma Ladina astuta se esconde por aqui.",
         "price": 500,
         "unlock": {
             "type": "nivel",
@@ -259,9 +434,16 @@
     },
     {
         "id": "l7-2",
-        "nome": "Mitzi",
+        "lang": {
+            "br":{
+                "nome": "Mitzi",
+                "descricao": "Irmã mais velha de Jetpack Cat." 
+            }, "en":{
+                "nome": "Mitzi",
+                "descricao": "Jetpack Cat's older sister."
+            }
+        },
         "img": "Mitzi.png",
-        "descricao": "Irmã mais velha de Jetpack Cat.",
         "price": 200,
         "unlock": {
             "type": "nivel",
@@ -270,9 +452,16 @@
     },
     {
         "id": "l8-1",
-        "nome": "Império Infinito",
+        "lang": {
+            "br":{
+                "nome": "Império Infinito",
+                "descricao": "O Império que domina a galáxia." 
+            }, "en":{
+                "nome": "Infinite Empire",
+                "descricao": "The Empire that rules the galaxy."
+            }
+        },
         "img": "Imperio_infinito_icon.png",
-        "descricao": "O Império que domina a galáxia.",
         "price": 500,
         "unlock": {
             "type": "nivel",
@@ -281,9 +470,16 @@
     },
     {
         "id": "l8-2",
-        "nome": "Rebeldes Watchers",
+        "lang": {
+            "br":{
+                "nome": "Rebeldes Watchers",
+                "descricao": "A rebelião que surge contra o Ímperio tirano."   
+            }, "en":{
+                "nome": "Watcher Rebellion",
+                "descricao": "The rebellion that arises against the tyrannical Empire."
+            }
+        },
         "img": "Rebeldes_watcher.png",
-        "descricao": "A rebelião que surge contra o Ímperio tirano.",
         "price": 500,
         "unlock": {
             "type": "nivel",
@@ -292,9 +488,16 @@
     },
     {
         "id": "l9-1",
-        "nome": "Bola de neve",
+        "lang": {
+            "br":{
+                "nome": "Bola de neve",
+                "descricao": "Prepare-se para entrar numa fria."   
+            }, "en":{
+                "nome": "Snowball",
+                "descricao": "Get ready for a flurry!"
+            }
+        },
         "img": "Bola_de_neve.png",
-        "descricao": "Prepare-se para entrar numa fria.",
         "price": 500,
         "unlock": {
             "type": "nivel",
@@ -303,9 +506,16 @@
     },
     {
         "id": "l9-2",
-        "nome": "Dragões",
+        "lang": {
+            "br":{
+                "nome": "Dragões",
+                "descricao": "O espírito anima do dragão."   
+            }, "en":{
+                "nome": "Dragons",
+                "descricao": "The spirit of the anima dragon."
+            }
+        },
         "img": "Dragons_icon.png",
-        "descricao": "Prepare-se para entrar numa fria.",
         "price": 500,
         "unlock": {
             "type": "nivel",
@@ -314,9 +524,16 @@
     },
     {
         "id": "l10-1",
-        "nome": "Ganimedes perigoso",
+        "lang": {
+            "br":{
+                "nome": "Ganimedes perigoso",
+                "descricao": "Ganimedes anda muito preocupado esses dias." 
+            }, "en":{
+                "nome": "Ganyknife",
+                "descricao": "Ganymede has been really worried lately."
+            }
+        },
         "img": "Ganymede_icon.png",
-        "descricao": "Ganimedes anda muito preocupado esses dias.",
         "price": 750,
         "unlock": {
             "type": "nivel",
@@ -325,9 +542,16 @@
     },
     {
         "id": "l10-2",
-        "nome": "Fika",
+        "lang": {
+            "br":{
+                "nome": "Fika",
+                "descricao": "A gata à jato."  
+            }, "en":{
+                "nome": "Fika",
+                "descricao": "The Jetpack Cat."
+            }
+        },
         "img": "Fika.png",
-        "descricao": "A gata à jato.",
         "price": 750,
         "unlock": {
             "type": "nivel",
