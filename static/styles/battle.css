@@ -244,7 +244,7 @@ body {
     justify-content: space-between;
 }
 /* Cor de fundo das partes de texto */
-.dano .card-texto, .dano .card-nome {
+.dano .damage .card-texto, .dano .card-nome {
     background-color: var(--dano-type);
 }
 .suporte .card-texto, .suporte .card-nome {

@@ -3,7 +3,7 @@ from sql.controller.progress_controller import ProgressController
 from sql.repositories.progress_repository import ProgressRepository
 
 
-def verificar_sets(conn, user_id):
+def verificar_sets(conn, user_id, lang):
     """Verifica se um conjunto de cartas foi completado.
     
     Keyword arguments:
@@ -46,7 +46,7 @@ def verificar_sets(conn, user_id):
     
     return sets_nomes, pontos_sets
 
-def formatar_inventario(conn, user_id):
+def formatar_inventario(conn, user_id, lang):
     """Formata as cartas do usuário em um dicionário.
     
     Keyword arguments:
@@ -66,6 +66,7 @@ def formatar_inventario(conn, user_id):
     for c in characters:
         cid = c["id"]
 
+        c_lang = c["lang"][lang]
         possui = cid in personagens_usuario
         icon_ref = c.get("icon_ref", False)
         golden_weapon = c.get("golden_weapon", False)
@@ -75,12 +76,12 @@ def formatar_inventario(conn, user_id):
         cartas_view.append({
             "id": cid,
             "base": c["base"],
-            "nome": c["nome"],
+            "nome": c_lang["nome"],
             "classe": c["classe"],
             "subclasse": c["subclasse"],
-            "entrada": c["entrada"],
-            "ult_nome": c["ult_nome"],
-            "ult": c["ult"],
+            "entrada": c_lang["entrada"],
+            "ult_nome": c_lang["ult_nome"],
+            "ult": c_lang["ult"],
             "raridade": c["raridade"],
             "img": c["img"],
             "icon_ref": icon_ref,
@@ -136,7 +137,7 @@ def listar_sets_usuario(conn, user_id, lang):
 
             if not c:
                 continue
-
+            
             possui = cid in personagens_usuario
             is_event = c.get("evento", False)
             golden_weapon = c.get("golden_weapon", False)
@@ -145,7 +146,7 @@ def listar_sets_usuario(conn, user_id, lang):
 
             cartas_detalhadas.append({
             "id": cid,
-            "nome": c["nome"],
+            "nome": c["lang"][lang]["nome"],
             "raridade": c["raridade"],
             "img": c["img"],
             "icon_ref": icon_ref,
@@ -167,7 +168,7 @@ def listar_sets_usuario(conn, user_id, lang):
 
                 cartas_extras.append({
                 "id": cid,
-                "nome": c["nome"],
+                "nome": c["lang"][lang]["nome"],
                 "raridade": c["raridade"],
                 "img": c["img"],
                 "possui": possui,
@@ -189,14 +190,14 @@ def listar_sets_usuario(conn, user_id, lang):
 
     return resultado
 
-def format_carta(carta_id):
+def format_carta(carta_id, lang):
     characters = get_characters()
     mapa_characters = {c["id"]: c for c in characters}
     carta = mapa_characters[carta_id]
     icon_ref = carta.get("icon_ref", False)
     itens = {
     'carta_id': carta['id'],
-    'carta_nome': carta['nome'],
+    'carta_nome': carta["lang"][lang]['nome'],
     'carta_img': carta['img'],
     'raridade': carta['raridade'],
     'classe': carta['classe'],

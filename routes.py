@@ -94,6 +94,7 @@ def abrir_pack_route():
     repo = UserRepository(connection)
     ctll = UserController(repo)
     user = ctll.get_user(session["usuario_id"])
+    lang = session['lang']
 
     # obtem informações do form
     tipo = request.form.get("tipo")
@@ -107,7 +108,7 @@ def abrir_pack_route():
 
 
     user = registry_cards(connection, cartas, tipo, user)
-    sets, pontos = verificar_sets(connection, user['id'])
+    sets, pontos = verificar_sets(connection, user['id'], lang)
     user['pontos'] += pontos
     ctll.edit_user(id=user['id'], user=user)
 
@@ -158,8 +159,8 @@ def inventario():
     ctll = UserController(repo)
 
     user = ctll.get_user(session["usuario_id"])
-
-    cartas = formatar_inventario(connection, user['id'])
+    lang = session['lang']
+    cartas = formatar_inventario(connection, user['id'], lang)
 
     mostrar_todas = request.args.get("all", "0") == "1"
     return render_template('inventario.html', user = user, mostrar_todas = mostrar_todas, cartas=cartas)
@@ -185,7 +186,8 @@ def deck_builder():
     connection = get_db_connection()
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
-    cartas = formatar_inventario(connection, session["usuario_id"])
+    lang = session["lang"]
+    cartas = formatar_inventario(connection, session["usuario_id"],lang)
     deck = get_deck(connection)
     return render_template('deck_builder.html', cartas=cartas, deck=deck)
 
@@ -303,6 +305,7 @@ def maximilien():
     ctll = UserController(repo)
 
     user = ctll.get_user(session["usuario_id"])
+    lang = session['lang']
 
     cartas = []
     vault_atual = get_max_vault_infos()
@@ -319,7 +322,7 @@ def maximilien():
         cards_raw = generate_vault(connection, user['id'], vault_atual)
 
     for carta in cards_raw:
-        data = format_carta(carta[0])
+        data = format_carta(carta[0], lang)
         print(data)
         data['has_purshased'] = carta[1]
         cartas.append(data)
@@ -343,6 +346,7 @@ def comprar_vault():
     ctll = UserController(repo)
 
     user = ctll.get_user(session["usuario_id"])
+    lang = session['lang']
 
     if not user:
         return {"success": False, "erro": "Usuário não encontrado"}
@@ -351,7 +355,7 @@ def comprar_vault():
     msg = "Agradeço a sua compra!"
     # 💰 regra de compra
 
-    user = registry_cards(connection, [format_carta(carta_id)], "none", user)
+    user = registry_cards(connection, [format_carta(carta_id, lang)], "none", user)
     buy_vault_item(connection, user['id'], carta_id)
     user["pontos"] -= preco
     ctll.edit_user(user['id'], user)

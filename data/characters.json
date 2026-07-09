@@ -2,36 +2,66 @@
   {
     "id": "ana_comum",
     "base": "ana",
-    "nome": "Ana",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Eu não vou deixar um mundo partido para trás.",
-    "ult_nome": "Nano Boost",
-    "ult": "Você está energizado! Vá para o combate!",
+    "lang": {
+      "br": {
+        "nome": "Ana",
+        "entrada": "Eu não vou deixar um mundo partido para trás.",
+        "ult_nome": "Nano Boost",
+        "ult": "Você está energizado! Vá para o combate!"
+      },
+      "en": {
+        "nome": "Ana",
+        "entrada": "I will not leave a broken world behind.",
+        "ult_nome": "Nano Boost",
+        "ult": "You're powered up, get in there."
+      }
+    },
     "raridade": "comum",
     "img": "Ana_ow.png"
   },
   {
     "id": "arqui-comandante_amari",
     "base": "ana",
-    "nome": "Arqui-comandante Amari",
     "classe": "Suporte",
     "subclasse": "Mirror",
-    "entrada": "Eu não vou deixar um mundo pacífico para trás.",
-    "ult_nome": "Nano Boost",
-    "ult": "Você está energizado! Vá para o combate!",
+    "lang": {
+      "br": {
+        "nome": "Arqui-comandante Amari",
+        "entrada": "Eu não vou deixar um mundo pacífico para trás.",
+        "ult_nome": "Nano Boost",
+        "ult": "Você está energizado! Vá para o combate!"
+      },
+      "en": {
+        "nome": "Arch-Commandant Amari",
+        "entrada": "I will not leave a peaceful world behind.",
+        "ult_nome": "Nano Boost",
+        "ult": "You're powered up, get in there."
+      }
+    },
     "raridade": "lendario",
     "img": "Ana_ow_mirror.png"
   },
   {
     "id": "ana_dourado",
     "base": "ana",
-    "nome": "Ana Dourada",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Eu não vou deixar um mundo partido para trás.",
-    "ult_nome": "Nano Boost",
-    "ult": "Você está energizado! Vá para o combate!",
+    "lang": {
+      "br": {
+        "nome": "Ana Dourada",
+        "entrada": "Eu não vou deixar um mundo partido para trás.",
+        "ult_nome": "Nano Boost",
+        "ult": "Você está energizado! Vá para o combate!"
+      },
+      "en": {
+        "nome": "Ana: Golden",
+        "entrada": "Eu não vou deixar um mundo partido para trás.",
+        "ult_nome": "Nano Boost",
+        "ult": "Você está energizado! Vá para o combate!"
+      }
+    },
     "raridade": "lendario",
     "img": "Ana_ow_gold.png",
     "golden_weapon": true,
@@ -40,60 +70,110 @@
   {
     "id": "a-7000_Wargod",
     "base": "ana",
-    "nome": "Unidade suprema A-7000",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Eu destruirei este mundo.",
-    "ult_nome": "Nano Boost",
-    "ult": "Está energizado! Destrua eles!",
+    "lang": {
+      "br": {
+        "nome": "Unidade suprema A-7000",
+        "entrada": "Eu destruirei este mundo.",
+        "ult_nome": "Nano Boost",
+        "ult": "Está energizado! Destrua eles!"
+      },
+      "en": {
+        "nome": "A-7000 Wargod",
+        "entrada": "I will break this world.",
+        "ult_nome": "Nano Boost",
+        "ult": "You're powered up! Destroy them!"
+      }
+    },
     "raridade": "mitico",
     "img": "Ana_ow_myth.png"
   },
   {
     "id": "ana_ra",
     "base": "ana",
-    "nome": "Rá",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Não vou deixar sem líder, um céu sem sol.",
-    "ult_nome": "Nano Boost",
-    "ult": "Está energizado! Aniquile eles!",
+    "lang": {
+      "br": {
+        "nome": "Rá",
+        "entrada": "Não vou deixar sem líder, um céu sem sol.",
+        "ult_nome": "Nano Boost",
+        "ult": "Está energizado! Aniquile eles!"
+      },
+      "en": {
+        "nome": "Ra",
+        "entrada": "I will not leave a sunless sky unruled.",
+        "ult_nome": "Nano Boost",
+        "ult": "You're powered up! Unmake them!"
+      }
+    },
     "raridade": "mitico",
     "img": "Ana_ow_myth_ra.png"
   },
   {
     "id": "sol_obscuro",
     "base": "ana",
-    "nome": "Ana: Sol Obscuro",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Eu não vou deixar um mundo partido para trás.",
-    "ult_nome": "Nano Boost",
-    "ult": "Você está energizado! Vá para o combate!",
+    "lang": {
+      "br": {
+        "nome": "Ana: Midnight Sun",
+        "entrada": "Eu não vou deixar um mundo partido para trás.",
+        "ult_nome": "Nano Boost",
+        "ult": "Você está energizado! Vá para o combate!"
+      },
+      "en": {
+        "nome": "Ana: Sol Obscuro",
+        "entrada": "I will not leave a broken world behind.",
+        "ult_nome": "Nano Boost",
+        "ult": "You're powered up, get in there."
+      }
+    },
     "raridade": "mitico",
     "img": "Ana_ow_weapon.png"
   },
   {
     "id": "anran_comum",
     "base": "anran",
-    "nome": "Anran",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "O fogo do meu coração nunca vai se apagar.",
-    "ult_nome": "Ascenção do pássaro vermelho.",
-    "ult": "Incendiando os céus!",
+    "lang": {
+      "br": {
+        "nome": "Anran",
+        "entrada": "O fogo do meu coração nunca vai se apagar.",
+        "ult_nome": "Ascenção do pássaro vermelho.",
+        "ult": "Incendiando os céus!"
+      },
+      "en": {
+        "nome": "Anran",
+        "entrada": "The fire in my heart will never burn out.",
+        "ult_nome": "Vermillion Ascent",
+        "ult": "Huǒyǔ fén tiān‌‌!"
+      }
+    },
     "raridade": "comum",
     "img": "Anran_ow.png"
   },
   {
     "id": "anran_dourado",
     "base": "anran",
-    "nome": "Anran Dourada",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "O fogo do meu coração nunca vai se apagar.",
-    "ult_nome": "Ascenção do pássaro vermelho.",
-    "ult": "Incendiando os céus!",
+    "lang": {
+      "br": {
+        "nome": "Anran Dourada",
+        "entrada": "O fogo do meu coração nunca vai se apagar.",
+        "ult_nome": "Ascenção do pássaro vermelho.",
+        "ult": "Incendiando os céus!"
+      },
+      "en": {
+        "nome": "Anran: Golden",
+        "entrada": "The fire in my heart will never burn out.",
+        "ult_nome": "Vermillion Ascent",
+        "ult": "Huǒyǔ fén tiān‌‌!"
+      }
+    },
     "raridade": "lendario",
     "img": "Anran_ow_gold.png",
     "golden_weapon": true,
@@ -102,48 +182,88 @@
   {
     "id": "ashe_comum",
     "base": "ashe",
-    "nome": "Ashe",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "No meu caminho, não fica um pra contar história.",
-    "ult_nome": "B.O.B.",
-    "ult": "BOB, faça alguma coisa!",
+    "lang": {
+      "br": {
+        "nome": "Ashe",
+        "entrada": "No meu caminho, não fica um pra contar história.",
+        "ult_nome": "B.O.B.",
+        "ult": "BOB, faça alguma coisa!"
+      },
+      "en": {
+        "nome": "Ashe",
+        "entrada": "I'm the last one you'll ever cross.",
+        "ult_nome": "B.O.B.",
+        "ult": "Bob! Do somethin'!"
+      }
+    },
     "raridade": "comum",
     "img": "Ashe_ow.png"
   },
   {
     "id": "ashe_contrabandista",
     "base": "ashe",
-    "nome": "Contrabandista Intergaláctica",
     "classe": "Dano",
     "subclasse": "Cósmico",
-    "entrada": "Eu sou a última contrabandista espacial que você vai encontrar.",
-    "ult_nome": "B.O.B.",
-    "ult": "BOB, faça alguma coisa!",
+    "lang": {
+      "br": {
+        "nome": "Contrabandista Intergaláctica",
+        "entrada": "Eu sou a última contrabandista espacial que você vai encontrar.",
+        "ult_nome": "B.O.B.",
+        "ult": "BOB, faça alguma coisa!"
+      },
+      "en": {
+        "nome": "Contrabandista Intergaláctica",
+        "entrada": "I'm the last space smuggler you'll ever cross.",
+        "ult_nome": "B.O.B.",
+        "ult": "Bob! Do somethin'!"
+      }
+    },
     "raridade": "epico",
     "img": "Ashe_ow_contrabandista.png"
   },
   {
     "id": "ashe_warlock",
     "base": "ashe",
-    "nome": "Ashe Feiticeira",
     "classe": "Dano",
     "subclasse": "Perverso",
-    "entrada": "Meus ódios, minhas runas.",
-    "ult_nome": "B.O.B.",
-    "ult": "Beelzebob, faça alguma coisa!",
+    "lang": {
+      "br": {
+        "nome": "Feiticeira",
+        "entrada": "Meus ódios, minhas runas.",
+        "ult_nome": "B.O.B.",
+        "ult": "Beelzebob, faça alguma coisa!"
+      },
+      "en": {
+        "nome": "Warlock",
+        "entrada": "My grimness, my runes.",
+        "ult_nome": "B.O.B.",
+        "ult": "Beelzebob! Do somethin'!"
+      }
+    },
     "raridade": "lendario",
     "img": "Ashe_ow_feiticeira.png"
   },
   {
     "id": "ashe_dourado",
     "base": "ashe",
-    "nome": "Ashe Dourada",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "No meu caminho, não fica um pra contar história.",
-    "ult_nome": "B.O.B.",
-    "ult": "BOB, faça alguma coisa!",
+    "lang": {
+      "br": {
+        "nome": "Ashe Dourada",
+        "entrada": "No meu caminho, não fica um pra contar história.",
+        "ult_nome": "B.O.B.",
+        "ult": "BOB, faça alguma coisa!"
+      },
+      "en": {
+        "nome": "Ashe: Golden",
+        "entrada": "I'm the last one you'll ever cross.",
+        "ult_nome": "B.O.B.",
+        "ult": "Bob! Do somethin'!"
+      }
+    },
     "raridade": "lendario",
     "img": "Ashe_ow_gold.png",
     "golden_weapon": true,
@@ -152,60 +272,110 @@
   {
     "id": "imperatriz_calamidade",
     "base": "ashe",
-    "nome": "Imperatriz Calamidade",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Sou a última imperatriz que você irá enfrentar.",
-    "ult_nome": "B.O.B.",
-    "ult": "BOB, destrua alguma coisa!",
+    "lang": {
+      "br": {
+        "nome": "Imperatriz Calamidade",
+        "entrada": "Sou a última imperatriz que você irá enfrentar.",
+        "ult_nome": "B.O.B.",
+        "ult": "BOB, destrua alguma coisa!"
+      },
+      "en": {
+        "nome": "Calamity Empress",
+        "entrada": "I'm the last empress you'll ever cross.",
+        "ult_nome": "B.O.B.",
+        "ult": "Bob! Slay somethin'!"
+      }
+    },
     "raridade": "mitico",
     "img": "Ashe_ow_myth.png"
   },
   {
     "id": "rosa_de_chumbo",
     "base": "ashe",
-    "nome": "Ashe: Rosa de chumbo",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "No meu caminho, não fica um pra contar história.",
-    "ult_nome": "B.O.B.",
-    "ult": "BOB, faça alguma coisa!",
+    "lang": {
+      "br": {
+        "nome": "Ashe: Rosa de chumbo",
+        "entrada": "No meu caminho, não fica um pra contar história.",
+        "ult_nome": "B.O.B.",
+        "ult": "BOB, faça alguma coisa!"
+      },
+      "en": {
+        "nome": "Ashe: Lead Rose",
+        "entrada": "I'm the last one you'll ever cross.",
+        "ult_nome": "B.O.B.",
+        "ult": "Bob! Do somethin'!"
+      }
+    },
     "raridade": "mitico",
     "img": "Ashe_ow_weapon.png"
   },
   {
     "id": "baptiste_comum",
     "base": "baptiste",
-    "nome": "Baptiste",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Outro dia, outro campo de batalha.",
-    "ult_nome": "Matriz de amplificação",
-    "ult": "Acionando matriz!",
+    "lang": {
+      "br": {
+        "nome": "Baptiste",
+        "entrada": "Outro dia, outro campo de batalha.",
+        "ult_nome": "Matriz de amplificação",
+        "ult": "Acionando matriz!"
+      },
+      "en": {
+        "nome": "Baptiste",
+        "entrada": "Another day, another battlefield.",
+        "ult_nome": "Amplification Matrix",
+        "ult": "Light them up!"
+      }
+    },
     "raridade": "comum",
     "img": "Baptiste_ow.png"
   },
   {
     "id": "baptiste_cacador",
     "base": "baptiste",
-    "nome": "Caçador de Recompensas",
     "classe": "Suporte",
     "subclasse": "Caçador",
-    "entrada": "Outro dia, outra recompensa.",
-    "ult_nome": "Matriz de amplificação",
-    "ult": "Acionando matriz!",
+    "lang": {
+      "br": {
+        "nome": "Caçador de Recompensas",
+        "entrada": "Outro dia, outra recompensa.",
+        "ult_nome": "Matriz de amplificação",
+        "ult": "Acionando matriz!"
+      },
+      "en": {
+        "nome": "Bounty Hunter",
+        "entrada": "Another day, another bounty.",
+        "ult_nome": "Amplification Matrix",
+        "ult": "Light them up!"
+      }
+    },
     "raridade": "epico",
     "img": "Baptiste_ow_cacador_de_recompensas.png"
   },
   {
     "id": "baptiste_dourado",
     "base": "baptiste",
-    "nome": "Baptiste Dourado",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Outro dia, outro campo de batalha.",
-    "ult_nome": "Matriz amplificadora",
-    "ult": "Acionando matriz!",
+    "lang": {
+      "br": {
+        "nome": "Baptiste Dourado",
+        "entrada": "Outro dia, outro campo de batalha.",
+        "ult_nome": "Matriz amplificadora",
+        "ult": "Acionando matriz!"
+      },
+      "en": {
+        "nome": "Baptiste: Golden",
+        "entrada": "Another day, another battlefield.",
+        "ult_nome": "Amplification Matrix",
+        "ult": "Light them up!"
+      }
+    },
     "raridade": "lendario",
     "img": "Baptiste_ow_gold.png",
     "golden_weapon": true,
@@ -214,48 +384,88 @@
   {
     "id": "bastion_comum",
     "base": "bastion",
-    "nome": "Bastion",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "(Beeps pensativos)",
-    "ult_nome": "Configuração: Artilharia",
-    "ult": "(Beeps musicais)!",
+    "lang": {
+      "br": {
+        "nome": "Bastion",
+        "entrada": "(Beeps pensativos)",
+        "ult_nome": "Configuração: Artilharia",
+        "ult": "(Beeps musicais)!"
+      },
+      "en": {
+        "nome": "Bastion",
+        "entrada": "(thoughtful beeps)",
+        "ult_nome": "Configuration: Artillery",
+        "ult": "(musical beeps)!"
+      }
+    },
     "raridade": "comum",
     "img": "Bastion_ow.png"
   },
   {
     "id": "bastion_null_sector",
     "base": "bastion",
-    "nome": "Bastion Setor Nulo",
     "classe": "Dano",
     "subclasse": "Perigo",
-    "entrada": "(Beeps pensativos)",
-    "ult_nome": "Configuração: Artilharia",
-    "ult": "(Beeps musicais)!",
+    "lang": {
+      "br": {
+        "nome": "Bastion Setor Nulo",
+        "entrada": "(Beeps pensativos)",
+        "ult_nome": "Configuração: Artilharia",
+        "ult": "(Beeps musicais)!"
+      },
+      "en": {
+        "nome": "Bastion Null Sector",
+        "entrada": "(thoughtful beeps)",
+        "ult_nome": "Configuration: Artillery",
+        "ult": "(musical beeps)!"
+      }
+    },
     "raridade": "incomum",
     "img": "Bastion_ow_null_sector.png"
   },
   {
     "id": "bastion_kishin",
     "base": "bastion",
-    "nome": "Bastion Kishin",
     "classe": "Dano",
     "subclasse": "Mirror",
-    "entrada": "(Beeps pensativos)",
-    "ult_nome": "Configuração: Reforço",
-    "ult": "(Beeps musicais)!",
+    "lang": {
+      "br": {
+        "nome": "Bastion Kishin",
+        "entrada": "(Beeps pensativos)",
+        "ult_nome": "Configuração: Reforço",
+        "ult": "(Beeps musicais)!"
+      },
+      "en": {
+        "nome": "Bastion Gwishin",
+        "entrada": "(thoughtful beeps)",
+        "ult_nome": "Configuration: Artillery",
+        "ult": "(musical beeps)!"
+      }
+    },
     "raridade": "epico",
     "img": "Bastion_ow_mirror.png"
   },
   {
     "id": "bastion_dourado",
     "base": "bastion",
-    "nome": "Bastion Dourado",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "(Beeps pensativos)",
-    "ult_nome": "Configuração: Artilharia",
-    "ult": "(Beeps musicais)!",
+    "lang": {
+      "br": {
+        "nome": "Bastion Dourado",
+        "entrada": "(Beeps pensativos)",
+        "ult_nome": "Configuração: Artilharia",
+        "ult": "(Beeps musicais)!"
+      },
+      "en": {
+        "nome": "Bastion: Golden",
+        "entrada": "(thoughtful beeps)",
+        "ult_nome": "Configuration: Artillery",
+        "ult": "(musical beeps)!"
+      }
+    },
     "raridade": "lendario",
     "img": "Bastion_ow_gold.png",
     "golden_weapon": true,
@@ -264,12 +474,22 @@
   {
     "id": "bastion_legado",
     "base": "bastion",
-    "nome": "Bastion: Legado",
     "classe": "Defensor",
     "subclasse": "Origem",
-    "entrada": "Doo-woo!",
-    "ult_nome": "Configuração: Tanque",
-    "ult": "Woo woo woo whee woo whee!",
+    "lang": {
+      "br": {
+        "nome": "Bastion: Legado",
+        "entrada": "Bwee, hoo hoo, bwoo.",
+        "ult_nome": "Configuração: Tanque",
+        "ult": "Woo woo woo whee woo whee!"
+      },
+      "en": {
+        "nome": "Bastion: Legacy",
+        "entrada": "Bwee, hoo hoo, bwoo.",
+        "ult_nome": "Configuration: Tank",
+        "ult": "Woo woo woo whee woo whee!"
+      }
+    },
     "raridade": "legado",
     "img": "Bastion_ow_jade.png",
     "icon_ref": "jade.png"
@@ -277,12 +497,22 @@
   {
     "id": "bastion_classic",
     "base": "bastion",
-    "nome": "Bastion Clássico",
     "classe": "Dano",
     "subclasse": "Classic",
-    "entrada": "Doo-woo!",
-    "ult_nome": "Configuração: Tanque",
-    "ult": "Woo woo woo whee woo whee!",
+    "lang": {
+      "br": {
+        "nome": "Bastion Clássico",
+        "entrada": "Bwee, hoo hoo, bwoo.",
+        "ult_nome": "Configuração: Tanque",
+        "ult": "Woo woo woo whee woo whee!"
+      },
+      "en": {
+        "nome": "Bastion Classic",
+        "entrada": "Bwee, hoo hoo, bwoo.",
+        "ult_nome": "Configuration: Tank",
+        "ult": "Woo woo woo whee woo whee!"
+      }
+    },
     "raridade": "epico",
     "img": "Bastion_ow.png",
     "foil": true,
@@ -291,60 +521,110 @@
   {
     "id": "brigitte_comum",
     "base": "brigitte",
-    "nome": "Brigitte",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
-    "ult_nome": "Reagrupar",
-    "ult": "Venham a mim!",
+    "lang": {
+      "br": {
+        "nome": "Brigitte",
+        "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
+        "ult_nome": "Reagrupar",
+        "ult": "Venham a mim!"
+      },
+      "en": {
+        "nome": "Brigitte",
+        "entrada": "Breaking me down just builds me up.",
+        "ult_nome": "Rally",
+        "ult": "Rally to me!"
+      }
+    },
     "raridade": "comum",
     "img": "Brigitte_ow.png"
   },
   {
     "id": "brigitte_coracao",
     "base": "brigitte",
-    "nome": "Coração da força",
     "classe": "Suporte",
     "subclasse": "Coração",
-    "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
-    "ult_nome": "Reagrupar",
-    "ult": "Venham a mim!",
+    "lang": {
+      "br": {
+        "nome": "Coração da força",
+        "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
+        "ult_nome": "Reagrupar",
+        "ult": "Venham a mim!"
+      },
+      "en": {
+        "nome": "Heart of Strength",
+        "entrada": "Breaking me down just builds me up.",
+        "ult_nome": "Rally",
+        "ult": "Rally to me!"
+      }
+    },
     "raridade": "incomum",
     "img": "Brigitte_ow_heart_of_strangth.png"
   },
   {
     "id": "brigitte_talon",
     "base": "brigitte",
-    "nome": "Brigitte Talon",
     "classe": "Suporte",
     "subclasse": "Mirror",
-    "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
-    "ult_nome": "Reagrupar",
-    "ult": "Venham a mim!",
+    "lang": {
+      "br": {
+        "nome": "Brigitte Talon",
+        "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
+        "ult_nome": "Reagrupar",
+        "ult": "Venham a mim!"
+      },
+      "en": {
+        "nome": "Brigitte Talon",
+        "entrada": "Breaking me down just builds me up.",
+        "ult_nome": "Rally",
+        "ult": "Rally to me!"
+      }
+    },
     "raridade": "epico",
     "img": "Brigitte_ow_mirror.png"
   },
   {
     "id": "brigitte_capita_real",
     "base": "brigitte",
-    "nome": "Capitã Real",
     "classe": "Suporte",
     "subclasse": "Guerreiro",
-    "entrada": "Quanto mais eles sofrem, mais eu me fortaleço.",
-    "ult_nome": "Reagrupar",
-    "ult": "Venham a mim!",
+    "lang": {
+      "br": {
+        "nome": "Capitã Real",
+        "entrada": "Quanto mais eles sofrem, mais eu me fortaleço.",
+        "ult_nome": "Reagrupar",
+        "ult": "Venham a mim!"
+      },
+      "en": {
+        "nome": "Royal Captain",
+        "entrada": "Breaking them down just builds me up.",
+        "ult_nome": "Rally",
+        "ult": "Rally to me!"
+      }
+    },
     "raridade": "epico",
     "img": "Brigitte_ow_capita_real.png"
   },
   {
     "id": "brigitte_dourado",
     "base": "brigitte",
-    "nome": "Brigitte Dourada",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
-    "ult_nome": "Reagrupar",
-    "ult": "Venham a mim!",
+    "lang": {
+      "br": {
+        "nome": "Brigitte Dourada",
+        "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
+        "ult_nome": "Reagrupar",
+        "ult": "Venham a mim!"
+      },
+      "en": {
+        "nome": "Brigitte: Golden",
+        "entrada": "Breaking me down just builds me up.",
+        "ult_nome": "Rally",
+        "ult": "Rally to me!"
+      }
+    },
     "raridade": "lendario",
     "img": "Brigitte_ow_gold.png",
     "golden_weapon": true,
@@ -353,48 +633,88 @@
   {
     "id": "cassidy_comum",
     "base": "cassidy",
-    "nome": "Cassidy",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Alguém tem que montar nessa sela.",
-    "ult_nome": "Tiro certeiro",
-    "ult": "É hora de acertar as contas!",
+    "lang": {
+      "br": {
+        "nome": "Cassidy",
+        "entrada": "Alguém tem que montar nessa sela.",
+        "ult_nome": "Tiro certeiro",
+        "ult": "É hora de acertar as contas!"
+      },
+      "en": {
+        "nome": "Cassidy",
+        "entrada": "Someone needs to fill this saddle.",
+        "ult_nome": "Deadeye",
+        "ult": "It's high noon!"
+      }
+    },
     "raridade": "comum",
     "img": "Cassidy_ow.png"
   },
   {
     "id": "cassidy_van_helsing",
     "base": "cassidy",
-    "nome": "Van Helsing",
     "classe": "Dano",
     "subclasse": "Caçador",
-    "entrada": "Alguém tem que montar nessa sela.",
-    "ult_nome": "Tiro certeiro",
-    "ult": "É hora de acertar as estacas!",
+    "lang": {
+      "br": {
+        "nome": "Van Helsing",
+        "entrada": "Alguém tem que montar nessa sela.",
+        "ult_nome": "Tiro certeiro",
+        "ult": "É hora de acertar as estacas!"
+      },
+      "en": {
+        "nome": "Van Helsing",
+        "entrada": "Someone needs to fill this saddle.",
+        "ult_nome": "Deadeye",
+        "ult": "It's high moon!"
+      }
+    },
     "raridade": "incomum",
     "img": "Cassidy_ow_vanhelsin.png"
   },
   {
     "id": "cassidy_salvavidas",
     "base": "cassidy",
-    "nome": "Cassidy Salva-vidas",
     "classe": "Dano",
     "subclasse": "Férias",
-    "entrada": "Alguém tem que montar nessa sela.",
-    "ult_nome": "Tiro certeiro",
-    "ult": "É hora de acertar uns mergulhos!",
+    "lang": {
+      "br": {
+        "nome": "Cassidy Salva-vidas",
+        "entrada": "Alguém tem que montar nessa sela.",
+        "ult_nome": "Tiro certeiro",
+        "ult": "É hora de acertar uns mergulhos!"
+      },
+      "en": {
+        "nome": "Cassidy Lifeguard",
+        "entrada": "Someone needs to fill this saddle.",
+        "ult_nome": "Deadeye",
+        "ult": "It's high tide!"
+      }
+    },
     "raridade": "epico",
     "img": "Cassidy_ow_salvavidas.png"
   },
   {
     "id": "cassidy_dourado",
     "base": "cassidy",
-    "nome": "Cassidy Dourado",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Alguém tem que montar nessa sela.",
-    "ult_nome": "Tiro certeiro",
-    "ult": "É hora de acertar as contas!",
+    "lang": {
+      "br": {
+        "nome": "Cassidy Dourado",
+        "entrada": "Alguém tem que montar nessa sela.",
+        "ult_nome": "Tiro certeiro",
+        "ult": "É hora de acertar as contas!"
+      },
+      "en": {
+        "nome": "Cassidy: Golden",
+        "entrada": "Someone needs to fill this saddle.",
+        "ult_nome": "Deadeye",
+        "ult": "It's high noon!"
+      }
+    },
     "raridade": "lendario",
     "img": "Cassidy_ow_gold.png",
     "golden_weapon": true,
@@ -403,12 +723,22 @@
   {
     "id": "cassidy_legado",
     "base": "cassidy",
-    "nome": "Cassidy: Legado",
     "classe": "Atacante",
     "subclasse": "Origem",
-    "entrada": "A justiça não vai se fazer sozinha!",
-    "ult_nome": "Tiro certeiro",
-    "ult": "É hora de acertar as contas!",
+    "lang": {
+      "br": {
+        "nome": "Cassidy: Legado",
+        "entrada": "A justiça não vai se fazer sozinha!",
+        "ult_nome": "Tiro certeiro",
+        "ult": "É hora de acertar as contas!"
+      },
+      "en": {
+        "nome": "Cassidy: Legacy",
+        "entrada": "Justice ain't gonna dispense itself.",
+        "ult_nome": "Deadeye",
+        "ult": "It's high noon!"
+      }
+    },
     "raridade": "legado",
     "img": "Cassidy_ow_jade.png",
     "icon_ref": "jade.png"
@@ -416,36 +746,66 @@
   {
     "id": "pistoleiro_divino",
     "base": "cassidy",
-    "nome": "Pistoleiro Divíno",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Alguém tem que iluminar essas sombras.",
-    "ult_nome": "Tiro certeiro",
-    "ult": "É hora de ver o sol!",
+    "lang": {
+      "br": {
+        "nome": "Pistoleiro Divíno",
+        "entrada": "Alguém tem que iluminar essas sombras.",
+        "ult_nome": "Tiro certeiro",
+        "ult": "É hora de ver o sol!"
+      },
+      "en": {
+        "nome": "Divine Desperado",
+        "entrada": "Someone needs to chase these shadows.",
+        "ult_nome": "Deadeye",
+        "ult": "It's nigh noon!"
+      }
+    },
     "raridade": "mitico",
     "img": "Cassidy_ow_myth.png"
   },
   {
     "id": "ocaso_flamejante",
     "base": "cassidy",
-    "nome": "Cassidy: Ocaso Flamejante",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Alguém tem que montar nessa sela.",
-    "ult_nome": "Tiro certeiro",
-    "ult": "É hora de acertar as contas!",
+    "lang": {
+      "br": {
+        "nome": "Cassidy: Ocaso Flamejante",
+        "entrada": "Alguém tem que montar nessa sela.",
+        "ult_nome": "Tiro certeiro",
+        "ult": "É hora de acertar as contas!"
+      },
+      "en": {
+        "nome": "Cassidy: Blazing Sunsetter",
+        "entrada": "Someone needs to fill this saddle.",
+        "ult_nome": "Deadeye",
+        "ult": "It's high noon!"
+      }
+    },
     "raridade": "mitico",
     "img": "Cassidy_ow_weapon.png"
   },
   {
     "id": "cassidy_fool",
     "base": "cassidy",
-    "nome": "Cowboy",
     "classe": "Dano",
     "subclasse": "Fool",
-    "entrada": "É, o boleto já venceu.",
-    "ult_nome": "Tiro certeiro",
-    "ult": "É, hora de mandar um pix!",
+    "lang": {
+      "br": {
+        "nome": "Cowboy",
+        "entrada": "É, o boleto já venceu.",
+        "ult_nome": "Tiro certeiro",
+        "ult": "É, hora de mandar um pix!"
+      },
+      "en": {
+        "nome": "Cowboy",
+        "entrada": "It's a country minute shy of the devil's lunchbreak.",
+        "ult_nome": "Deadeye",
+        "ult": "It's two in the mornin'!"
+      }
+    },
     "raridade": "comum",
     "img": "Cassidy_ow_fool.png",
     "evento": "april_fools"
@@ -453,24 +813,44 @@
   {
     "id": "dva_comum",
     "base": "dva",
-    "nome": "D.Va",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Hora de salvar o mundo? Bora lá.",
-    "ult_nome": "Auto destruição",
-    "ult": "Pede pra nerfar, noob!",
+    "lang": {
+      "br": {
+        "nome": "D.Va",
+        "entrada": "Hora de salvar o mundo? Bora lá.",
+        "ult_nome": "Auto destruição",
+        "ult": "Pede pra nerfar, noob!"
+      },
+      "en": {
+        "nome": "D.Va",
+        "entrada": "Time to save the world? Game on!",
+        "ult_nome": "Self-Destruct",
+        "ult": "Nerf this!"
+      }
+    },
     "raridade": "comum",
     "img": "DVa_ow.png"
   },
   {
     "id": "dva_chibi",
     "base": "dva",
-    "nome": "Hana Song",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Hora de salvar o mundo? Bora lá.",
-    "ult_nome": "Chamar mecha",
-    "ult": "Todos os sistemas ligados!",
+    "lang": {
+      "br": {
+        "nome": "Hana Song",
+        "entrada": "Hora de salvar o mundo? Bora lá.",
+        "ult_nome": "Chamar mecha",
+        "ult": "Todos os sistemas ligados!"
+      },
+      "en": {
+        "nome": "Hana Song",
+        "entrada": "Time to save the world? Game on!",
+        "ult_nome": "Call Mech",
+        "ult": "Initializing systems!"
+      }
+    },
     "raridade": "comum",
     "img": "DVa_Chibi_ow.png",
     "icon_ref": "alter.png"
@@ -478,12 +858,22 @@
   {
     "id": "dva_dourado",
     "base": "dva",
-    "nome": "D.Va Dourado",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Hora de salvar o mundo? Bora lá.",
-    "ult_nome": "Auto destruição",
-    "ult": "Pede pra nerfar, noob!",
+    "lang": {
+      "br": {
+        "nome": "D.Va Dourado",
+        "entrada": "Hora de salvar o mundo? Bora lá.",
+        "ult_nome": "Auto destruição",
+        "ult": "Pede pra nerfar, noob!"
+      },
+      "en": {
+        "nome": "D.Va: Golden",
+        "entrada": "Time to save the world? Game on!",
+        "ult_nome": "Self-Destruct",
+        "ult": "Nerf this!"
+      }
+    },
     "raridade": "lendario",
     "img": "DVa_ow_gold.png",
     "golden_weapon": true,
@@ -492,12 +882,22 @@
   {
     "id": "dva_legado",
     "base": "dva",
-    "nome": "D.Va: Legado",
     "classe": "Tanque",
     "subclasse": "Origem",
-    "entrada": "Eu jogo pra ganhar! :)",
-    "ult_nome": "Auto destruição",
-    "ult": "Pede pra nerfar, noob!",
+    "lang": {
+      "br": {
+        "nome": "D.Va: Legado",
+        "entrada": "Eu jogo pra ganhar! :)",
+        "ult_nome": "Auto destruição",
+        "ult": "Pede pra nerfar, noob!"
+      },
+      "en": {
+        "nome": "D.Va: Legacy",
+        "entrada": "I play to win! :)",
+        "ult_nome": "Self-Destruct",
+        "ult": "Nerf this!"
+      }
+    },
     "raridade": "legado",
     "img": "Dva_ow_jade.png",
     "icon_ref": "jade.png"
@@ -505,36 +905,66 @@
   {
     "id": "horang",
     "base": "dva",
-    "nome": "Horang",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Hora de salvar os espiritos? Bora lá.",
-    "ult_nome": "Auto destruição",
-    "ult": "Ativando sequência de golpes de tigre!",
+    "lang": {
+      "br": {
+        "nome": "Horang",
+        "entrada": "Hora de salvar os espiritos? Bora lá.",
+        "ult_nome": "Auto destruição",
+        "ult": "Ativando sequência de golpes de tigre!"
+      },
+      "en": {
+        "nome": "Horang",
+        "entrada": "Time to save the spirits? Game on!",
+        "ult_nome": "Self-Destruct",
+        "ult": "Cage this!"
+      }
+    },
     "raridade": "mitico",
     "img": "DVa_ow_myth.png"
   },
   {
     "id": "domina_comum",
     "base": "domina",
-    "nome": "Domina",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "O mundo perfeito será moldado pelas minhas mãos.",
-    "ult_nome": "Panóptico",
-    "ult": "Sirvam a minha visão!",
+    "lang": {
+      "br": {
+        "nome": "Domina",
+        "entrada": "O mundo perfeito será moldado pelas minhas mãos.",
+        "ult_nome": "Panóptico",
+        "ult": "Sirvam a minha visão!"
+      },
+      "en": {
+        "nome": "Domina",
+        "entrada": "The perfect world is shaped by my hand.",
+        "ult_nome": "Panopticon",
+        "ult": "Mere mutabiq chalo!"
+      }
+    },
     "raridade": "comum",
     "img": "Domina_ow.png"
   },
   {
     "id": "domina_dourado",
     "base": "domina",
-    "nome": "Domina Dourada",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "O mundo perfeito será moldado pelas minhas mãos.",
-    "ult_nome": "Panóptico",
-    "ult": "Sirvam a minha visão!",
+    "lang": {
+      "br": {
+        "nome": "Domina Dourada",
+        "entrada": "O mundo perfeito será moldado pelas minhas mãos.",
+        "ult_nome": "Panóptico",
+        "ult": "Sirvam a minha visão!"
+      },
+      "en": {
+        "nome": "Domina: Golden",
+        "entrada": "The perfect world is shaped by my hand.",
+        "ult_nome": "Panopticon",
+        "ult": "Mere mutabiq chalo!"
+      }
+    },
     "raridade": "lendario",
     "img": "Domina_ow_gold.png",
     "golden_weapon": true,
@@ -543,48 +973,88 @@
   {
     "id": "doomfist_comum",
     "base": "doomfist",
-    "nome": "Doomfist",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Nosso futuro será forjado pelo conflito.",
-    "ult_nome": "Impacto meteoro",
-    "ult": "Impacto meteoro!",
+    "lang": {
+      "br": {
+        "nome": "Doomfist",
+        "entrada": "Nosso futuro será forjado pelo conflito.",
+        "ult_nome": "Impacto meteoro",
+        "ult": "Impacto meteoro!"
+      },
+      "en": {
+        "nome": "Doomfist",
+        "entrada": "Our future will be forged in conflict.",
+        "ult_nome": "Meteor Strike",
+        "ult": "Meteor Strike!"
+      }
+    },
     "raridade": "comum",
     "img": "Doomfist_ow.png"
   },
   {
     "id": "doomfist-quebraossos",
     "base": "doomfist",
-    "nome": "Doomfist Quebra-ossos",
     "classe": "Tanque",
     "subclasse": "Cósmico",
-    "entrada": "Nosso futuro será forjado com rebelião.",
-    "ult_nome": "Impacto meteoro",
-    "ult": "Impacto meteoro!",
+    "lang": {
+      "br": {
+        "nome": "Quebra-ossos",
+        "entrada": "Nosso futuro será forjado com rebelião.",
+        "ult_nome": "Impacto meteoro",
+        "ult": "Impacto meteoro!"
+      },
+      "en": {
+        "nome": "Bonebreaker",
+        "entrada": "Our future will be forged in rebellion.",
+        "ult_nome": "Meteor Strike",
+        "ult": "Meteor Strike!"
+      }
+    },
     "raridade": "epico",
     "img": "Doomfist_ow_bonebreaker.png"
   },
   {
     "id": "comandante_ataque",
     "base": "doomfist",
-    "nome": "Comandante de ataque",
     "classe": "Tanque",
     "subclasse": "Mirror",
-    "entrada": "Nosso futuro será forjado pela união.",
-    "ult_nome": "Impacto meteoro",
-    "ult": "Impacto meteoro!",
+    "lang": {
+      "br": {
+        "nome": "Comandante de ataque",
+        "entrada": "Nosso futuro será forjado pela união.",
+        "ult_nome": "Impacto meteoro",
+        "ult": "Impacto meteoro!"
+      },
+      "en": {
+        "nome": "Strike Commander",
+        "entrada": "Our future will be forged by unity.",
+        "ult_nome": "Meteor Strike",
+        "ult": "Meteor Strike!"
+      }
+    },
     "raridade": "lendario",
     "img": "Doomfist_ow_mirror.png"
   },
   {
     "id": "doomfist_dourado",
     "base": "doomfist",
-    "nome": "Doomfist Dourado",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Nosso futuro será forjado pelo conflito.",
-    "ult_nome": "Impacto meteoro",
-    "ult": "Impacto meteoro!",
+    "lang": {
+      "br": {
+        "nome": "Doomfist Dourado",
+        "entrada": "Nosso futuro será forjado pelo conflito.",
+        "ult_nome": "Impacto meteoro",
+        "ult": "Impacto meteoro!"
+      },
+      "en": {
+        "nome": "Doomfist: Golden",
+        "entrada": "Our future will be forged in conflict.",
+        "ult_nome": "Meteor Strike",
+        "ult": "Meteor Strike!"
+      }
+    },
     "raridade": "lendario",
     "img": "Doomfist_ow_gold.png",
     "golden_weapon": true,
@@ -593,24 +1063,44 @@
   {
     "id": "titan_magma",
     "base": "doomfist",
-    "nome": "Titã de Magma",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Nosso futuro será forjado das cinzas.",
-    "ult_nome": "Impacto meteoro",
-    "ult": "Impacto ardente!",
+    "lang": {
+      "br": {
+        "nome": "Titã de Magma",
+        "entrada": "Nosso futuro será forjado das cinzas.",
+        "ult_nome": "Impacto meteoro",
+        "ult": "Impacto ardente!"
+      },
+      "en": {
+        "nome": "Magma Titan",
+        "entrada": "Our future is forged from ash.",
+        "ult_nome": "Meteor Strike",
+        "ult": "Molten Strike!"
+      }
+    },
     "raridade": "mitico",
     "img": "Doomfist_ow_myth.png"
   },
   {
     "id": "doomfist_classic",
     "base": "doomfist",
-    "nome": "Doomfist Clássico",
     "classe": "Dano",
     "subclasse": "Classic",
-    "entrada": "Só por meio do conflito, podemos evoluir.",
-    "ult_nome": "Impacto meteoro",
-    "ult": "Impacto meteoro!",
+    "lang": {
+      "br": {
+        "nome": "Doomfist Clássico",
+        "entrada": "Só por meio do conflito, podemos evoluir.",
+        "ult_nome": "Impacto meteoro",
+        "ult": "Impacto meteoro!"
+      },
+      "en": {
+        "nome": "Doomfist Classic",
+        "entrada": "Only through conflict do we evolve.",
+        "ult_nome": "Meteor Strike",
+        "ult": "Meteor Strike!"
+      }
+    },
     "raridade": "epico",
     "img": "Doomfist_ow.png",
     "foil": true,
@@ -619,36 +1109,66 @@
   {
     "id": "echo_comum",
     "base": "echo",
-    "nome": "Echo",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "Estou sempre pronta para aprender.",
-    "ult_nome": "Duplicação",
-    "ult": "Circuitos adaptativos ativados: (Héroi)!",
+    "lang": {
+      "br": {
+        "nome": "Echo",
+        "entrada": "Estou sempre pronta para aprender.",
+        "ult_nome": "Duplicação",
+        "ult": "Circuitos adaptativos ativados: (Héroi)!"
+      },
+      "en": {
+        "nome": "Echo",
+        "entrada": "Estou sempre pronta para aprender.",
+        "ult_nome": "Duplicação",
+        "ult": "Circuitos adaptativos ativados: (Héroi)!"
+      }
+    },
     "raridade": "comum",
     "img": "Echo_ow.png"
   },
   {
     "id": "echo_furtividade",
     "base": "echo",
-    "nome": "Echo Furtividade",
     "classe": "Dano",
     "subclasse": "Mirror",
-    "entrada": "Estou sempre pronta para executar.",
-    "ult_nome": "Eficiência máxima",
-    "ult": "Circuitos adaptativos ativados: Echo!",
+    "lang": {
+      "br": {
+        "nome": "Echo Furtividade",
+        "entrada": "Estou sempre pronta para executar.",
+        "ult_nome": "Eficiência máxima",
+        "ult": "Circuitos adaptativos ativados: Echo!"
+      },
+      "en": {
+        "nome": "Echo Furtividade",
+        "entrada": "Estou sempre pronta para executar.",
+        "ult_nome": "Eficiência máxima",
+        "ult": "Circuitos adaptativos ativados: Echo!"
+      }
+    },
     "raridade": "epico",
     "img": "Echo_ow_mirror.png"
   },
   {
     "id": "echo_dourado",
     "base": "echo",
-    "nome": "Echo Dourada",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "Estou sempre pronta para aprender.",
-    "ult_nome": "Duplicação",
-    "ult": "Circuitos adaptativos ativados: (Héroi)!",
+    "lang": {
+      "br": {
+        "nome": "Echo Dourada",
+        "entrada": "Estou sempre pronta para aprender.",
+        "ult_nome": "Duplicação",
+        "ult": "Circuitos adaptativos ativados: (Héroi)!"
+      },
+      "en": {
+        "nome": "Echo Dourada",
+        "entrada": "Estou sempre pronta para aprender.",
+        "ult_nome": "Duplicação",
+        "ult": "Circuitos adaptativos ativados: (Héroi)!"
+      }
+    },
     "raridade": "lendario",
     "img": "Echo_ow_gold.png",
     "golden_weapon": true,
@@ -657,24 +1177,44 @@
   {
     "id": "emre_comum",
     "base": "emre",
-    "nome": "Emre",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Agora é tudo ou nada.",
-    "ult_nome": "Protocolo de automação",
-    "ult": "Localizar e destruir!",
+    "lang": {
+      "br": {
+        "nome": "Emre",
+        "entrada": "Agora é tudo ou nada.",
+        "ult_nome": "Protocolo de automação",
+        "ult": "Localizar e destruir!"
+      },
+      "en": {
+        "nome": "Emre",
+        "entrada": "Agora é tudo ou nada.",
+        "ult_nome": "Protocolo de automação",
+        "ult": "Localizar e destruir!"
+      }
+    },
     "raridade": "comum",
     "img": "Emre_ow.png"
   },
   {
     "id": "emre_alter",
     "base": "emre",
-    "nome": "Antigo Emre",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Agora é tudo ou nada.",
-    "ult_nome": "Protocolo de automação",
-    "ult": "Localizar e destruir!",
+    "lang": {
+      "br": {
+        "nome": "Antigo Emre",
+        "entrada": "Agora é tudo ou nada.",
+        "ult_nome": "Protocolo de automação",
+        "ult": "Localizar e destruir!"
+      },
+      "en": {
+        "nome": "Antigo Emre",
+        "entrada": "Agora é tudo ou nada.",
+        "ult_nome": "Protocolo de automação",
+        "ult": "Localizar e destruir!"
+      }
+    },
     "raridade": "comum",
     "img": "Emre_ow_classic.png",
     "icon_ref": "alter.png"
@@ -682,12 +1222,22 @@
   {
     "id": "emre_dourado",
     "base": "emre",
-    "nome": "Emre Dourado",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Agora é tudo ou nada.",
-    "ult_nome": "Protocolo de automação",
-    "ult": "Localizar e destruir!",
+    "lang": {
+      "br": {
+        "nome": "Emre Dourado",
+        "entrada": "Agora é tudo ou nada.",
+        "ult_nome": "Protocolo de automação",
+        "ult": "Localizar e destruir!"
+      },
+      "en": {
+        "nome": "Emre Dourado",
+        "entrada": "Agora é tudo ou nada.",
+        "ult_nome": "Protocolo de automação",
+        "ult": "Localizar e destruir!"
+      }
+    },
     "raridade": "lendario",
     "img": "Emre_ow_gold.png",
     "golden_weapon": true,
@@ -696,36 +1246,66 @@
   {
     "id": "freja_comum",
     "base": "freja",
-    "nome": "Freja",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "Eu sempre entrego.",
-    "ult_nome": "Disparo de boleadeira",
-    "ult": "Eu vou caçar você!",
+    "lang": {
+      "br": {
+        "nome": "Freja",
+        "entrada": "Eu sempre entrego.",
+        "ult_nome": "Disparo de boleadeira",
+        "ult": "Eu vou caçar você!"
+      },
+      "en": {
+        "nome": "Freja",
+        "entrada": "Eu sempre entrego.",
+        "ult_nome": "Disparo de boleadeira",
+        "ult": "Eu vou caçar você!"
+      }
+    },
     "raridade": "comum",
     "img": "Freja_ow.png"
   },
   {
     "id": "freja_coracao",
     "base": "freja",
-    "nome": "Coração da coragem",
     "classe": "Dano",
     "subclasse": "Coração",
-    "entrada": "Eu sempre entrego.",
-    "ult_nome": "Disparo de boleadeira",
-    "ult": "Eu vou caçar você!",
+    "lang": {
+      "br": {
+        "nome": "Coração da coragem",
+        "entrada": "Eu sempre entrego.",
+        "ult_nome": "Disparo de boleadeira",
+        "ult": "Eu vou caçar você!"
+      },
+      "en": {
+        "nome": "Coração da coragem",
+        "entrada": "Eu sempre entrego.",
+        "ult_nome": "Disparo de boleadeira",
+        "ult": "Eu vou caçar você!"
+      }
+    },
     "raridade": "incomum",
     "img": "Freja_ow_heart_of_courage.png"
   },
   {
     "id": "freja_dourado",
     "base": "freja",
-    "nome": "Freja Dourada",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "Eu sempre entrego.",
-    "ult_nome": "Disparo de boleadeira",
-    "ult": "Eu vou caçar você!",
+    "lang": {
+      "br": {
+        "nome": "Freja Dourada",
+        "entrada": "Eu sempre entrego.",
+        "ult_nome": "Disparo de boleadeira",
+        "ult": "Eu vou caçar você!"
+      },
+      "en": {
+        "nome": "Freja Dourada",
+        "entrada": "Eu sempre entrego.",
+        "ult_nome": "Disparo de boleadeira",
+        "ult": "Eu vou caçar você!"
+      }
+    },
     "raridade": "lendario",
     "img": "Freja_ow_gold.png",
     "golden_weapon": true,
@@ -734,48 +1314,88 @@
   {
     "id": "genji_comum",
     "base": "genji",
-    "nome": "Genji",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "A paz retorna àqueles que procuram.",
-    "ult_nome": "Lâmina do dragão",
-    "ult": "Ryūjin no ken o kurae!",
+    "lang": {
+      "br": {
+        "nome": "Genji",
+        "entrada": "A paz retorna àqueles que procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Ryūjin no ken o kurae!"
+      },
+      "en": {
+        "nome": "Genji",
+        "entrada": "A paz retorna àqueles que procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Ryūjin no ken o kurae!"
+      }
+    },
     "raridade": "comum",
     "img": "Genji_ow.png"
   },
   {
     "id": "genji_oni",
     "base": "genji",
-    "nome": "Oni",
     "classe": "Dano",
     "subclasse": "Perverso",
-    "entrada": "A paz retorna àqueles que a procuram.",
-    "ult_nome": "Lâmina do dragão",
-    "ult": "Oni no ken o kurae!",
+    "lang": {
+      "br": {
+        "nome": "Oni",
+        "entrada": "A paz retorna àqueles que a procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Oni no ken o kurae!"
+      },
+      "en": {
+        "nome": "Oni",
+        "entrada": "A paz retorna àqueles que a procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Oni no ken o kurae!"
+      }
+    },
     "raridade": "incomum",
     "img": "Genji_ow_oni.png"
   },
   {
     "id": "genji_baihu",
     "base": "genji",
-    "nome": "Baihu",
     "classe": "Dano",
     "subclasse": "Guerreiro",
-    "entrada": "A paz retorna àqueles que a procuram.",
-    "ult_nome": "Lâmina do dragão",
-    "ult": "Byakko no ken o kurae!",
+    "lang": {
+      "br": {
+        "nome": "Baihu",
+        "entrada": "A paz retorna àqueles que a procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Byakko no ken o kurae!"
+      },
+      "en": {
+        "nome": "Baihu",
+        "entrada": "A paz retorna àqueles que a procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Byakko no ken o kurae!"
+      }
+    },
     "raridade": "incomum",
     "img": "Genji_ow_baihu.png"
   },
   {
     "id": "genji_dourado",
     "base": "genji",
-    "nome": "Genji Dourado",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "A paz retorna àqueles que a procuram.",
-    "ult_nome": "Lâmina do dragão",
-    "ult": "Ryūjin no ken o kurae!",
+    "lang": {
+      "br": {
+        "nome": "Genji Dourado",
+        "entrada": "A paz retorna àqueles que a procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Ryūjin no ken o kurae!"
+      },
+      "en": {
+        "nome": "Genji Dourado",
+        "entrada": "A paz retorna àqueles que a procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Ryūjin no ken o kurae!"
+      }
+    },
     "raridade": "lendario",
     "img": "Genji_ow_gold.png",
     "golden_weapon": true,
@@ -784,12 +1404,22 @@
   {
     "id": "genji_legado",
     "base": "genji",
-    "nome": "Genji: Legado",
     "classe": "Atacante",
     "subclasse": "Origem",
-    "entrada": "Você pode abandonar seu corpo, mas nunca a sua honra!",
-    "ult_nome": "Lâmina do dragão",
-    "ult": "Ryūjin no ken o kurae!",
+    "lang": {
+      "br": {
+        "nome": "Genji: Legado",
+        "entrada": "Você pode abandonar seu corpo, mas nunca a sua honra!",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Ryūjin no ken o kurae!"
+      },
+      "en": {
+        "nome": "Genji: Legado",
+        "entrada": "Você pode abandonar seu corpo, mas nunca a sua honra!",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Ryūjin no ken o kurae!"
+      }
+    },
     "raridade": "legado",
     "img": "Genji_ow_jade.png",
     "icon_ref": "jade.png"
@@ -797,60 +1427,110 @@
   {
     "id": "cyber_demonio",
     "base": "genji",
-    "nome": "Cyber Demônio",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "A morte alcança àqueles que a procuram.",
-    "ult_nome": "Lâmina do dragão",
-    "ult": "Denki no ken o kurae!",
+    "lang": {
+      "br": {
+        "nome": "Cyber Demônio",
+        "entrada": "A morte alcança àqueles que a procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Denki no ken o kurae!"
+      },
+      "en": {
+        "nome": "Cyber Demônio",
+        "entrada": "A morte alcança àqueles que a procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Denki no ken o kurae!"
+      }
+    },
     "raridade": "mitico",
     "img": "Genji_ow_myth.png"
   },
   {
     "id": "sumiichimonji",
     "base": "genji",
-    "nome": "Ganji: Sumi-Ichimonji",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "A paz retorna àqueles que procuram.",
-    "ult_nome": "Lâmina do dragão",
-    "ult": "Ryūjin no ken o kurae!",
+    "lang": {
+      "br": {
+        "nome": "Ganji: Sumi-Ichimonji",
+        "entrada": "A paz retorna àqueles que procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Ryūjin no ken o kurae!"
+      },
+      "en": {
+        "nome": "Ganji: Sumi-Ichimonji",
+        "entrada": "A paz retorna àqueles que procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Ryūjin no ken o kurae!"
+      }
+    },
     "raridade": "mitico",
     "img": "Genji_ow_weapon.png"
   },
   {
     "id": "hanzo_comum",
     "base": "hanzo",
-    "nome": "Hanzo",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Honra é tudo o que me resta.",
-    "ult_nome": "Golpe do dragão",
-    "ult": "Ryū ga waga teki o kurau!",
+    "lang": {
+      "br": {
+        "nome": "Hanzo",
+        "entrada": "Honra é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ryū ga waga teki o kurau!"
+      },
+      "en": {
+        "nome": "Hanzo",
+        "entrada": "Honra é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ryū ga waga teki o kurau!"
+      }
+    },
     "raridade": "comum",
     "img": "Hanzo_ow.png"
   },
   {
     "id": "hanzo_okami",
     "base": "hanzo",
-    "nome": "Okami",
     "classe": "Dano",
     "subclasse": "Caçador",
-    "entrada": "Honra é tudo o que me resta.",
-    "ult_nome": "Golpe do dragão",
-    "ult": "Ōkami yo, waga teki wo kurae!",
+    "lang": {
+      "br": {
+        "nome": "Okami",
+        "entrada": "Honra é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ōkami yo, waga teki wo kurae!"
+      },
+      "en": {
+        "nome": "Okami",
+        "entrada": "Honra é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ōkami yo, waga teki wo kurae!"
+      }
+    },
     "raridade": "incomum",
     "img": "Hanzo_ow_okami.png"
   },
   {
     "id": "hanzo_dourado",
     "base": "hanzo",
-    "nome": "Hanzo Dourado",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Honra é tudo o que me resta.",
-    "ult_nome": "Golpe do dragão",
-    "ult": "Ryū ga waga teki o kurau!",
+    "lang": {
+      "br": {
+        "nome": "Hanzo Dourado",
+        "entrada": "Honra é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ryū ga waga teki o kurau!"
+      },
+      "en": {
+        "nome": "Hanzo Dourado",
+        "entrada": "Honra é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ryū ga waga teki o kurau!"
+      }
+    },
     "raridade": "lendario",
     "img": "Hanzo_ow_gold.png",
     "golden_weapon": true,
@@ -859,12 +1539,22 @@
   {
     "id": "hanzo_legado",
     "base": "hanzo",
-    "nome": "Hanzo: Legado",
     "classe": "Defensor",
     "subclasse": "Origem",
-    "entrada": "Com cada morte vem honra, com honra, redenção!",
-    "ult_nome": "Golpe do dragão",
-    "ult": "Ryū ga waga teki o kurau!",
+    "lang": {
+      "br": {
+        "nome": "Hanzo: Legado",
+        "entrada": "Com cada morte vem honra, com honra, redenção!",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ryū ga waga teki o kurau!"
+      },
+      "en": {
+        "nome": "Hanzo: Legado",
+        "entrada": "Com cada morte vem honra, com honra, redenção!",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ryū ga waga teki o kurau!"
+      }
+    },
     "raridade": "legado",
     "img": "Hanzo_ow_jade.png",
     "icon_ref": "jade.png"
@@ -872,48 +1562,88 @@
   {
     "id": "onryo",
     "base": "hanzo",
-    "nome": "Onryō",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Vingança é tudo o que me resta.",
-    "ult_nome": "Golpe do dragão",
-    "ult": "Ushu ga waga teki o kurau!",
+    "lang": {
+      "br": {
+        "nome": "Onryō",
+        "entrada": "Vingança é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ushu ga waga teki o kurau!"
+      },
+      "en": {
+        "nome": "Onryō",
+        "entrada": "Vingança é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ushu ga waga teki o kurau!"
+      }
+    },
     "raridade": "mitico",
     "img": "Hanzo_ow_myth.png"
   },
   {
     "id": "rebelde_toquio",
     "base": "hanzo",
-    "nome": "Hanzo: Rebelde de Tóquio",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Vingança é tudo o que me resta.",
-    "ult_nome": "Golpe do dragão",
-    "ult": "Ryū ga waga teki o kurau!",
+    "lang": {
+      "br": {
+        "nome": "Hanzo: Rebelde de Tóquio",
+        "entrada": "Vingança é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ryū ga waga teki o kurau!"
+      },
+      "en": {
+        "nome": "Hanzo: Rebelde de Tóquio",
+        "entrada": "Vingança é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ryū ga waga teki o kurau!"
+      }
+    },
     "raridade": "mitico",
-    "img": "Hanzo_ow_myth_weapon.png" 
+    "img": "Hanzo_ow_myth_weapon.png"
   },
   {
     "id": "hazard_comum",
     "base": "hazard",
-    "nome": "Hazard",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Se você tá comigo, é pra vida toda.",
-    "ult_nome": "Dilúvio",
-    "ult": "Olha a chuva!",
+    "lang": {
+      "br": {
+        "nome": "Hazard",
+        "entrada": "Se você tá comigo, é pra vida toda.",
+        "ult_nome": "Dilúvio",
+        "ult": "Olha a chuva!"
+      },
+      "en": {
+        "nome": "Hazard",
+        "entrada": "Se você tá comigo, é pra vida toda.",
+        "ult_nome": "Dilúvio",
+        "ult": "Olha a chuva!"
+      }
+    },
     "raridade": "comum",
     "img": "Hazard_ow.png"
   },
   {
     "id": "hazard_dourado",
     "base": "hazard",
-    "nome": "Hazard Dourado",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Se você tá comigo, é pra vida toda.",
-    "ult_nome": "Dilúvio",
-    "ult": "Olha a chuva!",
+    "lang": {
+      "br": {
+        "nome": "Hazard Dourado",
+        "entrada": "Se você tá comigo, é pra vida toda.",
+        "ult_nome": "Dilúvio",
+        "ult": "Olha a chuva!"
+      },
+      "en": {
+        "nome": "Hazard Dourado",
+        "entrada": "Se você tá comigo, é pra vida toda.",
+        "ult_nome": "Dilúvio",
+        "ult": "Olha a chuva!"
+      }
+    },
     "raridade": "lendario",
     "img": "Hazard_ow_gold.png",
     "golden_weapon": true,
@@ -922,24 +1652,44 @@
   {
     "id": "illari_comum",
     "base": "illari",
-    "nome": "Illari",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Eu carrego meus fardos sozinha.",
-    "ult_nome": "Sol aprisionado",
-    "ult": "Encare a aurora!",
+    "lang": {
+      "br": {
+        "nome": "Illari",
+        "entrada": "Eu carrego meus fardos sozinha.",
+        "ult_nome": "Sol aprisionado",
+        "ult": "Encare a aurora!"
+      },
+      "en": {
+        "nome": "Illari",
+        "entrada": "Eu carrego meus fardos sozinha.",
+        "ult_nome": "Sol aprisionado",
+        "ult": "Encare a aurora!"
+      }
+    },
     "raridade": "comum",
     "img": "Illari_ow.png"
   },
   {
     "id": "illari_dourado",
     "base": "illari",
-    "nome": "Illari Dourada",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Eu carrego meus fardos sozinha.",
-    "ult_nome": "Sol aprisionado",
-    "ult": "Encare a aurora!",
+    "lang": {
+      "br": {
+        "nome": "Illari Dourada",
+        "entrada": "Eu carrego meus fardos sozinha.",
+        "ult_nome": "Sol aprisionado",
+        "ult": "Encare a aurora!"
+      },
+      "en": {
+        "nome": "Illari Dourada",
+        "entrada": "Eu carrego meus fardos sozinha.",
+        "ult_nome": "Sol aprisionado",
+        "ult": "Encare a aurora!"
+      }
+    },
     "raridade": "lendario",
     "img": "Illari_ow_gold.png",
     "golden_weapon": true,
@@ -948,36 +1698,66 @@
   {
     "id": "fenix_ascendida",
     "base": "illari",
-    "nome": "Fênix Ascendida",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Cuido desse fogo sozinha.",
-    "ult_nome": "Sol aprisionado",
-    "ult": "Encarem a fênix!",
+    "lang": {
+      "br": {
+        "nome": "Fênix Ascendida",
+        "entrada": "Cuido desse fogo sozinha.",
+        "ult_nome": "Sol aprisionado",
+        "ult": "Encarem a fênix!"
+      },
+      "en": {
+        "nome": "Fênix Ascendida",
+        "entrada": "Cuido desse fogo sozinha.",
+        "ult_nome": "Sol aprisionado",
+        "ult": "Encarem a fênix!"
+      }
+    },
     "raridade": "mitico",
     "img": "Illari_ow_myth.png"
   },
   {
     "id": "jetpack_cat_comum",
     "base": "jetpack_cat",
-    "nome": "Jetpack Cat",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Meow meow meow.",
-    "ult_nome": "Pulo do gato",
-    "ult": "Meoweoweew!!!",
+    "lang": {
+      "br": {
+        "nome": "Jetpack Cat",
+        "entrada": "Meow meow meow.",
+        "ult_nome": "Pulo do gato",
+        "ult": "Meoweoweew!!!"
+      },
+      "en": {
+        "nome": "Jetpack Cat",
+        "entrada": "Meow meow meow.",
+        "ult_nome": "Pulo do gato",
+        "ult": "Meoweoweew!!!"
+      }
+    },
     "raridade": "comum",
     "img": "Jetpack_Cat_ow.png"
   },
   {
     "id": "jetpack_cat_dourado",
     "base": "jetpack_cat",
-    "nome": "Jetpack Cat Dourado",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Meow meow meow.",
-    "ult_nome": "Pulo do gato",
-    "ult": "Meoweoweew!!!",
+    "lang": {
+      "br": {
+        "nome": "Jetpack Cat Dourado",
+        "entrada": "Meow meow meow.",
+        "ult_nome": "Pulo do gato",
+        "ult": "Meoweoweew!!!"
+      },
+      "en": {
+        "nome": "Jetpack Cat Dourado",
+        "entrada": "Meow meow meow.",
+        "ult_nome": "Pulo do gato",
+        "ult": "Meoweoweew!!!"
+      }
+    },
     "raridade": "lendario",
     "img": "Jetpack_Cat_ow_gold.png",
     "golden_weapon": true,
@@ -986,36 +1766,66 @@
   {
     "id": "junkrat_comum",
     "base": "junkrat",
-    "nome": "Junkrat",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Tantas bombas para colocar por aí.",
-    "ult_nome": "Pneu da morte",
-    "ult": "Vai explodir!",
+    "lang": {
+      "br": {
+        "nome": "Junkrat",
+        "entrada": "Tantas bombas para colocar por aí.",
+        "ult_nome": "Pneu da morte",
+        "ult": "Vai explodir!"
+      },
+      "en": {
+        "nome": "Junkrat",
+        "entrada": "Tantas bombas para colocar por aí.",
+        "ult_nome": "Pneu da morte",
+        "ult": "Vai explodir!"
+      }
+    },
     "raridade": "comum",
     "img": "Junkrat_ow.png"
   },
   {
     "id": "junkrat_junkstein",
     "base": "junkrat",
-    "nome": "Dr. Junkstein",
     "classe": "Dano",
     "subclasse": "Perverso",
-    "entrada": "Tantas bombas para colocar por aí.",
-    "ult_nome": "Pneu da morte",
-    "ult": "Senhoras e senhores, minha última criação!",
+    "lang": {
+      "br": {
+        "nome": "Dr. Junkstein",
+        "entrada": "Tantas bombas para colocar por aí.",
+        "ult_nome": "Pneu da morte",
+        "ult": "Senhoras e senhores, minha última criação!"
+      },
+      "en": {
+        "nome": "Dr. Junkstein",
+        "entrada": "Tantas bombas para colocar por aí.",
+        "ult_nome": "Pneu da morte",
+        "ult": "Senhoras e senhores, minha última criação!"
+      }
+    },
     "raridade": "incomum",
     "img": "Junkrat_ow_junkstein.png"
   },
   {
     "id": "junkrat_dourado",
     "base": "junkrat",
-    "nome": "Junkrat Dourado",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Tantas bombas para colocar por aí.",
-    "ult_nome": "Pneu da morte",
-    "ult": "Vai explodir!",
+    "lang": {
+      "br": {
+        "nome": "Junkrat Dourado",
+        "entrada": "Tantas bombas para colocar por aí.",
+        "ult_nome": "Pneu da morte",
+        "ult": "Vai explodir!"
+      },
+      "en": {
+        "nome": "Junkrat Dourado",
+        "entrada": "Tantas bombas para colocar por aí.",
+        "ult_nome": "Pneu da morte",
+        "ult": "Vai explodir!"
+      }
+    },
     "raridade": "lendario",
     "img": "Junkrat_ow_gold.png",
     "golden_weapon": true,
@@ -1024,12 +1834,22 @@
   {
     "id": "junkrat_legado",
     "base": "junkrat",
-    "nome": "Junkrat: Legado",
     "classe": "Defensor",
     "subclasse": "Origem",
-    "entrada": "O dia está ótimo para um pouco de caos!",
-    "ult_nome": "Pneu da morte",
-    "ult": "Vai explodir!",
+    "lang": {
+      "br": {
+        "nome": "Junkrat: Legado",
+        "entrada": "O dia está ótimo para um pouco de caos!",
+        "ult_nome": "Pneu da morte",
+        "ult": "Vai explodir!"
+      },
+      "en": {
+        "nome": "Junkrat: Legado",
+        "entrada": "O dia está ótimo para um pouco de caos!",
+        "ult_nome": "Pneu da morte",
+        "ult": "Vai explodir!"
+      }
+    },
     "raridade": "legado",
     "img": "Junkrat_ow_jade.png",
     "icon_ref": "jade.png"
@@ -1037,36 +1857,66 @@
   {
     "id": "cyber_combustivel",
     "base": "junkrat",
-    "nome": "Cyber Combustível",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Tanta gasolina pra queimar por aí.",
-    "ult_nome": "Pneu da morte",
-    "ult": "O vazio vai explodir!",
+    "lang": {
+      "br": {
+        "nome": "Cyber Combustível",
+        "entrada": "Tanta gasolina pra queimar por aí.",
+        "ult_nome": "Pneu da morte",
+        "ult": "O vazio vai explodir!"
+      },
+      "en": {
+        "nome": "Cyber Combustível",
+        "entrada": "Tanta gasolina pra queimar por aí.",
+        "ult_nome": "Pneu da morte",
+        "ult": "O vazio vai explodir!"
+      }
+    },
     "raridade": "mitico",
     "img": "Junkrat_ow_myth.png"
   },
   {
     "id": "juno_comum",
     "base": "juno",
-    "nome": "Juno",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Um passo de cada vez.",
-    "ult_nome": "Raio Orbital",
-    "ult": "Bem-vindos à orbita!",
+    "lang": {
+      "br": {
+        "nome": "Juno",
+        "entrada": "Um passo de cada vez.",
+        "ult_nome": "Raio Orbital",
+        "ult": "Bem-vindos à orbita!"
+      },
+      "en": {
+        "nome": "Juno",
+        "entrada": "Um passo de cada vez.",
+        "ult_nome": "Raio Orbital",
+        "ult": "Bem-vindos à orbita!"
+      }
+    },
     "raridade": "comum",
     "img": "Juno_ow.png"
   },
   {
     "id": "juno_dourado",
     "base": "juno",
-    "nome": "Juno Dourada",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Um passo de cada vez.",
-    "ult_nome": "Raio Orbital",
-    "ult": "Bem-vindos à orbita!",
+    "lang": {
+      "br": {
+        "nome": "Juno Dourada",
+        "entrada": "Um passo de cada vez.",
+        "ult_nome": "Raio Orbital",
+        "ult": "Bem-vindos à orbita!"
+      },
+      "en": {
+        "nome": "Juno Dourada",
+        "entrada": "Um passo de cada vez.",
+        "ult_nome": "Raio Orbital",
+        "ult": "Bem-vindos à orbita!"
+      }
+    },
     "raridade": "lendario",
     "img": "Juno_ow_gold.png",
     "golden_weapon": true,
@@ -1075,72 +1925,132 @@
   {
     "id": "juno_coracao",
     "base": "juno",
-    "nome": "Coração da esperança",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Um passo mágico de cada vez.",
-    "ult_nome": "Raio Orbital",
-    "ult": "Raio do coração esperançoso!",
+    "lang": {
+      "br": {
+        "nome": "Coração da esperança",
+        "entrada": "Um passo mágico de cada vez.",
+        "ult_nome": "Raio Orbital",
+        "ult": "Raio do coração esperançoso!"
+      },
+      "en": {
+        "nome": "Coração da esperança",
+        "entrada": "Um passo mágico de cada vez.",
+        "ult_nome": "Raio Orbital",
+        "ult": "Raio do coração esperançoso!"
+      }
+    },
     "raridade": "mitico",
     "img": "Juno_ow_myth.png"
   },
   {
     "id": "atiradora_das_estrelas",
     "base": "juno",
-    "nome": "Juno: Atiradora das Estrelas",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Um passo de cada vez.",
-    "ult_nome": "Raio Orbital",
-    "ult": "Bem-vindos à orbita!",
+    "lang": {
+      "br": {
+        "nome": "Juno: Atiradora das Estrelas",
+        "entrada": "Um passo de cada vez.",
+        "ult_nome": "Raio Orbital",
+        "ult": "Bem-vindos à orbita!"
+      },
+      "en": {
+        "nome": "Juno: Atiradora das Estrelas",
+        "entrada": "Um passo de cada vez.",
+        "ult_nome": "Raio Orbital",
+        "ult": "Bem-vindos à orbita!"
+      }
+    },
     "raridade": "mitico",
     "img": "Juno_ow_weapon.png"
   },
   {
     "id": "kiriko_comum",
     "base": "kiriko",
-    "nome": "Kiriko",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Eu vou encontrar o meu próprio caminho.",
-    "ult_nome": "Corrida da kitsune",
-    "ult": "Deixe a Kitsune guiar você!",
+    "lang": {
+      "br": {
+        "nome": "Kiriko",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      },
+      "en": {
+        "nome": "Kiriko",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      }
+    },
     "raridade": "comum",
     "img": "Kiriko_ow.png"
   },
   {
     "id": "kiriko_coracao",
     "base": "kiriko",
-    "nome": "Coração da paixão",
     "classe": "Suporte",
     "subclasse": "Coração",
-    "entrada": "Eu vou encontrar o meu próprio caminho.",
-    "ult_nome": "Corrida da kitsune",
-    "ult": "Deixe a Kitsune guiar você!",
+    "lang": {
+      "br": {
+        "nome": "Coração da paixão",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      },
+      "en": {
+        "nome": "Coração da paixão",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      }
+    },
     "raridade": "incomum",
     "img": "Kiriko_ow_heart_of_passion.png"
   },
   {
     "id": "kiriko_hashimoto",
     "base": "kiriko",
-    "nome": "Kiriko Hashimoto",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Eu vou encontrar o meu próprio caminho.",
-    "ult_nome": "Corrida da kitsune",
-    "ult": "Deixe a Kitsune guiar você!",
+    "lang": {
+      "br": {
+        "nome": "Kiriko Hashimoto",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      },
+      "en": {
+        "nome": "Kiriko Hashimoto",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      }
+    },
     "raridade": "incomum",
     "img": "Kiriko_ow_hashimoto.png"
   },
   {
     "id": "kiriko_dourado",
     "base": "kiriko",
-    "nome": "Kiriko Dourada",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Eu vou encontrar o meu próprio caminho.",
-    "ult_nome": "Corrida da kitsune",
-    "ult": "Deixe a Kitsune guiar você!",
+    "lang": {
+      "br": {
+        "nome": "Kiriko Dourada",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      },
+      "en": {
+        "nome": "Kiriko Dourada",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      }
+    },
     "raridade": "lendario",
     "img": "Kiriko_ow_gold.png",
     "golden_weapon": true,
@@ -1149,60 +2059,110 @@
   {
     "id": "kiriko_miaumiau",
     "base": "kiriko",
-    "nome": "Kiriko Miau-miau",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Eu vou encontrar o meu próprio caminho.",
-    "ult_nome": "Corrida da kitsune",
-    "ult": "Deixe a Kitsune guiar você!",
+    "lang": {
+      "br": {
+        "nome": "Kiriko Miau-miau",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      },
+      "en": {
+        "nome": "Kiriko Miau-miau",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      }
+    },
     "raridade": "ultra",
     "img": "Kiriko_ow_miaumiau.png"
   },
   {
     "id": "amateratsu",
     "base": "kiriko",
-    "nome": "Amateratsu",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Eu ilumino meu próprio caminho.",
-    "ult_nome": "Corrida da kitsune",
-    "ult": "Entre no mundo espiritual!",
+    "lang": {
+      "br": {
+        "nome": "Amateratsu",
+        "entrada": "Eu ilumino meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Entre no mundo espiritual!"
+      },
+      "en": {
+        "nome": "Amateratsu",
+        "entrada": "Eu ilumino meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Entre no mundo espiritual!"
+      }
+    },
     "raridade": "mitico",
     "img": "Kiriko_ow_myth.png"
   },
   {
     "id": "guardia_espiritual",
     "base": "kiriko",
-    "nome": "Kiriko: Guardiã espiritual",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Eu vou encontrar o meu próprio caminho.",
-    "ult_nome": "Corrida da kitsune",
-    "ult": "Deixe a Kitsune guiar você!",
+    "lang": {
+      "br": {
+        "nome": "Kiriko: Guardiã espiritual",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      },
+      "en": {
+        "nome": "Kiriko: Guardiã espiritual",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      }
+    },
     "raridade": "mitico",
     "img": "Kiriko_ow_weapon.png"
   },
   {
     "id": "lifeweaver_comum",
     "base": "lifeweaver",
-    "nome": "Lifeweaver",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Passe cada momento da vida cultivando quem realmente é.",
-    "ult_nome": "Árvore da vida",
-    "ult": "A vida protege a vida!",
+    "lang": {
+      "br": {
+        "nome": "Lifeweaver",
+        "entrada": "Passe cada momento da vida cultivando quem realmente é.",
+        "ult_nome": "Árvore da vida",
+        "ult": "A vida protege a vida!"
+      },
+      "en": {
+        "nome": "Lifeweaver",
+        "entrada": "Passe cada momento da vida cultivando quem realmente é.",
+        "ult_nome": "Árvore da vida",
+        "ult": "A vida protege a vida!"
+      }
+    },
     "raridade": "comum",
     "img": "Lifeweaver_ow.png"
   },
   {
     "id": "lifeweaver_dourado",
     "base": "lifeweaver",
-    "nome": "Lifeweaver Dourado",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Passe cada momento da vida cultivando quem realmente é.",
-    "ult_nome": "Árvore da vida",
-    "ult": "A vida protege a vida!",
+    "lang": {
+      "br": {
+        "nome": "Lifeweaver Dourado",
+        "entrada": "Passe cada momento da vida cultivando quem realmente é.",
+        "ult_nome": "Árvore da vida",
+        "ult": "A vida protege a vida!"
+      },
+      "en": {
+        "nome": "Lifeweaver Dourado",
+        "entrada": "Passe cada momento da vida cultivando quem realmente é.",
+        "ult_nome": "Árvore da vida",
+        "ult": "A vida protege a vida!"
+      }
+    },
     "raridade": "lendario",
     "img": "Lifeweaver_ow_gold.png",
     "golden_weapon": true,
@@ -1211,60 +2171,110 @@
   {
     "id": "druida_divino",
     "base": "lifeweaver",
-    "nome": "Druída Divíno",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Viva todas as suas vidas, cultivando quem realmente é.",
-    "ult_nome": "Árvore da vida",
-    "ult": "A vida cria vida!",
+    "lang": {
+      "br": {
+        "nome": "Druída Divíno",
+        "entrada": "Viva todas as suas vidas, cultivando quem realmente é.",
+        "ult_nome": "Árvore da vida",
+        "ult": "A vida cria vida!"
+      },
+      "en": {
+        "nome": "Druída Divíno",
+        "entrada": "Viva todas as suas vidas, cultivando quem realmente é.",
+        "ult_nome": "Árvore da vida",
+        "ult": "A vida cria vida!"
+      }
+    },
     "raridade": "mitico",
     "img": "Lifeweaver_ow_myth.png"
   },
   {
     "id": "lucio_comum",
     "base": "lucio",
-    "nome": "Lúcio",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "A gente chegou pra esculachar.",
-    "ult_nome": "Barreira de som",
-    "ult": "Vamo esculachar!",
+    "lang": {
+      "br": {
+        "nome": "Lúcio",
+        "entrada": "A gente chegou pra esculachar.",
+        "ult_nome": "Barreira de som",
+        "ult": "Vamo esculachar!"
+      },
+      "en": {
+        "nome": "Lúcio",
+        "entrada": "A gente chegou pra esculachar.",
+        "ult_nome": "Barreira de som",
+        "ult": "Vamo esculachar!"
+      }
+    },
     "raridade": "comum",
     "img": "Lucio_ow.png"
   },
   {
     "id": "lucio_principe_espaco",
     "base": "lucio",
-    "nome": "Príncipe do Espaço",
     "classe": "Suporte",
     "subclasse": "Cósmico",
-    "entrada": "Eu cheguei pra esculachar.",
-    "ult_nome": "Barreira de som",
-    "ult": "Vamo esculachar!",
+    "lang": {
+      "br": {
+        "nome": "Príncipe do Espaço",
+        "entrada": "Eu cheguei pra esculachar.",
+        "ult_nome": "Barreira de som",
+        "ult": "Vamo esculachar!"
+      },
+      "en": {
+        "nome": "Príncipe do Espaço",
+        "entrada": "Eu cheguei pra esculachar.",
+        "ult_nome": "Barreira de som",
+        "ult": "Vamo esculachar!"
+      }
+    },
     "raridade": "epico",
     "img": "Lucio_ow.png"
   },
   {
     "id": "lucio_hermes",
     "base": "lucio",
-    "nome": "Hermes",
     "classe": "Suporte",
     "subclasse": "Campeão",
-    "entrada": "A gente chegou pra vencer.",
-    "ult_nome": "Barreira de som",
-    "ult": "Bora acelerar!",
+    "lang": {
+      "br": {
+        "nome": "Hermes",
+        "entrada": "A gente chegou pra vencer.",
+        "ult_nome": "Barreira de som",
+        "ult": "Bora acelerar!"
+      },
+      "en": {
+        "nome": "Hermes",
+        "entrada": "A gente chegou pra vencer.",
+        "ult_nome": "Barreira de som",
+        "ult": "Bora acelerar!"
+      }
+    },
     "raridade": "lendario",
     "img": "Lucio_ow_hermes.png"
   },
   {
     "id": "lucio_dourado",
     "base": "lucio",
-    "nome": "Lúcio Dourado",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "A gente chegou pra esculachar.",
-    "ult_nome": "Barreira de som",
-    "ult": "Vamo esculachar!",
+    "lang": {
+      "br": {
+        "nome": "Lúcio Dourado",
+        "entrada": "A gente chegou pra esculachar.",
+        "ult_nome": "Barreira de som",
+        "ult": "Vamo esculachar!"
+      },
+      "en": {
+        "nome": "Lúcio Dourado",
+        "entrada": "A gente chegou pra esculachar.",
+        "ult_nome": "Barreira de som",
+        "ult": "Vamo esculachar!"
+      }
+    },
     "raridade": "lendario",
     "img": "Lucio_ow_gold.png",
     "golden_weapon": true,
@@ -1273,12 +2283,22 @@
   {
     "id": "lucio_legado",
     "base": "lucio",
-    "nome": "Lúcio: Legado",
     "classe": "Suporte",
     "subclasse": "Origem",
-    "entrada": "Bora meu povo, essa é nossa!",
-    "ult_nome": "Barreira de som",
-    "ult": "Vamo esculachar!",
+    "lang": {
+      "br": {
+        "nome": "Lúcio: Legado",
+        "entrada": "Bora meu povo, essa é nossa!",
+        "ult_nome": "Barreira de som",
+        "ult": "Vamo esculachar!"
+      },
+      "en": {
+        "nome": "Lúcio: Legado",
+        "entrada": "Bora meu povo, essa é nossa!",
+        "ult_nome": "Barreira de som",
+        "ult": "Vamo esculachar!"
+      }
+    },
     "raridade": "legado",
     "img": "Lucio_ow_jade.png",
     "icon_ref": "jade.png"
@@ -1286,12 +2306,22 @@
   {
     "id": "lucio_fool",
     "base": "lucio",
-    "nome": "Lúcio'Oh",
     "classe": "Suporte",
     "subclasse": "Fool",
-    "entrada": "Bora violar a lei do silêncio!",
-    "ult_nome": "Barreira de som",
-    "ult": "Quem quer UM BILHÃO de pontos de vida?",
+    "lang": {
+      "br": {
+        "nome": "Lúcio'Oh",
+        "entrada": "Bora violar a lei do silêncio!",
+        "ult_nome": "Barreira de som",
+        "ult": "Quem quer UM BILHÃO de pontos de vida?"
+      },
+      "en": {
+        "nome": "Lúcio'Oh",
+        "entrada": "Bora violar a lei do silêncio!",
+        "ult_nome": "Barreira de som",
+        "ult": "Quem quer UM BILHÃO de pontos de vida?"
+      }
+    },
     "raridade": "incomum",
     "img": "Lucio_ow_fool.png",
     "evento": "april_fools"
@@ -1299,24 +2329,44 @@
   {
     "id": "mauga_comum",
     "base": "mauga",
-    "nome": "Mauga",
     "classe": "Tanque",
     "subclasse": "Combatente",
-    "entrada": "Uma arma em cada mão, e um sorriso no rosto.",
-    "ult_nome": "Mano à mano",
-    "ult": "Se se'i koikiiki!",
+    "lang": {
+      "br": {
+        "nome": "Mauga",
+        "entrada": "Uma arma em cada mão, e um sorriso no rosto.",
+        "ult_nome": "Mano à mano",
+        "ult": "Se se'i koikiiki!"
+      },
+      "en": {
+        "nome": "Mauga",
+        "entrada": "Uma arma em cada mão, e um sorriso no rosto.",
+        "ult_nome": "Mano à mano",
+        "ult": "Se se'i koikiiki!"
+      }
+    },
     "raridade": "comum",
     "img": "Mauga_ow.png"
   },
   {
     "id": "mauga_dourado",
     "base": "mauga",
-    "nome": "Mauga Dourado",
     "classe": "Tanque",
     "subclasse": "Combatente",
-    "entrada": "Uma arma em cada mão, e um sorriso no rosto.",
-    "ult_nome": "Mano à mano",
-    "ult": "Se se'i koikiiki!",
+    "lang": {
+      "br": {
+        "nome": "Mauga Dourado",
+        "entrada": "Uma arma em cada mão, e um sorriso no rosto.",
+        "ult_nome": "Mano à mano",
+        "ult": "Se se'i koikiiki!"
+      },
+      "en": {
+        "nome": "Mauga Dourado",
+        "entrada": "Uma arma em cada mão, e um sorriso no rosto.",
+        "ult_nome": "Mano à mano",
+        "ult": "Se se'i koikiiki!"
+      }
+    },
     "raridade": "lendario",
     "img": "Mauga_ow_gold.png",
     "golden_weapon": true,
@@ -1325,24 +2375,44 @@
   {
     "id": "mei_comum",
     "base": "mei",
-    "nome": "Mei",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Vamos bola de neve, precisam de nós.",
-    "ult_nome": "Nevasca",
-    "ult": "Parados! Não se movam!",
+    "lang": {
+      "br": {
+        "nome": "Mei",
+        "entrada": "Vamos bola de neve, precisam de nós.",
+        "ult_nome": "Nevasca",
+        "ult": "Parados! Não se movam!"
+      },
+      "en": {
+        "nome": "Mei",
+        "entrada": "Vamos bola de neve, precisam de nós.",
+        "ult_nome": "Nevasca",
+        "ult": "Parados! Não se movam!"
+      }
+    },
     "raridade": "comum",
     "img": "Mei_ow.png"
   },
   {
     "id": "mei_dourado",
     "base": "mei",
-    "nome": "Mei Dourado",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Vamos bola de neve, precisam de nós.",
-    "ult_nome": "Nevasca",
-    "ult": "Parados! Não se movam!",
+    "lang": {
+      "br": {
+        "nome": "Mei Dourado",
+        "entrada": "Vamos bola de neve, precisam de nós.",
+        "ult_nome": "Nevasca",
+        "ult": "Parados! Não se movam!"
+      },
+      "en": {
+        "nome": "Mei Dourado",
+        "entrada": "Vamos bola de neve, precisam de nós.",
+        "ult_nome": "Nevasca",
+        "ult": "Parados! Não se movam!"
+      }
+    },
     "raridade": "lendario",
     "img": "Mei_ow_gold.png",
     "golden_weapon": true,
@@ -1351,12 +2421,22 @@
   {
     "id": "mei_legado",
     "base": "mei",
-    "nome": "Mei: Legado",
     "classe": "Defensor",
     "subclasse": "Origem",
-    "entrada": "Vale a pena lutar pelo nosso mundo!",
-    "ult_nome": "Nevasca",
-    "ult": "Dòng zhù! Bù xǔ zǒu!",
+    "lang": {
+      "br": {
+        "nome": "Mei: Legado",
+        "entrada": "Vale a pena lutar pelo nosso mundo!",
+        "ult_nome": "Nevasca",
+        "ult": "Dòng zhù! Bù xǔ zǒu!"
+      },
+      "en": {
+        "nome": "Mei: Legado",
+        "entrada": "Vale a pena lutar pelo nosso mundo!",
+        "ult_nome": "Nevasca",
+        "ult": "Dòng zhù! Bù xǔ zǒu!"
+      }
+    },
     "raridade": "legado",
     "img": "Mei_ow_jade.png",
     "icon_ref": "jade.png"
@@ -1364,84 +2444,154 @@
   {
     "id": "pulo_online",
     "base": "mei",
-    "nome": "Pulo Online",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Vamos bola de neve, precisam de nós.",
-    "ult_nome": "Nevasca",
-    "ult": "Congela! Alguém clipa essa!",
+    "lang": {
+      "br": {
+        "nome": "Pulo Online",
+        "entrada": "Vamos bola de neve, precisam de nós.",
+        "ult_nome": "Nevasca",
+        "ult": "Congela! Alguém clipa essa!"
+      },
+      "en": {
+        "nome": "Pulo Online",
+        "entrada": "Vamos bola de neve, precisam de nós.",
+        "ult_nome": "Nevasca",
+        "ult": "Congela! Alguém clipa essa!"
+      }
+    },
     "raridade": "mitico",
     "img": "Mei_ow_myth.png"
   },
   {
     "id": "mercy_comum",
     "base": "mercy",
-    "nome": "Mercy",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Não se preocupem, estarei atrás de vocês.",
-    "ult_nome": "Valkíria",
-    "ult": "Heróis nunca morrem!",
+    "lang": {
+      "br": {
+        "nome": "Mercy",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem!"
+      },
+      "en": {
+        "nome": "Mercy",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem!"
+      }
+    },
     "raridade": "comum",
     "img": "Mercy_ow.png"
   },
   {
     "id": "mercy_diabrete",
     "base": "mercy",
-    "nome": "Mercy Diabrete",
     "classe": "Suporte",
     "subclasse": "Perverso",
-    "entrada": "Não se preocupem, estarei atrás de vocês.",
-    "ult_nome": "Valkíria",
-    "ult": "Heróis nunca morrem... pelo preço certo!",
+    "lang": {
+      "br": {
+        "nome": "Mercy Diabrete",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem... pelo preço certo!"
+      },
+      "en": {
+        "nome": "Mercy Diabrete",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem... pelo preço certo!"
+      }
+    },
     "raridade": "incomum",
     "img": "Mercy_ow_diabolica.png"
   },
   {
     "id": "mercy_conjuradora",
     "base": "mercy",
-    "nome": "Mercy Conjuradora",
     "classe": "Suporte",
     "subclasse": "Campeão",
-    "entrada": "Não se preocupem, estarei atrás de vocês.",
-    "ult_nome": "Valkíria",
-    "ult": "Meus servos nunca morrem!",
+    "lang": {
+      "br": {
+        "nome": "Mercy Conjuradora",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Meus servos nunca morrem!"
+      },
+      "en": {
+        "nome": "Mercy Conjuradora",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Meus servos nunca morrem!"
+      }
+    },
     "raridade": "epico",
     "img": "Mercy_ow_conjuradora.png"
   },
   {
     "id": "mercy_sigrun",
     "base": "mercy",
-    "nome": "Mercy Sigrún",
     "classe": "Suporte",
     "subclasse": "Guerreiro",
-    "entrada": "Não se preocupem, estarei atrás de vocês.",
-    "ult_nome": "Valkíria",
-    "ult": "Até Valhalla!",
+    "lang": {
+      "br": {
+        "nome": "Mercy Sigrún",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Até Valhalla!"
+      },
+      "en": {
+        "nome": "Mercy Sigrún",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Até Valhalla!"
+      }
+    },
     "raridade": "epico",
     "img": "Mercy_ow_sigrun.png"
   },
   {
     "id": "mercy_vitoria_alada",
     "base": "mercy",
-    "nome": "Vitória Alada",
     "classe": "Suporte",
     "subclasse": "Campeão",
-    "entrada": "Não se preocupem, estarei atrás de vocês.",
-    "ult_nome": "Valkíria",
-    "ult": "Avante para a vitória!",
+    "lang": {
+      "br": {
+        "nome": "Vitória Alada",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Avante para a vitória!"
+      },
+      "en": {
+        "nome": "Vitória Alada",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Avante para a vitória!"
+      }
+    },
     "raridade": "epico",
     "img": "Mercy_ow_vitoria_alada.png"
   },
   {
     "id": "mercy_dourado",
     "base": "mercy",
-    "nome": "Mercy Dourada",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Não se preocupem, estarei atrás de vocês.",
-    "ult_nome": "Valkíria",
-    "ult": "Heróis nunca morrem!",
+    "lang": {
+      "br": {
+        "nome": "Mercy Dourada",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem!"
+      },
+      "en": {
+        "nome": "Mercy Dourada",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem!"
+      }
+    },
     "raridade": "lendario",
     "img": "Mercy_ow_gold.png",
     "golden_weapon": true,
@@ -1450,12 +2600,22 @@
   {
     "id": "mercy_legado",
     "base": "mercy",
-    "nome": "Mercy: Legado",
     "classe": "Suporte",
     "subclasse": "Origem",
-    "entrada": "Eu cuidarei de você!",
-    "ult_nome": "Ressurreição",
-    "ult": "Heróis nunca morrem!",
+    "lang": {
+      "br": {
+        "nome": "Mercy: Legado",
+        "entrada": "Eu cuidarei de você!",
+        "ult_nome": "Ressurreição",
+        "ult": "Heróis nunca morrem!"
+      },
+      "en": {
+        "nome": "Mercy: Legado",
+        "entrada": "Eu cuidarei de você!",
+        "ult_nome": "Ressurreição",
+        "ult": "Heróis nunca morrem!"
+      }
+    },
     "raridade": "legado",
     "img": "Mercy_ow_jade.png",
     "icon_ref": "jade.png"
@@ -1463,60 +2623,110 @@
   {
     "id": "vengeance",
     "base": "mercy",
-    "nome": "Vingança",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Não me decepcione, estarei logo atrás de você.",
-    "ult_nome": "Valkíria",
-    "ult": "A Vingança nunca morre!",
+    "lang": {
+      "br": {
+        "nome": "Vingança",
+        "entrada": "Não me decepcione, estarei logo atrás de você.",
+        "ult_nome": "Valkíria",
+        "ult": "A Vingança nunca morre!"
+      },
+      "en": {
+        "nome": "Vingança",
+        "entrada": "Não me decepcione, estarei logo atrás de você.",
+        "ult_nome": "Valkíria",
+        "ult": "A Vingança nunca morre!"
+      }
+    },
     "raridade": "mitico",
     "img": "Mercy_ow_myth.png"
   },
   {
     "id": "guardia_celestial",
     "base": "mercy",
-    "nome": "Guardiã Celestial",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Não se preocupem, estarei atrás de vocês.",
-    "ult_nome": "Valkíria",
-    "ult": "A luz das estrelas é imortal!",
+    "lang": {
+      "br": {
+        "nome": "Guardiã Celestial",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "A luz das estrelas é imortal!"
+      },
+      "en": {
+        "nome": "Guardiã Celestial",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "A luz das estrelas é imortal!"
+      }
+    },
     "raridade": "mitico",
     "img": "Mercy_ow_myth_2.png"
   },
   {
     "id": "magitecnologia_misericordiosa",
     "base": "mercy",
-    "nome": "Mercy: Eleos, Magitecnologia misericordiosa",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Não se preocupem, estarei atrás de vocês.",
-    "ult_nome": "Valkíria",
-    "ult": "Heróis nunca morrem!",
+    "lang": {
+      "br": {
+        "nome": "Mercy: Eleos, Magitecnologia misericordiosa",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem!"
+      },
+      "en": {
+        "nome": "Mercy: Eleos, Magitecnologia misericordiosa",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem!"
+      }
+    },
     "raridade": "mitico",
     "img": "Mercy_ow_weapon.png"
   },
   {
     "id": "mizuki_comum",
     "base": "mizuki",
-    "nome": "Mizuki",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Vou decidir o meu destino.",
-    "ult_nome": "Santuário Tekkai",
-    "ult": "Proteja-nos, kekkai!",
+    "lang": {
+      "br": {
+        "nome": "Mizuki",
+        "entrada": "Vou decidir o meu destino.",
+        "ult_nome": "Santuário Tekkai",
+        "ult": "Proteja-nos, kekkai!"
+      },
+      "en": {
+        "nome": "Mizuki",
+        "entrada": "Vou decidir o meu destino.",
+        "ult_nome": "Santuário Tekkai",
+        "ult": "Proteja-nos, kekkai!"
+      }
+    },
     "raridade": "comum",
     "img": "Mizuki_ow.png"
   },
   {
     "id": "mizuki_dourado",
     "base": "mizuki",
-    "nome": "Mizuki Dourado",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Vou decidir o meu destino.",
-    "ult_nome": "Santuário Tekkai",
-    "ult": "Proteja-nos, kekkai!",
+    "lang": {
+      "br": {
+        "nome": "Mizuki Dourado",
+        "entrada": "Vou decidir o meu destino.",
+        "ult_nome": "Santuário Tekkai",
+        "ult": "Proteja-nos, kekkai!"
+      },
+      "en": {
+        "nome": "Mizuki Dourado",
+        "entrada": "Vou decidir o meu destino.",
+        "ult_nome": "Santuário Tekkai",
+        "ult": "Proteja-nos, kekkai!"
+      }
+    },
     "raridade": "lendario",
     "img": "Mizuki_ow_gold.png",
     "golden_weapon": true,
@@ -1525,24 +2735,44 @@
   {
     "id": "moira_comum",
     "base": "moira",
-    "nome": "Moira",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "A humanidade está acorrentada. Eu encontrarei a chave.",
-    "ult_nome": "Coalecência",
-    "ult": "Submetam-se a minha vontade!",
+    "lang": {
+      "br": {
+        "nome": "Moira",
+        "entrada": "A humanidade está acorrentada. Eu encontrarei a chave.",
+        "ult_nome": "Coalecência",
+        "ult": "Submetam-se a minha vontade!"
+      },
+      "en": {
+        "nome": "Moira",
+        "entrada": "A humanidade está acorrentada. Eu encontrarei a chave.",
+        "ult_nome": "Coalecência",
+        "ult": "Submetam-se a minha vontade!"
+      }
+    },
     "raridade": "comum",
     "img": "Moira_ow.png"
   },
   {
     "id": "moira_dourado",
     "base": "moira",
-    "nome": "Moira Dourado",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "A humanidade está acorrentada. Eu encontrarei a chave.",
-    "ult_nome": "Coalecência",
-    "ult": "Submetam-se a minha vontade!",
+    "lang": {
+      "br": {
+        "nome": "Moira Dourado",
+        "entrada": "A humanidade está acorrentada. Eu encontrarei a chave.",
+        "ult_nome": "Coalecência",
+        "ult": "Submetam-se a minha vontade!"
+      },
+      "en": {
+        "nome": "Moira Dourado",
+        "entrada": "A humanidade está acorrentada. Eu encontrarei a chave.",
+        "ult_nome": "Coalecência",
+        "ult": "Submetam-se a minha vontade!"
+      }
+    },
     "raridade": "lendario",
     "img": "Moira_ow_gold.png",
     "golden_weapon": true,
@@ -1551,48 +2781,88 @@
   {
     "id": "invocadora_ancestral",
     "base": "moira",
-    "nome": "Invocadora Ancestral",
     "classe": "Suporte",
     "subclasse": "Socorrista",
-    "entrada": "Nossas mentes estão atadas. Submissão é a chave.",
-    "ult_nome": "Coalecência",
-    "ult": "Renda sua alma!",
+    "lang": {
+      "br": {
+        "nome": "Invocadora Ancestral",
+        "entrada": "Nossas mentes estão atadas. Submissão é a chave.",
+        "ult_nome": "Coalecência",
+        "ult": "Renda sua alma!"
+      },
+      "en": {
+        "nome": "Invocadora Ancestral",
+        "entrada": "Nossas mentes estão atadas. Submissão é a chave.",
+        "ult_nome": "Coalecência",
+        "ult": "Renda sua alma!"
+      }
+    },
     "raridade": "mitico",
     "img": "Moira_ow_myth.png"
   },
   {
     "id": "orisa_comum",
     "base": "orisa",
-    "nome": "Orisa",
     "classe": "Tanque",
     "subclasse": "Combatente",
-    "entrada": "A força reside na união.",
-    "ult_nome": "Rompante Terrano",
-    "ult": "Aceite o seu destino!",
+    "lang": {
+      "br": {
+        "nome": "Orisa",
+        "entrada": "A força reside na união.",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite o seu destino!"
+      },
+      "en": {
+        "nome": "Orisa",
+        "entrada": "A força reside na união.",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite o seu destino!"
+      }
+    },
     "raridade": "comum",
     "img": "Orisa_ow.png"
   },
   {
     "id": "orisa_null_sector",
     "base": "orisa",
-    "nome": "Orisa Setor Nulo",
     "classe": "Tanque",
     "subclasse": "Perigo",
-    "entrada": "A força reside na união.",
-    "ult_nome": "Rompante Terrano",
-    "ult": "Aceite o seu destino!",
+    "lang": {
+      "br": {
+        "nome": "Orisa Setor Nulo",
+        "entrada": "A força reside na união.",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite o seu destino!"
+      },
+      "en": {
+        "nome": "Orisa Setor Nulo",
+        "entrada": "A força reside na união.",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite o seu destino!"
+      }
+    },
     "raridade": "incomum",
     "img": "Orisa_ow_null_sector.png"
   },
   {
     "id": "orisa_dourado",
     "base": "orisa",
-    "nome": "Orisa Dourada",
     "classe": "Tanque",
     "subclasse": "Combatente",
-    "entrada": "A força reside na união.",
-    "ult_nome": "Rompante Terrano",
-    "ult": "Aceite o seu destino!",
+    "lang": {
+      "br": {
+        "nome": "Orisa Dourada",
+        "entrada": "A força reside na união.",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite o seu destino!"
+      },
+      "en": {
+        "nome": "Orisa Dourada",
+        "entrada": "A força reside na união.",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite o seu destino!"
+      }
+    },
     "raridade": "lendario",
     "img": "Orisa_ow_gold.png",
     "golden_weapon": true,
@@ -1601,36 +2871,66 @@
   {
     "id": "fera_grandeosa",
     "base": "orisa",
-    "nome": "Fera Grandeosa",
     "classe": "Tanque",
     "subclasse": "Combatente",
-    "entrada": "Apenas na luta sobreviveremos.",
-    "ult_nome": "Rompante Terrano",
-    "ult": "Aceite a sua fera!",
+    "lang": {
+      "br": {
+        "nome": "Fera Grandeosa",
+        "entrada": "Apenas na luta sobreviveremos.",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite a sua fera!"
+      },
+      "en": {
+        "nome": "Fera Grandeosa",
+        "entrada": "Apenas na luta sobreviveremos.",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite a sua fera!"
+      }
+    },
     "raridade": "mitico",
     "img": "Orisa_ow_myth.png"
   },
   {
     "id": "canhao_capsulas",
     "base": "orisa",
-    "nome": "Orisa: Canhão de cápsulas",
     "classe": "Tanque",
     "subclasse": "Combatente",
-    "entrada": "A força reside na união.",
-    "ult_nome": "Rompante Terrano",
-    "ult": "Aceite o seu destino!",
+    "lang": {
+      "br": {
+        "nome": "Orisa: Canhão de cápsulas",
+        "entrada": "A força reside na união.",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite o seu destino!"
+      },
+      "en": {
+        "nome": "Orisa: Canhão de cápsulas",
+        "entrada": "A força reside na união.",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite o seu destino!"
+      }
+    },
     "raridade": "mitico",
     "img": "Orisa_ow_weapon.png"
   },
   {
     "id": "orisa_classic",
     "base": "orisa",
-    "nome": "Orisa Clássica",
     "classe": "Tanque",
     "subclasse": "Classic",
-    "entrada": "A sua proteção é o meu dever principal.",
-    "ult_nome": "Amplificador",
-    "ult": "Não resistam",
+    "lang": {
+      "br": {
+        "nome": "Orisa Clássica",
+        "entrada": "A sua proteção é o meu dever principal.",
+        "ult_nome": "Amplificador",
+        "ult": "Não resistam"
+      },
+      "en": {
+        "nome": "Orisa Clássica",
+        "entrada": "A sua proteção é o meu dever principal.",
+        "ult_nome": "Amplificador",
+        "ult": "Não resistam"
+      }
+    },
     "raridade": "epico",
     "img": "Orisa_ow.png",
     "foil": true,
@@ -1639,36 +2939,66 @@
   {
     "id": "pharah_comum",
     "base": "pharah",
-    "nome": "Pharah",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "Ataquem de cima.",
-    "ult_nome": "Bombardeio",
-    "ult": "A justiça vem de cima!",
+    "lang": {
+      "br": {
+        "nome": "Pharah",
+        "entrada": "Ataquem de cima.",
+        "ult_nome": "Bombardeio",
+        "ult": "A justiça vem de cima!"
+      },
+      "en": {
+        "nome": "Pharah",
+        "entrada": "Ataquem de cima.",
+        "ult_nome": "Bombardeio",
+        "ult": "A justiça vem de cima!"
+      }
+    },
     "raridade": "comum",
     "img": "Pharah_ow.png"
   },
   {
     "id": "pharah_hades",
     "base": "pharah",
-    "nome": "Hades",
     "classe": "Dano",
     "subclasse": "Perverso",
-    "entrada": "A morte vem de cima.",
-    "ult_nome": "Bombardeio",
-    "ult": "O fogo do inferno vem de cima!",
+    "lang": {
+      "br": {
+        "nome": "Hades",
+        "entrada": "A morte vem de cima.",
+        "ult_nome": "Bombardeio",
+        "ult": "O fogo do inferno vem de cima!"
+      },
+      "en": {
+        "nome": "Hades",
+        "entrada": "A morte vem de cima.",
+        "ult_nome": "Bombardeio",
+        "ult": "O fogo do inferno vem de cima!"
+      }
+    },
     "raridade": "lendario",
     "img": "Pharah_ow_hades.png"
   },
   {
     "id": "pharah_dourado",
     "base": "pharah",
-    "nome": "Pharah Dourada",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "Ataquem de cima.",
-    "ult_nome": "Bombardeio",
-    "ult": "A justiça vem de cima!",
+    "lang": {
+      "br": {
+        "nome": "Pharah Dourada",
+        "entrada": "Ataquem de cima.",
+        "ult_nome": "Bombardeio",
+        "ult": "A justiça vem de cima!"
+      },
+      "en": {
+        "nome": "Pharah Dourada",
+        "entrada": "Ataquem de cima.",
+        "ult_nome": "Bombardeio",
+        "ult": "A justiça vem de cima!"
+      }
+    },
     "raridade": "lendario",
     "img": "Pharah_ow_gold.png",
     "golden_weapon": true,
@@ -1677,12 +3007,22 @@
   {
     "id": "pharah_legado",
     "base": "pharah",
-    "nome": "Pharah: Legado",
     "classe": "Atacante",
     "subclasse": "Origem",
-    "entrada": "Eu protegerei os inocentes!",
-    "ult_nome": "Bombardeio",
-    "ult": "A justiça vem de cima!",
+    "lang": {
+      "br": {
+        "nome": "Pharah: Legado",
+        "entrada": "Eu protegerei os inocentes!",
+        "ult_nome": "Bombardeio",
+        "ult": "A justiça vem de cima!"
+      },
+      "en": {
+        "nome": "Pharah: Legado",
+        "entrada": "Eu protegerei os inocentes!",
+        "ult_nome": "Bombardeio",
+        "ult": "A justiça vem de cima!"
+      }
+    },
     "raridade": "legado",
     "img": "Pharah_ow_jade.png",
     "icon_ref": "jade.png"
@@ -1690,36 +3030,66 @@
   {
     "id": "rainha_junker_comum",
     "base": "rainha_junker",
-    "nome": "Rainha Junker",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Meu trono fica onde eu quiser.",
-    "ult_nome": "Chacina",
-    "ult": "Aí vem a desforra!",
+    "lang": {
+      "br": {
+        "nome": "Rainha Junker",
+        "entrada": "Meu trono fica onde eu quiser.",
+        "ult_nome": "Chacina",
+        "ult": "Aí vem a desforra!"
+      },
+      "en": {
+        "nome": "Rainha Junker",
+        "entrada": "Meu trono fica onde eu quiser.",
+        "ult_nome": "Chacina",
+        "ult": "Aí vem a desforra!"
+      }
+    },
     "raridade": "comum",
     "img": "Junker_Queen_ow.png"
   },
   {
     "id": "rainha_junker_executora",
     "base": "rainha_junker",
-    "nome": "Executora",
     "classe": "Tanque",
     "subclasse": "Campeão",
-    "entrada": "A tortura acaba quando eu disser.",
-    "ult_nome": "Chacina",
-    "ult": "Vamos levar eles para a forca!",
+    "lang": {
+      "br": {
+        "nome": "Executora",
+        "entrada": "A tortura acaba quando eu disser.",
+        "ult_nome": "Chacina",
+        "ult": "Vamos levar eles para a forca!"
+      },
+      "en": {
+        "nome": "Executora",
+        "entrada": "A tortura acaba quando eu disser.",
+        "ult_nome": "Chacina",
+        "ult": "Vamos levar eles para a forca!"
+      }
+    },
     "raridade": "epico",
     "img": "Junker_Queen_ow_executora.png"
   },
   {
     "id": "rainha_junker_dourado",
     "base": "rainha_junker",
-    "nome": "Rainha Junker Dourada",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Meu trono fica onde eu quiser.",
-    "ult_nome": "Chacina",
-    "ult": "Aí vem a desforra!",
+    "lang": {
+      "br": {
+        "nome": "Rainha Junker Dourada",
+        "entrada": "Meu trono fica onde eu quiser.",
+        "ult_nome": "Chacina",
+        "ult": "Aí vem a desforra!"
+      },
+      "en": {
+        "nome": "Rainha Junker Dourada",
+        "entrada": "Meu trono fica onde eu quiser.",
+        "ult_nome": "Chacina",
+        "ult": "Aí vem a desforra!"
+      }
+    },
     "raridade": "lendario",
     "img": "Junker_Queen_ow_gold.png",
     "golden_weapon": true,
@@ -1728,36 +3098,66 @@
   {
     "id": "zeus",
     "base": "rainha_junker",
-    "nome": "Zeus",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "O Olímpo é aonde eu disser.",
-    "ult_nome": "Chacina",
-    "ult": "Hora da tempestade!",
+    "lang": {
+      "br": {
+        "nome": "Zeus",
+        "entrada": "O Olímpo é aonde eu disser.",
+        "ult_nome": "Chacina",
+        "ult": "Hora da tempestade!"
+      },
+      "en": {
+        "nome": "Zeus",
+        "entrada": "O Olímpo é aonde eu disser.",
+        "ult_nome": "Chacina",
+        "ult": "Hora da tempestade!"
+      }
+    },
     "raridade": "mitico",
     "img": "Junker_Queen_ow_myth.png"
   },
   {
     "id": "ramattra_comum",
     "base": "ramattra",
-    "nome": "Ramattra",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Teremos a paz, custe o que custar.",
-    "ult_nome": "Aniquilação",
-    "ult": "Sofra, como eu sofri!",
+    "lang": {
+      "br": {
+        "nome": "Ramattra",
+        "entrada": "Teremos a paz, custe o que custar.",
+        "ult_nome": "Aniquilação",
+        "ult": "Sofra, como eu sofri!"
+      },
+      "en": {
+        "nome": "Ramattra",
+        "entrada": "Teremos a paz, custe o que custar.",
+        "ult_nome": "Aniquilação",
+        "ult": "Sofra, como eu sofri!"
+      }
+    },
     "raridade": "comum",
     "img": "Ramattra_ow.png"
   },
   {
     "id": "ramattra_nemesis",
     "base": "ramattra",
-    "nome": "Ramattra Nêmesis",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Teremos a paz, custe o que custar.",
-    "ult_nome": "Aniquilação",
-    "ult": "Sofra, como eu sofri!",
+    "lang": {
+      "br": {
+        "nome": "Ramattra Nêmesis",
+        "entrada": "Teremos a paz, custe o que custar.",
+        "ult_nome": "Aniquilação",
+        "ult": "Sofra, como eu sofri!"
+      },
+      "en": {
+        "nome": "Ramattra Nêmesis",
+        "entrada": "Teremos a paz, custe o que custar.",
+        "ult_nome": "Aniquilação",
+        "ult": "Sofra, como eu sofri!"
+      }
+    },
     "raridade": "comum",
     "img": "Ramattra_ow_nemesis.png",
     "icon_ref": "alter.png"
@@ -1765,24 +3165,44 @@
   {
     "id": "ramattra_poseidon",
     "base": "ramattra",
-    "nome": "Poseidon",
     "classe": "Tanque",
     "subclasse": "Campeão",
-    "entrada": "O Olímpo será meu, custe o que custar.",
-    "ult_nome": "Aniquilação",
-    "ult": "Submerja, como eu submergi!",
+    "lang": {
+      "br": {
+        "nome": "Poseidon",
+        "entrada": "O Olímpo será meu, custe o que custar.",
+        "ult_nome": "Aniquilação",
+        "ult": "Submerja, como eu submergi!"
+      },
+      "en": {
+        "nome": "Poseidon",
+        "entrada": "O Olímpo será meu, custe o que custar.",
+        "ult_nome": "Aniquilação",
+        "ult": "Submerja, como eu submergi!"
+      }
+    },
     "raridade": "lendario",
     "img": "Ramattra_ow_poseidon.png"
   },
   {
     "id": "ramattra_dourado",
     "base": "ramattra",
-    "nome": "Ramattra Dourado",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Teremos a paz, custe o que custar.",
-    "ult_nome": "Aniquilação",
-    "ult": "Sofra, como eu sofri!",
+    "lang": {
+      "br": {
+        "nome": "Ramattra Dourado",
+        "entrada": "Teremos a paz, custe o que custar.",
+        "ult_nome": "Aniquilação",
+        "ult": "Sofra, como eu sofri!"
+      },
+      "en": {
+        "nome": "Ramattra Dourado",
+        "entrada": "Teremos a paz, custe o que custar.",
+        "ult_nome": "Aniquilação",
+        "ult": "Sofra, como eu sofri!"
+      }
+    },
     "raridade": "lendario",
     "img": "Ramattra_ow_gold.png",
     "golden_weapon": true,
@@ -1791,12 +3211,22 @@
   {
     "id": "ramattra_fool",
     "base": "ramattra",
-    "nome": "Ramattra :[",
     "classe": "Tanque",
     "subclasse": "Fool",
-    "entrada": "A agonia tem sabor de uva.",
-    "ult_nome": "Aniquilação",
-    "ult": "Você sofrerá como eu, Ramattra, sofri. Seu tormento viverá mais que as estrelas, e quando o universo se tornar pó, lá estará você, ainda sofrendo, como EU sofri!",
+    "lang": {
+      "br": {
+        "nome": "Ramattra :[",
+        "entrada": "A agonia tem sabor de uva.",
+        "ult_nome": "Aniquilação",
+        "ult": "Você sofrerá como eu, Ramattra, sofri. Seu tormento viverá mais que as estrelas, e quando o universo se tornar pó, lá estará você, ainda sofrendo, como EU sofri!"
+      },
+      "en": {
+        "nome": "Ramattra :[",
+        "entrada": "A agonia tem sabor de uva.",
+        "ult_nome": "Aniquilação",
+        "ult": "Você sofrerá como eu, Ramattra, sofri. Seu tormento viverá mais que as estrelas, e quando o universo se tornar pó, lá estará você, ainda sofrendo, como EU sofri!"
+      }
+    },
     "raridade": "epico",
     "img": "Ramattra_ow_fool.png",
     "evento": "april_fools"
@@ -1804,36 +3234,66 @@
   {
     "id": "reaper_comum",
     "base": "reaper",
-    "nome": "Reaper",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "Você não pode escapar da morte.",
-    "ult_nome": "Desabrochar da morte",
-    "ult": "Morram, morram, morram!",
+    "lang": {
+      "br": {
+        "nome": "Reaper",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      },
+      "en": {
+        "nome": "Reaper",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      }
+    },
     "raridade": "comum",
     "img": "Reaper_ow.png"
   },
   {
     "id": "reaper_abobora",
     "base": "reaper",
-    "nome": "Abóbora",
     "classe": "Dano",
     "subclasse": "Perverso",
-    "entrada": "Você não pode escapar da morte.",
-    "ult_nome": "Desabrochar da morte",
-    "ult": "O ceifador vem pela sua alma!",
+    "lang": {
+      "br": {
+        "nome": "Abóbora",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "O ceifador vem pela sua alma!"
+      },
+      "en": {
+        "nome": "Abóbora",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "O ceifador vem pela sua alma!"
+      }
+    },
     "raridade": "incomum",
     "img": "Reaper_ow_abobora.png"
   },
   {
     "id": "reaper_dourado",
     "base": "reaper",
-    "nome": "Reaper Dourado",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "Você não pode escapar da morte.",
-    "ult_nome": "Desabrochar da morte",
-    "ult": "Morram, morram, morram!",
+    "lang": {
+      "br": {
+        "nome": "Reaper Dourado",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      },
+      "en": {
+        "nome": "Reaper Dourado",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      }
+    },
     "raridade": "lendario",
     "img": "Reaper_ow_gold.png",
     "golden_weapon": true,
@@ -1842,12 +3302,22 @@
   {
     "id": "reaper_legado",
     "base": "reaper",
-    "nome": "Reaper: Legado",
     "classe": "Atacante",
     "subclasse": "Origem",
-    "entrada": "A morte caminha entre vocês!",
-    "ult_nome": "Desabrochar da morte",
-    "ult": "Morram, morram, morram!",
+    "lang": {
+      "br": {
+        "nome": "Reaper: Legado",
+        "entrada": "A morte caminha entre vocês!",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      },
+      "en": {
+        "nome": "Reaper: Legado",
+        "entrada": "A morte caminha entre vocês!",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      }
+    },
     "raridade": "legado",
     "img": "Reaper_ow_jade.png",
     "icon_ref": "jade.png"
@@ -1855,84 +3325,154 @@
   {
     "id": "anubis",
     "base": "reaper",
-    "nome": "Anúbis",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "Você deve aceitar a morte.",
-    "ult_nome": "Desabrochar da morte",
-    "ult": "Todos... irão... morrer!",
+    "lang": {
+      "br": {
+        "nome": "Anúbis",
+        "entrada": "Você deve aceitar a morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Todos... irão... morrer!"
+      },
+      "en": {
+        "nome": "Anúbis",
+        "entrada": "Você deve aceitar a morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Todos... irão... morrer!"
+      }
+    },
     "raridade": "mitico",
     "img": "Reaper_ow_myth.png"
   },
   {
     "id": "aco_letal",
     "base": "reaper",
-    "nome": "Reaper: Aço letal",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "Você não pode escapar da morte.",
-    "ult_nome": "Desabrochar da morte",
-    "ult": "Morram, morram, morram!",
+    "lang": {
+      "br": {
+        "nome": "Reaper: Aço letal",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      },
+      "en": {
+        "nome": "Reaper: Aço letal",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      }
+    },
     "raridade": "mitico",
     "img": "Reaper_ow_weapon.png"
   },
   {
     "id": "reinhardt_comum",
     "base": "reinhardt",
-    "nome": "Reinhardt",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Juntos, acabaremos com eles.",
-    "ult_nome": "Abalo terrestre",
-    "ult": "Sinta o peso do martelo!",
+    "lang": {
+      "br": {
+        "nome": "Reinhardt",
+        "entrada": "Juntos, acabaremos com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      },
+      "en": {
+        "nome": "Reinhardt",
+        "entrada": "Juntos, acabaremos com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      }
+    },
     "raridade": "comum",
     "img": "Reinhardt_ow.png"
   },
   {
     "id": "reinhardt_gridironhardt",
     "base": "reinhardt",
-    "nome": "Gridironhardt",
     "classe": "Tanque",
     "subclasse": "Campeão",
-    "entrada": "Juntos, acabaremos com eles.",
-    "ult_nome": "Abalo terrestre",
-    "ult": "Touchdown!",
+    "lang": {
+      "br": {
+        "nome": "Gridironhardt",
+        "entrada": "Juntos, acabaremos com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Touchdown!"
+      },
+      "en": {
+        "nome": "Gridironhardt",
+        "entrada": "Juntos, acabaremos com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Touchdown!"
+      }
+    },
     "raridade": "incomum",
     "img": "Reinhardt_ow_Gridironhardt.png"
   },
   {
     "id": "reinhardt_minotauro",
     "base": "reinhardt",
-    "nome": "Minotauro",
     "classe": "Tanque",
     "subclasse": "Monstro",
-    "entrada": "Juntos, pisotearemos todos eles.",
-    "ult_nome": "Abalo terrestre",
-    "ult": "Sinta o peso dos chifres!",
+    "lang": {
+      "br": {
+        "nome": "Minotauro",
+        "entrada": "Juntos, pisotearemos todos eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso dos chifres!"
+      },
+      "en": {
+        "nome": "Minotauro",
+        "entrada": "Juntos, pisotearemos todos eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso dos chifres!"
+      }
+    },
     "raridade": "epico",
     "img": "Reinhardt_ow_minotauro.png"
   },
   {
     "id": "fallen_knight",
     "base": "reinhardt",
-    "nome": "Cavaleiro Caído",
     "classe": "Tanque",
     "subclasse": "Mirror",
-    "entrada": "Juntos, derrubaremos eles.",
-    "ult_nome": "Abalo terrestre",
-    "ult": "Sinta o peso do martelo!",
+    "lang": {
+      "br": {
+        "nome": "Cavaleiro Caído",
+        "entrada": "Juntos, derrubaremos eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      },
+      "en": {
+        "nome": "Cavaleiro Caído",
+        "entrada": "Juntos, derrubaremos eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      }
+    },
     "raridade": "lendario",
     "img": "Reinhardt_ow_mirror.png"
   },
   {
     "id": "reinhardt_dourado",
     "base": "reinhardt",
-    "nome": "Reinhardt Dourado",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Juntos, acabaremos com eles.",
-    "ult_nome": "Abalo terrestre",
-    "ult": "Sinta o peso do martelo!",
+    "lang": {
+      "br": {
+        "nome": "Reinhardt Dourado",
+        "entrada": "Juntos, acabaremos com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      },
+      "en": {
+        "nome": "Reinhardt Dourado",
+        "entrada": "Juntos, acabaremos com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      }
+    },
     "raridade": "lendario",
     "img": "Reinhardt_ow_gold.png",
     "golden_weapon": true,
@@ -1941,12 +3481,22 @@
   {
     "id": "reinhardt_legado",
     "base": "reinhardt",
-    "nome": "Reinhardt: Legado",
     "classe": "Tanque",
     "subclasse": "Origem",
-    "entrada": "A justiça será feita!",
-    "ult_nome": "Abalo terrestre",
-    "ult": "Sinta o peso do martelo!",
+    "lang": {
+      "br": {
+        "nome": "Reinhardt: Legado",
+        "entrada": "A justiça será feita!",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      },
+      "en": {
+        "nome": "Reinhardt: Legado",
+        "entrada": "A justiça será feita!",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      }
+    },
     "raridade": "legado",
     "img": "Reinhardt_ow_jade.png",
     "icon_ref": "jade.png"
@@ -1954,60 +3504,110 @@
   {
     "id": "thor",
     "base": "reinhardt",
-    "nome": "Thor",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Os relampagos vão acabar com eles.",
-    "ult_nome": "Abalo terrestre",
-    "ult": "Sinta o peso de Mjönir!",
+    "lang": {
+      "br": {
+        "nome": "Thor",
+        "entrada": "Os relampagos vão acabar com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso de Mjönir!"
+      },
+      "en": {
+        "nome": "Thor",
+        "entrada": "Os relampagos vão acabar com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso de Mjönir!"
+      }
+    },
     "raridade": "mitico",
     "img": "Reinhardt_ow_myth.png"
   },
   {
     "id": "demonio_aprisionado",
     "base": "reinhardt",
-    "nome": "Reinhardt: Demônio Aprisionado",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Juntos, acabaremos com eles.",
-    "ult_nome": "Abalo terrestre",
-    "ult": "Sinta o peso do martelo!",
+    "lang": {
+      "br": {
+        "nome": "Reinhardt: Demônio Aprisionado",
+        "entrada": "Juntos, acabaremos com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      },
+      "en": {
+        "nome": "Reinhardt: Demônio Aprisionado",
+        "entrada": "Juntos, acabaremos com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      }
+    },
     "raridade": "mitico",
     "img": "Reinhardt_ow_weapon.png"
   },
   {
     "id": "roadhog_comum",
     "base": "roadhog",
-    "nome": "Roadhog",
     "classe": "Tanque",
     "subclasse": "Combatente",
-    "entrada": "O apocalipse não acabou.",
-    "ult_nome": "Cair matando",
-    "ult": "(Risos)!",
+    "lang": {
+      "br": {
+        "nome": "Roadhog",
+        "entrada": "O apocalipse não acabou.",
+        "ult_nome": "Cair matando",
+        "ult": "(Risos)!"
+      },
+      "en": {
+        "nome": "Roadhog",
+        "entrada": "O apocalipse não acabou.",
+        "ult_nome": "Cair matando",
+        "ult": "(Risos)!"
+      }
+    },
     "raridade": "comum",
     "img": "Roadhog_ow.png"
   },
   {
     "id": "roadhog_ciclope",
     "base": "roadhog",
-    "nome": "Ciclope",
     "classe": "Tanque",
     "subclasse": "Monstro",
-    "entrada": "A odisseia não acabou.",
-    "ult_nome": "Cair matando",
-    "ult": "(Risos)!",
+    "lang": {
+      "br": {
+        "nome": "Ciclope",
+        "entrada": "A odisseia não acabou.",
+        "ult_nome": "Cair matando",
+        "ult": "(Risos)!"
+      },
+      "en": {
+        "nome": "Ciclope",
+        "entrada": "A odisseia não acabou.",
+        "ult_nome": "Cair matando",
+        "ult": "(Risos)!"
+      }
+    },
     "raridade": "epico",
     "img": "Roadhog_ow_ciclope.png"
   },
   {
     "id": "roadhog_dourado",
     "base": "roadhog",
-    "nome": "Roadhog Dourado",
     "classe": "Tanque",
     "subclasse": "Combatente",
-    "entrada": "O apocalipse não acabou.",
-    "ult_nome": "Cair matando",
-    "ult": "(Risos)!",
+    "lang": {
+      "br": {
+        "nome": "Roadhog Dourado",
+        "entrada": "O apocalipse não acabou.",
+        "ult_nome": "Cair matando",
+        "ult": "(Risos)!"
+      },
+      "en": {
+        "nome": "Roadhog Dourado",
+        "entrada": "O apocalipse não acabou.",
+        "ult_nome": "Cair matando",
+        "ult": "(Risos)!"
+      }
+    },
     "raridade": "lendario",
     "img": "Roadhog_ow_gold.png",
     "golden_weapon": true,
@@ -2016,12 +3616,22 @@
   {
     "id": "roadhog_legado",
     "base": "roadhog",
-    "nome": "Roadhog: Legado",
     "classe": "Tanque",
     "subclasse": "Origem",
-    "entrada": "Eu sou o apocalipse de um homen só!",
-    "ult_nome": "Cair matando",
-    "ult": "(Risos maníacos)!",
+    "lang": {
+      "br": {
+        "nome": "Roadhog: Legado",
+        "entrada": "Eu sou o apocalipse de um homen só!",
+        "ult_nome": "Cair matando",
+        "ult": "(Risos maníacos)!"
+      },
+      "en": {
+        "nome": "Roadhog: Legado",
+        "entrada": "Eu sou o apocalipse de um homen só!",
+        "ult_nome": "Cair matando",
+        "ult": "(Risos maníacos)!"
+      }
+    },
     "raridade": "legado",
     "img": "Roadhog_ow_jade.png",
     "icon_ref": "jade.png"
@@ -2029,60 +3639,110 @@
   {
     "id": "shion_comum",
     "base": "shion",
-    "nome": "Shion",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "A dor obedece a mim.",
-    "ult_nome": "Sequência Satsuriku",
-    "ult": "Vejam o que eu me tornei!",
+    "lang": {
+      "br": {
+        "nome": "Shion",
+        "entrada": "A dor obedece a mim.",
+        "ult_nome": "Sequência Satsuriku",
+        "ult": "Vejam o que eu me tornei!"
+      },
+      "en": {
+        "nome": "Shion",
+        "entrada": "A dor obedece a mim.",
+        "ult_nome": "Sequência Satsuriku",
+        "ult": "Vejam o que eu me tornei!"
+      }
+    },
     "raridade": "comum",
     "img": "Shion_ow.png"
   },
   {
     "id": "shion_dourado",
     "base": "shion",
-    "nome": "Shion Dourada",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "A dor obedece a mim.",
-    "ult_nome": "Sequência Satsuriku",
-    "ult": "Vejam o que eu me tornei!",
+    "lang": {
+      "br": {
+        "nome": "Shion Dourada",
+        "entrada": "A dor obedece a mim.",
+        "ult_nome": "Sequência Satsuriku",
+        "ult": "Vejam o que eu me tornei!"
+      },
+      "en": {
+        "nome": "Shion Dourada",
+        "entrada": "A dor obedece a mim.",
+        "ult_nome": "Sequência Satsuriku",
+        "ult": "Vejam o que eu me tornei!"
+      }
+    },
     "raridade": "lendario",
     "img": "Shion_ow.png"
   },
   {
     "id": "sigma_comum",
     "base": "sigma",
-    "nome": "Sigma",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
-    "ult_nome": "Fluxo gravitacional",
-    "ult": "O universo canta para mim!",
+    "lang": {
+      "br": {
+        "nome": "Sigma",
+        "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
+        "ult_nome": "Fluxo gravitacional",
+        "ult": "O universo canta para mim!"
+      },
+      "en": {
+        "nome": "Sigma",
+        "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
+        "ult_nome": "Fluxo gravitacional",
+        "ult": "O universo canta para mim!"
+      }
+    },
     "raridade": "comum",
     "img": "Sigma_ow.png"
   },
   {
     "id": "sigma_scuba",
     "base": "sigma",
-    "nome": "Sigma Scuba",
     "classe": "Tanque",
     "subclasse": "Férias",
-    "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
-    "ult_nome": "Fluxo gravitacional",
-    "ult": "O universo canta para mim!",
+    "lang": {
+      "br": {
+        "nome": "Sigma Scuba",
+        "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
+        "ult_nome": "Fluxo gravitacional",
+        "ult": "O universo canta para mim!"
+      },
+      "en": {
+        "nome": "Sigma Scuba",
+        "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
+        "ult_nome": "Fluxo gravitacional",
+        "ult": "O universo canta para mim!"
+      }
+    },
     "raridade": "incomum",
     "img": "Sigma_ow_scuba.png"
   },
   {
     "id": "sigma_dourado",
     "base": "sigma",
-    "nome": "Sigma Dourado",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
-    "ult_nome": "Fluxo gravitacional",
-    "ult": "O universo canta para mim!",
+    "lang": {
+      "br": {
+        "nome": "Sigma Dourado",
+        "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
+        "ult_nome": "Fluxo gravitacional",
+        "ult": "O universo canta para mim!"
+      },
+      "en": {
+        "nome": "Sigma Dourado",
+        "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
+        "ult_nome": "Fluxo gravitacional",
+        "ult": "O universo canta para mim!"
+      }
+    },
     "raridade": "lendario",
     "img": "Sigma_ow_gold.png",
     "golden_weapon": true,
@@ -2091,36 +3751,66 @@
   {
     "id": "imperador_galatico",
     "base": "sigma",
-    "nome": "Imperador Galático",
     "classe": "Tanque",
     "subclasse": "Robusto",
-    "entrada": "Porquê questionar se você pode apenas obedecer?",
-    "ult_nome": "Fluxo gravitacional",
-    "ult": "O universo se curva à mim!",
+    "lang": {
+      "br": {
+        "nome": "Imperador Galático",
+        "entrada": "Porquê questionar se você pode apenas obedecer?",
+        "ult_nome": "Fluxo gravitacional",
+        "ult": "O universo se curva à mim!"
+      },
+      "en": {
+        "nome": "Imperador Galático",
+        "entrada": "Porquê questionar se você pode apenas obedecer?",
+        "ult_nome": "Fluxo gravitacional",
+        "ult": "O universo se curva à mim!"
+      }
+    },
     "raridade": "mitico",
     "img": "Sigma_ow_myth.png"
   },
   {
     "id": "sierra_comum",
     "base": "sierra",
-    "nome": "Sierra",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "Pra cima sempre, nunca pra baixo.",
-    "ult_nome": "Vanguarda explosiva",
-    "ult": "De olho no céu!",
+    "lang": {
+      "br": {
+        "nome": "Sierra",
+        "entrada": "Pra cima sempre, nunca pra baixo.",
+        "ult_nome": "Vanguarda explosiva",
+        "ult": "De olho no céu!"
+      },
+      "en": {
+        "nome": "Sierra",
+        "entrada": "Pra cima sempre, nunca pra baixo.",
+        "ult_nome": "Vanguarda explosiva",
+        "ult": "De olho no céu!"
+      }
+    },
     "raridade": "comum",
     "img": "Sierra_ow.png"
   },
   {
     "id": "sierra_dourado",
     "base": "sierra",
-    "nome": "Sierra Dourada",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "Pra cima sempre, nunca pra baixo.",
-    "ult_nome": "Vanguarda explosiva",
-    "ult": "De olho no céu!",
+    "lang": {
+      "br": {
+        "nome": "Sierra Dourada",
+        "entrada": "Pra cima sempre, nunca pra baixo.",
+        "ult_nome": "Vanguarda explosiva",
+        "ult": "De olho no céu!"
+      },
+      "en": {
+        "nome": "Sierra Dourada",
+        "entrada": "Pra cima sempre, nunca pra baixo.",
+        "ult_nome": "Vanguarda explosiva",
+        "ult": "De olho no céu!"
+      }
+    },
     "raridade": "lendario",
     "img": "Sierra_ow_gold.png",
     "golden_weapon": true,
@@ -2129,48 +3819,88 @@
   {
     "id": "sierra_miaumiau",
     "base": "sierra",
-    "nome": "Sierra Miau-miau",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "Pra cima sempre, nunca pra baixo.",
-    "ult_nome": "Vanguarda explosiva",
-    "ult": "De olho no céu!",
+    "lang": {
+      "br": {
+        "nome": "Sierra Miau-miau",
+        "entrada": "Pra cima sempre, nunca pra baixo.",
+        "ult_nome": "Vanguarda explosiva",
+        "ult": "De olho no céu!"
+      },
+      "en": {
+        "nome": "Sierra Miau-miau",
+        "entrada": "Pra cima sempre, nunca pra baixo.",
+        "ult_nome": "Vanguarda explosiva",
+        "ult": "De olho no céu!"
+      }
+    },
     "raridade": "ultra",
     "img": "Sierra_ow_miaumiau.png"
   },
   {
     "id": "sojourn_comum",
     "base": "sojourn",
-    "nome": "Sojourn",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Estamos nessa juntos. Todos nós.",
-    "ult_nome": "Sobrecarga",
-    "ult": "Isso termina agora!",
+    "lang": {
+      "br": {
+        "nome": "Sojourn",
+        "entrada": "Estamos nessa juntos. Todos nós.",
+        "ult_nome": "Sobrecarga",
+        "ult": "Isso termina agora!"
+      },
+      "en": {
+        "nome": "Sojourn",
+        "entrada": "Estamos nessa juntos. Todos nós.",
+        "ult_nome": "Sobrecarga",
+        "ult": "Isso termina agora!"
+      }
+    },
     "raridade": "comum",
     "img": "Sojourn_ow.png"
   },
   {
     "id": "sojourn_almirante_infinito",
     "base": "sojourn",
-    "nome": "Almirante infinito",
     "classe": "Dano",
     "subclasse": "Guerreiro",
-    "entrada": "Estamos nessa juntos. Todos nós.",
-    "ult_nome": "Sobrecarga",
-    "ult": "Isso termina agora!",
+    "lang": {
+      "br": {
+        "nome": "Almirante infinito",
+        "entrada": "Estamos nessa juntos. Todos nós.",
+        "ult_nome": "Sobrecarga",
+        "ult": "Isso termina agora!"
+      },
+      "en": {
+        "nome": "Almirante infinito",
+        "entrada": "Estamos nessa juntos. Todos nós.",
+        "ult_nome": "Sobrecarga",
+        "ult": "Isso termina agora!"
+      }
+    },
     "raridade": "incomum",
     "img": "Sojourn_ow_almirante_infinito.png"
   },
   {
     "id": "sojourn_dourado",
     "base": "sojourn",
-    "nome": "Sojourn Dourada",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Estamos nessa juntos. Todos nós.",
-    "ult_nome": "Sobrecarga",
-    "ult": "Isso termina agora!",
+    "lang": {
+      "br": {
+        "nome": "Sojourn Dourada",
+        "entrada": "Estamos nessa juntos. Todos nós.",
+        "ult_nome": "Sobrecarga",
+        "ult": "Isso termina agora!"
+      },
+      "en": {
+        "nome": "Sojourn Dourada",
+        "entrada": "Estamos nessa juntos. Todos nós.",
+        "ult_nome": "Sobrecarga",
+        "ult": "Isso termina agora!"
+      }
+    },
     "raridade": "lendario",
     "img": "Sojourn_ow_gold.png",
     "golden_weapon": true,
@@ -2179,60 +3909,110 @@
   {
     "id": "sentinela_ultra-violeta",
     "base": "sojourn",
-    "nome": "Sentinela Ultra-violeta",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Todos nós brilhamos. Juntos.",
-    "ult_nome": "Sobrecarga",
-    "ult": "A esperança brilha agora!",
+    "lang": {
+      "br": {
+        "nome": "Sentinela Ultra-violeta",
+        "entrada": "Todos nós brilhamos. Juntos.",
+        "ult_nome": "Sobrecarga",
+        "ult": "A esperança brilha agora!"
+      },
+      "en": {
+        "nome": "Sentinela Ultra-violeta",
+        "entrada": "Todos nós brilhamos. Juntos.",
+        "ult_nome": "Sobrecarga",
+        "ult": "A esperança brilha agora!"
+      }
+    },
     "raridade": "mitico",
     "img": "Sojourn_ow_myth.png"
   },
   {
     "id": "soldado_76_comum",
     "base": "soldado_76",
-    "nome": "Soldado: 76",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Todo soldado precisa de uma causa.",
-    "ult_nome": "Visor tático",
-    "ult": "Você está na minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Soldado: 76",
+        "entrada": "Todo soldado precisa de uma causa.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      },
+      "en": {
+        "nome": "Soldado: 76",
+        "entrada": "Todo soldado precisa de uma causa.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      }
+    },
     "raridade": "comum",
     "img": "Soldier_76_ow.png"
   },
   {
     "id": "soldado_76_churrasqueiro",
     "base": "soldado_76",
-    "nome": "Churrasqueiro: 76",
     "classe": "Dano",
     "subclasse": "Férias",
-    "entrada": "Todo soldado precisa de uma causa.",
-    "ult_nome": "Óculos de sol",
-    "ult": "Você está na minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Churrasqueiro: 76",
+        "entrada": "Todo soldado precisa de uma causa.",
+        "ult_nome": "Óculos de sol",
+        "ult": "Você está na minha mira!"
+      },
+      "en": {
+        "nome": "Churrasqueiro: 76",
+        "entrada": "Todo soldado precisa de uma causa.",
+        "ult_nome": "Óculos de sol",
+        "ult": "Você está na minha mira!"
+      }
+    },
     "raridade": "incomum",
     "img": "Soldier_76_ow_grillmaster.png"
   },
   {
     "id": "soldado_76_guarda_infinito",
     "base": "soldado_76",
-    "nome": "Guarda Infinito: 76",
     "classe": "Dano",
     "subclasse": "Guerreiro",
-    "entrada": "Todo império precisa de um cão de guarda.",
-    "ult_nome": "Visor tático",
-    "ult": "Você está na minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Guarda Infinito: 76",
+        "entrada": "Todo império precisa de um cão de guarda.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      },
+      "en": {
+        "nome": "Guarda Infinito: 76",
+        "entrada": "Todo império precisa de um cão de guarda.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      }
+    },
     "raridade": "epico",
     "img": "Soldier_76_ow_guarda_infinito.png"
   },
   {
     "id": "soldado_76_dourado",
     "base": "soldado_76",
-    "nome": "Soldado: 76 Dourado",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Todo soldado precisa de uma causa.",
-    "ult_nome": "Visor tático",
-    "ult": "Você está na minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Soldado: 76 Dourado",
+        "entrada": "Todo soldado precisa de uma causa.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      },
+      "en": {
+        "nome": "Soldado: 76 Dourado",
+        "entrada": "Todo soldado precisa de uma causa.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      }
+    },
     "raridade": "lendario",
     "img": "Soldier_76_ow_gold.png",
     "golden_weapon": true,
@@ -2241,12 +4021,22 @@
   {
     "id": "soldado_76_legado",
     "base": "soldado_76",
-    "nome": "Soldado: Legado 76",
     "classe": "Atacante",
     "subclasse": "Origem",
-    "entrada": "Somos todos soldados agora!",
-    "ult_nome": "Visor tático",
-    "ult": "Você está na minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Soldado: Legado 76",
+        "entrada": "Somos todos soldados agora!",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      },
+      "en": {
+        "nome": "Soldado: Legado 76",
+        "entrada": "Somos todos soldados agora!",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      }
+    },
     "raridade": "legado",
     "img": "Soldier_76_ow_jade.png",
     "icon_ref": "jade.png"
@@ -2254,60 +4044,110 @@
   {
     "id": "voltagem_maxima",
     "base": "soldado_76",
-    "nome": "Voltagem Máxima",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Somos todos soldados elétricos agora.",
-    "ult_nome": "Visor tático",
-    "ult": "Você está na minha sobrecarga!",
+    "lang": {
+      "br": {
+        "nome": "Voltagem Máxima",
+        "entrada": "Somos todos soldados elétricos agora.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha sobrecarga!"
+      },
+      "en": {
+        "nome": "Voltagem Máxima",
+        "entrada": "Somos todos soldados elétricos agora.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha sobrecarga!"
+      }
+    },
     "raridade": "mitico",
     "img": "Soldier_76_ow_myth.png"
   },
   {
     "id": "libertacao",
     "base": "soldado_76",
-    "nome": "Soldado: 76 Libertação",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Todo soldado precisa de uma causa.",
-    "ult_nome": "Visor tático",
-    "ult": "Você está na minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Soldado: 76 Libertação",
+        "entrada": "Todo soldado precisa de uma causa.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      },
+      "en": {
+        "nome": "Soldado: 76 Libertação",
+        "entrada": "Todo soldado precisa de uma causa.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      }
+    },
     "raridade": "mitico",
     "img": "Soldier_76_ow_weapon.png"
   },
   {
     "id": "sombra_comum",
     "base": "sombra",
-    "nome": "Sombra",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "No meu mundo, não existem segredos.",
-    "ult_nome": "P.E.M.",
-    "ult": "¡Apagando las luces!",
+    "lang": {
+      "br": {
+        "nome": "Sombra",
+        "entrada": "No meu mundo, não existem segredos.",
+        "ult_nome": "P.E.M.",
+        "ult": "¡Apagando las luces!"
+      },
+      "en": {
+        "nome": "Sombra",
+        "entrada": "No meu mundo, não existem segredos.",
+        "ult_nome": "P.E.M.",
+        "ult": "¡Apagando las luces!"
+      }
+    },
     "raridade": "comum",
     "img": "Sombra_ow.png"
   },
   {
     "id": "sombra_cacadora_demonios",
     "base": "sombra",
-    "nome": "Caçadora de Demônios",
     "classe": "Dano",
     "subclasse": "Caçador",
-    "entrada": "No meu mundo, não existem segredos.",
-    "ult_nome": "P.E.M.",
-    "ult": "¡La oscuridad te espera!",
+    "lang": {
+      "br": {
+        "nome": "Caçadora de Demônios",
+        "entrada": "No meu mundo, não existem segredos.",
+        "ult_nome": "P.E.M.",
+        "ult": "¡La oscuridad te espera!"
+      },
+      "en": {
+        "nome": "Caçadora de Demônios",
+        "entrada": "No meu mundo, não existem segredos.",
+        "ult_nome": "P.E.M.",
+        "ult": "¡La oscuridad te espera!"
+      }
+    },
     "raridade": "incomum",
     "img": "Sombra_ow_cacadora.png"
   },
   {
     "id": "sombra_dourado",
     "base": "sombra",
-    "nome": "Sombra Dourada",
     "classe": "Dano",
     "subclasse": "Reconhecimento",
-    "entrada": "No meu mundo, não existem segredos.",
-    "ult_nome": "P.E.M.",
-    "ult": "¡Apagando las luces!",
+    "lang": {
+      "br": {
+        "nome": "Sombra Dourada",
+        "entrada": "No meu mundo, não existem segredos.",
+        "ult_nome": "P.E.M.",
+        "ult": "¡Apagando las luces!"
+      },
+      "en": {
+        "nome": "Sombra Dourada",
+        "entrada": "No meu mundo, não existem segredos.",
+        "ult_nome": "P.E.M.",
+        "ult": "¡Apagando las luces!"
+      }
+    },
     "raridade": "lendario",
     "img": "Sombra_ow_gold.png",
     "golden_weapon": true,
@@ -2316,24 +4156,44 @@
   {
     "id": "symmetra_comum",
     "base": "symmetra",
-    "nome": "Symmetra",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Da imperfeição, construiremos um novo mundo.",
-    "ult_nome": "Barreira de fótons",
-    "ult": "Essa é a realidade absoluta!",
+    "lang": {
+      "br": {
+        "nome": "Symmetra",
+        "entrada": "Da imperfeição, construiremos um novo mundo.",
+        "ult_nome": "Barreira de fótons",
+        "ult": "Essa é a realidade absoluta!"
+      },
+      "en": {
+        "nome": "Symmetra",
+        "entrada": "Da imperfeição, construiremos um novo mundo.",
+        "ult_nome": "Barreira de fótons",
+        "ult": "Essa é a realidade absoluta!"
+      }
+    },
     "raridade": "comum",
     "img": "Symmetra_ow.png"
   },
   {
     "id": "symmetra_dourado",
     "base": "symmetra",
-    "nome": "Symmetra Dourada",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Da imperfeição, construiremos um novo mundo.",
-    "ult_nome": "Barreira de fótons",
-    "ult": "Essa é a realidade absoluta!",
+    "lang": {
+      "br": {
+        "nome": "Symmetra Dourada",
+        "entrada": "Da imperfeição, construiremos um novo mundo.",
+        "ult_nome": "Barreira de fótons",
+        "ult": "Essa é a realidade absoluta!"
+      },
+      "en": {
+        "nome": "Symmetra Dourada",
+        "entrada": "Da imperfeição, construiremos um novo mundo.",
+        "ult_nome": "Barreira de fótons",
+        "ult": "Essa é a realidade absoluta!"
+      }
+    },
     "raridade": "lendario",
     "img": "Symmetra_ow_gold.png",
     "golden_weapon": true,
@@ -2342,12 +4202,22 @@
   {
     "id": "symmetra_legado",
     "base": "symmetra",
-    "nome": "Symmetra: Legado",
     "classe": "Suporte",
     "subclasse": "Origem",
-    "entrada": "O verdadeiro inimigo da humanidade, é a desordem!",
-    "ult_nome": "Teleportador",
-    "ult": "Teletransportador online, eu abri caminho!",
+    "lang": {
+      "br": {
+        "nome": "Symmetra: Legado",
+        "entrada": "O verdadeiro inimigo da humanidade, é a desordem!",
+        "ult_nome": "Teleportador",
+        "ult": "Teletransportador online, eu abri caminho!"
+      },
+      "en": {
+        "nome": "Symmetra: Legado",
+        "entrada": "O verdadeiro inimigo da humanidade, é a desordem!",
+        "ult_nome": "Teleportador",
+        "ult": "Teletransportador online, eu abri caminho!"
+      }
+    },
     "raridade": "legado",
     "img": "Symmetra_ow_jade.png",
     "icon_ref": "jade.png"
@@ -2355,12 +4225,22 @@
   {
     "id": "symmetra_classic",
     "base": "symmetra",
-    "nome": "Symmetra Clássica",
     "classe": "Suporte",
     "subclasse": "Classic",
-    "entrada": "O verdadeiro inimigo da humanidade, é a desordem.",
-    "ult_nome": "Teleportador",
-    "ult": "Teletransportador online, eu abri caminho!",
+    "lang": {
+      "br": {
+        "nome": "Symmetra Clássica",
+        "entrada": "O verdadeiro inimigo da humanidade, é a desordem.",
+        "ult_nome": "Teleportador",
+        "ult": "Teletransportador online, eu abri caminho!"
+      },
+      "en": {
+        "nome": "Symmetra Clássica",
+        "entrada": "O verdadeiro inimigo da humanidade, é a desordem.",
+        "ult_nome": "Teleportador",
+        "ult": "Teletransportador online, eu abri caminho!"
+      }
+    },
     "raridade": "epico",
     "img": "Symmetra_ow.png",
     "foil": true,
@@ -2369,12 +4249,22 @@
   {
     "id": "symmetra_fool",
     "base": "symmetra",
-    "nome": "SymmetrartemmyS",
     "classe": "Dano",
     "subclasse": "Fool",
-    "entrada": "Melhor que RGB!",
-    "ult_nome": "Barreira de fótons",
-    "ult": "Uma barreira de gratiluz!",
+    "lang": {
+      "br": {
+        "nome": "SymmetrartemmyS",
+        "entrada": "Melhor que RGB!",
+        "ult_nome": "Barreira de fótons",
+        "ult": "Uma barreira de gratiluz!"
+      },
+      "en": {
+        "nome": "SymmetrartemmyS",
+        "entrada": "Melhor que RGB!",
+        "ult_nome": "Barreira de fótons",
+        "ult": "Uma barreira de gratiluz!"
+      }
+    },
     "raridade": "incomum",
     "img": "Symmetra_ow_fool.png",
     "evento": "april_fools"
@@ -2382,36 +4272,66 @@
   {
     "id": "torbjorn_comum",
     "base": "torbjorn",
-    "nome": "Torbjörn",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Ferramenta na mão. Cabeça a todo vapor.",
-    "ult_nome": "Núcleo fundido",
-    "ult": "Núcleo fundido!",
+    "lang": {
+      "br": {
+        "nome": "Torbjörn",
+        "entrada": "Ferramenta na mão. Cabeça a todo vapor.",
+        "ult_nome": "Núcleo fundido",
+        "ult": "Núcleo fundido!"
+      },
+      "en": {
+        "nome": "Torbjörn",
+        "entrada": "Ferramenta na mão. Cabeça a todo vapor.",
+        "ult_nome": "Núcleo fundido",
+        "ult": "Núcleo fundido!"
+      }
+    },
     "raridade": "comum",
     "img": "Torbjorn_ow.png"
   },
   {
     "id": "torbjorn_engenheiro_espacial",
     "base": "torbjorn",
-    "nome": "Engenheiro Espacial",
     "classe": "Dano",
     "subclasse": "Cósmico",
-    "entrada": "Took wun huk. Brees'tin gree!",
-    "ult_nome": "Núcleo fundido",
-    "ult": "Núcleo fundido!",
+    "lang": {
+      "br": {
+        "nome": "Engenheiro Espacial",
+        "entrada": "Took wun huk. Brees'tin gree!",
+        "ult_nome": "Núcleo fundido",
+        "ult": "Núcleo fundido!"
+      },
+      "en": {
+        "nome": "Engenheiro Espacial",
+        "entrada": "Took wun huk. Brees'tin gree!",
+        "ult_nome": "Núcleo fundido",
+        "ult": "Núcleo fundido!"
+      }
+    },
     "raridade": "epico",
     "img": "Torbjorn_ow_espacial.png"
   },
   {
     "id": "torbjorn_dourado",
     "base": "torbjorn",
-    "nome": "Torbjörn Dourado",
     "classe": "Dano",
     "subclasse": "Especialista",
-    "entrada": "Ferramenta na mão. Cabeça a todo vapor.",
-    "ult_nome": "Núcleo fundido",
-    "ult": "Núcleo fundido!",
+    "lang": {
+      "br": {
+        "nome": "Torbjörn Dourado",
+        "entrada": "Ferramenta na mão. Cabeça a todo vapor.",
+        "ult_nome": "Núcleo fundido",
+        "ult": "Núcleo fundido!"
+      },
+      "en": {
+        "nome": "Torbjörn Dourado",
+        "entrada": "Ferramenta na mão. Cabeça a todo vapor.",
+        "ult_nome": "Núcleo fundido",
+        "ult": "Núcleo fundido!"
+      }
+    },
     "raridade": "lendario",
     "img": "Torbjorn_ow_gold.png",
     "golden_weapon": true,
@@ -2420,12 +4340,22 @@
   {
     "id": "torbjorn_legado",
     "base": "torbjorn",
-    "nome": "Torbjörn: Legado",
     "classe": "Defensor",
     "subclasse": "Origem",
-    "entrada": "Construir, para destruir!",
-    "ult_nome": "Sobrecarga",
-    "ult": "Núcleo fundido!",
+    "lang": {
+      "br": {
+        "nome": "Torbjörn: Legado",
+        "entrada": "Construir, para destruir!",
+        "ult_nome": "Sobrecarga",
+        "ult": "Núcleo fundido!"
+      },
+      "en": {
+        "nome": "Torbjörn: Legado",
+        "entrada": "Construir, para destruir!",
+        "ult_nome": "Sobrecarga",
+        "ult": "Núcleo fundido!"
+      }
+    },
     "raridade": "legado",
     "img": "Torbjorn_ow_jade.png",
     "icon_ref": "jade.png"
@@ -2433,12 +4363,22 @@
   {
     "id": "torbjorn_classic",
     "base": "torbjorn",
-    "nome": "Torbjörn Clássico",
     "classe": "Dano",
     "subclasse": "Classic",
-    "entrada": "Construir, para destruir.",
-    "ult_nome": "Sobrecarga",
-    "ult": "Núcleo fundido!",
+    "lang": {
+      "br": {
+        "nome": "Torbjörn Clássico",
+        "entrada": "Construir, para destruir.",
+        "ult_nome": "Sobrecarga",
+        "ult": "Núcleo fundido!"
+      },
+      "en": {
+        "nome": "Torbjörn Clássico",
+        "entrada": "Construir, para destruir.",
+        "ult_nome": "Sobrecarga",
+        "ult": "Núcleo fundido!"
+      }
+    },
     "raridade": "epico",
     "img": "Torbjorn_ow.png",
     "foil": true,
@@ -2447,36 +4387,66 @@
   {
     "id": "tracer_comum",
     "base": "tracer",
-    "nome": "Tracer",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
-    "ult_nome": "Bomba eletromagnética",
-    "ult": "Pega essa!",
+    "lang": {
+      "br": {
+        "nome": "Tracer",
+        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Pega essa!"
+      },
+      "en": {
+        "nome": "Tracer",
+        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Pega essa!"
+      }
+    },
     "raridade": "comum",
     "img": "Tracer_ow.png"
   },
   {
     "id": "operadora_oxton",
     "base": "tracer",
-    "nome": "Operadora Oxton",
     "classe": "Dano",
     "subclasse": "Mirror",
-    "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
-    "ult_nome": "Bomba eletromagnética",
-    "ult": "Hahaha!",
+    "lang": {
+      "br": {
+        "nome": "Operadora Oxton",
+        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Hahaha!"
+      },
+      "en": {
+        "nome": "Operadora Oxton",
+        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Hahaha!"
+      }
+    },
     "raridade": "epico",
     "img": "Tracer_ow_mirror.png"
   },
   {
     "id": "tracer_decanio",
     "base": "tracer",
-    "nome": "Tracer Decênio",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
-    "ult_nome": "Bomba eletromagnética",
-    "ult": "Pega essa!",
+    "lang": {
+      "br": {
+        "nome": "Tracer Decênio",
+        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Pega essa!"
+      },
+      "en": {
+        "nome": "Tracer Decênio",
+        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Pega essa!"
+      }
+    },
     "raridade": "lendario",
     "img": "Tracer_ow_10_anos.png",
     "evento": "espacial10anos"
@@ -2484,12 +4454,22 @@
   {
     "id": "tracer_dourado",
     "base": "tracer",
-    "nome": "Tracer Dourada",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
-    "ult_nome": "Bomba eletromagnética",
-    "ult": "Uma lembrancinha!",
+    "lang": {
+      "br": {
+        "nome": "Tracer Dourada",
+        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Uma lembrancinha!"
+      },
+      "en": {
+        "nome": "Tracer Dourada",
+        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Uma lembrancinha!"
+      }
+    },
     "raridade": "lendario",
     "img": "Tracer_ow_gold.png",
     "golden_weapon": true,
@@ -2498,12 +4478,22 @@
   {
     "id": "tracer_legado",
     "base": "tracer",
-    "nome": "Tracer: Legado",
     "classe": "Atacante",
     "subclasse": "Origem",
-    "entrada": "Não se preocupem queridos, a cavalaria chegou!",
-    "ult_nome": "Bomba eletromagnética",
-    "ult": "Lá vai bomba!",
+    "lang": {
+      "br": {
+        "nome": "Tracer: Legado",
+        "entrada": "Não se preocupem queridos, a cavalaria chegou!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Lá vai bomba!"
+      },
+      "en": {
+        "nome": "Tracer: Legado",
+        "entrada": "Não se preocupem queridos, a cavalaria chegou!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Lá vai bomba!"
+      }
+    },
     "raridade": "legado",
     "img": "Tracer_ow_jade.png",
     "icon_ref": "jade.png"
@@ -2511,36 +4501,66 @@
   {
     "id": "aventureira",
     "base": "tracer",
-    "nome": "Aventureira",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "Vamos lá escudeiros! É hora de salvar o reino!",
-    "ult_nome": "Bomba eletromagnética",
-    "ult": "Trouxe para você!",
+    "lang": {
+      "br": {
+        "nome": "Aventureira",
+        "entrada": "Vamos lá escudeiros! É hora de salvar o reino!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Trouxe para você!"
+      },
+      "en": {
+        "nome": "Aventureira",
+        "entrada": "Vamos lá escudeiros! É hora de salvar o reino!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Trouxe para você!"
+      }
+    },
     "raridade": "mitico",
     "img": "Tracer_ow_myth.png"
   },
   {
     "id": "vendetta_comum",
     "base": "vendetta",
-    "nome": "Vendetta",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "O império sou eu.",
-    "ult_nome": "Lâmina retalhadora",
-    "ult": "Arriva la punizione!",
+    "lang": {
+      "br": {
+        "nome": "Vendetta",
+        "entrada": "O império sou eu.",
+        "ult_nome": "Lâmina retalhadora",
+        "ult": "Arriva la punizione!"
+      },
+      "en": {
+        "nome": "Vendetta",
+        "entrada": "O império sou eu.",
+        "ult_nome": "Lâmina retalhadora",
+        "ult": "Arriva la punizione!"
+      }
+    },
     "raridade": "comum",
     "img": "Vendetta_ow.png"
   },
   {
     "id": "vendetta_dourado",
     "base": "vendetta",
-    "nome": "Vendetta Dourada",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "O império sou eu.",
-    "ult_nome": "Lâmina retalhadora",
-    "ult": "Arriva la punizione!",
+    "lang": {
+      "br": {
+        "nome": "Vendetta Dourada",
+        "entrada": "O império sou eu.",
+        "ult_nome": "Lâmina retalhadora",
+        "ult": "Arriva la punizione!"
+      },
+      "en": {
+        "nome": "Vendetta Dourada",
+        "entrada": "O império sou eu.",
+        "ult_nome": "Lâmina retalhadora",
+        "ult": "Arriva la punizione!"
+      }
+    },
     "raridade": "lendario",
     "img": "Vendetta_ow_gold.png",
     "golden_weapon": true,
@@ -2549,24 +4569,44 @@
   {
     "id": "venture_comum",
     "base": "venture",
-    "nome": "Venture",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "Vamo fazer história!",
-    "ult_nome": "Shoque tectônico",
-    "ult": "Iniciando escavação!",
+    "lang": {
+      "br": {
+        "nome": "Venture",
+        "entrada": "Vamo fazer história!",
+        "ult_nome": "Shoque tectônico",
+        "ult": "Iniciando escavação!"
+      },
+      "en": {
+        "nome": "Venture",
+        "entrada": "Vamo fazer história!",
+        "ult_nome": "Shoque tectônico",
+        "ult": "Iniciando escavação!"
+      }
+    },
     "raridade": "comum",
     "img": "Venture_ow.png"
   },
   {
     "id": "venture_dourado",
     "base": "venture",
-    "nome": "Venture Dourado",
     "classe": "Dano",
     "subclasse": "Flanco",
-    "entrada": "Vamo fazer história!",
-    "ult_nome": "Shoque tectônico",
-    "ult": "Iniciando escavação!",
+    "lang": {
+      "br": {
+        "nome": "Venture Dourado",
+        "entrada": "Vamo fazer história!",
+        "ult_nome": "Shoque tectônico",
+        "ult": "Iniciando escavação!"
+      },
+      "en": {
+        "nome": "Venture Dourado",
+        "entrada": "Vamo fazer história!",
+        "ult_nome": "Shoque tectônico",
+        "ult": "Iniciando escavação!"
+      }
+    },
     "raridade": "lendario",
     "img": "Venture_ow_gold.png",
     "golden_weapon": true,
@@ -2575,72 +4615,132 @@
   {
     "id": "widowmaker_comum",
     "base": "widowmaker",
-    "nome": "Widowmaker",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Minha mira é devastadora.",
-    "ult_nome": "Visão infravermelha",
-    "ult": "Ninguém se esconde da minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Widowmaker",
+        "entrada": "Minha mira é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da minha mira!"
+      },
+      "en": {
+        "nome": "Widowmaker",
+        "entrada": "Minha mira é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da minha mira!"
+      }
+    },
     "raridade": "comum",
     "img": "Widowmaker_ow.png"
   },
   {
     "id": "widowmaker_cacadora",
     "base": "widowmaker",
-    "nome": "Caçadora",
     "classe": "Dano",
     "subclasse": "Caçador",
-    "entrada": "Minha mira é devastadora.",
-    "ult_nome": "Visão infravermelha",
-    "ult": "Ninguém se esconde da caçadora!",
+    "lang": {
+      "br": {
+        "nome": "Caçadora",
+        "entrada": "Minha mira é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da caçadora!"
+      },
+      "en": {
+        "nome": "Caçadora",
+        "entrada": "Minha mira é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da caçadora!"
+      }
+    },
     "raridade": "incomum",
     "img": "Widowmaker_ow_cacadora.png"
   },
   {
     "id": "widowmaker_coracao",
     "base": "widowmaker",
-    "nome": "Coração da graça",
     "classe": "Dano",
     "subclasse": "Coração",
-    "entrada": "Minha mira é devastadora.",
-    "ult_nome": "Visão infravermelha",
-    "ult": "Ninguém se esconde da minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Coração da graça",
+        "entrada": "Minha mira é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da minha mira!"
+      },
+      "en": {
+        "nome": "Coração da graça",
+        "entrada": "Minha mira é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da minha mira!"
+      }
+    },
     "raridade": "incomum",
     "img": "Widowmaker_ow_heart_of_grace.png"
   },
   {
     "id": "capita_lacroix",
     "base": "widowmaker",
-    "nome": "Capitã Lacorix",
     "classe": "Dano",
     "subclasse": "Mirror",
-    "entrada": "Minha mira é libertadora.",
-    "ult_nome": "Visão infravermelha",
-    "ult": "O mal não se esconde da minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Capitã Lacorix",
+        "entrada": "Minha mira é libertadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "O mal não se esconde da minha mira!"
+      },
+      "en": {
+        "nome": "Capitã Lacorix",
+        "entrada": "Minha mira é libertadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "O mal não se esconde da minha mira!"
+      }
+    },
     "raridade": "lendario",
     "img": "Widowmaker_ow_mirror.png"
   },
   {
     "id": "widowmaker_medusa",
     "base": "widowmaker",
-    "nome": "Medusa",
     "classe": "Dano",
     "subclasse": "Monstro",
-    "entrada": "Minha mira pode paralizar.",
-    "ult_nome": "Visão infravermelha",
-    "ult": "Ninguém sobrevive à minha visão!",
+    "lang": {
+      "br": {
+        "nome": "Medusa",
+        "entrada": "Minha mira pode paralizar.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém sobrevive à minha visão!"
+      },
+      "en": {
+        "nome": "Medusa",
+        "entrada": "Minha mira pode paralizar.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém sobrevive à minha visão!"
+      }
+    },
     "raridade": "lendario",
     "img": "Widowmaker_ow_medusa.png"
   },
   {
     "id": "widowmaker_dourado",
     "base": "widowmaker",
-    "nome": "Widowmaker Dourada",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Minha mira é devastadora.",
-    "ult_nome": "Visão infravermelha",
-    "ult": "Ninguém se esconde da minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Widowmaker Dourada",
+        "entrada": "Minha mira é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da minha mira!"
+      },
+      "en": {
+        "nome": "Widowmaker Dourada",
+        "entrada": "Minha mira é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da minha mira!"
+      }
+    },
     "raridade": "lendario",
     "img": "Widowmaker_ow_gold.png",
     "golden_weapon": true,
@@ -2649,12 +4749,22 @@
   {
     "id": "widowmaker_legado",
     "base": "widowmaker",
-    "nome": "Widowmaker: Legado",
     "classe": "Defensor",
     "subclasse": "Origem",
-    "entrada": "Um tiro, uma morte!",
-    "ult_nome": "Visão infravermelha",
-    "ult": "Ninguém se esconde da minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Widowmaker: Legado",
+        "entrada": "Um tiro, uma morte!",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da minha mira!"
+      },
+      "en": {
+        "nome": "Widowmaker: Legado",
+        "entrada": "Um tiro, uma morte!",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da minha mira!"
+      }
+    },
     "raridade": "legado",
     "img": "Widowmaker_ow_jade.png",
     "icon_ref": "jade.png"
@@ -2662,60 +4772,110 @@
   {
     "id": "feiticeira",
     "base": "widowmaker",
-    "nome": "Feiticeira",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Minha mira te encanta.",
-    "ult_nome": "Visão infravermelha",
-    "ult": "Ninguém resiste ao meu feitiço!",
+    "lang": {
+      "br": {
+        "nome": "Feiticeira",
+        "entrada": "Minha mira te encanta.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém resiste ao meu feitiço!"
+      },
+      "en": {
+        "nome": "Feiticeira",
+        "entrada": "Minha mira te encanta.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém resiste ao meu feitiço!"
+      }
+    },
     "raridade": "mitico",
     "img": "Widowmaker_ow_myth.png"
   },
   {
     "id": "dame_chance",
     "base": "widowmaker",
-    "nome": "Widowmaker: Dame chance",
     "classe": "Dano",
     "subclasse": "Artilharia",
-    "entrada": "Minha mira é devastadora.",
-    "ult_nome": "Visão infravermelha",
-    "ult": "Ninguém se esconde da minha mira!",
+    "lang": {
+      "br": {
+        "nome": "Widowmaker: Dame chance",
+        "entrada": "Minha mira é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da minha mira!"
+      },
+      "en": {
+        "nome": "Widowmaker: Dame chance",
+        "entrada": "Minha mira é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da minha mira!"
+      }
+    },
     "raridade": "mitico",
     "img": "Widowmaker_ow_weapon.png"
   },
   {
     "id": "winston_comum",
     "base": "winston",
-    "nome": "Winston",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Um mundo melhor é possível hoje.",
-    "ult_nome": "Fúria primata",
-    "ult": "(Rugido)!",
+    "lang": {
+      "br": {
+        "nome": "Winston",
+        "entrada": "Um mundo melhor é possível hoje.",
+        "ult_nome": "Fúria primata",
+        "ult": "(Rugido)!"
+      },
+      "en": {
+        "nome": "Winston",
+        "entrada": "Um mundo melhor é possível hoje.",
+        "ult_nome": "Fúria primata",
+        "ult": "(Rugido)!"
+      }
+    },
     "raridade": "comum",
     "img": "Winston_ow.png"
   },
   {
     "id": "winston_extraterreste",
     "base": "winston",
-    "nome": "Winston Extraterrestre",
     "classe": "Tanque",
     "subclasse": "Cósmico",
-    "entrada": "Uma galáxia melhor é possível hoje.",
-    "ult_nome": "Fúria primata",
-    "ult": "(Rugido)!",
+    "lang": {
+      "br": {
+        "nome": "Winston Extraterrestre",
+        "entrada": "Uma galáxia melhor é possível hoje.",
+        "ult_nome": "Fúria primata",
+        "ult": "(Rugido)!"
+      },
+      "en": {
+        "nome": "Winston Extraterrestre",
+        "entrada": "Uma galáxia melhor é possível hoje.",
+        "ult_nome": "Fúria primata",
+        "ult": "(Rugido)!"
+      }
+    },
     "raridade": "epico",
     "img": "Winston_ow_extraterrestre.png"
   },
   {
     "id": "winston_dourado",
     "base": "winston",
-    "nome": "Winston Dourado",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Um mundo melhor é possível hoje.",
-    "ult_nome": "Fúria primata",
-    "ult": "(Rugido)!",
+    "lang": {
+      "br": {
+        "nome": "Winston Dourado",
+        "entrada": "Um mundo melhor é possível hoje.",
+        "ult_nome": "Fúria primata",
+        "ult": "(Rugido)!"
+      },
+      "en": {
+        "nome": "Winston Dourado",
+        "entrada": "Um mundo melhor é possível hoje.",
+        "ult_nome": "Fúria primata",
+        "ult": "(Rugido)!"
+      }
+    },
     "raridade": "lendario",
     "img": "Winston_ow_gold.png",
     "golden_weapon": true,
@@ -2724,12 +4884,22 @@
   {
     "id": "winston_legado",
     "base": "winston",
-    "nome": "Winston: Legado",
     "classe": "Tanque",
     "subclasse": "Origem",
-    "entrada": "A imaginação é a essência da descoberta!",
-    "ult_nome": "Fúria primata",
-    "ult": "(Rugido)!",
+    "lang": {
+      "br": {
+        "nome": "Winston: Legado",
+        "entrada": "A imaginação é a essência da descoberta!",
+        "ult_nome": "Fúria primata",
+        "ult": "(Rugido)!"
+      },
+      "en": {
+        "nome": "Winston: Legado",
+        "entrada": "A imaginação é a essência da descoberta!",
+        "ult_nome": "Fúria primata",
+        "ult": "(Rugido)!"
+      }
+    },
     "raridade": "legado",
     "img": "Winston_ow_jade.png",
     "icon_ref": "jade.png"
@@ -2737,12 +4907,22 @@
   {
     "id": "winston_fool",
     "base": "winston",
-    "nome": "Winton!",
     "classe": "Tanque",
     "subclasse": "Fool",
-    "entrada": "Winston!",
-    "ult_nome": "Winston!",
-    "ult": "Winston!",
+    "lang": {
+      "br": {
+        "nome": "Winton!",
+        "entrada": "Winston!",
+        "ult_nome": "Winston!",
+        "ult": "Winston!"
+      },
+      "en": {
+        "nome": "Winton!",
+        "entrada": "Winston!",
+        "ult_nome": "Winston!",
+        "ult": "Winston!"
+      }
+    },
     "raridade": "comum",
     "img": "Winston_ow_fool.png",
     "evento": "april_fools"
@@ -2750,24 +4930,44 @@
   {
     "id": "wrecking_ball_comum",
     "base": "wrecking_ball",
-    "nome": "Wrecking ball",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
-    "ult_nome": "Campo minado",
-    "ult": "Área negada!",
+    "lang": {
+      "br": {
+        "nome": "Wrecking ball",
+        "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
+        "ult_nome": "Campo minado",
+        "ult": "Área negada!"
+      },
+      "en": {
+        "nome": "Wrecking ball",
+        "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
+        "ult_nome": "Campo minado",
+        "ult": "Área negada!"
+      }
+    },
     "raridade": "comum",
     "img": "Wrecking_ball_ow.png"
   },
   {
     "id": "wrecking_ball_dourado",
     "base": "wrecking_ball",
-    "nome": "Wrecking ball Dourado",
     "classe": "Tanque",
     "subclasse": "Incursor",
-    "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
-    "ult_nome": "Campo minado",
-    "ult": "Área negada!",
+    "lang": {
+      "br": {
+        "nome": "Wrecking ball Dourado",
+        "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
+        "ult_nome": "Campo minado",
+        "ult": "Área negada!"
+      },
+      "en": {
+        "nome": "Wrecking ball Dourado",
+        "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
+        "ult_nome": "Campo minado",
+        "ult": "Área negada!"
+      }
+    },
     "raridade": "lendario",
     "img": "Wrecking_ball_ow_gold.png",
     "golden_weapon": true,
@@ -2776,12 +4976,22 @@
   {
     "id": "wrecking_ball_fool",
     "base": "wrecking_ball",
-    "nome": "Wrecking ball (& filhos)",
     "classe": "Tanque",
     "subclasse": "Fool",
-    "entrada": "Junte todas as bolinhas e troque por um prêmio!",
-    "ult_nome": "Campo minado",
-    "ult": "Comtemplem, os filhos de Wrecking Ball!",
+    "lang": {
+      "br": {
+        "nome": "Wrecking ball (& filhos)",
+        "entrada": "Junte todas as bolinhas e troque por um prêmio!",
+        "ult_nome": "Campo minado",
+        "ult": "Comtemplem, os filhos de Wrecking Ball!"
+      },
+      "en": {
+        "nome": "Wrecking ball (& filhos)",
+        "entrada": "Junte todas as bolinhas e troque por um prêmio!",
+        "ult_nome": "Campo minado",
+        "ult": "Comtemplem, os filhos de Wrecking Ball!"
+      }
+    },
     "raridade": "incomum",
     "img": "Wrecking_ball_ow_fool.png",
     "evento": "april_fools"
@@ -2789,36 +4999,66 @@
   {
     "id": "wuyang_comum",
     "base": "wuyang",
-    "nome": "Wuyang",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Sabe o que dizem. É só seguir o fluxo.",
-    "ult_nome": "Maré explosiva",
-    "ult": "Mudando a maré!",
+    "lang": {
+      "br": {
+        "nome": "Wuyang",
+        "entrada": "Sabe o que dizem. É só seguir o fluxo.",
+        "ult_nome": "Maré explosiva",
+        "ult": "Mudando a maré!"
+      },
+      "en": {
+        "nome": "Wuyang",
+        "entrada": "Sabe o que dizem. É só seguir o fluxo.",
+        "ult_nome": "Maré explosiva",
+        "ult": "Mudando a maré!"
+      }
+    },
     "raridade": "comum",
     "img": "Wuyang_ow.png"
   },
   {
     "id": "wuyang_piscina",
     "base": "wuyang",
-    "nome": "Wuyang Piscina",
     "classe": "Suporte",
     "subclasse": "Férias",
-    "entrada": "Sabe o que dizem. É só seguir o fluxo.",
-    "ult_nome": "Maré explosiva",
-    "ult": "Mudando a maré!",
+    "lang": {
+      "br": {
+        "nome": "Wuyang Piscina",
+        "entrada": "Sabe o que dizem. É só seguir o fluxo.",
+        "ult_nome": "Maré explosiva",
+        "ult": "Mudando a maré!"
+      },
+      "en": {
+        "nome": "Wuyang Piscina",
+        "entrada": "Sabe o que dizem. É só seguir o fluxo.",
+        "ult_nome": "Maré explosiva",
+        "ult": "Mudando a maré!"
+      }
+    },
     "raridade": "incomum",
     "img": "Wuyang_ow_piscina.png"
   },
   {
     "id": "wuyang_dourado",
     "base": "wuyang",
-    "nome": "Wuyang Dourado",
     "classe": "Suporte",
     "subclasse": "Sobrevivente",
-    "entrada": "Sabe o que dizem. É só seguir o fluxo.",
-    "ult_nome": "Maré explosiva",
-    "ult": "Mudando a maré!",
+    "lang": {
+      "br": {
+        "nome": "Wuyang Dourado",
+        "entrada": "Sabe o que dizem. É só seguir o fluxo.",
+        "ult_nome": "Maré explosiva",
+        "ult": "Mudando a maré!"
+      },
+      "en": {
+        "nome": "Wuyang Dourado",
+        "entrada": "Sabe o que dizem. É só seguir o fluxo.",
+        "ult_nome": "Maré explosiva",
+        "ult": "Mudando a maré!"
+      }
+    },
     "raridade": "lendario",
     "img": "Wuyang_ow_gold.png",
     "golden_weapon": true,
@@ -2827,36 +5067,66 @@
   {
     "id": "zarya_comum",
     "base": "zarya",
-    "nome": "Zarya",
     "classe": "Tanque",
     "subclasse": "Combatente",
-    "entrada": "Vamos atropelar todos.",
-    "ult_nome": "Fluxo de gravitons",
-    "ult": "Ogon' po gotovnosti!",
+    "lang": {
+      "br": {
+        "nome": "Zarya",
+        "entrada": "Vamos atropelar todos.",
+        "ult_nome": "Fluxo de gravitons",
+        "ult": "Ogon' po gotovnosti!"
+      },
+      "en": {
+        "nome": "Zarya",
+        "entrada": "Vamos atropelar todos.",
+        "ult_nome": "Fluxo de gravitons",
+        "ult": "Ogon' po gotovnosti!"
+      }
+    },
     "raridade": "comum",
     "img": "Zarya_ow.png"
   },
   {
     "id": "talon_zarya",
     "base": "zarya",
-    "nome": "Zarya Talon",
     "classe": "Tanque",
     "subclasse": "Mirror",
-    "entrada": "Vamos atropelar todos.",
-    "ult_nome": "Zona expulsiva",
-    "ult": "Abrir fogo!",
+    "lang": {
+      "br": {
+        "nome": "Zarya Talon",
+        "entrada": "Vamos atropelar todos.",
+        "ult_nome": "Zona expulsiva",
+        "ult": "Abrir fogo!"
+      },
+      "en": {
+        "nome": "Zarya Talon",
+        "entrada": "Vamos atropelar todos.",
+        "ult_nome": "Zona expulsiva",
+        "ult": "Abrir fogo!"
+      }
+    },
     "raridade": "epico",
     "img": "Zarya_ow_mirror.png"
   },
   {
     "id": "zarya_dourado",
     "base": "zarya",
-    "nome": "Zarya Dourada",
     "classe": "Tanque",
     "subclasse": "Combatente",
-    "entrada": "Vamos atropelar todos.",
-    "ult_nome": "Fluxo de gravitons",
-    "ult": "Ogon' po gotovnosti!",
+    "lang": {
+      "br": {
+        "nome": "Zarya Dourada",
+        "entrada": "Vamos atropelar todos.",
+        "ult_nome": "Fluxo de gravitons",
+        "ult": "Ogon' po gotovnosti!"
+      },
+      "en": {
+        "nome": "Zarya Dourada",
+        "entrada": "Vamos atropelar todos.",
+        "ult_nome": "Fluxo de gravitons",
+        "ult": "Ogon' po gotovnosti!"
+      }
+    },
     "raridade": "lendario",
     "img": "Zarya_ow_gold.png",
     "golden_weapon": true,
@@ -2865,12 +5135,22 @@
   {
     "id": "zarya_legado",
     "base": "zarya",
-    "nome": "Zarya: Legado",
     "classe": "Tanque",
     "subclasse": "Origem",
-    "entrada": "Juntos nós somos fortes!",
-    "ult_nome": "Fluxo de gravitons",
-    "ult": "Ogon' po gotovnosti!",
+    "lang": {
+      "br": {
+        "nome": "Zarya: Legado",
+        "entrada": "Juntos nós somos fortes!",
+        "ult_nome": "Fluxo de gravitons",
+        "ult": "Ogon' po gotovnosti!"
+      },
+      "en": {
+        "nome": "Zarya: Legado",
+        "entrada": "Juntos nós somos fortes!",
+        "ult_nome": "Fluxo de gravitons",
+        "ult": "Ogon' po gotovnosti!"
+      }
+    },
     "raridade": "legado",
     "img": "Zarya_ow_jade.png",
     "icon_ref": "jade.png"
@@ -2878,48 +5158,88 @@
   {
     "id": "zenyatta_comum",
     "base": "zenyatta",
-    "nome": "Zenyatta",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
-    "ult_nome": "Transcendência",
-    "ult": "Sintam a tranquilidade!",
+    "lang": {
+      "br": {
+        "nome": "Zenyatta",
+        "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a tranquilidade!"
+      },
+      "en": {
+        "nome": "Zenyatta",
+        "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a tranquilidade!"
+      }
+    },
     "raridade": "comum",
     "img": "Zenyatta_ow.png"
   },
   {
     "id": "zenyatta_cultista",
     "base": "zenyatta",
-    "nome": "Zenyatta Cultista",
     "classe": "Suporte",
     "subclasse": "Perverso",
-    "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
-    "ult_nome": "Transcendência",
-    "ult": "Sintam o vazio!",
+    "lang": {
+      "br": {
+        "nome": "Zenyatta Cultista",
+        "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam o vazio!"
+      },
+      "en": {
+        "nome": "Zenyatta Cultista",
+        "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam o vazio!"
+      }
+    },
     "raridade": "epico",
     "img": "Zenyatta_ow_cultista.png"
   },
   {
     "id": "destruidor_z-3n",
     "base": "zenyatta",
-    "nome": "Destruidor Z-3N",
     "classe": "Suporte",
     "subclasse": "Mirror",
-    "entrada": "Em meio a discórdia, encontraremos o triunfo.",
-    "ult_nome": "Transcendência",
-    "ult": "Sintam a tranquilidade!",
+    "lang": {
+      "br": {
+        "nome": "Destruidor Z-3N",
+        "entrada": "Em meio a discórdia, encontraremos o triunfo.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a tranquilidade!"
+      },
+      "en": {
+        "nome": "Destruidor Z-3N",
+        "entrada": "Em meio a discórdia, encontraremos o triunfo.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a tranquilidade!"
+      }
+    },
     "raridade": "epico",
     "img": "Zenyatta_ow_mirror.png"
   },
   {
     "id": "zenyatta_dourado",
     "base": "zenyatta",
-    "nome": "Zenyatta Dourado",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
-    "ult_nome": "Transcendência",
-    "ult": "Sintam a tranquilidade!",
+    "lang": {
+      "br": {
+        "nome": "Zenyatta Dourado",
+        "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a tranquilidade!"
+      },
+      "en": {
+        "nome": "Zenyatta Dourado",
+        "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a tranquilidade!"
+      }
+    },
     "raridade": "lendario",
     "img": "Zenyatta_ow_gold.png",
     "golden_weapon": true,
@@ -2928,12 +5248,22 @@
   {
     "id": "zenyatta_legado",
     "base": "zenyatta",
-    "nome": "Zenyatta: Legado",
     "classe": "Suporte",
     "subclasse": "Origem",
-    "entrada": "O verdadeiro eu, não possui forma!",
-    "ult_nome": "Transcendência",
-    "ult": "Sintam a tranquilidade!",
+    "lang": {
+      "br": {
+        "nome": "Zenyatta: Legado",
+        "entrada": "O verdadeiro eu, não possui forma!",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a tranquilidade!"
+      },
+      "en": {
+        "nome": "Zenyatta: Legado",
+        "entrada": "O verdadeiro eu, não possui forma!",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a tranquilidade!"
+      }
+    },
     "raridade": "legado",
     "img": "Zenyatta_ow_jade.png",
     "icon_ref": "jade.png"
@@ -2941,24 +5271,44 @@
   {
     "id": "pixiu",
     "base": "zenyatta",
-    "nome": "Pixiu",
     "classe": "Suporte",
     "subclasse": "Tático",
-    "entrada": "Em meio as punições, encontraremos prosperidade.",
-    "ult_nome": "Transcendência",
-    "ult": "Sintam a prosperidade!",
+    "lang": {
+      "br": {
+        "nome": "Pixiu",
+        "entrada": "Em meio as punições, encontraremos prosperidade.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a prosperidade!"
+      },
+      "en": {
+        "nome": "Pixiu",
+        "entrada": "Em meio as punições, encontraremos prosperidade.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a prosperidade!"
+      }
+    },
     "raridade": "mitico",
     "img": "Zenyatta_ow_myth.png"
   },
   {
     "id": "zenyatta_fool",
     "base": "zenyatta",
-    "nome": "Zen yatta",
     "classe": "Suporte",
     "subclasse": "Fool",
-    "entrada": "Aceita.",
-    "ult_nome": "Transcendência",
-    "ult": "Tornem-se invencíveis. Algumas condições se aplicam.",
+    "lang": {
+      "br": {
+        "nome": "Zen yatta",
+        "entrada": "Aceita.",
+        "ult_nome": "Transcendência",
+        "ult": "Tornem-se invencíveis. Algumas condições se aplicam."
+      },
+      "en": {
+        "nome": "Zen yatta",
+        "entrada": "Aceita.",
+        "ult_nome": "Transcendência",
+        "ult": "Tornem-se invencíveis. Algumas condições se aplicam."
+      }
+    },
     "raridade": "incomum",
     "img": "Zenyatta_ow_fool.png",
     "evento": "april_fools"
@@ -2966,12 +5316,22 @@
   {
     "id": "extra",
     "base": "none",
-    "nome": "Espaço extra",
     "classe": ".",
     "subclasse": ".",
-    "entrada": ".",
-    "ult_nome": ".",
-    "ult": ".",
+    "lang": {
+      "br": {
+        "nome": "Espaço extra",
+        "entrada": ".",
+        "ult_nome": ".",
+        "ult": "."
+      },
+      "en": {
+        "nome": "Espaço extra",
+        "entrada": ".",
+        "ult_nome": ".",
+        "ult": "."
+      }
+    },
     "raridade": ".",
     "img": "."
   }
