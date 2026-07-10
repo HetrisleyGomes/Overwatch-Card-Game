@@ -1120,9 +1120,9 @@
       },
       "en": {
         "nome": "Echo",
-        "entrada": "Estou sempre pronta para aprender.",
-        "ult_nome": "Duplicação",
-        "ult": "Circuitos adaptativos ativados: (Héroi)!"
+        "entrada": "I am always ready to learn.",
+        "ult_nome": "Duplication",
+        "ult": "Adaptive circuits engaged: (Héroi)!"
       }
     },
     "raridade": "comum",
@@ -1142,9 +1142,9 @@
       },
       "en": {
         "nome": "Echo Furtividade",
-        "entrada": "Estou sempre pronta para executar.",
-        "ult_nome": "Eficiência máxima",
-        "ult": "Circuitos adaptativos ativados: Echo!"
+        "entrada": "I am always ready to execute.",
+        "ult_nome": "Duplication",
+        "ult": "Adaptive circuits engaged: (Héroi)!"
       }
     },
     "raridade": "epico",
@@ -1163,10 +1163,10 @@
         "ult": "Circuitos adaptativos ativados: (Héroi)!"
       },
       "en": {
-        "nome": "Echo Dourada",
-        "entrada": "Estou sempre pronta para aprender.",
-        "ult_nome": "Duplicação",
-        "ult": "Circuitos adaptativos ativados: (Héroi)!"
+        "nome": "Echo: Golden",
+        "entrada": "I am always ready to learn.",
+        "ult_nome": "Duplication",
+        "ult": "Adaptive circuits engaged: (Héroi)!"
       }
     },
     "raridade": "lendario",
@@ -1188,9 +1188,9 @@
       },
       "en": {
         "nome": "Emre",
-        "entrada": "Agora é tudo ou nada.",
-        "ult_nome": "Protocolo de automação",
-        "ult": "Localizar e destruir!"
+        "entrada": "I'll put it all on the line.",
+        "ult_nome": "Override Protocol",
+        "ult": "Etsi ja tuhoa!"
       }
     },
     "raridade": "comum",
@@ -1209,10 +1209,10 @@
         "ult": "Localizar e destruir!"
       },
       "en": {
-        "nome": "Antigo Emre",
-        "entrada": "Agora é tudo ou nada.",
-        "ult_nome": "Protocolo de automação",
-        "ult": "Localizar e destruir!"
+        "nome": "Old Emre",
+        "entrada": "I'll put it all on the line.",
+        "ult_nome": "Override Protocol",
+        "ult": "Etsi ja tuhoa!"
       }
     },
     "raridade": "comum",
@@ -1232,10 +1232,10 @@
         "ult": "Localizar e destruir!"
       },
       "en": {
-        "nome": "Emre Dourado",
-        "entrada": "Agora é tudo ou nada.",
-        "ult_nome": "Protocolo de automação",
-        "ult": "Localizar e destruir!"
+        "nome": "Emre: Golden",
+        "entrada": "I'll put it all on the line.",
+        "ult_nome": "Override Protocol",
+        "ult": "Etsi ja tuhoa!"
       }
     },
     "raridade": "lendario",
@@ -1257,9 +1257,9 @@
       },
       "en": {
         "nome": "Freja",
-        "entrada": "Eu sempre entrego.",
-        "ult_nome": "Disparo de boleadeira",
-        "ult": "Eu vou caçar você!"
+        "entrada": "I always deliver.",
+        "ult_nome": "Bola Shot",
+        "ult": "Nu vanker der!"
       }
     },
     "raridade": "comum",
@@ -1278,10 +1278,10 @@
         "ult": "Eu vou caçar você!"
       },
       "en": {
-        "nome": "Coração da coragem",
-        "entrada": "Eu sempre entrego.",
-        "ult_nome": "Disparo de boleadeira",
-        "ult": "Eu vou caçar você!"
+        "nome": "Heart of Courage",
+        "entrada": "I always deliver.",
+        "ult_nome": "Bola Shot",
+        "ult": "Nu vanker der!"
       }
     },
     "raridade": "incomum",
@@ -1300,10 +1300,10 @@
         "ult": "Eu vou caçar você!"
       },
       "en": {
-        "nome": "Freja Dourada",
-        "entrada": "Eu sempre entrego.",
-        "ult_nome": "Disparo de boleadeira",
-        "ult": "Eu vou caçar você!"
+        "nome": "Freja: Golden",
+        "entrada": "I always deliver.",
+        "ult_nome": "Bola Shot",
+        "ult": "Nu vanker der!"
       }
     },
     "raridade": "lendario",
@@ -1325,8 +1325,8 @@
       },
       "en": {
         "nome": "Genji",
-        "entrada": "A paz retorna àqueles que procuram.",
-        "ult_nome": "Lâmina do dragão",
+        "entrada": "Negaeba heiwa wa otozure yo.",
+        "ult_nome": "Dragonblade",
         "ult": "Ryūjin no ken o kurae!"
       }
     },
@@ -1347,8 +1347,8 @@
       },
       "en": {
         "nome": "Oni",
-        "entrada": "A paz retorna àqueles que a procuram.",
-        "ult_nome": "Lâmina do dragão",
+        "entrada": "Negaeba heiwa wa otozure yo.",
+        "ult_nome": "Dragonblade",
         "ult": "Oni no ken o kurae!"
       }
     },
@@ -1369,8 +1369,8 @@
       },
       "en": {
         "nome": "Baihu",
-        "entrada": "A paz retorna àqueles que a procuram.",
-        "ult_nome": "Lâmina do dragão",
+        "entrada": "Negaeba heiwa wa otozure yo.",
+        "ult_nome": "Dragonblade",
         "ult": "Byakko no ken o kurae!"
       }
     },
@@ -1390,9 +1390,9 @@
         "ult": "Ryūjin no ken o kurae!"
       },
       "en": {
-        "nome": "Genji Dourado",
-        "entrada": "A paz retorna àqueles que a procuram.",
-        "ult_nome": "Lâmina do dragão",
+        "nome": "Genji: Golden",
+        "entrada": "Negaeba heiwa wa otozure yo.",
+        "ult_nome": "Dragonblade",
         "ult": "Ryūjin no ken o kurae!"
       }
     },
@@ -1414,9 +1414,9 @@
         "ult": "Ryūjin no ken o kurae!"
       },
       "en": {
-        "nome": "Genji: Legado",
-        "entrada": "Você pode abandonar seu corpo, mas nunca a sua honra!",
-        "ult_nome": "Lâmina do dragão",
+        "nome": "Genji: Legacy",
+        "entrada": "Mi o sutete mo, myōri wa sutezu.",
+        "ult_nome": "Dragonblade",
         "ult": "Ryūjin no ken o kurae!"
       }
     },
@@ -1437,9 +1437,9 @@
         "ult": "Denki no ken o kurae!"
       },
       "en": {
-        "nome": "Cyber Demônio",
-        "entrada": "A morte alcança àqueles que a procuram.",
-        "ult_nome": "Lâmina do dragão",
+        "nome": "Cyber Demon",
+        "entrada": "Negaeba shi wa otozure yō.",
+        "ult_nome": "Dragonblade",
         "ult": "Denki no ken o kurae!"
       }
     },
@@ -1460,8 +1460,8 @@
       },
       "en": {
         "nome": "Ganji: Sumi-Ichimonji",
-        "entrada": "A paz retorna àqueles que procuram.",
-        "ult_nome": "Lâmina do dragão",
+        "entrada": "Negaeba heiwa wa otozure yo.",
+        "ult_nome": "Dragonblade",
         "ult": "Ryūjin no ken o kurae!"
       }
     },
@@ -1482,8 +1482,8 @@
       },
       "en": {
         "nome": "Hanzo",
-        "entrada": "Honra é tudo o que me resta.",
-        "ult_nome": "Golpe do dragão",
+        "entrada": "Honor is all I have left.",
+        "ult_nome": "Dragonstrike",
         "ult": "Ryū ga waga teki o kurau!"
       }
     },
@@ -1504,8 +1504,8 @@
       },
       "en": {
         "nome": "Okami",
-        "entrada": "Honra é tudo o que me resta.",
-        "ult_nome": "Golpe do dragão",
+        "entrada": "Honor is all I have left.",
+        "ult_nome": "Dragonstrike",
         "ult": "Ōkami yo, waga teki wo kurae!"
       }
     },
@@ -1525,9 +1525,9 @@
         "ult": "Ryū ga waga teki o kurau!"
       },
       "en": {
-        "nome": "Hanzo Dourado",
-        "entrada": "Honra é tudo o que me resta.",
-        "ult_nome": "Golpe do dragão",
+        "nome": "Hanzo: Golden",
+        "entrada": "Honor is all I have left.",
+        "ult_nome": "Dragonstrike",
         "ult": "Ryū ga waga teki o kurau!"
       }
     },
@@ -1544,14 +1544,14 @@
     "lang": {
       "br": {
         "nome": "Hanzo: Legado",
-        "entrada": "Com cada morte vem honra, com honra, redenção!",
+        "entrada": "Com cada morte vem honra. Com honra, redenção.",
         "ult_nome": "Golpe do dragão",
         "ult": "Ryū ga waga teki o kurau!"
       },
       "en": {
-        "nome": "Hanzo: Legado",
-        "entrada": "Com cada morte vem honra, com honra, redenção!",
-        "ult_nome": "Golpe do dragão",
+        "nome": "Hanzo: Legacy",
+        "entrada": "With every death, comes honor. With honor, redemption.",
+        "ult_nome": "Dragonstrike",
         "ult": "Ryū ga waga teki o kurau!"
       }
     },
@@ -1573,8 +1573,8 @@
       },
       "en": {
         "nome": "Onryō",
-        "entrada": "Vingança é tudo o que me resta.",
-        "ult_nome": "Golpe do dragão",
+        "entrada": "Vengeance is all I have left.'",
+        "ult_nome": "Dragonstrike",
         "ult": "Ushu ga waga teki o kurau!"
       }
     },
@@ -1594,9 +1594,9 @@
         "ult": "Ryū ga waga teki o kurau!"
       },
       "en": {
-        "nome": "Hanzo: Rebelde de Tóquio",
-        "entrada": "Vingança é tudo o que me resta.",
-        "ult_nome": "Golpe do dragão",
+        "nome": "Hanzo: Tokyo Rebel",
+        "entrada": "Honor is all I have left.",
+        "ult_nome": "Dragonstrike",
         "ult": "Ryū ga waga teki o kurau!"
       }
     },
@@ -1617,9 +1617,9 @@
       },
       "en": {
         "nome": "Hazard",
-        "entrada": "Se você tá comigo, é pra vida toda.",
-        "ult_nome": "Dilúvio",
-        "ult": "Olha a chuva!"
+        "entrada": "If you're in it with me, you're in it for life.",
+        "ult_nome": "Downpour",
+        "ult": "Tear it down!"
       }
     },
     "raridade": "comum",
@@ -1638,10 +1638,10 @@
         "ult": "Olha a chuva!"
       },
       "en": {
-        "nome": "Hazard Dourado",
-        "entrada": "Se você tá comigo, é pra vida toda.",
-        "ult_nome": "Dilúvio",
-        "ult": "Olha a chuva!"
+        "nome": "Hazard: Golden",
+        "entrada": "If you're in it with me, you're in it for life.",
+        "ult_nome": "Downpour",
+        "ult": "Tear it down!"
       }
     },
     "raridade": "lendario",
@@ -1663,9 +1663,9 @@
       },
       "en": {
         "nome": "Illari",
-        "entrada": "Eu carrego meus fardos sozinha.",
-        "ult_nome": "Sol aprisionado",
-        "ult": "Encare a aurora!"
+        "entrada": "I carry my burdens alone.",
+        "ult_nome": "Captive Sun",
+        "ult": "Face the sunrise!"
       }
     },
     "raridade": "comum",
@@ -1684,10 +1684,10 @@
         "ult": "Encare a aurora!"
       },
       "en": {
-        "nome": "Illari Dourada",
-        "entrada": "Eu carrego meus fardos sozinha.",
-        "ult_nome": "Sol aprisionado",
-        "ult": "Encare a aurora!"
+        "nome": "Illari: Golden",
+        "entrada": "I carry my burdens alone.",
+        "ult_nome": "Captive Sun",
+        "ult": "Face the sunrise!"
       }
     },
     "raridade": "lendario",
@@ -1709,9 +1709,9 @@
       },
       "en": {
         "nome": "Fênix Ascendida",
-        "entrada": "Cuido desse fogo sozinha.",
-        "ult_nome": "Sol aprisionado",
-        "ult": "Encarem a fênix!"
+        "entrada": "I tend to this fire alone.",
+        "ult_nome": "Captive Sun",
+        "ult": "Face the phoenix!"
       }
     },
     "raridade": "mitico",
@@ -1732,7 +1732,7 @@
       "en": {
         "nome": "Jetpack Cat",
         "entrada": "Meow meow meow.",
-        "ult_nome": "Pulo do gato",
+        "ult_nome": "Catnapper",
         "ult": "Meoweoweew!!!"
       }
     },
@@ -1752,9 +1752,9 @@
         "ult": "Meoweoweew!!!"
       },
       "en": {
-        "nome": "Jetpack Cat Dourado",
+        "nome": "Jetpack Cat: Golden",
         "entrada": "Meow meow meow.",
-        "ult_nome": "Pulo do gato",
+        "ult_nome": "Catnapper",
         "ult": "Meoweoweew!!!"
       }
     },
@@ -1777,9 +1777,9 @@
       },
       "en": {
         "nome": "Junkrat",
-        "entrada": "Tantas bombas para colocar por aí.",
-        "ult_nome": "Pneu da morte",
-        "ult": "Vai explodir!"
+        "entrada": "Plenty of bombs to go around!",
+        "ult_nome": "RIP-Tire",
+        "ult": "Fire in the hole!"
       }
     },
     "raridade": "comum",
@@ -1799,9 +1799,9 @@
       },
       "en": {
         "nome": "Dr. Junkstein",
-        "entrada": "Tantas bombas para colocar por aí.",
-        "ult_nome": "Pneu da morte",
-        "ult": "Senhoras e senhores, minha última criação!"
+        "entrada": "Plenty of bombs to go around!",
+        "ult_nome": "RIP-Tire",
+        "ult": "Get ready for a shock!"
       }
     },
     "raridade": "incomum",
@@ -1820,10 +1820,10 @@
         "ult": "Vai explodir!"
       },
       "en": {
-        "nome": "Junkrat Dourado",
-        "entrada": "Tantas bombas para colocar por aí.",
-        "ult_nome": "Pneu da morte",
-        "ult": "Vai explodir!"
+        "nome": "Junkrat: Golden",
+        "entrada": "Plenty of bombs to go around!",
+        "ult_nome": "RIP-Tire",
+        "ult": "Fire in the hole!"
       }
     },
     "raridade": "lendario",
@@ -1844,10 +1844,10 @@
         "ult": "Vai explodir!"
       },
       "en": {
-        "nome": "Junkrat: Legado",
-        "entrada": "O dia está ótimo para um pouco de caos!",
-        "ult_nome": "Pneu da morte",
-        "ult": "Vai explodir!"
+        "nome": "Junkrat: Legacy",
+        "entrada": "It's a perfect day for some mayhem.",
+        "ult_nome": "RIP-Tire",
+        "ult": "Fire in the hole!"
       }
     },
     "raridade": "legado",
@@ -1868,9 +1868,9 @@
       },
       "en": {
         "nome": "Cyber Combustível",
-        "entrada": "Tanta gasolina pra queimar por aí.",
-        "ult_nome": "Pneu da morte",
-        "ult": "O vazio vai explodir!"
+        "entrada": "Plenty of fuel to burn it down!",
+        "ult_nome": "RIP-Tire",
+        "ult": "Fire in the void!"
       }
     },
     "raridade": "mitico",
@@ -1890,9 +1890,9 @@
       },
       "en": {
         "nome": "Juno",
-        "entrada": "Um passo de cada vez.",
-        "ult_nome": "Raio Orbital",
-        "ult": "Bem-vindos à orbita!"
+        "entrada": "One small step at a time!",
+        "ult_nome": "Orbital Ray",
+        "ult": "Welcome to orbit!"
       }
     },
     "raridade": "comum",
@@ -1911,10 +1911,10 @@
         "ult": "Bem-vindos à orbita!"
       },
       "en": {
-        "nome": "Juno Dourada",
-        "entrada": "Um passo de cada vez.",
-        "ult_nome": "Raio Orbital",
-        "ult": "Bem-vindos à orbita!"
+        "nome": "Juno: Golden",
+        "entrada": "One small step at a time!",
+        "ult_nome": "Orbital Ray",
+        "ult": "Welcome to orbit!"
       }
     },
     "raridade": "lendario",
@@ -1935,10 +1935,10 @@
         "ult": "Raio do coração esperançoso!"
       },
       "en": {
-        "nome": "Coração da esperança",
-        "entrada": "Um passo mágico de cada vez.",
-        "ult_nome": "Raio Orbital",
-        "ult": "Raio do coração esperançoso!"
+        "nome": "Heart of Hope",
+        "entrada": "One magical step at a time!",
+        "ult_nome": "Orbital Ray",
+        "ult": "Hopeful Heart Beam!"
       }
     },
     "raridade": "mitico",
@@ -1957,10 +1957,10 @@
         "ult": "Bem-vindos à orbita!"
       },
       "en": {
-        "nome": "Juno: Atiradora das Estrelas",
-        "entrada": "Um passo de cada vez.",
-        "ult_nome": "Raio Orbital",
-        "ult": "Bem-vindos à orbita!"
+        "nome": "Juno: Star Shooter",
+        "entrada": "One small step at a time!",
+        "ult_nome": "Orbital Ray",
+        "ult": "Welcome to orbit!"
       }
     },
     "raridade": "mitico",
@@ -1980,9 +1980,9 @@
       },
       "en": {
         "nome": "Kiriko",
-        "entrada": "Eu vou encontrar o meu próprio caminho.",
-        "ult_nome": "Corrida da kitsune",
-        "ult": "Deixe a Kitsune guiar você!"
+        "entrada": "I'll find my own path.",
+        "ult_nome": "Kitsune Rush",
+        "ult": "Let the Kitsune guide you!"
       }
     },
     "raridade": "comum",
@@ -2001,10 +2001,10 @@
         "ult": "Deixe a Kitsune guiar você!"
       },
       "en": {
-        "nome": "Coração da paixão",
-        "entrada": "Eu vou encontrar o meu próprio caminho.",
-        "ult_nome": "Corrida da kitsune",
-        "ult": "Deixe a Kitsune guiar você!"
+        "nome": "Heart of love",
+        "entrada": "I'll find my own path.",
+        "ult_nome": "Kitsune Rush",
+        "ult": "Let the Kitsune guide you!"
       }
     },
     "raridade": "incomum",
@@ -2024,9 +2024,9 @@
       },
       "en": {
         "nome": "Kiriko Hashimoto",
-        "entrada": "Eu vou encontrar o meu próprio caminho.",
-        "ult_nome": "Corrida da kitsune",
-        "ult": "Deixe a Kitsune guiar você!"
+        "entrada": "I'll find my own path.",
+        "ult_nome": "Kitsune Rush",
+        "ult": "Let the Kitsune guide you!"
       }
     },
     "raridade": "incomum",
@@ -2045,10 +2045,10 @@
         "ult": "Deixe a Kitsune guiar você!"
       },
       "en": {
-        "nome": "Kiriko Dourada",
-        "entrada": "Eu vou encontrar o meu próprio caminho.",
-        "ult_nome": "Corrida da kitsune",
-        "ult": "Deixe a Kitsune guiar você!"
+        "nome": "Kiriko: Golden",
+        "entrada": "I'll find my own path.",
+        "ult_nome": "Kitsune Rush",
+        "ult": "Let the Kitsune guide you!"
       }
     },
     "raridade": "lendario",
@@ -2069,10 +2069,10 @@
         "ult": "Deixe a Kitsune guiar você!"
       },
       "en": {
-        "nome": "Kiriko Miau-miau",
-        "entrada": "Eu vou encontrar o meu próprio caminho.",
-        "ult_nome": "Corrida da kitsune",
-        "ult": "Deixe a Kitsune guiar você!"
+        "nome": "Kiriko Nyan Café",
+        "entrada": "I'll find my own path.",
+        "ult_nome": "Kitsune Rush",
+        "ult": "Let the Kitsune guide you!"
       }
     },
     "raridade": "ultra",
@@ -2092,9 +2092,9 @@
       },
       "en": {
         "nome": "Amateratsu",
-        "entrada": "Eu ilumino meu próprio caminho.",
-        "ult_nome": "Corrida da kitsune",
-        "ult": "Entre no mundo espiritual!"
+        "entrada": "I'll light my own path.",
+        "ult_nome": "Kitsune Rush",
+        "ult": "Let the sunlight guide you!"
       }
     },
     "raridade": "mitico",
@@ -2113,10 +2113,10 @@
         "ult": "Deixe a Kitsune guiar você!"
       },
       "en": {
-        "nome": "Kiriko: Guardiã espiritual",
-        "entrada": "Eu vou encontrar o meu próprio caminho.",
-        "ult_nome": "Corrida da kitsune",
-        "ult": "Deixe a Kitsune guiar você!"
+        "nome": "Kiriko: Spirit Keeper",
+        "entrada": "I'll find my own path.",
+        "ult_nome": "Kitsune Rush",
+        "ult": "Let the Kitsune guide you!"
       }
     },
     "raridade": "mitico",
@@ -2136,9 +2136,9 @@
       },
       "en": {
         "nome": "Lifeweaver",
-        "entrada": "Passe cada momento da vida cultivando quem realmente é.",
-        "ult_nome": "Árvore da vida",
-        "ult": "A vida protege a vida!"
+        "entrada": "Spend every moment growing into who you truly are.",
+        "ult_nome": "Tree of life",
+        "ult": "Life protects life!"
       }
     },
     "raridade": "comum",
@@ -2157,10 +2157,10 @@
         "ult": "A vida protege a vida!"
       },
       "en": {
-        "nome": "Lifeweaver Dourado",
-        "entrada": "Passe cada momento da vida cultivando quem realmente é.",
-        "ult_nome": "Árvore da vida",
-        "ult": "A vida protege a vida!"
+        "nome": "Lifeweaver: Golden",
+        "entrada": "Spend every moment growing into who you truly are.",
+        "ult_nome": "Tree of life",
+        "ult": "Life protects life!"
       }
     },
     "raridade": "lendario",
@@ -2182,9 +2182,9 @@
       },
       "en": {
         "nome": "Druída Divíno",
-        "entrada": "Viva todas as suas vidas, cultivando quem realmente é.",
-        "ult_nome": "Árvore da vida",
-        "ult": "A vida cria vida!"
+        "entrada": "Spend every lifetime growing into who you truly are.",
+        "ult_nome": "Tree of life",
+        "ult": "Life creates life!"
       }
     },
     "raridade": "mitico",
@@ -2204,9 +2204,9 @@
       },
       "en": {
         "nome": "Lúcio",
-        "entrada": "A gente chegou pra esculachar.",
-        "ult_nome": "Barreira de som",
-        "ult": "Vamo esculachar!"
+        "entrada": "We're here to be heard!",
+        "ult_nome": "Sound Barrier",
+        "ult": "Oh, let's break it down!"
       }
     },
     "raridade": "comum",
@@ -2225,10 +2225,10 @@
         "ult": "Vamo esculachar!"
       },
       "en": {
-        "nome": "Príncipe do Espaço",
-        "entrada": "Eu cheguei pra esculachar.",
-        "ult_nome": "Barreira de som",
-        "ult": "Vamo esculachar!"
+        "nome": "Space Prince",
+        "entrada": "I'm here to be heard!",
+        "ult_nome": "Sound Barrier",
+        "ult": "Oh, let's break it down!"
       }
     },
     "raridade": "epico",
@@ -2248,9 +2248,9 @@
       },
       "en": {
         "nome": "Hermes",
-        "entrada": "A gente chegou pra vencer.",
-        "ult_nome": "Barreira de som",
-        "ult": "Bora acelerar!"
+        "entrada": "We're here to be heard!",
+        "ult_nome": "Sound Barrier",
+        "ult": "You better think fast!"
       }
     },
     "raridade": "lendario",
@@ -2269,10 +2269,10 @@
         "ult": "Vamo esculachar!"
       },
       "en": {
-        "nome": "Lúcio Dourado",
-        "entrada": "A gente chegou pra esculachar.",
-        "ult_nome": "Barreira de som",
-        "ult": "Vamo esculachar!"
+        "nome": "Lúcio: Golden",
+        "entrada": "We're here to be heard!",
+        "ult_nome": "Sound Barrier",
+        "ult": "Oh, let's break it down!"
       }
     },
     "raridade": "lendario",
@@ -2293,10 +2293,10 @@
         "ult": "Vamo esculachar!"
       },
       "en": {
-        "nome": "Lúcio: Legado",
-        "entrada": "Bora meu povo, essa é nossa!",
-        "ult_nome": "Barreira de som",
-        "ult": "Vamo esculachar!"
+        "nome": "Lúcio: Legacy",
+        "entrada": "Come on, let's bring it together.",
+        "ult_nome": "Sound Barrier",
+        "ult": "Oh, let's break it down!"
       }
     },
     "raridade": "legado",
@@ -2316,10 +2316,10 @@
         "ult": "Quem quer UM BILHÃO de pontos de vida?"
       },
       "en": {
-        "nome": "Lúcio'Oh",
-        "entrada": "Bora violar a lei do silêncio!",
-        "ult_nome": "Barreira de som",
-        "ult": "Quem quer UM BILHÃO de pontos de vida?"
+        "nome": "Lucio'Oh",
+        "entrada": "Let's get a noise violation!",
+        "ult_nome": "Sound Barrier",
+        "ult": "Who want A BILLION hit points?!"
       }
     },
     "raridade": "incomum",
@@ -2340,8 +2340,8 @@
       },
       "en": {
         "nome": "Mauga",
-        "entrada": "Uma arma em cada mão, e um sorriso no rosto.",
-        "ult_nome": "Mano à mano",
+        "entrada": "A gun in each hand and a smile on my face!",
+        "ult_nome": "Cage Fight",
         "ult": "Se se'i koikiiki!"
       }
     },
@@ -2361,9 +2361,9 @@
         "ult": "Se se'i koikiiki!"
       },
       "en": {
-        "nome": "Mauga Dourado",
-        "entrada": "Uma arma em cada mão, e um sorriso no rosto.",
-        "ult_nome": "Mano à mano",
+        "nome": "Mauga: Golden",
+        "entrada": "A gun in each hand and a smile on my face!",
+        "ult_nome": "Cage Fight",
         "ult": "Se se'i koikiiki!"
       }
     },
@@ -2386,9 +2386,9 @@
       },
       "en": {
         "nome": "Mei",
-        "entrada": "Vamos bola de neve, precisam de nós.",
-        "ult_nome": "Nevasca",
-        "ult": "Parados! Não se movam!"
+        "entrada": "Come on, Snowball! They need our help!",
+        "ult_nome": "Blizzard",
+        "ult": "Dòng zhù! Bù xǔ zǒu!"
       }
     },
     "raridade": "comum",
@@ -2407,10 +2407,10 @@
         "ult": "Parados! Não se movam!"
       },
       "en": {
-        "nome": "Mei Dourado",
-        "entrada": "Vamos bola de neve, precisam de nós.",
-        "ult_nome": "Nevasca",
-        "ult": "Parados! Não se movam!"
+        "nome": "Mei: Golden",
+        "entrada": "Come on, Snowball! They need our help!",
+        "ult_nome": "Blizzard",
+        "ult": "Dòng zhù! Bù xǔ zǒu!"
       }
     },
     "raridade": "lendario",
@@ -2431,9 +2431,9 @@
         "ult": "Dòng zhù! Bù xǔ zǒu!"
       },
       "en": {
-        "nome": "Mei: Legado",
-        "entrada": "Vale a pena lutar pelo nosso mundo!",
-        "ult_nome": "Nevasca",
+        "nome": "Mei: Legacy",
+        "entrada": "Our world is worth fighting for.",
+        "ult_nome": "Blizzard",
         "ult": "Dòng zhù! Bù xǔ zǒu!"
       }
     },
@@ -2448,16 +2448,16 @@
     "subclasse": "Especialista",
     "lang": {
       "br": {
-        "nome": "Pulo Online",
+        "nome": "Pulo Online!",
         "entrada": "Vamos bola de neve, precisam de nós.",
         "ult_nome": "Nevasca",
         "ult": "Congela! Alguém clipa essa!"
       },
       "en": {
-        "nome": "Pulo Online",
-        "entrada": "Vamos bola de neve, precisam de nós.",
-        "ult_nome": "Nevasca",
-        "ult": "Congela! Alguém clipa essa!"
+        "nome": "Hop Online!",
+        "entrada": "Come on, Snowball! They need our help!",
+        "ult_nome": "Blizzard",
+        "ult": "Dòngzhù! Jié ge tú!"
       }
     },
     "raridade": "mitico",
@@ -2477,9 +2477,9 @@
       },
       "en": {
         "nome": "Mercy",
-        "entrada": "Não se preocupem, estarei atrás de vocês.",
-        "ult_nome": "Valkíria",
-        "ult": "Heróis nunca morrem!"
+        "entrada": "Don't worry, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Heroes never die!"
       }
     },
     "raridade": "comum",
@@ -2498,10 +2498,10 @@
         "ult": "Heróis nunca morrem... pelo preço certo!"
       },
       "en": {
-        "nome": "Mercy Diabrete",
-        "entrada": "Não se preocupem, estarei atrás de vocês.",
-        "ult_nome": "Valkíria",
-        "ult": "Heróis nunca morrem... pelo preço certo!"
+        "nome": "Mercy Imp",
+        "entrada": "Don't worry, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Heroes never die... for a price!"
       }
     },
     "raridade": "incomum",
@@ -2520,10 +2520,10 @@
         "ult": "Meus servos nunca morrem!"
       },
       "en": {
-        "nome": "Mercy Conjuradora",
-        "entrada": "Não se preocupem, estarei atrás de vocês.",
-        "ult_nome": "Valkíria",
-        "ult": "Meus servos nunca morrem!"
+        "nome": "Mercy Conjurer",
+        "entrada": "Don't worry, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "My servants never die!"
       }
     },
     "raridade": "epico",
@@ -2543,9 +2543,9 @@
       },
       "en": {
         "nome": "Mercy Sigrún",
-        "entrada": "Não se preocupem, estarei atrás de vocês.",
-        "ult_nome": "Valkíria",
-        "ult": "Até Valhalla!"
+        "entrada": "Don't worry, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Til Valhalla!"
       }
     },
     "raridade": "epico",
@@ -2564,10 +2564,10 @@
         "ult": "Avante para a vitória!"
       },
       "en": {
-        "nome": "Vitória Alada",
-        "entrada": "Não se preocupem, estarei atrás de vocês.",
-        "ult_nome": "Valkíria",
-        "ult": "Avante para a vitória!"
+        "nome": "Winged Victory",
+        "entrada": "Don't worry, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Onwards to victory!"
       }
     },
     "raridade": "epico",
@@ -2586,10 +2586,10 @@
         "ult": "Heróis nunca morrem!"
       },
       "en": {
-        "nome": "Mercy Dourada",
-        "entrada": "Não se preocupem, estarei atrás de vocês.",
-        "ult_nome": "Valkíria",
-        "ult": "Heróis nunca morrem!"
+        "nome": "Mercy: Golden",
+        "entrada": "Don't worry, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Heroes never die!"
       }
     },
     "raridade": "lendario",
@@ -2610,10 +2610,10 @@
         "ult": "Heróis nunca morrem!"
       },
       "en": {
-        "nome": "Mercy: Legado",
-        "entrada": "Eu cuidarei de você!",
-        "ult_nome": "Ressurreição",
-        "ult": "Heróis nunca morrem!"
+        "nome": "Mercy: Legacy",
+        "entrada": "I'll be watching over you.",
+        "ult_nome": "Resurrect",
+        "ult": "Heroes never die!"
       }
     },
     "raridade": "legado",
@@ -2633,10 +2633,10 @@
         "ult": "A Vingança nunca morre!"
       },
       "en": {
-        "nome": "Vingança",
-        "entrada": "Não me decepcione, estarei logo atrás de você.",
-        "ult_nome": "Valkíria",
-        "ult": "A Vingança nunca morre!"
+        "nome": "Vengeance",
+        "entrada": "Don't fail me, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Vengeance never die!"
       }
     },
     "raridade": "mitico",
@@ -2655,10 +2655,10 @@
         "ult": "A luz das estrelas é imortal!"
       },
       "en": {
-        "nome": "Guardiã Celestial",
-        "entrada": "Não se preocupem, estarei atrás de vocês.",
-        "ult_nome": "Valkíria",
-        "ult": "A luz das estrelas é imortal!"
+        "nome": "Celestial Guardian",
+        "entrada": "Don't worry, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Starlight never dies!"
       }
     },
     "raridade": "mitico",
@@ -2671,16 +2671,16 @@
     "subclasse": "Socorrista",
     "lang": {
       "br": {
-        "nome": "Mercy: Eleos, Magitecnologia misericordiosa",
+        "nome": "Mercy & Eleos: Magitecnologia misericordiosa",
         "entrada": "Não se preocupem, estarei atrás de vocês.",
         "ult_nome": "Valkíria",
         "ult": "Heróis nunca morrem!"
       },
       "en": {
-        "nome": "Mercy: Eleos, Magitecnologia misericordiosa",
-        "entrada": "Não se preocupem, estarei atrás de vocês.",
-        "ult_nome": "Valkíria",
-        "ult": "Heróis nunca morrem!"
+        "nome": "Mercy & Eleos: Merciful Magitech Staff",
+        "entrada": "Don't worry, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Heroes never die!"
       }
     },
     "raridade": "mitico",
@@ -2700,9 +2700,9 @@
       },
       "en": {
         "nome": "Mizuki",
-        "entrada": "Vou decidir o meu destino.",
-        "ult_nome": "Santuário Tekkai",
-        "ult": "Proteja-nos, kekkai!"
+        "entrada": "I'll decide my own fate.",
+        "ult_nome": "Kekkai Sanctuary",
+        "ult": "Protect us, kekkai!"
       }
     },
     "raridade": "comum",
@@ -2721,10 +2721,10 @@
         "ult": "Proteja-nos, kekkai!"
       },
       "en": {
-        "nome": "Mizuki Dourado",
-        "entrada": "Vou decidir o meu destino.",
-        "ult_nome": "Santuário Tekkai",
-        "ult": "Proteja-nos, kekkai!"
+        "nome": "Mizuki: Golden",
+        "entrada": "I'll decide my own fate.",
+        "ult_nome": "Kekkai Sanctuary",
+        "ult": "Protect us, kekkai!"
       }
     },
     "raridade": "lendario",
@@ -2746,9 +2746,9 @@
       },
       "en": {
         "nome": "Moira",
-        "entrada": "A humanidade está acorrentada. Eu encontrarei a chave.",
-        "ult_nome": "Coalecência",
-        "ult": "Submetam-se a minha vontade!"
+        "entrada": "Humanity is shackled. I will find the key.",
+        "ult_nome": "Coalescence",
+        "ult": "Surrender to my will!"
       }
     },
     "raridade": "comum",
@@ -2767,10 +2767,10 @@
         "ult": "Submetam-se a minha vontade!"
       },
       "en": {
-        "nome": "Moira Dourado",
-        "entrada": "A humanidade está acorrentada. Eu encontrarei a chave.",
-        "ult_nome": "Coalecência",
-        "ult": "Submetam-se a minha vontade!"
+        "nome": "Moira: Golden",
+        "entrada": "Humanity is shackled. I will find the key.",
+        "ult_nome": "Coalescence",
+        "ult": "Surrender to my will!"
       }
     },
     "raridade": "lendario",
@@ -2791,10 +2791,10 @@
         "ult": "Renda sua alma!"
       },
       "en": {
-        "nome": "Invocadora Ancestral",
-        "entrada": "Nossas mentes estão atadas. Submissão é a chave.",
-        "ult_nome": "Coalecência",
-        "ult": "Renda sua alma!"
+        "nome": "Ancient Caller",
+        "entrada": "Our minds are shackled. Submission is the key.",
+        "ult_nome": "Coalescence",
+        "ult": "Surrender your soul!"
       }
     },
     "raridade": "mitico",
@@ -2814,9 +2814,9 @@
       },
       "en": {
         "nome": "Orisa",
-        "entrada": "A força reside na união.",
-        "ult_nome": "Rompante Terrano",
-        "ult": "Aceite o seu destino!"
+        "entrada": "Only in unity will we find strength.",
+        "ult_nome": "Terra Surge",
+        "ult": "Pàdé ayanmọ rẹ!"
       }
     },
     "raridade": "comum",
@@ -2835,10 +2835,10 @@
         "ult": "Aceite o seu destino!"
       },
       "en": {
-        "nome": "Orisa Setor Nulo",
-        "entrada": "A força reside na união.",
-        "ult_nome": "Rompante Terrano",
-        "ult": "Aceite o seu destino!"
+        "nome": "Orisa Null Sector",
+        "entrada": "Only in unity will we find strength.",
+        "ult_nome": "Terra Surge",
+        "ult": "Pàdé ayanmọ rẹ!"
       }
     },
     "raridade": "incomum",
@@ -2857,10 +2857,10 @@
         "ult": "Aceite o seu destino!"
       },
       "en": {
-        "nome": "Orisa Dourada",
-        "entrada": "A força reside na união.",
-        "ult_nome": "Rompante Terrano",
-        "ult": "Aceite o seu destino!"
+        "nome": "Orisa: Golden",
+        "entrada": "Only in unity will we find strength.",
+        "ult_nome": "Terra Surge",
+        "ult": "Pàdé ayanmọ rẹ!"
       }
     },
     "raridade": "lendario",
@@ -2881,10 +2881,10 @@
         "ult": "Aceite a sua fera!"
       },
       "en": {
-        "nome": "Fera Grandeosa",
-        "entrada": "Apenas na luta sobreviveremos.",
-        "ult_nome": "Rompante Terrano",
-        "ult": "Aceite a sua fera!"
+        "nome": "Grand Beast",
+        "entrada": "Only through struggle do we survive!",
+        "ult_nome": "Terra Surge",
+        "ult": "Bá ẹranko ó pàdé!"
       }
     },
     "raridade": "mitico",
@@ -2903,10 +2903,10 @@
         "ult": "Aceite o seu destino!"
       },
       "en": {
-        "nome": "Orisa: Canhão de cápsulas",
-        "entrada": "A força reside na união.",
-        "ult_nome": "Rompante Terrano",
-        "ult": "Aceite o seu destino!"
+        "nome": "Orisa: Capsule Cannon",
+        "entrada": "Only in unity will we find strength.",
+        "ult_nome": "Terra Surge",
+        "ult": "Pàdé ayanmọ rẹ!"
       }
     },
     "raridade": "mitico",
@@ -2925,10 +2925,10 @@
         "ult": "Não resistam"
       },
       "en": {
-        "nome": "Orisa Clássica",
-        "entrada": "A sua proteção é o meu dever principal.",
-        "ult_nome": "Amplificador",
-        "ult": "Não resistam"
+        "nome": "Orisa Classic",
+        "entrada": "Your safety is my primary concern.",
+        "ult_nome": "Supercharger",
+        "ult": "Cease your resistance!"
       }
     },
     "raridade": "epico",
@@ -2950,9 +2950,9 @@
       },
       "en": {
         "nome": "Pharah",
-        "entrada": "Ataquem de cima.",
-        "ult_nome": "Bombardeio",
-        "ult": "A justiça vem de cima!"
+        "entrada": "Strike from above.",
+        "ult_nome": "Barrage",
+        "ult": "Justice rains from above!"
       }
     },
     "raridade": "comum",
@@ -2972,9 +2972,9 @@
       },
       "en": {
         "nome": "Hades",
-        "entrada": "A morte vem de cima.",
-        "ult_nome": "Bombardeio",
-        "ult": "O fogo do inferno vem de cima!"
+        "entrada": "Death from above.",
+        "ult_nome": "Barrage",
+        "ult": "Hellfire rains from above!"
       }
     },
     "raridade": "lendario",
@@ -2993,10 +2993,10 @@
         "ult": "A justiça vem de cima!"
       },
       "en": {
-        "nome": "Pharah Dourada",
-        "entrada": "Ataquem de cima.",
-        "ult_nome": "Bombardeio",
-        "ult": "A justiça vem de cima!"
+        "nome": "Pharah: Golden",
+        "entrada": "Strike from above.",
+        "ult_nome": "Barrage",
+        "ult": "Justice rains from above!"
       }
     },
     "raridade": "lendario",
@@ -3018,9 +3018,9 @@
       },
       "en": {
         "nome": "Pharah: Legado",
-        "entrada": "Eu protegerei os inocentes!",
-        "ult_nome": "Bombardeio",
-        "ult": "A justiça vem de cima!"
+        "entrada": "I will protect the innocent.",
+        "ult_nome": "Barrage",
+        "ult": "Justice rains from above!"
       }
     },
     "raridade": "legado",
@@ -3040,10 +3040,10 @@
         "ult": "Aí vem a desforra!"
       },
       "en": {
-        "nome": "Rainha Junker",
-        "entrada": "Meu trono fica onde eu quiser.",
-        "ult_nome": "Chacina",
-        "ult": "Aí vem a desforra!"
+        "nome": "Junker Queen",
+        "entrada": "My throne is where I say it is.",
+        "ult_nome": "Rampage",
+        "ult": "Time for the reckoning!"
       }
     },
     "raridade": "comum",
@@ -3062,10 +3062,10 @@
         "ult": "Vamos levar eles para a forca!"
       },
       "en": {
-        "nome": "Executora",
-        "entrada": "A tortura acaba quando eu disser.",
-        "ult_nome": "Chacina",
-        "ult": "Vamos levar eles para a forca!"
+        "nome": "Junker Queen",
+        "entrada": "The punishment ends when I say so.",
+        "ult_nome": "Rampage",
+        "ult": "Let's take 'em to the gallows!"
       }
     },
     "raridade": "epico",
@@ -3084,10 +3084,10 @@
         "ult": "Aí vem a desforra!"
       },
       "en": {
-        "nome": "Rainha Junker Dourada",
-        "entrada": "Meu trono fica onde eu quiser.",
-        "ult_nome": "Chacina",
-        "ult": "Aí vem a desforra!"
+        "nome": "Junker Queen: Golden",
+        "entrada": "My throne is where I say it is.",
+        "ult_nome": "Rampage",
+        "ult": "Time for the reckoning!"
       }
     },
     "raridade": "lendario",
@@ -3109,9 +3109,9 @@
       },
       "en": {
         "nome": "Zeus",
-        "entrada": "O Olímpo é aonde eu disser.",
-        "ult_nome": "Chacina",
-        "ult": "Hora da tempestade!"
+        "entrada": "Olympus is where I say it is.",
+        "ult_nome": "Rampage",
+        "ult": "Time for the thunderstorm!"
       }
     },
     "raridade": "mitico",
@@ -3131,9 +3131,9 @@
       },
       "en": {
         "nome": "Ramattra",
-        "entrada": "Teremos a paz, custe o que custar.",
-        "ult_nome": "Aniquilação",
-        "ult": "Sofra, como eu sofri!"
+        "entrada": "We will have peace at any cost.",
+        "ult_nome": "Annihilation",
+        "ult": "Suffer, as I have!"
       }
     },
     "raridade": "comum",
@@ -3152,10 +3152,10 @@
         "ult": "Sofra, como eu sofri!"
       },
       "en": {
-        "nome": "Ramattra Nêmesis",
-        "entrada": "Teremos a paz, custe o que custar.",
-        "ult_nome": "Aniquilação",
-        "ult": "Sofra, como eu sofri!"
+        "nome": "Ramattra Nemesis",
+        "entrada": "We will have peace at any cost.",
+        "ult_nome": "Annihilation",
+        "ult": "Suffer, as I have!"
       }
     },
     "raridade": "comum",
@@ -3176,9 +3176,9 @@
       },
       "en": {
         "nome": "Poseidon",
-        "entrada": "O Olímpo será meu, custe o que custar.",
-        "ult_nome": "Aniquilação",
-        "ult": "Submerja, como eu submergi!"
+        "entrada": "I will have Olympus, at any cost.",
+        "ult_nome": "Annihilation",
+        "ult": "Submerge, as I have!"
       }
     },
     "raridade": "lendario",
@@ -3197,10 +3197,10 @@
         "ult": "Sofra, como eu sofri!"
       },
       "en": {
-        "nome": "Ramattra Dourado",
-        "entrada": "Teremos a paz, custe o que custar.",
-        "ult_nome": "Aniquilação",
-        "ult": "Sofra, como eu sofri!"
+        "nome": "Ramattra: Golden",
+        "entrada": "We will have peace at any cost.",
+        "ult_nome": "Annihilation",
+        "ult": "Suffer, as I have!"
       }
     },
     "raridade": "lendario",
@@ -3218,13 +3218,13 @@
         "nome": "Ramattra :[",
         "entrada": "A agonia tem sabor de uva.",
         "ult_nome": "Aniquilação",
-        "ult": "Você sofrerá como eu, Ramattra, sofri. Seu tormento viverá mais que as estrelas, e quando o universo se tornar pó, lá estará você, ainda sofrendo, como EU sofri!"
+        "ult": "Você sofrerá como eu, Ramattra, sofri! Seu tormento viverá mais que as estrelas! E quando o universo se tornar pó, lá estará você, ainda sofrendo como EU... sofri!"
       },
       "en": {
         "nome": "Ramattra :[",
-        "entrada": "A agonia tem sabor de uva.",
-        "ult_nome": "Aniquilação",
-        "ult": "Você sofrerá como eu, Ramattra, sofri. Seu tormento viverá mais que as estrelas, e quando o universo se tornar pó, lá estará você, ainda sofrendo, como EU sofri!"
+        "entrada": "Agony is grape-flavored!",
+        "ult_nome": "Annihilation",
+        "ult": "You will suffer as I, Ramattra, have suffered! Your torment will outlast the stars! When the universe dwindles into dust, there you will be, still suffering as I have... suffered."
       }
     },
     "raridade": "epico",
@@ -3245,9 +3245,9 @@
       },
       "en": {
         "nome": "Reaper",
-        "entrada": "Você não pode escapar da morte.",
-        "ult_nome": "Desabrochar da morte",
-        "ult": "Morram, morram, morram!"
+        "entrada": "You can't escape death.",
+        "ult_nome": "Death Blossom",
+        "ult": "Die... die... die..."
       }
     },
     "raridade": "comum",
@@ -3267,9 +3267,9 @@
       },
       "en": {
         "nome": "Abóbora",
-        "entrada": "Você não pode escapar da morte.",
-        "ult_nome": "Desabrochar da morte",
-        "ult": "O ceifador vem pela sua alma!"
+        "entrada": "The Reaper comes for your souls.",
+        "ult_nome": "Death Blossom",
+        "ult": "Die... die... die..."
       }
     },
     "raridade": "incomum",
@@ -3288,10 +3288,10 @@
         "ult": "Morram, morram, morram!"
       },
       "en": {
-        "nome": "Reaper Dourado",
-        "entrada": "Você não pode escapar da morte.",
-        "ult_nome": "Desabrochar da morte",
-        "ult": "Morram, morram, morram!"
+        "nome": "Reaper: Golden",
+        "entrada": "You can't escape death.",
+        "ult_nome": "Death Blossom",
+        "ult": "Die... die... die..."
       }
     },
     "raridade": "lendario",
@@ -3312,10 +3312,10 @@
         "ult": "Morram, morram, morram!"
       },
       "en": {
-        "nome": "Reaper: Legado",
-        "entrada": "A morte caminha entre vocês!",
-        "ult_nome": "Desabrochar da morte",
-        "ult": "Morram, morram, morram!"
+        "nome": "Reaper: Legacy",
+        "entrada": "Death walks among you.",
+        "ult_nome": "Death Blossom",
+        "ult": "Die... die... die..."
       }
     },
     "raridade": "legado",
@@ -3335,10 +3335,10 @@
         "ult": "Todos... irão... morrer!"
       },
       "en": {
-        "nome": "Anúbis",
-        "entrada": "Você deve aceitar a morte.",
-        "ult_nome": "Desabrochar da morte",
-        "ult": "Todos... irão... morrer!"
+        "nome": "Anubis",
+        "entrada": "You must accept death.",
+        "ult_nome": "Death Blossom",
+        "ult": "All... Will... Die..."
       }
     },
     "raridade": "mitico",
@@ -3357,10 +3357,10 @@
         "ult": "Morram, morram, morram!"
       },
       "en": {
-        "nome": "Reaper: Aço letal",
-        "entrada": "Você não pode escapar da morte.",
-        "ult_nome": "Desabrochar da morte",
-        "ult": "Morram, morram, morram!"
+        "nome": "Reaper: Steel Death",
+        "entrada": "You can't escape death.",
+        "ult_nome": "Death Blossom",
+        "ult": "Die... die... die..."
       }
     },
     "raridade": "mitico",
@@ -3380,9 +3380,9 @@
       },
       "en": {
         "nome": "Reinhardt",
-        "entrada": "Juntos, acabaremos com eles.",
-        "ult_nome": "Abalo terrestre",
-        "ult": "Sinta o peso do martelo!"
+        "entrada": "Together, we'll strike them down!",
+        "ult_nome": "Earthshatter",
+        "ult": "Hammer down!"
       }
     },
     "raridade": "comum",
@@ -3402,8 +3402,8 @@
       },
       "en": {
         "nome": "Gridironhardt",
-        "entrada": "Juntos, acabaremos com eles.",
-        "ult_nome": "Abalo terrestre",
+        "entrada": "Together, we'll strike them down!",
+        "ult_nome": "Earthshatter",
         "ult": "Touchdown!"
       }
     },
@@ -3423,10 +3423,10 @@
         "ult": "Sinta o peso dos chifres!"
       },
       "en": {
-        "nome": "Minotauro",
-        "entrada": "Juntos, pisotearemos todos eles.",
-        "ult_nome": "Abalo terrestre",
-        "ult": "Sinta o peso dos chifres!"
+        "nome": "Minotaur",
+        "entrada": "Together, we'll charge them down!",
+        "ult_nome": "Earthshatter",
+        "ult": "Horns down!"
       }
     },
     "raridade": "epico",
@@ -3445,10 +3445,10 @@
         "ult": "Sinta o peso do martelo!"
       },
       "en": {
-        "nome": "Cavaleiro Caído",
-        "entrada": "Juntos, derrubaremos eles.",
-        "ult_nome": "Abalo terrestre",
-        "ult": "Sinta o peso do martelo!"
+        "nome": "Fallen Knight",
+        "entrada": "We will tear them down!",
+        "ult_nome": "Earthshatter",
+        "ult": "Hammer down!"
       }
     },
     "raridade": "lendario",
@@ -3467,10 +3467,10 @@
         "ult": "Sinta o peso do martelo!"
       },
       "en": {
-        "nome": "Reinhardt Dourado",
-        "entrada": "Juntos, acabaremos com eles.",
-        "ult_nome": "Abalo terrestre",
-        "ult": "Sinta o peso do martelo!"
+        "nome": "Reinhardt: Golden",
+        "entrada": "Together, we'll strike them down!",
+        "ult_nome": "Earthshatter",
+        "ult": "Hammer down!"
       }
     },
     "raridade": "lendario",
@@ -3491,10 +3491,10 @@
         "ult": "Sinta o peso do martelo!"
       },
       "en": {
-        "nome": "Reinhardt: Legado",
-        "entrada": "A justiça será feita!",
-        "ult_nome": "Abalo terrestre",
-        "ult": "Sinta o peso do martelo!"
+        "nome": "Reinhardt: Legacy",
+        "entrada": "Justice will be done.",
+        "ult_nome": "Earthshatter",
+        "ult": "Hammer down!"
       }
     },
     "raridade": "legado",
@@ -3515,9 +3515,9 @@
       },
       "en": {
         "nome": "Thor",
-        "entrada": "Os relampagos vão acabar com eles.",
-        "ult_nome": "Abalo terrestre",
-        "ult": "Sinta o peso de Mjönir!"
+        "entrada": "Lightning shall strike them down!",
+        "ult_nome": "Earthshatter",
+        "ult": "Mjölnir down!"
       }
     },
     "raridade": "mitico",
@@ -3536,10 +3536,10 @@
         "ult": "Sinta o peso do martelo!"
       },
       "en": {
-        "nome": "Reinhardt: Demônio Aprisionado",
-        "entrada": "Juntos, acabaremos com eles.",
-        "ult_nome": "Abalo terrestre",
-        "ult": "Sinta o peso do martelo!"
+        "nome": "Reinhardt: Bound Demon",
+        "entrada": "Together, we'll strike them down!",
+        "ult_nome": "Earthshatter",
+        "ult": "Hammer down!"
       }
     },
     "raridade": "mitico",
@@ -3559,9 +3559,9 @@
       },
       "en": {
         "nome": "Roadhog",
-        "entrada": "O apocalipse não acabou.",
-        "ult_nome": "Cair matando",
-        "ult": "(Risos)!"
+        "entrada": "Apocalypse ain't over.",
+        "ult_nome": "Whole Hog",
+        "ult": "(laughter)!"
       }
     },
     "raridade": "comum",
@@ -3577,13 +3577,13 @@
         "nome": "Ciclope",
         "entrada": "A odisseia não acabou.",
         "ult_nome": "Cair matando",
-        "ult": "(Risos)!"
+        "ult": "Tá na hora da pedrada!"
       },
       "en": {
         "nome": "Ciclope",
-        "entrada": "A odisseia não acabou.",
-        "ult_nome": "Cair matando",
-        "ult": "(Risos)!"
+        "entrada": "This odyssey ain't over.",
+        "ult_nome": "Whole Hog",
+        "ult": "It's bouldering time!"
       }
     },
     "raridade": "epico",
@@ -3602,10 +3602,10 @@
         "ult": "(Risos)!"
       },
       "en": {
-        "nome": "Roadhog Dourado",
-        "entrada": "O apocalipse não acabou.",
-        "ult_nome": "Cair matando",
-        "ult": "(Risos)!"
+        "nome": "Roadhog: Golden",
+        "entrada": "Apocalypse ain't over.",
+        "ult_nome": "Whole Hog",
+        "ult": "(laughter)!"
       }
     },
     "raridade": "lendario",
@@ -3626,10 +3626,10 @@
         "ult": "(Risos maníacos)!"
       },
       "en": {
-        "nome": "Roadhog: Legado",
-        "entrada": "Eu sou o apocalipse de um homen só!",
-        "ult_nome": "Cair matando",
-        "ult": "(Risos maníacos)!"
+        "nome": "Roadhog: Legacy",
+        "entrada": "I'm a one-man apocalypse.",
+        "ult_nome": "Whole Hog",
+        "ult": "(laughter)!"
       }
     },
     "raridade": "legado",
@@ -3650,9 +3650,9 @@
       },
       "en": {
         "nome": "Shion",
-        "entrada": "A dor obedece a mim.",
-        "ult_nome": "Sequência Satsuriku",
-        "ult": "Vejam o que eu me tornei!"
+        "entrada": "Pain is mine to master.",
+        "ult_nome": "Satsuriku Spree",
+        "ult": "Kore ga atashi no narenohateda!"
       }
     },
     "raridade": "comum",
@@ -3671,10 +3671,10 @@
         "ult": "Vejam o que eu me tornei!"
       },
       "en": {
-        "nome": "Shion Dourada",
-        "entrada": "A dor obedece a mim.",
-        "ult_nome": "Sequência Satsuriku",
-        "ult": "Vejam o que eu me tornei!"
+        "nome": "Shion: Golden",
+        "entrada": "Pain is mine to master.",
+        "ult_nome": "Satsuriku Spree",
+        "ult": "Kore ga atashi no narenohateda!"
       }
     },
     "raridade": "lendario",
@@ -3694,9 +3694,9 @@
       },
       "en": {
         "nome": "Sigma",
-        "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
-        "ult_nome": "Fluxo gravitacional",
-        "ult": "O universo canta para mim!"
+        "entrada": "Why seek answers when we do not know the question?",
+        "ult_nome": "Gravitic Flux",
+        "ult": "Het universum zingt voor mij!"
       }
     },
     "raridade": "comum",
@@ -3716,9 +3716,9 @@
       },
       "en": {
         "nome": "Sigma Scuba",
-        "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
-        "ult_nome": "Fluxo gravitacional",
-        "ult": "O universo canta para mim!"
+        "entrada": "Why seek answers when we do not know the question?",
+        "ult_nome": "Gravitic Flux",
+        "ult": "Het universum zingt voor mij!"
       }
     },
     "raridade": "incomum",
@@ -3737,10 +3737,10 @@
         "ult": "O universo canta para mim!"
       },
       "en": {
-        "nome": "Sigma Dourado",
-        "entrada": "Por que buscar resposta, quando não sabemos a pergunta?",
-        "ult_nome": "Fluxo gravitacional",
-        "ult": "O universo canta para mim!"
+        "nome": "Sigma: Golden",
+        "entrada": "Why seek answers when we do not know the question?",
+        "ult_nome": "Gravitic Flux",
+        "ult": "Het universum zingt voor mij!"
       }
     },
     "raridade": "lendario",
@@ -3761,10 +3761,10 @@
         "ult": "O universo se curva à mim!"
       },
       "en": {
-        "nome": "Imperador Galático",
-        "entrada": "Porquê questionar se você pode apenas obedecer?",
-        "ult_nome": "Fluxo gravitacional",
-        "ult": "O universo se curva à mim!"
+        "nome": "Galactic Emperor",
+        "entrada": "WWhy ask questions when you can just obey?",
+        "ult_nome": "Gravitic Flux",
+        "ult": "Het universum buigt voor mij!"
       }
     },
     "raridade": "mitico",
@@ -3784,9 +3784,9 @@
       },
       "en": {
         "nome": "Sierra",
-        "entrada": "Pra cima sempre, nunca pra baixo.",
-        "ult_nome": "Vanguarda explosiva",
-        "ult": "De olho no céu!"
+        "entrada": "Always climb, never fall.",
+        "ult_nome": "Trailblazer",
+        "ult": "Eyes on the skies!"
       }
     },
     "raridade": "comum",
@@ -3805,10 +3805,10 @@
         "ult": "De olho no céu!"
       },
       "en": {
-        "nome": "Sierra Dourada",
-        "entrada": "Pra cima sempre, nunca pra baixo.",
-        "ult_nome": "Vanguarda explosiva",
-        "ult": "De olho no céu!"
+        "nome": "Sierra: Golden",
+        "entrada": "Always climb, never fall.",
+        "ult_nome": "Trailblazer",
+        "ult": "Eyes on the skies!"
       }
     },
     "raridade": "lendario",
@@ -3829,10 +3829,10 @@
         "ult": "De olho no céu!"
       },
       "en": {
-        "nome": "Sierra Miau-miau",
-        "entrada": "Pra cima sempre, nunca pra baixo.",
-        "ult_nome": "Vanguarda explosiva",
-        "ult": "De olho no céu!"
+        "nome": "Sierra Nyan Café",
+        "entrada": "Always climb, never fall.",
+        "ult_nome": "Trailblazer",
+        "ult": "Eyes on the skies!"
       }
     },
     "raridade": "ultra",
@@ -3852,9 +3852,9 @@
       },
       "en": {
         "nome": "Sojourn",
-        "entrada": "Estamos nessa juntos. Todos nós.",
-        "ult_nome": "Sobrecarga",
-        "ult": "Isso termina agora!"
+        "entrada": "We're in this together. All of us.",
+        "ult_nome": "Overclock",
+        "ult": "This ends now!"
       }
     },
     "raridade": "comum",
@@ -3873,10 +3873,10 @@
         "ult": "Isso termina agora!"
       },
       "en": {
-        "nome": "Almirante infinito",
-        "entrada": "Estamos nessa juntos. Todos nós.",
-        "ult_nome": "Sobrecarga",
-        "ult": "Isso termina agora!"
+        "nome": "Infinite Admiral",
+        "entrada": "We're in this together. All of us.",
+        "ult_nome": "Overclock",
+        "ult": "This ends now!"
       }
     },
     "raridade": "incomum",
@@ -3895,10 +3895,10 @@
         "ult": "Isso termina agora!"
       },
       "en": {
-        "nome": "Sojourn Dourada",
-        "entrada": "Estamos nessa juntos. Todos nós.",
-        "ult_nome": "Sobrecarga",
-        "ult": "Isso termina agora!"
+        "nome": "Sojourn: Golden",
+        "entrada": "We're in this together. All of us.",
+        "ult_nome": "Overclock",
+        "ult": "This ends now!"
       }
     },
     "raridade": "lendario",
@@ -3919,10 +3919,10 @@
         "ult": "A esperança brilha agora!"
       },
       "en": {
-        "nome": "Sentinela Ultra-violeta",
-        "entrada": "Todos nós brilhamos. Juntos.",
-        "ult_nome": "Sobrecarga",
-        "ult": "A esperança brilha agora!"
+        "nome": "Ultraviolet Sentinel",
+        "entrada": "We shine together. All of us.",
+        "ult_nome": "Overclock",
+        "ult": "Hope shines now!"
       }
     },
     "raridade": "mitico",
@@ -3941,10 +3941,10 @@
         "ult": "Você está na minha mira!"
       },
       "en": {
-        "nome": "Soldado: 76",
-        "entrada": "Todo soldado precisa de uma causa.",
-        "ult_nome": "Visor tático",
-        "ult": "Você está na minha mira!"
+        "nome": "Soldier: 76",
+        "entrada": "Every soldier needs a cause.",
+        "ult_nome": "Tactical Visor",
+        "ult": "I've got you in my sights!"
       }
     },
     "raridade": "comum",
@@ -3963,10 +3963,10 @@
         "ult": "Você está na minha mira!"
       },
       "en": {
-        "nome": "Churrasqueiro: 76",
-        "entrada": "Todo soldado precisa de uma causa.",
-        "ult_nome": "Óculos de sol",
-        "ult": "Você está na minha mira!"
+        "nome": "Grillmaster: 76",
+        "entrada": "Every soldier needs a cause.",
+        "ult_nome": "Tactical sunglasses",
+        "ult": "Tactical sunglasses activated!"
       }
     },
     "raridade": "incomum",
@@ -3985,10 +3985,10 @@
         "ult": "Você está na minha mira!"
       },
       "en": {
-        "nome": "Guarda Infinito: 76",
-        "entrada": "Todo império precisa de um cão de guarda.",
-        "ult_nome": "Visor tático",
-        "ult": "Você está na minha mira!"
+        "nome": "Infinite Guard: 76",
+        "entrada": "Every empire needs a watchdog.",
+        "ult_nome": "Tactical Visor",
+        "ult": "I've got you in my sights!"
       }
     },
     "raridade": "epico",
@@ -4001,16 +4001,16 @@
     "subclasse": "Especialista",
     "lang": {
       "br": {
-        "nome": "Soldado: 76 Dourado",
+        "nome": "Soldado: Dourado 76",
         "entrada": "Todo soldado precisa de uma causa.",
         "ult_nome": "Visor tático",
         "ult": "Você está na minha mira!"
       },
       "en": {
-        "nome": "Soldado: 76 Dourado",
-        "entrada": "Todo soldado precisa de uma causa.",
-        "ult_nome": "Visor tático",
-        "ult": "Você está na minha mira!"
+        "nome": "Soldier: Golden 76",
+        "entrada": "Every soldier needs a cause.",
+        "ult_nome": "Tactical Visor",
+        "ult": "I've got you in my sights!"
       }
     },
     "raridade": "lendario",
@@ -4031,10 +4031,10 @@
         "ult": "Você está na minha mira!"
       },
       "en": {
-        "nome": "Soldado: Legado 76",
-        "entrada": "Somos todos soldados agora!",
-        "ult_nome": "Visor tático",
-        "ult": "Você está na minha mira!"
+        "nome": "Soldado: Legacy 76",
+        "entrada": "We're all soldiers now.",
+        "ult_nome": "Tactical Visor",
+        "ult": "I've got you in my sights!"
       }
     },
     "raridade": "legado",
@@ -4054,10 +4054,10 @@
         "ult": "Você está na minha sobrecarga!"
       },
       "en": {
-        "nome": "Voltagem Máxima",
-        "entrada": "Somos todos soldados elétricos agora.",
-        "ult_nome": "Visor tático",
-        "ult": "Você está na minha sobrecarga!"
+        "nome": "Volted Overdrive",
+        "entrada": "We're charged soldiers now.",
+        "ult_nome": "Tactical Visor",
+        "ult": "I've got you in overdrive!"
       }
     },
     "raridade": "mitico",
@@ -4070,16 +4070,16 @@
     "subclasse": "Especialista",
     "lang": {
       "br": {
-        "nome": "Soldado: 76 Libertação",
+        "nome": "Soldado: 76, Libertação",
         "entrada": "Todo soldado precisa de uma causa.",
         "ult_nome": "Visor tático",
         "ult": "Você está na minha mira!"
       },
       "en": {
-        "nome": "Soldado: 76 Libertação",
-        "entrada": "Todo soldado precisa de uma causa.",
-        "ult_nome": "Visor tático",
-        "ult": "Você está na minha mira!"
+        "nome": "Soldado: 76, Deliverance",
+        "entrada": "Every soldier needs a cause.",
+        "ult_nome": "Tactical Visor",
+        "ult": "I've got you in my sights!"
       }
     },
     "raridade": "mitico",
@@ -4099,8 +4099,8 @@
       },
       "en": {
         "nome": "Sombra",
-        "entrada": "No meu mundo, não existem segredos.",
-        "ult_nome": "P.E.M.",
+        "entrada": "In my world, there are no secrets.",
+        "ult_nome": "E.M.P.",
         "ult": "¡Apagando las luces!"
       }
     },
@@ -4120,9 +4120,9 @@
         "ult": "¡La oscuridad te espera!"
       },
       "en": {
-        "nome": "Caçadora de Demônios",
-        "entrada": "No meu mundo, não existem segredos.",
-        "ult_nome": "P.E.M.",
+        "nome": "Demon Hunter",
+        "entrada": "In my world, there are no secrets.",
+        "ult_nome": "E.M.P.",
         "ult": "¡La oscuridad te espera!"
       }
     },
@@ -4142,9 +4142,9 @@
         "ult": "¡Apagando las luces!"
       },
       "en": {
-        "nome": "Sombra Dourada",
-        "entrada": "No meu mundo, não existem segredos.",
-        "ult_nome": "P.E.M.",
+        "nome": "Sombra: Golden",
+        "entrada": "In my world, there are no secrets.",
+        "ult_nome": "E.M.P.",
         "ult": "¡Apagando las luces!"
       }
     },
@@ -4167,9 +4167,9 @@
       },
       "en": {
         "nome": "Symmetra",
-        "entrada": "Da imperfeição, construiremos um novo mundo.",
-        "ult_nome": "Barreira de fótons",
-        "ult": "Essa é a realidade absoluta!"
+        "entrada": "From imperfection, we build a new world.",
+        "ult_nome": "Photon Barrier",
+        "ult": "Yahi param vaastavikta hai!"
       }
     },
     "raridade": "comum",
@@ -4188,10 +4188,10 @@
         "ult": "Essa é a realidade absoluta!"
       },
       "en": {
-        "nome": "Symmetra Dourada",
-        "entrada": "Da imperfeição, construiremos um novo mundo.",
-        "ult_nome": "Barreira de fótons",
-        "ult": "Essa é a realidade absoluta!"
+        "nome": "Symmetra: Golden",
+        "entrada": "From imperfection, we build a new world.",
+        "ult_nome": "Photon Barrier",
+        "ult": "Yahi param vaastavikta hai!"
       }
     },
     "raridade": "lendario",
@@ -4207,15 +4207,15 @@
     "lang": {
       "br": {
         "nome": "Symmetra: Legado",
-        "entrada": "O verdadeiro inimigo da humanidade, é a desordem!",
+        "entrada": "O verdadeiro inimigo da humanidade, é a desordem.",
         "ult_nome": "Teleportador",
         "ult": "Teletransportador online, eu abri caminho!"
       },
       "en": {
-        "nome": "Symmetra: Legado",
-        "entrada": "O verdadeiro inimigo da humanidade, é a desordem!",
-        "ult_nome": "Teleportador",
-        "ult": "Teletransportador online, eu abri caminho!"
+        "nome": "Symmetra: Legacy",
+        "entrada": "The true enemy of humanity is disorder.",
+        "ult_nome": "Teleporter",
+        "ult": "Teleporter online. I have opened the path."
       }
     },
     "raridade": "legado",
@@ -4235,10 +4235,10 @@
         "ult": "Teletransportador online, eu abri caminho!"
       },
       "en": {
-        "nome": "Symmetra Clássica",
-        "entrada": "O verdadeiro inimigo da humanidade, é a desordem.",
-        "ult_nome": "Teleportador",
-        "ult": "Teletransportador online, eu abri caminho!"
+        "nome": "Symmetra Classic",
+        "entrada": "The true enemy of humanity is disorder.",
+        "ult_nome": "Teleporter",
+        "ult": "Teleporter online. I have opened the path."
       }
     },
     "raridade": "epico",
@@ -4255,14 +4255,14 @@
       "br": {
         "nome": "SymmetrartemmyS",
         "entrada": "Melhor que RGB!",
-        "ult_nome": "Barreira de fótons",
+        "ult_nome": "Barreira de gratiluz",
         "ult": "Uma barreira de gratiluz!"
       },
       "en": {
         "nome": "SymmetrartemmyS",
-        "entrada": "Melhor que RGB!",
-        "ult_nome": "Barreira de fótons",
-        "ult": "Uma barreira de gratiluz!"
+        "entrada": "Superior to RGB!",
+        "ult_nome": "Incredibly Barrier",
+        "ult": "This wall is incredibly lit!"
       }
     },
     "raridade": "incomum",
@@ -4277,15 +4277,15 @@
     "lang": {
       "br": {
         "nome": "Torbjörn",
-        "entrada": "Ferramenta na mão. Cabeça a todo vapor.",
+        "entrada": "Ferramenta na mão; Cabeça a todo vapor.",
         "ult_nome": "Núcleo fundido",
         "ult": "Núcleo fundido!"
       },
       "en": {
         "nome": "Torbjörn",
-        "entrada": "Ferramenta na mão. Cabeça a todo vapor.",
-        "ult_nome": "Núcleo fundido",
-        "ult": "Núcleo fundido!"
+        "entrada": "Tools in hand; brain in gear.",
+        "ult_nome": "Molten Core",
+        "ult": "Molten core!"
       }
     },
     "raridade": "comum",
@@ -4304,10 +4304,10 @@
         "ult": "Núcleo fundido!"
       },
       "en": {
-        "nome": "Engenheiro Espacial",
+        "nome": "Starship Engineer",
         "entrada": "Took wun huk. Brees'tin gree!",
-        "ult_nome": "Núcleo fundido",
-        "ult": "Núcleo fundido!"
+        "ult_nome": "Molten Core",
+        "ult": "Molten core!"
       }
     },
     "raridade": "epico",
@@ -4326,10 +4326,10 @@
         "ult": "Núcleo fundido!"
       },
       "en": {
-        "nome": "Torbjörn Dourado",
-        "entrada": "Ferramenta na mão. Cabeça a todo vapor.",
-        "ult_nome": "Núcleo fundido",
-        "ult": "Núcleo fundido!"
+        "nome": "Torbjörn: Golden",
+        "entrada": "Tools in hand; brain in gear.",
+        "ult_nome": "Molten Core",
+        "ult": "Molten core!"
       }
     },
     "raridade": "lendario",
@@ -4350,10 +4350,10 @@
         "ult": "Núcleo fundido!"
       },
       "en": {
-        "nome": "Torbjörn: Legado",
-        "entrada": "Construir, para destruir!",
-        "ult_nome": "Sobrecarga",
-        "ult": "Núcleo fundido!"
+        "nome": "Torbjörn: Legacy",
+        "entrada": "Build 'em up, break 'em down!",
+        "ult_nome": "Overload",
+        "ult": "MOLTEN CORE!"
       }
     },
     "raridade": "legado",
@@ -4373,10 +4373,10 @@
         "ult": "Núcleo fundido!"
       },
       "en": {
-        "nome": "Torbjörn Clássico",
-        "entrada": "Construir, para destruir.",
-        "ult_nome": "Sobrecarga",
-        "ult": "Núcleo fundido!"
+        "nome": "Torbjörn Classic",
+        "entrada": "Build 'em up, break 'em down!",
+        "ult_nome": "Overload",
+        "ult": "MOLTEN CORE!"
       }
     },
     "raridade": "epico",
@@ -4398,9 +4398,9 @@
       },
       "en": {
         "nome": "Tracer",
-        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
-        "ult_nome": "Bomba eletromagnética",
-        "ult": "Pega essa!"
+        "entrada": "Cheers, love! It's time to save the world.",
+        "ult_nome": "Pulse Bomb",
+        "ult": "Bomb's tickin'!"
       }
     },
     "raridade": "comum",
@@ -4416,13 +4416,13 @@
         "nome": "Operadora Oxton",
         "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
         "ult_nome": "Bomba eletromagnética",
-        "ult": "Hahaha!"
+        "ult": "Pega!"
       },
       "en": {
         "nome": "Operadora Oxton",
-        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
-        "ult_nome": "Bomba eletromagnética",
-        "ult": "Hahaha!"
+        "entrada": "Cheers, love! It's time to save the world.",
+        "ult_nome": "Pulse Bomb",
+        "ult": "Catch!"
       }
     },
     "raridade": "epico",
@@ -4438,13 +4438,13 @@
         "nome": "Tracer Decênio",
         "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
         "ult_nome": "Bomba eletromagnética",
-        "ult": "Pega essa!"
+        "ult": "Um presentinho!"
       },
       "en": {
-        "nome": "Tracer Decênio",
-        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
-        "ult_nome": "Bomba eletromagnética",
-        "ult": "Pega essa!"
+        "nome": "Tracer Decennium",
+        "entrada": "Cheers, love! It's time to save the world.",
+        "ult_nome": "Pulse Bomb",
+        "ult": "Present for ya!!"
       }
     },
     "raridade": "lendario",
@@ -4461,13 +4461,13 @@
         "nome": "Tracer Dourada",
         "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
         "ult_nome": "Bomba eletromagnética",
-        "ult": "Uma lembrancinha!"
+        "ult": "Entrega especial!"
       },
       "en": {
-        "nome": "Tracer Dourada",
-        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
-        "ult_nome": "Bomba eletromagnética",
-        "ult": "Uma lembrancinha!"
+        "nome": "Tracer: Golden",
+        "entrada": "Cheers, love! It's time to save the world.",
+        "ult_nome": "Pulse Bomb",
+        "ult": "Special delivery!"
       }
     },
     "raridade": "lendario",
@@ -4488,10 +4488,10 @@
         "ult": "Lá vai bomba!"
       },
       "en": {
-        "nome": "Tracer: Legado",
-        "entrada": "Não se preocupem queridos, a cavalaria chegou!",
-        "ult_nome": "Bomba eletromagnética",
-        "ult": "Lá vai bomba!"
+        "nome": "Tracer: Legacy",
+        "entrada": "Cheers, love! The cavalry's here!",
+        "ult_nome": "Pulse Bomb",
+        "ult": "Bombs away!"
       }
     },
     "raridade": "legado",
@@ -4511,10 +4511,10 @@
         "ult": "Trouxe para você!"
       },
       "en": {
-        "nome": "Aventureira",
-        "entrada": "Vamos lá escudeiros! É hora de salvar o reino!",
-        "ult_nome": "Bomba eletromagnética",
-        "ult": "Trouxe para você!"
+        "nome": "Adventurer",
+        "entrada": "Cheers, squire! It's time to save the realm!",
+        "ult_nome": "Pulse Bomb",
+        "ult": "Courier's here!"
       }
     },
     "raridade": "mitico",
@@ -4534,8 +4534,8 @@
       },
       "en": {
         "nome": "Vendetta",
-        "entrada": "O império sou eu.",
-        "ult_nome": "Lâmina retalhadora",
+        "entrada": "I am the empire.",
+        "ult_nome": "Sundering Blade",
         "ult": "Arriva la punizione!"
       }
     },
@@ -4555,9 +4555,9 @@
         "ult": "Arriva la punizione!"
       },
       "en": {
-        "nome": "Vendetta Dourada",
-        "entrada": "O império sou eu.",
-        "ult_nome": "Lâmina retalhadora",
+        "nome": "Vendetta: Golden",
+        "entrada": "I am the empire.",
+        "ult_nome": "Sundering Blade",
         "ult": "Arriva la punizione!"
       }
     },
@@ -4580,9 +4580,9 @@
       },
       "en": {
         "nome": "Venture",
-        "entrada": "Vamo fazer história!",
-        "ult_nome": "Shoque tectônico",
-        "ult": "Iniciando escavação!"
+        "entrada": "Let's make history!",
+        "ult_nome": "Tectonic Shock",
+        "ult": "Excavation initiation!"
       }
     },
     "raridade": "comum",
@@ -4601,10 +4601,10 @@
         "ult": "Iniciando escavação!"
       },
       "en": {
-        "nome": "Venture Dourado",
-        "entrada": "Vamo fazer história!",
-        "ult_nome": "Shoque tectônico",
-        "ult": "Iniciando escavação!"
+        "nome": "Venture: Golden",
+        "entrada": "Let's make history!",
+        "ult_nome": "Tectonic Shock",
+        "ult": "Excavation initiation!"
       }
     },
     "raridade": "lendario",
@@ -4626,9 +4626,9 @@
       },
       "en": {
         "nome": "Widowmaker",
-        "entrada": "Minha mira é devastadora.",
-        "ult_nome": "Visão infravermelha",
-        "ult": "Ninguém se esconde da minha mira!"
+        "entrada": "I aim to devastate.",
+        "ult_nome": "Infra-Sight",
+        "ult": "No one can hide from my sight."
       }
     },
     "raridade": "comum",
@@ -4647,10 +4647,10 @@
         "ult": "Ninguém se esconde da caçadora!"
       },
       "en": {
-        "nome": "Caçadora",
-        "entrada": "Minha mira é devastadora.",
-        "ult_nome": "Visão infravermelha",
-        "ult": "Ninguém se esconde da caçadora!"
+        "nome": "Huntress",
+        "entrada": "I aim to devastate.",
+        "ult_nome": "Infra-Sight",
+        "ult": "No one can hide from the huntress."
       }
     },
     "raridade": "incomum",
@@ -4669,10 +4669,10 @@
         "ult": "Ninguém se esconde da minha mira!"
       },
       "en": {
-        "nome": "Coração da graça",
-        "entrada": "Minha mira é devastadora.",
-        "ult_nome": "Visão infravermelha",
-        "ult": "Ninguém se esconde da minha mira!"
+        "nome": "Heart of Grace",
+        "entrada": "I aim to devastate.",
+        "ult_nome": "Infra-Sight",
+        "ult": "No one can hide from my sight."
       }
     },
     "raridade": "incomum",
@@ -4691,10 +4691,10 @@
         "ult": "O mal não se esconde da minha mira!"
       },
       "en": {
-        "nome": "Capitã Lacorix",
-        "entrada": "Minha mira é libertadora.",
-        "ult_nome": "Visão infravermelha",
-        "ult": "O mal não se esconde da minha mira!"
+        "nome": "Captain Lacorix",
+        "entrada": "I aim to liberate.",
+        "ult_nome": "Infra-Sight",
+        "ult": "Evil can't hide from my sight."
       }
     },
     "raridade": "lendario",
@@ -4714,9 +4714,9 @@
       },
       "en": {
         "nome": "Medusa",
-        "entrada": "Minha mira pode paralizar.",
-        "ult_nome": "Visão infravermelha",
-        "ult": "Ninguém sobrevive à minha visão!"
+        "entrada": "I aim to petrify.",
+        "ult_nome": "Infra-Sight",
+        "ult": "No one can survive my sight."
       }
     },
     "raridade": "lendario",
@@ -4735,10 +4735,10 @@
         "ult": "Ninguém se esconde da minha mira!"
       },
       "en": {
-        "nome": "Widowmaker Dourada",
-        "entrada": "Minha mira é devastadora.",
-        "ult_nome": "Visão infravermelha",
-        "ult": "Ninguém se esconde da minha mira!"
+        "nome": "Widowmaker: Golden",
+        "entrada": "I aim to devastate.",
+        "ult_nome": "Infra-Sight",
+        "ult": "No one can hide from my sight."
       }
     },
     "raridade": "lendario",
@@ -4759,10 +4759,10 @@
         "ult": "Ninguém se esconde da minha mira!"
       },
       "en": {
-        "nome": "Widowmaker: Legado",
-        "entrada": "Um tiro, uma morte!",
-        "ult_nome": "Visão infravermelha",
-        "ult": "Ninguém se esconde da minha mira!"
+        "nome": "Widowmaker: Legacy",
+        "entrada": "One shot, one kill.",
+        "ult_nome": "Infra-Sight",
+        "ult": "No one can hide from my sight."
       }
     },
     "raridade": "legado",
@@ -4782,10 +4782,10 @@
         "ult": "Ninguém resiste ao meu feitiço!"
       },
       "en": {
-        "nome": "Feiticeira",
-        "entrada": "Minha mira te encanta.",
-        "ult_nome": "Visão infravermelha",
-        "ult": "Ninguém resiste ao meu feitiço!"
+        "nome": "Spellbinder",
+        "entrada": "I aim to captivate.",
+        "ult_nome": "Infra-Sight",
+        "ult": "Personne ne résiste à mon charme."
       }
     },
     "raridade": "mitico",
@@ -4805,9 +4805,9 @@
       },
       "en": {
         "nome": "Widowmaker: Dame chance",
-        "entrada": "Minha mira é devastadora.",
-        "ult_nome": "Visão infravermelha",
-        "ult": "Ninguém se esconde da minha mira!"
+        "entrada": "I aim to devastate.",
+        "ult_nome": "Infra-Sight",
+        "ult": "No one can hide from my sight."
       }
     },
     "raridade": "mitico",
@@ -4827,9 +4827,9 @@
       },
       "en": {
         "nome": "Winston",
-        "entrada": "Um mundo melhor é possível hoje.",
-        "ult_nome": "Fúria primata",
-        "ult": "(Rugido)!"
+        "entrada": "A better world is possible today.",
+        "ult_nome": "Primal Rage",
+        "ult": "(roar)!"
       }
     },
     "raridade": "comum",
@@ -4842,16 +4842,16 @@
     "subclasse": "Cósmico",
     "lang": {
       "br": {
-        "nome": "Winston Extraterrestre",
+        "nome": "Extraterrestre",
         "entrada": "Uma galáxia melhor é possível hoje.",
         "ult_nome": "Fúria primata",
         "ult": "(Rugido)!"
       },
       "en": {
-        "nome": "Winston Extraterrestre",
-        "entrada": "Uma galáxia melhor é possível hoje.",
-        "ult_nome": "Fúria primata",
-        "ult": "(Rugido)!"
+        "nome": "Extraterrestrial",
+        "entrada": "A better galaxy is possible today.",
+        "ult_nome": "Primal Rage",
+        "ult": "(roar)!"
       }
     },
     "raridade": "epico",
@@ -4870,10 +4870,10 @@
         "ult": "(Rugido)!"
       },
       "en": {
-        "nome": "Winston Dourado",
-        "entrada": "Um mundo melhor é possível hoje.",
-        "ult_nome": "Fúria primata",
-        "ult": "(Rugido)!"
+        "nome": "Winston: Golden",
+        "entrada": "A better world is possible today.",
+        "ult_nome": "Primal Rage",
+        "ult": "(roar)!"
       }
     },
     "raridade": "lendario",
@@ -4894,10 +4894,10 @@
         "ult": "(Rugido)!"
       },
       "en": {
-        "nome": "Winston: Legado",
-        "entrada": "A imaginação é a essência da descoberta!",
-        "ult_nome": "Fúria primata",
-        "ult": "(Rugido)!"
+        "nome": "Winston: Legacy",
+        "entrada": "Imagination is the essence of discovery.",
+        "ult_nome": "Primal Rage",
+        "ult": "(roar)!"
       }
     },
     "raridade": "legado",
@@ -4941,9 +4941,9 @@
       },
       "en": {
         "nome": "Wrecking ball",
-        "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
-        "ult_nome": "Campo minado",
-        "ult": "Área negada!"
+        "entrada": "Weapons operational. Grapple primed. Hamster pumped.",
+        "ult_nome": "Minefield",
+        "ult": "Area denied!"
       }
     },
     "raridade": "comum",
@@ -4962,10 +4962,10 @@
         "ult": "Área negada!"
       },
       "en": {
-        "nome": "Wrecking ball Dourado",
-        "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
-        "ult_nome": "Campo minado",
-        "ult": "Área negada!"
+        "nome": "Wrecking ball: Golden",
+        "entrada": "Weapons operational. Grapple primed. Hamster pumped.",
+        "ult_nome": "Minefield",
+        "ult": "Area denied!"
       }
     },
     "raridade": "lendario",
@@ -4986,10 +4986,10 @@
         "ult": "Comtemplem, os filhos de Wrecking Ball!"
       },
       "en": {
-        "nome": "Wrecking ball (& filhos)",
-        "entrada": "Junte todas as bolinhas e troque por um prêmio!",
-        "ult_nome": "Campo minado",
-        "ult": "Comtemplem, os filhos de Wrecking Ball!"
+        "nome": "Wrecking ball (& children)",
+        "entrada": "Collect the little balls to win a prize.",
+        "ult_nome": "Minefield",
+        "ult": "Behold the children of Wrecking Ball!"
       }
     },
     "raridade": "incomum",
@@ -5010,9 +5010,9 @@
       },
       "en": {
         "nome": "Wuyang",
-        "entrada": "Sabe o que dizem. É só seguir o fluxo.",
-        "ult_nome": "Maré explosiva",
-        "ult": "Mudando a maré!"
+        "entrada": "You know what they say. Just go with the flow.",
+        "ult_nome": "Tidal Blast",
+        "ult": "Reverse the tide!"
       }
     },
     "raridade": "comum",
@@ -5031,10 +5031,10 @@
         "ult": "Mudando a maré!"
       },
       "en": {
-        "nome": "Wuyang Piscina",
-        "entrada": "Sabe o que dizem. É só seguir o fluxo.",
-        "ult_nome": "Maré explosiva",
-        "ult": "Mudando a maré!"
+        "nome": "Wuyang Poolside",
+        "entrada": "You know what they say. Just go with the flow.",
+        "ult_nome": "Tidal Blast",
+        "ult": "Reverse the tide!"
       }
     },
     "raridade": "incomum",
@@ -5053,10 +5053,10 @@
         "ult": "Mudando a maré!"
       },
       "en": {
-        "nome": "Wuyang Dourado",
-        "entrada": "Sabe o que dizem. É só seguir o fluxo.",
-        "ult_nome": "Maré explosiva",
-        "ult": "Mudando a maré!"
+        "nome": "Wuyang: Golden",
+        "entrada": "You know what they say. Just go with the flow.",
+        "ult_nome": "Tidal Blast",
+        "ult": "Reverse the tide!"
       }
     },
     "raridade": "lendario",
@@ -5078,8 +5078,8 @@
       },
       "en": {
         "nome": "Zarya",
-        "entrada": "Vamos atropelar todos.",
-        "ult_nome": "Fluxo de gravitons",
+        "entrada": "We will crush them!",
+        "ult_nome": "Graviton Surge",
         "ult": "Ogon' po gotovnosti!"
       }
     },
@@ -5096,13 +5096,13 @@
         "nome": "Zarya Talon",
         "entrada": "Vamos atropelar todos.",
         "ult_nome": "Zona expulsiva",
-        "ult": "Abrir fogo!"
+        "ult": "Ogon' po gotovnosti!"
       },
       "en": {
         "nome": "Zarya Talon",
-        "entrada": "Vamos atropelar todos.",
-        "ult_nome": "Zona expulsiva",
-        "ult": "Abrir fogo!"
+        "entrada": "We will crush them!",
+        "ult_nome": "Graviton Surge",
+        "ult": "Ogon' po gotovnosti!"
       }
     },
     "raridade": "epico",
@@ -5121,9 +5121,9 @@
         "ult": "Ogon' po gotovnosti!"
       },
       "en": {
-        "nome": "Zarya Dourada",
-        "entrada": "Vamos atropelar todos.",
-        "ult_nome": "Fluxo de gravitons",
+        "nome": "Zarya: Golden",
+        "entrada": "We will crush them!",
+        "ult_nome": "Graviton Surge",
         "ult": "Ogon' po gotovnosti!"
       }
     },
@@ -5145,9 +5145,9 @@
         "ult": "Ogon' po gotovnosti!"
       },
       "en": {
-        "nome": "Zarya: Legado",
-        "entrada": "Juntos nós somos fortes!",
-        "ult_nome": "Fluxo de gravitons",
+        "nome": "Zarya: Legacy",
+        "entrada": "Together, we are strong.",
+        "ult_nome": "Graviton Surge",
         "ult": "Ogon' po gotovnosti!"
       }
     },
@@ -5169,9 +5169,9 @@
       },
       "en": {
         "nome": "Zenyatta",
-        "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
-        "ult_nome": "Transcendência",
-        "ult": "Sintam a tranquilidade!"
+        "entrada": "Amid discord, we will find tranquility.",
+        "ult_nome": "Transcendence",
+        "ult": "Experience tranquility!"
       }
     },
     "raridade": "comum",
@@ -5191,9 +5191,9 @@
       },
       "en": {
         "nome": "Zenyatta Cultista",
-        "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
-        "ult_nome": "Transcendência",
-        "ult": "Sintam o vazio!"
+        "entrada": "Amid discord, we will find tranquility.",
+        "ult_nome": "Transcendence",
+        "ult": "Experience nothingness!"
       }
     },
     "raridade": "epico",
@@ -5213,9 +5213,9 @@
       },
       "en": {
         "nome": "Destruidor Z-3N",
-        "entrada": "Em meio a discórdia, encontraremos o triunfo.",
-        "ult_nome": "Transcendência",
-        "ult": "Sintam a tranquilidade!"
+        "entrada": "Amid discord, we will find triumph.",
+        "ult_nome": "Transcendence",
+        "ult": "Experience tranquility!"
       }
     },
     "raridade": "epico",
@@ -5234,10 +5234,10 @@
         "ult": "Sintam a tranquilidade!"
       },
       "en": {
-        "nome": "Zenyatta Dourado",
-        "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
-        "ult_nome": "Transcendência",
-        "ult": "Sintam a tranquilidade!"
+        "nome": "Zenyatta: Golden",
+        "entrada": "Amid discord, we will find tranquility.",
+        "ult_nome": "Transcendence",
+        "ult": "Experience tranquility!"
       }
     },
     "raridade": "lendario",
@@ -5258,10 +5258,10 @@
         "ult": "Sintam a tranquilidade!"
       },
       "en": {
-        "nome": "Zenyatta: Legado",
-        "entrada": "O verdadeiro eu, não possui forma!",
-        "ult_nome": "Transcendência",
-        "ult": "Sintam a tranquilidade!"
+        "nome": "Zenyatta: Legacy",
+        "entrada": "True self is without form.",
+        "ult_nome": "Transcendence",
+        "ult": "Experience tranquility!"
       }
     },
     "raridade": "legado",
@@ -5282,9 +5282,9 @@
       },
       "en": {
         "nome": "Pixiu",
-        "entrada": "Em meio as punições, encontraremos prosperidade.",
-        "ult_nome": "Transcendência",
-        "ult": "Sintam a prosperidade!"
+        "entrada": "Amid punishment, we will find prosperity.",
+        "ult_nome": "Transcendence",
+        "ult": "Experience prosperity!"
       }
     },
     "raridade": "mitico",
@@ -5304,9 +5304,9 @@
       },
       "en": {
         "nome": "Zen yatta",
-        "entrada": "Aceita.",
-        "ult_nome": "Transcendência",
-        "ult": "Tornem-se invencíveis. Algumas condições se aplicam."
+        "entrada": "Deal with it.",
+        "ult_nome": "Transcendence",
+        "ult": "Become unkillable. Some conditions may apply."
       }
     },
     "raridade": "incomum",
