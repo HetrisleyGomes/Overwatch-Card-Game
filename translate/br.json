@@ -77,5 +77,11 @@
         "O deck já tem 12 cartas!",
         "Você só pode ter 3 Tanques!",
         "Você não pode repetir personagens!"
-    ]
+    ],
+
+    "ends in": "Termina em",
+    "day": "dia",
+    "sair": "sair",
+    "ready": "pronto"
+
 }

@@ -1,8 +1,16 @@
 [
   {
     "id": "watchesrebeldes",
-    "nome": "Watchwers Rebeldes",
-    "description": "Pacote especial com: Ashe Contrabandista, Baptiste Caçador, Doomfist Quebra-ossos, Torbjorn Engenheiro espacial, e Winston Extraterreste.",
+    "lang": {
+      "br": {
+        "nome": "Watchwers Rebeldes",
+        "description": "Pacote especial com: Ashe Contrabandista, Baptiste Caçador, Doomfist Quebra-ossos, Torbjorn Engenheiro espacial, e Winston Extraterreste."
+      },
+      "en": {
+        "nome": "Watcher Rebellion",
+        "description": "Pacote especial com: Ashe Contrabandista, Baptiste Caçador, Doomfist Quebra-ossos, Torbjorn Engenheiro espacial, e Winston Extraterreste."
+      }
+    },
     "value": 1000,
     "buy_with_impeto": false,
     "inicio": "07-01",
@@ -18,8 +26,16 @@
   },
   {
     "id": "vishkardourados",
-    "nome": "Elite Vishkar: Dourados",
-    "description": "Pacote especial com: Domina dourada, Symmetra dourada e Lifeweaver dourado.",
+    "lang": {
+      "br": {
+        "nome": "Elite Vishkar: Dourados",
+        "description": "Pacote especial com: Domina dourada, Symmetra dourada e Lifeweaver dourado."
+      },
+      "en": {
+        "nome": "Elite Vishkar: Golden",
+        "description": "Special bundle featuring: Domina: Golden, Symmetra: Golden, and Lifeweaver: Golden."
+      }
+    },
     "value": 600,
     "buy_with_impeto": false,
     "inicio": "07-08",
@@ -33,8 +49,16 @@
   },
   {
     "id": "inversowatch",
-    "nome": "Líderes Inversowatch",
-    "description": "Pacote especial com: Arqui-comandante Amari, Doomfist: Comandante de ataque, Reinhardt: Cavaleiro Caído e Widowmaker: Capitã Lacorix.",
+    "lang": {
+      "br": {
+        "nome": "Líderes Inversowatch",
+        "description": "Pacote especial com: Arqui-comandante Amari, Doomfist: Comandante de ataque, Reinhardt: Cavaleiro Caído e Widowmaker: Capitã Lacorix."
+      },
+      "en": {
+        "nome": "Mirrorwatch leaders",
+        "description": "Special bundle featuring: Arch-Commandant Amari, Doomfist: Strike Commander, Reinhardt: Fallen Knight, and Widowmaker: Captain Lacorix."
+      }
+    },
     "value": 800,
     "buy_with_impeto": false,
     "inicio": "07-15",
@@ -49,8 +73,16 @@
   },
   {
     "id": "blackwatch",
-    "nome": "Agentes Blackwatch: Dourados",
-    "description": "Pacote especial com: Cassidy dourado, Genji dourado, Moira dourada e Reaper dourado.",
+    "lang": {
+      "br": {
+        "nome": "Agentes Blackwatch: Dourados",
+        "description": "Pacote especial com: Cassidy dourado, Genji dourado, Moira dourada e Reaper dourado."
+      },
+      "en": {
+        "nome": "Blackwatch Agents: Golden",
+        "description": "Special bundle featuring: Cassidy: Golden, Genji: Golden, Moira: Golden, and Reaper: Golden."
+      }
+    },
     "value": 300,
     "buy_with_impeto": false,
     "inicio": "07-26",

@@ -6,8 +6,8 @@
 
 </style>
 <div class="main">
-    <h1 class="title oblique">Cofre do Maximilien</h1>
-    <h3 class="subtitle">Termina em {{ vault_data[1] }} dia{% if vault_data[1] > 1 %}s{% endif %}
+    <h1 class="title oblique">{{ _("maxs vault") }}</h1>
+    <h3 class="subtitle">{{ _("ends in") }} {{ vault_data[1] }} {{ _("day") }}{% if vault_data[1] > 1 %}s{% endif %}
     </h3>
     
     <div class="cards-display">
@@ -24,9 +24,9 @@
                         {% if desativado %}disabled{% endif %}
                     onclick="comprarCartaVault('{{ carta.carta_id }}')">
                     {% if carta.has_purshased %}
-                        Comprado
+                        {{ _("obtained") }}
                     {% else %}
-                        1000 Pontos
+                        1000 {{ _("points") }}
                     {% endif %}
                     </button>
                 </div>
@@ -36,7 +36,7 @@
     </div>
 
     <div class="max-img">
-        <img src="{{ url_for('static', filename='extras/Maximilien.png') }}" alt="Maximilien" class="max tooltipClass" data-tooltip="Bem-vindo ao meu cofre!">
+        <img src="{{ url_for('static', filename='extras/Maximilien.png') }}" alt="Maximilien" class="max tooltipClass" data-tooltip={% if lang == "en" %}"Welcome to my vault!"{% endif %}>
         <div class="max-shadow"></div>
     </div>
 </div>

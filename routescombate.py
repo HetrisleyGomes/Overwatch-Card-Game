@@ -68,7 +68,8 @@ def aguardando(room_id):
     ctll = UserController(repo)
 
     user = ctll.get_user(session["usuario_id"])
-    return render_template("waiting.html", room_id=room_id, user=user)
+    lang = session['lang']
+    return render_template("waiting.html", room_id=room_id, user=user, lang=lang)
 
 @socketio.on("player_ready")
 def handle_ready(data):

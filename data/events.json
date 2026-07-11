@@ -1,47 +1,92 @@
 [
   {
     "id": "natal",
-    "nome": "Natal!",
     "inicio": "12-19",
     "fim": "12-31",
-    "description": "",
-    "pack_description": "",
+    "lang": {
+      "br": {
+        "nome": "Natal!",
+        "description": "",
+        "pack_description": ""
+      },
+      "en": {
+        "nome": "Natal!",
+        "description": "",
+        "pack_description": ""
+      }
+    },
     "ativo": false
   },
   {
     "id": "halloween",
-    "nome": "Halloween!",
     "inicio": "10-19",
     "fim": "10-31",
-    "description": "",
-    "pack_description": "",
+    "lang": {
+      "br": {
+        "nome": "Halloween!",
+        "description": "",
+        "pack_description": ""
+      },
+      "en": {
+        "nome": "Halloween!",
+        "description": "",
+        "pack_description": ""
+      }
+    },
     "ativo": false
   },
   {
     "id": "aniversary",
-    "nome": "Aniversário Overwatch!",
     "inicio": "05-16",
     "fim": "05-28",
-    "description": "Comemore mais um ano de Overwatch com recompensas especiais e oportunidades únicas para expandir sua coleção.",
-    "pack_description": "Pacote que garante 1 carta especial do evento e 1 carta lendária de Arma Dourada.",
+    "lang": {
+      "br": {
+        "nome": "Aniversário Overwatch!",
+        "description": "Comemore mais um ano de Overwatch com recompensas especiais e oportunidades únicas para expandir sua coleção.",
+        "pack_description": "Pacote que garante 1 carta especial do evento e 1 carta lendária de Arma Dourada."
+      },
+      "en": {
+        "nome": "Aniversário Overwatch!",
+        "description": "Celebrate another year of Overwatch with special rewards and unique opportunities to expand your collection.",
+        "pack_description": "A bundle that guarantees a special event card and a Legendary Golden Weapon card."
+      }
+    },
     "ativo": false
   },
   {
     "id": "april_fools",
-    "nome": "Primeiro de Abril :p",
     "inicio": "04-01",
     "fim": "04-13",
-    "description": "Falas estranhas? Sprites esquisitos? Tudo normal neste evento de primeiro de abril!",
-    "pack_description": "Pacote com uma carta exclusiva de evento.",
+    "lang": {
+      "br": {
+        "nome": "Primeiro de Abril :p",
+        "description": "Falas estranhas? Sprites esquisitos? Tudo normal neste evento de primeiro de abril!",
+        "pack_description": "Pacote com uma carta exclusiva de evento."
+      },
+      "en": {
+        "nome": "Primeiro de Abril :p",
+        "description": "Weird dialogue? Odd sprites? It's all normal for this April Fools' event!",
+        "pack_description": "Pack containing an exclusive event card."
+      }
+    },
     "ativo": false
   },
   {
     "id": "summergames",
-    "nome": "Jogos de Verão (no inverno)!",
     "inicio": "07-01",
     "fim": "07-15",
-    "description": "Aproveite o clima competitivo dos Jogos de Verão e abra pacotes especiais com 5% a mais de chance de obter cartas épicas e lendárias.",
-    "pack_description": "Pacote com 5 cartas variadas, podendo conter cartas comuns, incomuns, épicas ou lendárias.",
+    "lang": {
+      "br": {
+        "nome": "Jogos de Verão (no inverno)!",
+        "description": "Aproveite o clima competitivo dos Jogos de Verão e abra pacotes especiais com 5% a mais de chance de obter cartas épicas e lendárias.",
+        "pack_description": "Pacote com 5 cartas variadas, podendo conter cartas comuns, incomuns, épicas ou lendárias."
+      },
+      "en": {
+        "nome": "Summer games!",
+        "description": "Embrace the competitive spirit of the Summer Games and open special packs with a 5% increased chance of obtaining Epic and Legendary cards.",
+        "pack_description": "Pack of 5 random cards, which may contain common, uncommon, epic, or legendary cards."
+      }
+    },
     "ativo": true
   }
 ]

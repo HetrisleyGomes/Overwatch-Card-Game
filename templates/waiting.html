@@ -39,7 +39,7 @@ h2, .vs {
 }
 </style>
 <div class="lobby main">
-    <h2>SALA DE COMBATE</h2>
+    <h2>{{ _("combat") }}</h2>
 
     <div class="players">
         <div class="player" id="p1">
@@ -56,8 +56,8 @@ h2, .vs {
     </div>
 
     <div class="actions">
-        <button id="readyBtn" class="button">Estou pronto</button>
-        <button id="sairBtn" class="button">Sair</button>
+        <button id="readyBtn" class="button">{{ _("ready") }}</button>
+        <button id="sairBtn" class="button">{{ _("sair") }}</button>
     </div>
 </div>
 <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
@@ -67,6 +67,8 @@ const socket = io();
 
 const roomId = "{{ room_id }}";
 const userId = "{{ session['usuario_id'] }}";
+const user = {{ user | tojson }};
+const LANG = "{{ lang }}";
 
 socket.emit("join_room", {
     room_id: roomId,
@@ -77,24 +79,49 @@ socket.emit("join_room", {
 socket.on("room_update", (room) => {
     console.log(room)
     const players = room.players;
+    const mensages = ["Pronto ✔", "Aguardando ⏳", "Ready ✔", "Awaiting ⏳"]
 
     const p1 = players[0];
     const p2 = players[1];
-    console.log(players)
+    console.log(user)
     // player 1
-    document.querySelector("#p1 .name").innerText =
-        p1.id == userId ? "Você" : "Jogador 1";
-    document.querySelector("#p1 .status").innerText =
-        p1.ready ? "✔ Pronto" : "⏳ Aguardando";
-
+    if (LANG == "br"){
+        document.querySelector("#p1 .name").innerText =
+        p1.id == userId ? user["nome"] : "Oponente";
+    } else if (LANG == "en"){
+        document.querySelector("#p1 .name").innerText =
+        p1.id == userId ? user["nome"] : "opponent";
+    }
+    
+    if (LANG == "br"){
+        document.querySelector("#p1 .status").innerText =
+        p1.ready ? mensages[0] : mensages[1];
+    } else if (LANG == "en"){
+        document.querySelector("#p1 .status").innerText =
+        p1.ready ? mensages[2] : mensages[3];
+    }
     // player 2
     if (p2) {
-        document.querySelector("#p2 .name").innerText =
-            p2.id == userId ? "Você" : "Jogador 2";
-        document.querySelector("#p2 .status").innerText =
-            p2.ready ? "✔ Pronto" : "⏳ Aguardando";
+        if (LANG == "br"){
+            document.querySelector("#p2 .name").innerText =
+            p2.id == userId ? user["nome"] : "Oponente";
+        } else if (LANG == "en"){
+            document.querySelector("#p2 .name").innerText =
+            p2.id == userId ? user["nome"] : "opponent";
+        }
+        if (LANG == "br"){
+            document.querySelector("#p2 .status").innerText =
+            p2.ready ? mensages[0] : mensages[1];
+        } else if (LANG == "en"){
+            document.querySelector("#p2 .status").innerText =
+            p2.ready ? mensages[2] : mensages[3];
+        }
     } else {
-        document.querySelector("#p2 .name").innerText = "Aguardando...";
+        if (LANG == "br"){
+            document.querySelector("#p2 .name").innerText = mensages[1];
+        } else if (LANG == "en"){
+            document.querySelector("#p2 .name").innerText = mensages[3];
+        }
         document.querySelector("#p2 .status").innerText = "⏳";
     }
 });

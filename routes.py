@@ -3,7 +3,7 @@ from services.user_service import verify_date, sum_xp
 from services.progress_service import registry_cards, save_deck_progress, get_deck
 from services.pack_sevice import abrir_pack, abrir_pack_evento
 from services.collection_service import verificar_sets, formatar_inventario, listar_sets_usuario, format_carta
-from services.eventos_service import check_event_activation, get_eventos_ativos, get_last_log
+from services.eventos_service import check_event_activation, get_eventos_ativos, get_last_log, has_eventos_ativos
 from services.loja_services import get_promocoes, comprar_pack_prom, get_user_prom_logs, get_max_vault_infos, get_vault, generate_vault, buy_vault_item, get_vault_data_format
 from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img
 from services.translates import get_lang
@@ -58,9 +58,10 @@ def home():
 
     repo = UserRepository(connection)
     ctll = UserController(repo)
+    lang = session["lang"]
 
     check_event_activation()
-    ev = get_eventos_ativos()
+    ev = get_eventos_ativos(lang)
     ev_validator = False
     if ev:
         ev_validator = True
@@ -68,14 +69,15 @@ def home():
     user, was_change = verify_date(ctll.get_user(session["usuario_id"]), ev_validator)
     if was_change:
         ctll.daily_update(user) 
+
     semana = floor(user['streak'] / 7)
     log = get_last_log()
-    prom = get_promocoes()
+
+    prom = get_promocoes(lang)
     vault = get_max_vault_infos()
     vault_data = None
     if vault:
         vault_data = get_vault_data_format(vault)
-    lang = session["lang"]
     
     return render_template('home.html', user=user, semana=semana, ev=ev, log=log, proms=prom, vault=vault, vault_data=vault_data, lang=lang)
 
@@ -214,10 +216,10 @@ def loja():
 
     user = ctll.get_user(session["usuario_id"])
     lang = session["lang"]
-    ev = get_eventos_ativos()
+    ev = get_eventos_ativos(lang)
     imgs = icon_view(connection, user["id"], user["nivel"], ev["id"] if ev else None, lang)
 
-    prom = get_promocoes()
+    prom = get_promocoes(lang)
     prom_log = get_user_prom_logs(connection, user["id"])
 
     max_is_here = True if get_max_vault_infos() else False
@@ -329,7 +331,7 @@ def maximilien():
 
     connection.close()
     vault_data = get_vault_data_format(vault_atual)
-    return render_template('vault.html', user = user, cartas=cartas, vault_data=vault_data)
+    return render_template('vault.html', user = user, cartas=cartas, vault_data=vault_data, lang=lang)
 
 
 @main.route("/comprar-carta-vault", methods=["POST"])
@@ -525,7 +527,7 @@ def registrar():
         senha_hash = generate_password_hash(senha)
 
         has_event = 0 
-        if get_eventos_ativos(): 
+        if has_eventos_ativos(): 
             has_event = 1
         
         user = {

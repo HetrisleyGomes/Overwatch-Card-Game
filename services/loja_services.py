@@ -4,7 +4,7 @@ from sql.controller.progress_controller import ProgressController
 from sql.repositories.progress_repository import ProgressRepository
 import random
 
-def get_promocoes():
+def get_promocoes(lang):
     proms = get_promocao()
     hoje = datetime.now().date()
     hoje_md = (hoje.month, hoje.day)
@@ -16,7 +16,7 @@ def get_promocoes():
         inicio_md = (inicio.month, inicio.day)
         fim_md = (fim.month, fim.day)
         if inicio_md <= hoje_md <= fim_md:
-            prom_formated = format_promotion(p)
+            prom_formated = format_promotion(p, lang)
             prom.append(prom_formated)
     if prom:
         return prom
@@ -49,18 +49,18 @@ def comprar_pack_prom(id, pack_id, conn):
     ctll.buy_big_pack(id, pack_id)
     return prom['value'], points, cartas, icon
 
-def format_promotion(prom):
+def format_promotion(prom, lang):
     hoje = datetime.now().date()
 
     fim_parsed = datetime.strptime(prom["fim"], "%m-%d")
     fim = fim_parsed.replace(year=hoje.year).date()
 
     dias_restantes = (fim - hoje).days
-
+    prom_lang = prom["lang"][lang]
     set = {
         "id": prom["id"],
-        "nome": prom["nome"],
-        "description": prom["description"],
+        "nome": prom_lang["nome"],
+        "description": prom_lang["description"],
         "value": prom["value"],
         "buy_with_impeto": prom["buy_with_impeto"],
         "inicio": prom["inicio"],

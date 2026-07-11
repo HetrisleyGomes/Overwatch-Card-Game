@@ -77,5 +77,10 @@
         "The deck already has 12 cards!",
         "You can only have 3 Tanks!",
         "You cannot use duplicate characters!"
-    ]
+    ],
+
+    "ends in": "Ends in",
+    "day": "day",
+    "sair": "exit",
+    "ready": "ready"
 }
