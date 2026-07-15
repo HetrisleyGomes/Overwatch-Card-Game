@@ -76,7 +76,7 @@ def abrir_pack_evento(id_evento, lang):
 
         carta2["is_evento"] = id_evento
 
-        cartas.extend([carta1, carta2])
+        cartas.extend([format_full_card(carta1, lang), format_full_card(carta2, lang)])
 
     # 🎴 Lógica padrão (todos os outros casos)
     else:
@@ -90,6 +90,7 @@ def abrir_pack_evento(id_evento, lang):
 
             carta = random.choice(possiveis)
             carta["is_evento"] = id_evento
-            cartas.append(carta)
+            carta_formated = format_full_card(carta, lang)
+            cartas.append(carta_formated)
 
     return cartas
