@@ -36,7 +36,7 @@ def verificar_sets(conn, user_id, lang):
         )
 
         if completo:
-            sets_nomes.append(s["nome"])
+            sets_nomes.append(s['lang'][lang]["nome"])
             sets_completos.append(set_id)
             ctll.set_set(user_id, set_id)
             recompensa = s.get("recompensa", {})
@@ -205,3 +205,21 @@ def format_carta(carta_id, lang):
     'icon_ref': icon_ref
     }
     return itens
+
+def format_full_card(carta, lang):
+    icon_ref = carta.get("icon_ref", False)
+    card_lang = carta["lang"][lang]
+    card = {
+    'id': carta['id'],
+    "base": carta['base'],
+    'nome': card_lang['nome'],
+    'entrada': card_lang['entrada'],
+    'ult_nome': card_lang['ult_nome'],
+    'ult': card_lang['ult'],
+    'img': carta['img'],
+    'raridade': carta['raridade'],
+    'classe': carta['classe'],
+    'subclasse': carta['subclasse'],
+    'icon_ref': icon_ref
+    }
+    return card

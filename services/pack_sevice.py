@@ -1,4 +1,5 @@
 from utils.json_utils import get_packs, get_characters
+from services.collection_service import format_full_card
 import random
 
 #SORTEIO ======================================================
@@ -15,7 +16,7 @@ def sortear_raridade(chances):
 
     return random.choices(raridades, weights=pesos, k=1)[0]
 
-def abrir_pack(tipo_pack):
+def abrir_pack(tipo_pack, lang):
     """Sorteia um conjunto de cartas dependendo do tipo de pacote.
     
     Keyword arguments:
@@ -39,12 +40,13 @@ def abrir_pack(tipo_pack):
 
         # 3. escolher personagem
         carta = random.choice(possiveis)
+        formated_carta = format_full_card(carta, lang)
+        cartas.append(formated_carta)
 
-        cartas.append(carta)
 
     return cartas
 
-def abrir_pack_evento(id_evento):
+def abrir_pack_evento(id_evento, lang):
     personagens = get_characters()
 
     if id_evento != "summergames":

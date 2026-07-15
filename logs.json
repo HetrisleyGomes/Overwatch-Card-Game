@@ -77,6 +77,6 @@
     {
         "version": "0.1.5",
         "date": "15-07-2026",
-        "description": "BILINGUAL UPDATE\n[FEAT] O sistema foi adaptado para ser traduzido, agora possui os idiomas português e inglês; Botão de ajuda adicionado, com informações sobre cada página.\n[FIX] Ashe Feiticeira agora se chama apenas Feiticeira."
+        "description": "BILINGUAL UPDATE\n[FEAT] O sistema foi adaptado para ser traduzido, agora possui os idiomas português e inglês; Botão de ajuda adicionado, com informações sobre cada página.\n[FIX] Ashe Feiticeira agora se chama apenas Feiticeira.[HOTFIX]: A função de abrir pacotes estava totalmente quebrada."
     }
 ]

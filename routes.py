@@ -87,7 +87,6 @@ def home():
     return render_template('home.html', user=user, semana=semana, ev=ev, log=log, proms=prom, vault=vault, vault_data=vault_data, lang=lang, global_tips=global_tips)
 
 # Abrir pacote ========================================
-# TODO: Transformar tudo isso em uma rota só
 @main.route("/abrir-pack", methods=["POST"])
 def abrir_pack_route():
     if request.method != "POST":
@@ -109,9 +108,9 @@ def abrir_pack_route():
 
     # Lógica das cartas
     if tipo == "evento":
-        cartas = abrir_pack_evento(evento_id)
+        cartas = abrir_pack_evento(evento_id, lang)
     else:
-        cartas = abrir_pack(tipo)
+        cartas = abrir_pack(tipo, lang)
 
 
     user = registry_cards(connection, cartas, tipo, user)
