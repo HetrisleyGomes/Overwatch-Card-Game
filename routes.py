@@ -7,6 +7,9 @@ from services.eventos_service import check_event_activation, get_eventos_ativos,
 from services.loja_services import get_promocoes, comprar_pack_prom, get_user_prom_logs, get_max_vault_infos, get_vault, generate_vault, buy_vault_item, get_vault_data_format
 from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img
 from services.translates import get_lang
+
+from utils.json_utils import get_classes_lang, get_combat_tips, get_global_tips
+
 from sql.controller.user_controller import UserController
 from sql.repositories.user_repository import UserRepository
 
@@ -79,7 +82,9 @@ def home():
     if vault:
         vault_data = get_vault_data_format(vault)
     
-    return render_template('home.html', user=user, semana=semana, ev=ev, log=log, proms=prom, vault=vault, vault_data=vault_data, lang=lang)
+    global_tips = get_global_tips(lang)
+
+    return render_template('home.html', user=user, semana=semana, ev=ev, log=log, proms=prom, vault=vault, vault_data=vault_data, lang=lang, global_tips=global_tips)
 
 # Abrir pacote ========================================
 # TODO: Transformar tudo isso em uma rota só
@@ -165,7 +170,8 @@ def inventario():
     cartas = formatar_inventario(connection, user['id'], lang)
 
     mostrar_todas = request.args.get("all", "0") == "1"
-    return render_template('inventario.html', user = user, mostrar_todas = mostrar_todas, cartas=cartas)
+    global_tips = get_global_tips(lang, "inventory")
+    return render_template('inventario.html', user = user, mostrar_todas = mostrar_todas, cartas=cartas, global_tips=global_tips)
 
 # Coleções =========================================
 @main.route("/collection")
@@ -180,8 +186,9 @@ def collection():
     user = ctll.get_user(session["usuario_id"])
     lang = session["lang"]
     sets_usuario  = listar_sets_usuario(connection, user['id'], lang)
+    global_tips = get_global_tips(lang, "collections")
 
-    return render_template('collection.html', user = user, sets =sets_usuario)
+    return render_template('collection.html', user = user, sets =sets_usuario, global_tips=global_tips)
 
 @main.route("/deck-builder")
 def deck_builder():
@@ -221,10 +228,10 @@ def loja():
 
     prom = get_promocoes(lang)
     prom_log = get_user_prom_logs(connection, user["id"])
-
     max_is_here = True if get_max_vault_infos() else False
+    global_tips = get_global_tips(lang, "store")
 
-    return render_template('loja.html', user = user, ev=ev, proms=prom, prom_log=prom_log, imgs=imgs, max_is_here= max_is_here)
+    return render_template('loja.html', user = user, ev=ev, proms=prom, prom_log=prom_log, imgs=imgs, max_is_here= max_is_here, global_tips=global_tips)
 
 @main.route("/comprar-pack", methods=["POST"])
 def comprar_pack():
@@ -381,8 +388,9 @@ def settings():
     user = ctll.get_user(session["usuario_id"])
     inv = user_get_inventory(connection, user["id"])
     lang = session["lang"]
+    global_tips = get_global_tips(lang, "settings")
 
-    return render_template('settings.html', user = user, inv=inv, lang=lang)
+    return render_template('settings.html', user = user, inv=inv, lang=lang, global_tips=global_tips)
 
 @main.route("/atualizar-nome", methods=["POST"])
 def atualizar_nome():

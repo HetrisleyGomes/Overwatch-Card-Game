@@ -1,0 +1,71 @@
+{
+    "br":{
+        "Tanque": "Tanque: Escudo x2, Ataque x2",
+        "Dano": "Dano: Ataque x3",
+        "Suporte": "Suporte: Ataque x1, Cura x2",
+        "Defensor": "Defensor: Escudo x1, Ataque x2",
+        "Atacante": "Atacante: Golpe Veloz x1, Ataque x2",
+
+        "Incursor": "Incursor: Golpe Veloz x2, Ataque x1",
+        "Combatente": "Combatente: Ataque x3",
+        "Robusto": "Robusto: Escudo x3",
+
+        "Especialista": "Especialista: Anti-cura x2",
+        "Artilharia": "Artilharia: Ataque x2",
+        "Flanco": "Flanco: Golpe veloz x2",
+        "Reconhecimento": "Reconhecimento: Golpe veloz x1, Ataque x1",
+
+        "Tático": "Tático: Anti-cura x3",
+        "Socorrista": "Socorrista: Cura x3",
+        "Sobrevivente": "Sobrevivente: Ataque x2, e Cura x1",
+
+        "Campeão": "Campeão: Escudo x2, Ataque x1",
+        "Caçador": "Caçador: Ataque futuro x1, Anti-cura x2",
+        "Classic": "Classic: Escudo, Ataque e Cura x1",
+        "Coração": "Coração: Escudo x2, revitalizar",
+        "Cósmico": "Cósmico: Escudo x2, Cura x1",
+        "Fool": "Fool: 3 pontos aleatórios entre Escudo, Ataque e Cura",
+        "Férias": "Férias: Ataque x1, revitalizar",
+        "Guerreiro": "Guerreiro: Escudo x1, Ataque x2",
+        "Mirror": "Mirror: Transforma cura em Escudo, escudo em Ataque, e ataque em Cura",
+        "Monstro": "Monstro: Escudo -1, Ataque x3",
+        "Perigo": "Perigo: Golpe Veloz x1, Ataque futuro x2",
+        "Perverso": "Perverso: Ataque x2, Anti-cura x2, Descuido x2 e zera a Cura",
+        "Origem": "Origem: Fortalece os atributos existentes em +2"
+    },
+    "en":{
+        "Tanque": "Tank: Shield x2, Attack x2",
+        "Dano": "Damage: Attack x3",
+        "Suporte": "Support: Attack x1, Heal x2",
+        "Defensor": "Defender: Shield x1, Attack x2",
+        "Atacante": "Attacker: Quick Strike x1, Attack x2",
+
+        "Incursor": "Initiator: Quick Strike x2, Attack x1",
+        "Combatente": "Bruiser: Attack x3",
+        "Robusto": "Stalwart: Shield x3",
+
+        "Especialista": "Specialist: Anti-Heal x2",
+        "Artilharia": "Sharpshooter: Attack x2",
+        "Flanco": "Flanker: Quick Strike x2",
+        "Reconhecimento": "Recon: Quick Strike x1, Attack x1",
+
+        "Tático": "Tactician: Anti-Heal x3",
+        "Socorrista": "Medic: Heal x3",
+        "Sobrevivente": "Survivor: Attack x2, and Heal x1",
+
+        "Campeão": "Champion: Shield x2, Attack x1",
+        "Caçador": "Hunter: Future Attack x1, Anti-heal x2",
+        "Classic": "Classic: Shield, Attack, and Heal x1",
+        "Coração": "Heart: Shield x2, Revitalize",
+        "Cósmico": "Cosmic: Shield x2, Heal x1",
+        "Fool": "Fool: 3 random points distributed among Shield, Attack, and Heal",
+        "Férias": "Summer: Attack x1, Revitalize",
+        "Guerreiro": "Warrior: Shield x1, Attack x2",
+        "Mirror": "Mirror: Converts Heal to Shield, Shield to Attack, and Attack to Heal",
+        "Monstro": "Monster: Shield -1, Attack x3",
+        "Perigo": "Danger: Quick Strike x1, Future Attack x2",
+        "Perverso": "Wicked: Attack x2, Anti-heal x2, Recklessness x2, and sets Heal to zero",
+        "Origem": "Origin: Boosts existing attributes by +2"
+    }
+
+}

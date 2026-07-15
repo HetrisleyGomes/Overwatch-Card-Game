@@ -54,3 +54,18 @@ def get_promocao():
 def get_vault_max():
     with open('./data/max_vault.json', "r", encoding="utf-8") as f:
         return json.load(f)
+
+def get_classes_lang(lang='br'):
+    with open('./utils/classes.json', "r", encoding="utf-8") as f:
+        data = json.load(f)
+        return data[lang]
+    
+def get_combat_tips(lang='br'):
+    with open('./utils/battle_tips.json', "r", encoding="utf-8") as f:
+        data = json.load(f)
+        return data[lang]
+
+def get_global_tips(lang='br', page='home'):
+    with open('./utils/tutorial.json', "r", encoding="utf-8") as f:
+        data = json.load(f)
+        return data[lang][page]

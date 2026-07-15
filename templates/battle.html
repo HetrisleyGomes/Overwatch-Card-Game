@@ -33,14 +33,14 @@
     <div class="arena">
         <div class="players_spaces">
             <div class="card-slot" id="slot-p1">
-                <span>Carta Jogador 1</span>
+                <span>Player 1</span>
             </div>
             <div class="effects-slot" id="effects-p1"></div>
         </div>
 
         <div class="players_spaces">
             <div class="card-slot" id="slot-p2">
-                <span>Carta Jogador 2</span>
+                <span>Player 2</span>
             </div>
             <div class="effects-slot" id="effects-p2"></div>
         </div>
@@ -65,7 +65,7 @@
 
         <!-- 🗑️ Descarte -->
         <div class="discard">
-            <span>Descarte</span>
+            <span>{{ _("descarte") }}</span>
         </div>
 
     </div>
@@ -81,6 +81,9 @@ var game_state = {{ game_state | tojson }};
 const jogadores = {{ jogadores | tojson }};
 var userId = {{ session["usuario_id"] }};
 
+const DICT_LANG = game_state["dict_lang"];
+const COMBAT_TIPS = game_state["combat_tips"];
+
 var jogador_1 = jogadores.find(j => j.id == userId);
 var jogador_2 = jogadores.find(j => j.id != userId);
 
@@ -92,6 +95,7 @@ const PHASES = {
     RESULT: "result",
     END: "end"
 };
+
 
 const avatar1 = document.getElementById('avatar-1');
 const avatar2 = document.getElementById('avatar-2');
@@ -174,100 +178,9 @@ async function gameFlow() {
 }
 
 function get_description(cardData){
-    text = "";
-    switch (cardData.classe){
-        case 'Tanque':
-            text = text + "Tanque: Escudo x2, Ataque x2";
-            break;
-        case 'Dano':
-            text = text + "Dano: Ataque x3";
-            break;
-        case 'Suporte':
-            text = text + "Suporte: Ataque x1, Cura x2";
-            break;
-        case 'Defensor':
-            text = text + "Defensor: Escudo x1, Ataque x2";
-            break;
-        case 'Atacante':
-            text = text + "Atacante: Golpe Veloz x1, Ataque x2";
-            break;
-    }
+    text = COMBAT_TIPS[cardData.classe]
     text = text + "\n"
-    switch (cardData.subclasse){
-        case 'Incursor':
-            text = text + "Incursor: Golpe Veloz x2, Ataque x1";
-            break;
-        case 'Combatente':
-            text = text + "Combatente: Ataque x3";
-            break;
-        case 'Robusto':
-            text = text + "Robusto: Escudo x3";
-            break;
-
-        case 'Especialista':
-            text = text + "Especialista: Anti-cura x2";
-            break;
-        case 'Artilharia':
-            text = text + "Artilharia: Ataque x2";
-            break;
-        case 'Flanco':
-            text = text + "Flanco: Golpe veloz x2";
-            break;
-        case 'Reconhecimento':
-            text = text + "Reconhecimento: Golpe veloz x1, Ataque x1";
-            break;
-
-        case 'Tático':
-            text = text + "Tático: Anti-cura x3";
-            break;
-        case 'Socorrista':
-            text = text + "Socorrista: Cura x3";
-            break;
-        case 'Sobrevivente':
-            text = text + "Sobrevivente: Ataque x2, e Cura x1";
-            break;
-
-        case 'Campeão':
-            text = text + "Campeão: Escudo x2, Ataque x1";
-            break;
-        case 'Caçador':
-            text = text + "Caçador: Ataque futuro x1, Anti-cura x2";
-            break;
-        case 'Classic':
-            text = text + "Classic: Escudo, Ataque e Cura x1";
-            break;
-        case 'Coração':
-            text = text + "Classic: Escudo x2, revitalizar";
-            break;
-        case 'Cósmico':
-            text = text + "Cósmico: Escudo x2, Cura x1";
-            break;
-        case 'Fool':
-            text = text + "Fool: 3 pontos aleatórios entre Escudo, Ataque e Cura";
-            break;
-        case 'Férias':
-            text = text + "Férias: Ataque x1, revitalizar";
-            break;
-        case 'Guerreiro':
-            text = text + "Guerreiro: Escudo x1, Ataque x2";
-            break;
-        case 'Mirror':
-            text = text + "Mirror: Transforma cura em Escudo, escudo em Ataque, e ataque em Cura";
-            break;
-        case 'Monstro':
-            text = text + "Monstro: Escudo -1, Ataque x3";
-            break;
-        case 'Perigo':
-            text = text + "Perigo: Golpe Veloz x1, Ataque futuro x2";
-            break;
-        case 'Perverso':
-            text = text + "Perverso: Ataque x2, Anti-cura x2, Descuido x2 e zera a Cura";
-            break;
-        case 'Origem':
-            text = text + "Origem: Fortalece os atributos existentes em +2";
-            break;
-    }
-
+    text = text + COMBAT_TIPS[cardData.subclasse]
     text = text + "."
     return text
 }
@@ -293,8 +206,8 @@ function createCardElement(cardData) {
         </div>
 
         <div class="card-texto">
-            <span>${cardData.classe}</span>
-            <span>${cardData.subclasse}</span>
+            <span>${DICT_LANG[cardData.classe]}</span>
+            <span>${DICT_LANG[cardData.subclasse]}</span>
         </div>
     `;
     card.dataset.tooltip = get_description(cardData);
@@ -386,8 +299,8 @@ socket.on("end_turn", async (data) => {
     gameFlow();
 });
 
-socket.on("enemy_disconnect", () => {
-    alert("Seu adversário não respondeu a tempo ou desconectou!");
+socket.on("enemy_disconnect", (data) => {
+    alert(data.msg);
     fetch("/set-battle-result", {
         method: "POST",
         headers: {
@@ -476,7 +389,6 @@ function shuffle_animation() {
 
 async function drawCard(cardData) {
     return new Promise((resolve) => {
-        console.log(cardData)
         const deck = document.getElementById("deck");
         const hand = document.getElementById("hand");
 
@@ -844,6 +756,7 @@ function startCrono() {
 }
 
 function stopCrono() {
+    console.log("sotpeed")
     playerReady = true;
 }
 

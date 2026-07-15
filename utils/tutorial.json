@@ -1,0 +1,54 @@
+{
+    "br": {
+        "home": {
+            "title": "Área Inicial",
+            "content": "Overwatch Card Game é um jogo de colecionar cartas dos nossos heróis favoritos.\n\nPacks Diários:\nA cada dia, você pode abrir até dois pacotes comuns, que trazem cinco cartas de variedade comum, incomum, épica, ultra e até lendárias!\nPacotes Raros:\nApós abrir 10 pacotes comuns diários, você ganha um pacote raro, com quatro cartas, dentre elas épicas, ultras, lendárias e uma mítica.\nPacotes sazonais:\nDurante eventos, um pacote extra com cartas variadas ficam disponível.\nBarra de notificações:\nA barra de informações latérais te informa sobre eventos, promoções, e atualizações sobre você e o jogo.\nPontos e Ímpetos:\nOs pontos são a moeda do Overwatch Card Game, você as obtem abrindo pacotes e completando coleções. Os Ímpetos são a moeda de maior valor do jogo, você obtem uma ao subir de nível. Você também pode obte-las ao conseguir uma sequência de logins mensal.\n\nEste é um projeto Feito de fã, feito para fãs!"
+        },
+        "inventory": {
+            "title": "Inventário",
+            "content": "Aqui você pode ver todas as suas cartas obtidas, como funcionalidade futura, está planejado uma janela de informações mais detalhadas com relação ao uso no modo duelo.\n\nVisualização completa:\nUsando o modo 'Ver todas as cartas', você verá todos os slots de cartas faltantes, assemelhando-se a um álbum de figurinhas.\nConstrutor de deck:\nPara entrar no modo Duelo, você deve primeiramente montar um deck com suas cartas disponíveis."
+        },
+        "collections": {
+            "title": "Coleções",
+            "content": "Cada carta obtida faz parte de pelo menos um conjunto temático. Complete conjuntos para obter pontos."
+        },
+        "store": {
+            "title": "Loja",
+            "content": "Aqui, você pode trocar pontos e Ímpetos por outros itens.\n\nPacotaços:\nFrequentimente, ficam disponíveis pacotes especiais com cartas que compartilham de um mesmo tema, aproveite esses pacotes para aumenta sua coleção.\nPacotes extras:\nNão quer esperar o dia seguinte para abrir mais pacotes? Você veio ao lugar certo. Aqui você pode comprar pacotes extras para completar sua coleção mais rápido.\nÍcones de jogador:\nCompre ícones para personalizar seu perfil, e desbloquei novos ícones ao completar coleções ou subir de nível.\nCofre secreto:\nAlgumas vezes no mês, um comerciante misterioso surge oferecendo cartas míticas e cartas legado. Fique de olho e não o perca."
+        },
+        "settings": {
+            "title": "Configurações",
+            "content": "Mude de nome, ou troque seu Ícone de jogador aqui, esta é a sua área para customizar seu perfil e descobrur mais sobre o projeto Overwatch TCG!"
+        },
+        "combat": {
+            "title": "Duelo",
+            "content": "Durante um duelo, dois jogadores se enfrentam durante sete turnos, para causar o máximo de dano possível um ao outro. Ao final dos sete turnos, vence aquele com mais pontos de vida.\n\nDurante cada turno, ambos os jogadores escolhem uma carta para o embate, cada carta recebe um efeito dependendo de sua classe e subclasse.\nEntre os efeitos de cartas, temos:\n- Ataque: Causa essa quantidade de dano ao adversário.\n- Escudo: Diminui o dano de Ataque do seu adversário.\n- Cura: Recupera seus pontos de vida.\n- Golpe veloz: Um ataque que acontece antes do escudo do seu adversário.\n- Anti-cura: Bloqueia a quantidade de cura que seu adversário receberá neste turno.\n- Ataque futuro: No próximo turno, garante um Ataque adicional à sua ação.\n- Revitalizar: No próximo turno, dobra toda quantidade de cura que você receber.\n- Descuido: Causa essa quantidade de dano a você mesmo."
+        }
+    },
+    "en": {
+        "home": {
+            "title": "Home Page",
+            "content": "Overwatch Card Game is a card collecting game featuring our favorite heroes.\n\nDaily Packs:\nEach day, you can open up to two Common Packs, each containing five cards of Common, Uncommon, Epic, Ultra, and even Legendary rarities!\nRare Packs:\nAfter opening 10 daily Common Packs, you earn one Rare Pack containing four cards, including Epic, Ultra, Legendary, and one Mythic card.\nSeasonal Packs:\nDuring special events, an extra pack featuring a variety of exclusive cards becomes available.\nNotification Panel:\nThe side notification panel keeps you informed about events, promotions, and updates regarding both your account and the game.\nPoints and Prisms:\nPoints are the primary currency of Overwatch Card Game. You earn them by opening packs and completing collections. Prism is the game's premium currency, and you receive one each time you level up. You can also earn Prism by maintaining a monthly login streak.\n\nThis is a project Made by fan, made for fans!"
+        },
+        "inventory": {
+            "title": "Inventory",
+            "content": "Here you can view all the cards you've collected. As a future feature, a more detailed information window is planned, providing additional details about each card's use in Duel mode.\n\nComplete View:\nUsing 'Show all cards', you'll be able to see every missing card slot, making your collection resemble a sticker album.\nDeck Builder:\nBefore entering Duel mode, you must first build a deck using the cards you have available."
+        },
+        "collections": {
+            "title": "Collections",
+            "content": "Every card you collect belongs to at least one themed collection. Complete collections to earn Points."
+        },
+        "store": {
+            "title": "Store",
+            "content": "Here, you can exchange Points and Prisms for other items.\n\nSpecial Packs:\nSpecial packs featuring cards that share a common theme are frequently available. Take advantage of them to expand your collection.\nExtra Packs:\nDon't want to wait until tomorrow to open more packs? You've come to the right place. Here you can purchase extra packs to complete your collection even faster.\nPlayer Icons:\nPurchase icons to customize your profile, and unlock new ones by completing collections or leveling up.\nSecret Vault:\nSeveral times each month, a mysterious merchant appears, offering Mythic and Legacy cards. Keep an eye out—you won't want to miss them."
+        },
+        "settings": {
+            "title": "Settings",
+            "content": "Change your name or switch your Player Icon here. This is your place to customize your profile and learn more about the Overwatch TCG project!"
+        },
+        "combat": {
+            "title": "Duel",
+            "content": "During a Duel, two players face off over the course of seven turns, each trying to deal as much damage as possible to the other. At the end of the seventh turn, the player with the most Health wins.\n\nDuring each turn, both players choose one card to play. Each card gains an effect based on its class and subclass.\nCard effects include:\n- Attack: Deals this amount of damage to your opponent.\n- Shield: Reduces the damage dealt by your opponent's Attack.\n- Heal: Restores your Health.\n- Quick Strike: An attack that is resolved before your opponent's Shield takes effect.\n- Anti-Heal: Prevents your opponent from recovering this amount of Health during this turn.\n- Future Attack: On your next turn, grants an additional Attack to your action.\n- Revitalize: On your next turn, doubles all healing you receive.\n- Recklessness: Deals this amount of damage to yourself."
+        }
+    }
+}

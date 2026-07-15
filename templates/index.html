@@ -26,6 +26,17 @@
 
 {% endblock %}
 
+<div id="help-button">?</div>
+
+<div id="help-modal">
+    <div class="help-window">
+        <button class="help-close" onclick="closeHelp()">✕</button>
+        <h2 id="help-title">{{ global_tips['title'] }}</h2>
+        <div id="help-content" style="white-space: pre-line;">{{ global_tips['content'] }}</div>
+    </div>
+</div>
+
+
 <!-- RODAPÉ -->
 <div class="footer">
     <a href="{{ url_for('main.home') }}">
@@ -100,6 +111,23 @@
             tooltip.classList.remove("show");
         });
     }
+
+    function openHelp(){
+        document.getElementById("help-modal").classList.add("show");
+    }
+
+    function closeHelp(){
+        document.getElementById("help-modal").classList.remove("show");
+    }
+
+    document.getElementById("help-button").onclick = () => {
+        openHelp();
+
+    };
+
+
+
+
     initializeTooltips()
 </script>
 {% endblock %}

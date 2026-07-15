@@ -5,6 +5,7 @@ from services.user_service import  get_battle_cards
 from services.progress_service import  get_deck
 from services.collection_service import format_carta
 from routes import get_db_connection
+from utils.json_utils import get_classes_lang, get_combat_tips, get_global_tips
 
 from sql.controller.user_controller import UserController
 from sql.repositories.user_repository import UserRepository
@@ -69,7 +70,9 @@ def aguardando(room_id):
 
     user = ctll.get_user(session["usuario_id"])
     lang = session['lang']
-    return render_template("waiting.html", room_id=room_id, user=user, lang=lang)
+    global_tips = get_global_tips(lang, "combat")
+
+    return render_template("waiting.html", room_id=room_id, user=user, lang=lang, global_tips=global_tips)
 
 @socketio.on("player_ready")
 def handle_ready(data):
@@ -132,12 +135,16 @@ def battle(room_id):
 
     repo = UserRepository(connection)
     ctll = UserController(repo)
-
+    lang = session["lang"]
+    termos_lang = get_classes_lang(lang)
+    c_tips = get_combat_tips(lang)
     game_state = {
         "room_id": room_id,
         "round": 1,
         "phase": "pre_game",
-        'host': salas[room_id]['players'][0]['id']
+        'host': salas[room_id]['players'][0]['id'],
+        'dict_lang': termos_lang,
+        'combat_tips': c_tips
     }
 
     jogadores = []
@@ -157,7 +164,7 @@ def battle(room_id):
 
         cartas = get_battle_cards(connection, id)
         for carta_id in cartas:
-            carta = format_carta(carta_id)
+            carta = format_carta(carta_id, lang)
             modelo["deck"].append(carta)
         jogadores.append(modelo)
 
@@ -181,6 +188,8 @@ def handle_disconnect():
     
     game_started = room.get("game_state") is not None
     if game_started:
+        lang = session['lang']
+        win_msg = "Seu adversário não respondeu a tempo ou desconectou!" if lang == "br" else "Your opponent didn't respond in time or disconnected!"
         winner = next(
             (p for p in room["jogadores"]
              if p["id"] != user_id),
@@ -189,7 +198,10 @@ def handle_disconnect():
         if winner:
             emit(
                 "enemy_disconnect",
-                {"winner_id": winner["id"]},
+                {
+                    "winner_id": winner["id"],
+                    "msg": win_msg
+                },
                 to=room_id
             )
     else:
@@ -240,11 +252,12 @@ def select_card(data):
     card_id = data["card_id"]
     user_id = session["usuario_id"]
     room = salas[room_id]
+    lang = session["lang"]
 
     if "selected_cards" not in room:
         room["selected_cards"] = {}
 
-    room["selected_cards"][user_id] = format_carta(card_id)
+    room["selected_cards"][user_id] = format_carta(card_id, lang)
 
     if len(room["selected_cards"]) == 2:
         combate_1(room_id,room)

@@ -109,6 +109,121 @@
   }
 }
 
+#help-button{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--main-color);
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,.35);
+    transition: .2s;
+    z-index: 1000;
+}
+
+#help-button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--main-light-color);
+}
+
+#help-modal{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.65);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity .25s ease,
+        visibility .25s ease;
+    z-index: 2000;
+}
+
+#help-modal.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.help-window{
+    position: relative;
+    width: min(850px,90vw);
+    max-height: 80vh;
+    background: var(--main-light-color);
+    border-radius: 18px;
+    border: 3px solid var(--blue-extra-color);
+    box-shadow: 0 15px 40px rgba(0,0,0,.45);
+    padding: 30px;
+    color: white;
+    overflow-y: auto;
+    animation: helpAppear .25s ease;
+}
+
+.help-window::-webkit-scrollbar{
+    width: 10px;
+}
+
+.help-window::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,.25);
+    border-radius: 20px;
+}
+
+#help-title{
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 2px solid var(--cinza);
+    padding-bottom: 15px;
+}
+
+#help-content{
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+.help-close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--notification-color);
+    transition: .2s;
+}
+
+.help-close:hover{
+    transform: rotate(90deg);
+    background: #ef5350;
+}
+
+@keyframes helpAppear{
+    from{
+        opacity:0;
+        transform:
+            scale(.9)
+            translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
 /* RESPONSIVIDADE ========================== */
 @media (max-width: 1380px){
     .button {
