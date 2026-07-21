@@ -6,7 +6,7 @@
 <div class="header">
     <div class="header-item" id="username">
         <div><img src="{{ url_for('static', filename='logos/' + user.profile_img ) }}" loading="lazy"></div>
-        <div><span>{{ user.nome }}</span>{{lang}}</div>
+        <div><span>{{ user.nome }}</span></div>
     </div>
     <div class="header-item">
         <div class="header-item" id="points">{{ _('prisms') }}: <div class="points_box"><span id="pontos">{{ user.impetos }}</span></div></div>

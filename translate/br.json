@@ -36,12 +36,6 @@
     "language": "Idioma",
     "save": "Salvar",
     "logoff": "Sair",
-    "copyrights disclaimer": [
-        "© 2026 Overwatch-Card-Game — Projeto independente e sem fins lucrativos, desenvolvido para fins educacionais e de entretenimento.",
-        "Overwatch, seus personagens, nomes, marcas e elementos visuais originais são propriedade da Blizzard Entertainment. Todos os direitos pertencem aos seus respectivos detentores.",
-        "As artes e variações de cartas apresentadas neste projeto foram desenvolvidas de forma independente, sem vínculo oficial com a Blizzard. Parte do conteúdo foi inspirada em criações compartilhadas por membros da comunidade, incluindo usuários do Reddit.",
-        "Para solicitações relacionadas a direitos autorais ou ajustes de créditos, entre em contato."
-    ],
     "level": "Nível",
 
     "msg_no_packs": "Você não possui mais pacotes por hoje!",
@@ -83,6 +77,19 @@
     "day": "dia",
     "sair": "sair",
     "ready": "pronto",
-    "descarte": "descarte"
+    "descarte": "descarte",
 
+    "about_project": "Sobre o projeto",
+    "copyrights": "Direitos autorais",
+        "copyrights disclaimer": [
+        "© 2026 Overwatch-Card-Game — Projeto independente e sem fins lucrativos, desenvolvido para fins educacionais e de entretenimento.",
+        "Overwatch, seus personagens, nomes, marcas e elementos visuais originais são propriedade da Blizzard Entertainment. Todos os direitos pertencem aos seus respectivos detentores.",
+        "As artes e variações de cartas apresentadas neste projeto foram desenvolvidas de forma independente, sem vínculo oficial com a Blizzard. Parte do conteúdo foi inspirada em criações compartilhadas por membros da comunidade, incluindo usuários do Reddit.",
+        "Para solicitações relacionadas a direitos autorais ou ajustes de créditos, entre em contato."
+    ],
+    "delete_msg_1": "Excluir sua conta",
+    "delete_msg_2": "Isso é um adeus?",
+    "delete_msg_3": "Ao apertar em ok, você concorda em apagar seus dados salvos no nosso sistema. Uma vez feita, não poderá ser desfeita.",
+    "relatorio": "Relatório de Experiência em Gerenciamento de Aplicação Web.",
+    "github": "Repositório do GitHub"
 }

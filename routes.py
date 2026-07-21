@@ -63,19 +63,25 @@ def home():
     ctll = UserController(repo)
     lang = session["lang"]
 
+    # Event infos:
     check_event_activation()
     ev = get_eventos_ativos(lang)
     ev_validator = False
     if ev:
         ev_validator = True
 
-    user, was_change = verify_date(ctll.get_user(session["usuario_id"]), ev_validator)
-    if was_change:
-        ctll.daily_update(user) 
+    # User infos:
+    if "user_data" not in session:
+        user_data, was_change = verify_date(ctll.get_user(session["usuario_id"]), ev_validator)
+        if was_change:
+            ctll.daily_update(user_data)
+        session['user_data'] = user_data
 
+    user = session['user_data']
+
+    # Display infos:
     semana = floor(user['streak'] / 7)
     log = get_last_log()
-
     prom = get_promocoes(lang)
     vault = get_max_vault_infos()
     vault_data = None
@@ -97,10 +103,8 @@ def abrir_pack_route():
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
 
-    repo = UserRepository(connection)
-    ctll = UserController(repo)
-    user = ctll.get_user(session["usuario_id"])
     lang = session['lang']
+    user = session['user_data']
 
     # obtem informações do form
     tipo = request.form.get("tipo")
@@ -112,11 +116,10 @@ def abrir_pack_route():
     else:
         cartas = abrir_pack(tipo, lang)
 
-
     user = registry_cards(connection, cartas, tipo, user)
     sets, pontos = verificar_sets(connection, user['id'], lang)
     user['pontos'] += pontos
-    ctll.edit_user(id=user['id'], user=user)
+    atualizar_user(connection, user)
 
     session["ultimo_pack"] = cartas
     session["sets"] = [sets, pontos]
@@ -137,10 +140,7 @@ def resultado_pack():
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
 
-    repo = UserRepository(connection)
-    ctll = UserController(repo)
-
-    user = ctll.get_user(session["usuario_id"])
+    user = session['user_data']
 
     cartas = session.pop("ultimo_pack")
     rarity = session.pop("ultimo_pack_rarity")
@@ -149,7 +149,7 @@ def resultado_pack():
     sets, pontos_sets = session.pop("sets")
 
     user, level_uped = sum_xp(user, xp_obtido)
-    ctll.edit_user(id=user['id'], user=user)
+    atualizar_user(connection, user)
     
     return render_template("resultado.html", cartas = cartas, user = user, tipo_pack=rarity, pontos=pontos, sets=sets, pontos_sets=pontos_sets, xp_obtido=xp_obtido, xp_final=user['xp'], nivel=user['nivel'], level_uped=level_uped)
 
@@ -161,10 +161,7 @@ def inventario():
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
 
-    repo = UserRepository(connection)
-    ctll = UserController(repo)
-
-    user = ctll.get_user(session["usuario_id"])
+    user = session['user_data']
     lang = session['lang']
     cartas = formatar_inventario(connection, user['id'], lang)
 
@@ -179,10 +176,7 @@ def collection():
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
 
-    repo = UserRepository(connection)
-    ctll = UserController(repo)
-
-    user = ctll.get_user(session["usuario_id"])
+    user = session['user_data']
     lang = session["lang"]
     sets_usuario  = listar_sets_usuario(connection, user['id'], lang)
     global_tips = get_global_tips(lang, "collections")
@@ -194,9 +188,11 @@ def deck_builder():
     connection = get_db_connection()
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
+    
     lang = session["lang"]
     cartas = formatar_inventario(connection, session["usuario_id"],lang)
     deck = get_deck(connection)
+
     return render_template('deck_builder.html', cartas=cartas, deck=deck)
 
 @main.route("/save-deck", methods=["POST"])
@@ -204,8 +200,8 @@ def save_deck():
     connection = get_db_connection()
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
-    deck_json = request.form.get("deck_data")
     
+    deck_json = request.form.get("deck_data")
     save_deck_progress(connection, deck_json)
 
     return redirect(url_for("main.inventario"))
@@ -217,10 +213,7 @@ def loja():
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
 
-    repo = UserRepository(connection)
-    ctll = UserController(repo)
-
-    user = ctll.get_user(session["usuario_id"])
+    user = session['user_data']
     lang = session["lang"]
     ev = get_eventos_ativos(lang)
     imgs = icon_view(connection, user["id"], user["nivel"], ev["id"] if ev else None, lang)
@@ -244,10 +237,7 @@ def comprar_pack():
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
 
-    repo = UserRepository(connection)
-    ctll = UserController(repo)
-
-    user = ctll.get_user(session["usuario_id"])
+    user = session['user_data']
 
     if not user:
         return {"success": False, "erro": "Usuário não encontrado"}
@@ -295,7 +285,7 @@ def comprar_pack():
     else:
         user["pontos"] -= preco
 
-    ctll.edit_user(user['id'], user)
+    atualizar_user(connection, user)
 
     return {
         "success": True,
@@ -309,16 +299,12 @@ def maximilien():
     if connection is None:
        return "Erro ao conectar ao banco de dados.", 500
 
-    repo = UserRepository(connection)
-    ctll = UserController(repo)
-
-    user = ctll.get_user(session["usuario_id"])
+    user = session['user_data']
     lang = session['lang']
 
     cartas = []
     vault_atual = get_max_vault_infos()
 
-    #cards_raw = ctll.get_vault_cards_data(user['id'], vault_atual)
     cards_raw = get_vault(connection, user['id'], vault_atual)
     print("card-raw")
     print(cards_raw)
@@ -326,7 +312,6 @@ def maximilien():
         return "Erro ao carregar o cofre do Maximilien.", 500
 
     if len(cards_raw) == 0:
-        #cards_raw = ctll.generate_new_vault(user['id'], vault_atual)
         cards_raw = generate_vault(connection, user['id'], vault_atual)
 
     for carta in cards_raw:
@@ -335,8 +320,8 @@ def maximilien():
         data['has_purshased'] = carta[1]
         cartas.append(data)
 
-    connection.close()
     vault_data = get_vault_data_format(vault_atual)
+    connection.close()
     return render_template('vault.html', user = user, cartas=cartas, vault_data=vault_data, lang=lang)
 
 
@@ -344,16 +329,11 @@ def maximilien():
 def comprar_vault():
     data = request.get_json()
     carta_id = data.get("id")
-    print('primeiro')
-    print(carta_id)
     connection = get_db_connection()
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
 
-    repo = UserRepository(connection)
-    ctll = UserController(repo)
-
-    user = ctll.get_user(session["usuario_id"])
+    user = session["user_data"]
     lang = session['lang']
 
     if not user:
@@ -366,7 +346,7 @@ def comprar_vault():
     user = registry_cards(connection, [format_carta(carta_id, lang)], "none", user)
     buy_vault_item(connection, user['id'], carta_id)
     user["pontos"] -= preco
-    ctll.edit_user(user['id'], user)
+    atualizar_user(connection, user)
 
     return {
         "success": True,
@@ -381,10 +361,7 @@ def settings():
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
 
-    repo = UserRepository(connection)
-    ctll = UserController(repo)
-
-    user = ctll.get_user(session["usuario_id"])
+    user = session["user_data"]
     inv = user_get_inventory(connection, user["id"])
     lang = session["lang"]
     global_tips = get_global_tips(lang, "settings")
@@ -400,10 +377,9 @@ def atualizar_nome():
     repo = UserRepository(connection)
     ctll = UserController(repo)
 
-
     novo_nome = request.form.get("novo_nome")
-
     ctll.set_nome(session["usuario_id"], novo_nome)
+    update_user(ctll)
 
     return redirect(url_for("main.settings"))
 
@@ -416,11 +392,10 @@ def atualizar_lang():
     repo = UserRepository(connection)
     ctll = UserController(repo)
 
-
     new_lang = request.form.get("lang")
-    print(new_lang)
     session["lang"] = new_lang
     ctll.set_lang(session["usuario_id"], new_lang)
+    update_user(ctll)
 
     return redirect(url_for("main.settings"))
 
@@ -437,15 +412,16 @@ def atualizar_foto():
     img = data.get("imagem")
 
     ctll.set_foto(session["usuario_id"], img)
+    update_user(ctll)
 
     return {"status": "ok"}
-
 
 
 # LOGOFF =========================================
 @main.route("/sair")
 def logoff():
     session.pop("usuario_id")
+    session.pop('user_data')
     return redirect(url_for('main.login'))
 
 
@@ -494,7 +470,6 @@ def login():
         
         if user:
             session["usuario_id"] = user["id"]
-            print(user)
             session["lang"] = user["language"]
             return redirect(url_for("main.home"))
         
@@ -551,6 +526,7 @@ def registrar():
         get_new_img(connection, usuario_id, "f2")
         # 🔓 login automático
         session["usuario_id"] = usuario_id
+        session["lang"] = lang
 
         return redirect(url_for("main.home"))
 
@@ -560,3 +536,12 @@ def registrar():
 def ping():
     return "ok", 200
 
+def update_user(ctll):
+    user = ctll.get_user(session["usuario_id"])
+    session['user_data'] = user
+
+def atualizar_user(conn, user):
+    repo = UserRepository(conn)
+    ctll = UserController(repo)
+    ctll.edit_user(user['id'], user)
+    update_user(ctll)

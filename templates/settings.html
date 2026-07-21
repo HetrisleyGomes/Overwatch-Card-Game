@@ -82,25 +82,63 @@
             </form>
         </div>
 
-        <!-- LOGOFF -->
-        <div class="logoff_button">
-            <a href="{{ url_for('main.logoff') }}">
-                <button class="button">
-                    {{ _('logoff') }}
-                </button>
-            </a>
+        <div class="buttons_container">
+             <!-- LOGOFF -->
+            <div class="div_button">
+                <p>{{ _('logoff') }}</p>
+                <a href="{{ url_for('main.logoff') }}">
+                    <button class="button">
+                        {{ _('logoff') }}
+                    </button>
+                </a>
+            </div>
+            <!-- DELETE -->
+            <div class="div_button">
+                <form action="" method="post">
+                    <p>{{ _('delete_msg_1') }}</p>
+                    <button class="button danger">
+                        {{ _('delete') }}
+                    </button>
+                </form>
+            </div>
         </div>
 
     </div>
+    <div class="space"></div>
+    <hr>
 
+    <div class="container about">
+        <h2>{{ _('about_project') }}</h2>
+        <p>Arquivo do Projeto; Conheça o desenvolvimento, consulte os relatórios técnicos e acompanhe a evolução do jogo.</p>
+        <div class="container">
+            <h3>{{ _('copyrights') }}</h3>
+            
+            {% for msg in _('copyrights disclaimer') %}
+                <p>{{ msg }}</p>
+            {% endfor %}
+        </div>
+        <div class="space"></div>
 
-    <div class="container">
-        {% for msg in _('copyrights disclaimer') %}
-            <p>{{ msg }}</p>
-        {% endfor %}
+        <div class="container">
+            <h3>{{ _('github') }}</h3>
+            <p>
+                Veja o código fonte, acompanhe as novidades e contribua com o projeto.
+            </p>
+            <a href="https://github.com/HetrisleyGomes/Overwatch-Card-Game" target="_blank" rel="noopener noreferrer">
+                <img src="../static/extras/github.png" alt="github" class="github">
+            </a>
+        </div>
+        <div class="space"></div>
+
+        <div class="container">
+            <h3>{{ _('relatorio') }}</h3>
+            <p>Leia o relatório de desenvolvimento, decisões de design e planejamento.</p>
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vQYU7XLsQKCD43jk5ZDVUyX4hb0B3DTvK_ak3fi28oGWxiNEyTvhiTyEhK02Ui4bpYE-hkmzxXcmpm-/pub?embedded=true"></iframe>
+        </div>
     </div>
     <div class="space"></div>
     <div class="space"></div>
+
 </div>
 
 <script>
@@ -142,5 +180,6 @@ function selecionarImagem(img) {
         body: JSON.stringify({ imagem: img })
     });
 }
+
 </script>
 {% endblock %}

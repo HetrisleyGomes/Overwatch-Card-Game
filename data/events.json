@@ -87,6 +87,6 @@
         "pack_description": "Pack of 5 random cards, which may contain common, uncommon, epic, or legendary cards."
       }
     },
-    "ativo": true
+    "ativo": false
   }
 ]
