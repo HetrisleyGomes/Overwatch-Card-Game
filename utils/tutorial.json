@@ -14,7 +14,7 @@
         },
         "store": {
             "title": "Loja",
-            "content": "Aqui, você pode trocar pontos e Ímpetos por outros itens.\n\nPacotaços:\nFrequentimente, ficam disponíveis pacotes especiais com cartas que compartilham de um mesmo tema, aproveite esses pacotes para aumenta sua coleção.\nPacotes extras:\nNão quer esperar o dia seguinte para abrir mais pacotes? Você veio ao lugar certo. Aqui você pode comprar pacotes extras para completar sua coleção mais rápido.\nÍcones de jogador:\nCompre ícones para personalizar seu perfil, e desbloquei novos ícones ao completar coleções ou subir de nível.\nCofre secreto:\nAlgumas vezes no mês, um comerciante misterioso surge oferecendo cartas míticas e cartas legado. Fique de olho e não o perca."
+            "content": "Aqui, você pode trocar pontos e Ímpetos por outros itens.\n\nPacotaços:\nFrequentimente, ficam disponíveis pacotes especiais com cartas que compartilham de um mesmo tema, aproveite esses pacotes para aumenta sua coleção.\nPacotes extras:\nNão quer esperar o dia seguinte para abrir mais pacotes? Você veio ao lugar certo. Aqui você pode comprar pacotes extras para completar sua coleção mais rápido.\nÍcones de jogador:\nCompre ícones para personalizar seu perfil, e desbloquei novos ícones ao completar coleções ou subir de nível.\nCofre secreto:\nAlgumas vezes no mês, um comerciante misterioso surge oferecendo cartas Míticas e cartas Legado. Fique de olho e não o perca."
         },
         "settings": {
             "title": "Configurações",
@@ -23,6 +23,10 @@
         "combat": {
             "title": "Duelo",
             "content": "Durante um duelo, dois jogadores se enfrentam durante sete turnos, para causar o máximo de dano possível um ao outro. Ao final dos sete turnos, vence aquele com mais pontos de vida.\n\nDurante cada turno, ambos os jogadores escolhem uma carta para o embate, cada carta recebe um efeito dependendo de sua classe e subclasse.\nEntre os efeitos de cartas, temos:\n- Ataque: Causa essa quantidade de dano ao adversário.\n- Escudo: Diminui o dano de Ataque do seu adversário.\n- Cura: Recupera seus pontos de vida.\n- Golpe veloz: Um ataque que acontece antes do escudo do seu adversário.\n- Anti-cura: Bloqueia a quantidade de cura que seu adversário receberá neste turno.\n- Ataque futuro: No próximo turno, garante um Ataque adicional à sua ação.\n- Revitalizar: No próximo turno, dobra toda quantidade de cura que você receber.\n- Descuido: Causa essa quantidade de dano a você mesmo."
+        },
+        "vault": {
+            "title": "Cofre do Maximilien",
+            "content": "Aproveite uma seleção de cartas únicas com ofertas imperdíveis, feitos apenas para você.\n\nFrequêntemente, Maximilien surge na Loja com ofertas temporárias exclusivas para cada jogador. Aproveite a chance para obter cartas Míticas e cartas Legado. Fique de olho e não operca essa oportunidade."
         }
     },
     "en": {
@@ -49,6 +53,10 @@
         "combat": {
             "title": "Duel",
             "content": "During a Duel, two players face off over the course of seven turns, each trying to deal as much damage as possible to the other. At the end of the seventh turn, the player with the most Health wins.\n\nDuring each turn, both players choose one card to play. Each card gains an effect based on its class and subclass.\nCard effects include:\n- Attack: Deals this amount of damage to your opponent.\n- Shield: Reduces the damage dealt by your opponent's Attack.\n- Heal: Restores your Health.\n- Quick Strike: An attack that is resolved before your opponent's Shield takes effect.\n- Anti-Heal: Prevents your opponent from recovering this amount of Health during this turn.\n- Future Attack: On your next turn, grants an additional Attack to your action.\n- Revitalize: On your next turn, doubles all healing you receive.\n- Recklessness: Deals this amount of damage to yourself."
+        },
+        "vault": {
+            "title": "Maximilien's Vault",
+            "content": "Take advantage of a selection of unique cards with exclusive offers made just for you.\n\nFrom time to time, Maximilien appears in the Shop with limited-time offers tailored to each player. Don't miss your chance to obtain Mythic and Legacy cards. Keep an eye out—you won't want to miss him."
         }
     }
 }

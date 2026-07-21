@@ -337,7 +337,8 @@ def maximilien():
 
     connection.close()
     vault_data = get_vault_data_format(vault_atual)
-    return render_template('vault.html', user = user, cartas=cartas, vault_data=vault_data, lang=lang)
+    global_tips = get_global_tips(lang, 'vault')
+    return render_template('vault.html', user = user, cartas=cartas, vault_data=vault_data, lang=lang, global_tips=global_tips)
 
 
 @main.route("/comprar-carta-vault", methods=["POST"])
