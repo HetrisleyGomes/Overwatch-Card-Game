@@ -15,7 +15,7 @@ body {
     border-radius: 12px;
     width: 300px;
     text-align: center;
-    color: white;
+    color: var(--light-text);
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
@@ -45,7 +45,7 @@ body {
     background-color: #2f6fd6;
     border: none;
     border-radius: 8px;
-    color: white;
+    color: var(--light-text);
     cursor: pointer;
     transition: 0.2s;
 }
@@ -84,7 +84,7 @@ body {
 }
 
 .extra a {
-    color: #8ab4ff;
+    color: var(--blue-extra-color);
     text-decoration: none;
 }
 
@@ -150,12 +150,12 @@ p.label {
   border-radius: 0.5rem;
   border: none;
   padding: .5rem 0;
-  color: white;
+  color: var(--light-text);
   transition: all .15s ease-in-out;
 }
 
 .radio-inputs .radio input:checked + .name {
-  background-color: #fff;
+  background-color: var(--light-text);
   font-weight: 600;
   color: var(--main-color);
 }

@@ -30,7 +30,7 @@
     background-color: var(--main-dark-color);
     padding: 10px;
     border-radius: 10px;
-    color: white;
+    color: var(--light-text);
 }
 
 .card-grid {
@@ -62,7 +62,7 @@
     background-color: var(--darkest-color);
     padding: 10px;
     border-radius: 10px;
-    color: white;
+    color: var(--light-text);
 }
 
 .deck-slots {
@@ -101,7 +101,7 @@
 
 .salvar {
     background-color: var(--main-color);
-    color: white;
+    color: var(--light-text);
 }
 
 .salvar:hover {
@@ -110,7 +110,7 @@
 }
 .cancelar {
     background-color: var(--cinza);
-    color: white;
+    color: var(--light-text);
 }
 .cancelar:hover {
     background-color: var(--main-light-color);
@@ -146,7 +146,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: white;
+    color: var(--light-text);
     text-shadow: 1px 1px black;
 }
 

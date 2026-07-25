@@ -38,6 +38,8 @@
   --combat-dark_red-color: #8b2f4d;
   --combat-cyan-color: #43d9e8;
   
+  --dark-text: #3b4f63;
+  --light-text: #ffffff;
 }
 
 @font-face {

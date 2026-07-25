@@ -35,8 +35,10 @@
     "name": "Nome",
     "language": "Idioma",
     "save": "Salvar",
+    "close": "Fechar",
     "logoff": "Sair",
     "level": "Nível",
+    "raridade": "Rarirdade",
 
     "msg_no_packs": "Você não possui mais pacotes por hoje!",
     "bundle_ad": "Pacote promocional disponível na loja!",

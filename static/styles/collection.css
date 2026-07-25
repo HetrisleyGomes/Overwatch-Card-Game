@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: var(--light-text);
     padding: 1vh 2vw;
 }
 
@@ -36,7 +36,7 @@
 .progress_fill {
     height: 100%;
     background: linear-gradient(90deg, var(--xp-color-2), var(--xp-color-1));
-    color: white;
+    color: var(--light-text);
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -59,7 +59,7 @@
 .personagem, .personagem_apagado {
     width: 200px;
     text-align: center;
-    color: white;
+    color: var(--light-text);
 }
 .personagem_img {
     position: relative;
@@ -103,7 +103,7 @@
     right: 8px;
     top: 12px;
     box-sizing: border-box;
-    border: 1px solid white;
+    border: 1px solid var(--light-text);
 }
 
 .raridade.comum { background: var(--comum-rarity); }

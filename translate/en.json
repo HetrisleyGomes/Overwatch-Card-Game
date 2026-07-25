@@ -35,8 +35,10 @@
     "name": "Name",
     "language": "Language",
     "save": "Save",
+    "close": "Close",
     "logoff": "Logoff",
     "level": "Level",
+    "raridade": "Rarity",
 
     "msg_no_packs": "You have no more packs to open today!",
     "bundle_ad": "Bundle available in the store!",

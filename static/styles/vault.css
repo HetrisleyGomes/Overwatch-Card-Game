@@ -7,7 +7,7 @@
     margin-bottom: 10px;
     text-align: left;
     padding-left: 8vw;
-    color: white;
+    color: var(--light-text);
 }
 .subtitle {
     margin-top: 10px;
@@ -69,7 +69,7 @@
     font-size: 18px;
 }
 .carta_nome {
-    color: white;
+    color: var(--light-text);
     text-shadow: 0 0 2px black;
     padding: 4px;
 }

@@ -167,7 +167,9 @@ def inventario():
 
     mostrar_todas = request.args.get("all", "0") == "1"
     global_tips = get_global_tips(lang, "inventory")
-    return render_template('inventario.html', user = user, mostrar_todas = mostrar_todas, cartas=cartas, global_tips=global_tips)
+    classes_tips = get_classes_lang(lang)
+    combate_tips = get_combat_tips(lang)
+    return render_template('inventario.html', user = user, mostrar_todas = mostrar_todas, cartas=cartas, global_tips=global_tips, classes_tips= classes_tips, combate_tips= combate_tips)
 
 # Coleções =========================================
 @main.route("/collection")

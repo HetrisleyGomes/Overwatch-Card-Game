@@ -28,7 +28,9 @@
         <!-- colocar isso depois de wrapper: -->
         <div class="card-wrapper {% if not carta.possui %}apagada{% endif %}">
 
-            <div class="card {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.is_evento }} {% if carta.foil %}foil{% endif %}">
+            <div class="card {{ carta.raridade }} {{ carta.classe|lower }} 
+            {{ carta.is_evento }} {% if carta.foil %}foil{% endif %}" 
+            onclick="showCard(this)" data-card-id="{{ carta.id }}">
 
                 <!-- Nome -->
                 <div class="card-nome">
@@ -56,7 +58,7 @@
                 <!-- Classe -->
                 <div class="card-classe">
                     {% if carta.possui %}
-                    {{ carta.classe }} — {{ carta.subclasse }}
+                    {{ classes_tips[carta.classe] }} — {{ classes_tips[carta.subclasse] }}
                     {% endif %}
                 </div>
 
@@ -84,8 +86,99 @@
     {% endfor %}
 </div>
 </div>
+
+<div id="card-overlay">
+    <div id="card-view">
+        <div id="modal-card">
+            <!-- Nome -->
+            <div id="card-nome-modal" class="card-nome">
+            </div>
+
+            <!-- Imagem -->
+            <div class="card-img">
+                <img id="card-img-modal" src="">
+            </div>
+
+            <!-- Classe -->
+            <div id="card-classe-modal" class="card-classe">
+            </div>
+
+            <!-- Texto -->
+            <div class="card-texto">
+                <p class="entrada" id="entrada-modal"></p>
+                <p class="ult" id="ult-modal"></p>
+            </div>
+        </div>
+
+        <div id="card-info">
+            <h2 id="card-name"></h2>
+            <p>{{ _('raridade') }}: <span id="card-rarity"></span></p>
+            <p id="card-class"></p> 
+            <p id="card-subclass"></p>
+            <button onclick="fecharModal()" class="close-btn">{{ _('close') }}</button>
+        </div>
+    </div>
+</div>
+
 <div class="space"></div>
 <script>
+const cards = {{ cartas | tojson }};
+const classesTips = {{ classes_tips | tojson }};
+const combateTips = {{ combate_tips | tojson }};
+const cardsById = {};
+
+cards.forEach(card => {
+    cardsById[card.id] = card;
+});
+
+const overlay = document.getElementById("card-overlay");
+
+const modalCard = document.getElementById("modal-card");
+const modalNameCard = document.getElementById("card-nome-modal");
+const modalImgCard = document.getElementById("card-img-modal");
+const modalClassCard = document.getElementById("card-classe-modal");
+const modalTextoCard = document.getElementById("entrada-modal");
+const modalUltCard = document.getElementById("ult-modal");
+
+const modalName = document.getElementById("card-name");
+const modalRarity = document.getElementById("card-rarity");
+
+const modalSubclass = document.getElementById("card-subclass");
+const modalClass = document.getElementById("card-class");
+
+
+function showCard(element){
+    const id = element.dataset.cardId;
+    const card = cardsById[id];
+    console.log(card);
+
+    modalCard.classList = 'card'
+    modalCard.classList.add(card.raridade);
+    modalCard.classList.add(card.classe.toLowerCase());
+    modalCard.classList.add(card.is_evento);
+    if (card.foil) {
+        modalCard.classList.add('foil');
+    }
+    
+    modalNameCard.textContent = card.nome;
+    modalImgCard.src = "/static/images/" + card.img;
+
+    modalClassCard.textContent = classesTips[card.classe] + " - " + classesTips[card.subclasse];
+    modalTextoCard.textContent = '"' + card.entrada + '"';
+    modalUltCard.textContent = card.ult_nome + ": " + card.ult;
+
+    modalName.textContent = card.nome;
+    modalRarity.textContent = classesTips[card.raridade];
+
+    modalClass.textContent = combateTips[card.classe];
+    modalSubclass.textContent = combateTips[card.subclasse];
+
+    overlay.classList.add("open");
+}
+function fecharModal(){
+    overlay.classList.remove("open");
+}
+
 const checkbox = document.getElementById("switch-shadow");
 
 checkbox.addEventListener("change", () => {

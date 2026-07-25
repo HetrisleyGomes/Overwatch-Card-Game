@@ -16,7 +16,7 @@
     margin-top: 6px;
     display: flex;
     border-radius: 10px;
-    color: white;
+    color: var(--light-text);
     background-color: var(--main-dark-color);
     border: 1px solid var(--main-light-color);
     padding: 8px 22px;
@@ -34,7 +34,7 @@
     width: 100px;
     padding: 6px 0;
     border-radius: 8px;
-    color: white;
+    color: var(--light-text);
     cursor: pointer;
     position: relative;
 }
@@ -88,7 +88,7 @@
 }
 .switch--shadow + label:after {
   width: 32px;
-  background-color: #fff;
+  background-color: var(--light-text);
   border-radius: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.4s;
@@ -99,6 +99,60 @@
 }
 .switch--shadow:checked + label:after {
   transform: translateX(30px);
+}
+
+#card-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:5000;
+}
+
+#card-view{
+  display:flex;
+  gap:5vw;
+  align-items:center;
+  justify-content: center;
+  background-color: var(--darkest-color);
+  border: 8px solid var(--main-light-color);
+  padding: 12vh 8vw;
+  border-radius: 50px;
+  color: var(--light-text);
+  width: 60vw;
+  position: relative;
+}
+
+#modal-card{
+  transform:scale(.7);
+  transition:.25s;
+}
+
+#card-overlay.open{
+  display:flex;
+}
+
+#card-overlay.open #modal-card{
+  transform:scale(1);
+}
+
+#card-info{
+  line-height: 1.8;
+}
+
+.close-btn {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  border-radius: 22px;
+  padding: 8px;
+  width: 100px;
+  border: 2px solid var(--main-dark-color);
+  background-color: var(--main-color);
+  color: var(--light-text);
+  cursor: pointer;
 }
 
 /* RESPONSIVIDADE ========================== */
@@ -145,5 +199,17 @@
   .card-info {
     font-size: 12px;
     padding: 8px 8px;
+  }
+  #card-view{
+    flex-direction: column;
+    gap: 2vh;
+  }
+  #card-info {
+    line-height: 1.2;
+  }
+  .close-btn {
+    top: 30px;
+    right: 30px;
+    width: 60px;
   }
 }

@@ -6,7 +6,7 @@
         },
         "inventory": {
             "title": "Inventário",
-            "content": "Aqui você pode ver todas as suas cartas obtidas, como funcionalidade futura, está planejado uma janela de informações mais detalhadas com relação ao uso no modo duelo.\n\nVisualização completa:\nUsando o modo 'Ver todas as cartas', você verá todos os slots de cartas faltantes, assemelhando-se a um álbum de figurinhas.\nConstrutor de deck:\nPara entrar no modo Duelo, você deve primeiramente montar um deck com suas cartas disponíveis."
+            "content": "Aqui você pode ver todas as suas cartas obtidas, como funcionalidade futura, está planejado uma janela de informações mais detalhadas com relação ao uso no modo duelo.\n\nVisualização completa:\nUsando o modo 'Ver todas as cartas', você verá todos os slots de cartas faltantes, assemelhando-se a um álbum de figurinhas.\nConstrutor de deck:\nPara entrar no modo Duelo, você deve primeiramente montar um deck com suas cartas disponíveis. Para montar um deck, você precisa de: 12 cartas; Apenas uma cópia de cada personagem; No máximo 3 cartas de tanque."
         },
         "collections": {
             "title": "Coleções",
@@ -36,7 +36,7 @@
         },
         "inventory": {
             "title": "Inventory",
-            "content": "Here you can view all the cards you've collected. As a future feature, a more detailed information window is planned, providing additional details about each card's use in Duel mode.\n\nComplete View:\nUsing 'Show all cards', you'll be able to see every missing card slot, making your collection resemble a sticker album.\nDeck Builder:\nBefore entering Duel mode, you must first build a deck using the cards you have available."
+            "content": "Here you can view all the cards you've collected. As a future feature, a more detailed information window is planned, providing additional details about each card's use in Duel mode.\n\nComplete View:\nUsing 'Show all cards', you'll be able to see every missing card slot, making your collection resemble a sticker album.\nDeck Builder:\nBefore entering Duel mode, you must first build a deck using the cards you have available. To build a deck, you need: 12 cards; only one copy of each hero; and a maximum of 3 tank cards."
         },
         "collections": {
             "title": "Collections",

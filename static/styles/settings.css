@@ -30,7 +30,7 @@
 
 .dropdown-btn {
     background: var(--main-color);
-    color: white;
+    color: var(--light-text);
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -66,7 +66,7 @@
 
 .xp_field {
     background: linear-gradient(135deg, var(--main-color), var(--main-dark-color));
-    color: white;
+    color: var(--light-text);
     padding: 12px 18px;
     border-radius: 10px;
     font-weight: bold;
@@ -91,7 +91,7 @@
 .progress_xp {
     height: 100%;
     background: linear-gradient(90deg, var(--xp-color-2), var(--xp-color-1));
-    color: white;
+    color: var(--light-text);
     display: flex;
     align-items: center;
     transition: width 0.4s ease;
@@ -129,7 +129,7 @@
 }
 .nome-edit-btn {
     border: var(--main-color) 2px solid;
-    background-color: white;
+    background-color: var(--light-text);
     border-radius: 0 20px 20px 0;
     padding: 10px;
     cursor: pointer;
@@ -173,12 +173,12 @@
   border-radius: 0.5rem;
   border: none;
   padding: .5rem 0;
-  color: white;
+  color: var(--light-text);
   transition: all .15s ease-in-out;
 }
 
 .radio-inputs .radio input:checked + .name {
-  background-color: #fff;
+  background-color: var(--light-text);
   font-weight: 600;
   color: var(--main-color);
 }
@@ -224,7 +224,7 @@ iframe{
     transform:
         scale(1.1)
         rotate(8deg);
-    filter: drop-shadow(0 0 10px white);
+    filter: drop-shadow(0 0 10px var(--light-text));
 }
 
 .about h2{

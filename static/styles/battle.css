@@ -204,7 +204,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--darkest-color);
-    color: white;
+    color: var(--light-text);
     box-sizing: border-box;
     border: 12px solid black;
     position: relative;
