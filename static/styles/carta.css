@@ -5,7 +5,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    background-color: var(--darkest-color);
+    background-color: var(--fixed-color);
     color: var(--light-text);
     box-sizing: border-box;
     border: 12px solid black;

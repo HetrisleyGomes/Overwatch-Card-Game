@@ -1,0 +1,151 @@
+:root[data-theme="ilios"] {
+    /* Interface */
+    --main-color: #00c3ff;
+    --main-dark-color: #0062b3;
+    --main-light-color: #85e2ff;
+    --darkest-color: #5c7992;
+
+    /* Neutros */
+    --cinza: #7b8b9b;
+    --cinza-claro: #cfd8e3;
+
+    /* Texto */
+    --dark-text: #2b4d73;
+    --light-text: #ffffff;
+
+    /* Barras de XP */
+    --xp-color-1: #81faf4;
+    --xp-color-2: #03e5d2;
+
+    /* Cores auxiliares */
+    --blue-extra-color: #4fc3f7;
+    --green-extra-color: #4caf50;
+
+    /* Alertas */
+    --notification-color: #5fd9b8;
+
+    /* Overlay */
+    --background-overlay: rgba(16, 39, 67, 0.35);
+
+    --button: linear-gradient(
+        #4fa8e8,
+        #2f79c8
+    );
+
+    --button-hover: linear-gradient(
+        #69baf2,
+        #4a94de
+    );
+}
+
+:root[data-theme="route_66"] {
+  --main-color: #d2611c;
+  --main-dark-color: #92481d;
+  --main-light-color: #f2d975;
+  --darkest-color: #4a2e1d;
+
+  --cinza: #6b6258;
+  --cinza-claro: #c8b8a4;
+
+
+  --xp-color-1: #ffb74d;
+  --xp-color-2: #ef6c00;
+
+  --blue-extra-color: #5fb7ff;
+  --green-extra-color: #7cb342;
+
+  --notification-color: #64b4f1;
+
+  --dark-text: #4a2e1d;
+  --light-text: #fff9f2;
+
+  --text-shadow: 0 0 2px #3b2417;
+
+  --background-overlay: rgba(52, 33, 21, 0.45);
+
+  --button: linear-gradient(
+    #de8d46,
+    #b06b35
+  );
+
+  --button-hover: linear-gradient(
+    #f2c355,
+    #cd943e
+  );
+
+}
+
+:root[data-theme="anubis"] {
+  --main-color: #d9bb63;
+  --main-dark-color: #b08b33;
+  --main-light-color: #ffe480;
+  --darkest-color: #5b4516;
+
+  --cinza: #8d7a56;
+  --cinza-claro: #e9ddbb;
+
+  --xp-color-1: #ffe082;
+  --xp-color-2: #f9a825;
+
+  --dark-text: #4b3811;
+  --light-text: #f5fdff;
+
+  --blue-extra-color: #6bb7ff;
+  --green-extra-color: #6ca64b;
+
+  --notification-color: #3920e0;
+
+  --text-shadow: 0 0 2px rgba(55, 35, 0, .35);
+
+  --background-overlay: rgba(42, 28, 0, .28);
+
+  --button: linear-gradient(
+      #f7d46d,
+      #c89a2d
+  );
+
+  --button-hover: linear-gradient(
+      #ffe28c,
+      #ddb044
+  );
+
+  --banner-color: linear-gradient(
+      90deg,
+      #8f6a18,
+      #d8b44a,
+      #f5dc86,
+      #d8b44a,
+      #8f6a18
+  );
+
+  --footer: linear-gradient(
+      to bottom,
+      #ffffff,
+      #ece5ce
+  );
+
+
+  --grid-background: linear-gradient(90deg, var(--cinza), var(--darkest-color));
+  --theme-footer-detail: 2px solid rgba(255,223,120,.7);
+  --theme-btn-shadow: 0 0 15px rgba(255,215,0,.4);
+  --thame-btn-border: 3px solid var(--blue-extra-color);
+  --theme-btn-animation: brilho-anubis 1.5s ease-in-out infinite both;
+}
+:root[data-theme="anubis"][data-mode="light"]{
+  --site-bg: #f9f3e4;
+}
+:root[data-theme="anubis"][data-mode="dark"]{
+  --footer: linear-gradient(
+      to bottom,
+      var(--cinza),
+      var(--site-bg)
+  );
+  --single-text: var(--light-text);
+  --dark-text: #f7d46d;
+  --darkest-color: #793f15;
+}
+@keyframes brilho-anubis {
+    0% { box-shadow: 0 0 2px var(--blue-extra-color); }
+    50% { box-shadow: 0 0 2px var(--notification-color); }
+    100% { box-shadow: 0 0 2px var(--blue-extra-color); }
+}

@@ -1,4 +1,5 @@
-:root {
+:root{
+  --fixed-color: #1e2a38;
   --main-color: #3b4f63;
   --main-dark-color: #2c3c4d;
   --main-light-color: #4f6377;
@@ -25,9 +26,13 @@
   --mitico-rarity: linear-gradient(45deg, #c1269a, #ffc0cb, #01a1c1, #c1269a);
   --event-rarity: #9370d8;
 
+  --site-bg: #d9e1e8;
+  --dark-text: #3b4f63;
+  --light-text: #ffffff;
+  --single-text: #1e2a38;
+
   --blue-extra-color: #87cefa; 
   --green-extra-color: #008000;
-
   --notification-color: #ac2b2b;
 
   --combat-red-color: #d64545;
@@ -37,10 +42,33 @@
   --combat-yellow-color: #ffcf33;
   --combat-dark_red-color: #8b2f4d;
   --combat-cyan-color: #43d9e8;
+
+  --text-shadow: 0 0 2px #000000;
+  --background-overlay: #00000073;
+
+  --button: linear-gradient(
+    #3b4f63,
+    #2c3c4d
+  );
   
-  --dark-text: #3b4f63;
-  --light-text: #ffffff;
+  --button-hover: linear-gradient(
+    #4f6377,
+    #3b4f63
+  );
+
+  --banner-color: var(--main-color);
+  --footer: linear-gradient(to bottom, var(--light-text), var(--site-bg));
+
+  --grid-background: radial-gradient(var(--main-color) 80%, var(--main-dark-color));
 }
+
+:root[data-mode="dark"]{  
+  --site-bg: #242424;
+  --footer: linear-gradient(to bottom, var(--cinza) 5%, var(--site-bg));
+  --single-text: var(var(--light-text))
+}
+
+
 
 @font-face {
     font-family: "Big Noodle Titling";
@@ -58,7 +86,7 @@ body {
     margin: 0;
     font-family: "Big Noodle Titling";
     font-size: 20px;
-    background-color: #d9e1e8;
+    background-color: var(--site-bg);
     overflow-x: hidden;
 }
 button, a {

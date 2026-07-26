@@ -1,7 +1,7 @@
 /* TOPO */
 .header {
-    background-color: var(--main-color);
-    color: white;
+    background: var(--banner-color);
+    color: var(--light-text);
     display: flex;
     justify-content: space-between;
     padding: 15px 20px;
@@ -40,7 +40,7 @@
 }
 /* CENTRO */
 .main {
-    background-color: #e4ebf2;
+    background-color: var(--site-bg);
     padding: 3vh 2vw;
     text-align: center;
     min-height: 80vh;
@@ -54,26 +54,38 @@
     align-items: center;
     padding: 10px 0;
     position: fixed;
-    background-color: white;
+    background: var(--footer);
     width: 100vw;
     height: 10vh;
     bottom: 0;
     z-index: 3;
+    border-top: var(--theme-footer-detail);
 }
 
 .button {
-    background-color: var(--main-color);
+    background: var(--button);
     border: none;
     width: 180px;
     padding: 20px 0;
     border-radius: 8px;
-    color: white;
+    color: var(--light-text);
     cursor: pointer;
     position: relative;
+    box-shadow: var(--theme-btn-shadow);
 }
 
 .button:hover {
-    background-color: var(--main-light-color);
+    transition: 0.5s;
+    background: var(--button-hover);
+}
+
+.premium-button:hover{
+    animation: var(--theme-btn-animation);
+    border: var(--thame-btn-border);
+}
+
+.button:disabled {
+    background: var(--main-dark-color);
 }
 
 .button.ativo {
@@ -91,8 +103,8 @@
     top: -8px;
     right: -8px;
     animation: pulso 1s ease-in-out infinite both;
+    overflow: visible;
 }
-
 
 @keyframes pulso {
   0% {
@@ -100,14 +112,16 @@
             transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
 }
+
+
 
 #help-button{
     position: fixed;
@@ -117,19 +131,20 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--main-color);
+    background: var(--button);
     color: var(--light-text);
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,.35);
+    box-shadow: 0 5px 15px var(--background-overlay);
     transition: .2s;
     z-index: 150;
 }
 
 #help-button:hover{
+    background: var(--button-hover);
     transform: scale(1.1);
     box-shadow: 0 0 20px var(--main-light-color);
 }
@@ -140,7 +155,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0,0,0,.65);
+    background: var(--background-overlay);
     backdrop-filter: blur(4px);
     opacity: 0;
     visibility: hidden;
@@ -162,9 +177,10 @@
     background: var(--main-light-color);
     border-radius: 18px;
     border: 3px solid var(--blue-extra-color);
-    box-shadow: 0 15px 40px rgba(0,0,0,.45);
+    box-shadow: 0 15px 40px var(--background-overlay);
     padding: 30px;
-    color: white;
+    color: var(--light-text);
+    text-shadow: var(--text-shadow);
     overflow-y: auto;
     animation: helpAppear .25s ease;
 }
@@ -230,6 +246,46 @@
     }
 }
 
+
+.theme-switch{
+    position:relative;
+    display:inline-block;
+    width:72px;
+    height:36px;
+    border: 1px solid var(--main-light-color);
+    border-radius: 50px;
+}
+.theme-switch input{
+    display:none;
+}
+.slider{
+    position:absolute;
+    inset:0;
+    background:var(--blue-extra-color);
+    border-radius:50px;
+    cursor:pointer;
+    transition:.3s;
+}
+.icon{
+    position:absolute;
+    left:4px;
+    top:4px;
+    width:28px;
+    height:28px;
+    background: var(--light-text);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.3s;
+}
+input:checked + .slider{
+    background: var(--site-bg);
+}
+input:checked + .slider .icon{
+    transform: translateX(36px);
+}
+
 /* RESPONSIVIDADE ========================== */
 @media (max-width: 1380px){
     .button {
@@ -245,13 +301,7 @@
     }
     .button {
         font-size: 18px;
-        width: 130px;
-    }
-}
-
-@media (max-width: 768px){
-    #help-button{
-        
+        width: 90px;
     }
 
     #help-modal{

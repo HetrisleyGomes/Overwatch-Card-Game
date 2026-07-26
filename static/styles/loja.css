@@ -1,3 +1,7 @@
+.main {
+    color: var(--single-text);
+}
+
 .container {
     padding: 0 40px;
     margin: auto auto 100px;

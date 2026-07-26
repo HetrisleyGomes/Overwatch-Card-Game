@@ -6,7 +6,7 @@
     border-radius: 20px;
     color: var(--light-text);
     text-align: center;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 40px var(--background-overlay);
 }
 
 /* TÍTULO */

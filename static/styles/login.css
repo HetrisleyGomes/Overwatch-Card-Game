@@ -16,7 +16,7 @@ body {
     width: 300px;
     text-align: center;
     color: var(--light-text);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 25px var(--background-overlay);
 }
 
 .login-container h1 {
@@ -127,7 +127,7 @@ p.label {
   border-radius: 0.5rem;
   background-color: var(--main-light-color);
   box-sizing: border-box;
-  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 0px 1px var(--background-overlay);
   padding: 0.25rem;
   width: 300px;
   font-size: 14px;

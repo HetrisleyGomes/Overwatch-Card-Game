@@ -9,6 +9,16 @@
         <div><span>{{ user.nome }}</span></div>
     </div>
     <div class="header-item">
+        <div class="header-item">
+            <label class="theme-switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider">
+                <span class="icon">
+                    ☀️
+                </span>
+            </span>
+        </label>
+        </div>
         <div class="header-item" id="points">{{ _('prisms') }}: <div class="points_box"><span id="pontos">{{ user.impetos }}</span></div></div>
         <div class="header-item" id="points">{{ _('points') }}: <div class="points_box"><span id="pontos">{{ user.pontos }}</span></div></div>
     </div>
@@ -40,26 +50,26 @@
 <!-- RODAPÉ -->
 <div class="footer">
     <a href="{{ url_for('main.home') }}">
-        <button class="button {% if request.endpoint == 'main.home' %}ativo{% endif %}"
+        <button class="button premium-button {% if request.endpoint == 'main.home' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.home' %}disabled{% endif %}>
             {{ _('home') }}
         </button>
     </a>
     <a href="{{ url_for('main.inventario') }}">
-        <button class="button {% if request.endpoint == 'main.inventario' %}ativo{% endif %}"
+        <button class="button premium-button {% if request.endpoint == 'main.inventario' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.inventario' %}disabled{% endif %}>
             {{ _('inventory') }}
         </button>
     </a>
     
     <a href="{{ url_for('main.collection') }}">
-        <button class="button {% if request.endpoint == 'main.collection' %}ativo{% endif %}"
+        <button class="button premium-button {% if request.endpoint == 'main.collection' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.collection' %}disabled{% endif %}>
             {{ _('collections') }}
         </button>
     </a>
     <a href="{{ url_for('main.loja') }}">
-        <button class="button {% if request.endpoint == 'main.loja' %}ativo{% endif %}"
+        <button class="button premium-button {% if request.endpoint == 'main.loja' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.loja' %}disabled{% endif %}>
             {{ _('store') }}
             {% if not user.has_already_get_daily_bonus and request.endpoint != 'main.loja' %}
@@ -68,7 +78,7 @@
         </button>
     </a>
     <a href="{{ url_for('main.settings') }}">
-        <button class="button {% if request.endpoint == 'main.settings' %}ativo{% endif %}"
+        <button class="button premium-button {% if request.endpoint == 'main.settings' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.settings' %}disabled{% endif %}>
             {{ _('settings') }}
         </button>
@@ -76,8 +86,8 @@
 </div>
 <div id="global-tooltip"></div>
 <script>
+    // Tooltips
     const tooltip = document.getElementById("global-tooltip");
-
     function initializeTooltips() {
         document.addEventListener("mousemove", (e) => {
             const tooltipClass = e.target.closest(".tooltipClass");
@@ -112,6 +122,7 @@
         });
     }
 
+    // Botão de ajuda
     function openHelp(){
         document.getElementById("help-modal").classList.add("show");
     }
@@ -122,11 +133,28 @@
 
     document.getElementById("help-button").onclick = () => {
         openHelp();
-
     };
 
 
+    // Modo noturno
+    const toggle = document.getElementById("mode-toggle");
 
+    toggle.addEventListener("change", () => {
+        document.documentElement.dataset.mode =
+            toggle.checked
+                ? "dark"
+                : "light";
+
+        localStorage.setItem(
+            "mode",
+            document.documentElement.dataset.mode
+        );
+    });
+
+    const mode = localStorage.getItem("mode") || "light";
+
+    document.documentElement.dataset.mode = mode;
+    toggle.checked = mode === "dark";
 
     initializeTooltips()
 </script>

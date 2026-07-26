@@ -3,7 +3,7 @@
     border-radius: 12px;
     padding: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 10px var(--background-overlay);
 }
 
 .set_head {
@@ -92,6 +92,7 @@
     display: block;
     font-weight: bold;
     font-size: clamp(12px, 1vw, 1vw);
+    text-shadow: var(--text-shadow);
 }
 
 .raridade {
@@ -127,8 +128,8 @@
 }
 
 .set.completo {
-    border: 2px solid gold;
-    animation: brilho 1s ease;
+    border: 2px solid var(--pack-common-color);
+    animation: brilho 1s ease infinite;
 }
 
 @keyframes brilho {
