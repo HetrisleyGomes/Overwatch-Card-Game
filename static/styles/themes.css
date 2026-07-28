@@ -1,4 +1,4 @@
-:root[data-theme="ilios"] {
+:root[data-theme="ilios-theme"] {
     /* Interface */
     --main-color: #00c3ff;
     --main-dark-color: #0062b3;
@@ -38,7 +38,7 @@
     );
 }
 
-:root[data-theme="route_66"] {
+:root[data-theme="route_66-theme"] {
   --main-color: #d2611c;
   --main-dark-color: #92481d;
   --main-light-color: #f2d975;
@@ -72,10 +72,12 @@
     #f2c355,
     #cd943e
   );
-
+}
+:root[data-theme="route_66-theme"][data-mode="dark"]{  
+  --dark-text: var(--light-text);
 }
 
-:root[data-theme="anubis"] {
+:root[data-theme="anubis_temple-theme"] {
   --main-color: #d9bb63;
   --main-dark-color: #b08b33;
   --main-light-color: #ffe480;
@@ -131,10 +133,10 @@
   --thame-btn-border: 3px solid var(--blue-extra-color);
   --theme-btn-animation: brilho-anubis 1.5s ease-in-out infinite both;
 }
-:root[data-theme="anubis"][data-mode="light"]{
+:root[data-theme="anubis_temple-theme"][data-mode="light"]{
   --site-bg: #f9f3e4;
 }
-:root[data-theme="anubis"][data-mode="dark"]{
+:root[data-theme="anubis_temple-theme"][data-mode="dark"]{
   --footer: linear-gradient(
       to bottom,
       var(--cinza),

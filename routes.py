@@ -4,8 +4,8 @@ from services.progress_service import registry_cards, save_deck_progress, get_de
 from services.pack_sevice import abrir_pack, abrir_pack_evento
 from services.collection_service import verificar_sets, formatar_inventario, listar_sets_usuario, format_carta
 from services.eventos_service import check_event_activation, get_eventos_ativos, get_last_log, has_eventos_ativos
-from services.loja_services import get_promocoes, comprar_pack_prom, get_user_prom_logs, get_max_vault_infos, get_vault, generate_vault, buy_vault_item, get_vault_data_format
-from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img
+from services.loja_services import get_promocoes, comprar_pack_prom, get_user_infos, get_max_vault_infos, get_vault, generate_vault, buy_vault_item, get_vault_data_format, comprar_theme
+from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img, themes_view
 from services.translates import get_lang
 
 from utils.json_utils import get_classes_lang, get_combat_tips, get_global_tips
@@ -218,15 +218,20 @@ def loja():
 
     user = session['user_data']
     lang = session["lang"]
+
     ev = get_eventos_ativos(lang)
     imgs = icon_view(connection, user["id"], user["nivel"], ev["id"] if ev else None, lang)
 
+    themes_log = get_user_infos(connection, user["id"], 'theme')
+    themes = themes_view(lang, themes_log)
+
     prom = get_promocoes(lang)
-    prom_log = get_user_prom_logs(connection, user["id"])
+    prom_log = get_user_infos(connection, user["id"], 'promotion')
+
     max_is_here = True if get_max_vault_infos() else False
     global_tips = get_global_tips(lang, "store")
 
-    return render_template('loja.html', user = user, ev=ev, proms=prom, prom_log=prom_log, imgs=imgs, max_is_here= max_is_here, global_tips=global_tips)
+    return render_template('loja.html', user = user, ev=ev, proms=prom, prom_log=prom_log, imgs=imgs, themes=themes, themes_log=themes_log, max_is_here= max_is_here, global_tips=global_tips)
 
 @main.route("/comprar-pack", methods=["POST"])
 def comprar_pack():
@@ -234,7 +239,7 @@ def comprar_pack():
     tipo = data.get("tipo")
     pacote = data.get("pacote", None)
     buy_with_impetos = data.get("buy_with_impetos")
-    id = data.get("id")
+    item_id = data.get("id")
 
     connection = get_db_connection()
     if connection is None:
@@ -269,19 +274,22 @@ def comprar_pack():
         user["pontos"] += 1000
     elif tipo == 'icone':
         imgs = get_img_logos()
-        img = next(i for i in imgs if i["id"] == id)
+        img = next(i for i in imgs if i["id"] == item_id)
         preco = img["price"]
-        get_new_img(connection, user["id"], id)
+        get_new_img(connection, user["id"], item_id)
         msg = "Icone " + img["nome"] + ' adquirido!'
     elif tipo == 'promotion_pack':
         preco, pontos, cartas, icons = comprar_pack_prom(user['id'], pacote, connection)
         user = registry_cards(connection, cartas, "none", user)
         if icons:
-            for id in icons:
-                get_new_img(connection, user["id"], id)
+            for icon_id in icons:
+                get_new_img(connection, user["id"], icon_id)
         if pontos > 0:
             user["pontos"] += pontos
         msg = "Pack promocional adquirido!"
+    elif tipo == 'theme':
+        print("veio 1 --------------")
+        preco = comprar_theme(user['id'], item_id, connection)
 
     if buy_with_impetos:
         user["impetos"] -= preco

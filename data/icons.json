@@ -12,6 +12,7 @@
         },
         "img": "logo.png",
         "price": 0,
+        "rarity": "comum",
         "unlock": {
             "type": "free"
         }
@@ -28,6 +29,7 @@
         },
         "img": "logo_dark.png",
         "price": 0,
+        "rarity": "comum",
         "unlock": {
             "type": "free"
         }
@@ -44,6 +46,7 @@
         },
         "img": "Pachimari_ow.png",
         "price": 200,
+        "rarity": "comum",
         "unlock": {
             "type": "purchase"
         }
@@ -60,6 +63,7 @@
         },
         "img": "logo_ecopoint.png",
         "price": 200,
+        "rarity": "comum",
         "unlock": {
             "type": "purchase"
         }
@@ -76,6 +80,7 @@
         },
         "img": "dva_logo.png",
         "price": 200,
+        "rarity": "comum",
         "unlock": {
             "type": "purchase"
         }
@@ -92,6 +97,7 @@
         },
         "img": "sombra_logo.png",
         "price": 200,
+        "rarity": "comum",
         "unlock": {
             "type": "purchase"
         }
@@ -109,6 +115,7 @@
         },
         "img": "GLHF.png",
         "price": 200,
+        "rarity": "comum",
         "unlock": {
             "type": "purchase"
         }
@@ -125,6 +132,7 @@
         },
         "img": "logo_rainbow.png",
         "price": 100,
+        "rarity": "comum",
         "unlock": {
             "type": "purchase"
         }
@@ -141,6 +149,7 @@
         },
         "img": "null_sector_logo.png",
         "price": 500,
+        "rarity": "secreto",
         "unlock": {
             "type": "set",
             "value": "null_sector"
@@ -158,6 +167,7 @@
         },
         "img": "blackwatch_logo.png",
         "price": 500,
+        "rarity": "secreto",
         "unlock": {
             "type": "set",
             "value": "blackwatch"
@@ -175,6 +185,7 @@
         },
         "img": "talon_logo.png",
         "price": 500,
+        "rarity": "secreto",
         "unlock": {
             "type": "set",
             "value": "talon"
@@ -193,6 +204,7 @@
         },
         "img": "gold_watch.png",
         "price": 500,
+        "rarity": "secreto",
         "unlock": {
             "type": "event",
             "value": "aniversary"
@@ -211,6 +223,7 @@
         },
         "img": "lucioball.png",
         "price": 200,
+        "rarity": "secreto",
         "unlock": {
             "type": "event",
             "value": "summergames"
@@ -229,6 +242,7 @@
         },
         "img": "logo_10_anos.png",
         "price": 0,
+        "rarity": "secreto",
         "unlock": {
             "type": "none",
             "value": "none"
@@ -247,6 +261,7 @@
         },
         "img": "Tracer_Portrait.png",
         "price": 200,
+        "rarity": "comum",
         "unlock": {
             "type": "nivel",
             "value": 2
@@ -265,6 +280,7 @@
         },
         "img": "Widowmaker_Portrait.png",
         "price": 200,
+        "rarity": "comum",
         "unlock": {
             "type": "nivel",
             "value": 2
@@ -283,6 +299,7 @@
         },
         "img": "8bits_logo.png",
         "price": 500,
+        "rarity": "incomum",
         "unlock": {
             "type": "nivel",
             "value": 3
@@ -301,6 +318,7 @@
         },
         "img": "8-Bitmari.png",
         "price": 500,
+        "rarity": "incomum",
         "unlock": {
             "type": "nivel",
             "value": 3
@@ -319,6 +337,7 @@
         },
         "img": "Patinhas.png",
         "price": 200,
+        "rarity": "comum",
         "unlock": {
             "type": "nivel",
             "value": 4
@@ -337,6 +356,7 @@
         },
         "img": "Questwatch_logo.png",
         "price": 200,
+        "rarity": "comum",
         "unlock": {
             "type": "nivel",
             "value": 5
@@ -355,6 +375,7 @@
         },
         "img": "Questwatch_Pachimari.png",
         "price": 500,
+        "rarity": "incomum",
         "unlock": {
             "type": "nivel",
             "value": 5
@@ -373,6 +394,7 @@
         },
         "img": "Questwatch_Tracer.png",
         "price": 750,
+        "rarity": "epico",
         "unlock": {
             "type": "nivel",
             "value": 5
@@ -391,6 +413,7 @@
         },
         "img": "Mercy_mari.png",
         "price": 750,
+        "rarity": "epico",
         "unlock": {
             "type": "nivel",
             "value": 6
@@ -409,6 +432,7 @@
         },
         "img": "Ana_mari.png",
         "price": 750,
+        "rarity": "epico",
         "unlock": {
             "type": "nivel",
             "value": 6
@@ -427,6 +451,7 @@
         },
         "img": "Ladina.png",
         "price": 500,
+        "rarity": "incomum",
         "unlock": {
             "type": "nivel",
             "value": 7
@@ -445,6 +470,7 @@
         },
         "img": "Mitzi.png",
         "price": 200,
+        "rarity": "comum",
         "unlock": {
             "type": "nivel",
             "value": 7
@@ -462,7 +488,8 @@
             }
         },
         "img": "Imperio_infinito_icon.png",
-        "price": 500,
+        "price": 750,
+        "rarity": "epico",
         "unlock": {
             "type": "nivel",
             "value": 8
@@ -480,7 +507,8 @@
             }
         },
         "img": "Rebeldes_watcher.png",
-        "price": 500,
+        "price": 750,
+        "rarity": "epico",
         "unlock": {
             "type": "nivel",
             "value": 8
@@ -499,6 +527,7 @@
         },
         "img": "Bola_de_neve.png",
         "price": 500,
+        "rarity": "incomum",
         "unlock": {
             "type": "nivel",
             "value": 9
@@ -517,6 +546,7 @@
         },
         "img": "Dragons_icon.png",
         "price": 500,
+        "rarity": "incomum",
         "unlock": {
             "type": "nivel",
             "value": 9
@@ -535,6 +565,7 @@
         },
         "img": "Ganymede_icon.png",
         "price": 750,
+        "rarity": "epico",
         "unlock": {
             "type": "nivel",
             "value": 10
@@ -553,6 +584,7 @@
         },
         "img": "Fika.png",
         "price": 750,
+        "rarity": "epico",
         "unlock": {
             "type": "nivel",
             "value": 10

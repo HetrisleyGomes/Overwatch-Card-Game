@@ -64,8 +64,9 @@
 
 :root[data-mode="dark"]{  
   --site-bg: #242424;
+  --dark-text: var(--light-text);
   --footer: linear-gradient(to bottom, var(--cinza) 5%, var(--site-bg));
-  --single-text: var(var(--light-text))
+  --single-text: var(--light-text);
 }
 
 

@@ -48,12 +48,13 @@ CREATE TABLE IF NOT EXISTS "user_icons"(
 );
 ALTER TABLE "user_icons" ADD PRIMARY KEY (user_id, icon_id)
 
-CREATE TABLE IF NOT EXISTS "user_promotion"(
+CREATE TABLE IF NOT EXISTS "user_info"(
   user_id INTEGER,
-  promotion_id TEXT,
+  info_id TEXT,
+  info_type TEXT,
   FOREIGN KEY (user_id) REFERENCES "user"(id)
 );
-ALTER TABLE "user_promotion" ADD PRIMARY KEY (user_id, promotion_id)
+ALTER TABLE "user_info" ADD PRIMARY KEY (user_id, info_id)
 
 CREATE TABLE IF NOT EXISTS "user_vault"(
   user_id INTEGER,

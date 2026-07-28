@@ -58,7 +58,7 @@
     align-items: center;
 }
 
-.item-img{
+.item-img, .theme {
     height: 32vh;
 }
 
@@ -88,6 +88,16 @@
     justify-content: center;
     align-items: center;
 }
+.incomum {
+    border: var(--incomum-rarity) 3px dotted;
+}
+.epico {
+    border: var(--pack-rare-color) 3px double;
+}
+.secreto {
+    border: var(--blue-extra-color) 3px groove;
+}
+
 
 .img {
     height: 10vh;
@@ -118,6 +128,11 @@
     font-size: 30px;
     height: 24px;
     padding: 12px 12px 30px;
+}
+
+.theme_preview {
+    width: 100%;
+    height: 200px;
 }
 
 /* RESPONSIVIDADE ========================== */

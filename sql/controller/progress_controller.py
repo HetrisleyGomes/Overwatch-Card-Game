@@ -52,16 +52,16 @@ class ProgressController:
         except Exception as e:
             return str(e)
     
-    def get_user_prom(self, user_id):
+    def get_user_info(self, user_id, info):
         try:
-            data = self.__repository.get_user_prom(user_id)
+            data = self.__repository.get_user_info(user_id, info)
             return data
         except Exception as e:
             return str(e)
     
-    def buy_big_pack(self, user_id, pacotaco_id):
+    def buy_item(self, user_id, item_id, info):
         try:
-            self.__repository.set_user_prom(user_id, pacotaco_id)
+            self.__repository.set_user_info(user_id, item_id, info)
         except Exception as e:
             return str(e)
         

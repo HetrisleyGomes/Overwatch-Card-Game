@@ -156,13 +156,42 @@
         </div>
         <div class="prateleira-divider"></div>
 
+
+    <h2 class="sessao" id="themes">{{ _('themes') }}</h2>
+        <div class="prateleira">
+            {% for tema in themes %}
+            {% if tema.disponivel %}
+            <div class="item theme">
+                <div class="item_name">{{ _('theme') }} {{tema.nome}}</div>
+                <div class="item_description">
+                    {{ tema.descricao }}
+                </div>
+                <div class="item_button">
+                    <button class="button {% if user.pontos < tema.price or tema.possui %}desativado{% endif %}"
+                    {% if user.pontos < tema.price or tema.possui %}disabled{% endif %}
+                    onclick="comprarPack('theme', false, '{{tema.id}}')">
+                        {% if not tema.possui %}
+                            {{ tema.price }} {{ _('points') }}
+                        {% else %}
+                            {{ _('obtained') }}
+                        {% endif %}
+                    </button>
+                </div>
+                <div class="theme_preview" style="background: {{tema.preview}};"></div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="prateleira-divider"></div>
+
     <h2 class="sessao" id="icones">{{ _('icons') }}</h2>
         <div class="prateleira">
             {% for img in imgs %}
             {% if img.disponivel %}
             <div class="item item-img">
                 <div class="item_name">{{ _('icon') }} {{img.nome}}</div>
-                <div class="item_img">
+                <div class="item_img {{ img.rarity }}">
                     <img src="{{ url_for('static', filename='logos/' + img.img) }}" class="img" loading="lazy">
                 </div>
                 <div class="item_description">

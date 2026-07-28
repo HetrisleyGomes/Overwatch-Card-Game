@@ -39,6 +39,8 @@
     "logoff": "Logoff",
     "level": "Level",
     "raridade": "Rarity",
+    "themes": "Themes",
+    "theme": "Theme",
 
     "msg_no_packs": "You have no more packs to open today!",
     "bundle_ad": "Bundle available in the store!",

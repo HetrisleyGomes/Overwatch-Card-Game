@@ -1,4 +1,4 @@
-from utils.json_utils import get_icons
+from utils.json_utils import get_icons, get_themes
 from sql.controller.progress_controller import ProgressController
 from sql.repositories.progress_repository import ProgressRepository
 
@@ -56,10 +56,34 @@ def icon_view(conn, user_id, nivel, event, lang):
             "descricao": icon["lang"][lang]["descricao"],
             "img": icon['img'],
             "price": icon['price'],
+            "rarity": icon['rarity'],
             "possui": possui,
             "disponivel": disponivel
         })
 
+    return result
+
+def themes_view(lang, temas):
+    themes = get_themes()
+    result = []
+    for theme in themes:
+        possui = str(theme["id"]) in temas
+        unlock = theme.get("unlock",{"type":"free"})
+        disponivel = False
+
+        if unlock["type"] == "free" or unlock["type"] == "purchase":
+            disponivel = True
+        
+        result.append({
+            "id": theme['id'],
+            "nome": theme["lang"][lang]["nome"],
+            "descricao": theme["lang"][lang]["descricao"],
+            "price": theme['price'],
+            "rarity": theme['rarity'],
+            "preview": theme['preview'],
+            "possui": possui,
+            "disponivel": disponivel
+        })
     return result
 
 def get_new_img(conn, user_id, img_id):

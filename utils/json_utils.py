@@ -42,6 +42,10 @@ def get_events():
 def get_icons():
     with open('./data/icons.json', "r", encoding="utf-8") as f:
         return json.load(f)
+
+def get_themes():
+    with open('./data/themes.json', "r", encoding="utf-8") as f:
+        return json.load(f)
     
 def get_packs():
     with open('./data/packs.json', "r", encoding="utf-8") as f:

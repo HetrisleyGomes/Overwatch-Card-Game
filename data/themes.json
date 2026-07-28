@@ -1,0 +1,56 @@
+[
+    {
+        "id": "ilios-theme",
+        "lang": {
+            "br":{
+                "nome": "Ílios",
+                "descricao": "Busque a tranquilidade com o tema de jogo Ílios." 
+            }, "en":{
+                "nome": "Ilios",
+                "descricao": "Seek tranquility with the Ilios game theme."
+            }
+        },
+        "price": 2000,
+        "rarity": "comum",
+        "preview": "#00c3ff",
+        "unlock": {
+            "type": "free"
+        }
+    },
+    {
+        "id": "route_66-theme",
+        "lang": {
+            "br":{
+                "nome": "Rota 66",
+                "descricao": "Experiencie o calor da batalha na rota 66." 
+            }, "en":{
+                "nome": "Route 66",
+                "descricao": "Experience the heat of battle on Route 66."
+            }
+        },
+        "price": 2000,
+        "rarity": "comum",
+        "preview": "#d2611c",
+        "unlock": {
+            "type": "free"
+        }
+    },
+    {
+        "id": "anubis_temple-theme",
+        "lang": {
+            "br":{
+                "nome": "Templo de Anúbis",
+                "descricao": "Descubra os segredos esquecidos do tempo, neste tema perdido de Templo de Anúbis." 
+            }, "en":{
+                "nome": "Temple of Anubis",
+                "descricao": "Discover the forgotten secrets of time in this lost Temple of Anubis theme."
+            }
+        },
+        "price": 5000,
+        "rarity": "epico",
+        "preview": "linear-gradient(90deg, #8f6a18, #d8b44a, #f5dc86, #d8b44a, #8f6a18);",
+        "unlock": {
+            "type": "free"
+        }
+    }
+]

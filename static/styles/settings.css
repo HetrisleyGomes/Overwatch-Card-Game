@@ -242,10 +242,11 @@ iframe{
     font-size:2rem;
     margin-bottom:40px;
     color:var(--darkest-color);
+    text-shadow: 0 0 1px var(--light-text);
 }
 
 .about h3{
-    color: var(--main-dark-color);
+    color: var(--dark-text);
     margin-bottom:15px;
     border-left:5px solid var(--combat-yellow-color);
     padding-left:12px;

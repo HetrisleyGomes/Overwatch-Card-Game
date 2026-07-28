@@ -1,4 +1,4 @@
-from utils.json_utils import write_json, get_promocao, get_characters, get_vault_max
+from utils.json_utils import get_themes, get_promocao, get_characters, get_vault_max
 from datetime import datetime
 from sql.controller.progress_controller import ProgressController
 from sql.repositories.progress_repository import ProgressRepository
@@ -22,14 +22,14 @@ def get_promocoes(lang):
         return prom
     return None
 
-def get_user_prom_logs(conn, user_id):
+def get_user_infos(conn, user_id, info):
     repo = ProgressRepository(conn)
     ctll = ProgressController(repo)
 
-    return ctll.get_user_prom(user_id)
+    return ctll.get_user_info(user_id, info)
 
 
-def comprar_pack_prom(id, pack_id, conn):
+def comprar_pack_prom(user_id, pack_id, conn):
     proms = get_promocao()
     prom = next((p for p in proms if p["id"] == pack_id), None)
     personagens = get_characters()
@@ -46,7 +46,7 @@ def comprar_pack_prom(id, pack_id, conn):
     repo = ProgressRepository(conn)
     ctll = ProgressController(repo)
 
-    ctll.buy_big_pack(id, pack_id)
+    ctll.buy_item(user_id, pack_id, 'promotion')
     return prom['value'], points, cartas, icon
 
 def format_promotion(prom, lang):
@@ -70,6 +70,21 @@ def format_promotion(prom, lang):
         "last_days": dias_restantes <= 3
     }
     return set
+
+
+def comprar_theme(user_id, theme_id, conn):
+    themes = get_themes()
+    theme = next((p for p in themes if p["id"] == theme_id), None)
+    print("veio 2 --------------")
+
+    print(theme)
+
+    repo = ProgressRepository(conn)
+    ctll = ProgressController(repo)
+
+    ctll.buy_item(user_id, theme_id, 'theme')
+    return theme['price']
+
 
 def get_max_vault_infos():
     vaults = get_vault_max()
@@ -96,7 +111,6 @@ def get_vault_data_format(vault_data):
     end_date = f"{fim.day}/{fim.month}"
     dias_restantes = (fim - hoje).days
     return [end_date, dias_restantes]
-
 
 
 def get_vault(conn, user_id, vault_atual):

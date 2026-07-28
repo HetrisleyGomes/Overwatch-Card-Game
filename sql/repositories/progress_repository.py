@@ -132,36 +132,37 @@ class ProgressRepository:
         cursor.close()
     
     # Pacotaço -----------
-    def get_user_prom(self, user_id):
+    def get_user_info(self, user_id, info_ype):
         cursor = self.__conn.cursor()
         cursor.execute(
             """
-            SELECT promotion_id FROM user_promotion
-            WHERE user_id = %s
+            SELECT info_id FROM user_info
+            WHERE user_id = %s AND info_type = %s
             """,
-            (user_id,)
+            (user_id, info_ype)
         )
         data = cursor.fetchall()
         cursor.close()
 
         return [row[0] for row in data]
 
-    def set_user_prom(self, user_id, promotion_id):
+    def set_user_info(self, user_id, info_id, info_type):
         cursor = self.__conn.cursor()
         cursor.execute(
             """
-               INSERT INTO user_promotion
-                   (user_id, promotion_id)
-               VALUES (%s, %s)
+               INSERT INTO user_info
+                   (user_id, info_id, info_type)
+               VALUES (%s, %s, %s)
            """, (
                 user_id,
-                promotion_id
+                info_id,
+                info_type,
             )
         )
         self.__conn.commit()
         cursor.close()
 
-    
+    # Vault -----------------------
     def get_vault_cards(self, user_id, vault_id):
         cursor = self.__conn.cursor()
 
