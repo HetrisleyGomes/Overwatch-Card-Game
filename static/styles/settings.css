@@ -71,6 +71,19 @@
     border-color: var(--main-light-color);
 }
 
+.theme-container {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: 5px solid transparent;
+}
+.option-theme {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
 .xp_field {
     background: linear-gradient(135deg, var(--main-color), var(--main-dark-color));
     color: var(--light-text);

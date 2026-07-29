@@ -246,7 +246,7 @@
     }
 }
 
-
+/* Alterar o tema */
 .theme-switch{
     position:relative;
     display:inline-block;
@@ -380,5 +380,15 @@ input:checked + .slider .icon{
         padding: 14px 8px;
     }
 
-
+    .theme-switch{
+        width: 46px;
+        height: 27px;
+    }
+    .icon{
+        width:18px;
+        height:18px;
+    }
+    input:checked + .slider .icon{
+        transform: translateX(20px);
+    }
 }

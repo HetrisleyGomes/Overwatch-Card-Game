@@ -373,11 +373,12 @@ def settings():
         return "Erro ao conectar ao banco de dados.", 500
 
     user = session["user_data"]
-    inv = user_get_inventory(connection, user["id"])
+    
+    inventory = user_get_inventory(connection, user["id"])
     lang = session["lang"]
     global_tips = get_global_tips(lang, "settings")
 
-    return render_template('settings.html', user = user, inv=inv, lang=lang, global_tips=global_tips)
+    return render_template('settings.html', user = user, inv=inventory, lang=lang, global_tips=global_tips)
 
 @main.route("/atualizar-nome", methods=["POST"])
 def atualizar_nome():
@@ -427,6 +428,22 @@ def atualizar_foto():
 
     return {"status": "ok"}
 
+@main.route("/atualizar-tema", methods=["POST"])
+def atualizar_tema():
+    connection = get_db_connection()
+    if connection is None:
+        return "Erro ao conectar ao banco de dados.", 500
+
+    repo = UserRepository(connection)
+    ctll = UserController(repo)
+
+    data = request.get_json()
+    img = data.get("tema")
+
+    ctll.set_tema(session["usuario_id"], img)
+    update_user(ctll)
+
+    return {"status": "ok"}
 
 # LOGOFF =========================================
 @main.route("/sair")
@@ -535,6 +552,7 @@ def registrar():
         usuario_id = ctll.create_user(user)
         get_new_img(connection, usuario_id, "f1")
         get_new_img(connection, usuario_id, "f2")
+        comprar_theme(usuario_id, 'default', connection)
         # 🔓 login automático
         session["usuario_id"] = usuario_id
         session["lang"] = lang

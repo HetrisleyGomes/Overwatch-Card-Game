@@ -10,8 +10,8 @@ class UserRepository:
         cursor.execute(
             """
                INSERT INTO "user"
-                (nome, email, senha, pontos, impetos, xp, nivel, language, ultimo_login, streak, profile_img, packs_diarios_abertos, contador_packs_comuns, packs_comprados_comum, packs_comprados_raro, has_already_get_daily_bonus, packs_evento)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                (nome, email, senha, pontos, impetos, xp, nivel, language, ultimo_login, streak, profile_img, theme, packs_diarios_abertos, contador_packs_comuns, packs_comprados_comum, packs_comprados_raro, has_already_get_daily_bonus, packs_evento)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
            """, (
                 user["nome"],
                 user["email"],
@@ -24,6 +24,7 @@ class UserRepository:
                 user["ultimo_login"],
                 1,
                 'logo.png',
+                'default-theme',
                 2,
                 0,
                 0,
@@ -51,7 +52,7 @@ class UserRepository:
         cursor = self.__conn.cursor()
         cursor.execute(
             """
-            SELECT "id", "nome", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "has_already_get_daily_bonus", "packs_evento"
+            SELECT "id", "nome", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "theme", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "has_already_get_daily_bonus", "packs_evento"
             FROM "user"
             WHERE id = %s
             """,
@@ -109,7 +110,7 @@ class UserRepository:
         cursor = self.__conn.cursor()
         cursor.execute(
             """
-            SELECT "id", "nome", "email", "senha", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "has_already_get_daily_bonus", "packs_evento"            FROM "user"
+            SELECT "id", "nome", "email", "senha", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "theme", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "has_already_get_daily_bonus", "packs_evento"            FROM "user"
             WHERE email = %s
             """,
             (email,),
@@ -132,6 +133,7 @@ class UserRepository:
             ultimo_login = %s,
             streak = %s,
             profile_img = %s,
+            theme = %s,
             packs_diarios_abertos = %s,
             contador_packs_comuns = %s,
             packs_comprados_comum = %s,
@@ -148,6 +150,7 @@ class UserRepository:
                 user["ultimo_login"],
                 user["streak"],
                 user["profile_img"],
+                user["theme"],
                 user["packs_diarios_abertos"],
                 user["contador_packs_comuns"],
                 user["packs_comprados_comum"],
@@ -230,6 +233,19 @@ class UserRepository:
         )
         self.__conn.commit()
         cursor.close()
+
+    def set_theme(self, id, value):
+            cursor = self.__conn.cursor()
+            cursor.execute(
+                """
+                UPDATE "user"
+                SET theme = %s
+                WHERE id = %s
+                """,
+                (value, id)
+            )
+            self.__conn.commit()
+            cursor.close()
     
     def set_points(self, id, valor):
         cursor = self.__conn.cursor()

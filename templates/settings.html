@@ -22,7 +22,7 @@
                 </button>
 
                 <div id="dropdown-menu" class="dropdown-content">
-                    {% for img in inv %}
+                    {% for img in inv["icons"] %}
                         {% if img.possui %}
                         <div class="img-container">
                             <img src="{{ url_for('static', filename='logos/' + img.img) }}"
@@ -33,7 +33,30 @@
                     {% endfor %}
                 </div>
             </div>
+        </div>
 
+        <div>
+            <h2>Tema</h2>
+            <div class="profile-theme-container">
+                <div class="theme-previe"></div>
+            </div>
+            <div class="dropdow">
+                <button class="dropdown-btn premium-button" onclick="toggleDropdownTheme()">
+                    {{ _('change theme') }}
+                </button>
+
+                <div id="dropdown-menu-theme" class="dropdown-content">
+                    {% for theme in inv["themes"] %}
+                        {% if theme.possui %}
+                        <div class="theme-container">
+                            <div style="background: {{ theme.preview }}" class="option-theme" onclick="selecionarTheme('{{ theme.id }}')">
+
+                            </div>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
         </div>
 
 
@@ -166,6 +189,11 @@ function toggleDropdown() {
     menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 
+function toggleDropdownTheme() {
+    const menu = document.getElementById("dropdown-menu-theme");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
 function selecionarImagem(img) {
     // atualiza preview
     document.getElementById("profile-preview").src =
@@ -179,6 +207,20 @@ function selecionarImagem(img) {
         },
         body: JSON.stringify({ imagem: img })
     });
+}
+
+function selecionarTheme(tema_id){
+
+    fetch("/atualizar-tema", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ tema: tema_id })
+    });
+    document.documentElement.dataset.theme = tema_id
+
+    localStorage.setItem("theme", tema_id);
 }
 
 </script>

@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS "user"(
     ultimo_login TEXT,
     streak INTEGER,
     profile_img TEXT,
+    theme text;
     language VARCHAR(5),
     packs_diarios_abertos INTEGER,
     contador_packs_comuns INTEGER,

@@ -67,6 +67,13 @@ class UserController:
             return True
         except Exception as e:
             return str(e)
+
+    def set_tema(self, id, tema_id):
+        try:
+            self.__repository.set_theme(id, tema_id)
+            return True
+        except Exception as e:
+            return str(e)
         
     def daily_update(self, user):
         try:

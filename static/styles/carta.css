@@ -12,6 +12,7 @@
     box-shadow: 2px 2px 6px var(--darkest-color);
     transform-style: preserve-3d;
     transition: transform .2s;
+    cursor: pointer;
 }
 .card-nome {
     text-align: center;

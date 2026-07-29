@@ -12,16 +12,28 @@ def user_get_inventory(conn, user_id):
     ctll = ProgressController(repo)
     
     icons = get_icons()
-    user_inv = ctll.get_user_icons(user_id)
+    user_icons = ctll.get_user_icons(user_id)
     icons_user = []
 
     for icon in icons:
-        possui = str(icon["id"]) in user_inv
+        possui = icon["id"] in user_icons
         icons_user.append({
             **icon,
             "possui": possui
         })
-    return icons_user
+
+    themes = get_themes()
+    user_themes = ctll.get_user_info(user_id, 'theme')
+    themes_user = []
+    for theme in themes:
+        possui = theme["id"] in user_themes
+        themes_user.append({
+            **theme,
+            "possui": possui
+        })
+
+    player_inventory = {"icons": icons_user, "themes": themes_user}
+    return player_inventory
 
 def icon_view(conn, user_id, nivel, event, lang):
     repo = ProgressRepository(conn)

@@ -75,9 +75,6 @@ def format_promotion(prom, lang):
 def comprar_theme(user_id, theme_id, conn):
     themes = get_themes()
     theme = next((p for p in themes if p["id"] == theme_id), None)
-    print("veio 2 --------------")
-
-    print(theme)
 
     repo = ProgressRepository(conn)
     ctll = ProgressController(repo)

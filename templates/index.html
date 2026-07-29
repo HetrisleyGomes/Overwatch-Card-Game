@@ -155,6 +155,18 @@
     document.documentElement.dataset.mode = mode;
     toggle.checked = mode === "dark";
 
+    // TEMA
+    const selectedTheme = {{ user.theme | tojson }};
+    console.log(selectedTheme)
+    var tema = document.documentElement.dataset.theme;
+    console.log(tema)
+    console.log(tema != selectedTheme)
+    if (tema != selectedTheme){
+        document.documentElement.dataset.theme = selectedTheme;
+    };
+
+    localStorage.setItem("theme", selectedTheme);
+
     initializeTooltips()
 </script>
 {% endblock %}

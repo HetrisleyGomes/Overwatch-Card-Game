@@ -20,6 +20,9 @@
     <a href="#trocarpontos">
         <button>{{ _('points') }}</button>
     </a>
+    <a href="#themes">
+        <button>{{ _('themes') }}</button>
+    </a>
     <a href="#icones">
         <button>{{ _('icons') }}</button>
     </a>
@@ -162,7 +165,7 @@
             {% for tema in themes %}
             {% if tema.disponivel %}
             <div class="item theme">
-                <div class="item_name">{{ _('theme') }} {{tema.nome}}</div>
+                <div class="item_name {{ tema.rarity }}">{{ _('theme') }} {{tema.nome}}</div>
                 <div class="item_description">
                     {{ tema.descricao }}
                 </div>
