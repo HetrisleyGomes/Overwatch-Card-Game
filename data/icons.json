@@ -325,6 +325,25 @@
         }
     },
     {
+        "id": "l4-1",
+        "lang": {
+            "br":{
+                "nome": "Sakura",
+                "descricao": "Curta a beleza primaveril."
+            }, "en":{
+                "nome": "Sakura",
+                "descricao": "Enjoy the beauty of spring."
+            }
+        },
+        "img": "Sakura_icon.png",
+        "price": 200,
+        "rarity": "comum",
+        "unlock": {
+            "type": "nivel",
+            "value": 4
+        }
+    },
+    {
         "id": "l4-2",
         "lang": {
             "br":{
@@ -439,6 +458,25 @@
         }
     },
     {
+        "id": "l6-3",
+        "lang": {
+            "br":{
+                "nome": "Rikimaru",
+                "descricao": "Vamos comer lamén com Rikimaru." 
+            }, "en":{
+                "nome": "Rikimaru",
+                "descricao": "Let's eat ramen with Rikimaru."
+            }
+        },
+        "img": "Rikimaru.png",
+        "price": 300,
+        "rarity": "comum",
+        "unlock": {
+            "type": "nivel",
+            "value": 6
+        }
+    },
+    {
         "id": "l7-1",
         "lang": {
             "br":{
@@ -469,8 +507,8 @@
             }
         },
         "img": "Mitzi.png",
-        "price": 200,
-        "rarity": "comum",
+        "price": 500,
+        "rarity": "incomum",
         "unlock": {
             "type": "nivel",
             "value": 7

@@ -84,7 +84,7 @@ class UserController:
     
     def delete_user(self, id):
         try:
-            self.__repository.delete_ficha(id)
+            self.__repository.delete_user(id)
             return True
         except Exception as e:
             return str(e)

@@ -92,9 +92,8 @@
         "The card artwork and variations presented in this project were developed independently, with no official affiliation with Blizzard. Some of the content was inspired by creations shared by community members, including Reddit users.",
         "Please contact us regarding copyright inquiries or credit adjustments."
     ],
-    "delete_msg_1": "To delete your account, click here.",
-    "delete_msg_2": "Is this goodbye?",
-    "delete_msg_3": "By clicking OK, you agree to delete your saved data from our system. Once done, it cannot be undone.",
+    "delete_msg_1": "Is this a goodbye 😞? Are you sure you want to delete your account? This action cannot be undone.",
+    "delete_msg_2": "Type DELETE to confirm.",
     "relatorio": "Web Application Management Experience Report (available in Portuguese only)",
     "github": "GitHub repository"
 }

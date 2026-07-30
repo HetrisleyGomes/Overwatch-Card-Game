@@ -132,6 +132,7 @@
     "personagens": [
       "dva_comum",
       "dva_chibi",
+      "dva_cruzador",
       "dva_dourado",
       "dva_legado",
       "horang"
@@ -342,6 +343,7 @@
       "kiriko_comum",
       "kiriko_coracao",
       "kiriko_hashimoto",
+      "kiriko_bruxa",
       "kiriko_dourado",
       "kiriko_miaumiau",
       "amateratsu",
@@ -394,7 +396,8 @@
     },
     "personagens": [
       "mauga_comum",
-      "mauga_dourado"
+      "mauga_dourado",
+      "forjador_do_mundo"
     ],
     "recompensa": {
       "pontos": 100
@@ -429,6 +432,7 @@
       "mercy_sigrun",
       "mercy_vitoria_alada",
       "mercy_dourado",
+      "mercy_hard_light",
       "mercy_legado",
       "vengeance",
       "guardia_celestial",
@@ -475,6 +479,7 @@
     },
     "personagens": [
       "orisa_comum",
+      "orisa_efi",
       "orisa_null_sector",
       "orisa_dourado",
       "fera_grandeosa",
@@ -548,6 +553,7 @@
       "reaper_comum",
       "reaper_abobora",
       "reaper_dourado",
+      "reaper_hard_light",
       "reaper_legado",
       "anubis",
       "aco_letal"
@@ -568,6 +574,7 @@
       "reinhardt_minotauro",
       "fallen_knight",
       "reinhardt_dourado",
+      "reinhardt_hard_light",
       "reinhardt_legado",
       "thor",
       "demonio_aprisionado"
@@ -868,6 +875,7 @@
     },
     "personagens": [
       "zenyatta_comum",
+      "zenyatta_djinnyatta",
       "zenyatta_cultista",
       "destruidor_z-3n",
       "zenyatta_dourado",
@@ -1063,7 +1071,6 @@
       "emre_comum",
       "freja_comum",
       "mauga_comum",
-      "mizuki_comum",
       "moira_comum",
       "sigma_comum",
       "sombra_comum",
@@ -1109,6 +1116,7 @@
       "baptiste_comum",
       "juno_comum",
       "lucio_comum",
+      "mizuki_comum",
       "sierra_comum",
       "wuyang_comum",
       "zarya_comum"
@@ -1207,13 +1215,16 @@
       "en": {"nome":"Champions"}
     },
     "personagens": [
+      "zenyatta_djinnyatta" ,
+      "dva_cruzador",
+      "kiriko_bruxa",
       "reinhardt_gridironhardt",
       "rainha_junker_executora",
       "torbjorn_engenheiro_espacial",
       "winston_extraterreste"
     ],
     "recompensa": {
-      "pontos": 200
+      "pontos": 300
     }
   },
   {
@@ -1357,6 +1368,7 @@
       "en": {"nome":"Magic"}
     },
     "personagens": [
+      "kiriko_bruxa",
       "mercy_conjuradora",
       "ashe_warlock",
       "feiticeira",
@@ -1480,6 +1492,7 @@
       "pistoleiro_divino",
       "amateratsu",
       "druida_divino",
+      "forjador_do_mundo",
       "guardia_celestial",
       "thor"
     ],
@@ -1570,6 +1583,21 @@
       "wuyang_dourado",
       "zarya_dourado",
       "zenyatta_dourado"
+    ],
+    "recompensa": {
+      "pontos": 2000
+    }
+  },
+  {
+    "id": "hard_light_set",
+    "lang":{
+      "br": {"nome":"Luz Sólida"},
+      "en": {"nome":"Hard Light"}
+    },
+    "personagens": [
+      "mercy_hard_light",
+      "reaper_hard_light",
+      "reinhardt_hard_light"
     ],
     "recompensa": {
       "pontos": 2000
@@ -1683,6 +1711,7 @@
       "juno_coracao",
       "amateratsu",
       "druida_divino",
+      "forjador_do_mundo",
       "pulo_online",
       "vengeance",
       "guardia_celestial",

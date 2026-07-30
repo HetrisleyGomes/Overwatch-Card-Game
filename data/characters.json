@@ -856,6 +856,28 @@
     "icon_ref": "alter.png"
   },
   {
+    "id": "dva_cruzador",
+    "base": "dva",
+    "classe": "Tanque",
+    "subclasse": "Campeão",
+    "lang": {
+      "br": {
+        "nome": "D.Va Cruzador",
+        "entrada": "Hora de salvar o mundo? Bora lá.",
+        "ult_nome": "Destruição Meka",
+        "ult": "Tenho que sair!"
+      },
+      "en": {
+        "nome": "D.Va Cruiser",
+        "entrada": "Time to save the world? Game on!",
+        "ult_nome": "Mech Destroyed",
+        "ult": "Cutting out!"
+      }
+    },
+    "raridade": "epico",
+    "img": "DVa_ow_cruzador.png"
+  },
+  {
     "id": "dva_dourado",
     "base": "dva",
     "classe": "Tanque",
@@ -2033,6 +2055,28 @@
     "img": "Kiriko_ow_hashimoto.png"
   },
   {
+    "id": "kiriko_bruxa",
+    "base": "kiriko",
+    "classe": "Suporte",
+    "subclasse": "Campeão",
+    "lang": {
+      "br": {
+        "nome": "Kiriko Bruxa",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Corrida da kitsune",
+        "ult": "Entre no mundo espiritual!"
+      },
+      "en": {
+        "nome": "Kiriko Witch",
+        "entrada": "I'll find my own path.",
+        "ult_nome": "Kitsune Rush",
+        "ult": "Enter the spirit world!"
+      }
+    },
+    "raridade": "epico",
+    "img": "Kiriko_ow_bruxa.png"
+  },
+  {
     "id": "kiriko_dourado",
     "base": "kiriko",
     "classe": "Suporte",
@@ -2373,6 +2417,28 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "forjador_do_mundo",
+    "base": "mauga",
+    "classe": "Tanque",
+    "subclasse": "Combatente",
+    "lang": {
+      "br": {
+        "nome": "Forjador do Mundo",
+        "entrada": "Uma ilha em cada mão, e um mundo pra criar.",
+        "ult_nome": "Mano à mano",
+        "ult": "Vem cá, conheçam o seu criador!"
+      },
+      "en": {
+        "nome": "World Forger",
+        "entrada": "An isle in each hand and a world to create.",
+        "ult_nome": "Cage Fight",
+        "ult": "Come on, meet your maker!"
+      }
+    },
+    "raridade": "mitico",
+    "img": "Mauga_ow_myth.png"
+  },
+  {
     "id": "mei_comum",
     "base": "mei",
     "classe": "Dano",
@@ -2598,6 +2664,30 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "mercy_hard_light",
+    "base": "mercy",
+    "classe": "Suporte",
+    "subclasse": "Socorrista",
+    "lang": {
+      "br": {
+        "nome": "Mercy Hard Light",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem!"
+      },
+      "en": {
+        "nome": "Mercy: Hard Light",
+        "entrada": "Don't worry, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Heroes never die!"
+      }
+    },
+    "raridade": "lendario",
+    "img": "Mercy_ow_hard_light.png",
+    "golden_weapon": true,
+    "icon_ref": "hard_light.png"
+  },
+  {
     "id": "mercy_legado",
     "base": "mercy",
     "classe": "Suporte",
@@ -2821,6 +2911,29 @@
     },
     "raridade": "comum",
     "img": "Orisa_ow.png"
+  },
+  {
+    "id": "orisa_efi",
+    "base": "orisa",
+    "classe": "Tanque",
+    "subclasse": "Combatente",
+    "lang": {
+      "br": {
+        "nome": "Orisa & Efi",
+        "entrada": "Por Efi!",
+        "ult_nome": "Rompante Terrano",
+        "ult": "Aceite o seu destino!"
+      },
+      "en": {
+        "nome": "Orisa & Efi",
+        "entrada": "For Efi!",
+        "ult_nome": "Terra Surge",
+        "ult": "Pàdé ayanmọ rẹ!"
+      }
+    },
+    "raridade": "comum",
+    "img": "Orisa_ow_alt.png",
+    "icon_ref": "alter.png"
   },
   {
     "id": "orisa_null_sector",
@@ -3300,6 +3413,30 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "reaper_hard_light",
+    "base": "reaper",
+    "classe": "Dano",
+    "subclasse": "Flanco",
+    "lang": {
+      "br": {
+        "nome": "Reaper Hard Light",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      },
+      "en": {
+        "nome": "Reaper: Hard Light",
+        "entrada": "You can't escape death.",
+        "ult_nome": "Death Blossom",
+        "ult": "Die... die... die..."
+      }
+    },
+    "raridade": "lendario",
+    "img": "Reaper_ow_hard_light.png",
+    "golden_weapon": true,
+    "icon_ref": "hard_light.png"
+  },
+  {
     "id": "reaper_legado",
     "base": "reaper",
     "classe": "Atacante",
@@ -3477,6 +3614,30 @@
     "img": "Reinhardt_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "reinhardt_hard_light",
+    "base": "reinhardt",
+    "classe": "Tanque",
+    "subclasse": "Robusto",
+    "lang": {
+      "br": {
+        "nome": "Reinhardt Hard Light",
+        "entrada": "Juntos, acabaremos com eles.",
+        "ult_nome": "Abalo terrestre",
+        "ult": "Sinta o peso do martelo!"
+      },
+      "en": {
+        "nome": "Reinhardt: Hard Light",
+        "entrada": "Together, we'll strike them down!",
+        "ult_nome": "Earthshatter",
+        "ult": "Hammer down!"
+      }
+    },
+    "raridade": "lendario",
+    "img": "Reinhardt_ow_hard_light.png",
+    "golden_weapon": true,
+    "icon_ref": "hard_light.png"
   },
   {
     "id": "reinhardt_legado",
@@ -4449,7 +4610,7 @@
     },
     "raridade": "lendario",
     "img": "Tracer_ow_10_anos.png",
-    "evento": "espacial10anos"
+    "evento": "especial10anos"
   },
   {
     "id": "tracer_dourado",
@@ -5176,6 +5337,28 @@
     },
     "raridade": "comum",
     "img": "Zenyatta_ow.png"
+  },
+  {
+    "id": "zenyatta_djinnyatta",
+    "base": "zenyatta",
+    "classe": "Suporte",
+    "subclasse": "Campeão",
+    "lang": {
+      "br": {
+        "nome": "Djinnyatta",
+        "entrada": "Em meio a discórdia, encontraremos a tranquilidade.",
+        "ult_nome": "Transcendência",
+        "ult": "Sintam a tranquilidade!"
+      },
+      "en": {
+        "nome": "Djinnyatta",
+        "entrada": "Amid discord, we will find tranquility.",
+        "ult_nome": "Transcendence",
+        "ult": "Experience tranquility!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Zenyatta_ow_djinnyatta.png"
   },
   {
     "id": "zenyatta_cultista",

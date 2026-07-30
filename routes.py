@@ -445,6 +445,23 @@ def atualizar_tema():
 
     return {"status": "ok"}
 
+# EXCLUIR CONTA =======================================
+@main.route("/excluir-perfil", methods=["POST"])
+def excluir_conta():
+    connection = get_db_connection()
+    if connection is None:
+        return "Erro ao conectar ao banco de dados.", 500
+
+    repo = UserRepository(connection)
+    ctll = UserController(repo)
+
+    user = session["user_data"]
+    ctll.delete_user(user['id'])
+
+    session.pop("usuario_id")
+    session.pop('user_data')
+    return redirect(url_for('main.login'))
+
 # LOGOFF =========================================
 @main.route("/sair")
 def logoff():
@@ -574,3 +591,7 @@ def atualizar_user(conn, user):
     ctll = UserController(repo)
     ctll.edit_user(user['id'], user)
     update_user(ctll)
+
+@main.route("/teste",methods=['POST'])
+def teste():
+    return redirect(url_for("main.home"))

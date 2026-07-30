@@ -59,7 +59,7 @@
 }
 
 .item-img, .theme {
-    height: 32vh;
+    height: 33vh;
 }
 
 .item_name {
@@ -97,7 +97,6 @@
 .item_img.secreto {
     border: var(--blue-extra-color) 3px groove;
 }
-
 
 .img {
     height: 10vh;

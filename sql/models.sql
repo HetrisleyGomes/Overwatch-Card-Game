@@ -24,28 +24,28 @@ CREATE TABLE IF NOT EXISTS "user"(
 CREATE TABLE IF NOT EXISTS "user_cards"(
   user_id INTEGER,
   card_id TEXT,
-  FOREIGN KEY (user_id) REFERENCES "user"(id)
+  FOREIGN KEY (user_id) REFERENCES "user"(id) ON DELETE CASCADE
 );
 ALTER TABLE "user_cards" ADD PRIMARY KEY (user_id, card_id);
 
 CREATE TABLE IF NOT EXISTS "user_sets"(
   user_id INTEGER,
   set_id TEXT,
-  FOREIGN KEY (user_id) REFERENCES "user"(id)
+  FOREIGN KEY (user_id) REFERENCES "user"(id) ON DELETE CASCADE
 );
 ALTER TABLE "user_sets" ADD PRIMARY KEY (user_id, set_id);
 
 CREATE TABLE IF NOT EXISTS "user_deck_cards"(
   user_id INTEGER,
   card_id TEXT,
-  FOREIGN KEY (user_id) REFERENCES "user"(id)
+  FOREIGN KEY (user_id) REFERENCES "user"(id) ON DELETE CASCADE
 );
 ALTER TABLE "user_deck_cards" ADD PRIMARY KEY (user_id, card_id);
 
 CREATE TABLE IF NOT EXISTS "user_icons"(
   user_id INTEGER,
   icon_id TEXT,
-  FOREIGN KEY (user_id) REFERENCES "user"(id)
+  FOREIGN KEY (user_id) REFERENCES "user"(id) ON DELETE CASCADE
 );
 ALTER TABLE "user_icons" ADD PRIMARY KEY (user_id, icon_id)
 
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS "user_info"(
   user_id INTEGER,
   info_id TEXT,
   info_type TEXT,
-  FOREIGN KEY (user_id) REFERENCES "user"(id)
+  FOREIGN KEY (user_id) REFERENCES "user"(id) ON DELETE CASCADE
 );
 ALTER TABLE "user_info" ADD PRIMARY KEY (user_id, info_id)
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS "user_vault"(
   vault_id TEXT,
   card_id TEXT,
   has_purchased BOOL,
-  FOREIGN KEY (user_id) REFERENCES "user"(id)
+  FOREIGN KEY (user_id) REFERENCES "user"(id) ON DELETE CASCADE
 );
 ALTER TABLE "user_vault" ADD PRIMARY KEY (user_id, card_id)
 

@@ -6,7 +6,6 @@
     <div class="config-container">
         <!-- 👤 PERFIL -->
         <div class="profile-section">
-
             <h2>{{ _('profile') }}</h2>
             <!-- 🖼️ Foto atual -->
             <div class="profile-img-container">
@@ -117,12 +116,9 @@
             </div>
             <!-- DELETE -->
             <div class="div_button">
-                <form action="" method="post">
-                    <p>{{ _('delete_msg_1') }}</p>
-                    <button class="button danger">
-                        {{ _('delete') }}
-                    </button>
-                </form>
+                <button type="button" class="button danger" onclick="openDeleteModal()">
+                {{ _('delete') }}
+            </button>
             </div>
         </div>
 
@@ -161,7 +157,26 @@
     </div>
     <div class="space"></div>
     <div class="space"></div>
+</div>
 
+<div id="delete-modal" class="modal">
+    <div class="modal-content">
+        <h2>{{ _('delete') }}</h2>
+        <p>{{ _('delete_msg_1') }}</p>
+        <p>{{ _('delete_msg_2') }}</p>
+        <input id="delete-input" type="text" oninput="validateDelete()">
+        <div class="modal-buttons">
+            <button class="button" onclick="closeDeleteModal()">
+                {{ _('cancel') }}
+            </button>
+
+            <form id="delete-form" method="POST" action="/excluir-perfil">
+                <button id="delete-btn" class="button danger" disabled>
+                    {{ _('delete') }}
+                </button>
+            </form>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -223,5 +238,33 @@ function selecionarTheme(tema_id){
     localStorage.setItem("theme", tema_id);
 }
 
+const modal = document.getElementById("delete-modal");
+
+modal.addEventListener("click", (e)=>{
+    if(e.target === modal){
+        closeDeleteModal();
+    }
+});
+
+function openDeleteModal(){
+    document.getElementById("delete-modal").classList.add("open");
+}
+
+function closeDeleteModal(){
+    document.getElementById("delete-modal").classList.remove("open");
+    document.getElementById("delete-input").value = "";
+    document.getElementById("delete-btn").disabled = true;
+}
+function validateDelete(){
+    const input = document.getElementById("delete-input");
+    const button = document.getElementById("delete-btn");
+
+    if(lang_atual == "br"){
+        button.disabled = input.value.toLowerCase() !== "excluir";
+    }
+    else{
+        button.disabled = input.value.toLowerCase() !== "delete";
+    }
+}
 </script>
 {% endblock %}

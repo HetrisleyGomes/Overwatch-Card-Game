@@ -1,98 +1,97 @@
 [
   {
-    "id": "watchesrebeldes",
+    "id": "ironclad_dourados",
     "lang": {
       "br": {
-        "nome": "Watchwers Rebeldes",
-        "description": "Pacote especial com: Ashe Contrabandista, Baptiste Caçador, Doomfist Quebra-ossos, Torbjorn Engenheiro espacial, e Winston Extraterreste."
+        "nome": "Família Ironclad: Dourados",
+        "description": "Pacote especial com: Bastion, Brigitte, Jetpack Cat, Reinhardt e Torbjörn, todos dourados."
       },
       "en": {
-        "nome": "Watcher Rebellion",
-        "description": "Pacote especial com: Ashe Contrabandista, Baptiste Caçador, Doomfist Quebra-ossos, Torbjorn Engenheiro espacial, e Winston Extraterreste."
+        "nome": "Ironclad Clan: Golden",
+        "description": "Special bundle featuring: Bastion, Brigitte, Jetpack Cat, Reinhardt e Torbjörn, all Golden."
       }
     },
     "value": 1000,
     "buy_with_impeto": false,
-    "inicio": "07-01",
-    "fim": "07-08",
+    "inicio": "08-01",
+    "fim": "08-09",
     "itens": [
-      "ashe_contrabandista",
-      "baptiste_cacador",
-      "doomfist-quebraossos",
-      "torbjorn_engenheiro_espacial",
-      "winston_extraterreste"
+      "bastion_dourado",
+      "brigitte_dourado",
+      "jetpack_cat_dourado",
+      "reinhardt_dourado",
+      "torbjorn_dourado"
     ],
     "was_points": 0
   },
   {
-    "id": "vishkardourados",
+    "id": "snipers_dourados",
     "lang": {
       "br": {
-        "nome": "Elite Vishkar: Dourados",
-        "description": "Pacote especial com: Domina dourada, Symmetra dourada e Lifeweaver dourado."
+        "nome": "Snipers: Dourados",
+        "description": "Pacote especial com: Ashe, Hanzo e Widowmaker, todos dourados."
       },
       "en": {
-        "nome": "Elite Vishkar: Golden",
-        "description": "Special bundle featuring: Domina: Golden, Symmetra: Golden, and Lifeweaver: Golden."
+        "nome": "Snipers: Golden",
+        "description": "Special bundle featuring: Ashe, Hanzo e Widowmaker, all golden."
       }
     },
     "value": 600,
     "buy_with_impeto": false,
-    "inicio": "07-08",
-    "fim": "07-15",
+    "inicio": "08-08",
+    "fim": "08-16",
     "itens": [
-      "domina_dourado",
-      "symmetra_dourado",
-      "lifeweaver_dourado"
+      "ashe_dourado",
+      "hanzo_dourado",
+      "widowmaker_dourado"
     ],
     "was_points": 0
   },
   {
-    "id": "inversowatch",
+    "id": "hard_light_prom",
     "lang": {
       "br": {
-        "nome": "Líderes Inversowatch",
-        "description": "Pacote especial com: Arqui-comandante Amari, Doomfist: Comandante de ataque, Reinhardt: Cavaleiro Caído e Widowmaker: Capitã Lacorix."
+        "nome": "Luz Sólida+",
+        "description": "Pacote especial com: Mercy, Reaper e Reinhardt, todos na variação Hard light, e Echo padrão."
       },
       "en": {
-        "nome": "Mirrorwatch leaders",
-        "description": "Special bundle featuring: Arch-Commandant Amari, Doomfist: Strike Commander, Reinhardt: Fallen Knight, and Widowmaker: Captain Lacorix."
+        "nome": "Hard Light+",
+        "description": "Special bundle featuring: Mercy, Reaper e Reinhardt, all in Hard light, and default Echo."
       }
     },
-    "value": 800,
+    "value": 1000,
     "buy_with_impeto": false,
-    "inicio": "07-15",
-    "fim": "07-22",
+    "inicio": "08-15",
+    "fim": "08-23",
     "itens": [
-      "arqui-comandante_amari",
-      "comandante_ataque",
-      "fallen_knight",
-      "capita_lacroix"
+      "echo_comum",
+      "mercy_hard_light",
+      "reaper_hard_light",
+      "reinhardt_hard_light"
     ],
     "was_points": 0
   },
   {
-    "id": "blackwatch",
+    "id": "starlight",
     "lang": {
       "br": {
-        "nome": "Agentes Blackwatch: Dourados",
-        "description": "Pacote especial com: Cassidy dourado, Genji dourado, Moira dourada e Reaper dourado."
+        "nome": "Estrelas cadente: Dourados",
+        "description": "Pacote especial com: Juno, Winston e Wrecking Ball, todos dourados. +500 Pontos!"
       },
       "en": {
-        "nome": "Blackwatch Agents: Golden",
-        "description": "Special bundle featuring: Cassidy: Golden, Genji: Golden, Moira: Golden, and Reaper: Golden."
+        "nome": "Star lights: Golden",
+        "description": "Special bundle featuring: Juno, Winston e Wrecking Ball, all Golden. +500 Points!"
       }
     },
-    "value": 300,
+    "value": 1000,
     "buy_with_impeto": false,
-    "inicio": "07-26",
-    "fim": "07-30",
+    "inicio": "08-22",
+    "fim": "08-31",
     "itens": [
-      "cassidy_dourado",
-      "genji_dourado",
-      "moira_dourado",
-      "reaper_dourado"
+      "juno_dourado",
+      "winston_dourado",
+      "wrecking_ball_dourado"
     ],
-    "was_points": 0
+    "was_points": 500
   }
 ]

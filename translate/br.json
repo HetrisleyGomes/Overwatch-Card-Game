@@ -92,9 +92,8 @@
         "As artes e variações de cartas apresentadas neste projeto foram desenvolvidas de forma independente, sem vínculo oficial com a Blizzard. Parte do conteúdo foi inspirada em criações compartilhadas por membros da comunidade, incluindo usuários do Reddit.",
         "Para solicitações relacionadas a direitos autorais ou ajustes de créditos, entre em contato."
     ],
-    "delete_msg_1": "Excluir sua conta",
-    "delete_msg_2": "Isso é um adeus?",
-    "delete_msg_3": "Ao apertar em ok, você concorda em apagar seus dados salvos no nosso sistema. Uma vez feita, não poderá ser desfeita.",
+    "delete_msg_1": "Isto é uma despedida 😞?Tem certeza que deseja apagar sua conta? Esta ação não poderá ser desfeita.",
+    "delete_msg_2": "Digite EXCLUIR para confirmar.",
     "relatorio": "Relatório de Experiência em Gerenciamento de Aplicação Web.",
     "github": "Repositório do GitHub"
 }
