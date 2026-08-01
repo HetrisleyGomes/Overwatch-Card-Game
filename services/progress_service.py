@@ -35,13 +35,13 @@ def registry_cards(conn, cartas, rarity, user):
     # Faz o controle dos pacotes
     if rarity == "comum":
         if user["packs_diarios_abertos"] > 0:
-            if user["contador_packs_comuns"] < 10:
+            if user["contador_packs_comuns"] < 6:
                 user["contador_packs_comuns"] += 1
             user["packs_diarios_abertos"] -= 1
         elif user["packs_comprados_comum"] > 0:
             user["packs_comprados_comum"] -= 1
     elif rarity == "raro":
-        if user["contador_packs_comuns"] == 10:
+        if user["contador_packs_comuns"] >= 6:
             user["contador_packs_comuns"] = 0
         elif user["packs_comprados_raro"] > 0:
             user["packs_comprados_raro"] -= 1
@@ -72,15 +72,15 @@ def rarity_convert(rarity):
         case "incomum":
             return 2
         case "epico":
-            return 4
+            return 3
         case "lendario":
-            return 6
+            return 4
         case "ultra":
-            return 8
+            return 5
         case "mitico":
-            return 10
+            return 7
         case "especial":
-            return 10
+            return 6
         
 def get_xp_calc(rarity, pack_rarity):
     value = 0

@@ -2670,7 +2670,7 @@
     "subclasse": "Socorrista",
     "lang": {
       "br": {
-        "nome": "Mercy Hard Light",
+        "nome": "Mercy Luz Sólida",
         "entrada": "Não se preocupem, estarei atrás de vocês.",
         "ult_nome": "Valkíria",
         "ult": "Heróis nunca morrem!"
@@ -3419,7 +3419,7 @@
     "subclasse": "Flanco",
     "lang": {
       "br": {
-        "nome": "Reaper Hard Light",
+        "nome": "Reaper Luz Sólida",
         "entrada": "Você não pode escapar da morte.",
         "ult_nome": "Desabrochar da morte",
         "ult": "Morram, morram, morram!"
@@ -3622,7 +3622,7 @@
     "subclasse": "Robusto",
     "lang": {
       "br": {
-        "nome": "Reinhardt Hard Light",
+        "nome": "Reinhardt Luz Sólida",
         "entrada": "Juntos, acabaremos com eles.",
         "ult_nome": "Abalo terrestre",
         "ult": "Sinta o peso do martelo!"
