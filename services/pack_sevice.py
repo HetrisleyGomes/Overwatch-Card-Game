@@ -16,7 +16,7 @@ def sortear_raridade(chances):
 
     return random.choices(raridades, weights=pesos, k=1)[0]
 
-def abrir_pack(tipo_pack, lang):
+def open_pack(tipo_pack, lang):
     """Sorteia um conjunto de cartas dependendo do tipo de pacote.
     
     Keyword arguments:
@@ -46,7 +46,7 @@ def abrir_pack(tipo_pack, lang):
 
     return cartas
 
-def abrir_pack_evento(id_evento, lang):
+def open_event_pack(id_evento, lang):
     personagens = get_characters()
 
     if id_evento != "summergames":

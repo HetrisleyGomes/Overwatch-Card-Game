@@ -43,7 +43,7 @@ h2, .vs {
 
     <div class="players">
         <div class="player" id="p1">
-            <div class="name">Jogador 1</div>
+            <div class="name">player 1</div>
             <div class="status">⏳ Aguardando</div>
         </div>
 
@@ -66,7 +66,7 @@ h2, .vs {
 const socket = io();
 
 const roomId = "{{ room_id }}";
-const userId = "{{ session['usuario_id'] }}";
+const userId = "{{ session['user_id'] }}";
 const user = {{ user | tojson }};
 const LANG = "{{ lang }}";
 

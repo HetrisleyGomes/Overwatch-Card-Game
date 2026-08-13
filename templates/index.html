@@ -54,9 +54,9 @@
             {{ _('home') }}
         </button>
     </a>
-    <a href="{{ url_for('main.inventario') }}">
-        <button class="button premium-button {% if request.endpoint == 'main.inventario' %}ativo{% endif %}"
-                {% if request.endpoint == 'main.inventario' %}disabled{% endif %}>
+    <a href="{{ url_for('main.inventory') }}">
+        <button class="button premium-button {% if request.endpoint == 'main.inventory' %}ativo{% endif %}"
+                {% if request.endpoint == 'main.inventory' %}disabled{% endif %}>
             {{ _('inventory') }}
         </button>
     </a>
@@ -67,9 +67,9 @@
             {{ _('collections') }}
         </button>
     </a>
-    <a href="{{ url_for('main.loja') }}">
-        <button class="button premium-button {% if request.endpoint == 'main.loja' %}ativo{% endif %}"
-                {% if request.endpoint == 'main.loja' %}disabled{% endif %}>
+    <a href="{{ url_for('main.store') }}">
+        <button class="button premium-button {% if request.endpoint == 'main.store' %}ativo{% endif %}"
+                {% if request.endpoint == 'main.store' %}disabled{% endif %}>
             {{ _('store') }}
             {% if not user.has_already_get_daily_bonus and request.endpoint != 'main.loja' %}
                 <div class="notification"></div>

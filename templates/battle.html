@@ -78,14 +78,14 @@ const socket = io();
 const STATIC_URL = "{{ url_for('static', filename='') }}";
 
 var game_state = {{ game_state | tojson }};
-const jogadores = {{ jogadores | tojson }};
-var userId = {{ session["usuario_id"] }};
+const players = {{ players | tojson }};
+var userId = {{ session["user_id"] }};
 
 const DICT_LANG = game_state["dict_lang"];
 const COMBAT_TIPS = game_state["combat_tips"];
 
-var jogador_1 = jogadores.find(j => j.id == userId);
-var jogador_2 = jogadores.find(j => j.id != userId);
+var player_1 = players.find(j => j.id == userId);
+var player_2 = players.find(j => j.id != userId);
 
 const PHASES = {
     PRE_GAME: "pre_game",
@@ -126,9 +126,9 @@ function initializeTooltips() {
         if (card) {
             tooltip.innerHTML = card.dataset.tooltip.replace(/\n/g, "<br>");
         } else if (hpbar1) {
-            tooltip.innerHTML = jogador_1['hp']+"/20";
+            tooltip.innerHTML = player_1['hp']+"/20";
         } else if (hpbar2) {
-            tooltip.innerHTML = jogador_2['hp']+"/20";
+            tooltip.innerHTML = player_2['hp']+"/20";
         } else if (ler_tooltip) {
             tooltip.innerHTML = ler_tooltip.dataset.tooltip
         }
@@ -144,11 +144,11 @@ function initializeTooltips() {
 }
 
 function configUserView() {
-    avatar1.src = STATIC_URL + "logos/" + jogador_1.icone;
-    avatar2.src = STATIC_URL + "logos/" + jogador_2.icone;
+    avatar1.src = STATIC_URL + "logos/" + player_1.icone;
+    avatar2.src = STATIC_URL + "logos/" + player_2.icone;
 
-    hp1.style.width = `${(jogador_1.hp / 20) * 100}%`;
-    hp2.style.width = `${(jogador_2.hp / 20) * 100}%`;
+    hp1.style.width = `${(player_1.hp / 20) * 100}%`;
+    hp2.style.width = `${(player_2.hp / 20) * 100}%`;
 }
 
 async function gameFlow() {
@@ -245,21 +245,21 @@ function start_turn(){
 }
 
 function update_life() {
-    hp1.style.width = ((jogador_1.hp / 20) * 100) + "%";
-    hp2.style.width = ((jogador_2.hp / 20) * 100) + "%";
+    hp1.style.width = ((player_1.hp / 20) * 100) + "%";
+    hp2.style.width = ((player_2.hp / 20) * 100) + "%";
 }
 
 // SOCKETS =================================================
 socket.on("game_state", async (data) => {
     game_state = data.game_state;
     start_turn();
-    jogador_1 = data.jogadores.find(j => j.id == userId);
-    jogador_2 = data.jogadores.find(j => j.id != userId);
+    player_1 = data.players.find(j => j.id == userId);
+    player_2 = data.players.find(j => j.id != userId);
 
     if (game_state.phase == "fist_choose") {
-        await draw_five_cards_animation(jogador_1);
+        await draw_five_cards_animation(player_1);
     } else {
-        await drawCard(jogador_1['hand'][4]);
+        await drawCard(player_1['hand'][4]);
     }
     gameFlow();
 });
@@ -276,17 +276,17 @@ socket.on("battle_phase_one", async (data) => {
 
 socket.on("battle_phase_two", async (data) => {
     game_state = data.game_state;
-    jogador_1 = data.jogadores.find(j => j.id == userId);
-    jogador_2 = data.jogadores.find(j => j.id != userId);
+    player_1 = data.players.find(j => j.id == userId);
+    player_2 = data.players.find(j => j.id != userId);
     const changes = data.changes
     start_turn();
     showBattleChange(
         hp1,
-        changes[jogador_1.id]
+        changes[player_1.id]
     );
     showBattleChange(
         hp2,
-        changes[jogador_2.id]
+        changes[player_2.id]
     );
     update_life()
     gameFlow();
@@ -487,8 +487,8 @@ function animateCardToTarget(cardElement, targetElement) {
 }
 
 async function startBattleAnimation(battleData) {
-    const player1Card = battleData[jogador_1.id];
-    const player2Card = battleData[jogador_2.id];
+    const player1Card = battleData[player_1.id];
+    const player2Card = battleData[player_2.id];
 
     const slotP1 = document.getElementById("slot-p1");
     const slotP2 = document.getElementById("slot-p2");
@@ -769,7 +769,7 @@ function resetCrono() {
 // JOGO ==================
 socket.emit("join_room", {
     room_id: game_state.room_id,
-    user_id: jogador_1.id
+    user_id: player_1.id
 });
 
 initializeTooltips();

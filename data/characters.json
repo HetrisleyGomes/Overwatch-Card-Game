@@ -1374,7 +1374,7 @@
         "ult": "Oni no ken o kurae!"
       }
     },
-    "raridade": "incomum",
+    "raridade": "epico",
     "img": "Genji_ow_oni.png"
   },
   {
@@ -1396,7 +1396,7 @@
         "ult": "Byakko no ken o kurae!"
       }
     },
-    "raridade": "incomum",
+    "raridade": "epico",
     "img": "Genji_ow_baihu.png"
   },
   {
@@ -2286,9 +2286,9 @@
     "lang": {
       "br": {
         "nome": "Hermes",
-        "entrada": "A gente chegou pra vencer.",
+        "entrada": "A gente chegou pra comunicar.",
         "ult_nome": "Barreira de som",
-        "ult": "Bora acelerar!"
+        "ult": "É melhor pensar rápido!"
       },
       "en": {
         "nome": "Hermes",

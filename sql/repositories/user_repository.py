@@ -59,8 +59,8 @@ class UserRepository:
             (user_id,),
         )
         data = cursor.fetchone()
-        cursor.close()
         columns = [col[0] for col in cursor.description]
+        cursor.close()
         return data, columns
     
     def get_user_battle(self, user_id):
@@ -74,8 +74,8 @@ class UserRepository:
             (user_id,),
         )
         data = cursor.fetchone()
-        cursor.close()
         columns = [col[0] for col in cursor.description]
+        cursor.close()
         return data, columns
     
     def check_email(self, email):
@@ -116,8 +116,8 @@ class UserRepository:
             (email,),
         )
         data = cursor.fetchone()
-        cursor.close()
         columns = [col[0] for col in cursor.description]
+        cursor.close()
         return data, columns
     
     def edit_user(self, id, user):

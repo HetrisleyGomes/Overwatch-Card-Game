@@ -990,6 +990,7 @@
     "personagens": [
       "bastion_comum",
       "orisa_comum",
+      "shion_comum",
       "ramattra_comum",
       "zenyatta_comum"
     ],
@@ -1178,7 +1179,7 @@
     "id": "null_sector",
     "lang":{
       "br": {"nome":"Ameaça do Setor Nulo"},
-      "en": {"nome":"Danger: Null Sector"}
+      "en": {"nome":"Danger!: Null Sector"}
     },
     "personagens": [
       "ramattra_comum",
@@ -1215,10 +1216,10 @@
       "en": {"nome":"Champions"}
     },
     "personagens": [
+      "reinhardt_gridironhardt",
       "zenyatta_djinnyatta" ,
       "dva_cruzador",
       "kiriko_bruxa",
-      "reinhardt_gridironhardt",
       "rainha_junker_executora",
       "torbjorn_engenheiro_espacial",
       "winston_extraterreste"
@@ -1234,10 +1235,10 @@
       "en": {"nome":"Warriors"}
     },
     "personagens": [
+      "sojourn_almirante_infinito",
       "brigitte_capita_real",
       "genji_baihu",
       "mercy_sigrun",
-      "sojourn_almirante_infinito",
       "soldado_76_guarda_infinito",
       "aventureira"
     ],
@@ -1335,9 +1336,9 @@
       "anran_comum",
       "ashe_comum",
       "mauga_comum",
-      "ocaso_flamejante",
       "titan_magma",
       "fenix_ascendida",
+      "ocaso_flamejante",
       "demonio_aprisionado"
     ],
     "recompensa": {
@@ -1371,8 +1372,8 @@
       "kiriko_bruxa",
       "mercy_conjuradora",
       "ashe_warlock",
-      "feiticeira",
-      "imperatriz_calamidade"
+      "imperatriz_calamidade",
+      "feiticeira"
     ],
     "recompensa": {
       "pontos": 300
@@ -1403,8 +1404,8 @@
       "en": {"nome":"Pantheon of Gods"}
     },
     "personagens": [
-      "lucio_hermes",
       "mercy_vitoria_alada",
+      "lucio_hermes",
       "pharah_hades",
       "ramattra_poseidon",
       "zeus"
@@ -1451,8 +1452,8 @@
       "en": {"nome":"Evil powers"}
     },
     "personagens": [
-      "genji_oni",
       "mercy_diabrete",
+      "genji_oni",
       "ashe_warlock",
       "cyber_demonio",
       "onryo",

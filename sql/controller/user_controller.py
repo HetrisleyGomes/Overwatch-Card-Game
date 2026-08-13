@@ -30,8 +30,7 @@ class UserController:
         try:
             return self.__repository.check_email(email)
         except Exception as e:
-            print(e)
-            return False
+            return str(e)
 
     def edit_user(self, id, user):
         try:

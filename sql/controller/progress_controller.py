@@ -70,13 +70,12 @@ class ProgressController:
             data = self.__repository.get_vault_cards(user_id, vault_id)
             return data
         except Exception as e:
-            print(e)
-            return None
+            return str(e)
     
     def generate_new_vault(self, user_id, vault_id):
         try:
             self.__repository.delete_user_vault(user_id)
-            from services.loja_services import get_new_vault
+            from services.store_services import get_new_vault
             cartas = get_new_vault()
             for carta in cartas:
                 self.__repository.set_vault_item(user_id, vault_id, carta)

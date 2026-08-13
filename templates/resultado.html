@@ -100,12 +100,12 @@
 
         <!-- Abrir próximo pack -->
         {% if (user.packs_diarios_abertos > 0 or user.packs_comprados_comum > 0) and tipo_pack == "comum" %}
-        <form method="POST" action="{{ url_for('main.abrir_pack_route') }}" style="display:inline;">
+        <form method="POST" action="{{ url_for('main.open_pack_route') }}" style="display:inline;">
             <input type="hidden" name="tipo" value="comum">
             <button class="button">Abrir próximo pacote</button>
         </form>
         {% elif user.packs_comprados_raro > 0 and tipo_pack == "raro" %}
-        <form method="POST" action="{{ url_for('main.abrir_pack_route') }}" style="display:inline;">
+        <form method="POST" action="{{ url_for('main.open_pack_route') }}" style="display:inline;">
             <input type="hidden" name="tipo" value="raro">
             <button class="button">Abrir próximo pacote</button>
         </form>

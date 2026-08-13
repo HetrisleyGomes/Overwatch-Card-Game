@@ -174,7 +174,6 @@ class ProgressRepository:
 
         data = cursor.fetchall()
         cursor.close()
-        print(data)
         return data
     
     def set_vault_item(self, user_id, vault_id, card_id):

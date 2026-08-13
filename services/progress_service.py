@@ -115,7 +115,7 @@ def save_deck_progress(conn, deck_json):
     repo = ProgressRepository(conn)
     ctll = ProgressController(repo)
 
-    user_id = session["usuario_id"]
+    user_id = session["user_id"]
 
     ctll.set_deck(user_id, deck_ids)
 
@@ -123,7 +123,7 @@ def get_deck(conn):
     repo = ProgressRepository(conn)
     ctll = ProgressController(repo)
 
-    user_id = session["usuario_id"]
+    user_id = session["user_id"]
     deck_atual = ctll.get_deck(user_id)
     return deck_atual
     

@@ -3,7 +3,7 @@ from sql.controller.progress_controller import ProgressController
 from sql.repositories.progress_repository import ProgressRepository
 
 
-def verificar_sets(conn, user_id, lang):
+def check_sets(conn, user_id, lang):
     """Verifica se um conjunto de cartas foi completado.
     
     Keyword arguments:
@@ -46,7 +46,7 @@ def verificar_sets(conn, user_id, lang):
     
     return sets_nomes, pontos_sets
 
-def formatar_inventario(conn, user_id, lang):
+def format_inventory(conn, user_id, lang):
     """Formata as cartas do usuário em um dicionário.
     
     Keyword arguments:
@@ -94,7 +94,7 @@ def formatar_inventario(conn, user_id, lang):
     return cartas_view
 
 
-def listar_sets_usuario(conn, user_id, lang):
+def list_user_sets(conn, user_id, lang):
     """Formata os sets e as cartas do usuário em um dicionário.
     
     Keyword arguments:
@@ -120,7 +120,7 @@ def listar_sets_usuario(conn, user_id, lang):
         personagens_set = s["personagens"]
         personagens_set_extra = s.get("other_personagens", [])
 
-        # ToDo: Troca\r isso para conferir a lista de progress invés da quantidade de cartas.
+    
         completo = all(
             personagem in personagens_usuario
             for personagem in personagens_set
@@ -190,7 +190,7 @@ def listar_sets_usuario(conn, user_id, lang):
 
     return resultado
 
-def format_carta(carta_id, lang):
+def card_format(carta_id, lang):
     characters = get_characters()
     mapa_characters = {c["id"]: c for c in characters}
     carta = mapa_characters[carta_id]

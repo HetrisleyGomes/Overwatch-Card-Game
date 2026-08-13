@@ -50,11 +50,11 @@
 
 <script>
 const STATIC_URL = "{{ url_for('static', filename='') }}";
-const jogadores = {{ jogadores | tojson }};
-const userId = {{ session["usuario_id"] }};
+const players = {{ players | tojson }};
+const userId = {{ session["user_id"] }};
 
-var jogador_1 = jogadores.find(j => j.id == userId);
-var jogador_2 = jogadores.find(j => j.id != userId);
+var jogador_1 = players.find(j => j.id == userId);
+var jogador_2 = players.find(j => j.id != userId);
 
 function configUserView() {
     document.getElementById("player-name").innerText = jogador_1.nome;

@@ -1,14 +1,14 @@
 from flask import blueprints, render_template, request, session, redirect, url_for, g
 from flask_socketio import join_room, emit
-
 from services.user_service import  get_battle_cards
 from services.progress_service import  get_deck
-from services.collection_service import format_carta
-from routes import get_db_connection
+from services.collection_service import card_format
+
 from utils.json_utils import get_classes_lang, get_combat_tips, get_global_tips
 
 from sql.controller.user_controller import UserController
 from sql.repositories.user_repository import UserRepository
+from sql.connection import get_db_connection
 
 from server import socketio
 import random
@@ -39,7 +39,7 @@ def buscar_partida():
     if len(deck) < 12:
         return redirect(url_for("main.home"))
 
-    user_id = session["usuario_id"]
+    user_id = session["user_id"]
 
     # procurar sala disponível
     for room_id, room in salas.items():
@@ -68,7 +68,7 @@ def aguardando(room_id):
     repo = UserRepository(connection)
     ctll = UserController(repo)
 
-    user = ctll.get_user(session["usuario_id"])
+    user = ctll.get_user(session["user_id"])
     lang = session['lang']
     global_tips = get_global_tips(lang, "combat")
 
@@ -127,8 +127,6 @@ def leave_room_handler(data):
 
 @combate.route("/battle/<room_id>")
 def battle(room_id):
-    room = salas.get(room_id)
-    
     connection = get_db_connection()
     if connection is None:
         return "Erro ao conectar ao banco de dados.", 500
@@ -136,24 +134,24 @@ def battle(room_id):
     repo = UserRepository(connection)
     ctll = UserController(repo)
     lang = session["lang"]
-    termos_lang = get_classes_lang(lang)
-    c_tips = get_combat_tips(lang)
+    terms_lang = get_classes_lang(lang)
+    combat_tips = get_combat_tips(lang)
     game_state = {
         "room_id": room_id,
         "round": 1,
         "phase": "pre_game",
         'host': salas[room_id]['players'][0]['id'],
-        'dict_lang': termos_lang,
-        'combat_tips': c_tips
+        'dict_lang': terms_lang,
+        'combat_tips': combat_tips
     }
 
-    jogadores = []
+    players = []
 
     for user in salas[room_id]['players']:
-        id = user['id']
-        user = ctll.get_user_battle(id)
+        user_id = user['id']
+        user = ctll.get_user_battle(user_id)
         modelo = {
-        'id': id,
+        'id': user_id,
         'nome': user['nome'],
         'icone': user['profile_img'],
         'hp': 20,
@@ -162,16 +160,16 @@ def battle(room_id):
         'discarded': []
         }
 
-        cartas = get_battle_cards(connection, id)
+        cartas = get_battle_cards(connection, user_id)
         for carta_id in cartas:
-            carta = format_carta(carta_id, lang)
+            carta = card_format(carta_id, lang)
             modelo["deck"].append(carta)
-        jogadores.append(modelo)
+        players.append(modelo)
 
     salas[room_id]['game_state'] = game_state.copy()
-    salas[room_id]['jogadores'] = jogadores.copy()
+    salas[room_id]['players'] = players.copy()
     salas[room_id]["selected_cards"] = {}
-    return render_template("battle.html", room_id=room_id, game_state=game_state, jogadores=jogadores)
+    return render_template("battle.html", room_id=room_id, game_state=game_state, players=players)
 
 @socketio.on("disconnect")
 def handle_disconnect():
@@ -191,7 +189,7 @@ def handle_disconnect():
         lang = session['lang']
         win_msg = "Seu adversário não respondeu a tempo ou desconectou!" if lang == "br" else "Your opponent didn't respond in time or disconnected!"
         winner = next(
-            (p for p in room["jogadores"]
+            (p for p in room["players"]
              if p["id"] != user_id),
             None
         )
@@ -226,38 +224,38 @@ def fist_draw(data):
     room_id = data["room_id"]
     room = salas[room_id]
 
-    jogadores = room["jogadores"]
+    players = room["players"]
     game_state = room["game_state"]
 
-    for jogador in jogadores:
-        random.shuffle(jogador["deck"])
+    for player in players:
+        random.shuffle(player["deck"])
 
-        if "hand" not in jogador:
-            jogador["hand"] = []
+        if "hand" not in player:
+            player["hand"] = []
         
         for i in range(5):
-            if jogador["deck"]:
-                carta = jogador["deck"].pop()
-                jogador["hand"].append(carta)
+            if player["deck"]:
+                carta = player["deck"].pop()
+                player["hand"].append(carta)
     game_state["phase"] = "fist_choose"
 
     emit("game_state", {
         "game_state": game_state,
-        "jogadores": jogadores
+        "players": players
     }, to=room_id)
 
 @socketio.on("select_card")
 def select_card(data):
     room_id = data["room_id"]
     card_id = data["card_id"]
-    user_id = session["usuario_id"]
+    user_id = session["user_id"]
     room = salas[room_id]
     lang = session["lang"]
 
     if "selected_cards" not in room:
         room["selected_cards"] = {}
 
-    room["selected_cards"][user_id] = format_carta(card_id, lang)
+    room["selected_cards"][user_id] = card_format(card_id, lang)
 
     if len(room["selected_cards"]) == 2:
         combate_1(room_id,room)
@@ -265,10 +263,10 @@ def select_card(data):
 
 # COMBATE =========================================================================
 def combate_1(room_id, room):
-    jogadores = room["jogadores"]
+    players = room["players"]
     selected_cards = room["selected_cards"]
     result = {}
-    for jgdr in jogadores:
+    for jgdr in players:
         player_id = jgdr['id']
         template = check_class_and_subclass(selected_cards[player_id]['classe'], selected_cards[player_id]['subclasse'])
         result[player_id] = template
@@ -393,58 +391,72 @@ def check_class_and_subclass(classe, subclasse):
 def combate_2(data):
     room_id = data["room_id"]
     room = salas[room_id]
-    jogadores = room["jogadores"]
-    effects = room["battle_effects"]
-    changes = {}
+    
+    changes = resolve_battle(room)
+    
+    emit("battle_phase_two", {
+        "game_state": room["game_state"],
+        "players": room["players"],
+        "changes": changes,
+    }, to=room_id)
 
+def resolve_battle(room):
     if "battle_continue" not in room:
         room["battle_continue"] = {}
 
-    continuo = room.get("battle_continue", {})
+    players = room["players"]
+    effects = room["battle_effects"]
+    continuous = room.get("battle_continue", {})
+    changes = {}
 
-    for jogador in jogadores:
-        player_id = jogador["id"]
-        vida_inicial = jogador["hp"]
+    for player in players:
+        player_id = player["id"]
+        vida_inicial = player["hp"]
         effect_player = effects.get(player_id, {})
         effect_oponent = next(
             (
                 effects[p["id"]]
-                for p in jogadores
+                for p in players
                 if p["id"] != player_id
             ),
             None
         )
-        efeitos = continuo.get(player_id, {})
-        af = efeitos.get("ataque_futuro", 0)
-        rev = efeitos.get("revitalizar", 0)
+        effects_continuous = continuous.get(player_id, {})
+        future_attack = effects_continuous.get("ataque_futuro", 0)
+        revitalize = effects_continuous.get("revitalizar", 0)
 
         if not effect_oponent:
             continue
+        # Prioridade 1:
         ataque_veloz_recebido = effect_oponent.get("golpe veloz", 0)
-        ataque_recebido = effect_oponent.get("ataque", 0) + af
+        # Prioridade 2:
+        ataque_recebido = effect_oponent.get("ataque", 0) +future_attack
         anticura_recebido = effect_oponent.get("anti-cura", 0)
+        # Prioridade 3:
         escudo = effect_player.get("escudo", 0)
-        cura = effect_player.get("cura", 0) * 2 if rev > 0 else effect_player.get("cura", 0)
+        cura = effect_player.get("cura", 0) * 2 if revitalize > 0 else effect_player.get("cura", 0)
+        # Prioridade 4:
         ataque_futuro = effect_oponent.get("ataque futuro", 0) 
         revitalizar = effect_player.get("revitalizar", 0)
 
+        # Combate resolver:
         dano_final = ataque_veloz_recebido + max(0, ataque_recebido - escudo) + effect_player.get("descuido", 0)
         cura_final = max(0, cura - anticura_recebido)
 
-        jogador["hp"] -= dano_final
-        jogador["hp"] += cura_final
+        player["hp"] -= dano_final
+        player["hp"] += cura_final
 
-        if jogador["hp"] > 20:
-            jogador["hp"] = 20
-        if jogador["hp"] < 0:
-            jogador["hp"] = 0
+        if player["hp"] > 20:
+            player["hp"] = 20
+        if player["hp"] < 0:
+            player["hp"] = 0
 
-        if vida_inicial > jogador["hp"]:
+        if vida_inicial > player["hp"]:
             changes[player_id] = {
                 "type": "damaged",
                 "value": max(0, dano_final - cura_final)
             }
-        elif vida_inicial < jogador["hp"]:
+        elif vida_inicial < player["hp"]:
             changes[player_id] = {
                 "type": "healed",
                 "value": max(0, cura_final - dano_final)
@@ -459,16 +471,9 @@ def combate_2(data):
             "ataque_futuro": ataque_futuro,
             "revitalizar": revitalizar
         }
-        room["atum"] = [ataque_futuro, revitalizar]
         
     finalize_battle(room)
     room["game_state"]["phase"] = "battle_resolve"
-    emit("battle_phase_two", {
-        "game_state": room["game_state"],
-        "jogadores": room["jogadores"],
-        "changes": changes,
-    }, to=room_id)
-
 
 # END COMBATE ======================================================================
 @socketio.on("end_turn")
@@ -476,10 +481,10 @@ def fim_de_turno(data):
     room_id = data["room_id"]
     room = salas[room_id]
     game_state = room["game_state"]
-    jogadores = room["jogadores"]
+    players = room["players"]
 
     # VERIFICAR DERROTA POR HP
-    losers = [p for p in jogadores if p["hp"] <= 0]
+    losers = [p for p in players if p["hp"] <= 0]
     room["finished"] = True
     if len(losers) == 2:
         emit("empate", {
@@ -489,7 +494,7 @@ def fim_de_turno(data):
     elif len(losers) == 1:
         loser_id = losers[0]["id"]
         winner = next(
-            (p for p in jogadores if p["id"] != loser_id),
+            (p for p in players if p["id"] != loser_id),
             None
         )
         emit("victory", {
@@ -498,8 +503,8 @@ def fim_de_turno(data):
         return
     
     if game_state["round"] >= 7:
-        player_1 = jogadores[0]
-        player_2 = jogadores[1]
+        player_1 = players[0]
+        player_2 = players[1]
         # empate
         if player_1["hp"] == player_2["hp"]:
             emit("empate", {
@@ -528,44 +533,44 @@ def fim_de_turno(data):
 def draw(data):
     room_id = data["room_id"]
     room = salas[room_id]
-    jogadores = room["jogadores"]
+    players = room["players"]
 
-    for jogador in jogadores:
-        random.shuffle(jogador["deck"])
+    for player in players:
+        random.shuffle(player["deck"])
 
-        if "hand" not in jogador:
-            jogador["hand"] = []
+        if "hand" not in player:
+            player["hand"] = []
 
-        if jogador["deck"]:
-            carta = jogador["deck"].pop()
-            jogador["hand"].append(carta)
+        if player["deck"]:
+            carta = player["deck"].pop()
+            player["hand"].append(carta)
         
     room["game_state"]["phase"] = "choose"
     emit("game_state", {
         "game_state": room["game_state"],
-        "jogadores": jogadores
+        "players": players
     }, to=room_id)
 
 def finalize_battle(room):
-    jogadores = room["jogadores"]
+    players = room["players"]
     selected_cards = room["selected_cards"]
 
-    for jogador in jogadores:
-        user_id = jogador["id"]
+    for player in players:
+        user_id = player["id"]
         selected_card_id = selected_cards.get(user_id)
 
         if not selected_card_id:
             continue
         card = next(
             (
-                c for c in jogador["hand"]
+                c for c in player["hand"]
                 if c["carta_id"] == selected_card_id['carta_id']
             ),
             None
         )
         if card:
-            jogador["hand"].remove(card)
-            jogador["discarded"].append(card)
+            player["hand"].remove(card)
+            player["discarded"].append(card)
     
     room["selected_cards"] = {}
 
@@ -587,19 +592,19 @@ def time_out(data):
         return
     
     selected = room.get("selected_cards", {})
-    jogadores = [j["id"] for j in room["jogadores"]]
+    players = [j["id"] for j in room["players"]]
 
-    p1 = jogadores[0]
-    p2 = jogadores[1]
+    p1 = players[0]
+    p2 = players[1]
 
-    p1_escolheu = p1 in selected
-    p2_escolheu = p2 in selected
+    p1_chose = p1 in selected
+    p2_chose = p2 in selected
 
-    if not p1_escolheu and not p2_escolheu:
+    if not p1_chose and not p2_chose:
         emit("empate", to=room_id)
-    elif not p1_escolheu:
+    elif not p1_chose:
         emit("victory", {"winner_id": p2}, to=room_id)
-    elif not p2_escolheu:
+    elif not p2_chose:
         emit("victory", {"winner_id": p1}, to=room_id)
 
 
@@ -623,12 +628,12 @@ def battle_victory():
     room_id = session.pop("room_id", None)
 
     room = salas[room_id]
-    jogadores = room["jogadores"]
+    players = room["players"]
 
-    user_id = session["usuario_id"]
+    user_id = session["user_id"]
 
     num = room.get("players_views", 0)
     room["players_views"] = num+1
     if room["players_views"] == 2:
         del salas[room_id]
-    return render_template("result_battle.html", result=result, user_id=user_id, winner_id=winner_id, jogadores=jogadores)
+    return render_template("result_battle.html", result=result, user_id=user_id, winner_id=winner_id, players=players)
