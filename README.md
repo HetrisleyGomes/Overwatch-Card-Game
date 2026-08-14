@@ -38,6 +38,9 @@ Rather than being developed solely as a demonstration of a specific technology, 
 Overwatch-Card-Game
 │
 ├── data/
+├── routes/
+│   ├── routes.py
+│   └── routescombate.py
 ├── services/
 ├── sql/
 │   ├── controller/
@@ -53,8 +56,6 @@ Overwatch-Card-Game
 ├── translate/
 ├── utils/
 │
-├── routes.py
-├── routescombate.py
 ├── config.py
 ├── server.py
 └── run.py

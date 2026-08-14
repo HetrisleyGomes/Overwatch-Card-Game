@@ -1,6 +1,6 @@
 from server import app, socketio
-from routes import main
-from routescombate import combate
+from routes.routes import main
+from routes.routescombate import combate
 
 app.secret_key = "chave_secretissima"
 app.register_blueprint(main)
