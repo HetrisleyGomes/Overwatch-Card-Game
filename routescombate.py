@@ -1,4 +1,4 @@
-from flask import blueprints, render_template, request, session, redirect, url_for, g
+from flask import blueprints, render_template, request, session, redirect, url_for
 from flask_socketio import join_room, emit
 from services.user_service import  get_battle_cards
 from services.progress_service import  get_deck
@@ -48,7 +48,7 @@ def buscar_partida():
             room["status"] = "full"
             return redirect(url_for("combate.aguardando", room_id=room_id))
 
-    # nenhuma sala → criar nova
+    # nenhuma sala -> criar nova
     room_id = str(uuid.uuid4())
 
     salas[room_id] = {
@@ -84,7 +84,6 @@ def handle_ready(data):
             p["ready"] = True
     emit("room_update", room, to=room_id)
 
-    # se todos prontos → iniciar
     if len(room["players"]) == 2 and all(p["ready"] for p in room["players"]):
         emit("start_game", {"room_id": room_id}, to=room_id)
 

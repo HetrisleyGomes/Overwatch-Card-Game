@@ -1,118 +1,143 @@
 # Overwatch Card Game
 
-Um web game inspirado no universo de cartas colecionáveis, desenvolvido com **Python + Flask**, onde o jogador abre pacotes, coleciona personagens e completa coleções para ganhar recompensas.
+***Overwatch Card Game*** is a browser-based collectible card game inspired by the universe of Overwatch. It is also a practical study in designing, developing, maintaining and evolving a real-world web application, covering game systems, databases, backend architecture, real-time communication, localization and application management.
+
+# README in different languages
+- [English](README.md)
+- [Português](README.pt.md)
 
 ---
 
-## 🚀 Sobre o projeto
+## About
 
-O **Overwatch Card Game** é um projeto pessoal criado com o objetivo de praticar desenvolvimento web full stack, utilizando:
+Overwatch Card Game is a browser-based collectible card game inspired by the universe of Overwatch. The project combines card collection, deck building, packs, events, a player store and real-time PvP battles into a web application.
 
-* Backend com **Flask (Python)**
-* Frontend com **HTML, CSS e JavaScript**
-* Informações internas em arquivos `.json`
-* Persistência em banco de dados externo `sql`
+Beyond the game itself, this project serves as a practical study in the development and management of a real-world web application. Throughout its development, different approaches to frontend development, backend architecture, databases, authentication, localization, real-time communication and application organization have been explored and progressively refined.
+
+The project is built with Python, Flask, JavaScript, HTML, CSS, PostgreSQL and Socket.IO, with the codebase organized into repositories, controllers and services to separate different responsibilities of the application.
+
+The project is continuously used to experiment with development practices, architectural decisions, database design, game logic and the challenges involved in maintaining and evolving an application over time.
+
+---
+
+## Project Purpose
+
+This project has two complementary purposes.
+
+**Game development**: build a functional collectible card game with collection, deck building, economy, events and real-time player-versus-player battles.
+
+**Web application study**: use the project as a practical environment for studying how a web application is designed, developed, maintained and progressively improved as its complexity increases.
+
+Rather than being developed solely as a demonstration of a specific technology, the project is intentionally used to explore real development challenges and evaluate different technical and architectural decisions.
+
+---
+
+## Project structure
+
+```
+Overwatch-Card-Game
+│
+├── data/
+├── services/
+├── sql/
+│   ├── controller/
+│   └── repositories/
+├── static/
+│   ├── extras
+│   ├── font
+│   ├── icons
+│   ├── images
+│   ├── logos
+│   └── styles
+├── templates/
+├── translate/
+├── utils/
+│
+├── routes.py
+├── routescombate.py
+├── config.py
+├── server.py
+└── run.py
+```
+
+---
+
+## Features
+
+* Pack opening (common, rare, and event packs)
+* Rarity-based draw system
+* Player cards inventory
+* Sets system
+* Rewards for completing Sets
+* Monthly and seasonal events
+* Level and experience (XP) system
+* Store for purchasing packs
+* Avatar and site theme customization
+* Animated interface
+* User login and registration system
+
+---
+
+## Applied concepts
+
+This project was developed with a focus on learning, applying concepts such as:
+
+* Layered code organization (routes, services, utils)
+* Database persistence
+* Session management
+* Authentication
+* Sockets
+* Progression system (XP and level)
+* Probability logic (card drawing)
+* Temporary events
+* Client synchronization
+* Responsiveness and UI/UX
+* Internationalization
+* Git and branching
+* Maintenance/refactoring of existing code
   
-
-O jogo simula a experiência de abrir pacotes de cartas, com diferentes raridades, progresso de coleção e sistema de recompensas.
-
 ---
 
-## 🎮 Funcionalidades
+## How to run the project
 
-* 🎁 Abertura de pacotes (comum, raro e eventos)
-* 🎲 Sistema de sorteio com raridades
-* 🧾 Inventário de cartas do jogador
-* 📚 Sistema de coleções (sets)
-* 🏆 Recompensas por completar coleções
-* ⭐ Sistema de nível e experiência (XP)
-* 🛒 Loja para compra de pacotes
-* 🎨 Interface com animações (flip de cartas, abertura de pack)
-* 🔐 Sistema de login e registro de usuários
+**Note:** When following the steps below, you will need to configure your own database.
 
----
 
-## 📁 Estrutura do projeto
-
-```
-/data
-    characters.json
-    events.json
-    icons.json
-    packs.json
-    sets.json
-
-/static
-    /css
-    /images
-    /logos
-    /icons
-
-/templates
-    *.html
-
-/sql
-    /controller
-    /repository
-
-/routes
-/services
-/utils
-```
-
----
-
-## 🧠 Conceitos aplicados
-
-Este projeto foi desenvolvido com foco em aprendizado, aplicando conceitos como:
-
-* Organização de código em camadas (routes, services, utils)
-* Manipulação de arquivos JSON como banco de dados
-* Controle de sessão com Flask
-* Sistema de progressão (XP e nível)
-* Lógica de probabilidade (sorteio de cartas)
-* Renderização dinâmica com Jinja2
-* Responsividade e UI/UX
-
----
-
-## ⚙️ Como rodar o projeto
-
-1. Clone o repositório:
+1. Clone the repository:
 
 ```bash
 git clone https://github.com/HetrisleyGomes/Overwatch-Card-Game.git
 ```
 
-2. Acesse a pasta:
+2. Navigate to the folder:
 
 ```bash
 cd Overwatch-Card-Game
 ```
 
-Opcional: Instale um ambiente virtual
+Optional: Set up a virtual environment
 ```bash
 python -m venv .venv
 ```
 
-E então ative-o:
+And then activate it:
 ```bash
 .\.venv\Scripts\activate
 ```
 
-3. Instale as dependências:
+3. Install the dependencies:
 
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
-4. Execute o projeto:
+4. Run the project:
 
 ```bash
 python run.py
 ```
 
-5. Acesse no navegador:
+5. Access it in your browser:
 
 ```
 http://127.0.0.1:5000
@@ -120,28 +145,44 @@ http://127.0.0.1:5000
 
 ---
 
-## 🔮 Melhorias futuras
-
-* ~~Sistema de raridades mais avançado~~
-* Cartas especiais de eventos
-* Sistema de marketplace entre jogadores
-* Melhorias visuais e animações
-* ~~Banco de dados real (SQLite ou PostgreSQL)~~
-
----
-
-## 📌 Status do projeto
-
-🚧 Em desenvolvimento contínuo
+## Future improvements
+* New variations of existing characters
+* New characters
+* New customization icons and themes
+* Special event cards
+* Player-to-player marketplace system
+* Visual improvements and animations
 
 ---
 
-## 👨‍💻 Autor
+## Project status
 
-Desenvolvido por Hetrisley Gomes, como projeto de aprendizado 💻🔥
+🚧 Under continuous development
 
 ---
 
-## 📄 Licença
+## Author
 
-Este projeto é apenas para fins educacionais.
+Developed by Hetrisley Gomes as a learning project.
+
+* Reading of the [web application management experience report](https://docs.google.com/document/d/1zfvDdwbaI8FGIw6DIiQ1ibbReLjf1vMRfOzJND49yk0/edit?usp=sharing "Acessar") - (Available only in Portuguese)
+
+---
+
+## Licence
+
+This project is for educational purposes only.
+
+**MIT License**
+
+---
+
+### Copyrights
+
+© 2026 Overwatch-Card-Game — An independent, non-profit project developed for educational and entertainment purposes.
+
+Overwatch, its characters, names, trademarks, and original visual elements are the property of Blizzard Entertainment. All rights belong to their respective owners.
+
+The card artwork and variations presented in this project were developed independently, with no official affiliation with Blizzard. Some of the content was inspired by creations shared by community members, including Reddit users.
+
+Please contact us regarding copyright inquiries or credit adjustments.

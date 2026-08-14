@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_socketio import SocketIO, emit, join_room
+from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -14,7 +14,6 @@ def handle_disconnect():
 
 @socketio.on("update_request")
 def handle_update_request(data):
-    # Broadcast update to all clients
     emit("update", data, broadcast=True)
 
 @socketio.on("message")

@@ -1,5 +1,4 @@
 from psycopg2.extensions import connection
-from psycopg2.extras import DictCursor
 
 class ProgressRepository:
     def __init__(self, conn: connection):

@@ -31,14 +31,14 @@ def open_pack(tipo_pack, lang):
     cartas = []
 
     for i in range(pack["cartas_por_pack"]):
-        # 1. sortear raridade
+        # sortear raridade
         chances_slot = pack["chance"][i]
         raridade = sortear_raridade(chances_slot)
 
-        # 2. filtrar personagens dessa raridade
+        # filtrar personagens dessa raridade
         possiveis = [p for p in personagens if p["raridade"] == raridade and p.get("evento") is None and p not in cartas]
 
-        # 3. escolher personagem
+        # escolher personagem
         carta = random.choice(possiveis)
         formated_carta = format_full_card(carta, lang)
         cartas.append(formated_carta)
@@ -63,13 +63,13 @@ def open_event_pack(id_evento, lang):
             if p.get("golden_weapon")
         ]
 
-    # 1. sortear raridade
+    # sortear raridade
     packs = get_packs()
     pack = packs[id_evento]
 
     cartas = []
 
-    # 🎁 Caso especial: aniversário
+    # Caso especial: aniversário
     if id_evento == "aniversary":
         carta1 = random.choice(golden)
         carta2 = random.choice(personagens_filtrados)
@@ -78,7 +78,7 @@ def open_event_pack(id_evento, lang):
 
         cartas.extend([format_full_card(carta1, lang), format_full_card(carta2, lang)])
 
-    # 🎴 Lógica padrão (todos os outros casos)
+    # Lógica padrão (todos os outros casos)
     else:
         for i in range(pack["cartas_por_pack"]):
             raridade = sortear_raridade(pack["chance"][i])

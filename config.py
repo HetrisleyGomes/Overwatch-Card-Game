@@ -6,7 +6,6 @@ load_dotenv()
 class DbConnectionHandler:
     def __init__(self) -> None:
         self.__connection_string = os.getenv("DATABASE_URL")
-        self.__conn = None
 
         if self.__connection_string:
             print("DATABASE_URL carregado.")

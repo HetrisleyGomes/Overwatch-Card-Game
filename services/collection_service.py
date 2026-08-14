@@ -108,11 +108,8 @@ def list_user_sets(conn, user_id, lang):
 
     sets = get_sets()
     characters = get_characters()
-
     personagens_usuario = ctll.get_all_cards_id(user_id)
-
     resultado = []
-    
     mapa_characters = {c["id"]: c for c in characters}
 
     for s in sets:
@@ -120,12 +117,10 @@ def list_user_sets(conn, user_id, lang):
         personagens_set = s["personagens"]
         personagens_set_extra = s.get("other_personagens", [])
 
-    
         completo = all(
             personagem in personagens_usuario
             for personagem in personagens_set
         )
-
         progresso = sum(
             1 for p in personagens_set if p in personagens_usuario
         )
@@ -143,7 +138,6 @@ def list_user_sets(conn, user_id, lang):
             golden_weapon = c.get("golden_weapon", False)
             icon_ref = c.get("icon_ref", False)
 
-
             cartas_detalhadas.append({
             "id": cid,
             "nome": c["lang"][lang]["nome"],
@@ -158,14 +152,11 @@ def list_user_sets(conn, user_id, lang):
         cartas_extras = []
         if personagens_set_extra is not None:
             for cid in personagens_set_extra:
-                
                 c = mapa_characters.get(cid)
 
                 if not c:
                     continue
-
                 possui = cid in personagens_usuario
-
                 cartas_extras.append({
                 "id": cid,
                 "nome": c["lang"][lang]["nome"],
@@ -187,7 +178,6 @@ def list_user_sets(conn, user_id, lang):
             set_info["recompensa"] = s.get("recompensa", {})
 
         resultado.append(set_info)
-
     return resultado
 
 def card_format(carta_id, lang):
