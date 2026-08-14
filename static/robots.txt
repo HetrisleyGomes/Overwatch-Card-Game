@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Disallow: /inventory
+Disallow: /collection
+Disallow: /store
+Disallow: /settings
+Disallow: /buscar-partida
+Disallow: /aguardando
+Disallow: /battle/
+
+Sitemap:
+https://overwatch-card-game.onrender.com/

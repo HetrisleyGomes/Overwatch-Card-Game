@@ -71,7 +71,7 @@
         <button class="button premium-button {% if request.endpoint == 'main.store' %}ativo{% endif %}"
                 {% if request.endpoint == 'main.store' %}disabled{% endif %}>
             {{ _('store') }}
-            {% if not user.has_already_get_daily_bonus and request.endpoint != 'main.loja' %}
+            {% if not user.has_already_get_daily_bonus and request.endpoint != 'main.store' %}
                 <div class="notification"></div>
             {% endif %}
         </button>

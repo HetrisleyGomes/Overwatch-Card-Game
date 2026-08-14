@@ -1,18 +1,5 @@
 MODO PVP:
 
-<div class="aside-box">
-    <p class="title">
-        Duelo!
-    </p>
-    <span class="texto">
-            <a href="{{ url_for('main.inventario') }}">
-            <button class="button">
-                Batalha
-            </button>
-        </a>
-    </span>
-</div>
-
 ---
 
 EXEMPLO PACOTAÇO:
