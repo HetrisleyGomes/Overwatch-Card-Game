@@ -1,0 +1,30 @@
+# Overwatch Card Game
+
+> Um jogo de cartas colecionáveis para navegador inspirado no universo de Overwatch.
+
+## Sobre o jogo
+
+Overwatch Card Game é uma aplicação web que permite aos jogadores colecionar cartas,
+abrir pacotes, montar decks, participar de eventos e enfrentar outros jogadores.
+
+## Funcionalidades
+
+- Coleção de cartas
+- Abertura de pacotes
+- Construção de decks
+- Loja
+- Eventos
+- Batalhas PvP
+- Sistema de progressão
+- Personalização do perfil
+- Suporte a português e inglês
+
+## Tecnologias
+
+- Python
+- Flask
+- JavaScript
+- HTML
+- CSS
+- PostgreSQL
+- Socket.IO

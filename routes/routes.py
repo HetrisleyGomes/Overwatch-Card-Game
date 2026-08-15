@@ -447,7 +447,7 @@ def logoff():
 # LOGIN ==============================================
 @main.before_request
 def verify_user():
-    open_routes = ["main.login", "main.sign_in", "static", "main.register", "main.ping", "main.robots"]
+    open_routes = ["main.login", "main.sign_in", "static", "main.register", "main.ping", "main.robots", "main.llms", "main.sitemap"]
 
     if 'user_id' not in session:
         if request.endpoint not in open_routes:
@@ -542,9 +542,17 @@ def register():
 def ping():
     return "ok", 200
 
+@main.route("/llms.txt")
+def llms():
+    return send_from_directory(app.static_folder, "llms.txt")
+
 @main.route("/robots.txt")
 def robots():
     return send_from_directory(app.static_folder, "robots.txt")
+
+@main.route("/sitemap.xml")
+def sitemap():
+    return send_from_directory(app.static_folder, "sitemap.xml")
 
 def update_session_user(ctll):
     user = ctll.get_user(session["user_id"])
