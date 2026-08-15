@@ -1,4 +1,4 @@
-from flask import blueprints, render_template, request, session, redirect, url_for, g, send_from_directory
+from flask import blueprints, render_template, request, session, redirect, url_for
 from services.user_service import verify_date, sum_xp
 from services.progress_service import registry_cards, save_deck_progress, get_deck
 from services.pack_sevice import open_pack, open_event_pack
@@ -447,7 +447,7 @@ def logoff():
 # LOGIN ==============================================
 @main.before_request
 def verify_user():
-    open_routes = ["main.login", "main.sign_in", "static", "main.register", "main.ping", "main.robots", "main.llms", "main.sitemap"]
+    open_routes = ["main.login", "main.sign_in", "static", "main.register", "main.ping", "documents.robots", "documents.llms", "documents.sitemap"]
 
     if 'user_id' not in session:
         if request.endpoint not in open_routes:
@@ -541,18 +541,6 @@ def register():
 @main.route("/ping")
 def ping():
     return "ok", 200
-
-@main.route("/llms.txt")
-def llms():
-    return send_from_directory(app.static_folder, "llms.txt")
-
-@main.route("/robots.txt")
-def robots():
-    return send_from_directory(app.static_folder, "robots.txt")
-
-@main.route("/sitemap.xml")
-def sitemap():
-    return send_from_directory(app.static_folder, "sitemap.xml")
 
 def update_session_user(ctll):
     user = ctll.get_user(session["user_id"])
