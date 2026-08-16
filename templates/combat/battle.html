@@ -15,7 +15,11 @@
 
         <div class="center">
             <div class="timer" id="timer">
-                30
+                {% if game_state['mode'] == 'pve' %}
+                    PvE
+                {% else %}
+                        30
+                {% endif %}
             </div>
             <span class="phase-view" id="phase-view">Pré Game</span>
         </div>
@@ -152,6 +156,7 @@ function configUserView() {
 }
 
 async function gameFlow() {
+    console.log(game_state['phase'])
     if (game_state['phase'] == "pre_game") {
         await shuffle_animation();
         if (game_state.host == userId){
@@ -160,7 +165,9 @@ async function gameFlow() {
             });
         };
     } else if (game_state['phase'] == "choose" || game_state['phase'] == "fist_choose") {
-        startCrono();
+        if (game_state['mode'] == 'pvp')                {
+            startCrono();
+        };
         enableCardSelection();
     } else if (game_state['phase'] == "battle" && game_state.host == userId) {
         socket.emit("combate_resolver", {
@@ -229,7 +236,9 @@ function enableCardSelection() {
 
             card.classList.add("selected");
 
-            stopCrono();
+            if (game_state.mode == 'pvp'){
+                stopCrono();
+            };
 
             // enviar ao backend
             socket.emit("select_card", {
@@ -267,7 +276,9 @@ socket.on("game_state", async (data) => {
 socket.on("battle_phase_one", async (data) => {
     game_state.phase = data.game_state_phase;
     start_turn();
-    resetCrono();
+    if (game_state['mode'] == 'pvp'){
+        resetCrono();
+    };
     await startBattleAnimation(data.selected_cards);
     await createEffectsBattleOne(data.result_values);
     await new Promise(resolve => setTimeout(resolve, 1000));

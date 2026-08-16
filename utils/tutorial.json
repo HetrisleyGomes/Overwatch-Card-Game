@@ -20,9 +20,13 @@
             "title": "Configurações",
             "content": "Mude de nome, ou troque seu Ícone de jogador aqui, esta é a sua área para customizar seu perfil e descobrur mais sobre o projeto Overwatch TCG!"
         },
+        "game_room": {
+            "title": "Sala de jogos",
+            "content": "Escolha entre jogar contra o computador ou enfrentar outros jogadores, uma partida emocionante de Duelo!"
+        },
         "combat": {
             "title": "Duelo",
-            "content": "Durante um duelo, dois jogadores se enfrentam durante sete turnos, para causar o máximo de dano possível um ao outro. Ao final dos sete turnos, vence aquele com mais pontos de vida.\n\nDurante cada turno, ambos os jogadores escolhem uma carta para o embate, cada carta recebe um efeito dependendo de sua classe e subclasse.\nEntre os efeitos de cartas, temos:\n- Ataque: Causa essa quantidade de dano ao adversário.\n- Escudo: Diminui o dano de Ataque do seu adversário.\n- Cura: Recupera seus pontos de vida.\n- Golpe veloz: Um ataque que acontece antes do escudo do seu adversário.\n- Anti-cura: Bloqueia a quantidade de cura que seu adversário receberá neste turno.\n- Ataque futuro: No próximo turno, garante um Ataque adicional à sua ação.\n- Revitalizar: No próximo turno, dobra toda quantidade de cura que você receber.\n- Descuido: Causa essa quantidade de dano a você mesmo."
+            "content": "Durante um duelo, dois jogadores se enfrentam durante sete turnos, para causar o máximo de dano possível um ao outro. Ao final dos sete turnos, vence aquele com mais pontos de vida.\n\nDurante cada turno, ambos os jogadores escolhem uma carta para o embate, cada carta recebe um efeito dependendo de sua classe e subclasse.\nEntre os efeitos de cartas, temos:\n- Ataque: Causa essa quantidade de dano ao adversário.\n- Escudo: Diminui o dano de Ataque do seu adversário.\n- Cura: Recupera seus pontos de vida.\n- Golpe veloz: Um ataque que acontece antes do escudo do seu adversário.\n- Anti-cura: Bloqueia a quantidade de cura que seu adversário receberá neste turno.\n- Ataque futuro: No próximo turno, garante um Ataque adicional à sua ação.\n- Revitalizar: No próximo turno, dobra toda quantidade de cura que você receber.\n- Descuido: Causa essa quantidade de dano a você mesmo.\n- Debilitar: Corta pela metade o próximo ataque oponente."
         },
         "vault": {
             "title": "Cofre do Maximilien",
@@ -50,9 +54,13 @@
             "title": "Settings",
             "content": "Change your name or switch your Player Icon here. This is your place to customize your profile and learn more about the Overwatch TCG project!"
         },
+        "game_room": {
+            "title": "Gamr Room",
+            "content": "Choose between playing against the computer or facing other players in an exciting Duel match!"
+        },
         "combat": {
             "title": "Duel",
-            "content": "During a Duel, two players face off over the course of seven turns, each trying to deal as much damage as possible to the other. At the end of the seventh turn, the player with the most Health wins.\n\nDuring each turn, both players choose one card to play. Each card gains an effect based on its class and subclass.\nCard effects include:\n- Attack: Deals this amount of damage to your opponent.\n- Shield: Reduces the damage dealt by your opponent's Attack.\n- Heal: Restores your Health.\n- Quick Strike: An attack that is resolved before your opponent's Shield takes effect.\n- Anti-Heal: Prevents your opponent from recovering this amount of Health during this turn.\n- Future Attack: On your next turn, grants an additional Attack to your action.\n- Revitalize: On your next turn, doubles all healing you receive.\n- Recklessness: Deals this amount of damage to yourself."
+            "content": "During a Duel, two players face off over the course of seven turns, each trying to deal as much damage as possible to the other. At the end of the seventh turn, the player with the most Health wins.\n\nDuring each turn, both players choose one card to play. Each card gains an effect based on its class and subclass.\nCard effects include:\n- Attack: Deals this amount of damage to your opponent.\n- Shield: Reduces the damage dealt by your opponent's Attack.\n- Heal: Restores your Health.\n- Quick Strike: An attack that is resolved before your opponent's Shield takes effect.\n- Anti-Heal: Prevents your opponent from recovering this amount of Health during this turn.\n- Future Attack: On your next turn, grants an additional Attack to your action.\n- Revitalize: On your next turn, doubles all healing you receive.\n- Recklessness: Deals this amount of damage to yourself.\n- Weaken: Halves the opponent's next attack."
         },
         "vault": {
             "title": "Maximilien's Vault",

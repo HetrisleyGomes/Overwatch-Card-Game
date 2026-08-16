@@ -95,5 +95,13 @@
     "delete_msg_1": "Is this a goodbye 😞? Are you sure you want to delete your account? This action cannot be undone.",
     "delete_msg_2": "Type DELETE to confirm.",
     "relatorio": "Web Application Management Experience Report (available in Portuguese only)",
-    "github": "GitHub repository"
+    "github": "GitHub repository",
+
+    "games": "Games",
+    "game_room": "Game Room",
+    "game_single_mode_title": "Single Mode",
+    "game_single_mode_description": "Face off against an AI with your deck in this PvE mode!",
+    "game_pvp_mode_title": "Versus Mode",
+    "game_pvp_mode_description": "Face off against other players and their decks in this PvP mode!",
+    "jogar": "Play"
 }

@@ -95,5 +95,13 @@
     "delete_msg_1": "Isto é uma despedida 😞?Tem certeza que deseja apagar sua conta? Esta ação não poderá ser desfeita.",
     "delete_msg_2": "Digite EXCLUIR para confirmar.",
     "relatorio": "Relatório de Experiência em Gerenciamento de Aplicação Web.",
-    "github": "Repositório do GitHub"
+    "github": "Repositório do GitHub",
+
+    "games": "Jogos",
+    "game_room": "Sala de Jogos",
+    "game_single_mode_title": "Modo Tática",
+    "game_single_mode_description": "Enfrente uma IA com seu baralho nesse modo PvE!",
+    "game_pvp_mode_title": "Modo Versus",
+    "game_pvp_mode_description": "Enfrente outros jogadores e seus baralhos nesse modo PvP!",
+    "jogar": "Jogar"
 }

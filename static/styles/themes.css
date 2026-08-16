@@ -24,9 +24,7 @@
     /* Alertas */
     --notification-color: #5fd9b8;
 
-    /* Overlay */
-    --background-overlay: rgba(16, 39, 67, 0.35);
-
+    /* Buttons */
     --button: linear-gradient(
         #4fa8e8,
         #2f79c8
@@ -61,8 +59,6 @@
 
   --text-shadow: 0 0 2px #3b2417;
 
-  --background-overlay: rgba(52, 33, 21, 0.45);
-
   --button: linear-gradient(
     #de8d46,
     #b06b35
@@ -78,6 +74,8 @@
 }
 
 :root[data-theme="anubis_temple-theme"] {
+  --fixed-color-2: #ffe480;
+
   --main-color: #d9bb63;
   --main-dark-color: #b08b33;
   --main-light-color: #ffe480;

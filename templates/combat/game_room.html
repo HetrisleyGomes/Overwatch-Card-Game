@@ -1,0 +1,72 @@
+{% extends 'index.html' %}
+{% block centro %}
+<style>
+.title {
+    color: var(--main-color);
+}
+.game_modes {
+
+}
+.gamemode {
+    width: 40vw;
+    margin: 2vh auto;
+    border: var(--main-dark-color) 3px solid;
+    border-radius: 8px;
+}
+.game-div {
+    display: flex;
+    padding: 20px;
+    align-items: baseline;
+}
+.game_description {
+    width: 70%;
+}
+.game_button {
+    width: 30%;
+}
+.game_button .button {
+    font-size: 16px;
+    width: 140px;
+    padding: 20px 0;
+}
+</style>
+<div class="lobby main">
+    <h1 class="title">{{ _("game_room") }}</h1>
+
+    <div class="game_modes">
+
+        <div class="gamemode">
+            <h2 class="title">{{ _('game_single_mode_title')}}</h2>
+            <div class="game-div">
+                <div class="game_description">
+                    {{ _('game_single_mode_description')}}
+                </div>
+                <div class="game_button">
+                    <a href="{{ url_for('combate.buscar_partida_single') }}">
+                        <button class="button premium-button">
+                            {{ _('jogar') }}
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="gamemode">
+            <h2 class="title">{{ _('game_pvp_mode_title')}}</h2>
+            <div class="game-div">
+                <div class="game_description">
+                    {{ _('game_pvp_mode_description')}}
+                </div>
+                <div class="game_button">
+                    <a href="{{ url_for('combate.buscar_partida') }}">
+                        <button class="button premium-button">
+                            {{ _('jogar') }}
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>      
+</div>
+
+{% endblock %}

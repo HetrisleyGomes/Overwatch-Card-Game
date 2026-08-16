@@ -2,6 +2,8 @@ from utils.json_utils import get_characters, get_sets
 from sql.controller.progress_controller import ProgressController
 from sql.repositories.progress_repository import ProgressRepository
 
+import random
+
 
 def check_sets(conn, user_id, lang):
     """Verifica se um conjunto de cartas foi completado.
@@ -213,3 +215,17 @@ def format_full_card(carta, lang):
     'icon_ref': icon_ref
     }
     return card
+
+def get_pve_cards():
+    characters = get_characters()
+    cartas = []
+    tank_couters = 0
+    for i in range(12):
+        possiveis = [p for p in characters if p.get("evento") is None and p not in cartas and tank_couters <= 3]
+        carta = random.choice(possiveis)
+        tank_couters += 1 if carta['classe'] == 'Tanque' else 0
+        cartas.append(carta['id'])
+    return cartas
+
+def bot_select_card(deck):
+    return random.choice(deck)
