@@ -6,7 +6,7 @@
         { "comum": 80, "incomum": 20 },
         { "comum": 50, "incomum": 30, "epico": 20 },
         { "comum": 20, "incomum": 35, "epico": 40, "lendario": 5 },
-        { "epico": 53, "ultra": 2,"lendario": 40 }
+        { "epico": 53,"lendario": 40, "ultra": 2 }
     ]
   },
   "raro": {
@@ -14,7 +14,7 @@
     "chance": [
       { "incomum": 60, "epico": 40 },
       { "incomum": 2, "epico": 63, "lendario": 30 },
-      { "epico": 25, "ultra": 5, "lendario": 70 },
+      { "epico": 25, "lendario": 70, "ultra": 5 },
       { "mitico": 100 }
     ]
   },
@@ -37,7 +37,7 @@
         { "comum": 100 },
         { "comum": 80, "incomum": 15, "epico": 5 },
         { "comum": 40, "incomum": 30, "epico": 25, "lendario": 5 },
-        { "incomum": 50, "epico": 35, "ultra": 5, "lendario": 10 },
+        { "incomum": 50, "epico": 35, "lendario": 10, "ultra": 5 },
         { "epico": 55, "lendario": 45 }
     ]
   }

@@ -86,12 +86,7 @@
     },
     {
         "version": "0.1.7",
-        "date": "16-08-2026",
-        "description": "MANUTENÇÃO\n[FEAT] Genji teve cartasl alteradas de incomum para épico; \n[FIX] Atualizado algumas funções de interações com o banco de dados, para encerrar a conexão apenas ao final da query; Removido variável inutilizada; \n[REFACTOR] Arquivo models.sql foi revisado; Conexão com o banco de dados agora é feito pelo arquivo /sql/connection.py; Revisado o verificador de login; Adicionado uma nova função na sessão de combate, para separar a rota do processamento da batalha; Criado funções de tempo e data, para evitar repetições; <PADRONIZAÇÃO> Iniciado processo de padronização nos nomes usados pelo sistema para o inglês, que é o padrão mais comum em projetos profissionais de programação.\n[DOCS] Atualizado README.md; Adicionado documentos llms.txt, robots.txt e sitemap.xml; "
-    },
-    {
-        "version": "0.1.8",
         "date": "01-09-2026",
-        "description": "HEROES OF BUSAN\n[FEAT]<COMBATE> Adicionado modo PvE!"
+        "description": "HEROES OF BUSAN\n[FEAT] Nova regra adicionada aos pacotes, a raridade da carta seguinte nunca pode ser inferior à raridade da carta anterior. \n- <CARDS> Genji e Mercy tiveram cartas alteradas de incomum para épico;\n- <COMBATE> Adicionado modo PvE!\n[FIX] Atualizado algumas funções de interações com o banco de dados, para encerrar a conexão apenas ao final da query; Removido variável inutilizada; \n[REFACTOR] Arquivo models.sql foi revisado; Conexão com o banco de dados agora é feito pelo arquivo /sql/connection.py; Revisado o verificador de login; Adicionado uma nova função na sessão de combate, para separar a rota do processamento da batalha; Criado funções de tempo e data, para evitar repetições; - <PADRONIZAÇÃO> Iniciado processo de padronização nos nomes usados pelo sistema para o inglês, que é o padrão mais comum em projetos profissionais de programação.\n[DOCS] Atualizado README.md; Adicionado documentos llms.txt, robots.txt e sitemap.xml; "
     }
 ]

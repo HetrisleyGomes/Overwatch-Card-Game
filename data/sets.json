@@ -427,8 +427,8 @@
     },
     "personagens": [
       "mercy_comum",
-      "mercy_diabrete",
       "mercy_conjuradora",
+      "mercy_diabrete",
       "mercy_sigrun",
       "mercy_vitoria_alada",
       "mercy_dourado",
@@ -1452,8 +1452,8 @@
       "en": {"nome":"Evil powers"}
     },
     "personagens": [
-      "mercy_diabrete",
       "genji_oni",
+      "mercy_diabrete",
       "ashe_warlock",
       "cyber_demonio",
       "onryo",

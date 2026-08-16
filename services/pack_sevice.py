@@ -2,19 +2,37 @@ from utils.json_utils import get_packs, get_characters
 from services.collection_service import format_full_card
 import random
 
+ORDEM_RARIDADES = [
+    "comum",
+    "incomum",
+    "epico",
+    "lendario",
+    "ultra",
+    "mitico"
+]
+
 #SORTEIO ======================================================
-def sortear_raridade(chances):
+def sortear_raridade(chances, raridade_minima=None):
     """Sorteia a raridade da carta.
     
     Keyword arguments:
     chances -- Um array com a raridade e a porcentagem de ser escolhida.
     Return: Retorna a raridade escolhida aleatoriamente.
     """
-    
+
+    if raridade_minima is not None:
+        indice_anterior = ORDEM_RARIDADES.index(raridade_minima)
+
+        chances = {
+            raridade: chance
+            for raridade, chance in chances.items()
+            if raridade in ORDEM_RARIDADES[indice_anterior:]
+        }
+
     raridades = list(chances.keys())
     pesos = list(chances.values())
 
-    return random.choices(raridades, weights=pesos, k=1)[0]
+    return random.choices( raridades, weights=pesos, k=1)[0]
 
 def open_pack(tipo_pack, lang):
     """Sorteia um conjunto de cartas dependendo do tipo de pacote.
@@ -29,11 +47,13 @@ def open_pack(tipo_pack, lang):
 
     pack = packs[tipo_pack]
     cartas = []
+    raridade_minima = None
 
     for i in range(pack["cartas_por_pack"]):
         # sortear raridade
         chances_slot = pack["chance"][i]
-        raridade = sortear_raridade(chances_slot)
+        raridade = sortear_raridade(chances_slot, raridade_minima)
+        raridade_minima = raridade
 
         # filtrar personagens dessa raridade
         possiveis = [p for p in personagens if p["raridade"] == raridade and p.get("evento") is None and p not in cartas]
@@ -42,7 +62,6 @@ def open_pack(tipo_pack, lang):
         carta = random.choice(possiveis)
         formated_carta = format_full_card(carta, lang)
         cartas.append(formated_carta)
-
 
     return cartas
 
@@ -80,8 +99,10 @@ def open_event_pack(id_evento, lang):
 
     # Lógica padrão (todos os outros casos)
     else:
+        raridade_minima = None
+
         for i in range(pack["cartas_por_pack"]):
-            raridade = sortear_raridade(pack["chance"][i])
+            raridade = sortear_raridade(pack["chance"][i], raridade_minima)
 
             possiveis = [
                 p for p in personagens_filtrados
