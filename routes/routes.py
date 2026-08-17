@@ -215,9 +215,8 @@ def store():
 def buy_store_item():
     data = request.get_json()
     type = data.get("tipo")
-    pack = data.get("pacote", None)
-    buy_with_impetos = data.get("buy_with_impetos")
     id_item = data.get("id")
+    buy_with_impetos = data.get("buy_with_impetos")
 
     connection = get_db_connection()
     if connection is None:
@@ -232,33 +231,47 @@ def buy_store_item():
     price = 0
     msg = "Compra realizada!"
     # 💰 regra de compra
-    if type == "comum":
-        price = 100
-        user["packs_comprados_comum"] += 1
-    elif type == "raro":
-        price = 500
-        user["packs_comprados_raro"] +=1
-    elif type == "bonus":
-        user["pontos"] += 50
-        user["has_already_get_daily_bonus"] = True
-        msg = "Bônus resgatado!"
-    elif type == "especial":
-        price = 300
-        user["packs_evento"] += 1
+    if type == "pack":
+        if id_item == "comum":
+            price = 100
+            user["packs_comprados_comum"] += 1
+        elif id_item == "raro":
+            price = 500
+            user["packs_comprados_raro"] +=1
+        elif id_item == "radiante":
+            price = 1000
+            user["packs_comprados_radiante"] +=1
+        elif type == "especial":
+                price = 300
+                user["packs_evento"] += 1
+
+    elif type == "extra":
+        if id_item == "daily_bonus":
+            user["pontos"] += 50
+            user["has_already_get_daily_bonus"] = True
+            msg = "Bônus resgatado!"
+        elif id_item == "escudo":
+            user["bloqueio_ofensiva"] += 1
+            price = 100
+    
     elif type == 'pontos':
-        price = 1
-        user["pontos"] += 300
-    elif type == 'pontos2k':
-        price = 3
-        user["pontos"] += 1000
+        if id_item == '1':
+            price = 1
+            user["pontos"] += 300
+        elif id_item == '3':
+            price = 3
+            user["pontos"] += 1000
+    
     elif type == 'icone':
         imgs = get_img_logos()
         img = next(i for i in imgs if i["id"] == id_item)
+
         price = img["price"]
         get_new_img(connection, user["id"], id_item)
         msg = "Icone " + img["lang"][lang]["nome"] + ' adquirido!'
+
     elif type == 'promotion_pack':
-        price, pontos, cartas, icons = buy_pack_promotion(user['id'], pack, connection)
+        price, pontos, cartas, icons = buy_pack_promotion(user['id'], id_item, connection)
         user = registry_cards(connection, cartas, "none", user)
         if icons:
             for icon_id in icons:
@@ -266,6 +279,7 @@ def buy_store_item():
         if pontos > 0:
             user["pontos"] += pontos
         msg = "Pack promocional adquirido!"
+    
     elif type == 'theme':
         price = buy_theme(user['id'], id_item, connection)
 
@@ -544,10 +558,14 @@ def ping():
 
 def update_session_user(ctll):
     user = ctll.get_user(session["user_id"])
+    print("update user serssion ================== ")
+    print(user)
     session['user_data'] = user
 
 def update_user(conn, user):
     repo = UserRepository(conn)
     ctll = UserController(repo)
-    ctll.edit_user(user['id'], user)
+    let = ctll.edit_user(user['id'], user)
+    print("update user ================== ")
+    print(let)
     update_session_user(ctll)

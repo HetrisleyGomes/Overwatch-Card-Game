@@ -17,6 +17,9 @@
     <a href="#pacotes">
         <button>{{ _('packs') }}</button>
     </a>
+    <a href="#recursos">
+        <button>{{ _('recursos') }}</button>
+    </a>
     <a href="#trocarpontos">
         <button>{{ _('points') }}</button>
     </a>
@@ -52,7 +55,7 @@
                         %}
                         <button class="button {% if desativado %}desativado{% endif %}"
                         {% if desativado %}disabled{% endif %}
-                        onclick="comprarPromotionPack('promotion_pack', '{{ prom.id }}', {{ prom.buy_with_impeto | tojson }})">
+                        onclick="comprarPack('promotion_pack', '{{ prom.id }}', {{ prom.buy_with_impeto | tojson }})">
                             {% if not prom['id'] in prom_log %}
                                 {{ prom.value }} {% if prom.buy_with_impeto %}{{ _('prism') }}{% else %}{{ _('point') }}{% endif %}{% if prom.value > 1 %}s{% endif %}
                             {% else %}
@@ -68,50 +71,50 @@
     {% endif %}
     <h2 class="sessao" id="pacotes">{{ _('packs') }}</h2>
         <div class="prateleira">
-            <!-- Item -->
+            <!-- PACOTE COMUM  -->
             <div class="item">
                 <div class="item_name">{{ _('common pack') }}</div>
                 <div class="item_description">
-                    Pacote com cartas comuns.
+                    {{ _('common pack description') }}
                 </div>
                 <div class="item_button">
                     <button class="button {% if user.pontos < 100 %}desativado{% endif %}"
                     {% if user.pontos < 100 %}disabled{% endif %}
-                    onclick="comprarPack('comum')">
+                    onclick="comprarPack('pack', 'comum')">
                         100 {{ _('points') }}</button>
                 </div>
             </div>
-
+            <!-- PACOTE RARO -->
             <div class="item">
                 <div class="item_name">{{ _('rare pack') }}</div>
                 <div class="item_description">
-                    Pacote com maiores chances de cartas raras e míticas.
+                    {{ _('rare pack description') }}
                 </div>
                 <div class="item_button">
                     <button class="button {% if user.pontos < 500 %}desativado{% endif %}"
                     {% if user.pontos < 500 %}disabled{% endif %}
-                    onclick="comprarPack('raro')">
+                    onclick="comprarPack('pack', 'raro')">
                     500 {{ _('points') }}</button>
                 </div>
             </div>
-
-            <!-- Bônus diário -->
-             <div class="item">
-                <div class="item_name">{{ _('daily bonus') }}</div>
+            {% if user['nivel'] >= 6 %}
+            <!-- PACOTE RADIANTE -->
+            <div class="item">
+                <div class="item_name">{{ _('radiant pack') }}</div>
                 <div class="item_description">
-                    50 Pontos obitíveis diariamente.
+                    {{ _('radiant pack description') }}
                 </div>
                 <div class="item_button">
-                    {% if not user.has_already_get_daily_bonus %}
-                            <button class="button"  onclick="comprarPack('bonus')">{{ _('get') }}</button>
-                    {% else %}
-                            <button class="button desativado" disabled>{{ _('obtained') }}</button>
-                    {% endif %}
+                    <button class="button {% if user.pontos < 500 %}desativado{% endif %}"
+                    {% if user.pontos < 500 %}disabled{% endif %}
+                    onclick="comprarPack('pack', 'raro')">
+                    500 {{ _('points') }}</button>
                 </div>
             </div>
+            {% endif %}
 
-            <!-- PACOTE DE EVENTO -->
             {% if ev %}
+            <!-- PACOTE DE EVENTO -->
                 <div class="item especial">
                     <div class="item_name">{{ _('pack') }} {{ ev["nome"] }}</div>
                     <div class="item_description">
@@ -120,17 +123,46 @@
                     <div class="item_button">
                         <button class="button {% if user.pontos < 300 %}desativado{% endif %}"
                         {% if user.pontos < 300 %}disabled{% endif %}
-                        onclick="comprarPack('especial')">
+                        onclick="comprarPack('pack', 'especial')">
                         300 {{ _('points') }}</button>
                     </div>
                 </div>
             {% endif %}   
         </div>
         <div class="prateleira-divider"></div>
+    
+    <h2 class="sessao" id="recursos">{{ _('recursos') }}</h2>
+        <div class="prateleira">
+            <!-- Bônus diário -->
+            <div class="item">
+                <div class="item_name">{{ _('daily bonus') }}</div>
+                <div class="item_description">
+                    50 Pontos obitíveis diariamente.
+                </div>
+                <div class="item_button">
+                    {% if not user.has_already_get_daily_bonus %}
+                            <button class="button"  onclick="comprarPack('extra', 'daily_bonus')">{{ _('get') }}</button>
+                    {% else %}
+                            <button class="button desativado" disabled>{{ _('obtained') }}</button>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="item_name">Escudo de ofensiva</div>
+                <div class="item_description">Enquanto você tiver pelo menos 1 desse item, sua ofensiva estará sempre garantida para continuar no seu próximo login.</div>
+                <div class="item_button">
+                    <button class="button {% if user.pontos < 100 %}desativado{% endif %}"
+                        {% if user.pontos < 100 %}disabled{% endif %}
+                        onclick="comprarPack('extra', 'escudo')">
+                        100 {{ _('points') }}</button>
+                </div>
+            </div>
+        </div>
 
     <h2 class="sessao" id="trocarpontos">{{ _('points') }}</h2>
+    <!-- COMPRAR PONTOS -->
         <div class="prateleira">
-            <!-- COMPRAR PONTOS -->
             <div class="item">
                 <div class="item_name">300 {{ _('points') }}</div>
                 <div class="item_description">
@@ -139,7 +171,7 @@
                 <div class="item_button">
                     <button class="button {% if user.impetos < 1 %}desativado{% endif %}"
                     {% if user.impetos < 1 %}disabled{% endif %}
-                    onclick="comprarPack('pontos', true)">
+                    onclick="comprarPack('pontos', '1', true)">
                     1  {{ _('prism') }}</button>
                 </div>
             </div>
@@ -152,7 +184,7 @@
                 <div class="item_button">
                     <button class="button {% if user.impetos < 3 %}desativado{% endif %}"
                     {% if user.impetos < 3 %}disabled{% endif %}
-                    onclick="comprarPack('pontos2k', true)">
+                    onclick="comprarPack('pontos', '3', true)">
                     3  {{ _('prisms') }}</button>
                 </div>
             </div>
@@ -161,6 +193,7 @@
 
 
     <h2 class="sessao" id="themes">{{ _('themes') }}</h2>
+    <!-- COMPRAR TEMAS -->
         <div class="prateleira">
             {% for tema in themes %}
             {% if tema.disponivel %}
@@ -172,7 +205,7 @@
                 <div class="item_button">
                     <button class="button {% if user.pontos < tema.price or tema.possui %}desativado{% endif %}"
                     {% if user.pontos < tema.price or tema.possui %}disabled{% endif %}
-                    onclick="comprarPack('theme', false, '{{tema.id}}')">
+                    onclick="comprarPack('theme', '{{tema.id}}')">
                         {% if not tema.possui %}
                             {{ tema.price }} {{ _('points') }}
                         {% else %}
@@ -189,6 +222,7 @@
         <div class="prateleira-divider"></div>
 
     <h2 class="sessao" id="icones">{{ _('icons') }}</h2>
+    <!-- COMPRAR IMAGENS -->
         <div class="prateleira">
             {% for img in imgs %}
             {% if img.disponivel %}
@@ -203,7 +237,7 @@
                 <div class="item_button">
                     <button class="button {% if user.pontos < img.price or img.possui %}desativado{% endif %}"
                     {% if user.pontos < img.price or img.possui %}disabled{% endif %}
-                    onclick="comprarPack('icone', false, '{{img.id}}')">
+                    onclick="comprarPack('icone', '{{img.id}}')">
                         {% if not img.possui %}
                             {{ img.price }} {{ _('points') }}
                         {% else %}
@@ -221,7 +255,7 @@
 
 
 <script>
-function comprarPack(tipo, buy_with_impetos=false, id=0) {
+function comprarPack(tipo, id, buy_with_impetos=false) {
     const btn = event.target;
 
     if (btn.disabled) return;
@@ -231,7 +265,7 @@ function comprarPack(tipo, buy_with_impetos=false, id=0) {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ tipo: tipo, buy_with_impetos: buy_with_impetos, id: id })
+        body: JSON.stringify({ tipo: tipo, id: id, buy_with_impetos: buy_with_impetos })
     })
     .then(res => res.json())
     .then(data => {
@@ -246,30 +280,5 @@ function comprarPack(tipo, buy_with_impetos=false, id=0) {
         }
     });
 };
-function comprarPromotionPack(tipo, pack, buy_with_impetos){
-    const btn = event.target;
-
-    if (btn.disabled) return;
-
-    fetch("/comprar-pack", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ tipo: tipo, pacote: pack,  buy_with_impetos: buy_with_impetos})
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success) {
-            alert(data.msg);
-            location.reload();
-
-            // 🔥 atualizar UI sem reload
-            atualizarPontos(data.pontos);
-        } else {
-            alert(data.erro);
-        }
-    });
-}
 </script>
 {% endblock %}

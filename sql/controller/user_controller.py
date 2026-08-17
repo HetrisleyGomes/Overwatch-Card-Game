@@ -111,6 +111,9 @@ class UserController:
     def dict_convert_list(self, value):
         formated = []
         for i in value:
+            print("AQUI --------------")
+            print(i)
+            print(value)
             user = {
                 "id": i[0],
                 "nome": i[1],

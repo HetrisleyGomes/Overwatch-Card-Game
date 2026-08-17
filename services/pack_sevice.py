@@ -44,7 +44,7 @@ def open_pack(tipo_pack, lang):
     
     packs = get_packs()
     personagens = get_characters()
-
+    tipo_pack = "radiante"
     pack = packs[tipo_pack]
     cartas = []
     raridade_minima = None

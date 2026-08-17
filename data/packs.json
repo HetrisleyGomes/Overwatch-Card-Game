@@ -18,6 +18,15 @@
       { "mitico": 100 }
     ]
   },
+  "radiante": {
+    "cartas_por_pack": 4,
+    "chance": [
+      { "epico": 30, "lendario": 70 },
+      { "lendario": 50, "ultra": 1, "mitico": 49 },
+      { "lendario": 10, "ultra": 5, "mitico": 85 },
+      { "mitico": 100 }
+    ]
+  },
   "april_fools": {
     "cartas_por_pack": 1,
     "chance": [

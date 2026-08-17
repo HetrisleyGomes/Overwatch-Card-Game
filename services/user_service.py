@@ -26,6 +26,12 @@ def verify_date(user, evento = False):
             user["pontos"] += int(user["streak"])
             if (user["streak"] % 7) == 0:
                 get_streak_bonus(user)
+        elif user["bloqueio_ofensiva"] > 1:
+            user["streak"] += 1
+            user["pontos"] += int(user["streak"])
+            user["bloqueio_ofensiva"] -= 1
+            if (user["streak"] % 7) == 0:
+                get_streak_bonus(user)
         else:
             user["streak"] = 1
 
@@ -49,30 +55,38 @@ def get_streak_bonus(user):
     semanas = streak / 7
     match semanas:
         case 1:
-            user["packs_comprados_comum"] += 2
-            user["pontos"] += 100
-        case 2:
-            user["packs_comprados_comum"] += 3
-            user["pontos"] += 250
-        case 3:
             user["packs_comprados_comum"] += 4
+            user["pontos"] += 300
+        case 2:
+            user["packs_comprados_raro"] += 2
             user["pontos"] += 500
+        case 3:
+            user["packs_comprados_comum"] += 2
+            user["packs_comprados_raro"] += 3
+            user["pontos"] += 900
         case 4:
-            user["packs_comprados_raro"] += 1
+            user["packs_comprados_comum"] += 4
+            user["packs_comprados_raro"] += 3
             user["impetos"] += 1
         case 5:
-            user["packs_comprados_raro"] += 2
+            user["packs_comprados_raro"] += 4
+            user["pontos"] += 900
             user["impetos"] += 1
         case 6:
-            user["packs_comprados_raro"] += 3
+            user["packs_comprados_radiante"] += 1
+            user["pontos"] += 1000
             user["impetos"] += 2
         case 7:
-            user["packs_comprados_raro"] += 4
+            user["packs_comprados_radiante"] += 2
+            user["pontos"] += 1500
             user["impetos"] += 2
         case 8:
-            user["packs_comprados_raro"] += 4
+            user["packs_comprados_radiante"] += 3
+            user["pontos"] += 2000
             user["impetos"] += 3
         case _:
+            user["packs_comprados_radiante"] += 4
+            user["pontos"] += 2500
             user["impetos"] += 5
 
 # XP e Nivel ===========================

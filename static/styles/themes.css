@@ -18,11 +18,7 @@
     --xp-color-2: #03e5d2;
 
     /* Cores auxiliares */
-    --blue-extra-color: #4fc3f7;
     --green-extra-color: #4caf50;
-
-    /* Alertas */
-    --notification-color: #5fd9b8;
 
     /* Buttons */
     --button: linear-gradient(
@@ -49,10 +45,7 @@
   --xp-color-1: #ffb74d;
   --xp-color-2: #ef6c00;
 
-  --blue-extra-color: #5fb7ff;
   --green-extra-color: #7cb342;
-
-  --notification-color: #64b4f1;
 
   --dark-text: #4a2e1d;
   --light-text: #fff9f2;

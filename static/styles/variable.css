@@ -14,6 +14,7 @@
 
   --pack-common-color: #2f6fd6;
   --pack-rare-color: #e65022;
+  --pack-radiant-color: linear-gradient(45deg, #87cefa, #c5ffc0, #87cefa, #01a1c1, #87cefa);
 
   --dano-type: #7a1f1f;
   --suporte-type: #1f7a3b;

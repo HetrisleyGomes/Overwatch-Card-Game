@@ -95,11 +95,15 @@ body {
 }
 
 .pack.common {
-    background-color: var(--pack-common-color);
+    background: var(--pack-common-color);
 }
 
 .pack.rare {
-    background-color: var(--pack-rare-color);
+    background: var(--pack-rare-color);
+}
+
+.pack.radiant {
+    background: var(--pack-radiant-color);
 }
 
 /* EVENTOS */

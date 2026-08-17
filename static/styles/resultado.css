@@ -32,33 +32,37 @@ h1 {
 
 
 .pack.comum {
-    background-color: var(--pack-common-color);
+    background: var(--pack-common-color);
 }
 
 .pack.raro {
-    background-color: var(--pack-rare-color);
+    background: var(--pack-rare-color);
+}
+
+.pack.radiant {
+    background: var(--pack-radiant-color);
 }
 
 /* EVENTOS */
 .pack.april_fools {
-    background-color: #e2d667;
+    background: #e2d667;
     color: var(--main-color);
 }
 
 .pack.summergames {
-    background-color: var(--blue-extra-color);
+    background: var(--blue-extra-color);
 }
 
 .pack.natal {
-    background-color: #16831f;
+    background: #16831f;
 }
 
 .pack.halloween {
-    background-color: #442f6b;
+    background: #442f6b;
 }
 
 .pack.aniversary {
-    background-color: gold;
+    background: gold;
 }
 
 /* PACK ABRINDO */

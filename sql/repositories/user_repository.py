@@ -3,14 +3,14 @@ from psycopg2.extensions import connection
 class UserRepository:
     def __init__(self, conn: connection):
         self.__conn = conn
-
+    
     def set_user(self, user):
         cursor = self.__conn.cursor()
         cursor.execute(
             """
                INSERT INTO "user"
-                (nome, email, senha, pontos, impetos, xp, nivel, language, ultimo_login, streak, profile_img, theme, packs_diarios_abertos, contador_packs_comuns, packs_comprados_comum, packs_comprados_raro, has_already_get_daily_bonus, packs_evento)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                (nome, email, senha, pontos, impetos, xp, nivel, language, ultimo_login, streak, profile_img, theme, packs_diarios_abertos, contador_packs_comuns, packs_comprados_comum, packs_comprados_raro, pack_comprado_radiante, has_already_get_daily_bonus, packs_evento, bloqueio_ofensiva)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
            """, (
                 user["nome"],
                 user["email"],
@@ -25,11 +25,13 @@ class UserRepository:
                 'logo.png',
                 'default-theme',
                 2,
+                4,
                 0,
                 0,
-                1,
+                0,
                 False,
-                user["packs_evento"]
+                user["packs_evento"],
+                0
             )
         )
         self.__conn.commit()
@@ -51,7 +53,7 @@ class UserRepository:
         cursor = self.__conn.cursor()
         cursor.execute(
             """
-            SELECT "id", "nome", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "theme", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "has_already_get_daily_bonus", "packs_evento"
+            SELECT "id", "nome", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "theme", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "pack_comprado_radiante", "has_already_get_daily_bonus", "packs_evento", "bloqueio_ofensiva"
             FROM "user"
             WHERE id = %s
             """,
@@ -109,7 +111,8 @@ class UserRepository:
         cursor = self.__conn.cursor()
         cursor.execute(
             """
-            SELECT "id", "nome", "email", "senha", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "theme", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "has_already_get_daily_bonus", "packs_evento"            FROM "user"
+            SELECT "id", "nome", "email", "senha", "language"
+            FROM "user"
             WHERE email = %s
             """,
             (email,),
@@ -137,8 +140,10 @@ class UserRepository:
             contador_packs_comuns = %s,
             packs_comprados_comum = %s,
             packs_comprados_raro = %s,
+            pack_comprado_radiante = %s,
             has_already_get_daily_bonus = %s,
-            packs_evento = %s
+            packs_evento = %s,
+            bloqueio_ofensiva = %s
             WHERE id = %s
             """, (
                 user["nome"],
@@ -154,8 +159,10 @@ class UserRepository:
                 user["contador_packs_comuns"],
                 user["packs_comprados_comum"],
                 user["packs_comprados_raro"],
+                user["pack_comprado_radiante"],
                 user["has_already_get_daily_bonus"],
                 user["packs_evento"],
+                user["bloqueio_ofensiva"],
                 id
             )
         )
@@ -175,7 +182,8 @@ class UserRepository:
             packs_comprados_comum = %s,
             packs_comprados_raro = %s,
             has_already_get_daily_bonus = %s,
-            packs_evento = %s
+            packs_evento = %s,
+            bloqueio_ofensiva = %s
             WHERE id = %s
             """, (
 
@@ -187,6 +195,7 @@ class UserRepository:
                 user["packs_comprados_raro"],
                 user["has_already_get_daily_bonus"],
                 user["packs_evento"],
+                user["bloqueio_ofensiva"],
                 user['id']
             )
         )
