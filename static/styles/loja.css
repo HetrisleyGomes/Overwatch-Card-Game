@@ -23,12 +23,12 @@
     z-index: 100;
 }
 
-.loja_nav button {
+.loja_nav_btn {
     border-radius: 10px;
     width: 6vw;
 }
 
-.loja_nav button:hover {
+.loja_nav_btn:hover {
     opacity: 0.8;
     transform: scale(1.1);
 }
@@ -159,7 +159,10 @@
         padding: 10px;
         margin-bottom: auto;
     }
-    .loja_nav button {
+    .loja_nav {
+        gap: 3vw;
+    }
+    .loja_nav_btn {
         width: 10vw;
     }
 }
@@ -186,8 +189,12 @@
         font-size: 24px;
         padding: 12px;
     }
-    .loja_nav button {
-        width: 15vw;
+    .loja_nav {
+        gap: 2vw;
+    }
+    .loja_nav_btn {
+        font-size: 16px;
+        width: 12vw;
     }
 
 }
@@ -230,9 +237,9 @@
         font-size: 20px;
         height: 30px;
     }
-    .loja_nav button {
-        font-size: 14px;
-        width: 15vw;
+    .loja_nav_btn {
+        font-size: 12px;
+        width: 13vw;
     }
     .loja_nav {
         gap: 1vw;

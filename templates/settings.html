@@ -68,6 +68,14 @@
             </div>
         </div>
 
+        <div class="escudo-section">
+            {% set limite = 1 if user.nivel <= 2 else (2 if user.nivel <= 5 else 3) %}
+            <span>Escudos de persistência de ofensiva</span>
+            <div class="painel">
+                <span>{{ user.bloqueio_ofensiva }}</span>/<span>{{ limite }}</span>
+            </div>
+        </div>
+
         <!-- ✏️ NOME -->
         <div class="name-section">
             <h2>{{ _('name') }}</h2>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<style>
+    .main{
+        margin: 4vh 6vw;
+    }
+</style>
+<div class="main">
+<h1>Tutorial</h1>
+
+{% for data in doc %}
+<div class="container">
+    <h2 class="title">{{ data['title'] }}</h2>
+    <p class="content">{{ data['content'] }}</p>
+</div>
+{% endfor %}
+
+</div>
+{% endblock %}

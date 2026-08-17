@@ -8,7 +8,7 @@ from services.store_services import get_promotion, buy_pack_promotion, get_user_
 from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img, themes_view
 from services.translates import get_lang
 
-from utils.json_utils import get_classes_lang, get_combat_tips, get_global_tips
+from utils.json_utils import get_classes_lang, get_combat_tips, get_global_tips, get_full_global_tips
 
 from sql.controller.user_controller import UserController
 from sql.repositories.user_repository import UserRepository
@@ -556,16 +556,17 @@ def register():
 def ping():
     return "ok", 200
 
+@main.route("/teste")
+def manual():
+    doc = get_full_global_tips(session['lang'])
+    return render_template('manual/manual.html', doc=doc)
+
 def update_session_user(ctll):
     user = ctll.get_user(session["user_id"])
-    print("update user serssion ================== ")
-    print(user)
     session['user_data'] = user
 
 def update_user(conn, user):
     repo = UserRepository(conn)
     ctll = UserController(repo)
-    let = ctll.edit_user(user['id'], user)
-    print("update user ================== ")
-    print(let)
+    ctll.edit_user(user['id'], user)
     update_session_user(ctll)

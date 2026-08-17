@@ -5,29 +5,29 @@
 <nav class="loja_nav">
     {% if max_is_here %}
         <a href="{{ url_for('main.maximilien') }}">
-        <button>
+        <button class="loja_nav_btn">
             Maximilien
         </button>
         </a>
     {% endif %}
     
     <a href="#pacotaco">
-        <button>{{ _('bundle') }}</button>
+        <button class="loja_nav_btn">{{ _('bundle') }}</button>
     </a>
     <a href="#pacotes">
-        <button>{{ _('packs') }}</button>
+        <button class="loja_nav_btn">{{ _('packs') }}</button>
     </a>
     <a href="#recursos">
-        <button>{{ _('recursos') }}</button>
+        <button class="loja_nav_btn">{{ _('recursos') }}</button>
     </a>
     <a href="#trocarpontos">
-        <button>{{ _('points') }}</button>
+        <button class="loja_nav_btn">{{ _('points') }}</button>
     </a>
     <a href="#themes">
-        <button>{{ _('themes') }}</button>
+        <button class="loja_nav_btn">{{ _('themes') }}</button>
     </a>
     <a href="#icones">
-        <button>{{ _('icons') }}</button>
+        <button class="loja_nav_btn">{{ _('icons') }}</button>
     </a>
 </nav>
 
@@ -150,15 +150,17 @@
 
             <div class="item">
                 <div class="item_name">Escudo de ofensiva</div>
-                <div class="item_description">Enquanto você tiver pelo menos 1 desse item, sua ofensiva estará sempre garantida para continuar no seu próximo login.</div>
+                {% set limite = 1 if user.nivel <= 2 else (2 if user.nivel <= 5 else 3) %}
+                <div class="item_description">Mantém sua ofensiva para seu próximo login.<br/>{{ user.bloqueio_ofensiva }}/{{ limite }}</div>
                 <div class="item_button">
-                    <button class="button {% if user.pontos < 100 %}desativado{% endif %}"
-                        {% if user.pontos < 100 %}disabled{% endif %}
+                    <button class="button {% if user.pontos < 100 or limite <= user.bloqueio_ofensiva %}desativado{% endif %}"
+                        {% if user.pontos < 100 or limite <= user.bloqueio_ofensiva %}disabled{% endif %}
                         onclick="comprarPack('extra', 'escudo')">
                         100 {{ _('points') }}</button>
                 </div>
             </div>
         </div>
+        <div class="prateleira-divider"></div>
 
     <h2 class="sessao" id="trocarpontos">{{ _('points') }}</h2>
     <!-- COMPRAR PONTOS -->

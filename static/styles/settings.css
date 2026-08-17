@@ -117,7 +117,21 @@
     align-items: center;
     transition: width 0.4s ease;
 }
-
+.escudo-section {
+    padding: 4vh 0;
+}
+.escudo-section > span {
+    font-weight: 600;
+}
+.escudo-section .painel {
+    background-color: var(--fixed-color);
+    width: 40%;
+    margin: 8px auto;
+    border-radius: 30px;
+    padding: 8px;
+    color: var(--light-text);
+    border: 2px var(--main-dark-color) outset;
+}
 .name-section {
     display: block;
 }

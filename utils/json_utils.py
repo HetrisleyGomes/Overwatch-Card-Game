@@ -73,3 +73,17 @@ def get_global_tips(lang='br', page='home'):
     with open('./utils/tutorial.json', "r", encoding="utf-8") as f:
         data = json.load(f)
         return data[lang][page]
+
+def get_full_global_tips(lang='br'):
+    with open('./utils/tutorial.json', "r", encoding="utf-8") as f:
+        data = json.load(f)
+        data = data[lang]
+        resultado = [
+            {
+                "title": item["title"],
+                "content": item["content"]
+            }
+            for item in data.values()
+        ]
+
+        return resultado
