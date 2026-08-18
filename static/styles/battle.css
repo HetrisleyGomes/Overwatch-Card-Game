@@ -198,15 +198,6 @@ body {
 .card {
     width: 180px;
     height: 250px;
-    transition: transform 0.2s;
-    border-radius: 4px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--darkest-color);
-    color: var(--light-text);
-    box-sizing: border-box;
-    border: 12px solid black;
     position: relative;
 }
 .card:hover {
@@ -214,73 +205,13 @@ body {
 }
 
 .card-nome {
-    text-align: center;
-    font-weight: bold;
-    padding: 5px;
     font-size: clamp(12px, 1.2vw, 16px);
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
     height: 14px;
 }
-.card-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.card-img img {
-    width: 140px;
-    height: 140px;
-    object-fit: contain;
-}
+
 .card-texto {
-    flex: 1;
-    padding: 10px;
-    font-size: 14px;
-    height: 74px;
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-/* Cor de fundo das partes de texto */
-.dano .card-texto, .dano .card-nome {
-    background-color: var(--dano-type);
-}
-.suporte .card-texto, .suporte .card-nome {
-    background-color: var(--suporte-type);
-}
-.tanque .card-texto, .tanque .card-nome {
-    background-color: var(--tanque-type);
-}
-.atacante .card-texto, .atacante .card-nome {
-    background-color: var(--pack-rare-color);
-}
-.defensor .card-texto, .defensor .card-nome {
-    background-color: var(--blue-extra-color);
-}
-/* Borda das cartas */
-.comum {
-    border-color: var(--comum-rarity);
-}
-.incomum {
-    border-color: var(--incomum-rarity);
-}
-.epico {
-    border-color: var(--epico-rarity);
-}
-.lendario {
-    border-color: var(--lendario-rarity);
-}
-.ultra {
-    border-color: var(--ultra-rarity);
-}
-.mitico {
-    border-image: linear-gradient(45deg, purple, pink, blue, purple) 1;
-    animation: glow 2s infinite alternate;
-}
-.april_fools {
-    border-color: var(--event-rarity);
 }
 
 /* Carta temporária animada */

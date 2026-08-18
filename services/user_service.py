@@ -70,7 +70,7 @@ def get_streak_bonus(user):
             user["impetos"] += 1
         case 5:
             user["packs_comprados_raro"] += 4
-            user["pontos"] += 900
+            user["pontos"] += 1000
             user["impetos"] += 1
         case 6:
             user["packs_comprados_radiante"] += 1

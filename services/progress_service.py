@@ -45,6 +45,8 @@ def registry_cards(conn, cartas, rarity, user):
             user["contador_packs_comuns"] = 0
         elif user["packs_comprados_raro"] > 0:
             user["packs_comprados_raro"] -= 1
+    elif rarity == "radiante":
+        user["packs_comprados_radiante"] -= 1
     elif rarity == "evento":
         user["packs_evento"] -= 1
 
@@ -104,6 +106,8 @@ def get_xp_calc(rarity, pack_rarity):
             return int(value * 1.5)
         case "raro":
             return value
+        case "radiante":
+            return int(value * 0.8)
         case "evento":
             return int(value * 1.5)
         case "none":

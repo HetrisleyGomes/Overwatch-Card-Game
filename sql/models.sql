@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS "user"(
     contador_packs_comuns INTEGER,
     packs_comprados_comum INTEGER,
     packs_comprados_raro INTEGER,
-    pack_comprado_radiante INTEGER,
+    packs_comprados_radiante INTEGER,
     has_already_get_daily_bonus BOOL,
     packs_evento INTEGER,
     bloqueio_ofensiva INTEGER,

@@ -22,8 +22,8 @@
     "cartas_por_pack": 4,
     "chance": [
       { "epico": 30, "lendario": 70 },
-      { "lendario": 50, "ultra": 1, "mitico": 49 },
-      { "lendario": 10, "ultra": 5, "mitico": 85 },
+      { "lendario": 65, "ultra": 1, "mitico": 34 },
+      { "lendario": 20, "ultra": 5, "mitico": 75 },
       { "mitico": 100 }
     ]
   },

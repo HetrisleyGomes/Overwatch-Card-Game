@@ -194,7 +194,7 @@ body {
         position: fixed;
         bottom: 100px;
         left: 15px;
-        background: var(--main-color);
+        background: var(--button);
         box-shadow: 0 5px 15px var(--background-overlay);
         color: var(--light-text);
         border: none;

@@ -105,10 +105,10 @@
                     {{ _('radiant pack description') }}
                 </div>
                 <div class="item_button">
-                    <button class="button {% if user.pontos < 500 %}desativado{% endif %}"
-                    {% if user.pontos < 500 %}disabled{% endif %}
-                    onclick="comprarPack('pack', 'raro')">
-                    500 {{ _('points') }}</button>
+                    <button class="button {% if user.pontos < 1000 %}desativado{% endif %}"
+                    {% if user.pontos < 1000 %}disabled{% endif %}
+                    onclick="comprarPack('pack', 'radiante')">
+                    1000 {{ _('points') }}</button>
                 </div>
             </div>
             {% endif %}

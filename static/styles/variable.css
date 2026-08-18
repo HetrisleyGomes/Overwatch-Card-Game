@@ -19,11 +19,13 @@
   --dano-type: #7a1f1f;
   --suporte-type: #1f7a3b;
   --tanque-type: #1f3f7a;
+  --atacante-type: #d28f43;
+  --defensivo-type: #2d9ab5;
 
   --comum-rarity:#121213;
   --incomum-rarity: #808080;
   --epico-rarity: #c0c0c0;
-  --legado-rarity: #009529;
+  --legado-rarity: linear-gradient(45deg, #009529, #34d18f, #009529);
   --ultra-rarity: #ff1c00;
   --lendario-rarity: #b99f07;
   --mitico-rarity: linear-gradient(45deg, #c1269a, #ffc0cb, #01a1c1, #c1269a);

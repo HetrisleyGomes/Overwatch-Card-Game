@@ -9,7 +9,7 @@ class UserRepository:
         cursor.execute(
             """
                INSERT INTO "user"
-                (nome, email, senha, pontos, impetos, xp, nivel, language, ultimo_login, streak, profile_img, theme, packs_diarios_abertos, contador_packs_comuns, packs_comprados_comum, packs_comprados_raro, pack_comprado_radiante, has_already_get_daily_bonus, packs_evento, bloqueio_ofensiva)
+                (nome, email, senha, pontos, impetos, xp, nivel, language, ultimo_login, streak, profile_img, theme, packs_diarios_abertos, contador_packs_comuns, packs_comprados_comum, packs_comprados_raro, packs_comprados_radiante, has_already_get_daily_bonus, packs_evento, bloqueio_ofensiva)
                 VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
            """, (
                 user["nome"],
@@ -53,7 +53,7 @@ class UserRepository:
         cursor = self.__conn.cursor()
         cursor.execute(
             """
-            SELECT "id", "nome", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "theme", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "pack_comprado_radiante", "has_already_get_daily_bonus", "packs_evento", "bloqueio_ofensiva"
+            SELECT "id", "nome", "pontos", "impetos", "xp", "nivel", "language", "ultimo_login", "streak", "profile_img", "theme", "packs_diarios_abertos", "contador_packs_comuns", "packs_comprados_comum", "packs_comprados_raro", "packs_comprados_radiante", "has_already_get_daily_bonus", "packs_evento", "bloqueio_ofensiva"
             FROM "user"
             WHERE id = %s
             """,
@@ -140,7 +140,7 @@ class UserRepository:
             contador_packs_comuns = %s,
             packs_comprados_comum = %s,
             packs_comprados_raro = %s,
-            pack_comprado_radiante = %s,
+            packs_comprados_radiante = %s,
             has_already_get_daily_bonus = %s,
             packs_evento = %s,
             bloqueio_ofensiva = %s
@@ -159,7 +159,7 @@ class UserRepository:
                 user["contador_packs_comuns"],
                 user["packs_comprados_comum"],
                 user["packs_comprados_raro"],
-                user["pack_comprado_radiante"],
+                user["packs_comprados_radiante"],
                 user["has_already_get_daily_bonus"],
                 user["packs_evento"],
                 user["bloqueio_ofensiva"],
