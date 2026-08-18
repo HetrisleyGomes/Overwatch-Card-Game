@@ -811,6 +811,50 @@
     "evento": "april_fools"
   },
   {
+    "id": "dmon_comum",
+    "base": "dmon",
+    "classe": "Tanque",
+    "subclasse": "Robusto",
+    "lang": {
+      "br": {
+        "nome": "D.Mon",
+        "entrada": "Joguem juntos, vençam juntos.",
+        "ult_nome": "Quebra de limites",
+        "ult": "Corte final!"
+      },
+      "en": {
+        "nome": "D.Mon",
+        "entrada": "Play toguether, win together!",
+        "ult_nome": "Limit Break",
+        "ult": "Game Over!"
+      }
+    },
+    "raridade": "comum",
+    "img": "DMon_ow.png"
+  },
+  {
+    "id": "dmon_dourado",
+    "base": "dmon",
+    "classe": "Tanque",
+    "subclasse": "Robusto",
+    "lang": {
+      "br": {
+        "nome": "D.Mon Dourada",
+        "entrada": "Joguem juntos, vençam juntos.",
+        "ult_nome": "Quebra de limites",
+        "ult": "Corte final!"
+      },
+      "en": {
+        "nome": "D.Mon: Golden",
+        "entrada": "Play toguether, win together!",
+        "ult_nome": "Limit Break",
+        "ult": "Game Over!"
+      }
+    },
+    "raridade": "lendario",
+    "img": "DMon_ow_gold.png"
+  },
+  {
     "id": "dva_comum",
     "base": "dva",
     "classe": "Tanque",
@@ -1467,6 +1511,28 @@
     },
     "raridade": "mitico",
     "img": "Genji_ow_myth.png"
+  },
+  {
+    "id": "koi_dualidade",
+    "base": "genji",
+    "classe": "Dano",
+    "subclasse": "Flanco",
+    "lang": {
+      "br": {
+        "nome": "Koi da Dualidade",
+        "entrada": "A paz retorna àqueles que a procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Ryūjin no ken o kurae!"
+      },
+      "en": {
+        "nome": "Koi of Duality",
+        "entrada": "Negaeba heiwa wa otozure yo.",
+        "ult_nome": "Dragonblade",
+        "ult": "Ryūjin no ken o kurae!"
+      }
+    },
+    "raridade": "mitico",
+    "img": "Genji_ow_myth_2.png"
   },
   {
     "id": "sumiichimonji",
@@ -4088,6 +4154,28 @@
     },
     "raridade": "mitico",
     "img": "Sojourn_ow_myth.png"
+  },
+  {
+    "id": "cristal_eterno",
+    "base": "sojourn",
+    "classe": "Dano",
+    "subclasse": "Artilharia",
+    "lang": {
+      "br": {
+        "nome": "Sojourn: Cristal Eterno",
+        "entrada": "Estamos nessa juntos. Todos nós.",
+        "ult_nome": "Sobrecarga",
+        "ult": "Isso termina agora!"
+      },
+      "en": {
+        "nome": "Sojourn: Ethernal Crystal",
+        "entrada": "We're in this together. All of us.",
+        "ult_nome": "Overclock",
+        "ult": "This ends now!"
+      }
+    },
+    "raridade": "mitico",
+    "img": "Sojourn_ow_mythic_weapon.png"
   },
   {
     "id": "soldado_76_comum",

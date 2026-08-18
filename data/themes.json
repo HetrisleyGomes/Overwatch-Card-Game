@@ -53,6 +53,24 @@
         }
     },
     {
+        "id": "paraiso-theme",
+        "lang": {
+            "br":{
+                "nome": "Paraíso",
+                "descricao": "Aproveite o clima tropical com o tema Paraíso." 
+            }, "en":{
+                "nome": "Paraíso",
+                "descricao": "Enjoy the tropical climate with the Paraíso theme."
+            }
+        },
+        "price": 2000,
+        "rarity": "comum",
+        "preview": "#d2611c",
+        "unlock": {
+            "type": "purchase"
+        }
+    },
+    {
         "id": "anubis_temple-theme",
         "lang": {
             "br":{

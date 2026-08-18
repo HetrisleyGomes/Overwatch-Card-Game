@@ -556,9 +556,10 @@ def register():
 def ping():
     return "ok", 200
 
-@main.route("/teste")
-def manual():
-    doc = get_full_global_tips(session['lang'])
+@main.route("/manual")
+@main.route("/manual/<lang>")
+def manual(lang = "br"):
+    doc = get_full_global_tips(lang)
     return render_template('manual/manual.html', doc=doc)
 
 def update_session_user(ctll):

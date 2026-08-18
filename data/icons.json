@@ -137,6 +137,23 @@
             "type": "purchase"
         }
     },{
+        "id": "c7",
+        "lang": {
+            "br":{
+                "nome": "Sapinho",
+                "descricao": "Solta o som!" 
+            }, "en":{
+                "nome": "Froggy",
+                "descricao": "Let's get loud!"
+            }
+        },
+        "img": "dva_logo.png",
+        "price": 200,
+        "rarity": "comum",
+        "unlock": {
+            "type": "purchase"
+        }
+    },{
         "id": "s-01",
         "lang": {
             "br":{
@@ -317,6 +334,44 @@
             }
         },
         "img": "8-Bitmari.png",
+        "price": 500,
+        "rarity": "incomum",
+        "unlock": {
+            "type": "nivel",
+            "value": 3
+        }
+    },
+    {
+        "id": "l3-3",
+        "lang": {
+            "br":{
+                "nome": "Rosetta",
+                "descricao": "A melhor Pet." 
+            }, "en":{
+                "nome": "Rosetta",
+                "descricao": "The best Pet."
+            }
+        },
+        "img": "Rosetta.png",
+        "price": 200,
+        "rarity": "comum",
+        "unlock": {
+            "type": "nivel",
+            "value": 3
+        }
+    },
+    {
+        "id": "l3-4",
+        "lang": {
+            "br":{
+                "nome": "Lil Venture",
+                "descricao": "Desbravando novos pixeis, com Venture." 
+            }, "en":{
+                "nome": "Ad'Venture",
+                "descricao": "Exploring new pixels, with Venture."
+            }
+        },
+        "img": "Lil-Venture.png",
         "price": 500,
         "rarity": "incomum",
         "unlock": {

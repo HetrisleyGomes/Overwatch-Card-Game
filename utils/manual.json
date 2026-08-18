@@ -1,0 +1,78 @@
+{
+    "br": [
+        {
+            "title": "Overwatch Card Game",
+            "content": "O Overwatch Card Game é um jogo de cartas colecionáveis baseado em navegador, inspirado no universo de Overwatch. O projeto combina coleta de cartas, construção de baralhos, pacotes, eventos, uma loja para jogadores e batalhas PvP em tempo real em uma única aplicação web.\n\nAlém do jogo em si, este projeto serve como um estudo prático sobre o desenvolvimento e o gerenciamento de uma aplicação web do mundo real. Ao longo de seu desenvolvimento, diferentes abordagens para o desenvolvimento de frontend, arquitetura de backend, bancos de dados, autenticação, localização, comunicação em tempo real e organização da aplicação foram exploradas e progressivamente refinadas.\n\nO projeto foi desenvolvido utilizando Python, Flask, JavaScript, HTML, CSS, PostgreSQL e Socket.IO, com a base de código organizada em repositórios, controladores e serviços para separar as diferentes responsabilidades da aplicação. O projeto é utilizado continuamente para experimentar práticas de desenvolvimento, decisões arquiteturais, modelagem de banco de dados, lógica de jogo e os desafios envolvidos na manutenção e evolução de uma aplicação ao longo do tempo.\n\nEste é um projeto Feito de fã, feito para fãs!"
+        },
+        {
+            "title": "Área Inicial",
+            "content": "Overwatch Card Game é um jogo de colecionar cartas dos nossos heróis favoritos.\n\n- Packs Comuns Diários: A cada dia, você pode abrir até dois pacotes comuns, que trazem cinco cartas de variedade comum, incomum, épica, ultra e até lendárias!\n- Pacotes Raros: Após abrir 6 pacotes comuns diários, você ganha um pacote raro, com quatro cartas, dentre elas épicas, lendárias, ultras e uma mítica.\n- Pacotes sazonais: Durante eventos, um pacote extra com cartas variadas ficam disponível.\n- Pacotes Radiantes: A partir do nível 6, você desbloqueia a opção de comprar pacotes radiantes na loja, garantindo até três cartas míticas por pacote.\n\n[Barra de notificações]: A barra de informações latérais te informa sobre eventos, promoções, e atualizações sobre você e o jogo.\n\n[Pontos e Ímpetos]: Os pontos são a moeda do Overwatch Card Game, você as obtem abrindo pacotes e completando coleções. Os Ímpetos são a moeda de maior valor do jogo, você obtem uma ao subir de nível.\n\n[Sequência de login]: Ao manter uma sequência de login diárias, você obtém prêmios todas as semanas, que aumentam de valor a cada semana que você mantiver a sequência."
+        },
+        {
+            "title": "Inventário",
+            "content": "Aqui você pode ver todas as suas cartas obtidas, como funcionalidade futura, está planejado uma janela de informações mais detalhadas com relação ao uso no modo duelo.\n\n[Visualização completa]: Usando o modo 'Ver todas as cartas', você verá todos os slots de cartas faltantes, assemelhando-se a um álbum de figurinhas.\n\n[Construtor de deck]: Para entrar no modo Duelo, você deve primeiramente montar um deck com suas cartas disponíveis. Para montar um deck, você precisa de: 12 cartas; Apenas uma cópia de cada personagem; No máximo 3 cartas de tanque."
+        },
+        {
+            "title": "Coleções",
+            "content": "Cada carta obtida faz parte de pelo menos um conjunto temático. Complete conjuntos para obter pontos."
+        },
+        {
+            "title": "Loja",
+            "content": "Aqui, você pode trocar pontos e Ímpetos por outros itens.\n\n[Pacotaços]: Frequentimente, ficam disponíveis pacotes especiais com cartas que compartilham de um mesmo tema, aproveite esses pacotes para aumenta sua coleção.\n[Pacotes extras]: Não quer esperar o dia seguinte para abrir mais pacotes? Você veio ao lugar certo! Aqui você pode comprar pacotes extras para completar sua coleção mais rápido.\n[Escudo de sequência]: Mantenha sua sequência de login ativa mesmo quando não estiver jogando.\n[Temas Personalizados]: Desbloqueie temas exclusivos para personalizar sua experiência de jogo.\n[Ícones de jogador]: Compre ícones para personalizar seu perfil, e desbloquei novos ícones ao completar coleções ou subir de nível.\n[Cofre secreto]: Algumas vezes no mês, um comerciante misterioso surge oferecendo cartas Míticas e cartas Legado. Fique de olho e não o perca."
+        },
+        {
+            "title": "Configurações",
+            "content": "Mude de nome, tema ou Ícone de jogador aqui, esta é a sua área para customizar seu perfil e descobrur mais sobre o projeto Overwatch TCG!"
+        },
+        {
+            "title": "Sala de jogos",
+            "content": "Escolha entre jogar contra o computador ou enfrentar outros jogadores, uma partida emocionante de Duelo!"
+        },
+        {
+            "title": "Duelo",
+            "content": "Durante um duelo, dois jogadores se enfrentam durante sete turnos, para causar o máximo de dano possível um ao outro. Ao final dos sete turnos, vence aquele com mais pontos de vida.\n\nDurante cada turno, ambos os jogadores escolhem uma carta para o embate, cada carta recebe um efeito dependendo de sua classe e subclasse.\nEntre os efeitos de cartas, temos:\n- Ataque: Causa essa quantidade de dano ao adversário.\n- Escudo: Diminui o dano de Ataque do seu adversário.\n- Cura: Recupera seus pontos de vida.\n- Golpe veloz: Um ataque que acontece antes do escudo do seu adversário.\n- Anti-cura: Bloqueia a quantidade de cura que seu adversário receberá neste turno.\n- Ataque futuro: No próximo turno, garante um Ataque adicional à sua ação.\n- Revitalizar: No próximo turno, dobra toda quantidade de cura que você receber.\n- Descuido: Causa essa quantidade de dano a você mesmo.\n- Debilitar: Corta pela metade o próximo ataque oponente.\n- Enfraquecer: Corta pela metade o próximo ataque do oponente."
+        },
+        {
+            "title": "Cofre do Maximilien",
+            "content": "Aproveite uma seleção de cartas únicas com ofertas imperdíveis, feitos apenas para você.\nFrequêntemente, Maximilien surge na Loja com ofertas temporárias exclusivas para cada jogador. Aproveite a chance para obter cartas Míticas e cartas Legado. Fique de olho e não o perca essa oportunidade."
+        }
+    ],
+    "en": [
+        {
+            "title": "Overwatch Card Game",
+            "content": "Overwatch Card Game is a browser-based collectible card game inspired by the universe of Overwatch. The project combines card collection, deck building, packs, events, a player store and real-time PvP battles into a web application.\n\nBeyond the game itself, this project serves as a practical study in the development and management of a real-world web application. Throughout its development, different approaches to frontend development, backend architecture, databases, authentication, localization, real-time communication and application organization have been explored and progressively refined.\n\nThe project is built with Python, Flask, JavaScript, HTML, CSS, PostgreSQL and Socket.IO, with the codebase organized into repositories, controllers and services to separate different responsibilities of the application. The project is continuously used to experiment with development practices, architectural decisions, database design, game logic and the challenges involved in maintaining and evolving an application over time.\n\nThis is a project Made by fan, made for fans!"
+        },
+        {
+            "title": "Home Page",
+            "content": "Overwatch Card Game is a card collecting game featuring our favorite heroes.\n\n- Common Daily Packs: Each day, you can open up to two Common Packs, each containing five cards of Common, Uncommon, Epic, Ultra, and even Legendary rarities!\n- Rare Packs: After opening 10 daily Common Packs, you earn one Rare Pack containing four cards, including Epic, Ultra, Legendary, and one Mythic card.\n- Seasonal Packs: During special events, an extra pack featuring a variety of exclusive cards becomes available.\n- Radiant Packs: Starting at level 6, you unlock the option to purchase Radiant Packs in the store, guaranteeing up to three Mythic cards per pack.\n\n[nNotification Panel]: The side notification panel keeps you informed about events, promotions, and updates regarding both your account and the game.\n\n[Points and Prisms]: Points are the primary currency of Overwatch Card Game. You earn them by opening packs and completing collections. Prism is the game's premium currency, and you receive one each time you level up. You can also earn Prism by maintaining a monthly login streak.\n\n[Login Streak]: By maintaining a daily login streak, you earn rewards each week, with the value of the rewards increasing for each consecutive week you maintain your streak."
+        },
+        {
+            "title": "Inventory",
+            "content": "Here you can view all the cards you've collected. As a future feature, a more detailed information window is planned, providing additional details about each card's use in Duel mode.\n\n[Complete View]: Using 'Show all cards', you'll be able to see every missing card slot, making your collection resemble a sticker album.\n\n[Deck Builder]: Before entering Duel mode, you must first build a deck using the cards you have available. To build a deck, you need: 12 cards; only one copy of each hero; and a maximum of 3 tank cards."
+        },
+        {
+            "title": "Collections",
+            "content": "Every card you collect belongs to at least one themed collection. Complete collections to earn Points."
+        },
+        {
+            "title": "Store",
+            "content": "Here, you can exchange Points and Prisms for other items.\n\n[Special Packs]: Special packs featuring cards that share a common theme are frequently available. Take advantage of them to expand your collection.\n[Extra Packs]: Don't want to wait until tomorrow to open more packs? You've come to the right place. Here you can purchase extra packs to complete your collection even faster.\n[Streak Shield]: Maintain your login streak even when you're not playing.\n[Themes]: Unlock new themes to customize your profile.\n[Player Icons]: Purchase icons to customize your profile, and unlock new ones by completing collections or leveling up.\n[Secret Vault]: Several times each month, a mysterious merchant appears, offering Mythic and Legacy cards. Keep an eye out—you won't want to miss them."
+        },
+        {
+            "title": "Settings",
+            "content": "Change your name, theme or Player Icon here. This is your place to customize your profile and learn more about the Overwatch TCG project!"
+        },
+        {
+            "title": "Game Room",
+            "content": "Choose between playing against the computer or facing other players in an exciting Duel match!"
+        },
+        {
+            "title": "Duel",
+            "content": "During a Duel, two players face off over the course of seven turns, each trying to deal as much damage as possible to the other. At the end of the seventh turn, the player with the most Health wins.\n\nDuring each turn, both players choose one card to play. Each card gains an effect based on its class and subclass.\nCard effects include:\n- Attack: Deals this amount of damage to your opponent.\n- Shield: Reduces the damage dealt by your opponent's Attack.\n- Heal: Restores your Health.\n- Quick Strike: An attack that is resolved before your opponent's Shield takes effect.\n- Anti-Heal: Prevents your opponent from recovering this amount of Health during this turn.\n- Future Attack: On your next turn, grants an additional Attack to your action.\n- Revitalize: On your next turn, doubles all healing you receive.\n- Recklessness: Deals this amount of damage to yourself.\n- Weaken: Halves the opponent's next attack.\n- Weaken: Halves the opponent's next attack."
+        },
+        {
+            "title": "Maximilien's Vault",
+            "content": "Take advantage of a selection of unique cards with exclusive offers made just for you.\nFrom time to time, Maximilien appears in the Shop with limited-time offers tailored to each player. Don't miss your chance to obtain Mythic and Legacy cards. Keep an eye out—you won't want to miss him."
+        }
+    ]
+}

@@ -141,7 +141,7 @@ python run.py
 5. Access it in your browser:
 
 ```
-http://127.0.0.1:5000
+http://localhost:5000
 ```
 
 ---

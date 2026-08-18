@@ -124,6 +124,20 @@
     ]
   },
   {
+    "id": "dmon",
+    "lang":{
+      "br": {"nome":"D.Mon"},
+      "en": {"nome":"D.Mon"}
+    },
+    "personagens": [
+      "dmon_comum",
+      "dmon_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
     "id": "dva",
     "lang":{
       "br": {"nome":"D.Va"},
@@ -233,6 +247,7 @@
       "genji_dourado",
       "genji_legado",
       "cyber_demonio",
+      "koi_dualidade",
       "sumiichimonji"
     ],
     "recompensa": {
@@ -654,7 +669,8 @@
       "sojourn_comum",
       "sojourn_almirante_infinito",
       "sojourn_dourado",
-      "sentinela_ultra-violeta"
+      "sentinela_ultra-violeta",
+      "cristal_eterno"
     ],
     "recompensa": {
       "pontos": 100
@@ -1270,6 +1286,7 @@
     },
     "personagens": [
       "dva_comum",
+      "dmon_comum",
       "horang"
     ],
     "recompensa": {
@@ -1539,6 +1556,7 @@
       "bastion_dourado",
       "brigitte_dourado",
       "cassidy_dourado",
+      "dmon_dourado",
       "dva_dourado",
       "domina_dourado",
       "doomfist_dourado",
@@ -1706,6 +1724,7 @@
       "horang",
       "titan_magma",
       "cyber_demonio",
+      "koi_dualidade",
       "onryo",
       "fenix_ascendida",
       "cyber_combustivel",
@@ -1750,6 +1769,7 @@
       "canhao_capsulas",
       "aco_letal",
       "demonio_aprisionado",
+      "cristal_eterno",
       "libertacao",
       "dame_chance"
     ],

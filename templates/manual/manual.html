@@ -2,7 +2,7 @@
 {% block conteudo %}
 <style>
     .main{
-        margin: 4vh 6vw;
+        margin: 4vh 10vw;
     }
 </style>
 <div class="main">
@@ -11,7 +11,7 @@
 {% for data in doc %}
 <div class="container">
     <h2 class="title">{{ data['title'] }}</h2>
-    <p class="content">{{ data['content'] }}</p>
+    <p class="content" style="white-space: pre-line;">{{ data['content'] }}</p>
 </div>
 {% endfor %}
 
