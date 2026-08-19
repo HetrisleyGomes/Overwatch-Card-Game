@@ -95,6 +95,36 @@ def format_inventory(conn, user_id, lang):
 
     return cartas_view
 
+def get_all_cards_formated(lang):
+    characters = get_characters()
+    cartas_view = []
+    
+    for c in characters:
+        cid = c["id"]
+
+        c_lang = c["lang"][lang]
+        icon_ref = c.get("icon_ref", False)
+        golden_weapon = c.get("golden_weapon", False)
+        foil = c.get("foil", False)
+        is_event = c.get("evento", False)
+
+        cartas_view.append({
+            "id": cid,
+            "base": c["base"],
+            "nome": c_lang["nome"],
+            "classe": c["classe"],
+            "subclasse": c["subclasse"],
+            "entrada": c_lang["entrada"],
+            "ult_nome": c_lang["ult_nome"],
+            "ult": c_lang["ult"],
+            "raridade": c["raridade"],
+            "img": c["img"],
+            "icon_ref": icon_ref,
+            "is_evento": is_event,
+            "golden_weapon": golden_weapon,
+            "foil": foil,
+        })
+    return cartas_view
 
 def list_user_sets(conn, user_id, lang):
     """Formata os sets e as cartas do usuário em um dicionário.

@@ -147,7 +147,7 @@
                 "descricao": "Let's get loud!"
             }
         },
-        "img": "dva_logo.png",
+        "img": "Lucio_froggy_icon.png",
         "price": 200,
         "rarity": "comum",
         "unlock": {
@@ -371,7 +371,7 @@
                 "descricao": "Exploring new pixels, with Venture."
             }
         },
-        "img": "Lil-Venture.png",
+        "img": "Lil_Venture.png",
         "price": 500,
         "rarity": "incomum",
         "unlock": {

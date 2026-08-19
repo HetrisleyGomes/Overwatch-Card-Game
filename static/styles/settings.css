@@ -275,7 +275,6 @@ iframe{
 .about h3{
     color: var(--dark-text);
     margin-bottom:15px;
-    border-left:5px solid var(--combat-yellow-color);
     padding-left:12px;
 }
 

@@ -2,7 +2,7 @@ from flask import blueprints, render_template, request, session, redirect, url_f
 from services.user_service import verify_date, sum_xp
 from services.progress_service import registry_cards, save_deck_progress, get_deck
 from services.pack_sevice import open_pack, open_event_pack
-from services.collection_service import check_sets, format_inventory, list_user_sets, card_format
+from services.collection_service import check_sets, format_inventory, get_all_cards_formated, list_user_sets, card_format
 from services.events_service import get_active_events, get_last_log, is_theres_active_events
 from services.store_services import get_promotion, buy_pack_promotion, get_user_infos, get_max_vault_infos, get_vault, generate_vault, buy_vault_item, get_vault_data_format, buy_theme
 from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img, themes_view
@@ -560,7 +560,13 @@ def ping():
 @main.route("/manual/<lang>")
 def manual(lang = "br"):
     doc = get_full_global_tips(lang)
-    return render_template('manual/manual.html', doc=doc)
+    return render_template('extras/manual.html', doc=doc)
+
+@main.route("/gallery")
+@main.route("/gallery/<lang>")
+def gallery(lang = "br"):
+    cartas = get_all_cards_formated(lang)
+    return render_template('extras/gallery.html', cartas=cartas)
 
 def update_session_user(ctll):
     user = ctll.get_user(session["user_id"])

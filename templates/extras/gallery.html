@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<style>
+    .main{
+        margin: 4vh 10vw;
+    }
+    .gallery_display {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+</style>
+
+
+<div class="main">
+<h1>Galeria</h1>
+
+    <div class="gallery_display">
+    {% for carta in cartas %}
+        <div class="personagem">
+            <div class="personagem_img">
+                <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
+                {% if carta.icon_ref %}
+                <div class="icon_ref" data-tooltip="{{ carta.icon_ref }}">
+                        <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}" loading="lazy">
+                    </div>
+                {% endif %}
+            </div>
+            <div class="personagem_base">
+                <span class="p_nome">{{ carta.nome }}</span> <div class="raridade {{ carta.raridade }} {% if carta.evento %}raridade-extra{% endif %}"></div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

@@ -41,7 +41,6 @@
   --cinza: #6b6258;
   --cinza-claro: #c8b8a4;
 
-
   --xp-color-1: #ffb74d;
   --xp-color-2: #ef6c00;
 
@@ -64,6 +63,39 @@
 }
 :root[data-theme="route_66-theme"][data-mode="dark"]{  
   --dark-text: var(--light-text);
+}
+
+:root[data-theme="paraiso-theme"] {
+
+  --main-color: #178c5b;
+  --main-dark-color: #0d6843;
+  --main-light-color: #42b982;
+  --darkest-color: #082645;
+
+  --cinza: #52666b;
+  --cinza-claro: #b9c9c7;
+
+  --xp-color-1: #8ee6b8;
+  --xp-color-2: #18a866;
+
+  --green-extra-color: #83bf2f;
+
+  --dark-text: #073f32;
+  --light-text: #ffffff;
+
+  --text-shadow: 0 0 2px #06352a;
+
+  --button: linear-gradient(
+    135deg,
+    #0878b5,
+    #0f418b
+  );
+
+  --button-hover: linear-gradient(
+    135deg,
+    #1495d0,
+    #2165a9
+  );
 }
 
 :root[data-theme="anubis_temple-theme"] {

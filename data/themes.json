@@ -65,7 +65,7 @@
         },
         "price": 2000,
         "rarity": "comum",
-        "preview": "#d2611c",
+        "preview": "#178c5b",
         "unlock": {
             "type": "purchase"
         }

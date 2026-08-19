@@ -57,9 +57,9 @@
       },
       "en": {
         "nome": "Ana: Golden",
-        "entrada": "Eu não vou deixar um mundo partido para trás.",
+        "entrada": "I will not leave a broken world behind.",
         "ult_nome": "Nano Boost",
-        "ult": "Você está energizado! Vá para o combate!"
+        "ult": "You're powered up, get in there."
       }
     },
     "raridade": "lendario",
@@ -4175,7 +4175,7 @@
       }
     },
     "raridade": "mitico",
-    "img": "Sojourn_ow_mythic_weapon.png"
+    "img": "Sojourn_ow_myth_weapon.png"
   },
   {
     "id": "soldado_76_comum",
