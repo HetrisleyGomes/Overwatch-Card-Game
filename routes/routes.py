@@ -162,7 +162,7 @@ def collection():
     sets_usuario  = list_user_sets(connection, user['id'], lang)
     global_tips = get_global_tips(lang, "collections")
 
-    return render_template('collection.html', user = user, sets =sets_usuario, global_tips=global_tips)
+    return render_template('collection.html', user = user, sets =sets_usuario, global_tips=global_tips, lang=lang)
 
 @main.route("/deck-builder")
 def deck_builder():
@@ -461,7 +461,7 @@ def logoff():
 # LOGIN ==============================================
 @main.before_request
 def verify_user():
-    open_routes = ["main.login", "main.sign_in", "static", "main.register", "main.ping", "documents.robots", "documents.llms", "documents.sitemap"]
+    open_routes = ["main.login", "main.sign_in", "static", "main.register", "main.ping", "documents.robots", "documents.llms", "documents.sitemap", "main.gallery", "main.manual"]
 
     if 'user_id' not in session:
         if request.endpoint not in open_routes:
@@ -566,7 +566,8 @@ def manual(lang = "br"):
 @main.route("/gallery/<lang>")
 def gallery(lang = "br"):
     cartas = get_all_cards_formated(lang)
-    return render_template('extras/gallery.html', cartas=cartas)
+    classes_tips = get_classes_lang(lang)
+    return render_template('extras/gallery.html', cartas=cartas, classes_tips=classes_tips, lang=lang)
 
 def update_session_user(ctll):
     user = ctll.get_user(session["user_id"])

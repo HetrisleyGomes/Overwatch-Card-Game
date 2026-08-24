@@ -73,7 +73,7 @@
     background-color: var(--atacante-type);
 }
 .defensor .card-texto, .defensor .card-nome {
-    background-color: var(--defensivo-type);
+    background-color: var(--defensor-type);
 }
 
 .comum {

@@ -70,4 +70,21 @@
     {% endfor %}
 </div>
 <div class="space"></div>
+<script>
+    const LEGENDA = {
+        "br": {
+            "golden.png": "Arma dourada",
+            "alter.png": "Arte alternativa",
+            "jade.png": "Carta legado de esmeralda",
+            "hard_light.png": "Luz Sólida"
+        },
+        "en": {
+            "golden.png": "Golden weapon",
+            "alter.png": "Alternative art",
+            "jade.png": "Jade legacy card",
+            "hard_light.png": "Solid Light"
+        }
+    }
+    const currentLang = {{ lang | tojson }};
+</script>
 {% endblock %}

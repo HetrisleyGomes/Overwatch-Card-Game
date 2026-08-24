@@ -7,13 +7,102 @@
     .gallery_display {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
+        gap: 20px
+    }
+    .personagem {
+        width: 220px;
+        text-align: center;
+        color: var(--light-text);
+        background-color: var(--main-color);
+        border-radius: 20px;
+    }
+    .personagem_img {
+        position: relative;
     }
 
+    .personagem_img img {
+        width: 180px;
+        height: 180px;
+        object-fit: contain;
+    }
+    .icon_ref {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        
+    }
+    .icon_ref img{
+        width: 15px;
+        height: 15px;
+    }
+
+    .personagem_base {
+        padding: 5px;
+        margin-top: 5px;
+        height: 5vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .personagem_base.Tanque { background: var(--tanque-type); }
+    .personagem_base.Dano { background: var(--dano-type); }
+    .personagem_base.Suporte { background: var(--suporte-type); }
+    .personagem_base.Atacante { background: var(--atacante-type); }
+    .personagem_base.Defensor { background: var(--defensor-type); }
+
+    .p_nome {
+        display: block;
+        font-weight: bold;
+        text-shadow: var(--text-shadow);
+    }
+    .raridade {
+        width: 10px;
+        height: calc(5vh + 10px);
+        position: absolute;
+        right: 0;
+        box-sizing: border-box;
+    }
+    .raridade.comum { background: var(--comum-rarity); }
+    .raridade.incomum { background: var(--incomum-rarity); }
+    .raridade.epico { background: var(--epico-rarity); }
+    .raridade.lendario { background: var(--lendario-rarity); }
+    .raridade.ultra { background: var(--ultra-rarity); }
+    .raridade.legado { background: var(--legado-rarity); }
+    .raridade.mitico { background: var(--mitico-rarity); }
+    .raridade.raridade-extra { background: var(--event-rarity); }
+
+    .personagem_info {
+        padding: 6px;
+        font-size: 18px;
+    }
+    .sub_infos {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5px;
+        border-bottom: 1px solid var(--light-text);
+    }
+    .text_infos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info_text {
+
+    }
+    .small_text {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .foil {
+        color: var(--event-rarity);
+    }
 </style>
 
 
 <div class="main">
 <h1>Galeria</h1>
+<div id="global-tooltip"></div>
 
     <div class="gallery_display">
     {% for carta in cartas %}
@@ -26,12 +115,72 @@
                     </div>
                 {% endif %}
             </div>
-            <div class="personagem_base">
-                <span class="p_nome">{{ carta.nome }}</span> <div class="raridade {{ carta.raridade }} {% if carta.evento %}raridade-extra{% endif %}"></div>
+            <div class="personagem_base {{ carta.classe }}">
+                <span class="p_nome {% if carta.foil %}foil{% endif %}">{{ carta.nome }}</span>
+                <div class="raridade {{ carta.raridade }} {% if carta.is_evento %}raridade-extra{% endif %}"></div>
+            </div>
+            <div class="personagem_info">
+                <div class="sub_infos">
+                    <span class="info_text">{{ classes_tips[carta.classe] }}</span>
+                    <span class="info_text">{{ classes_tips[carta.subclasse] }}</span>
+                </div>
+                <div class="sub_infos">
+                    <span class="info_text">{{ classes_tips[carta.raridade] }}</span>
+                    {% if carta.is_evento %}
+                        <span class="info_text">{{ classes_tips[carta.is_evento] }}</span>
+                    {% endif %}
+                </div>
+                <div class="text_infos">
+                    <span class="info_text small_text">{{ carta.entrada }}</span>
+                    <span class="info_text small_text"> [{{ carta.ult_nome }}]: {{ carta.ult }}</span>
+                </div>
             </div>
         </div>
     {% endfor %}
     </div>
 
 </div>
+<script>
+    const LEGENDA = {
+        "br": {
+            "golden.png": "Arma dourada",
+            "alter.png": "Arte alternativa",
+            "jade.png": "Carta legado de esmeralda",
+            "hard_light.png": "Luz Sólida"
+        },
+        "en": {
+            "golden.png": "Golden weapon",
+            "alter.png": "Alternative art",
+            "jade.png": "Jade legacy card",
+            "hard_light.png": "Solid Light"
+        }
+    }
+    const currentLang = {{ lang | tojson }};
+    // Tooltips
+    const tooltip = document.getElementById("global-tooltip");
+    function initializeTooltips() {
+        document.addEventListener("mousemove", (e) => {
+            console.log(e.target)
+            const icon = e.target.closest(".icon_ref")
+            if (!icon) {
+                tooltip.classList.remove("show");
+                return;
+            } 
+            
+            if (icon){
+                value = LEGENDA[currentLang][icon.dataset.tooltip];
+                tooltip.innerHTML = value;
+            }
+            
+            tooltip.style.left = `${e.clientX}px`;
+            tooltip.style.top = `${e.clientY + 16}px`;
+            tooltip.classList.add("show");
+        });
+
+        document.addEventListener("mouseleave", () => {
+            tooltip.classList.remove("show");
+        });
+    }
+    initializeTooltips();
+</script>
 {% endblock %}

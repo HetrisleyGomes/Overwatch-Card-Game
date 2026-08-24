@@ -123,12 +123,12 @@ function calcularPosicao(index, total) {
     const isMobile = window.innerWidth <= 480;
 
     if (!isMobile) {
-        // 💻 desktop (seu atual)
+        // desktop (seu atual)
         const offset = (index - (total - 1) / 2) * 180;
         return { x: offset, y: 0 };
     }
 
-    // 📱 MOBILE
+    // MOBILE
     if (total === 5) {
         // 3 em cima, 2 embaixo
         if (index < 3) {
@@ -145,7 +145,6 @@ function calcularPosicao(index, total) {
     }
 
     if (total === 4) {
-        // 2x2
         if (index < 2) {
             return {
                 x: (index - 0.5) * 120,
@@ -172,12 +171,12 @@ function calcularPosicao(index, total) {
 
 function iniciarAnimacao() {
 
-    // 🎁 1. Abrir pack
+    // Abrir pack
     setTimeout(() => {
         pack.classList.add("abrir");
     }, 500);
 
-    // 🎴 2. Mostrar cartas depois do pack
+    // Mostrar cartas depois do pack
     setTimeout(() => {
         pack.style.display = "none";
 
@@ -196,12 +195,12 @@ function iniciarAnimacao() {
                         calc(-50% + ${pos.y}px)
                     )
                 `;
-                // 🌀 virar carta
+                // virar carta
                 setTimeout(() => {
                     carta.classList.add("flip");
                 }, 400);
 
-                // última carta → mostrar botões
+                // última carta, mostrar botões
                 if (i === cartas.length - 1) {
                     setTimeout(() => {
                         botoes.style.display = "flex";
@@ -218,7 +217,6 @@ function iniciarAnimacao() {
 
 function removerPorClasse(classe) {
     const elementos = document.querySelectorAll("." + classe);
-
     elementos.forEach(el => el.remove());
 }
 window.onload = iniciarAnimacao;

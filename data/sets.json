@@ -227,6 +227,7 @@
     },
     "personagens": [
       "freja_comum",
+      "freja_artemis",
       "freja_coracao",
       "freja_dourado"
     ],
@@ -309,6 +310,7 @@
     },
     "personagens": [
       "jetpack_cat_comum",
+      "jetpack_cat_bastet",
       "jetpack_cat_dourado"
     ],
     "recompensa": {
@@ -391,6 +393,7 @@
     },
     "personagens": [
       "lucio_comum",
+      "lucio_jazz",
       "lucio_principe_espaco",
       "lucio_hermes",
       "lucio_dourado",
@@ -1415,12 +1418,28 @@
     }
   },
   {
+    "id": "egito",
+    "lang":{
+      "br": {"nome":"Deuses Egipcios"},
+      "en": {"nome":"Egyptian Gods"}
+    },
+    "personagens": [
+      "jetpack_cat_bastet",
+      "ana_ra",
+      "anubis"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
     "id": "panteao",
     "lang":{
       "br": {"nome":"Deuses do Panteão"},
       "en": {"nome":"Pantheon of Gods"}
     },
     "personagens": [
+      "freja_artemis",
       "mercy_vitoria_alada",
       "lucio_hermes",
       "pharah_hades",

@@ -1332,6 +1332,28 @@
     "img": "Freja_ow.png"
   },
   {
+    "id": "freja_artemis",
+    "base": "freja",
+    "classe": "Dano",
+    "subclasse": "Caçador",
+    "lang": {
+      "br": {
+        "nome": "Ártemis",
+        "entrada": "Eu sempre entrego.",
+        "ult_nome": "Disparo de boleadeira",
+        "ult": "Eu vou caçar você!"
+      },
+      "en": {
+        "nome": "Artemis",
+        "entrada": "I always deliver.",
+        "ult_nome": "Bola Shot",
+        "ult": "Nu vanker der!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Freja_ow_artemis.png"
+  },
+  {
     "id": "freja_coracao",
     "base": "freja",
     "classe": "Dano",
@@ -1828,6 +1850,28 @@
     "img": "Jetpack_Cat_ow.png"
   },
   {
+    "id": "jetpack_cat_bastet",
+    "base": "jetpack_cat",
+    "classe": "Suporte",
+    "subclasse": "Elegante",
+    "lang": {
+      "br": {
+        "nome": "Bastet",
+        "entrada": "Miw miw miw.",
+        "ult_nome": "Pulo do gato",
+        "ult": "Meoweoweew!!!"
+      },
+      "en": {
+        "nome": "Bastet",
+        "entrada": "Miw miw miw.",
+        "ult_nome": "Catnapper",
+        "ult": "Meoweoweew!!!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Jetpack_Cat_ow_bastet.png"
+  },
+  {
     "id": "jetpack_cat_dourado",
     "base": "jetpack_cat",
     "classe": "Suporte",
@@ -2321,6 +2365,29 @@
     },
     "raridade": "comum",
     "img": "Lucio_ow.png"
+  },
+  {
+    "id": "lucio_jazz",
+    "base": "lucio",
+    "classe": "Suporte",
+    "subclasse": "Bardo",
+    "lang": {
+      "br": {
+        "nome": "Lúcio Jazz",
+        "entrada": "A gente chegou pra esculachar.",
+        "ult_nome": "Barreira de som",
+        "ult": "Vamo esculachar!"
+      },
+      "en": {
+        "nome": "Lúcio Jazz",
+        "entrada": "We're here to be heard!",
+        "ult_nome": "Sound Barrier",
+        "ult": "Oh, let's break it down!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Lucio_ow_jazz.png",
+    "foil": true
   },
   {
     "id": "lucio_principe_espaco",

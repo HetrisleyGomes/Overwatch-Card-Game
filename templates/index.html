@@ -85,6 +85,7 @@
 </div>
 <div id="global-tooltip"></div>
 <script>
+
     // Tooltips
     const tooltip = document.getElementById("global-tooltip");
     function initializeTooltips() {
@@ -99,16 +100,7 @@
             if (tooltipClass) {
                 tooltip.innerHTML = tooltipClass.dataset.tooltip.replace(/\n/g, "<br>");
             } else if (icon){
-                value = ""
-                switch (icon.dataset.tooltip) {
-                    case "golden.png":
-                        value = "Arma dourada";
-                        break;
-                    case "alter.png":
-                        value = "Arte alternativa";
-                        break;
-                }
-                tooltip.innerHTML = value;
+                tooltip.innerHTML = LEGENDA[currentLang][icon.dataset.tooltip] || icon.dataset.tooltip;
             }
             
             tooltip.style.left = `${e.clientX}px`;

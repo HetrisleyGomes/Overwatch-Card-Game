@@ -39,7 +39,10 @@
         "Monstro": "Monstro",
         "Perigo": "Perigo",
         "Perverso": "Perverso",
-        "Origem": "Origem"
+        "Origem": "Origem",
+
+        "april_fools": "Primeiro de Abril",
+        "aniversary": "Aniversário"
     },
     "en":{
         "comum": "Common",
@@ -76,6 +79,9 @@
         "Monstro": "Monster",
         "Perigo": "Danger",
         "Perverso": "Wicked",
-        "Origem": "Origin"
+        "Origem": "Origin",
+
+        "april_fools": "April Fools",
+        "aniversary": "Anniversary"
     }
 }

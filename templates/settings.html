@@ -122,12 +122,6 @@
                     </button>
                 </a>
             </div>
-            <!-- DELETE -->
-            <div class="div_button">
-                <button type="button" class="button danger" onclick="openDeleteModal()">
-                {{ _('delete') }}
-            </button>
-            </div>
         </div>
 
     </div>
@@ -163,8 +157,19 @@
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vQYU7XLsQKCD43jk5ZDVUyX4hb0B3DTvK_ak3fi28oGWxiNEyTvhiTyEhK02Ui4bpYE-hkmzxXcmpm-/pub?embedded=true"></iframe>
         </div>
     </div>
+    <div class="buttons-container">
+        <h3>{{ _('delete_account') }}</h3>
+                <!-- DELETE -->
+        <div class="div_button">
+            <button type="button" class="button danger" onclick="openDeleteModal()">
+            {{ _('delete') }}
+            </button>
+        </div>
+    </div>
     <div class="space"></div>
     <div class="space"></div>
+
+
 </div>
 
 <div id="delete-modal" class="modal">
