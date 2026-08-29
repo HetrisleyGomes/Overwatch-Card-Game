@@ -28,3 +28,9 @@ abrir pacotes, montar decks, participar de eventos e enfrentar outros jogadores.
 - CSS
 - PostgreSQL
 - Socket.IO
+
+
+## Documentação
+
+- https://overwatch-card-game.onrender.com/manual
+- https://overwatch-card-game.onrender.com/gallery

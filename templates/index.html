@@ -9,15 +9,40 @@
         <div><span>{{ user.nome }}</span></div>
     </div>
     <div class="header-item">
-        <div class="header-item">
-            <label class="theme-switch">
-            <input type="checkbox" id="mode-toggle">
-            <span class="slider">
-                <span class="icon">
-                </span>
-            </span>
-        </label>
+        
+        <div class="header-item settings-container">
+            <button class="settings-button premium-button" id="settings-button">
+                ⚙
+            </button>
+
+            <div class="settings-panel" id="settings-panel">
+                <div class="setting">
+                    <span>Tema</span>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="mode-toggle">
+
+                        <span class="slider">
+                            <span class="icon"></span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="setting">
+                    <span>Música</span>
+                    <div class="volume-control">
+                        <span>🔊</span>
+                        <input
+                            type="range"
+                            id="volume-control"
+                            min="0"
+                            max="100"
+                            value="50"
+                        >
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div class="header-item" id="points">{{ _('prisms') }}: <div class="points_box"><span id="pontos">{{ user.impetos }}</span></div></div>
         <div class="header-item" id="points">{{ _('points') }}: <div class="points_box"><span id="pontos">{{ user.pontos }}</span></div></div>
     </div>
@@ -84,6 +109,11 @@
     </a>
 </div>
 <div id="global-tooltip"></div>
+
+<audio id="background-music" autoplay loop>
+  <source src="static/sounds/background.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 <script>
 
     // Tooltips
@@ -127,7 +157,26 @@
     };
 
 
-    // Modo noturno
+    // configs
+    const settingsButton = document.getElementById("settings-button");
+    const settingsPanel = document.getElementById("settings-panel");
+
+    settingsButton.addEventListener("click", () => {
+        settingsPanel.classList.toggle("open");
+    });
+
+    document.addEventListener("click", (event) => {
+
+        if (
+            !settingsPanel.contains(event.target) &&
+            !settingsButton.contains(event.target)
+        ) {
+            settingsPanel.classList.remove("open");
+        }
+
+    });
+
+    //modo noturno
     const toggle = document.getElementById("mode-toggle");
 
     toggle.addEventListener("change", () => {
@@ -143,10 +192,40 @@
     });
 
     const mode = localStorage.getItem("mode") || "light";
-
     document.documentElement.dataset.mode = mode;
     toggle.checked = mode === "dark";
 
+    // musica
+    const music = document.getElementById("background-music");
+    const volumeControl = document.getElementById("volume-control");
+
+    volumeControl.addEventListener("input", () => {
+        const volume = volumeControl.value / 100;
+        music.volume = volume;
+        localStorage.setItem("musicVolume", volume);
+    });
+
+    const savedVolume = localStorage.getItem("musicVolume");
+
+    if (savedVolume !== null) {
+        music.volume = Number(savedVolume);
+        volumeControl.value =
+            Number(savedVolume) * 100;
+    }
+
+    // manter o audio
+    window.addEventListener("beforeunload", () => {
+        localStorage.setItem(
+            "musicTime",
+            music.currentTime
+        );
+    });
+
+    const savedTime = localStorage.getItem("musicTime");
+
+    if (savedTime) {
+        music.currentTime = Number(savedTime);
+    }
     // TEMA
     const selectedTheme = {{ user.theme | tojson }};
     var tema = document.documentElement.dataset.theme;

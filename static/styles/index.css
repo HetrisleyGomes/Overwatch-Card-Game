@@ -284,6 +284,74 @@ input:checked + .slider .icon{
     transform: translateX(36px);
 }
 
+.settings-container {
+    position: relative;
+}
+
+.settings-button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--main-dark-color);
+    border-radius: 50%;
+    background: var(--main-light-color);
+    color: var(--blue-extra-color);
+    cursor: pointer;
+    font-size: 20px;
+    transition: .2s;
+}
+
+.settings-button:hover {
+    transform: rotate(20deg);
+}
+
+.settings-panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 240px;
+    padding: 18px;
+    background: var(--main-light-color);
+    border: 1px solid var(--main-dark-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: .2s;
+    z-index: 1000;
+}
+
+.settings-panel.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 0;
+    & > span {
+        text-shadow: 1px 1px black
+    }
+}
+
+.setting + .setting {
+    border-top: 1px solid var(--main-light-color);
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#volume-control {
+    width: 100px;
+    cursor: pointer;
+}
 /* RESPONSIVIDADE ========================== */
 @media (max-width: 1380px){
     .button {
@@ -343,6 +411,26 @@ input:checked + .slider .icon{
         right: 10px;
     }
 
+    .settings-panel {
+        width: 220px;
+        padding: 15px;
+        right: auto;
+    }
+
+    .setting {
+        gap: 10px;
+    }
+
+    #volume-control {
+        width: 90px;
+    }
+
+    .settings-button {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
 }
 
 @keyframes helpAppearMobile{
@@ -385,8 +473,35 @@ input:checked + .slider .icon{
     .icon{
         width:18px;
         height:18px;
+        right: 6px;
+        top: 6px;
     }
     input:checked + .slider .icon{
-        transform: translateX(20px);
+        transform: translateX(32px);
+    }
+
+    .settings-panel {
+        width: 200px;
+        padding: 12px;
+    }
+
+    .setting {
+        font-size: 16px;
+        gap: 8px;
+    }
+
+    #volume-control {
+        width: 75px;
+    }
+
+    .settings-button {
+        width: 36px;
+        height: 36px;
+        font-size: 17px;
+    }
+
+    .theme-switch {
+        width: 60px;
+        height: 30px;
     }
 }

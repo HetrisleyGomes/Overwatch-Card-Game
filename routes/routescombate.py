@@ -447,6 +447,14 @@ def check_class_and_subclass(classe, subclasse):
             template["escudo"] += 2 if template["escudo"] > 0 else 0
             template["ataque"] += 2 if template["ataque"] > 0 else 0
             template['cura'] += 2 if template['cura'] > 0 else 0
+        case 'Elegante':
+            template["escudo"] += 2 if classe == 'Tanque' else 1
+            template["cura"] += 2 if classe == 'Suporte' else 1
+            template["ataque futuro"] += 2 if classe in ["Dano", "Defensor", "Atacante"] else 1
+        case 'Bardo':
+            template["anti-cura"] += 1
+            template["revitalizar"] += 1
+            template["debilitar"] += 1
     return template
 
 @socketio.on("combate_resolver")
@@ -628,8 +636,7 @@ def finalize_battle(room):
     for player in players:
         user_id = player["id"]
         selected_card_id = selected_cards.get(user_id)
-        print("selected_card_id ================")
-        print(selected_card_id)
+
         if not selected_card_id:
             continue
         card = next(
@@ -642,8 +649,6 @@ def finalize_battle(room):
         if card:
             player["hand"].remove(card)
             player["discarded"].append(card)
-        print("Player ================")
-        print(player)
     
     room["selected_cards"] = {}
 

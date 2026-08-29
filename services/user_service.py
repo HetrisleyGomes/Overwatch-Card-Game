@@ -15,26 +15,24 @@ def verify_date(user, evento = False):
     hoje = datetime.now().date()
     ultimo_login = datetime.strptime(ultimo_login_str, "%Y-%m-%d").date()
     has_change = False
+
     if ultimo_login != hoje:
         user["ultimo_login"] = hoje.strftime("%Y-%m-%d")
         user["packs_diarios_abertos"] = 2
         user["has_already_get_daily_bonus"] = False
 
         ontem = hoje - timedelta(days=1)
-        if ultimo_login == ontem:
+        if ultimo_login == ontem or user["bloqueio_ofensiva"] > 0:
             user["streak"] += 1
             user["pontos"] += int(user["streak"])
             if (user["streak"] % 7) == 0:
                 get_streak_bonus(user)
-        elif user["bloqueio_ofensiva"] > 1:
-            user["streak"] += 1
-            user["pontos"] += int(user["streak"])
-            user["bloqueio_ofensiva"] -= 1
-            if (user["streak"] % 7) == 0:
-                get_streak_bonus(user)
+            if ultimo_login != ontem:
+                user["bloqueio_ofensiva"] -= 1
         else:
             user["streak"] = 1
 
+        # Evento
         if evento:
             user["packs_evento"] += 1
         else:

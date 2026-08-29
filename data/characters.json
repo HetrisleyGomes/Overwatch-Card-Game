@@ -1542,15 +1542,15 @@
     "lang": {
       "br": {
         "nome": "Koi da Dualidade",
-        "entrada": "A paz retorna àqueles que a procuram.",
+        "entrada": "O equilíbrio é encontrado por àqueles que a procuram.",
         "ult_nome": "Lâmina do dragão",
-        "ult": "Ryūjin no ken o kurae!"
+        "ult": "Sinta a lâmina do Yin Yang!"
       },
       "en": {
         "nome": "Koi of Duality",
-        "entrada": "Negaeba heiwa wa otozure yo.",
+        "entrada": "Balance is found by those who wish for it",
         "ult_nome": "Dragonblade",
-        "ult": "Ryūjin no ken o kurae!"
+        "ult": "Yin Yang no ken o kurae!"
       }
     },
     "raridade": "mitico",
