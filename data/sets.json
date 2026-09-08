@@ -1288,8 +1288,8 @@
       "en": {"nome":"M.E.K.A. Forces"}
     },
     "personagens": [
-      "dva_comum",
       "dmon_comum",
+      "dva_comum",
       "horang"
     ],
     "recompensa": {
