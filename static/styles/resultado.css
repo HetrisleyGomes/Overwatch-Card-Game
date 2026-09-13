@@ -57,12 +57,12 @@ h1 {
     background: #16831f;
 }
 
-.pack.halloween {
-    background: #442f6b;
+.pack.aniversary, .pack.overwatch_2{
+    background-color: gold;
 }
 
-.pack.aniversary {
-    background: gold;
+.pack.halloween {
+    background-color: #57398e;
 }
 
 /* PACK ABRINDO */

@@ -345,7 +345,8 @@ def check_class_and_subclass(classe, subclasse):
         "ataque futuro": 0,
         "revitalizar": 0,
         "descuido": 0,
-        "debilitar": 0
+        "debilitar": 0,
+        "armadura": 0
     }
     match classe:
         case 'Tanque':
@@ -371,7 +372,8 @@ def check_class_and_subclass(classe, subclasse):
         case 'Combatente':
             template["ataque"] += 3
         case 'Robusto':
-            template['escudo'] += 3
+            template['escudo'] += 1
+            template['armadura'] += 2
 
         case 'Especialista':
             template['ataque'] += 1
@@ -391,16 +393,26 @@ def check_class_and_subclass(classe, subclasse):
         case 'Socorrista':
             template["cura"] += 3
         case 'Sobrevivente':
-            template["ataque"] += 2
-            template["cura"] += 1
+            template["cura"] += 2
+            template["armadura"] += 1
 
-
+        case 'Assombrado':
+            dano = template["ataque"]
+            template["golpe veloz"] += dano + 2
+            template["anti-cura"] += 1
+        case 'Bardo':
+            template["anti-cura"] += 1
+            template["revitalizar"] += 1
+            template["debilitar"] += 1
         case 'Campeão':
-            template["escudo"] += 2
             template["ataque"] += 1
+            template["armadura"] += 2
         case 'Caçador':
             template["ataque futuro"] += 1
             template["anti-cura"] += 2
+        case 'Carregada':
+            template['ataque'] += 4
+            template["descuido"] += 2
         case 'Classic':
             template["escudo"] += 1
             template["ataque"] += 1
@@ -411,6 +423,10 @@ def check_class_and_subclass(classe, subclasse):
         case 'Cósmico':
             template['escudo'] += 2
             template['cura'] += 1
+        case 'Elegante':
+            template["armadura"] += 2 if classe in ['Tanque', 'Defensor'] else 1
+            template["ataque futuro"] += 2 if classe in ["Dano", "Atacante"] else 1
+            template["cura"] += 2 if classe == 'Suporte' else 0
         case 'Fool':
             for i in range(2):
                 a = random.randrange(1,4)
@@ -424,8 +440,11 @@ def check_class_and_subclass(classe, subclasse):
             template["ataque"] += 2
             template["revitalizar"] += 1
         case 'Guerreiro':
-            template["escudo"] += 1
             template["ataque futuro"] += 2
+            template["armadura"] += 1
+        case 'Justice':
+            template["ataque"] += 2
+            template["armadura"] += 1
         case 'Mirror':
             re, rd, rc = template["escudo"], template["ataque"], template['cura']
             template["escudo"] += rc + 2 if rc > 0 else 0
@@ -435,6 +454,10 @@ def check_class_and_subclass(classe, subclasse):
             template["escudo"] = 0
             template["ataque"] += 4
             template["descuido"] += 2
+        case 'Origem':
+            template["escudo"] += 2 if template["escudo"] > 0 else 0
+            template["ataque"] += 2 if template["ataque"] > 0 else 0
+            template['cura'] += 2 if template["cura"] > 0 else 0
         case 'Perigo':
             template["golpe veloz"] += 2
             template["debilitar"] += 1
@@ -443,19 +466,9 @@ def check_class_and_subclass(classe, subclasse):
             template["anti-cura"] += 2
             template["descuido"] += 2
             template["cura"] = 0
-        case 'Origem':
-            template["escudo"] += 2 if template["escudo"] > 0 else 0
-            template["ataque"] += 2 if template["ataque"] > 0 else 0
-            template['cura'] += 2 if template['cura'] > 0 else 0
-        case 'Elegante':
-            template["escudo"] += 2 if classe == 'Tanque' else 1
-            template["cura"] += 2 if classe == 'Suporte' else 1
-            template["ataque futuro"] += 2 if classe in ["Dano", "Defensor", "Atacante"] else 1
-        case 'Bardo':
-            template["anti-cura"] += 1
-            template["revitalizar"] += 1
-            template["debilitar"] += 1
+        
     return template
+
 
 @socketio.on("combate_resolver")
 def combate_2(data):
@@ -511,6 +524,8 @@ def resolve_battle(room):
         revitalizar = effect_player.get("revitalizar", 0)
         descuido = effect_player.get("descuido", 0)
         debilitar = effect_oponent.get("debilitar", 0)
+        armadura = effect_player.get("armadura", 0)
+
 
         dano_calc = max(0, ataque_recebido - escudo)
         if weaken > 0:
@@ -519,7 +534,7 @@ def resolve_battle(room):
         dano_final = ataque_veloz_recebido + dano_calc + descuido
         cura_final = max(0, cura - anticura_recebido)
 
-        player["hp"] -= dano_final
+        player["hp"] -= max(0 , dano_final - armadura)
         player["hp"] += cura_final
 
         if player["hp"] > 20:

@@ -247,6 +247,25 @@
         }
     },
     {
+        "id": "ow-2-1",
+        "lang": {
+            "br":{
+                "nome": "Overwatch 2",
+                "descricao": "Logo Overwatch 2."  
+            }, "en":{
+                "nome": "Overwatch 2",
+                "descricao": "Overwatch 2 logo."
+            }
+        },
+        "img": "logo_2.png",
+        "price": 500,
+        "rarity": "secreto",
+        "unlock": {
+            "type": "event",
+            "value": "overwatch_2"
+        }
+    },
+    {
         "id": "e-10-anos",
         "lang": {
             "br":{

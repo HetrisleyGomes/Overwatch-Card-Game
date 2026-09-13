@@ -49,5 +49,26 @@
         { "incomum": 50, "epico": 35, "lendario": 10, "ultra": 5 },
         { "epico": 55, "lendario": 45 }
     ]
+  },
+  "overwatch_2": {
+    "cartas_por_pack": 2,
+    "chance": [
+        { "comum": 16, "incomum": 16, "epico": 16, "lendario": 16, "ultra": 16, "mitico": 16 },
+        { "comum": 16, "incomum": 16, "epico": 16, "lendario": 16, "ultra": 16, "mitico": 16 }
+    ]
+  },
+  "halloween": {
+    "cartas_por_pack": 2,
+    "chance": [
+      { "incomum": 75, "epico": 25 },
+      { "incomum": 45, "epico": 55 }
+    ]
+  },
+  "halloween_super": {
+    "cartas_por_pack": 2,
+    "chance": [
+      { "mitico": 100 },
+      { "mitico": 100 }
+    ]
   }
 }

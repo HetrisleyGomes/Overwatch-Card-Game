@@ -368,7 +368,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "kiriko_encharged"
+    ]
   },
   {
     "id": "lifeweaver",
@@ -540,7 +543,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "rainha_junker_encharged"
+    ]
   },
   {
     "id": "ramattra",
@@ -677,7 +683,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens": [
+      "sojourn_encharged"
+    ]
   },
   {
     "id": "soldado_76",
@@ -813,6 +822,7 @@
       "widowmaker_dourado",
       "widowmaker_legado",
       "feiticeira",
+      "dancarina_vazio",
       "dame_chance"
     ],
     "recompensa": {
@@ -1275,10 +1285,11 @@
       "juno_comum",
       "sigma_comum",
       "winston_comum",
-      "wrecking_ball_comum"
+      "wrecking_ball_comum",
+      "dancarina_vazio"
     ],
     "recompensa": {
-      "pontos": 200
+      "pontos": 300
     }
   },
   {
@@ -1764,6 +1775,7 @@
       "voltagem_maxima",
       "aventureira",
       "feiticeira",
+      "dancarina_vazio",
       "pixiu"
     ],
     "recompensa": {
@@ -1827,6 +1839,21 @@
       "orisa_classic",
       "symmetra_classic",
       "torbjorn_classic"
+    ],
+    "recompensa": {
+      "pontos": 1500
+    }
+  },
+  {
+    "id": "overwatch_2_2026",
+    "lang":{
+      "br": {"nome":"Overwatch 2?!"},
+      "en": {"nome":"Overwatch 2?!"}
+    },
+    "personagens": [
+      "kiriko_encharged",
+      "rainha_junker_encharged",
+      "sojourn_encharged"
     ],
     "recompensa": {
       "pontos": 1500

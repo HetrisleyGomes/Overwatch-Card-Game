@@ -27,24 +27,28 @@
         "Socorrista": "Socorrista",
         "Sobrevivente": "Sobrevivente",
 
-        "Campeão": "Campeão",
+        "Assombrado": "Assombrado",
+        "Bardo": "Bardo",
         "Caçador": "Caçador",
+        "Campeão": "Campeão",
+        "Carregada": "Carregada",
         "Classic": "Classic",
         "Coração": "Coração",
         "Cósmico": "Cósmico",
+        "Elegante": "Elegante",
         "Fool": "Fool",
         "Férias": "Férias",
         "Guerreiro": "Guerreiro",
+        "Justice": "Justiceiro",
         "Mirror": "Mirror",
         "Monstro": "Monstro",
+        "Origem": "Origem",
         "Perigo": "Perigo",
         "Perverso": "Perverso",
-        "Origem": "Origem",
-        "Elegante": "Elegante",
-        "Bardo": "Bardo",
 
         "april_fools": "Primeiro de Abril",
-        "aniversary": "Aniversário"
+        "aniversary": "Aniversário",
+        "overwatch_2": "Overwatch 2"
     },
     "en":{
         "comum": "Common",
@@ -54,11 +58,14 @@
         "ultra": "Ultra",
         "lendario": "Legendary",
         "mitico": "Mythic",
+
         "Tanque": "Tank",
         "Dano": "Damage",
         "Suporte": "Support",
+
         "Defensor": "Defender",
         "Atacante": "Attacker",
+
         "Incursor": "Initiator",
         "Combatente": "Bruiser",
         "Robusto": "Stalwart",
@@ -69,23 +76,28 @@
         "Tático": "Tactician",
         "Socorrista": "Medic",
         "Sobrevivente": "Survivor",
-        "Campeão": "Champion",
+
+        "Assombrado": "Spooked",
+        "Bardo": "Bard",
         "Caçador": "Hunter",
+        "Campeão": "Champion",
+        "Carregada": "Encharged",
         "Classic": "Classic",
         "Coração": "Heart",
         "Cósmico": "Cosmic",
+        "Elegante": "Elegant",
         "Fool": "Fool",
         "Férias": "Summer",
         "Guerreiro": "Warrior",
+        "Justice": "Justice",
         "Mirror": "Mirror",
         "Monstro": "Monster",
+        "Origem": "Origin",
         "Perigo": "Danger",
         "Perverso": "Wicked",
-        "Origem": "Origin",
-        "Elegante": "Elegant",
-        "Bardo": "Bard",
 
         "april_fools": "April Fools",
-        "aniversary": "Anniversary"
+        "aniversary": "Anniversary",
+        "overwatch_2": "Overwatch 2"
     }
 }

@@ -47,5 +47,28 @@
       "reaper_dourado"
     ],
     "was_points": 0
+  },
+  {
+    "id": "ow-2-especial",
+    "lang": {
+      "br": {
+        "nome": "Overwatch 2!",
+        "description": "Pacote especial com Rainha Junker mítica: Zeus, Sojourn mítica: Sentinela Ultra-violeta e Kiriko mítica: Amateratsu!"
+      },
+      "en": {
+        "nome": "Overwatch 2!",
+        "description": "Special bundle featuring mythic Junker Queen: Zeus, mythic Sojourn: Ultraviolet Sentinel and mythic Kiriko: Amateratsu!"
+      }
+    },
+    "value": 3,
+    "buy_with_impeto": true,
+    "inicio": "10-01",
+    "fim": "10-10",
+    "itens": [
+      "zeus",
+      "sentinela_ultra-violeta",
+      "amateratsu"
+    ],
+    "was_points": 0
   }
 ]

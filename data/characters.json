@@ -2277,6 +2277,30 @@
     "img": "Kiriko_ow_weapon.png"
   },
   {
+    "id": "kiriko_encharged",
+    "base": "kiriko",
+    "classe": "Suporte",
+    "subclasse": "Carregada",
+    "lang": {
+      "br": {
+        "nome": "Kiriko Carregada",
+        "entrada": "Eu vou encontrar o meu próprio caminho.",
+        "ult_nome": "Super Corrida da kitsune",
+        "ult": "Deixe a Kitsune guiar você!"
+      },
+      "en": {
+        "nome": "Kiriko Encharged",
+        "entrada": "I'll find my own path.",
+        "ult_nome": "Super Kitsune Rush",
+        "ult": "Let the Kitsune guide you!"
+      }
+    },
+    "raridade": "comum",
+    "img": "Kiriko_ow_encharged.png",
+    "evento": "overwatch_2",
+    "foil": true
+  },
+  {
     "id": "lifeweaver_comum",
     "base": "lifeweaver",
     "classe": "Suporte",
@@ -3364,6 +3388,30 @@
     "img": "Junker_Queen_ow_myth.png"
   },
   {
+    "id": "rainha_junker_encharged",
+    "base": "rainha_junker",
+    "classe": "Tanque",
+    "subclasse": "Carregada",
+    "lang": {
+      "br": {
+        "nome": "Rainha Junker Carregada",
+        "entrada": "Meu trono fica onde eu quiser.",
+        "ult_nome": "Super Chacina",
+        "ult": "Aí vem a desforra!"
+      },
+      "en": {
+        "nome": "Junker Queen Encharged",
+        "entrada": "My throne is where I say it is.",
+        "ult_nome": "Super Rampage",
+        "ult": "Time for the reckoning!"
+      }
+    },
+    "raridade": "comum",
+    "img": "Junker_Queen_ow_encharged.png",
+    "evento": "overwatch_2",
+    "foil": true
+  },
+  {
     "id": "ramattra_comum",
     "base": "ramattra",
     "classe": "Tanque",
@@ -4245,6 +4293,30 @@
     "img": "Sojourn_ow_myth_weapon.png"
   },
   {
+    "id": "sojourn_encharged",
+    "base": "sojourn",
+    "classe": "Dano",
+    "subclasse": "Carregada",
+    "lang": {
+      "br": {
+        "nome": "Sojourn Carregada",
+        "entrada": "Estamos nessa juntos. Todos nós.",
+        "ult_nome": "Super Sobrecarga",
+        "ult": "Isso termina agora!"
+      },
+      "en": {
+        "nome": "Sojourn Encharged",
+        "entrada": "We're in this together. All of us.",
+        "ult_nome": "Super Overclock",
+        "ult": "This ends now!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Sojourn_ow_encharged.png",
+    "evento": "overwatch_2",
+    "foil": true
+  },
+  {
     "id": "soldado_76_comum",
     "base": "soldado_76",
     "classe": "Dano",
@@ -5108,6 +5180,28 @@
     "img": "Widowmaker_ow_myth.png"
   },
   {
+    "id": "dancarina_vazio",
+    "base": "widowmaker",
+    "classe": "Dano",
+    "subclasse": "Artilharia",
+    "lang": {
+      "br": {
+        "nome": "Dançarina do Vazio",
+        "entrada": "Minha escuridão é devastadora.",
+        "ult_nome": "Visão infravermelha",
+        "ult": "Ninguém se esconde da noite!"
+      },
+      "en": {
+        "nome": "Void Dancer",
+        "entrada": "Let darnkness devastate.",
+        "ult_nome": "Infra-Sight",
+        "ult": "No one can hide from the night."
+      }
+    },
+    "raridade": "mitico",
+    "img": "Widowmaker_ow_myth.png"
+  },
+  {
     "id": "dame_chance",
     "base": "widowmaker",
     "classe": "Dano",
@@ -5650,27 +5744,5 @@
     "raridade": "incomum",
     "img": "Zenyatta_ow_fool.png",
     "evento": "april_fools"
-  },
-  {
-    "id": "extra",
-    "base": "none",
-    "classe": ".",
-    "subclasse": ".",
-    "lang": {
-      "br": {
-        "nome": "Espaço extra",
-        "entrada": ".",
-        "ult_nome": ".",
-        "ult": "."
-      },
-      "en": {
-        "nome": "Espaço extra",
-        "entrada": ".",
-        "ult_nome": ".",
-        "ult": "."
-      }
-    },
-    "raridade": ".",
-    "img": "."
   }
 ]

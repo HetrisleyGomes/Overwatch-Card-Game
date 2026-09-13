@@ -67,16 +67,32 @@ def open_pack(tipo_pack, lang):
 
 def open_event_pack(id_evento, lang):
     personagens = get_characters()
+    is_super_halloween = False
 
     if id_evento != "summergames":
         personagens_filtrados = [
             p for p in personagens
             if p.get("evento") in [id_evento]
         ]
+    elif id_evento == "halloween":
+        let = random.randrange(0, 100)
+        if let <= 95:
+            personagens_filtrados = [
+                p for p in personagens
+                if p.get("subclasse") in ["Perigo", "Perverso"]
+            ]
+        else:
+            is_super_halloween = True
+            personagens_filtrados = [
+                p for p in personagens
+                if p.get("raridade") in ["mitico"]
+            ]
+            
     else:
         personagens_filtrados = [p for p in personagens if p.get("evento") is None]
+
     golden = []
-    if id_evento == "aniversary":
+    if id_evento in ["aniversary", "overwatch_2"]:
         golden = [
             p for p in personagens
             if p.get("golden_weapon")
@@ -84,12 +100,12 @@ def open_event_pack(id_evento, lang):
 
     # sortear raridade
     packs = get_packs()
-    pack = packs[id_evento]
 
+    pack = packs[id_evento] if not is_super_halloween else packs["halloween_super"]
     cartas = []
 
     # Caso especial: aniversário
-    if id_evento == "aniversary":
+    if id_evento in ["aniversary", "overwatch_2"]:
         carta1 = random.choice(golden)
         carta2 = random.choice(personagens_filtrados)
 

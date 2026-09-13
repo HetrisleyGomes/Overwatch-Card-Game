@@ -17,24 +17,7 @@
     },
     "ativo": false
   },
-  {
-    "id": "halloween",
-    "inicio": "10-19",
-    "fim": "10-31",
-    "lang": {
-      "br": {
-        "nome": "Halloween!",
-        "description": "",
-        "pack_description": ""
-      },
-      "en": {
-        "nome": "Halloween!",
-        "description": "",
-        "pack_description": ""
-      }
-    },
-    "ativo": false
-  },
+  
   {
     "id": "aniversary",
     "inicio": "05-16",
@@ -46,7 +29,7 @@
         "pack_description": "Pacote que garante 1 carta especial do evento e 1 carta lendária de Arma Dourada."
       },
       "en": {
-        "nome": "Aniversário Overwatch!",
+        "nome": "Anniversary Overwatch!",
         "description": "Celebrate another year of Overwatch with special rewards and unique opportunities to expand your collection.",
         "pack_description": "A bundle that guarantees a special event card and a Legendary Golden Weapon card."
       }
@@ -64,7 +47,7 @@
         "pack_description": "Pacote com uma carta exclusiva de evento."
       },
       "en": {
-        "nome": "Primeiro de Abril :p",
+        "nome": "April's First :p",
         "description": "Weird dialogue? Odd sprites? It's all normal for this April Fools' event!",
         "pack_description": "Pack containing an exclusive event card."
       }
@@ -85,6 +68,42 @@
         "nome": "Summer games!",
         "description": "Embrace the competitive spirit of the Summer Games and open special packs with a 5% increased chance of obtaining Epic and Legendary cards.",
         "pack_description": "Pack of 5 random cards, which may contain common, uncommon, epic, or legendary cards."
+      }
+    },
+    "ativo": false
+  },
+  {
+    "id": "overwatch_2",
+    "inicio": "10-01",
+    "fim": "10-10",
+    "lang": {
+      "br": {
+        "nome": "Aniversário? Overwatch 2!",
+        "description": "Uma comemoração bizarra, Overwatch trás esse evento, aproveite-o para ganhar cartas aleatórias, e ter a chance de completar a sua coleção!",
+        "pack_description": "Pacote com 2 cartas de raridades aleatória."
+      },
+      "en": {
+        "nome": "Anniversary Overwatch 2!",
+        "description": "A bizarre celebration, Overwatch brings you this event, take the opportunity to earn random cards and have a chance to complete your collection!",
+        "pack_description": "Pack containing 2 cards of random rarity."
+      }
+    },
+    "ativo": false
+  },
+  {
+    "id": "halloween",
+    "inicio": "10-22",
+    "fim": "10-31",
+    "lang": {
+      "br": {
+        "nome": "Halloween!",
+        "description": "Prepare-se para se assustar com esse pacote repleto de cartas Perigosas e Perversas! Vamos brincar, doces ou travessuras?",
+        "pack_description": "Pacote com 2 cartas das subclasses Perigo e Perverso. Possui 5% de chance de vir 2 cartas míticas no lugar."
+      },
+      "en": {
+        "nome": "Halloween!",
+        "description": "Get ready to get spooked with this pack packed with Dangerous and Wicked cards! Let's play, trick or treat?",
+        "pack_description": "Pack containing 2 cards from the Dangerous and Wicked subclasses. Has a 5% chance of yielding 2 Mythic cards instead."
       }
     },
     "ativo": false

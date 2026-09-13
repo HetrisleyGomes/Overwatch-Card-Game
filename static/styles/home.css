@@ -120,14 +120,14 @@ body {
     background-color: var(--green-extra-color);
 }
 
-.pack.halloween {
-    background-color: #442f6b;
-}
 
-.pack.aniversary {
+.pack.aniversary, .pack.overwatch_2{
     background-color: gold;
 }
 
+.pack.halloween {
+    background-color: #57398e;
+}
 .no-packs-msg {
     font-weight: 600;
     color: var(--main-color);
