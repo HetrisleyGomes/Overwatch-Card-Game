@@ -46,8 +46,8 @@
         { "comum": 100 },
         { "comum": 80, "incomum": 15, "epico": 5 },
         { "comum": 40, "incomum": 30, "epico": 25, "lendario": 5 },
-        { "incomum": 50, "epico": 35, "lendario": 10, "ultra": 5 },
-        { "epico": 55, "lendario": 45 }
+        { "incomum": 50, "epico": 35, "lendario": 15 },
+        { "epico": 50, "lendario": 45, "ultra": 5 }
     ]
   },
   "overwatch_2": {

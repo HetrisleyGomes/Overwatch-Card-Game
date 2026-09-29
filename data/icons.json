@@ -266,6 +266,25 @@
         }
     },
     {
+        "id": "rose_heart",
+        "lang": {
+            "br":{
+                "nome": "Rosa Coração",
+                "descricao": "Ame-se e cuide-se."  
+            }, "en":{
+                "nome": "Rose Heart",
+                "descricao": "Love yourself and take care of yourself."
+            }
+        },
+        "img": "Rose_Heart.png",
+        "price": 0,
+        "rarity": "secreto",
+        "unlock": {
+            "type": "none",
+            "value": "none"
+        }
+    },
+    {
         "id": "e-10-anos",
         "lang": {
             "br":{
@@ -315,6 +334,25 @@
             }
         },
         "img": "Widowmaker_Portrait.png",
+        "price": 200,
+        "rarity": "comum",
+        "unlock": {
+            "type": "nivel",
+            "value": 2
+        }
+    },
+    {
+        "id": "l2-3",
+        "lang": {
+            "br":{
+                "nome": "Orbe de Alma",
+                "descricao": "Reaper passou por aqui." 
+            }, "en":{
+                "nome": "Soul Orb",
+                "descricao": "Reaper was here."
+            }
+        },
+        "img": "Soul_orb.png",
         "price": 200,
         "rarity": "comum",
         "unlock": {
@@ -431,6 +469,25 @@
         "img": "Patinhas.png",
         "price": 200,
         "rarity": "comum",
+        "unlock": {
+            "type": "nivel",
+            "value": 4
+        }
+    },
+    {
+        "id": "l4-3",
+        "lang": {
+            "br":{
+                "nome": "Troféu",
+                "descricao": "O troféu dourado do desafiante."
+            }, "en":{
+                "nome": "Trophy",
+                "descricao": "The challenger's gold trophy."
+            }
+        },
+        "img": "Trophy_icon.png",
+        "price": 500,
+        "rarity": "incomum",
         "unlock": {
             "type": "nivel",
             "value": 4

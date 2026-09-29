@@ -22,6 +22,28 @@
     "img": "Ana_ow.png"
   },
   {
+    "id": "ana_ultrawatch",
+    "base": "ana",
+    "classe": "Suporte",
+    "subclasse": "Justice",
+    "lang": {
+      "br": {
+        "nome": "Ultrawatch Branca",
+        "entrada": "Eu não vou deixar um mundo partido para trás.",
+        "ult_nome": "Nano Boost",
+        "ult": "Você está energizado! Vá para o combate!"
+      },
+      "en": {
+        "nome": "Ultrawatch White",
+        "entrada": "I will not leave a broken world behind.",
+        "ult_nome": "Nano Boost",
+        "ult": "You're powered up, get in there."
+      }
+    },
+    "raridade": "incomum",
+    "img": "Ana_Ultrawatch.png"
+  },
+  {
     "id": "arqui-comandante_amari",
     "base": "ana",
     "classe": "Suporte",
@@ -653,6 +675,28 @@
     "img": "Cassidy_ow.png"
   },
   {
+    "id": "cassidy_ultrawatch",
+    "base": "cassidy",
+    "classe": "Dano",
+    "subclasse": "Justice",
+    "lang": {
+      "br": {
+        "nome": "Ultrawatch Vermelho",
+        "entrada": "Alguém tem que montar nessa sela.",
+        "ult_nome": "Tiro certeiro",
+        "ult": "É hora de acertar as contas!"
+      },
+      "en": {
+        "nome": "Ultrawatch Red",
+        "entrada": "Someone needs to fill this saddle.",
+        "ult_nome": "Deadeye",
+        "ult": "It's high noon!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Cassidy_Ultrawatch.png"
+  },
+  {
     "id": "cassidy_van_helsing",
     "base": "cassidy",
     "classe": "Dano",
@@ -671,7 +715,7 @@
         "ult": "It's high moon!"
       }
     },
-    "raridade": "incomum",
+    "raridade": "epico",
     "img": "Cassidy_ow_vanhelsin.png"
   },
   {
@@ -853,6 +897,28 @@
     },
     "raridade": "lendario",
     "img": "DMon_ow_gold.png"
+  },
+  {
+    "id": "dmon_mademynight",
+    "base": "dmon",
+    "classe": "Tanque",
+    "subclasse": "Robusto",
+    "lang": {
+      "br": {
+        "nome": "D.Mon: Made My Night",
+        "entrada": "Joguem juntos, vençam juntos.",
+        "ult_nome": "Quebra de limites",
+        "ult": "Corte final!"
+      },
+      "en": {
+        "nome": "D.Mon: Made My Night",
+        "entrada": "Play toguether, win together!",
+        "ult_nome": "Limit Break",
+        "ult": "Game Over!"
+      }
+    },
+    "raridade": "ultra",
+    "img": "DMon_ow_made_my_night.png"
   },
   {
     "id": "dva_comum",
@@ -1420,6 +1486,49 @@
     },
     "raridade": "comum",
     "img": "Genji_ow.png"
+  },{
+    "id": "genji_ultrawatch",
+    "base": "genji",
+    "classe": "Dano",
+    "subclasse": "Perigo",
+    "lang": {
+      "br": {
+        "nome": "Ultrawatch Sombrio",
+        "entrada": "A paz retorna àqueles que procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Ryūjin no ken o kurae!"
+      },
+      "en": {
+        "nome": "Ultrawatch Evil",
+        "entrada": "Negaeba heiwa wa otozure yo.",
+        "ult_nome": "Dragonblade",
+        "ult": "Ryūjin no ken o kurae!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Genji_Ultrawatch.png"
+  },
+  {
+    "id": "genji_baihu",
+    "base": "genji",
+    "classe": "Dano",
+    "subclasse": "Guerreiro",
+    "lang": {
+      "br": {
+        "nome": "Baihu",
+        "entrada": "A paz retorna àqueles que a procuram.",
+        "ult_nome": "Lâmina do dragão",
+        "ult": "Byakko no ken o kurae!"
+      },
+      "en": {
+        "nome": "Baihu",
+        "entrada": "Negaeba heiwa wa otozure yo.",
+        "ult_nome": "Dragonblade",
+        "ult": "Byakko no ken o kurae!"
+      }
+    },
+    "raridade": "epico",
+    "img": "Genji_ow_baihu.png"
   },
   {
     "id": "genji_oni",
@@ -1444,26 +1553,26 @@
     "img": "Genji_ow_oni.png"
   },
   {
-    "id": "genji_baihu",
+    "id": "genji_sentai",
     "base": "genji",
     "classe": "Dano",
-    "subclasse": "Guerreiro",
+    "subclasse": "Justice",
     "lang": {
       "br": {
-        "nome": "Baihu",
-        "entrada": "A paz retorna àqueles que a procuram.",
+        "nome": "Sentai Verde",
+        "entrada": "Genji aqui. Henshin!",
         "ult_nome": "Lâmina do dragão",
-        "ult": "Byakko no ken o kurae!"
+        "ult": "Ryūjin no ken o kurae!"
       },
       "en": {
-        "nome": "Baihu",
-        "entrada": "Negaeba heiwa wa otozure yo.",
+        "nome": "Sentai Green",
+        "entrada": "Genji's here. Henshin!",
         "ult_nome": "Dragonblade",
-        "ult": "Byakko no ken o kurae!"
+        "ult": "Ryūjin no ken o kurae!"
       }
     },
     "raridade": "epico",
-    "img": "Genji_ow_baihu.png"
+    "img": "Genji_ow_sentai.png"
   },
   {
     "id": "genji_dourado",
@@ -1601,6 +1710,28 @@
     "img": "Hanzo_ow.png"
   },
   {
+    "id": "hanzo_ultrawatch",
+    "base": "hanzo",
+    "classe": "Dano",
+    "subclasse": "Justice",
+    "lang": {
+      "br": {
+        "nome": "Ultrawatch Roxo",
+        "entrada": "Honra é tudo o que me resta.",
+        "ult_nome": "Golpe do dragão",
+        "ult": "Ryū ga waga teki o kurau!"
+      },
+      "en": {
+        "nome": "Ultrawatch Purple",
+        "entrada": "Honor is all I have left.",
+        "ult_nome": "Dragonstrike",
+        "ult": "Ryū ga waga teki o kurau!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Hanzo_Ultrawatch.png"
+  },
+  {
     "id": "hanzo_okami",
     "base": "hanzo",
     "classe": "Dano",
@@ -1619,7 +1750,7 @@
         "ult": "Ōkami yo, waga teki wo kurae!"
       }
     },
-    "raridade": "incomum",
+    "raridade": "epico",
     "img": "Hanzo_ow_okami.png"
   },
   {
@@ -2217,13 +2348,13 @@
     "subclasse": "Socorrista",
     "lang": {
       "br": {
-        "nome": "Kiriko Miau-miau",
+        "nome": "Kiriko: Miau-miau",
         "entrada": "Eu vou encontrar o meu próprio caminho.",
         "ult_nome": "Corrida da kitsune",
         "ult": "Deixe a Kitsune guiar você!"
       },
       "en": {
-        "nome": "Kiriko Nyan Café",
+        "nome": "Kiriko: Nyan Café",
         "entrada": "I'll find my own path.",
         "ult_nome": "Kitsune Rush",
         "ult": "Let the Kitsune guide you!"
@@ -2295,7 +2426,7 @@
         "ult": "Let the Kitsune guide you!"
       }
     },
-    "raridade": "comum",
+    "raridade": "incomum",
     "img": "Kiriko_ow_encharged.png",
     "evento": "overwatch_2",
     "foil": true
@@ -2934,6 +3065,28 @@
     "img": "Mercy_ow_weapon.png"
   },
   {
+    "id": "mercy_rose",
+    "base": "mercy",
+    "classe": "Suporte",
+    "subclasse": "Socorrista",
+    "lang": {
+      "br": {
+        "nome": "Mercy Rosa",
+        "entrada": "Eu cuidarei de você!",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem!"
+      },
+      "en": {
+        "nome": "Mercy Rose",
+        "entrada": "I'll be watching over you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Heroes never die!"
+      }
+    },
+    "raridade": "ultra",
+    "img": "Mercy_ow_rose.png"
+  },
+  {
     "id": "mizuki_comum",
     "base": "mizuki",
     "classe": "Suporte",
@@ -3024,6 +3177,28 @@
     "img": "Moira_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "moira_mademynight",
+    "base": "moira",
+    "classe": "Suporte",
+    "subclasse": "Socorrista",
+    "lang": {
+      "br": {
+        "nome": "Moira: Made My Night",
+        "entrada": "A humanidade está acorrentada. Eu encontrarei a chave.",
+        "ult_nome": "Coalecência",
+        "ult": "Submetam-se a minha vontade!"
+      },
+      "en": {
+        "nome": "Moira: Made My Night",
+        "entrada": "Humanity is shackled. I will find the key.",
+        "ult_nome": "Coalescence",
+        "ult": "Surrender to my will!"
+      }
+    },
+    "raridade": "ultra",
+    "img": "Moira_ow_made_my_night.png"
   },
   {
     "id": "invocadora_ancestral",
@@ -3406,7 +3581,7 @@
         "ult": "Time for the reckoning!"
       }
     },
-    "raridade": "comum",
+    "raridade": "incomum",
     "img": "Junker_Queen_ow_encharged.png",
     "evento": "overwatch_2",
     "foil": true
@@ -3568,6 +3743,28 @@
     },
     "raridade": "incomum",
     "img": "Reaper_ow_abobora.png"
+  },
+  {
+    "id": "reaper_ultrawatch",
+    "base": "reaper",
+    "classe": "Dano",
+    "subclasse": "Justice",
+    "lang": {
+      "br": {
+        "nome": "Ultrawatch Kabuto",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      },
+      "en": {
+        "nome": "Ultrawatch Kabuto",
+        "entrada": "You can't escape death.",
+        "ult_nome": "Death Blossom",
+        "ult": "Die... die... die..."
+      }
+    },
+    "raridade": "incomum",
+    "img": "Reaper_Ultrawatch.png"
   },
   {
     "id": "reaper_dourado",
@@ -4165,13 +4362,13 @@
     "subclasse": "Reconhecimento",
     "lang": {
       "br": {
-        "nome": "Sierra Miau-miau",
+        "nome": "Sierra: Miau-miau",
         "entrada": "Pra cima sempre, nunca pra baixo.",
         "ult_nome": "Vanguarda explosiva",
         "ult": "De olho no céu!"
       },
       "en": {
-        "nome": "Sierra Nyan Café",
+        "nome": "Sierra: Nyan Café",
         "entrada": "Always climb, never fall.",
         "ult_nome": "Trailblazer",
         "ult": "Eyes on the skies!"
@@ -4223,6 +4420,28 @@
     },
     "raridade": "incomum",
     "img": "Sojourn_ow_almirante_infinito.png"
+  },
+  {
+    "id": "sojourn_ultrawatch",
+    "base": "sojourn",
+    "classe": "Dano",
+    "subclasse": "Justice",
+    "lang": {
+      "br": {
+        "nome": "Ultrawatch Azul",
+        "entrada": "Estamos nessa juntos. Todos nós.",
+        "ult_nome": "Sobrecarga",
+        "ult": "Isso termina agora!"
+      },
+      "en": {
+        "nome": "Ultrawatch Blue",
+        "entrada": "We're in this together. All of us.",
+        "ult_nome": "Overclock",
+        "ult": "This ends now!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Sojourn_Ultrawatch.png"
   },
   {
     "id": "sojourn_dourado",
@@ -5358,6 +5577,28 @@
     },
     "raridade": "comum",
     "img": "Wrecking_ball_ow.png"
+  },
+  {
+    "id": "wrecking_ball_ultrawatch",
+    "base": "wrecking_ball",
+    "classe": "Tanque",
+    "subclasse": "Justice",
+    "lang": {
+      "br": {
+        "nome": "Ultrawatch",
+        "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
+        "ult_nome": "Campo minado",
+        "ult": "Área negada!"
+      },
+      "en": {
+        "nome": "Ultrawatch ball",
+        "entrada": "Weapons operational. Grapple primed. Hamster pumped.",
+        "ult_nome": "Minefield",
+        "ult": "Area denied!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Wrecking_ball_Ultrawatch.png"
   },
   {
     "id": "wrecking_ball_dourado",

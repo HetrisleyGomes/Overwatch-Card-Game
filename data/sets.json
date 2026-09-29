@@ -7,6 +7,7 @@
     },
     "personagens": [
       "ana_comum",
+      "ana_ultrawatch",
       "arqui-comandante_amari",
       "ana_dourado",
       "a-7000_Wargod",
@@ -109,8 +110,9 @@
     },
     "personagens": [
       "cassidy_comum",
-      "cassidy_van_helsing",
+      "cassidy_ultrawatch",
       "cassidy_salvavidas",
+      "cassidy_van_helsing",
       "cassidy_dourado",
       "cassidy_legado",
       "pistoleiro_divino",
@@ -243,8 +245,10 @@
     },
     "personagens": [
       "genji_comum",
-      "genji_oni",
+      "genji_ultrawatch",
+      "genji_sentai",
       "genji_baihu",
+      "genji_oni",
       "genji_dourado",
       "genji_legado",
       "cyber_demonio",
@@ -263,6 +267,7 @@
     },
     "personagens": [
       "hanzo_comum",
+      "hanzo_ultrawatch",
       "hanzo_okami",
       "hanzo_dourado",
       "hanzo_legado",
@@ -461,7 +466,10 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "other_personagens":[
+      "mercy_rose"
+    ]
   },
   {
     "id": "mizuki",
@@ -576,6 +584,7 @@
     "personagens": [
       "reaper_comum",
       "reaper_abobora",
+      "reaper_ultrawatch",
       "reaper_dourado",
       "reaper_hard_light",
       "reaper_legado",
@@ -677,6 +686,7 @@
     "personagens": [
       "sojourn_comum",
       "sojourn_almirante_infinito",
+      "sojourn_ultrawatch",
       "sojourn_dourado",
       "sentinela_ultra-violeta",
       "cristal_eterno"
@@ -856,6 +866,7 @@
     },
     "personagens": [
       "wrecking_ball_comum",
+      "wrecking_ball_ultrawatch",
       "wrecking_ball_dourado"
     ],
     "recompensa": {
@@ -1429,6 +1440,26 @@
     }
   },
   {
+    "id": "ultrawatch",
+    "lang":{
+      "br": {"nome":"Ultrawatch"},
+      "en": {"nome":"Ultrawatch"}
+    },
+    "personagens": [
+      "ana_ultrawatch",
+      "cassidy_ultrawatch",
+      "genji_ultrawatch",
+      "hanzo_ultrawatch",
+      "reaper_ultrawatch",
+      "sojourn_ultrawatch",
+      "wrecking_ball_ultrawatch",
+      "genji_sentai"
+    ],
+    "recompensa": {
+      "pontos": 300
+    }
+  },
+  {
     "id": "egito",
     "lang":{
       "br": {"nome":"Deuses Egipcios"},
@@ -1735,7 +1766,21 @@
       "kiriko_miaumiau"
     ],
     "recompensa": {
-      "pontos": 1600
+      "pontos": 2000
+    }
+  },
+  {
+    "id": "ultra_mademynight",
+    "lang":{
+      "br": {"nome":"Ultra: Made My Night"},
+      "en": {"nome":"Ultra: Made My Night"}
+    },
+    "personagens": [
+      "dmon_mademynight",
+      "moira_mademynight"
+    ],
+    "recompensa": {
+      "pontos": 2000
     }
   },
 
@@ -1779,7 +1824,7 @@
       "pixiu"
     ],
     "recompensa": {
-      "pontos": 2000
+      "pontos": 5000
     }
   },
   {
@@ -1805,7 +1850,7 @@
       "dame_chance"
     ],
     "recompensa": {
-      "pontos": 1500
+      "pontos": 4000
     }
   },
   {

@@ -128,8 +128,11 @@ def result_pack():
 
     user, level_uped = sum_xp(user, xp_gained)
     update_user(connection, user)
+
+    lang = session['lang']
+    classes_tips = get_classes_lang(lang)
     
-    return render_template("resultado.html", cartas = cards, user = user, tipo_pack=rarity, pontos=points, sets=sets, pontos_sets=sets_points, xp_obtido=xp_gained, xp_final=user['xp'], nivel=user['nivel'], level_uped=level_uped)
+    return render_template("resultado.html", cartas = cards, user = user, tipo_pack=rarity, pontos=points, sets=sets, pontos_sets=sets_points, xp_obtido=xp_gained, xp_final=user['xp'], nivel=user['nivel'], level_uped=level_uped, classes_tips=classes_tips)
 
 
 # Inventario =================================

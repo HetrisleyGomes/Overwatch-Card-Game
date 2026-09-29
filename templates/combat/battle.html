@@ -77,6 +77,29 @@
     <div id="global-tooltip"></div>
 </div>
 
+<audio id="background-music" autoplay loop>
+  <source src="static/sounds/battle_background.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<script>
+    // Script da música
+    const music = document.getElementById("background-music");
+    const volumeControl = document.getElementById("volume-control");
+
+    volumeControl.addEventListener("input", () => {
+        const volume = volumeControl.value / 100;
+        music.volume = volume;
+        localStorage.setItem("musicVolume", volume);
+    });
+
+    const savedVolume = localStorage.getItem("musicVolume");
+
+    if (savedVolume !== null) {
+        music.volume = Number(savedVolume);
+        volumeControl.value =
+            Number(savedVolume) * 100;
+    }
+</script>
 <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
 <script>
 const socket = io();

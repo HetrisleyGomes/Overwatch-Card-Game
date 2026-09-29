@@ -1,5 +1,324 @@
 [
   {
+    "id": "cacadores",
+    "nome": "Caçada fatal",
+    "description": "Pacote especial com: Cassidy: Van Helsing, Hanzo: Okami, Sombra: Caçadora de demônio e Widowmaker: Caçadora.",
+    "value": 300,
+    "buy_with_impeto": false,
+    "inicio": "04-20",
+    "fim": "04-27",
+    "itens": [
+      "cassidy_van_helsing",
+      "hanzo_okami",
+      "sombra_cacadora_demonios",
+      "widowmaker_cacadora"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "Olimpo1",
+    "nome": "Deuses e Monstros do Olimpo pt.1",
+    "description": "Pacote especial com: Ramattra Poseidon, Reinhardt Minotauro, e Roadhog Ciclope. +300 Pontos!",
+    "value": 1,
+    "buy_with_impeto": true,
+    "inicio": "04-26",
+    "fim": "05-06",
+    "itens": [
+      "ramattra_poseidon",
+      "reinhardt_minotauro",
+      "roadhog_ciclope",
+      "points"
+    ],
+    "was_points": 300
+  },
+  {
+    "id": "Olimpo2",
+    "nome": "Deuses e Monstros do Olimpo pt.2",
+    "description": "Pacote especial com: Pharah Hades, Mercy vitória alada, e Widowmaker Medusa. +300 Pontos!",
+    "value": 700,
+    "buy_with_impeto": false,
+    "inicio": "05-07",
+    "fim": "05-17",
+    "itens": [
+      "pharah_hades",
+      "mercy_vitoria_alada",
+      "widowmaker_medusa",
+      "points"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "aniversaryPack",
+    "nome": "Pacotaço de aniversário Overwatch!",
+    "description": "Pacote especial com: Pharah Hades, Mercy vitória alada, e Widowmaker Medusa. +1000 Pontos!",
+    "value": 3,
+    "buy_with_impeto": true,
+    "inicio": "05-18",
+    "fim": "05-28",
+    "itens": [
+      "bastion_classic",
+      "doomfist_classic",
+      "orisa_classic",
+      "symmetra_classic",
+      "torbjorn_classic",
+      "points"
+    ],
+    "was_points": 1000
+  },
+  {
+    "id": "helix_dourados",
+    "nome": "Defensores Hélix: Dourados",
+    "description": "Pacote especial com: Pharah dourada, Sierra dourada e Soldado: 76 dourado.",
+    "value": 600,
+    "buy_with_impeto": false,
+    "inicio": "06-01",
+    "fim": "06-10",
+    "itens": [
+      "pharah_dourado",
+      "sierra_dourado",
+      "soldado_76_dourado"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "junkcity_dourados",
+    "nome": "Caos em Nova Junkcity: Dourados",
+    "description": "Pacote especial com: Junkrat dourado, Roadhog dourado e Rainha Junker dourada.",
+    "value": 600,
+    "buy_with_impeto": false,
+    "inicio": "06-10",
+    "fim": "06-20",
+    "itens": [
+      "junkrat_dourado",
+      "hoadhog_dourado",
+      "rainha_junker_dourado"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "cacadores",
+    "nome": "Caçada fatal",
+    "description": "Pacote especial com: Cassidy: Van Helsing, Hanzo: Okami, Sombra: Caçadora de demônio e Widowmaker: Caçadora.",
+    "value": 300,
+    "buy_with_impeto": false,
+    "inicio": "06-20",
+    "fim": "06-30",
+    "itens": [
+      "cassidy_van_helsing",
+      "hanzo_okami",
+      "sombra_cacadora_demonios",
+      "widowmaker_cacadora"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "copa2026",
+    "nome": "Copa 2026",
+    "description": "Pacote especial de copa homenageando os países cede, com: Sojourn dourada do Canadá, Cassidy dourado dos Estados Unidos e Sombra dourada do México.",
+    "value": 600,
+    "buy_with_impeto": false,
+    "inicio": "06-20",
+    "fim": "07-10",
+    "itens": [
+      "sojourn_dourado",
+      "cassidy_dourado",
+      "sombra_dourado"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "watchesrebeldes",
+    "lang": {
+      "br": {
+        "nome": "Watchwers Rebeldes",
+        "description": "Pacote especial com: Ashe Contrabandista, Baptiste Caçador, Doomfist Quebra-ossos, Torbjorn Engenheiro espacial, e Winston Extraterreste."
+      },
+      "en": {
+        "nome": "Watcher Rebellion",
+        "description": "Pacote especial com: Ashe Contrabandista, Baptiste Caçador, Doomfist Quebra-ossos, Torbjorn Engenheiro espacial, e Winston Extraterreste."
+      }
+    },
+    "value": 1000,
+    "buy_with_impeto": false,
+    "inicio": "07-01",
+    "fim": "07-08",
+    "itens": [
+      "ashe_contrabandista",
+      "baptiste_cacador",
+      "doomfist-quebraossos",
+      "torbjorn_engenheiro_espacial",
+      "winston_extraterreste"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "vishkardourados",
+    "lang": {
+      "br": {
+        "nome": "Elite Vishkar: Dourados",
+        "description": "Pacote especial com: Domina dourada, Symmetra dourada e Lifeweaver dourado."
+      },
+      "en": {
+        "nome": "Elite Vishkar: Golden",
+        "description": "Special bundle featuring: Domina: Golden, Symmetra: Golden, and Lifeweaver: Golden."
+      }
+    },
+    "value": 600,
+    "buy_with_impeto": false,
+    "inicio": "07-08",
+    "fim": "07-15",
+    "itens": [
+      "domina_dourado",
+      "symmetra_dourado",
+      "lifeweaver_dourado"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "inversowatch",
+    "lang": {
+      "br": {
+        "nome": "Líderes Inversowatch",
+        "description": "Pacote especial com: Arqui-comandante Amari, Doomfist: Comandante de ataque, Reinhardt: Cavaleiro Caído e Widowmaker: Capitã Lacorix."
+      },
+      "en": {
+        "nome": "Mirrorwatch leaders",
+        "description": "Special bundle featuring: Arch-Commandant Amari, Doomfist: Strike Commander, Reinhardt: Fallen Knight, and Widowmaker: Captain Lacorix."
+      }
+    },
+    "value": 800,
+    "buy_with_impeto": false,
+    "inicio": "07-15",
+    "fim": "07-22",
+    "itens": [
+      "arqui-comandante_amari",
+      "comandante_ataque",
+      "fallen_knight",
+      "capita_lacroix"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "blackwatch_dourados",
+    "lang": {
+      "br": {
+        "nome": "Agentes Blackwatch: Dourados",
+        "description": "Pacote especial com: Cassidy dourado, Genji dourado, Moira dourada e Reaper dourado."
+      },
+      "en": {
+        "nome": "Blackwatch Agents: Golden",
+        "description": "Special bundle featuring: Cassidy: Golden, Genji: Golden, Moira: Golden, and Reaper: Golden."
+      }
+    },
+    "value": 300,
+    "buy_with_impeto": false,
+    "inicio": "07-26",
+    "fim": "07-30",
+    "itens": [
+      "cassidy_dourado",
+      "genji_dourado",
+      "moira_dourado",
+      "reaper_dourado"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "ironclad_dourados",
+    "lang": {
+      "br": {
+        "nome": "Família Ironclad: Dourados",
+        "description": "Pacote especial com: Bastion, Brigitte, Jetpack Cat, Reinhardt e Torbjörn, todos dourados."
+      },
+      "en": {
+        "nome": "Ironclad Clan: Golden",
+        "description": "Special bundle featuring: Bastion, Brigitte, Jetpack Cat, Reinhardt e Torbjörn, all Golden."
+      }
+    },
+    "value": 1000,
+    "buy_with_impeto": false,
+    "inicio": "08-01",
+    "fim": "08-09",
+    "itens": [
+      "bastion_dourado",
+      "brigitte_dourado",
+      "jetpack_cat_dourado",
+      "reinhardt_dourado",
+      "torbjorn_dourado"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "snipers_dourados",
+    "lang": {
+      "br": {
+        "nome": "Snipers: Dourados",
+        "description": "Pacote especial com: Ashe, Hanzo e Widowmaker, todos dourados."
+      },
+      "en": {
+        "nome": "Snipers: Golden",
+        "description": "Special bundle featuring: Ashe, Hanzo e Widowmaker, all golden."
+      }
+    },
+    "value": 600,
+    "buy_with_impeto": false,
+    "inicio": "08-08",
+    "fim": "08-16",
+    "itens": [
+      "ashe_dourado",
+      "hanzo_dourado",
+      "widowmaker_dourado"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "hard_light_prom",
+    "lang": {
+      "br": {
+        "nome": "Luz Sólida+",
+        "description": "Pacote especial com: Mercy, Reaper e Reinhardt, todos na variação Hard light, e Echo padrão."
+      },
+      "en": {
+        "nome": "Hard Light+",
+        "description": "Special bundle featuring: Mercy, Reaper e Reinhardt, all in Hard light, and default Echo."
+      }
+    },
+    "value": 1000,
+    "buy_with_impeto": false,
+    "inicio": "08-15",
+    "fim": "08-23",
+    "itens": [
+      "echo_comum",
+      "mercy_hard_light",
+      "reaper_hard_light",
+      "reinhardt_hard_light"
+    ],
+    "was_points": 0
+  },
+  {
+    "id": "starlight",
+    "lang": {
+      "br": {
+        "nome": "Estrelas cadente: Dourados",
+        "description": "Pacote especial com: Juno, Winston e Wrecking Ball, todos dourados. +500 Pontos!"
+      },
+      "en": {
+        "nome": "Star lights: Golden",
+        "description": "Special bundle featuring: Juno, Winston e Wrecking Ball, all Golden. +500 Points!"
+      }
+    },
+    "value": 1000,
+    "buy_with_impeto": false,
+    "inicio": "08-22",
+    "fim": "08-31",
+    "itens": [
+      "juno_dourado",
+      "winston_dourado",
+      "wrecking_ball_dourado",
+      "points"
+    ],
+    "was_points": 500
+  },
+  {
     "id": "dokiwatch",
     "lang": {
       "br": {
@@ -49,6 +368,29 @@
     "was_points": 0
   },
   {
+    "id": "mercy_rose",
+    "lang": {
+      "br": {
+        "nome": "Autocuidados",
+        "description": "Neste mês de outubro, o foco é o autocuidado e a prevenção do câncer de mama. Receba este pacote especial com Mercy Rosa e o Ícone de jogador Rosa Coração."
+      },
+      "en": {
+        "nome": "Mercyfull-Care",
+        "description": "This October, the focus is on self-care and breast cancer prevention. Get this special bundle featuring Mercy Rose and the Rose Heart Player Icon."
+      }
+    },
+    "value": 1,
+    "buy_with_impeto": false,
+    "inicio": "10-01",
+    "fim": "10-10",
+    "itens": [
+      "mercy_rose"
+    ],
+    "icon": [
+      "rose_heart"
+    ],
+    "was_points": 0
+  }, {
     "id": "ow-2-especial",
     "lang": {
       "br": {
@@ -70,5 +412,42 @@
       "amateratsu"
     ],
     "was_points": 0
+  }, {
+    "id": "anima_dourado",
+    "lang": {
+      "br": {
+        "nome": "Usuários Anima: Dourados",
+        "description": "Pacote especial com: Kiriko, Mizuki e Shion todos dourados."
+      },
+      "en": {
+        "nome": "Anima Forces: Golden",
+        "description": "Special bundle featuring: Kiriko, Mizuki and Shion all golden."
+      }
+    },
+    "value": 500,
+    "buy_with_impeto": false,
+    "inicio": "10-11",
+    "fim": "10-20",
+    "itens": [
+      "kiriko_dourado",
+      "mizuki_dourado",
+      "shion_dourado"
+    ],
+    "was_points": 0
+  }, {
+    "id": "helix_dourados",
+    "nome": "Defensores Hélix: Dourados",
+    "description": "Pacote especial com: Pharah dourada, Sierra dourada e Soldado: 76 dourado.",
+    "value": 600,
+    "buy_with_impeto": false,
+    "inicio": "10-21",
+    "fim": "10-30",
+    "itens": [
+      "pharah_dourado",
+      "sierra_dourado",
+      "soldado_76_dourado"
+    ],
+    "was_points": 0
   }
+  
 ]

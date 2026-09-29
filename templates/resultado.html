@@ -37,7 +37,7 @@
                                 </div>
 
                                 <div class="card-classe">
-                                    {{ carta.classe }} — {{ carta.subclasse }}
+                                    {{ classes_tips[carta.classe] }} — {{ classes_tips[carta.subclasse] }}
                                 </div>
 
                                 <div class="card-texto">
@@ -113,8 +113,7 @@
     </div>
 </div>
 
-<audio id="background-music" autoplay>
-  <source src="static/sounds/open_pack.mp3" type="audio/mpeg">
+<audio id="background-music">
   Your browser does not support the audio element.
 </audio>
 
@@ -175,7 +174,6 @@ function calcularPosicao(index, total) {
 }
 
 function iniciarAnimacao() {
-
     // Abrir pack
     setTimeout(() => {
         pack.classList.add("abrir");
@@ -200,7 +198,7 @@ function iniciarAnimacao() {
                         calc(-50% + ${pos.y}px)
                     )
                 `;
-                // virar carta
+                // virar
                 setTimeout(() => {
                     carta.classList.add("flip");
                 }, 400);
@@ -224,6 +222,17 @@ function removerPorClasse(classe) {
     const elementos = document.querySelectorAll("." + classe);
     elementos.forEach(el => el.remove());
 }
+
+    // musica
+    const tipoPack = {{ tipo_pack | tojson }};
+    const music = document.getElementById("background-music");
+    if (tipoPack === "radiante") {
+        music.src = "{{ url_for('static', filename='sounds/open_radiant_pack.mp3') }}";
+    } else {
+        music.src = "{{ url_for('static', filename='sounds/open_pack.mp3') }}";
+    }
+    music.load();
+    music.play();
 window.onload = iniciarAnimacao;
 </script>
 {% endblock %}
