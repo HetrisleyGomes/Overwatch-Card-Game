@@ -223,16 +223,17 @@ function removerPorClasse(classe) {
     elementos.forEach(el => el.remove());
 }
 
-    // musica
-    const tipoPack = {{ tipo_pack | tojson }};
-    const music = document.getElementById("background-music");
-    if (tipoPack === "radiante") {
-        music.src = "{{ url_for('static', filename='sounds/open_radiant_pack.mp3') }}";
-    } else {
-        music.src = "{{ url_for('static', filename='sounds/open_pack.mp3') }}";
-    }
-    music.load();
-    music.play();
+// musica
+const tipoPack = {{ tipo_pack | tojson }};
+const music = document.getElementById("background-music");
+if (tipoPack === "radiante") {
+    music.src = "{{ url_for('static', filename='sounds/open_radiant_pack.mp3') }}";
+} else {
+    music.src = "{{ url_for('static', filename='sounds/open_pack.mp3') }}";
+}
+music.load();
+music.play();
+
 window.onload = iniciarAnimacao;
 </script>
 {% endblock %}

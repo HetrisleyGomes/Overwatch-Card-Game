@@ -237,8 +237,7 @@ function selecionarImagem(img) {
     });
 }
 
-function selecionarTheme(tema_id){
-
+async function selecionarTheme(tema_id){
     fetch("/atualizar-tema", {
         method: "POST",
         headers: {
@@ -247,9 +246,15 @@ function selecionarTheme(tema_id){
         body: JSON.stringify({ tema: tema_id })
     });
     document.documentElement.dataset.theme = tema_id
-
     localStorage.setItem("theme", tema_id);
+
+    setTimeout(() => {
+        loadThemeMusic();
+    }, 1000);
+    
 }
+
+
 
 const modal = document.getElementById("delete-modal");
 

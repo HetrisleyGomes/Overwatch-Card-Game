@@ -110,13 +110,11 @@
 </div>
 <div id="global-tooltip"></div>
 
-<audio id="background-music" autoplay loop>
-  <source src="static/sounds/background.mp3" type="audio/mpeg">
+<audio id="background-music" loop autoplay>
   Your browser does not support the audio element.
 </audio>
 <script>
-
-    // Tooltips
+    // Tooltips -------------------------------
     const tooltip = document.getElementById("global-tooltip");
     function initializeTooltips() {
         document.addEventListener("mousemove", (e) => {
@@ -143,7 +141,7 @@
         });
     }
 
-    // Botão de ajuda
+    // Botão de ajuda -------------------------------------------
     function openHelp(){
         document.getElementById("help-modal").classList.add("show");
     }
@@ -157,7 +155,7 @@
     };
 
 
-    // configs
+    // configs ---------------------------------------------
     const settingsButton = document.getElementById("settings-button");
     const settingsPanel = document.getElementById("settings-panel");
 
@@ -176,7 +174,7 @@
 
     });
 
-    //modo noturno
+    // modo noturno -----------------------------------------
     const toggle = document.getElementById("mode-toggle");
 
     toggle.addEventListener("change", () => {
@@ -195,22 +193,51 @@
     document.documentElement.dataset.mode = mode;
     toggle.checked = mode === "dark";
 
-    // musica
+    // musica ------------------------------------------
     const music = document.getElementById("background-music");
     const volumeControl = document.getElementById("volume-control");
-
+    const savedVolume = localStorage.getItem("musicVolume");
+    let savedTrack = localStorage.getItem("savedTrack");
+    
     volumeControl.addEventListener("input", () => {
         const volume = volumeControl.value / 100;
         music.volume = volume;
         localStorage.setItem("musicVolume", volume);
     });
 
-    const savedVolume = localStorage.getItem("musicVolume");
+    async function loadThemeMusic(theme=null) {
+        try {
+            const response = await fetch("/api/theme-music");
+            if (!response.ok) {
+                throw new Error("Erro ao buscar música do tema");
+            }
+
+            const data = await response.json();
+            if (!data.url) {
+                return;
+            }
+
+            console.log(data)
+            savedTrack = data.url;
+            localStorage.setItem("savedTrack", savedTrack);
+            
+            music.src = savedTrack;
+            music.load();
+        } catch (error) {
+            console.error("Não foi possível carregar a música do tema:", error);
+        }
+    }
 
     if (savedVolume !== null) {
         music.volume = Number(savedVolume);
         volumeControl.value =
             Number(savedVolume) * 100;
+    }
+
+    if (savedTrack) {
+        music.src = savedTrack;
+    } else {
+        loadThemeMusic();
     }
 
     // manter o audio
@@ -226,7 +253,8 @@
     if (savedTime) {
         music.currentTime = Number(savedTime);
     }
-    // TEMA
+
+    // TEMA -----------------------------------------------
     const selectedTheme = {{ user.theme | tojson }};
     var tema = document.documentElement.dataset.theme;
     if (tema != selectedTheme){

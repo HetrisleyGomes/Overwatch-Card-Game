@@ -581,3 +581,32 @@ def update_user(conn, user):
     ctll = UserController(repo)
     ctll.edit_user(user['id'], user)
     update_session_user(ctll)
+
+@main.route("/api/theme-music")
+def theme_music():
+    print("veio")
+    user_id = session.get("user_id")
+
+    if not user_id: return {"url": None}
+    print("passou 1")
+
+    user = session['user_data']
+    theme = user["theme"]
+
+    print("passou 2")
+    print(theme)
+
+    if theme == "anubis_temple-theme":
+        return {
+            "url": url_for(
+                "static",
+                filename="sounds/legendary_themes/background_anubis.mp3"
+            )
+        }
+    else:
+        return {
+            "url": url_for(
+                "static",
+                filename="sounds/background.mp3"
+            )
+        }
