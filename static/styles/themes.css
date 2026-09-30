@@ -98,6 +98,43 @@
   );
 }
 
+:root[data-theme="eichenwalde-theme"] {
+    /* Interface */
+    --main-color: #a4acae;
+    --main-dark-color: #717981;
+    --main-light-color: #9cabd5;
+    --darkest-color: #373f45;
+
+    /* Neutros */
+    --cinza: #7b969b;
+    --cinza-claro: #cfdee3;
+
+    /* Texto */
+    --dark-text: #2b4d73;
+    --light-text: #ffffff;
+
+    /* Barras de XP */
+    --xp-color-1: #81fa97;
+    --xp-color-2: #03e552;
+
+    /* Cores auxiliares */
+    --green-extra-color: #8cc339;
+
+    /* Buttons */
+    --button: linear-gradient(
+        #c4d040,
+        #b78e50
+    );
+
+    --button-hover: linear-gradient(
+        #af9740,
+        #70582d
+    );
+}
+:root[data-theme="eichenwalde-theme"][data-mode="dark"]{  
+  --dark-text: var(--main-light-color);
+}
+
 :root[data-theme="anubis_temple-theme"] {
   --fixed-color-2: #ffe480;
 

@@ -79,13 +79,13 @@
     "lang": {
       "br": {
         "nome": "Aniversário? Overwatch 2!",
-        "description": "Uma comemoração bizarra, Overwatch trás esse evento, aproveite-o para ganhar cartas aleatórias, e ter a chance de completar a sua coleção!",
-        "pack_description": "Pacote com 2 cartas de raridades aleatória."
+        "description": "Uma segunda comemoração? A história de overwatch segue viva, aproveite-o para ganhar cartas aleatórias, e ter a chance de completar a sua coleção!",
+        "pack_description": "Pacote com 2 cartas de raridades aleatória, sendo uma delas especial de evento."
       },
       "en": {
         "nome": "Anniversary Overwatch 2!",
-        "description": "A bizarre celebration, Overwatch brings you this event, take the opportunity to earn random cards and have a chance to complete your collection!",
-        "pack_description": "Pack containing 2 cards of random rarity."
+        "description": "A second celebration? The Overwatch story lives on, take the opportunity to earn random cards and have a chance to complete your collection!",
+        "pack_description": "Pack containing 2 cards of random rarity, one of which is a special event card."
       }
     },
     "ativo": false

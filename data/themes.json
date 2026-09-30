@@ -71,6 +71,24 @@
         }
     },
     {
+        "id": "eichenwalde-theme",
+        "lang": {
+            "br":{
+                "nome": "Eichenwalde",
+                "descricao": "Explore castelos e masmorras, em Eichenwalde." 
+            }, "en":{
+                "nome": "Eichenwalde",
+                "descricao": "Explore castles and dungeons in Eichenwalde."
+            }
+        },
+        "price": 2000,
+        "rarity": "comum",
+        "preview": "#a4acae",
+        "unlock": {
+            "type": "purchase"
+        }
+    },
+    {
         "id": "anubis_temple-theme",
         "lang": {
             "br":{
