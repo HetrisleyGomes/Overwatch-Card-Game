@@ -529,6 +529,7 @@
     },
     "personagens": [
       "pharah_comum",
+      "pharah_mechaqueen",
       "pharah_hades",
       "pharah_dourado",
       "pharah_legado"
@@ -583,8 +584,9 @@
     },
     "personagens": [
       "reaper_comum",
-      "reaper_abobora",
+      "reaper_calafrio",
       "reaper_ultrawatch",
+      "reaper_abobora",
       "reaper_dourado",
       "reaper_hard_light",
       "reaper_legado",
@@ -1279,6 +1281,7 @@
       "brigitte_capita_real",
       "genji_baihu",
       "mercy_sigrun",
+      "pharah_mechaqueen",
       "soldado_76_guarda_infinito",
       "aventureira"
     ],

@@ -3404,6 +3404,28 @@
     "img": "Pharah_ow.png"
   },
   {
+    "id": "pharah_mechaqueen",
+    "base": "pharah",
+    "classe": "Dano",
+    "subclasse": "Guerreiro",
+    "lang": {
+      "br": {
+        "nome": "Rainha Mecha",
+        "entrada": "Sistemas Raptorianos online.",
+        "ult_nome": "Bombardeio",
+        "ult": "A justiça vem de cima!"
+      },
+      "en": {
+        "nome": "Mechaqueen",
+        "entrada": "Raptorion systems online.",
+        "ult_nome": "Barrage",
+        "ult": "Justice rains from above!"
+      }
+    },
+    "raridade": "epico",
+    "img": "Pharah_ow_rainha_mecha.png"
+  },
+  {
     "id": "pharah_hades",
     "base": "pharah",
     "classe": "Dano",
@@ -3723,26 +3745,26 @@
     "img": "Reaper_ow.png"
   },
   {
-    "id": "reaper_abobora",
+    "id": "reaper_calafrio",
     "base": "reaper",
     "classe": "Dano",
-    "subclasse": "Perverso",
+    "subclasse": "Perigo",
     "lang": {
       "br": {
-        "nome": "Abóbora",
+        "nome": "Calafrio",
         "entrada": "Você não pode escapar da morte.",
         "ult_nome": "Desabrochar da morte",
-        "ult": "O ceifador vem pela sua alma!"
+        "ult": "Morram, morram, morram!"
       },
       "en": {
-        "nome": "Abóbora",
+        "nome": "Shiver",
         "entrada": "The Reaper comes for your souls.",
         "ult_nome": "Death Blossom",
         "ult": "Die... die... die..."
       }
     },
     "raridade": "incomum",
-    "img": "Reaper_ow_abobora.png"
+    "img": "Reaper_ow_calafrio.png"
   },
   {
     "id": "reaper_ultrawatch",
@@ -3765,6 +3787,28 @@
     },
     "raridade": "incomum",
     "img": "Reaper_Ultrawatch.png"
+  },
+  {
+    "id": "reaper_abobora",
+    "base": "reaper",
+    "classe": "Dano",
+    "subclasse": "Perverso",
+    "lang": {
+      "br": {
+        "nome": "Abóbora",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "O ceifador vem pela sua alma!"
+      },
+      "en": {
+        "nome": "Pumpkin",
+        "entrada": "The Reaper comes for your souls.",
+        "ult_nome": "Death Blossom",
+        "ult": "The Reaper comes for your souls!"
+      }
+    },
+    "raridade": "epico",
+    "img": "Reaper_ow_abobora.png"
   },
   {
     "id": "reaper_dourado",
