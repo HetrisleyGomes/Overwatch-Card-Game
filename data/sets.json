@@ -158,6 +158,20 @@
     }
   },
   {
+    "id": "doctrine",
+    "lang":{
+      "br": {"nome":"Doctrine"},
+      "en": {"nome":"Doctrine"}
+    },
+    "personagens": [
+      "doctrine_comum",
+      "doctrine_dourado"
+    ],
+    "recompensa": {
+      "pontos": 100
+    }
+  },
+  {
     "id": "domina",
     "lang":{
       "br": {"nome":"Domina"},
@@ -405,7 +419,8 @@
       "lucio_principe_espaco",
       "lucio_hermes",
       "lucio_dourado",
-      "lucio_legado"
+      "lucio_legado",
+      "caos_sonoro"
     ],
     "recompensa": {
       "pontos": 100
@@ -1103,21 +1118,33 @@
     }
   },
   {
-    "id": "talon",
+    "id": "reinado_talon",
     "lang":{
-      "br": {"nome":"Talon"},
-      "en": {"nome":"Talon"}
+      "br": {"nome":"Reinado Talon"},
+      "en": {"nome":"Reign Talon"}
     },
     "personagens": [
-      "baptiste_comum",
-      "doomfist_comum",
       "emre_comum",
       "freja_comum",
       "mauga_comum",
       "moira_comum",
-      "sigma_comum",
+      "vendetta_comum"
+    ],
+    "recompensa": {
+      "pontos": 200
+    }
+  },
+  {
+    "id": "talon",
+    "lang":{
+      "br": {"nome":"A Talon"},
+      "en": {"nome":"The Talon"}
+    },
+    "personagens": [
+      "doctrine_comum",
+      "doomfist_comum",
+      "reaper_comum",
       "sombra_comum",
-      "vendetta_comum",
       "widowmaker_comum"
     ],
     "recompensa": {
@@ -1844,6 +1871,7 @@
       "rebelde_toquio",
       "atiradora_das_estrelas",
       "guardia_espiritual",
+      "caos_sonoro",
       "magitecnologia_misericordiosa",
       "canhao_capsulas",
       "aco_letal",

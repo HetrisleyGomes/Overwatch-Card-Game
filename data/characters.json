@@ -1057,6 +1057,51 @@
     "img": "DVa_ow_myth.png"
   },
   {
+    "id": "doctrine_comum",
+    "base": "doctrine",
+    "classe": "Suporte",
+    "subclasse": "Sobrevivente",
+    "lang": {
+      "br": {
+        "nome": "Doctrine",
+        "entrada": "A morte não é o meu destino.",
+        "ult_nome": "Libertação",
+        "ult": "Reconheçam a sua salvação!"
+      },
+      "en": {
+        "nome": "Doctrine",
+        "entrada": "Death is not my destiny.",
+        "ult_nome": "Deliverance",
+        "ult": "Embrace your salvation!"
+      }
+    },
+    "raridade": "comum",
+    "img": "Doctrine_ow.png"
+  },
+  {
+    "id": "doctrine_dourado",
+    "base": "doctrine",
+    "classe": "Suporte",
+    "subclasse": "Sobrevivente",
+    "lang": {
+      "br": {
+        "nome": "Doctrine Dourado",
+        "entrada": "A morte não é o meu destino.",
+        "ult_nome": "Libertação",
+        "ult": "Reconheçam a sua salvação!"
+      },
+      "en": {
+        "nome": "Doctrine: Golden",
+        "entrada": "Death is not my destiny.",
+        "ult_nome": "Deliverance",
+        "ult": "Embrace your salvation!"
+      }
+    },
+    "raridade": "lendario",
+    "img": "Doctrine_ow_gold.png",
+    "icon_ref": "golden.png"
+  },
+  {
     "id": "domina_comum",
     "base": "domina",
     "classe": "Tanque",
@@ -2634,6 +2679,28 @@
     "raridade": "legado",
     "img": "Lucio_ow_jade.png",
     "icon_ref": "jade.png"
+  },
+  {
+    "id": "caos_sonoro",
+    "base": "lucio",
+    "classe": "Suporte",
+    "subclasse": "Tático",
+    "lang": {
+      "br": {
+        "nome": "Lúcio: Caos sonoro",
+        "entrada": "A gente chegou pra esculachar.",
+        "ult_nome": "Barreira de som",
+        "ult": "Vamo esculachar!"
+      },
+      "en": {
+        "nome": "Lúcio: Treblemaker",
+        "entrada": "We're here to be heard!",
+        "ult_nome": "Sound Barrier",
+        "ult": "Oh, let's break it down!"
+      }
+    },
+    "raridade": "mitico",
+    "img": "Lucio_ow_myth_weapon.png"
   },
   {
     "id": "lucio_fool",
@@ -4261,7 +4328,7 @@
       }
     },
     "raridade": "lendario",
-    "img": "Shion_ow.png"
+    "img": "Shion_ow_gold.png"
   },
   {
     "id": "sigma_comum",
@@ -4739,8 +4806,8 @@
   {
     "id": "sombra_comum",
     "base": "sombra",
-    "classe": "Dano",
-    "subclasse": "Reconhecimento",
+    "classe": "Suporte",
+    "subclasse": "Tático",
     "lang": {
       "br": {
         "nome": "Sombra",
@@ -4761,7 +4828,7 @@
   {
     "id": "sombra_cacadora_demonios",
     "base": "sombra",
-    "classe": "Dano",
+    "classe": "Suporte",
     "subclasse": "Caçador",
     "lang": {
       "br": {
@@ -4783,8 +4850,8 @@
   {
     "id": "sombra_dourado",
     "base": "sombra",
-    "classe": "Dano",
-    "subclasse": "Reconhecimento",
+    "classe": "Suporte",
+    "subclasse": "Tático",
     "lang": {
       "br": {
         "nome": "Sombra Dourada",
@@ -5462,7 +5529,7 @@
       }
     },
     "raridade": "mitico",
-    "img": "Widowmaker_ow_myth.png"
+    "img": "Widowmaker_ow_myth_2.png"
   },
   {
     "id": "dame_chance",
