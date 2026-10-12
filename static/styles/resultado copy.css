@@ -1,0 +1,261 @@
+.container {
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: var(--main-color);
+    text-align: center;
+    
+}
+
+/* AREA */
+.area {
+    position: relative;
+    height: 300px;
+    margin-top: 50px;
+}
+
+/* PACK */
+.pack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 210px;
+    margin: auto;
+    border-radius: 10px;
+    position: relative;
+    top: 100px;
+    animation: packEntrada 0.6s ease;
+}
+
+
+.pack.comum {
+    background: var(--pack-common-color);
+}
+
+.pack.raro {
+    background: var(--pack-rare-color);
+}
+
+.pack.radiante {
+    background: var(--pack-radiant-color);
+}
+
+/* EVENTOS */
+.pack.april_fools {
+    background: #e2d667;
+    color: var(--main-color);
+}
+
+.pack.summergames {
+    background: var(--blue-extra-color);
+}
+
+.pack.natal {
+    background: #16831f;
+}
+
+.pack.aniversary, .pack.overwatch_2{
+    background-color: gold;
+}
+
+.pack.halloween {
+    background-color: #57398e;
+}
+
+/* PACK ABRINDO */
+.pack.abrir {
+    animation: packAbrir 0.5s forwards;
+}
+
+@keyframes packAbrir {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+/* CARTAS */
+.area-cards {
+    width: 100%;
+}
+
+.carta-container {
+    position: absolute;
+    left: 50%;
+    top: 120%;
+    transform: translate(-50%, 0);
+    perspective: 1000px;
+    opacity: 0;
+    width: 230px;
+    height: 320px;
+}
+
+.carta-container.flip {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.card-pack {
+    transform: scale(0.7);
+    transform-origin: center;
+}
+
+/* CARTA INTERNA (flip) */
+.carta-inner {
+    width: 120px;
+    height: 180px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* VIRAR */
+.carta-container.flip .carta-inner {
+    transform: rotateY(180deg);
+}
+
+/* FACES */
+.carta-front, .carta-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* FRENTE */
+.carta-front {
+    transform: rotateY(180deg);
+}
+
+/* VERSO */
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
+}
+
+.card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pontos_div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 0;
+    gap: 50px;
+    margin: auto;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.pontos_subdiv {
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.pontos {
+    color: #e67e22;
+    margin-left: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+    width: 500px;
+    margin: auto;
+}
+
+.button {
+    background-color: var(--main-color);
+    border: none;
+    width: 180px;
+    padding: 20px 0;
+    border-radius: 8px;
+    color: var(--light-text);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--main-light-color);
+}
+
+/* RESPONSIVIDADE ========================== */
+@media (max-width: 1380px) {
+    .carta-front, .carta-back{
+        width: auto;
+    }
+    .carta-container {
+        width: 0;
+    }
+}
+@media (max-width: 768px) {
+    /* AREA */
+    .area {
+        height: 140px;
+    }
+    /* CARTAS */
+    .area-cards {
+        transform: scale(0.9);
+        margin-top: 20vh;
+    }
+    .pack {
+        width: 150px;
+        height: 210px;
+    }
+    .carta-front, .carta-back {
+        width: 100%;
+    }
+    .carta-inner {
+        width: 120px;
+    }
+
+    /* BOTÕES */
+    .button {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .pontos_div {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .buttons {
+        width: 270px;
+    }
+    .button {
+        width: 120px;
+    }
+    .pontos_div {
+        font-size: 14px;
+        align-items: flex-start
+    }
+    .pontos_subdiv {
+        width: 300px;
+        text-align: center;
+    }
+    /* CARTAS */
+    .area-cards {
+        margin-top: 30vh;
+    }
+    .carta-container {
+        width: 160px;
+        height: 210px;
+    }
+    .carta-inner {
+        width: 100px;
+        height: 160px;
+    }
+}

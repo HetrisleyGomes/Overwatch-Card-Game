@@ -5,62 +5,19 @@
 <div class="container">
     <h1>Cartas recebidas</h1>
 
-    <div class="area">
-        <!-- PACK -->
-        <div id="pack" class="pack {{ tipo_pack }}"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy"></div>
-
-        <div class="area-cards">
-            {% for carta in cartas %}
-                <div class="carta-container" data-index="{{ loop.index0 }}">
-                    <div class="carta-inner">
-                        <!-- Verso -->
-                        <div class="carta-back">
-                            <div class="card card-pack back">
-                                <img src="{{ url_for('static', filename='logos/logo.png') }}" loading="lazy">
-                            </div>
-                        </div>
-
-                        <!-- Frente -->
-                        <div class="carta-front">
-                            <div class="card card-pack {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.evento }}  {{ carta.is_evento }} {% if carta.foil %}foil{% endif %}">
-                                <div class="card-nome">
-                                    {{ carta.nome }}
-                                </div>
-
-                                <div class="card-img">
-                                    <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
-                                    {% if carta.icon_ref %}
-                                        <div class="icon_ref">
-                                            <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}" loading="lazy">
-                                        </div>
-                                    {% endif %}
-                                </div>
-
-                                <div class="card-classe">
-                                    {{ classes_tips[carta.classe] }} — {{ classes_tips[carta.subclasse] }}
-                                </div>
-
-                                <div class="card-texto">
-                                    <p class="entrada">"{{ carta.entrada }}"</p>
-                                    <p>
-                                        <strong>{{ carta.ult_nome }}:</strong> {{ carta.ult }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
-
     <div id="pack-stage" class="pack-stage">
         <div id="pack" class="pack">
             <!-- Pacote fechado e animação de abertura -->
+             <div id="pack" class="pack {{ tipo_pack }}"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img"/></div>
         </div>
 
         <div id="card-deck" class="card-deck">
             <!-- Cartas invertidas empilhadas -->
+             <div class="carta-back">
+                <div class="card card-pack back">
+                    <img src="{{ url_for('static', filename='logos/logo.png') }}" loading="lazy">
+                </div>
+            </div>
         </div>
 
         <div id="first-card" class="first-card">
@@ -71,7 +28,31 @@
     <div id="cards-grid" class="cards-grid">
         {% for carta in cartas %}
             <div class="result-card" data-card-index="{{ loop.index0 }}">
-                <!-- Reaproveite aqui o HTML atual da sua carta -->
+                <div class="card card-pack {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.evento }}  {{ carta.is_evento }} {% if carta.foil %}foil{% endif %}">
+                    <div class="card-nome">
+                        {{ carta.nome }}
+                    </div>
+
+                    <div class="card-img">
+                        <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
+                        {% if carta.icon_ref %}
+                            <div class="icon_ref">
+                                <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}" loading="lazy">
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="card-classe">
+                        {{ classes_tips[carta.classe] }} — {{ classes_tips[carta.subclasse] }}
+                    </div>
+
+                    <div class="card-texto">
+                        <p class="entrada">"{{ carta.entrada }}"</p>
+                        <p>
+                            <strong>{{ carta.ult_nome }}:</strong> {{ carta.ult }}
+                        </p>
+                    </div>
+                </div>
             </div>
         {% endfor %}
     </div>
