@@ -902,7 +902,8 @@
     "personagens": [
       "wuyang_comum",
       "wuyang_piscina",
-      "wuyang_dourado"
+      "wuyang_dourado",
+      "wuyang_shaoxia"
     ],
     "recompensa": {
       "pontos": 100
@@ -1851,6 +1852,7 @@
       "aventureira",
       "feiticeira",
       "dancarina_vazio",
+      "wuyang_shaoxia",
       "pixiu"
     ],
     "recompensa": {

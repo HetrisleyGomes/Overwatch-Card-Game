@@ -94,6 +94,7 @@ def open_pack_route():
     else:
         cartas = open_pack(type, lang)
 
+    print(cartas)
     user = registry_cards(connection, cartas, type, user)
     sets, points = check_sets(connection, user['id'], lang)
     user['pontos'] += points
@@ -133,6 +134,25 @@ def result_pack():
     classes_tips = get_classes_lang(lang)
     
     return render_template("resultado.html", cartas = cards, user = user, tipo_pack=rarity, pontos=points, sets=sets, pontos_sets=sets_points, xp_obtido=xp_gained, xp_final=user['xp'], nivel=user['nivel'], level_uped=level_uped, classes_tips=classes_tips)
+
+@main.route("/teste-develop")
+def test_feature():
+    user = session['user_data']
+
+    cards = [{'id': 'winston_comum', 'base': 'winston', 'nome': 'Winston', 'entrada': 'A better world is possible today.', 'ult_nome': 'Primal Rage', 'ult': '(roar)!', 'img': 'Winston_ow.png', 'raridade': 'comum', 'classe': 'Tanque', 'subclasse': 'Incursor', 'icon_ref': False}, {'id': 'sojourn_comum', 'base': 'sojourn', 'nome': 'Sojourn', 'entrada': "We're in this together. All of us.", 'ult_nome': 'Overclock', 'ult': 'This ends now!', 'img': 'Sojourn_ow.png', 'raridade': 'comum', 'classe': 'Dano', 'subclasse': 'Artilharia', 'icon_ref': False}, {'id': 'hazard_comum', 'base': 'hazard', 'nome': 'Hazard', 'entrada': "If you're in it with me, you're in it for life.", 'ult_nome': 'Downpour', 'ult': 'Tear it down!', 'img': 'Hazard_ow.png', 'raridade': 'comum', 'classe': 'Tanque', 'subclasse': 'Incursor', 'icon_ref': False}, {'id': 'lucio_principe_espaco', 'base': 'lucio', 'nome': 'Space Prince', 'entrada': "I'm here to be heard!", 'ult_nome': 'Sound Barrier', 'ult': "Oh, let's break it down!", 'img': 'Lucio_ow_principe_espacial.png', 'raridade': 'epico', 'classe': 'Suporte', 'subclasse': 'Cósmico', 'icon_ref': False}, {'id': 'reaper_abobora', 'base': 'reaper', 'nome': 'Pumpkin', 'entrada': 'The Reaper comes for your souls.', 'ult_nome': 'Death Blossom', 'ult': 'The Reaper comes for your souls!', 'img': 'Reaper_ow_abobora.png', 'raridade': 'epico', 'classe': 'Dano', 'subclasse': 'Perverso', 'icon_ref': False}]
+    rarity = "comum"
+    points = 20
+    xp_gained = 10
+    sets = ["teste"]
+    sets_points = 10
+
+    level_uped = True
+    
+
+    lang = session['lang']
+    classes_tips = get_classes_lang(lang)
+    
+    return render_template("resultado_2.html", cartas = cards, user = user, tipo_pack=rarity, pontos=points, sets=sets, pontos_sets=sets_points, xp_obtido=xp_gained, xp_final=user['xp'], nivel=user['nivel'], level_uped=level_uped, classes_tips=classes_tips)
 
 
 # Inventario =================================

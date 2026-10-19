@@ -797,7 +797,7 @@
         "nome": "Pistoleiro Divíno",
         "entrada": "Alguém tem que iluminar essas sombras.",
         "ult_nome": "Tiro certeiro",
-        "ult": "É hora de ver o sol!"
+        "ult": "É hora do sol mediano!"
       },
       "en": {
         "nome": "Divine Desperado",
@@ -5825,6 +5825,28 @@
     "img": "Wuyang_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "wuyang_shaoxia",
+    "base": "wuyang",
+    "classe": "Suporte",
+    "subclasse": "Sobrevivente",
+    "lang": {
+      "br": {
+        "nome": "Dragão Shaoxia",
+        "entrada": "É como eles dizem. Basta seguir seu Dao.",
+        "ult_nome": "Maré explosiva",
+        "ult": "Mudando a torrente!"
+      },
+      "en": {
+        "nome": "Dragon Shaoxia",
+        "entrada": "You know whats thay say. Just follow your Dao.",
+        "ult_nome": "Tidal Blast",
+        "ult": "Reverse the torrent!"
+      }
+    },
+    "raridade": "mitico",
+    "img": "Wuyang_ow_myth.png"
   },
   {
     "id": "zarya_comum",

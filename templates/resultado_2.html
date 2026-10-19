@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<link rel="stylesheet" href="../static/styles/resultado_2.css">
+<link rel="stylesheet" href="../static/styles/carta.css">
+<div class="container">
+    <h1>Cartas recebidas</h1>
+
+    <div id="pack-stage" class="pack-stage">
+        <!-- Pacote fechado e animação de abertura -->
+        <div id="pack" class="pack {{ tipo_pack }}">
+            <img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy">
+        </div>
+
+
+        <!-- Cartas invertidas empilhadas -->
+        <div id="carta-verso" class="carta-verso hidden">
+            <img src="{{ url_for('static', filename='logos/logo.png') }}" loading="lazy">
+        </div>
+
+
+        <div id="cards-grid" class="cards-grid hidden">
+        {% for carta in cartas %}
+            <div class="card card-pack {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.evento }}  {{ carta.is_evento }} {% if carta.foil %}foil{% endif %}">
+                <div class="card-nome">
+                    {{ carta.nome }}
+                </div>
+
+                <div class="card-img">
+                    <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
+                    {% if carta.icon_ref %}
+                        <div class="icon_ref">
+                            <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}" loading="lazy">
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="card-classe">
+                    {{ classes_tips[carta.classe] }} — {{ classes_tips[carta.subclasse] }}
+                </div>
+
+                <div class="card-texto">
+                    <p class="entrada">"{{ carta.entrada }}"</p>
+                    <p>
+                        <strong>{{ carta.ult_nome }}:</strong> {{ carta.ult }}
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+    <div class="pontos_div" id="pontos" style="display:none;">
+        <div class="pontos_subdiv">
+            <p>
+                <span>XP obtido: +{{ xp_obtido }} >></span>
+                <span class="pontos">{{ xp_final }}</span> XP
+            </p>
+            <p>
+                {% if level_uped %}
+                    <span>Subiu de nível!</span>
+                {% endif %}
+                <span>Nível atual {{ nivel }}</span>
+            </p>
+        </div>  
+        
+        {% if pontos %}
+            <div class="pontos_subdiv">
+                <p>
+                    <span>Pontos de cartas repetidas: </span>
+                    <span class="pontos">+{{ pontos }} pontos!</span>
+                </p>
+            </div>
+        {% endif %}
+        {% if pontos_sets or sets %}
+            <div class="pontos_subdiv">
+                <p>
+                    <span>Pontos de coleções completadas: </span>
+                    <span class="pontos">+{{ pontos_sets }} pontos!</span>
+                </p>
+                <p>
+                    <span>Coleções completadas: </span>
+                    {% for set in sets %}
+                    <span class="pontos">{{ set }}</span>
+                    {% endfor %}
+                </p>
+            </div>
+        {% endif %}
+    </div>
+    
+    <div class="buttons" id="botoes" style="display:none;">
+        <!-- Voltar -->
+        <a href="{{ url_for('main.home') }}">
+            <button class="button">Voltar</button>
+        </a>
+
+        <!-- Abrir próximo pack -->
+        {% if (user.packs_diarios_abertos > 0 or user.packs_comprados_comum > 0) and tipo_pack == "comum" %}
+        <form method="POST" action="{{ url_for('main.open_pack_route') }}" style="display:inline;">
+            <input type="hidden" name="tipo" value="comum">
+            <button class="button">Abrir próximo pacote</button>
+        </form>
+        {% elif user.packs_comprados_raro > 0 and tipo_pack == "raro" %}
+        <form method="POST" action="{{ url_for('main.open_pack_route') }}" style="display:inline;">
+            <input type="hidden" name="tipo" value="raro">
+            <button class="button">Abrir próximo pacote</button>
+        </form>
+        {% endif %}
+    </div>
+</div>
+
+<audio id="background-music">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+const pack = document.getElementById("pack");
+const carta_verso = document.getElementById("carta-verso");
+const cartas = document.getElementById("cards-grid");
+const botoes = document.getElementById("botoes");
+const pontos = document.getElementById("pontos")
+
+
+function iniciarAnimacao() {
+    cartas.classList.add("hidden");
+    carta_verso.classList.add("hidden");
+    carta_verso.classList.remove("revelar");
+    // Abrir pack
+    setTimeout(() => {
+        pack.classList.add("abrir");
+        carta_verso.classList.remove("hidden");
+        carta_verso.classList.add("revelar");
+
+    }, 500);
+
+    // Mostrar cartas depois do pack
+    setTimeout(() => {
+        pack.style.display = "none";
+        cartas.classList.remove("hidden");
+        carta_verso.classList.add("hidden");
+    }, 1200);
+}
+
+function removerPorClasse(classe) {
+    const elementos = document.querySelectorAll("." + classe);
+    elementos.forEach(el => el.remove());
+}
+
+// musica
+const tipoPack = {{ tipo_pack | tojson }};
+const music = document.getElementById("background-music");
+if (tipoPack === "radiante") {
+    music.src = "{{ url_for('static', filename='sounds/open_radiant_pack.mp3') }}";
+} else {
+    music.src = "{{ url_for('static', filename='sounds/open_pack.mp3') }}";
+}
+music.load();
+music.play();
+
+window.onload = iniciarAnimacao;
+</script>
+{% endblock %}
