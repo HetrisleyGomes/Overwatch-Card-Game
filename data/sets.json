@@ -1455,8 +1455,8 @@
   {
     "id": "coracao",
     "lang":{
-      "br": {"nome":"Força Coração"},
-      "en": {"nome":"Dokiwatch"}
+      "br": {"nome":"Heroínas de Coração"},
+      "en": {"nome":"Heroes of Heart"}
     },
     "personagens": [
       "brigitte_coracao",
@@ -1467,7 +1467,39 @@
       "magitecnologia_misericordiosa"
     ],
     "recompensa": {
+      "pontos": 500
+    }
+  },
+  {
+    "id": "coracao_2",
+    "lang":{
+      "br": {"nome":"Heroínas de Coração 2"},
+      "en": {"nome":"Heroes of Heart 2"}
+    },
+    "personagens": [
+      "anran_coracao",
+      "dva_coracao",
+      "mercy_coracao",
+      "tracer_coracao"
+    ],
+    "recompensa": {
       "pontos": 300
+    }
+  },
+  {
+    "id": "coracao_vazio",
+    "lang":{
+      "br": {"nome":"Corações vazios"},
+      "en": {"nome":"Hallow Heart"}
+    },
+    "personagens": [
+      "ramattra_malus",
+      "dva_nocturna",
+      "illari_eclipse",
+      "lifeweaver_infortunador"
+    ],
+    "recompensa": {
+      "pontos": 400
     }
   },
   {
@@ -1526,6 +1558,7 @@
   {
     "id": "monstros",
     "lang":{
+      
       "br": {"nome":"Monstros do Panteão"},
       "en": {"nome":"Pantheon of Monsters"}
     },

@@ -26,8 +26,8 @@
   --incomum-rarity: #808080;
   --epico-rarity: #c0c0c0;
   --legado-rarity: linear-gradient(45deg, #009529, #34d18f, #009529);
-  --ultra-rarity: #ff1c00;
   --lendario-rarity: #b99f07;
+  --ultra-rarity: linear-gradient(135deg, #ff1c00, #ff725f, #ff1c00);
   --mitico-rarity: linear-gradient(45deg, #c1269a, #ffc0cb, #01a1c1, #c1269a);
   --event-rarity: #9370d8;
 

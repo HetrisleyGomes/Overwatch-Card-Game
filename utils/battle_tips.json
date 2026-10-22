@@ -11,7 +11,7 @@
         "Robusto": "Robusto: Escudo x1, Armadura x2",
 
         "Especialista": "Especialista: Ataque x1, Anti-cura x2",
-        "Artilharia": "Artilharia: Ataque x3",
+        "Artilharia": "Artilharia: Ataque x1, Habilidade x2",
         "Flanco": "Flanco: Golpe veloz x2, Ataque x1",
         "Reconhecimento": "Reconhecimento: Ataque x1, Debilitar (Corta pela metade o próximo ataque oponente)",
 
@@ -23,9 +23,9 @@
         "Bardo": "Bardo: Anti-cura x1, Revitalizar (Dobra a sua cura no próximo turno), Debilitar (Corta pela metade o próximo ataque oponente)",
         "Campeão": "Campeão: Ataque x1, Armadura x2",
         "Caçador": "Caçador: Ataque futuro x1, Anti-cura x2",
-        "Carregada": "Carregada: Ataque x4, Descuido x2 (Causa este dano a si mesmo)",
+        "Carregada": "Carregada: Habilidade x4, Descuido x2 (Causa este dano a si mesmo)",
         "Classic": "Classic: Escudo, Ataque e Cura x1",
-        "Coração": "Coração: Escudo x2, Revitalizar (Dobra a sua cura no próximo turno)",
+        "Coração": "Coração: Escudo x2, Habilidade x1",
         "Cósmico": "Cósmico: Escudo x2, Cura x1",
         "Elegante": "Elegante: Armadura x2 para Tanques e Defensores, Ataque futuro x2 para Dano e Atacante, Cura x2 para Suportes. x1 em Armadura e Ataque futuro caso não tenha recebido.",
         "Fool": "Fool: 3 pontos aleatórios entre Escudo, Ataque e Cura",
@@ -36,7 +36,8 @@
         "Monstro": "Monstro: Escudo 0, Ataque x4, Descuido x2 (Causa este dano a si mesmo)",
         "Origem": "Origem: Fortalece os atributos Escudo, Ataque e Cura existentes em x2",
         "Perigo": "Perigo: Golpe Veloz x2, Debilitar (Corta pela metade o próximo ataque oponente)",
-        "Perverso": "Perverso: Ataque x2, Anti-cura x2, Cura 0, Descuido x2 (Causa este dano a si mesmo)"
+        "Perverso": "Perverso: Ataque x2, Anti-cura x2, Cura 0, Descuido x2 (Causa este dano a si mesmo)",
+        "Vazio": "Vazio: Habilidade x2, Anti-cura x1"
     },
     "en":{
         "Tanque": "Tank: Shield x2, Attack x1",
@@ -50,7 +51,7 @@
         "Robusto": "Stalwart: Shield x1, Armor x2",
 
         "Especialista": "Specialist: Attack x1, Anti-Heal x2",
-        "Artilharia": "Sharpshooter: Attack x3",
+        "Artilharia": "Sharpshooter: Attack x1, Ability x2",
         "Flanco": "Flanker: Quick Strike x2, Attack x1",
         "Reconhecimento": "Recon: Attack x1, Weaken (Halves the opponent's next attack)",
 
@@ -62,9 +63,9 @@
         "Bardo": "Bard: Anti-heal x1, Revitalize (Doubles your healing on the next turn), Weaken (Halves the opponent's next attack)",
         "Campeão": "Champion: Attack x1, Armor x2",
         "Caçador": "Hunter: Future Attack x1, Anti-heal x2",
-        "Carregada": "Encharged: Attack x4, Recklessness x2 (Inflicts this damage upon himself)",
+        "Carregada": "Encharged: Ability x4, Recklessness x2 (Inflicts this damage upon himself)",
         "Classic": "Classic: Shield, Attack, and Heal x1",
-        "Coração": "Heart: Shield x2, Revitalize (Doubles your healing on the next turn)",
+        "Coração": "Heart: Shield x2, Ability x1",
         "Cósmico": "Cosmic: Shield x2, Heal x1",
         "Elegante": "Elegant: Armor x2 if Tank or Defender, Future Attack x2 if Damage or Attacker, Heal x2 if Support. 1x Armor and Future Attack, in case you haven't received them.",
         "Fool": "Fool: 3 random points distributed among Shield, Attack, and Heal",
@@ -75,7 +76,8 @@
         "Monstro": "Monster: Shield 0, Attack x4, Recklessness x2 (Inflicts this damage upon himself)",
         "Origem": "Origin: Boosts existing Shield, Attack and Heal attributes by x2",
         "Perigo": "Danger: Quick Strike x2, Weaken (Halves the opponent's next attack)",
-        "Perverso": "Wicked: Attack x2, Anti-heal x2, Heal 0, Recklessness x2 (Inflicts this damage upon himself)"
+        "Perverso": "Wicked: Attack x2, Anti-heal x2, Heal 0, Recklessness x2 (Inflicts this damage upon himself)",
+        "Vazio": "Void: Ability x2, Anti-heal x1"
     }
 
 }

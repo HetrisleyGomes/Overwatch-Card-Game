@@ -178,6 +178,28 @@
     "img": "Anran_ow.png"
   },
   {
+    "id": "anran_coracao",
+    "base": "anran",
+    "classe": "Dano",
+    "subclasse": "Coração",
+    "lang": {
+      "br": {
+        "nome": "Coração da Tenacidade",
+        "entrada": "O fogo do meu coração nunca vai se apagar.",
+        "ult_nome": "Ascenção do pássaro vermelho.",
+        "ult": "Incendiando os céus!"
+      },
+      "en": {
+        "nome": "Heart of Tenacity",
+        "entrada": "The fire in my heart will never burn out.",
+        "ult_nome": "Vermillion Ascent",
+        "ult": "Huǒyǔ fén tiān‌‌!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Anran_ow_heart_of_tenacity.png"
+  },
+  {
     "id": "anran_dourado",
     "base": "anran",
     "classe": "Dano",
@@ -569,7 +591,7 @@
     "subclasse": "Coração",
     "lang": {
       "br": {
-        "nome": "Coração da força",
+        "nome": "Coração da Força",
         "entrada": "Quanto mais eu sofro, mais eu me fortaleço.",
         "ult_nome": "Reagrupar",
         "ult": "Venham a mim!"
@@ -964,6 +986,50 @@
     "raridade": "comum",
     "img": "DVa_Chibi_ow.png",
     "icon_ref": "alter.png"
+  },
+  {
+    "id": "dva_coracao",
+    "base": "dva",
+    "classe": "Tanque",
+    "subclasse": "Coração",
+    "lang": {
+      "br": {
+        "nome": "Coração do Valor",
+        "entrada": "Hora de salvar o mundo? Bora lá.",
+        "ult_nome": "Auto destruição",
+        "ult": "Pede pra nerfar, noob!"
+      },
+      "en": {
+        "nome": "Heart of Valor",
+        "entrada": "Time to save the world? Game on!",
+        "ult_nome": "Self-Destruct",
+        "ult": "Nerf this!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "DVa_ow_heart_of_valor.png"
+  },
+  {
+    "id": "dva_nocturna",
+    "base": "dva",
+    "classe": "Tanque",
+    "subclasse": "Vazio",
+    "lang": {
+      "br": {
+        "nome": "Nocturna",
+        "entrada": "Hora de salvar o mundo? Bora lá.",
+        "ult_nome": "Auto destruição",
+        "ult": "Pede pra nerfar, noob!"
+      },
+      "en": {
+        "nome": "Nocturna",
+        "entrada": "Time to save the world? Game on!",
+        "ult_nome": "Self-Destruct",
+        "ult": "Nerf this!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "DVa_ow_nocturna.png"
   },
   {
     "id": "dva_cruzador",
@@ -1471,7 +1537,7 @@
     "subclasse": "Coração",
     "lang": {
       "br": {
-        "nome": "Coração da coragem",
+        "nome": "Coração da Coragem",
         "entrada": "Eu sempre entrego.",
         "ult_nome": "Disparo de boleadeira",
         "ult": "Eu vou caçar você!"
@@ -1958,6 +2024,28 @@
     "img": "Illari_ow.png"
   },
   {
+    "id": "illari_eclipse",
+    "base": "illari",
+    "classe": "Suporte",
+    "subclasse": "Vazio",
+    "lang": {
+      "br": {
+        "nome": "Eclipse",
+        "entrada": "Eu carrego meus fardos sozinha.",
+        "ult_nome": "Sol aprisionado",
+        "ult": "Encare a aurora!"
+      },
+      "en": {
+        "nome": "Eclypse",
+        "entrada": "I carry my burdens alone.",
+        "ult_nome": "Captive Sun",
+        "ult": "Face the sunrise!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Illari_ow_eclipse.png"
+  },
+  {
     "id": "illari_dourado",
     "base": "illari",
     "classe": "Suporte",
@@ -2237,7 +2325,7 @@
     "subclasse": "Sobrevivente",
     "lang": {
       "br": {
-        "nome": "Coração da esperança",
+        "nome": "Coração da Esperança",
         "entrada": "Um passo mágico de cada vez.",
         "ult_nome": "Raio Orbital",
         "ult": "Raio do coração esperançoso!"
@@ -2303,7 +2391,7 @@
     "subclasse": "Coração",
     "lang": {
       "br": {
-        "nome": "Coração da paixão",
+        "nome": "Coração da Paixão",
         "entrada": "Eu vou encontrar o meu próprio caminho.",
         "ult_nome": "Corrida da kitsune",
         "ult": "Deixe a Kitsune guiar você!"
@@ -2497,6 +2585,28 @@
     },
     "raridade": "comum",
     "img": "Lifeweaver_ow.png"
+  },
+  {
+    "id": "lifeweaver_infortunador",
+    "base": "lifeweaver",
+    "classe": "Suporte",
+    "subclasse": "Vazio",
+    "lang": {
+      "br": {
+        "nome": "Infortunador",
+        "entrada": "Passe cada momento da vida cultivando quem realmente é.",
+        "ult_nome": "Árvore da vida",
+        "ult": "A vida protege a vida!"
+      },
+      "en": {
+        "nome": "Woebringer",
+        "entrada": "Spend every moment growing into who you truly are.",
+        "ult_nome": "Tree of life",
+        "ult": "Life protects life!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Lifeweaver_ow_infortunador.png"
   },
   {
     "id": "lifeweaver_dourado",
@@ -2905,6 +3015,28 @@
     },
     "raridade": "comum",
     "img": "Mercy_ow.png"
+  },
+  {
+    "id": "mercy_coracao",
+    "base": "mercy",
+    "classe": "Suporte",
+    "subclasse": "Coração",
+    "lang": {
+      "br": {
+        "nome": "Coração da Misericórida",
+        "entrada": "Não se preocupem, estarei atrás de vocês.",
+        "ult_nome": "Valkíria",
+        "ult": "Heróis nunca morrem!"
+      },
+      "en": {
+        "nome": "Heart of Mercy",
+        "entrada": "Don't worry, I'll be right behind you.",
+        "ult_nome": "Valkyrie",
+        "ult": "Heroes never die!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Mercy_ow_heart_of_mercy.png"
   },
   {
     "id": "mercy_diabrete",
@@ -3765,6 +3897,28 @@
     "img": "Ramattra_ow_gold.png",
     "golden_weapon": true,
     "icon_ref": "golden.png"
+  },
+  {
+    "id": "ramattra_malus",
+    "base": "ramattra",
+    "classe": "Tanque",
+    "subclasse": "Vazio",
+    "lang": {
+      "br": {
+        "nome": "Malus",
+        "entrada": "Teremos a paz, custe o que custar.",
+        "ult_nome": "Aniquilação",
+        "ult": "Sofra, como eu sofri!"
+      },
+      "en": {
+        "nome": "Malus",
+        "entrada": "We will have peace at any cost.",
+        "ult_nome": "Annihilation",
+        "ult": "Suffer, as I have!"
+      }
+    },
+    "raridade": "ultra",
+    "img": "Ramattra_ow_malus.png"
   },
   {
     "id": "ramattra_fool",
@@ -4894,6 +5048,28 @@
     "img": "Symmetra_ow.png"
   },
   {
+    "id": "symmetra_dragonesa",
+    "base": "symmetra",
+    "classe": "Dano",
+    "subclasse": "Especialista",
+    "lang": {
+      "br": {
+        "nome": "Dragonesa",
+        "entrada": "Da imperfeição, construiremos um novo mundo.",
+        "ult_nome": "Teleportador",
+        "ult": "Portal de teletransporte aberto!"
+      },
+      "en": {
+        "nome": "Dragon",
+        "entrada": "From imperfection, we build a new world.",
+        "ult_nome": "Teleporter",
+        "ult": "Teleportation portal opened!"
+      }
+    },
+    "raridade": "epico",
+    "img": "Symmetra_ow_dragonesa.png"
+  },
+  {
     "id": "symmetra_dourado",
     "base": "symmetra",
     "classe": "Dano",
@@ -5123,6 +5299,28 @@
     },
     "raridade": "comum",
     "img": "Tracer_ow.png"
+  },
+  {
+    "id": "tracer_hero_heart",
+    "base": "tracer",
+    "classe": "Dano",
+    "subclasse": "Flanco",
+    "lang": {
+      "br": {
+        "nome": "Heroína de Coração",
+        "entrada": "Não se preocupem, queridos! Hora de salvar o mundo!",
+        "ult_nome": "Bomba eletromagnética",
+        "ult": "Pega essa!"
+      },
+      "en": {
+        "nome": "Hero of Heart",
+        "entrada": "Cheers, love! It's time to save the world.",
+        "ult_nome": "Pulse Bomb",
+        "ult": "Bomb's tickin'!"
+      }
+    },
+    "raridade": "incomum",
+    "img": "Tracer_ow_heart.png"
   },
   {
     "id": "operadora_oxton",
@@ -5381,7 +5579,7 @@
     "subclasse": "Coração",
     "lang": {
       "br": {
-        "nome": "Coração da graça",
+        "nome": "Coração da Graça",
         "entrada": "Minha mira é devastadora.",
         "ult_nome": "Visão infravermelha",
         "ult": "Ninguém se esconde da minha mira!"

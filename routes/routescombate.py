@@ -340,6 +340,7 @@ def check_class_and_subclass(classe, subclasse):
         "golpe veloz": 0,
         "escudo": 0,
         "ataque": 0,
+        "habilidade": 0,
         "anti-cura": 0,
         "cura": 0,
         "ataque futuro": 0,
@@ -348,6 +349,7 @@ def check_class_and_subclass(classe, subclasse):
         "debilitar": 0,
         "armadura": 0
     }
+
     match classe:
         case 'Tanque':
             template['escudo'] += 2
@@ -379,7 +381,8 @@ def check_class_and_subclass(classe, subclasse):
             template['ataque'] += 1
             template["anti-cura"] += 2
         case 'Artilharia':
-            template["ataque"] += 3
+            template["ataque"] += 1
+            template["habilidade"] += 2
         case 'Flanco':
             template["golpe veloz"] += 2
             template["ataque"] += 1
@@ -411,7 +414,7 @@ def check_class_and_subclass(classe, subclasse):
             template["ataque futuro"] += 1
             template["anti-cura"] += 2
         case 'Carregada':
-            template['ataque'] += 4
+            template['habilidade'] += 4
             template["descuido"] += 2
         case 'Classic':
             template["escudo"] += 1
@@ -419,7 +422,7 @@ def check_class_and_subclass(classe, subclasse):
             template['cura'] += 1
         case 'Coração':
             template['escudo'] += 2
-            template['revitalizar'] += 1
+            template['habilidade'] += 1
         case 'Cósmico':
             template['escudo'] += 2
             template['cura'] += 1
@@ -466,6 +469,9 @@ def check_class_and_subclass(classe, subclasse):
             template["anti-cura"] += 2
             template["descuido"] += 2
             template["cura"] = 0
+        case 'Vazio':
+            template["habilidade"]+= 2
+            template["anti-cura"]+= 1
         
     return template
 
@@ -518,20 +524,22 @@ def resolve_battle(room):
         anticura_recebido = effect_oponent.get("anti-cura", 0)
         # Prioridade 3:
         escudo = effect_player.get("escudo", 0)
-        cura = effect_player.get("cura", 0) * 2 if revitalize > 0 else effect_player.get("cura", 0)
+        cura = effect_player.get("cura", 0) * 2 if revitalize > 0 else 1
         # Prioridade 4:
         ataque_futuro = effect_oponent.get("ataque futuro", 0) 
+        habilidade = effect_player.get("habilidade", 0)
+        armadura = effect_player.get("armadura", 0)
+        # Efeitos Futuros
         revitalizar = effect_player.get("revitalizar", 0)
         descuido = effect_player.get("descuido", 0)
         debilitar = effect_oponent.get("debilitar", 0)
-        armadura = effect_player.get("armadura", 0)
 
 
         dano_calc = max(0, ataque_recebido - escudo)
         if weaken > 0:
             dano_calc = math.ceil(dano_calc / 2)
         # Combate resolver:
-        dano_final = ataque_veloz_recebido + dano_calc + descuido
+        dano_final = ataque_veloz_recebido + dano_calc + descuido + habilidade
         cura_final = max(0, cura - anticura_recebido)
 
         player["hp"] -= max(0 , dano_final - armadura)

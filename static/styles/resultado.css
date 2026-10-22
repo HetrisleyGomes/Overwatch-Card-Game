@@ -1,22 +1,62 @@
+
+/* RESULTADO DOS PACOTES */
+
 .container {
     padding: 40px;
+}
+
+.resultado-container {
+    min-width: 0;
+    overflow: visible;
 }
 
 h1 {
     margin-bottom: 30px;
     color: var(--main-color);
     text-align: center;
-    
 }
 
-/* AREA */
+/* ÁREA DE REVELAÇÃO */
+
 .area {
     position: relative;
-    height: 300px;
-    margin-top: 50px;
+    display: grid;
+    grid-template-areas: "revelacao";
+    width: 100%;
+    min-width: 0;
+    min-height: 440px;
+    margin-top: 20px;
+    isolation: isolate;
 }
 
-/* PACK */
+.area > .pack,
+.area > .area-cards {
+    grid-area: revelacao;
+}
+
+.area > .pack {
+    z-index: 3;
+    align-self: start;
+}
+
+.area-cards {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 220px));
+
+    justify-content: center;
+    align-content: start;
+    align-items: start;
+    gap: clamp(12px, 2vw, 24px);
+    width: 100%;
+    min-width: 0;
+    min-height: 320px;
+    margin: 0;
+    padding: 16px 0 24px;
+    box-sizing: border-box;
+}
+
 .pack {
     display: flex;
     align-items: center;
@@ -29,7 +69,6 @@ h1 {
     top: 100px;
     animation: packEntrada 0.6s ease;
 }
-
 
 .pack.comum {
     background: var(--pack-common-color);
@@ -57,7 +96,7 @@ h1 {
     background: #16831f;
 }
 
-.pack.aniversary, .pack.overwatch_2{
+.pack.aniversary, .pack.overwatch_2 {
     background-color: gold;
 }
 
@@ -77,59 +116,82 @@ h1 {
 }
 
 /* CARTAS */
-.area-cards {
-    width: 100%;
-}
-
 .carta-container {
-    position: absolute;
-    left: 50%;
-    top: 120%;
-    transform: translate(-50%, 0);
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 5 / 7;
+    height: auto;
     perspective: 1000px;
     opacity: 0;
-    width: 230px;
-    height: 320px;
+    visibility: hidden;
+    transform: translateY(12px);
+    box-sizing: border-box;
 }
 
-.carta-container.flip {
-    transform: scale(1.1);
-    transition: 0.3s;
+.carta-container.is-featured {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 100px);
+    width: min(220px, 72vw);
+    height: auto;
+    aspect-ratio: 5 / 7;
+    z-index: 5;
+    transform: translate(-50%, -50%);
 }
 
-.card-pack {
-    transform: scale(0.7);
-    transform-origin: center;
+.carta-container.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
-/* CARTA INTERNA (flip) */
 .carta-inner {
-    width: 120px;
-    height: 180px;
     position: relative;
+    width: 100%;
+    height: 100%;
+
     transform-style: preserve-3d;
-    transition: transform 0.6s;
+    -webkit-transform-style: preserve-3d;
+    transition: transform 0.42s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-/* VIRAR */
 .carta-container.flip .carta-inner {
     transform: rotateY(180deg);
 }
 
 /* FACES */
-.carta-front, .carta-back {
+
+.carta-front,
+.carta-back {
     position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
+
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    box-sizing: border-box;
 }
 
-/* FRENTE */
 .carta-front {
     transform: rotateY(180deg);
 }
 
-/* VERSO */
+.carta-back {
+    transform: rotateY(0deg);
+}
+
+.carta-front > .card-pack,
+.carta-back > .card-pack {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    transform: none;
+    transform-origin: center;
+    box-sizing: border-box;
+}
+
 .back {
     display: flex;
     align-items: center;
@@ -137,12 +199,44 @@ h1 {
     background-color: #555;
 }
 
-.card-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.carta-back img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
+/* ESTADOS E TRANSIÇÕES DA REVELAÇÃO */
+.area-cards.is-preparing {
+    align-content: start;
+}
+
+.area-cards.is-complete .carta-container {
+    visibility: visible;
+}
+
+.carta-container:not(.is-featured) {
+    position: relative;
+    top: auto;
+    left: auto;
+}
+
+.resultado-visivel {
+    animation: resultadoEntrada 0.25s ease both;
+}
+
+@keyframes resultadoEntrada {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* PONTOS */
 .pontos_div {
     display: flex;
     justify-content: center;
@@ -164,6 +258,7 @@ h1 {
     margin-left: 5px;
 }
 
+/* BOTÕES */
 .buttons {
     display: flex;
     justify-content: space-evenly;
@@ -188,37 +283,43 @@ h1 {
     background-color: var(--main-light-color);
 }
 
-/* RESPONSIVIDADE ========================== */
-@media (max-width: 1380px) {
-    .carta-front, .carta-back{
-        width: auto;
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .container {
+        padding: 24px;
     }
-    .carta-container {
-        width: 0;
+
+    .area {
+        min-height: 400px;
+    }
+
+    .area-cards {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 200px));
+        gap: 16px;
+    }
+
+    .carta-container.is-featured {
+        width: min(200px, 68vw);
     }
 }
+
 @media (max-width: 768px) {
-    /* AREA */
     .area {
-        height: 140px;
+        min-height: 360px;
     }
-    /* CARTAS */
+
     .area-cards {
-        transform: scale(0.9);
-        margin-top: 20vh;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 135px), 180px));
+        gap: 12px;
+        padding: 12px 0 20px;
     }
+
     .pack {
         width: 150px;
         height: 210px;
     }
-    .carta-front, .carta-back {
-        width: 100%;
-    }
-    .carta-inner {
-        width: 120px;
-    }
 
-    /* BOTÕES */
     .button {
         width: 150px;
         font-size: 12px;
@@ -232,30 +333,75 @@ h1 {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 16px;
+    }
+
+    .area {
+        min-height: 330px;
+    }
+
+    .area-cards {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 125px), 1fr));
+        gap: 10px;
+    }
+
     .buttons {
         width: 270px;
     }
+
     .button {
         width: 120px;
     }
+
     .pontos_div {
         font-size: 14px;
-        align-items: flex-start
+        align-items: flex-start;
     }
+
     .pontos_subdiv {
         width: 300px;
         text-align: center;
     }
-    /* CARTAS */
+
+    .carta-container.is-featured {
+        width: min(180px, 65vw);
+    }
+}
+
+/* ORIENTAÇÃO E ACESSIBILIDADE */
+
+
+@media (orientation: landscape) and (max-height: 500px) {
+    .area {
+        min-height: 290px;
+        margin-top: 8px;
+    }
+
     .area-cards {
-        margin-top: 30vh;
+        gap: 10px;
+        padding-top: 8px;
     }
-    .carta-container {
-        width: 160px;
-        height: 210px;
+
+    .carta-container.is-featured {
+        width: min(150px, 34vh);
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pack {
+        animation-duration: 0.01ms;
+    }
+
+    .pack.abrir {
+        animation-duration: 0.01ms;
+    }
+
     .carta-inner {
-        width: 100px;
-        height: 160px;
+        transition-duration: 0.01ms;
+    }
+
+    .resultado-visivel {
+        animation-duration: 0.01ms;
     }
 }

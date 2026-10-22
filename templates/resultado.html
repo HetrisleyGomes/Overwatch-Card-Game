@@ -2,36 +2,39 @@
 {% block conteudo %}
 <link rel="stylesheet" href="../static/styles/resultado.css">
 <link rel="stylesheet" href="../static/styles/carta.css">
-<div class="container">
+<div class="container resultado-container">
     <h1>Cartas recebidas</h1>
 
-    <div class="area">
-        <!-- PACK -->
-        <div id="pack" class="pack {{ tipo_pack }}"><img src="../static/logos/logo.png" alt="Logo Overwatch" class="img" loading="lazy"></div>
+    <section class="area" aria-label="Revelação das cartas">
+        <div id="pack" class="pack {{ tipo_pack }}">
+            <img src="{{ url_for('static', filename='logos/logo.png') }}" alt="Logo Overwatch" class="img" >
+        </div>
 
-        <div class="area-cards">
+        <div class="area-cards" id="area-cards">
             {% for carta in cartas %}
-                <div class="carta-container" data-index="{{ loop.index0 }}">
+                <div class="carta-container{% if loop.first %} is-featured{% endif %}" data-index="{{ loop.index0 }}" data-rarity="{{ carta.raridade }}" aria-label="Carta {{ loop.index }} de {{ cartas|length }}">
                     <div class="carta-inner">
-                        <!-- Verso -->
+                        <!-- Verso da carta -->
                         <div class="carta-back">
                             <div class="card card-pack back">
-                                <img src="{{ url_for('static', filename='logos/logo.png') }}" loading="lazy">
+                                <img src="{{ url_for('static', filename='logos/logo.png') }}" alt="Verso da carta">
                             </div>
                         </div>
 
-                        <!-- Frente -->
+                        <!-- Frente da carta -->
                         <div class="carta-front">
-                            <div class="card card-pack {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.evento }}  {{ carta.is_evento }} {% if carta.foil %}foil{% endif %}">
+                            <div class="card card-pack {{ carta.raridade }} {{ carta.classe|lower }} {{ carta.evento }} {{ carta.is_evento }} {% if carta.foil %}foil{% endif %}">
+
                                 <div class="card-nome">
                                     {{ carta.nome }}
                                 </div>
 
                                 <div class="card-img">
-                                    <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
+                                    <img src="{{ url_for('static', filename='images/' + carta.img) }}" alt="{{ carta.nome }}" loading="lazy">
+
                                     {% if carta.icon_ref %}
                                         <div class="icon_ref">
-                                            <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}" loading="lazy">
+                                            <img src="{{ url_for('static', filename='icons/' + carta.icon_ref) }}" alt="" loading="lazy">
                                         </div>
                                     {% endif %}
                                 </div>
@@ -42,9 +45,8 @@
 
                                 <div class="card-texto">
                                     <p class="entrada">"{{ carta.entrada }}"</p>
-                                    <p>
-                                        <strong>{{ carta.ult_nome }}:</strong> {{ carta.ult }}
-                                    </p>
+
+                                    <p><strong>{{ carta.ult_nome }}:</strong> {{ carta.ult }}</p>
                                 </div>
                             </div>
                         </div>
@@ -52,29 +54,7 @@
                 </div>
             {% endfor %}
         </div>
-    </div>
-
-    <div id="pack-stage" class="pack-stage">
-        <div id="pack" class="pack">
-            <!-- Pacote fechado e animação de abertura -->
-        </div>
-
-        <div id="card-deck" class="card-deck">
-            <!-- Cartas invertidas empilhadas -->
-        </div>
-
-        <div id="first-card" class="first-card">
-            <!-- Primeira carta revelada -->
-        </div>
-    </div>
-
-    <div id="cards-grid" class="cards-grid">
-        {% for carta in cartas %}
-            <div class="result-card" data-card-index="{{ loop.index0 }}">
-                <!-- Reaproveite aqui o HTML atual da sua carta -->
-            </div>
-        {% endfor %}
-    </div>
+    </section>
 
     <div class="pontos_div" id="pontos" style="display:none;">
         <div class="pontos_subdiv">
@@ -88,8 +68,8 @@
                 {% endif %}
                 <span>Nível atual {{ nivel }}</span>
             </p>
-        </div>  
-        
+        </div>
+
         {% if pontos %}
             <div class="pontos_subdiv">
                 <p>
@@ -98,6 +78,7 @@
                 </p>
             </div>
         {% endif %}
+
         {% if pontos_sets or sets %}
             <div class="pontos_subdiv">
                 <p>
@@ -107,32 +88,32 @@
                 <p>
                     <span>Coleções completadas: </span>
                     {% for set in sets %}
-                    <span class="pontos">{{ set }}</span>
+                        <span class="pontos">{{ set }}</span>
                     {% endfor %}
                 </p>
             </div>
         {% endif %}
     </div>
-    
-    <div class="buttons" id="botoes" style="display:none;">
-        <!-- Voltar -->
-        <a href="{{ url_for('main.home') }}">
-            <button class="button">Voltar</button>
-        </a>
 
-        <!-- Abrir próximo pack -->
-        {% if (user.packs_diarios_abertos > 0 or user.packs_comprados_comum > 0) and tipo_pack == "comum" %}
-        <form method="POST" action="{{ url_for('main.open_pack_route') }}" style="display:inline;">
-            <input type="hidden" name="tipo" value="comum">
-            <button class="button">Abrir próximo pacote</button>
-        </form>
-        {% elif user.packs_comprados_raro > 0 and tipo_pack == "raro" %}
-        <form method="POST" action="{{ url_for('main.open_pack_route') }}" style="display:inline;">
-            <input type="hidden" name="tipo" value="raro">
-            <button class="button">Abrir próximo pacote</button>
-        </form>
-        {% endif %}
+    <div class="buttons" id="botoes" style="display:none;">
+            <a href="{{ url_for('main.home') }}">
+                <button class="button">Voltar</button>
+            </a>
+
+            {% if (user.packs_diarios_abertos > 0 or user.packs_comprados_comum > 0) and tipo_pack == "comum" %}
+                <form method="POST" action="{{ url_for('main.open_pack_route') }}" style="display:inline;">
+                    <input type="hidden" name="tipo" value="comum">
+                    <button class="button">Abrir próximo pacote</button>
+                </form>
+            {% elif user.packs_comprados_raro > 0 and tipo_pack == "raro" %}
+                <form method="POST" action="{{ url_for('main.open_pack_route') }}" style="display:inline;">
+                    <input type="hidden" name="tipo" value="raro">
+                    <button class="button">Abrir próximo pacote</button>
+                </form>
+            {% endif %}
+        </div>
     </div>
+
 </div>
 
 <audio id="background-music">
@@ -140,122 +121,186 @@
 </audio>
 
 <script>
-const pack = document.getElementById("pack");
-const cartas = document.querySelectorAll(".carta-container");
-const botoes = document.getElementById("botoes");
-const pontos = document.getElementById("pontos")
+(() => {
+    "use strict";
+    const pack = document.getElementById("pack");
+    const area = document.querySelector(".area");
+    const areaCards = document.getElementById("area-cards");
+    const cartas = Array.from(document.querySelectorAll(".carta-container"));
+    const botoes = document.getElementById("botoes");
+    const pontos = document.getElementById("pontos");
+    const music = document.getElementById("background-music");
+    
+    const tipoPack = {{ tipo_pack | tojson }};
+    const quantidadeCartas = cartas.length;
 
-function calcularPosicao(index, total) {
-    const isMobile = window.innerWidth <= 480;
+    const TEMPO_ABERTURA = 400;
+    const TEMPO_REVELACAO = 270;
+    const INTERVALO_CARTAS = 100;
+    const TEMPO_FLIP = 350;
 
-    if (!isMobile) {
-        // desktop (seu atual)
-        const offset = (index - (total - 1) / 2) * 180;
-        return { x: offset, y: 0 };
-    }
+    const movimentoReduzido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let animacaoIniciada = false;
 
-    // MOBILE
-    if (total === 5) {
-        // 3 em cima, 2 embaixo
-        if (index < 3) {
-            return {
-                x: (index - 1) * 120,
-                y: -80
-            };
-        } else {
-            return {
-                x: (index - 3.5) * 120,
-                y: 80
-            };
+    function esperar(ms) {
+        let time = ms
+        if (quantidadeCartas != 5) {
+            let fator = (5/quantidadeCartas);
+            fator = Math.max(0.8, Math.min(2, fator));
+            time = ms * fator;
         }
+        return new Promise(resolve => setTimeout(resolve, time));
     }
+    function proximoFrame() {
+        return new Promise(resolve => {
+            requestAnimationFrame(() => resolve());
+        });
+    }
+    function aguardarAnimacao(elemento, nomeAnimacao, fallback) {
+        return new Promise(resolve => {
+            let finalizado = false;
 
-    if (total === 4) {
-        if (index < 2) {
-            return {
-                x: (index - 0.5) * 120,
-                y: -80
+            const concluir = () => {
+                if (finalizado) return;
+                finalizado = true;
+                elemento.removeEventListener("animationend", concluir);
+                elemento.removeEventListener("transitionend", concluir);
+                resolve();
             };
-        } else {
-            return {
-                x: (index - 2.5) * 120,
-                y: 80
-            };
+
+            elemento.addEventListener("animationend", concluir, { once: true });
+            elemento.addEventListener("transitionend", concluir, { once: true });
+
+            setTimeout(concluir, fallback);
+        });
+    }
+    async function revelarCarta(carta) {
+        carta.classList.add("is-visible");
+
+        if (movimentoReduzido) {
+            carta.classList.add("flip");
+            return;
         }
+
+        await esperar(TEMPO_REVELACAO);
+        carta.classList.add("flip");
+        await esperar(TEMPO_FLIP);
     }
 
-    if (total === 1) {
-        return { x: 0, y: 0 };
+    async function moverPrimeiraCartaParaGrid(carta) {
+        const inicio = carta.getBoundingClientRect();
+        carta.classList.remove("is-featured");
+
+        await proximoFrame();
+
+        const destino = carta.getBoundingClientRect();
+        const deslocamentoX = inicio.left - destino.left;
+        const deslocamentoY = inicio.top - destino.top;
+
+        if (movimentoReduzido) return;
+
+        carta.animate(
+            [
+                {
+                    transform:
+                        `translate(${deslocamentoX}px, ${deslocamentoY}px)`
+                },
+                {
+                    transform: "translate(0, 0)"
+                }
+            ],
+            {
+                duration: 350,
+                easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+                fill: "none"
+            }
+        );
+
+        await esperar(350);
     }
 
-    // fallback (linha)
-    return {
-        x: (index - (total - 1) / 2) * 120,
-        y: 0
-    };
-}
+    async function iniciarAnimacao() {
+        if (animacaoIniciada) return;
+        animacaoIniciada = true;
 
-function iniciarAnimacao() {
-    // Abrir pack
-    setTimeout(() => {
+        if (quantidadeCartas === 0) {
+            finalizarAnimacao();
+            return;
+        }
+
+        areaCards.classList.add("is-preparing");
+        const primeiraCarta = cartas[0];
+
+        // Abrir pacote
+        await esperar(movimentoReduzido ? 0 : TEMPO_ABERTURA);
         pack.classList.add("abrir");
-    }, 500);
 
-    // Mostrar cartas depois do pack
-    setTimeout(() => {
+        if (!movimentoReduzido) {
+            await aguardarAnimacao(pack, "packAbrir", 600);
+        }
         pack.style.display = "none";
 
-        cartas.forEach((carta, i) => {
-            setTimeout(() => {
+        // Revelar a 1ª carta
+        primeiraCarta.classList.add("is-visible");
+        if (!movimentoReduzido) {
+            await esperar(80);
+        }
+        primeiraCarta.classList.add("flip");
+        await esperar(movimentoReduzido ? 0 : TEMPO_FLIP);
 
-                carta.style.opacity = "1";
-                carta.style.top = "50%";
+        // Posicionarr cartas
+        await moverPrimeiraCartaParaGrid(primeiraCarta);
 
-                // espalhar
-                const pos = calcularPosicao(i, cartas.length);
+        // Repetir para as demais
+        for (let i = 1; i < cartas.length; i++) {
+            await esperar(movimentoReduzido ? 0 : INTERVALO_CARTAS);
+            await revelarCarta(cartas[i]);
+        }
 
-                carta.style.transform = `
-                    translate(
-                        calc(-50% + ${pos.x}px),
-                        calc(-50% + ${pos.y}px)
-                    )
-                `;
-                // virar
-                setTimeout(() => {
-                    carta.classList.add("flip");
-                }, 400);
+        finalizarAnimacao();
+    }
 
-                // última carta, mostrar botões
-                if (i === cartas.length - 1) {
-                    setTimeout(() => {
-                        botoes.style.display = "flex";
-                        pontos.style.display = "flex";
-                        removerPorClasse("carta-back");
-                    }, 1000);
-                }
+    function finalizarAnimacao() {
+        areaCards.classList.remove("is-preparing");
+        areaCards.classList.add("is-complete");
 
-            }, i * 600);
+        document.querySelectorAll(".carta-back").forEach(verso => {
+            verso.remove();
         });
 
-    }, 1000);
-}
+        pontos.style.display = "flex";
+        botoes.style.display = "flex";
 
-function removerPorClasse(classe) {
-    const elementos = document.querySelectorAll("." + classe);
-    elementos.forEach(el => el.remove());
-}
+        pontos.classList.add("resultado-visivel");
+        botoes.classList.add("resultado-visivel");
+    }
 
-// musica
-const tipoPack = {{ tipo_pack | tojson }};
-const music = document.getElementById("background-music");
-if (tipoPack === "radiante") {
-    music.src = "{{ url_for('static', filename='sounds/open_radiant_pack.mp3') }}";
-} else {
-    music.src = "{{ url_for('static', filename='sounds/open_pack.mp3') }}";
-}
-music.load();
-music.play();
 
-window.onload = iniciarAnimacao;
+    // Musica do pacote
+    if (tipoPack === "radiante") {
+        music.src = "{{ url_for('static', filename='sounds/open_radiant_pack.mp3') }}";
+    } else {
+        music.src = "{{ url_for('static', filename='sounds/open_pack.mp3') }}";
+    }
+
+    music.load();
+
+    const tentativaDeReproducao = music.play();
+
+    if (tentativaDeReproducao && typeof tentativaDeReproducao.catch === "function") {
+        tentativaDeReproducao.catch(() => {});
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener(
+            "DOMContentLoaded",
+            iniciarAnimacao,
+            { once: true }
+        );
+    } else {
+        iniciarAnimacao();
+    }
+
+})();
 </script>
 {% endblock %}
