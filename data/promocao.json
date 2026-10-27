@@ -436,8 +436,16 @@
     "was_points": 0
   }, {
     "id": "helix_dourados",
-    "nome": "Defensores Hélix: Dourados",
-    "description": "Pacote especial com: Pharah dourada, Sierra dourada e Soldado: 76 dourado.",
+    "lang": {
+      "br": {
+        "nome": "Defensores Hélix: Dourados",
+    "description": "Pacote especial com: Pharah dourada, Sierra dourada e Soldado: 76 dourado."
+      },
+      "en": {
+        "nome": "Helix Defenders: Golden",
+    "description": "Special bundle featuring: Pharah, Sierra and Soldado: 76 all golden."
+      }
+    },
     "value": 600,
     "buy_with_impeto": false,
     "inicio": "10-21",
