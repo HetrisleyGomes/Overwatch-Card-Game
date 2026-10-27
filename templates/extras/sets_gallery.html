@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<style>
+    .main{
+        margin: 4vh 10vw;
+    }
+    .gallery_display {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .personagem_base.Tanque { background: var(--tanque-type); }
+    .personagem_base.Dano { background: var(--dano-type); }
+    .personagem_base.Suporte { background: var(--suporte-type); }
+    .personagem_base.Atacante { background: var(--atacante-type); }
+    .personagem_base.Defensor { background: var(--defensor-type); }
+
+    .raridade.comum { background: var(--comum-rarity); }
+    .raridade.incomum { background: var(--incomum-rarity); }
+    .raridade.epico { background: var(--epico-rarity); }
+    .raridade.lendario { background: var(--lendario-rarity); }
+    .raridade.ultra { background: var(--ultra-rarity); }
+    .raridade.legado { background: var(--legado-rarity); }
+    .raridade.mitico { background: var(--mitico-rarity); }
+    .raridade.raridade-extra { background: var(--event-rarity); }
+
+    .set{
+        color: var(--light-text);
+        background-color: var(--main-dark-color);
+        border-radius: 20px;
+        padding: 20px;
+        height: 240px;
+        margin-bottom: 20px;
+    }
+    .set_nome {
+        color: var(--light-text);
+        font-size: larger;
+    }
+    .personagens {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 10px 20px;
+    }
+
+    .personagem {
+        width: 200px;
+        text-align: center;
+        color: var(--light-text);
+        background-color: var(--main-color);
+        border-radius: 8px 8px 0 0;
+    }
+    .personagem_img {
+        position: relative;
+    }
+
+    .personagem_img img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+    }
+    .icon_ref {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        
+    }
+    .icon_ref img{
+        width: 15px;
+        height: 15px;
+    }
+
+    .personagem_base {
+        padding: 5px;
+        margin-top: 5px;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .p_nome {
+        display: block;
+        font-weight: bold;
+        text-shadow: var(--text-shadow);
+    }
+    .raridade {
+        width: 10px;
+        height: calc(4vh + 10px);
+        position: absolute;
+        right: 0;
+        box-sizing: border-box;
+    }
+</style>
+
+
+<div class="main">
+<h1>Galeria de conjuntos</h1>
+<div id="global-tooltip"></div>
+
+    <div class="gallery_display">
+    {% for set in sets %}
+        <div class="set">
+
+            <div class="set_nome">
+                {{ set['nome'] }}
+            </div>
+            <div class="personagens">
+            {% for personagem in set['cartas'] %}
+                <div class="personagem">
+
+                    <div class="personagem_img">
+                        <img src="{{ url_for('static', filename='images/' + personagem.img ) }}" loading="lazy">
+                        {% if personagem.icon_ref %}
+                        <div class="icon_ref" data-tooltip="{{ personagem.icon_ref }}">
+                                <img src="{{ url_for('static', filename='icons/' + personagem.icon_ref ) }}" loading="lazy">
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="personagem_base">
+                        <span class="p_nome">{{ personagem.nome }}</span>
+                        <div class="raridade {{ personagem.raridade }} {% if personagem.is_evento %}raridade-extra{% endif %}"></div>
+                    </div>
+
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+ <br>
+</div>
+<script>
+    const LEGENDA = {
+        "br": {
+            "golden.png": "Arma dourada",
+            "alter.png": "Arte alternativa",
+            "jade.png": "Carta legado de esmeralda",
+            "hard_light.png": "Luz Sólida",
+            "losmuertos.png": "Los Muertos"
+        },
+        "en": {
+            "golden.png": "Golden weapon",
+            "alter.png": "Alternative art",
+            "jade.png": "Jade legacy card",
+            "hard_light.png": "Solid Light",
+            "losmuertos.png": "Los Muertos"
+        }
+    }
+    const currentLang = {{ lang | tojson }};
+    // Tooltips
+    const tooltip = document.getElementById("global-tooltip");
+    function initializeTooltips() {
+        document.addEventListener("mousemove", (e) => {
+            console.log(e.target)
+            const icon = e.target.closest(".icon_ref")
+            if (!icon) {
+                tooltip.classList.remove("show");
+                return;
+            } 
+            
+            if (icon){
+                value = LEGENDA[currentLang][icon.dataset.tooltip];
+                tooltip.innerHTML = value;
+            }
+            
+            tooltip.style.left = `${e.clientX}px`;
+            tooltip.style.top = `${e.clientY + 16}px`;
+            tooltip.classList.add("show");
+        });
+
+        document.addEventListener("mouseleave", () => {
+            tooltip.classList.remove("show");
+        });
+    }
+    initializeTooltips();
+</script>
+{% endblock %}

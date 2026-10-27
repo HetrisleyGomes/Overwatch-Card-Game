@@ -2228,6 +2228,29 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "junkrat_los_muertos",
+    "base": "junkrat",
+    "classe": "Dano",
+    "subclasse": "Especialista",
+    "lang": {
+      "br": {
+        "nome": "Junkrat Los Muertos",
+        "entrada": "Tantas bombas para colocar por aí.",
+        "ult_nome": "Pneu da morte",
+        "ult": "Vai explodir!"
+      },
+      "en": {
+        "nome": "Junkrat: Los Muertos",
+        "entrada": "Plenty of bombs to go around!",
+        "ult_nome": "RIP-Tire",
+        "ult": "Fire in the hole!"
+      }
+    },
+    "raridade": "lendario",
+    "img": "Junkrat_ow_los_muertos.png",
+    "icon_ref": "losmuertos.png"
+  },
+  {
     "id": "junkrat_legado",
     "base": "junkrat",
     "classe": "Defensor",
@@ -3966,6 +3989,29 @@
     "img": "Reaper_ow.png"
   },
   {
+    "id": "reaper_soldado_24",
+    "base": "reaper",
+    "classe": "Dano",
+    "subclasse": "Flanco",
+    "lang": {
+      "br": {
+        "nome": "Soldado: 24",
+        "entrada": "Você não pode escapar da morte.",
+        "ult_nome": "Desabrochar da morte",
+        "ult": "Morram, morram, morram!"
+      },
+      "en": {
+        "nome": "Soldier: 24",
+        "entrada": "You can't escape death.",
+        "ult_nome": "Death Blossom",
+        "ult": "Die... die... die..."
+      }
+    },
+    "raridade": "comum",
+    "img": "Reaper_ow_soldado24.png",
+    "icon_ref":"alter.png"
+  },
+  {
     "id": "reaper_calafrio",
     "base": "reaper",
     "classe": "Dano",
@@ -4891,6 +4937,29 @@
     "icon_ref": "golden.png"
   },
   {
+    "id": "soldado_76_los_muertos",
+    "base": "soldado_76",
+    "classe": "Dano",
+    "subclasse": "Especialista",
+    "lang": {
+      "br": {
+        "nome": "Soldado: Los muertos 76",
+        "entrada": "Todo soldado precisa de uma causa.",
+        "ult_nome": "Visor tático",
+        "ult": "Você está na minha mira!"
+      },
+      "en": {
+        "nome": "Soldier: Los Muertos 76",
+        "entrada": "Every soldier needs a cause.",
+        "ult_nome": "Tactical Visor",
+        "ult": "I've got you in my sights!"
+      }
+    },
+    "raridade": "lendario",
+    "img": "Soldier_76_ow_los_muertos.png",
+    "icon_ref": "losmuertos.png"
+  },
+  {
     "id": "soldado_76_legado",
     "base": "soldado_76",
     "classe": "Atacante",
@@ -5301,7 +5370,7 @@
     "img": "Tracer_ow.png"
   },
   {
-    "id": "tracer_hero_heart",
+    "id": "tracer_coracao",
     "base": "tracer",
     "classe": "Dano",
     "subclasse": "Flanco",

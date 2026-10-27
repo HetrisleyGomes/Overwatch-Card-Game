@@ -161,13 +161,11 @@ def list_user_sets(conn, user_id, lang):
 
         for cid in personagens_set:
             c = mapa_characters.get(cid)
-
             if not c:
                 continue
             
             possui = cid in personagens_usuario
             is_event = c.get("evento", False)
-            golden_weapon = c.get("golden_weapon", False)
             icon_ref = c.get("icon_ref", False)
 
             cartas_detalhadas.append({
@@ -177,7 +175,6 @@ def list_user_sets(conn, user_id, lang):
             "img": c["img"],
             "icon_ref": icon_ref,
             "evento": is_event,
-            "golden_weapon": golden_weapon,
             "possui": possui,
         })
             
@@ -185,9 +182,9 @@ def list_user_sets(conn, user_id, lang):
         if personagens_set_extra is not None:
             for cid in personagens_set_extra:
                 c = mapa_characters.get(cid)
-
                 if not c:
                     continue
+
                 possui = cid in personagens_usuario
                 cartas_extras.append({
                 "id": cid,
@@ -208,6 +205,56 @@ def list_user_sets(conn, user_id, lang):
 
         if completo:
             set_info["recompensa"] = s.get("recompensa", {})
+
+        resultado.append(set_info)
+    return resultado
+
+def get_all_sets_formated(lang):
+    sets = get_sets()
+    characters = get_characters()
+    mapa_characters = {c["id"]: c for c in characters}
+    resultado = []
+    for s in sets:
+        set_name = s["lang"][lang]["nome"]
+        personagens_set = s["personagens"]
+        personagens_set_extra = s.get("other_personagens", [])
+        cartas_sets = []
+        for cid in personagens_set:
+            c = mapa_characters[cid]
+            if not c:
+                continue
+            
+            is_event = c.get("evento", False)
+            icon_ref = c.get("icon_ref", False)
+
+            cartas_sets.append({
+            "id": cid,
+            "nome": c["lang"][lang]["nome"],
+            "raridade": c["raridade"],
+            "img": c["img"],
+            "icon_ref": icon_ref,
+            "evento": is_event
+        })
+            
+        cartas_extras = []
+        if personagens_set_extra is not None:
+            for cid in personagens_set_extra:
+                c = mapa_characters[cid]
+                if not c:
+                    continue
+
+                cartas_extras.append({
+                "id": cid,
+                "nome": c["lang"][lang]["nome"],
+                "raridade": c["raridade"],
+                "img": c["img"]
+            })
+
+        set_info = {
+            "nome": set_name,
+            "cartas": cartas_sets,
+            "cartas_extra": cartas_extras
+        }
 
         resultado.append(set_info)
     return resultado

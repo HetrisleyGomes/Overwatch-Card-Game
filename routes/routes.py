@@ -2,7 +2,7 @@ from flask import blueprints, render_template, request, session, redirect, url_f
 from services.user_service import verify_date, sum_xp
 from services.progress_service import registry_cards, save_deck_progress, get_deck
 from services.pack_sevice import open_pack, open_event_pack
-from services.collection_service import check_sets, format_inventory, get_all_cards_formated, list_user_sets, card_format
+from services.collection_service import check_sets, format_inventory, get_all_cards_formated, list_user_sets, card_format, get_all_sets_formated
 from services.events_service import get_active_events, get_last_log, is_theres_active_events
 from services.store_services import get_promotion, buy_pack_promotion, get_user_infos, get_max_vault_infos, get_vault, generate_vault, buy_vault_item, get_vault_data_format, buy_theme
 from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img, themes_view
@@ -94,7 +94,6 @@ def open_pack_route():
     else:
         cartas = open_pack(type, lang)
 
-    print(cartas)
     user = registry_cards(connection, cartas, type, user)
     sets, points = check_sets(connection, user['id'], lang)
     user['pontos'] += points
@@ -484,7 +483,7 @@ def logoff():
 # LOGIN ==============================================
 @main.before_request
 def verify_user():
-    open_routes = ["main.login", "main.sign_in", "static", "main.register", "main.ping", "documents.robots", "documents.llms", "documents.sitemap", "main.gallery", "main.manual"]
+    open_routes = ["main.login", "main.sign_in", "static", "main.register", "main.ping", "documents.robots", "documents.llms", "documents.sitemap", "main.gallery", "main.manual", "main.sets_gallery"]
 
     if 'user_id' not in session:
         if request.endpoint not in open_routes:
@@ -592,6 +591,12 @@ def gallery(lang = "br"):
     classes_tips = get_classes_lang(lang)
     return render_template('extras/gallery.html', cartas=cartas, classes_tips=classes_tips, lang=lang)
 
+@main.route("/sets_gallery")
+@main.route("/sets_gallery/<lang>")
+def sets_gallery(lang = "br"):
+    sets = get_all_sets_formated(lang)
+    return render_template('extras/sets_gallery.html', sets=sets, lang=lang)
+
 def update_session_user(ctll):
     user = ctll.get_user(session["user_id"])
     session['user_data'] = user
@@ -604,29 +609,17 @@ def update_user(conn, user):
 
 @main.route("/api/theme-music")
 def theme_music():
-    print("veio")
     user_id = session.get("user_id")
-
     if not user_id: return {"url": None}
-    print("passou 1")
 
     user = session['user_data']
     theme = user["theme"]
 
-    print("passou 2")
-    print(theme)
-
     if theme == "anubis_temple-theme":
         return {
-            "url": url_for(
-                "static",
-                filename="sounds/legendary_themes/background_anubis.mp3"
-            )
+            "url": url_for("static", filename="sounds/legendary_themes/background_anubis.mp3")
         }
     else:
         return {
-            "url": url_for(
-                "static",
-                filename="sounds/background.mp3"
-            )
+            "url": url_for("static", filename="sounds/background.mp3")
         }
