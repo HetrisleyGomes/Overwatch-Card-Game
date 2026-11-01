@@ -45,10 +45,12 @@
         "Origem": "Origem",
         "Perigo": "Perigo",
         "Perverso": "Perverso",
+        "Vazio": "Vazio",
 
         "april_fools": "Primeiro de Abril",
         "aniversary": "Aniversário",
-        "overwatch_2": "Overwatch 2"
+        "overwatch_2": "Overwatch 2",
+        "especial10anos": "Especial 10 anos"
     },
     "en":{
         "comum": "Common",
@@ -95,9 +97,11 @@
         "Origem": "Origin",
         "Perigo": "Danger",
         "Perverso": "Wicked",
+        "Vazio": "Void",
 
         "april_fools": "April Fools",
         "aniversary": "Anniversary",
-        "overwatch_2": "Overwatch 2"
+        "overwatch_2": "Overwatch 2",
+        "especial10anos": "10 Years special"
     }
 }

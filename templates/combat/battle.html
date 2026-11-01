@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-<link rel="stylesheet" href="../static/styles/battle.css">
 <link rel="stylesheet" href="../static/styles/carta.css">
+<link rel="stylesheet" href="../static/styles/battle.css">
 
 <div class="battle-container">
 
@@ -37,6 +37,7 @@
     <!-- ⚔️ ÁREA DE COMBATE -->
     <div class="arena">
         <div class="players_spaces">
+            <div class="continuous-effect-slot" id="cont-slot-p1"></div>
             <div class="card-slot" id="slot-p1">
                 <span>Player 1</span>
             </div>
@@ -44,6 +45,7 @@
         </div>
 
         <div class="players_spaces">
+            <div class="continuous-effect-slot" id="cont-slot-p2"></div>
             <div class="card-slot" id="slot-p2">
                 <span>Player 2</span>
             </div>
@@ -77,28 +79,33 @@
     <div id="global-tooltip"></div>
 </div>
 
-<audio id="background-music" autoplay loop>
-  <source src="static/sounds/battle_background.mp3" type="audio/mpeg">
+<audio id="background-music" loop autoplay>
   Your browser does not support the audio element.
 </audio>
 <script>
     // Script da música
     const music = document.getElementById("background-music");
-    const volumeControl = document.getElementById("volume-control");
 
-    volumeControl.addEventListener("input", () => {
-        const volume = volumeControl.value / 100;
-        music.volume = volume;
-        localStorage.setItem("musicVolume", volume);
-    });
+    async function loadThemeMusic(theme=null) {
+        try {
+            const response = await fetch("/api/theme-music/combate");
+            if (!response.ok) {
+                throw new Error("Erro ao buscar música do tema");
+            }
 
-    const savedVolume = localStorage.getItem("musicVolume");
+            const data = await response.json();
+            if (!data.url) {
+                return;
+            }
 
-    if (savedVolume !== null) {
-        music.volume = Number(savedVolume);
-        volumeControl.value =
-            Number(savedVolume) * 100;
-    }
+            savedTrack = data.url;
+            music.src = savedTrack;
+            music.load();
+        } catch (error) {
+            console.error("Não foi possível carregar a música do tema:", error);
+        }
+    };
+    loadThemeMusic();
 </script>
 <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
 <script>
@@ -218,13 +225,16 @@ function get_description(cardData){
 
 function createCardElement(cardData) {
     const card = document.createElement("div");
-
+    console.log(cardData)
     // classes da carta
     card.classList.add(
         "card",
         cardData.classe.toLowerCase(),
         cardData.raridade?.toLowerCase() || "comum"
     );
+    if (cardData.foil){
+        card.classList.add('foil')
+    }
     card.dataset.id = cardData.carta_id;
 
     card.innerHTML = `
@@ -250,7 +260,7 @@ function enableCardSelection() {
     cards.forEach(card => {
         card.onclick = () => {
             // evita múltiplos cliques
-            if (game_state.phase !== "choose" && game_state.phase !== "fist_choose") return;
+            if (game_state.phase !== "choose" && game_state.phase !== "fist_choose" && card.classList.contains('not-selected-card')) return;
             const cardId = card.dataset.id;
 
             // destaque visual
@@ -323,7 +333,8 @@ socket.on("battle_phase_two", async (data) => {
         hp2,
         changes[player_2.id]
     );
-    update_life()
+    update_life();
+    await check_continuous_effects(changes);
     gameFlow();
 });
 
@@ -528,15 +539,16 @@ async function startBattleAnimation(battleData) {
     const slotP1 = document.getElementById("slot-p1");
     const slotP2 = document.getElementById("slot-p2");
 
+    document.getElementById("cont-slot-p1").innerHTML = "";
+    document.getElementById("cont-slot-p2").innerHTML = "";
+
     // =========================
     // CARTA DO JOGADOR
     // =========================
-    console.log(player1Card)
     const playerCard = document.querySelector(
         `.hand .card[data-id="${player1Card.carta_id}"]`
     );
     playerCard.classList.remove("selected");
-
 
     // =========================
     // CARTA DO OPONENTE
@@ -633,6 +645,7 @@ async function drop_cards_animation() {
     // adiciona mini pilha no descarte
     discardCards.forEach((card, index) => {
         const mini = card.cloneNode(true);
+        mini.classList.add("not-selected-card")
         mini.style.position = "absolute";
         mini.style.left = `${(index * 4) -40}px`;
         mini.style.top = `${(index * -4) -50}px`;
@@ -699,19 +712,15 @@ async function createEffectsBattleOne(effectsData) {
 
     // renderiza em ondas
     for (let i = 0; i < maxEffects; i++) {
+        const tooltip_list = ['ataque futuro', 'revitalizar', 'descuido', 'debilitar']
         // PLAYER
         if (myEffectsArray[i]) {
             const [effectName, amount] = myEffectsArray[i];
             const effectElement = createEffectElement(effectName, amount);
-            if (effectName == 'ataque futuro'){
+
+            if (tooltip_list.includes(effectName)){
                 effectElement.classList.add("ler_tooltip");
-                effectElement.dataset.tooltip = 'Receberá Ataque x1 no próximo turno.';
-            } else if (effectName == 'revitalizar'){
-                effectElement.classList.add("ler_tooltip");
-                effectElement.dataset.tooltip = 'A cura será dobrada no próximo turno.';
-            } else if (effectName == 'descuido'){
-                effectElement.classList.add("ler_tooltip");
-                effectElement.dataset.tooltip = 'Se auto infringe dano.';
+                effectElement.dataset.tooltip = COMBAT_TIPS[effectName];
             }
             effectsP1.appendChild(effectElement);
         }
@@ -720,15 +729,10 @@ async function createEffectsBattleOne(effectsData) {
         if (enemyEffectsArray[i]) {
             const [effectName, amount] = enemyEffectsArray[i];
             const effectElement = createEffectElement(effectName, amount);
-            if (effectName == 'ataque futuro'){
+
+            if (tooltip_list.includes(effectName)){
                 effectElement.classList.add("ler_tooltip");
-                effectElement.dataset.tooltip = 'Receberá Ataque x1 no próximo turno.';
-            } else if (effectName == 'revitalizar'){
-                effectElement.classList.add("ler_tooltip");
-                effectElement.dataset.tooltip = 'A cura será dobrada no próximo turno.';
-            } else if (effectName == 'descuido'){
-                effectElement.classList.add("ler_tooltip");
-                effectElement.dataset.tooltip = 'Se auto infringe dano.';
+                effectElement.dataset.tooltip = COMBAT_TIPS[effectName];
             }
             effectsP2.appendChild(effectElement);
         }
@@ -737,7 +741,39 @@ async function createEffectsBattleOne(effectsData) {
     }
 };
 
+async function check_continuous_effects(changes) {
+    const changeData = changes[player_1.id];
+    if (Object.values(changeData['battle_continuous']).some(valor => valor > 0)) {
+        const effects = changeData['battle_continuous'];
+        const area_div = document.getElementById('cont-slot-p1');
+
+        for (let key in effects){
+            if (effects[key] > 0){
+                const effectElement = createEffectElement(key, effects[key]);
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = COMBAT_TIPS[key]
+                area_div.appendChild(effectElement)
+            }
+        }
+    }
+    const changeData2 = changes[player_2.id];
+    if (Object.values(changeData2['battle_continuous']).some(valor => valor > 0)) {
+        const effects = changeData2['battle_continuous'];
+        const area_div = document.getElementById('cont-slot-p2');
+
+        for (let key in effects){
+            if (effects[key] > 0){
+                const effectElement = createEffectElement(key, effects[key]);
+                effectElement.classList.add("ler_tooltip");
+                effectElement.dataset.tooltip = COMBAT_TIPS[key]
+                area_div.appendChild(effectElement)
+            }
+        }
+    }
+}
+
 function showBattleChange(targetElement, changeData) {
+    console.log(changeData)
     const number = document.createElement("div");
     number.classList.add("floating-number");
     // tipo

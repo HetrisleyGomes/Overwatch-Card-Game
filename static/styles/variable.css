@@ -26,8 +26,8 @@
   --incomum-rarity: #808080;
   --epico-rarity: #c0c0c0;
   --legado-rarity: linear-gradient(45deg, #009529, #34d18f, #009529);
-  --ultra-rarity: #ff1c00;
   --lendario-rarity: #b99f07;
+  --ultra-rarity: linear-gradient(135deg, #ff1c00, #ff725f, #ff1c00);
   --mitico-rarity: linear-gradient(45deg, #c1269a, #ffc0cb, #01a1c1, #c1269a);
   --event-rarity: #9370d8;
 
@@ -43,10 +43,13 @@
   --combat-red-color: #d64545;
   --combat-blue-color: #4a8dff;
   --combat-green-color: #4fd67a;
-  --combat-purple-color: #8c4be8;
+  --combat-purple-color: #512bb8;
+  --combat-violet-color: #a978ee;
+  --combat-orange-color: #ffa033;
   --combat-yellow-color: #ffcf33;
   --combat-dark_red-color: #8b2f4d;
   --combat-cyan-color: #43d9e8;
+  --combat-gray-color: #b3a2a2;
 
   --text-shadow: 0 0 2px #000000;
   --background-overlay: #00000073;

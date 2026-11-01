@@ -161,13 +161,11 @@ def list_user_sets(conn, user_id, lang):
 
         for cid in personagens_set:
             c = mapa_characters.get(cid)
-
             if not c:
                 continue
             
             possui = cid in personagens_usuario
             is_event = c.get("evento", False)
-            golden_weapon = c.get("golden_weapon", False)
             icon_ref = c.get("icon_ref", False)
 
             cartas_detalhadas.append({
@@ -177,7 +175,6 @@ def list_user_sets(conn, user_id, lang):
             "img": c["img"],
             "icon_ref": icon_ref,
             "evento": is_event,
-            "golden_weapon": golden_weapon,
             "possui": possui,
         })
             
@@ -185,9 +182,9 @@ def list_user_sets(conn, user_id, lang):
         if personagens_set_extra is not None:
             for cid in personagens_set_extra:
                 c = mapa_characters.get(cid)
-
                 if not c:
                     continue
+
                 possui = cid in personagens_usuario
                 cartas_extras.append({
                 "id": cid,
@@ -212,11 +209,62 @@ def list_user_sets(conn, user_id, lang):
         resultado.append(set_info)
     return resultado
 
+def get_all_sets_formated(lang):
+    sets = get_sets()
+    characters = get_characters()
+    mapa_characters = {c["id"]: c for c in characters}
+    resultado = []
+    for s in sets:
+        personagens_set = s["personagens"]
+        personagens_set_extra = s.get("other_personagens", [])
+        cartas_sets = []
+        for cid in personagens_set:
+            c = mapa_characters[cid]
+            if not c:
+                continue
+            
+            is_event = c.get("evento", False)
+            icon_ref = c.get("icon_ref", False)
+
+            cartas_sets.append({
+            "id": cid,
+            "nome": c["lang"][lang]["nome"],
+            "raridade": c["raridade"],
+            "img": c["img"],
+            "icon_ref": icon_ref,
+            "evento": is_event
+        })
+            
+        cartas_extras = []
+        if personagens_set_extra is not None:
+            for cid in personagens_set_extra:
+                c = mapa_characters[cid]
+                if not c:
+                    continue
+
+                cartas_extras.append({
+                "id": cid,
+                "nome": c["lang"][lang]["nome"],
+                "raridade": c["raridade"],
+                "img": c["img"]
+            })
+
+        set_info = {
+            "nome": s["lang"][lang]["nome"],
+            "cartas": cartas_sets,
+            "cartas_extra": cartas_extras,
+            "link": s.get('link', False)
+        }
+
+        resultado.append(set_info)
+    return resultado
+
 def card_format(carta_id, lang):
     characters = get_characters()
     mapa_characters = {c["id"]: c for c in characters}
     carta = mapa_characters[carta_id]
     icon_ref = carta.get("icon_ref", False)
+    foil = carta.get("foil", False)
     itens = {
     'carta_id': carta['id'],
     'carta_nome': carta["lang"][lang]['nome'],
@@ -224,7 +272,8 @@ def card_format(carta_id, lang):
     'raridade': carta['raridade'],
     'classe': carta['classe'],
     'subclasse': carta['subclasse'],
-    'icon_ref': icon_ref
+    'icon_ref': icon_ref,
+    'foil': foil
     }
     return itens
 
@@ -249,11 +298,11 @@ def format_full_card(carta, lang):
 def get_pve_cards():
     characters = get_characters()
     cartas = []
-    tank_couters = 0
+    tank_counters = 0
     for i in range(12):
-        possiveis = [p for p in characters if p.get("evento") is None and p not in cartas and tank_couters <= 3]
+        possiveis = [p for p in characters if p.get("evento") is None and p not in cartas and (p["classe"] != "Tanque" or tank_counters < 3)]
         carta = random.choice(possiveis)
-        tank_couters += 1 if carta['classe'] == 'Tanque' else 0
+        tank_counters += 1 if carta['classe'] == 'Tanque' else 0
         cartas.append(carta['id'])
     return cartas
 

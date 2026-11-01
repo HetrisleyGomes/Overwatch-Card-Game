@@ -69,6 +69,10 @@ def open_event_pack(id_evento, lang):
     personagens = get_characters()
     is_super_halloween = False
 
+<<<<<<< HEAD
+=======
+    # Verifica o evento
+>>>>>>> feature
     if id_evento == "halloween":
         let = random.randrange(0, 100)
         if let <= 95:

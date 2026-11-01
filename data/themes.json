@@ -105,5 +105,23 @@
         "unlock": {
             "type": "purchase"
         }
+    },
+    {
+        "id": "hanamura-theme",
+        "lang": {
+            "br":{
+                "nome": "Hanamura",
+                "descricao": "Descubra os segredos esquecidos do tempo, neste tema perdido de Templo de Anúbis." 
+            }, "en":{
+                "nome": "Hanamura",
+                "descricao": "Discover the forgotten secrets of time in this lost Temple of Anubis theme."
+            }
+        },
+        "price": 5000,
+        "rarity": "epico",
+        "preview": "linear-gradient(130deg, #EFAFC1, #87C9E8, #EFAFC1);",
+        "unlock": {
+            "type": "purchase"
+        }
     }
 ]

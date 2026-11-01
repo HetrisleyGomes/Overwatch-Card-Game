@@ -3,18 +3,18 @@
     "cartas_por_pack": 5,
     "chance": [
         { "comum": 100 },
-        { "comum": 80, "incomum": 20 },
+        { "comum": 70, "incomum": 30 },
         { "comum": 50, "incomum": 30, "epico": 20 },
-        { "comum": 20, "incomum": 35, "epico": 40, "lendario": 5 },
-        { "epico": 53,"lendario": 40, "ultra": 2 }
+        { "comum": 20, "incomum": 30, "epico": 40, "lendario": 10 },
+        { "epico": 50,"lendario": 45, "ultra": 5 }
     ]
   },
   "raro": {
     "cartas_por_pack": 4,
     "chance": [
       { "incomum": 60, "epico": 40 },
-      { "incomum": 2, "epico": 63, "lendario": 30 },
-      { "epico": 25, "lendario": 70, "ultra": 5 },
+      { "incomum": 15, "epico": 55, "lendario": 30 },
+      { "epico": 25, "lendario": 65, "ultra": 10 },
       { "mitico": 100 }
     ]
   },
@@ -22,8 +22,8 @@
     "cartas_por_pack": 4,
     "chance": [
       { "epico": 30, "lendario": 70 },
-      { "lendario": 65, "ultra": 1, "mitico": 34 },
-      { "lendario": 20, "ultra": 5, "mitico": 75 },
+      { "lendario": 65, "ultra": 5, "mitico": 30 },
+      { "lendario": 20, "ultra": 10, "mitico": 70 },
       { "mitico": 100 }
     ]
   },
@@ -44,10 +44,10 @@
     "cartas_por_pack": 5,
     "chance": [
         { "comum": 100 },
-        { "comum": 80, "incomum": 15, "epico": 5 },
-        { "comum": 40, "incomum": 30, "epico": 25, "lendario": 5 },
-        { "incomum": 50, "epico": 35, "lendario": 15 },
-        { "epico": 50, "lendario": 45, "ultra": 5 }
+        { "comum": 65, "incomum": 30, "epico": 5 },
+        { "comum": 35, "incomum": 35, "epico": 25, "lendario": 5 },
+        { "incomum": 40, "epico": 45, "lendario": 15 },
+        { "epico": 40, "lendario": 50, "ultra": 10 }
     ]
   },
   "overwatch_2": {
@@ -60,8 +60,8 @@
   "halloween": {
     "cartas_por_pack": 2,
     "chance": [
-      { "incomum": 75, "epico": 25 },
-      { "incomum": 45, "epico": 55 }
+      { "incomum": 70, "epico": 30 },
+      { "incomum": 40, "epico": 55, "lendario": 5 }
     ]
   },
   "halloween_super": {

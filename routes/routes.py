@@ -2,7 +2,7 @@ from flask import blueprints, render_template, request, session, redirect, url_f
 from services.user_service import verify_date, sum_xp
 from services.progress_service import registry_cards, save_deck_progress, get_deck
 from services.pack_sevice import open_pack, open_event_pack
-from services.collection_service import check_sets, format_inventory, get_all_cards_formated, list_user_sets, card_format
+from services.collection_service import check_sets, format_inventory, get_all_cards_formated, list_user_sets, card_format, get_all_sets_formated
 from services.events_service import get_active_events, get_last_log, is_theres_active_events
 from services.store_services import get_promotion, buy_pack_promotion, get_user_infos, get_max_vault_infos, get_vault, generate_vault, buy_vault_item, get_vault_data_format, buy_theme
 from services.inventory_service import get_img_logos, user_get_inventory, icon_view, get_new_img, themes_view
@@ -133,6 +133,25 @@ def result_pack():
     classes_tips = get_classes_lang(lang)
     
     return render_template("resultado.html", cartas = cards, user = user, tipo_pack=rarity, pontos=points, sets=sets, pontos_sets=sets_points, xp_obtido=xp_gained, xp_final=user['xp'], nivel=user['nivel'], level_uped=level_uped, classes_tips=classes_tips)
+
+@main.route("/teste-develop")
+def test_feature():
+    user = session['user_data']
+
+    cards = [{'id': 'winston_comum', 'base': 'winston', 'nome': 'Winston', 'entrada': 'A better world is possible today.', 'ult_nome': 'Primal Rage', 'ult': '(roar)!', 'img': 'Winston_ow.png', 'raridade': 'comum', 'classe': 'Tanque', 'subclasse': 'Incursor', 'icon_ref': False}, {'id': 'sojourn_comum', 'base': 'sojourn', 'nome': 'Sojourn', 'entrada': "We're in this together. All of us.", 'ult_nome': 'Overclock', 'ult': 'This ends now!', 'img': 'Sojourn_ow.png', 'raridade': 'comum', 'classe': 'Dano', 'subclasse': 'Artilharia', 'icon_ref': False}, {'id': 'hazard_comum', 'base': 'hazard', 'nome': 'Hazard', 'entrada': "If you're in it with me, you're in it for life.", 'ult_nome': 'Downpour', 'ult': 'Tear it down!', 'img': 'Hazard_ow.png', 'raridade': 'comum', 'classe': 'Tanque', 'subclasse': 'Incursor', 'icon_ref': False}, {'id': 'lucio_principe_espaco', 'base': 'lucio', 'nome': 'Space Prince', 'entrada': "I'm here to be heard!", 'ult_nome': 'Sound Barrier', 'ult': "Oh, let's break it down!", 'img': 'Lucio_ow_principe_espacial.png', 'raridade': 'epico', 'classe': 'Suporte', 'subclasse': 'Cósmico', 'icon_ref': False}]
+    rarity = "comum"
+    points = 20
+    xp_gained = 10
+    sets = ["teste"]
+    sets_points = 10
+
+    level_uped = True
+    
+
+    lang = session['lang']
+    classes_tips = get_classes_lang(lang)
+    
+    return render_template("resultado_2.html", cartas = cards, user = user, tipo_pack=rarity, pontos=points, sets=sets, pontos_sets=sets_points, xp_obtido=xp_gained, xp_final=user['xp'], nivel=user['nivel'], level_uped=level_uped, classes_tips=classes_tips)
 
 
 # Inventario =================================
@@ -464,7 +483,7 @@ def logoff():
 # LOGIN ==============================================
 @main.before_request
 def verify_user():
-    open_routes = ["main.login", "main.sign_in", "static", "main.register", "main.ping", "documents.robots", "documents.llms", "documents.sitemap", "main.gallery", "main.manual"]
+    open_routes = ["main.login", "main.sign_in", "static", "main.register", "main.ping", "documents.robots", "documents.llms", "documents.sitemap", "main.gallery", "main.manual", "main.sets_gallery"]
 
     if 'user_id' not in session:
         if request.endpoint not in open_routes:
@@ -572,6 +591,12 @@ def gallery(lang = "br"):
     classes_tips = get_classes_lang(lang)
     return render_template('extras/gallery.html', cartas=cartas, classes_tips=classes_tips, lang=lang)
 
+@main.route("/sets_gallery")
+@main.route("/sets_gallery/<lang>")
+def sets_gallery(lang = "br"):
+    sets = get_all_sets_formated(lang)
+    return render_template('extras/sets_gallery.html', sets=sets, lang=lang)
+
 def update_session_user(ctll):
     user = ctll.get_user(session["user_id"])
     session['user_data'] = user
@@ -584,29 +609,21 @@ def update_user(conn, user):
 
 @main.route("/api/theme-music")
 def theme_music():
-    print("veio")
     user_id = session.get("user_id")
-
     if not user_id: return {"url": None}
-    print("passou 1")
 
     user = session['user_data']
     theme = user["theme"]
 
-    print("passou 2")
-    print(theme)
-
     if theme == "anubis_temple-theme":
         return {
-            "url": url_for(
-                "static",
-                filename="sounds/legendary_themes/background_anubis.mp3"
-            )
+            "url": url_for("static", filename="sounds/legendary_themes/background_anubis.mp3")
+        }
+    elif theme == "hanamura-theme":
+        return {
+            "url": url_for("static", filename="sounds/legendary_themes/background_hanamura.mp3")
         }
     else:
         return {
-            "url": url_for(
-                "static",
-                filename="sounds/background.mp3"
-            )
+            "url": url_for("static", filename="sounds/background.mp3")
         }
