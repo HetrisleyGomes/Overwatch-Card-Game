@@ -291,6 +291,11 @@ body {
     box-shadow: 0 0 10px var(--combat-red-color);
 }
 
+.habilidade {
+    background: var(--combat-purple-color);
+    box-shadow: 0 0 10px var(--combat-purple-color);
+}
+
 .escudo {
     background: var(--combat-blue-color);
     box-shadow: 0 0 10px var(--combat-blue-color);
@@ -301,19 +306,24 @@ body {
     box-shadow: 0 0 10px var(--combat-green-color);
 }
 
-.futuro {
-    background: var(--combat-dark_red-color);
-    box-shadow: 0 0 10px var(--combat-dark_red-color);
-}
-
-.anti-cura {
-    background: var(--combat-purple-color);
-    box-shadow: 0 0 10px var(--combat-purple-color);
-}
-
 .veloz {
     background: var(--combat-yellow-color);
     box-shadow: 0 0 10px var(--combat-yellow-color);
+}
+
+.armadura {
+    background: var(--combat-orange-color);
+    box-shadow: 0 0 10px var(--combat-orange-color);
+}
+
+.anti-cura {
+    background: var(--combat-violet-color);
+    box-shadow: 0 0 10px var(--combat-violet-color);
+}
+
+.futuro {
+    background: var(--combat-dark_red-color);
+    box-shadow: 0 0 10px var(--combat-dark_red-color);
 }
 
 .revitalizar {
@@ -321,9 +331,14 @@ body {
     box-shadow: 0 0 10px var(--combat-cyan-color);
 }
 
+.debilitar {
+    background: var(--combat-gray-color);
+    box-shadow: 0 0 10px var(--combat-gray-color);
+}
+
 .descuido {
-    background: var(--notification-color);
-    box-shadow: 0 0 10px var(--notification-color);
+    background: var(--combat-red-color);
+    box-shadow: 0 0 10px var(--combat-red-color);
 }
 
 @keyframes effectAppear {

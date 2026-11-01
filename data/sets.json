@@ -16,7 +16,8 @@
     ],
     "recompensa": {
       "pontos": 100
-    }
+    },
+    "link": "herois"
   },
   {
     "id": "anran",
@@ -26,6 +27,7 @@
     },
     "personagens": [
       "anran_comum",
+      "anran_coracao",
       "anran_dourado"
     ],
     "recompensa": {
@@ -133,7 +135,8 @@
     },
     "personagens": [
       "dmon_comum",
-      "dmon_dourado"
+      "dmon_dourado",
+      "dmon_mademynight"
     ],
     "recompensa": {
       "pontos": 100
@@ -148,6 +151,8 @@
     "personagens": [
       "dva_comum",
       "dva_chibi",
+      "dva_coracao",
+      "dva_nocturna",
       "dva_cruzador",
       "dva_dourado",
       "dva_legado",
@@ -193,6 +198,7 @@
     },
     "personagens": [
       "doomfist_comum",
+      "doomfist_nova_evolucao",
       "doomfist-quebraossos",
       "comandante_ataque",
       "doomfist_dourado",
@@ -314,6 +320,7 @@
     },
     "personagens": [
       "illari_comum",
+      "illari_eclipse",
       "illari_dourado",
       "fenix_ascendida"
     ],
@@ -346,6 +353,7 @@
       "junkrat_comum",
       "junkrat_junkstein",
       "junkrat_dourado",
+      "junkrat_los_muertos",
       "junkrat_legado",
       "cyber_combustivel"
     ],
@@ -400,6 +408,7 @@
     },
     "personagens": [
       "lifeweaver_comum",
+      "lifeweaver_infortunador",
       "lifeweaver_dourado",
       "druida_divino"
     ],
@@ -468,6 +477,7 @@
     },
     "personagens": [
       "mercy_comum",
+      "mercy_coracao",
       "mercy_conjuradora",
       "mercy_diabrete",
       "mercy_sigrun",
@@ -509,6 +519,7 @@
     "personagens": [
       "moira_comum",
       "moira_dourado",
+      "moira_mademynight",
       "invocadora_ancestral"
     ],
     "recompensa": {
@@ -582,7 +593,8 @@
       "ramattra_comum",
       "ramattra_nemesis",
       "ramattra_poseidon",
-      "ramattra_dourado"
+      "ramattra_dourado",
+      "ramattra_malus"
     ],
     "recompensa": {
       "pontos": 100
@@ -599,6 +611,7 @@
     },
     "personagens": [
       "reaper_comum",
+      "reaper_soldado_24",
       "reaper_calafrio",
       "reaper_ultrawatch",
       "reaper_abobora",
@@ -726,6 +739,7 @@
       "soldado_76_churrasqueiro",
       "soldado_76_guarda_infinito",
       "soldado_76_dourado",
+      "soldado_76_los_muertos",
       "soldado_76_legado",
       "voltagem_maxima",
       "libertacao"
@@ -757,6 +771,7 @@
     },
     "personagens": [
       "symmetra_comum",
+      "symmetra_dragonesa",
       "symmetra_dourado",
       "symmetra_legado"
     ],
@@ -795,6 +810,7 @@
     },
     "personagens": [
       "tracer_comum",
+      "tracer_coracao",
       "operadora_oxton",
       "tracer_dourado",
       "tracer_legado",
@@ -959,7 +975,8 @@
     ],
     "recompensa": {
       "pontos": 200
-    }
+    },
+    "link": "conjuntos"
   },
   {
     "id": "escola_elemental",
@@ -1148,6 +1165,9 @@
       "sombra_comum",
       "widowmaker_comum"
     ],
+    "other_personagens": [
+      "doomfist_nova_evolucao"
+    ],
     "recompensa": {
       "pontos": 200
     }
@@ -1161,7 +1181,6 @@
     "personagens": [
       "cassidy_comum",
       "echo_comum",
-      "emre_comum",
       "genji_comum",
       "mei_comum",
       "mercy_comum",
@@ -1246,20 +1265,19 @@
     }
   },
   {
-    "id": "null_sector",
+    "id": "ferias",
     "lang":{
-      "br": {"nome":"Ameaça do Setor Nulo"},
-      "en": {"nome":"Danger!: Null Sector"}
+      "br": {"nome":"Curtindo o Verão"},
+      "en": {"nome":"Summer days"}
     },
     "personagens": [
-      "ramattra_comum",
-      "bastion_null_sector",
-      "orisa_null_sector",
-      "destruidor_z-3n",
-      "a-7000_Wargod"
+      "sigma_scuba",
+      "soldado_76_churrasqueiro",
+      "wuyang_piscina",
+      "cassidy_salvavidas"
     ],
     "recompensa": {
-      "pontos": 300
+      "pontos": 200
     }
   },
   {
@@ -1350,19 +1368,20 @@
     }
   },
   {
-    "id": "ferias",
+    "id": "null_sector",
     "lang":{
-      "br": {"nome":"Curtindo o Verão"},
-      "en": {"nome":"Summer days"}
+      "br": {"nome":"Ameaça do Setor Nulo"},
+      "en": {"nome":"Danger!: Null Sector"}
     },
     "personagens": [
-      "sigma_scuba",
-      "soldado_76_churrasqueiro",
-      "wuyang_piscina",
-      "cassidy_salvavidas"
+      "ramattra_comum",
+      "bastion_null_sector",
+      "orisa_null_sector",
+      "destruidor_z-3n",
+      "a-7000_Wargod"
     ],
     "recompensa": {
-      "pontos": 200
+      "pontos": 300
     }
   },
   {
@@ -1409,6 +1428,7 @@
       "anran_comum",
       "ashe_comum",
       "mauga_comum",
+      "symmetra_dragonesa",
       "titan_magma",
       "fenix_ascendida",
       "ocaso_flamejante",
@@ -1493,10 +1513,10 @@
       "en": {"nome":"Hallow Heart"}
     },
     "personagens": [
-      "ramattra_malus",
       "dva_nocturna",
       "illari_eclipse",
-      "lifeweaver_infortunador"
+      "lifeweaver_infortunador",
+      "ramattra_malus"
     ],
     "recompensa": {
       "pontos": 400
@@ -1683,6 +1703,7 @@
       "cassidy_dourado",
       "dmon_dourado",
       "dva_dourado",
+      "doctrine_dourado",
       "domina_dourado",
       "doomfist_dourado",
       "echo_dourado",
@@ -1730,7 +1751,8 @@
     ],
     "recompensa": {
       "pontos": 2000
-    }
+    },
+    "link": "dourados"
   },
   {
     "id": "hard_light_set",
@@ -1745,6 +1767,20 @@
     ],
     "recompensa": {
       "pontos": 2000
+    }
+  },
+  {
+    "id": "los_muertos_set",
+    "lang":{
+      "br": {"nome":"Los Muertos"},
+      "en": {"nome":"Los Muertos"}
+    },
+    "personagens": [
+      "junkrat_los_muertos",
+      "soldado_76_los_muertos"
+    ],
+    "recompensa": {
+      "pontos": 1600
     }
   },
 
@@ -1890,7 +1926,8 @@
     ],
     "recompensa": {
       "pontos": 5000
-    }
+    },
+    "link": "miticos"
   },
   {
     "id": "arma_mitica",

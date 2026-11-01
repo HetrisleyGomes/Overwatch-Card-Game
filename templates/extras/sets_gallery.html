@@ -29,7 +29,7 @@
         background-color: var(--main-dark-color);
         border-radius: 20px;
         padding: 20px;
-        height: 240px;
+        height: 250px;
         margin-bottom: 20px;
     }
     .set_nome {
@@ -42,9 +42,10 @@
         overflow-x: auto;
         overflow-y: hidden;
         padding: 10px 20px;
+        scrollbar-color: var(--main-light-color) var(--main-dark-color);
     }
 
-    .personagem {
+    .personagem, .personagens_extras {
         width: 200px;
         text-align: center;
         color: var(--light-text);
@@ -58,6 +59,7 @@
     .personagem_img img {
         width: 150px;
         height: 150px;
+        padding: 4px 0 0 0;
         object-fit: contain;
     }
     .icon_ref {
@@ -74,11 +76,15 @@
     .personagem_base {
         padding: 5px;
         margin-top: 5px;
+        width: 190px;
         height: 30px;
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .personagens_extras > .personagem_base {
+        background-color: var(--main-light-color);
     }
     .p_nome {
         display: block;
@@ -92,6 +98,26 @@
         right: 0;
         box-sizing: border-box;
     }
+    nav {
+        position: sticky;
+        background-color: var(--main-color);
+        padding: 20px;
+        width: 400px;
+        border: 2px solid var(--main-dark-color);
+        border-radius: 8px;
+        z-index: 10;
+        top: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        & button {
+            width: 20%;
+        }
+    }
+    nav a {
+        text-decoration: none;
+        color: var(--main-dark-color);
+    }
 </style>
 
 
@@ -99,11 +125,26 @@
 <h1>Galeria de conjuntos</h1>
 <div id="global-tooltip"></div>
 
+    <nav>
+        <button>
+            <a href="#herois">Hérois</a>
+        </button>
+        <button>
+            <a href="#conjuntos">Conjuntos</a>
+        </button>
+        <button>
+            <a href="#dourados">Dourados</a>
+        </button>
+        <button>
+            <a href="#miticos">Míticos</a>
+        </button>
+    </nav>
+
     <div class="gallery_display">
     {% for set in sets %}
         <div class="set">
 
-            <div class="set_nome">
+            <div class="set_nome" {% if set["link"] %}id="{{ set['link'] }}"{% endif %}>
                 {{ set['nome'] }}
             </div>
             <div class="personagens">
@@ -125,7 +166,26 @@
 
                 </div>
             {% endfor %}
+            {% for personagem in set['cartas_extra'] %}
+                <div class="personagens_extras">
+
+                    <div class="personagem_img">
+                        <img src="{{ url_for('static', filename='images/' + personagem.img ) }}" loading="lazy">
+                        {% if personagem.icon_ref %}
+                        <div class="icon_ref" data-tooltip="{{ personagem.icon_ref }}">
+                                <img src="{{ url_for('static', filename='icons/' + personagem.icon_ref ) }}" loading="lazy">
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="personagem_base">
+                        <span class="p_nome">{{ personagem.nome }}</span>
+                        <div class="raridade {{ personagem.raridade }} {% if personagem.is_evento %}raridade-extra{% endif %}"></div>
+                    </div>
+
+                </div>
+            {% endfor %}
             </div>
+
         </div>
     {% endfor %}
     </div>

@@ -21,8 +21,7 @@
             <div class="card-grid">
                 {% for carta in cartas %}
                     {% if carta.possui %}
-                        <div class="card {{ carta.raridade }} {{ carta.classe|lower }}
-                        {% if carta.id in deck %} selected {% endif %}" 
+                        <div class="card {{ carta.raridade }} {{ carta.classe|lower }}{% if carta.id in deck %} selected{% endif %}{% if carta.foil %} foil{% endif %}" 
                         data-id="{{ carta.id }}"
                         data-nome="{{ carta.nome }}"
                         data-img="{{ url_for('static', filename='images/' + carta.img ) }}"

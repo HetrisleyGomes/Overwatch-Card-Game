@@ -25,8 +25,8 @@
         "Caçador": "Caçador: Ataque futuro x1, Anti-cura x2",
         "Carregada": "Carregada: Habilidade x4, Descuido x2 (Causa este dano a si mesmo)",
         "Classic": "Classic: Escudo, Ataque e Cura x1",
-        "Coração": "Coração: Escudo x2, Habilidade x1",
-        "Cósmico": "Cósmico: Escudo x2, Cura x1",
+        "Coração": "Coração: Escudo x1, Cura x2",
+        "Cósmico": "Cósmico: Escudo x2, Habilidade x1",
         "Elegante": "Elegante: Armadura x2 para Tanques e Defensores, Ataque futuro x2 para Dano e Atacante, Cura x2 para Suportes. x1 em Armadura e Ataque futuro caso não tenha recebido.",
         "Fool": "Fool: 3 pontos aleatórios entre Escudo, Ataque e Cura",
         "Férias": "Férias: Ataque x2, Revitalizar (Dobra a sua cura no próximo turno)",
@@ -37,7 +37,12 @@
         "Origem": "Origem: Fortalece os atributos Escudo, Ataque e Cura existentes em x2",
         "Perigo": "Perigo: Golpe Veloz x2, Debilitar (Corta pela metade o próximo ataque oponente)",
         "Perverso": "Perverso: Ataque x2, Anti-cura x2, Cura 0, Descuido x2 (Causa este dano a si mesmo)",
-        "Vazio": "Vazio: Habilidade x2, Anti-cura x1"
+        "Vazio": "Vazio: Habilidade x2, Anti-cura x1",
+
+        "ataque futuro": "Receberá este dano neste turno.",
+        "revitalizar": "Dobra a sua cura neste turno.",
+        "descuido": "Causa este dano a si mesmo.",
+        "debilitar": "Corta pela metade o ataque."
     },
     "en":{
         "Tanque": "Tank: Shield x2, Attack x1",
@@ -65,8 +70,8 @@
         "Caçador": "Hunter: Future Attack x1, Anti-heal x2",
         "Carregada": "Encharged: Ability x4, Recklessness x2 (Inflicts this damage upon himself)",
         "Classic": "Classic: Shield, Attack, and Heal x1",
-        "Coração": "Heart: Shield x2, Ability x1",
-        "Cósmico": "Cosmic: Shield x2, Heal x1",
+        "Coração": "Heart: Shield x1, Heal x2",
+        "Cósmico": "Cosmic: Shield x2, Ability x1",
         "Elegante": "Elegant: Armor x2 if Tank or Defender, Future Attack x2 if Damage or Attacker, Heal x2 if Support. 1x Armor and Future Attack, in case you haven't received them.",
         "Fool": "Fool: 3 random points distributed among Shield, Attack, and Heal",
         "Férias": "Summer: Attack x2, Revitalize (Doubles your healing on the next turn)",
@@ -77,7 +82,13 @@
         "Origem": "Origin: Boosts existing Shield, Attack and Heal attributes by x2",
         "Perigo": "Danger: Quick Strike x2, Weaken (Halves the opponent's next attack)",
         "Perverso": "Wicked: Attack x2, Anti-heal x2, Heal 0, Recklessness x2 (Inflicts this damage upon himself)",
-        "Vazio": "Void: Ability x2, Anti-heal x1"
+        "Vazio": "Void: Ability x2, Anti-heal x1",
+
+
+        "ataque futuro": "Will take this damage this turn.",
+        "revitalizar": "Doubles your healing on this turn.",
+        "descuido": "Inflicts this damage upon himself",
+        "debilitar": "Halves the attack."
     }
 
 }

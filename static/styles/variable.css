@@ -43,10 +43,13 @@
   --combat-red-color: #d64545;
   --combat-blue-color: #4a8dff;
   --combat-green-color: #4fd67a;
-  --combat-purple-color: #8c4be8;
+  --combat-purple-color: #512bb8;
+  --combat-violet-color: #a978ee;
+  --combat-orange-color: #ffa033;
   --combat-yellow-color: #ffcf33;
   --combat-dark_red-color: #8b2f4d;
   --combat-cyan-color: #43d9e8;
+  --combat-gray-color: #b3a2a2;
 
   --text-shadow: 0 0 2px #000000;
   --background-overlay: #00000073;

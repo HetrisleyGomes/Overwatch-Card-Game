@@ -154,6 +154,23 @@
             "type": "purchase"
         }
     },{
+        "id": "c8",
+        "lang": {
+            "br":{
+                "nome": "Ajuste",
+                "descricao": "Pane no sistema." 
+            }, "en":{
+                "nome": "Hotfix",
+                "descricao": "System glitch."
+            }
+        },
+        "img": "hotfix_logo.png",
+        "price": 200,
+        "rarity": "comum",
+        "unlock": {
+            "type": "purchase"
+        }
+    },{
         "id": "s-01",
         "lang": {
             "br":{
@@ -321,8 +338,7 @@
             "type": "nivel",
             "value": 2
         }
-    },
-    {
+    },{
         "id": "l2-2",
         "lang": {
             "br":{
@@ -334,6 +350,24 @@
             }
         },
         "img": "Widowmaker_Portrait.png",
+        "price": 200,
+        "rarity": "comum",
+        "unlock": {
+            "type": "nivel",
+            "value": 2
+        }
+    },{
+        "id": "l2-3",
+        "lang": {
+            "br":{
+                "nome": "Wrecking",
+                "descricao": "Cuidado com o pequeno mamífero." 
+            }, "en":{
+                "nome": "Wrecking",
+                "descricao": "Beware of small mammals."
+            }
+        },
+        "img": "Wrecking_icon.png",
         "price": 200,
         "rarity": "comum",
         "unlock": {
@@ -625,8 +659,7 @@
             "type": "nivel",
             "value": 7
         }
-    },
-    {
+    },{
         "id": "l7-2",
         "lang": {
             "br":{
@@ -644,8 +677,7 @@
             "type": "nivel",
             "value": 7
         }
-    },
-    {
+    },{
         "id": "l8-1",
         "lang": {
             "br":{
@@ -663,8 +695,7 @@
             "type": "nivel",
             "value": 8
         }
-    },
-    {
+    },{
         "id": "l8-2",
         "lang": {
             "br":{
@@ -682,8 +713,43 @@
             "type": "nivel",
             "value": 8
         }
-    },
-    {
+    },{
+        "id": "l8-3",
+        "lang": {
+            "br":{
+                "nome": "Presa",
+                "descricao": "Cuidado com os caçadores."
+            }, "en":{
+                "nome": "Fang",
+                "descricao": "Watch out on the hunters."
+            }
+        },
+        "img": "fang_icon.png",
+        "price": 500,
+        "rarity": "incomum",
+        "unlock": {
+            "type": "nivel",
+            "value": 8
+        }
+    },{
+        "id": "l8-4",
+        "lang": {
+            "br":{
+                "nome": "Lã",
+                "descricao": "Bons sonhos, lanudos."
+            }, "en":{
+                "nome": "Fleece",
+                "descricao": "Sweet dreams, wooly."
+            }
+        },
+        "img": "fleece_icon.png",
+        "price": 500,
+        "rarity": "incomum",
+        "unlock": {
+            "type": "nivel",
+            "value": 8
+        }
+    },{
         "id": "l9-1",
         "lang": {
             "br":{

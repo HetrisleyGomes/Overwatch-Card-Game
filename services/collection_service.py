@@ -215,7 +215,6 @@ def get_all_sets_formated(lang):
     mapa_characters = {c["id"]: c for c in characters}
     resultado = []
     for s in sets:
-        set_name = s["lang"][lang]["nome"]
         personagens_set = s["personagens"]
         personagens_set_extra = s.get("other_personagens", [])
         cartas_sets = []
@@ -251,9 +250,10 @@ def get_all_sets_formated(lang):
             })
 
         set_info = {
-            "nome": set_name,
+            "nome": s["lang"][lang]["nome"],
             "cartas": cartas_sets,
-            "cartas_extra": cartas_extras
+            "cartas_extra": cartas_extras,
+            "link": s.get('link', False)
         }
 
         resultado.append(set_info)
@@ -264,6 +264,7 @@ def card_format(carta_id, lang):
     mapa_characters = {c["id"]: c for c in characters}
     carta = mapa_characters[carta_id]
     icon_ref = carta.get("icon_ref", False)
+    foil = carta.get("foil", False)
     itens = {
     'carta_id': carta['id'],
     'carta_nome': carta["lang"][lang]['nome'],
@@ -271,7 +272,8 @@ def card_format(carta_id, lang):
     'raridade': carta['raridade'],
     'classe': carta['classe'],
     'subclasse': carta['subclasse'],
-    'icon_ref': icon_ref
+    'icon_ref': icon_ref,
+    'foil': foil
     }
     return itens
 
@@ -296,11 +298,11 @@ def format_full_card(carta, lang):
 def get_pve_cards():
     characters = get_characters()
     cartas = []
-    tank_couters = 0
+    tank_counters = 0
     for i in range(12):
-        possiveis = [p for p in characters if p.get("evento") is None and p not in cartas and tank_couters <= 3]
+        possiveis = [p for p in characters if p.get("evento") is None and p not in cartas and (p["classe"] != "Tanque" or tank_counters < 3)]
         carta = random.choice(possiveis)
-        tank_couters += 1 if carta['classe'] == 'Tanque' else 0
+        tank_counters += 1 if carta['classe'] == 'Tanque' else 0
         cartas.append(carta['id'])
     return cartas
 

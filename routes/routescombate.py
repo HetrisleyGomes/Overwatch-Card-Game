@@ -37,7 +37,6 @@ def game_room():
     return render_template("/combat/game_room.html", user = user, global_tips=global_tips)
 
 
-
 # Buscar Oponentes ==========================================
 @combate.route("/buscar-partida")
 def buscar_partida():
@@ -207,7 +206,7 @@ def battle(room_id):
         modelo = {
             "id": "bot",
             "nome": "Treinador",
-            'icone': "",
+            'icone': "logo.png",
             "hp": 20,
             "hand": [],
             "deck": [],
@@ -236,6 +235,12 @@ def handle_disconnect():
     
     room = salas.get(room_id)
     if room and room.get("finished"):
+        return
+
+    #verificação pve
+    if room.get('mode') == 'pve':
+        socket_to_room.pop(sid, None)
+        socket_to_user.pop(sid, None)
         return
     
     game_started = room.get("game_state") is not None
@@ -272,6 +277,32 @@ def handle_disconnect():
             )
     socket_to_room.pop(sid, None)
     socket_to_user.pop(sid, None)
+
+@socketio.on("rejoin_pve")
+def rejoin_pve(data):
+    room_id = data["room_id"]
+    user_id = session.get("user_id")
+    room = salas.get(room_id)
+
+    if not room or room.get("mode") != "pve":
+        return
+
+    if not any(p["id"] == user_id for p in room["players"]):
+        return
+
+    sid = request.sid
+    join_room(room_id)
+    socket_to_room[sid] = room_id
+    socket_to_user[sid] = user_id
+
+    emit(
+        "restore_game",
+        {
+            "game_state": room["game_state"],
+            "players": room["players"]
+        },
+        to=sid
+    )
 
 @socketio.on("fist_draw")
 def fist_draw(data):
@@ -421,11 +452,11 @@ def check_class_and_subclass(classe, subclasse):
             template["ataque"] += 1
             template['cura'] += 1
         case 'Coração':
-            template['escudo'] += 2
-            template['habilidade'] += 1
+            template['escudo'] += 1
+            template['cura'] += 2
         case 'Cósmico':
             template['escudo'] += 2
-            template['cura'] += 1
+            template['habilidade'] += 1
         case 'Elegante':
             template["armadura"] += 2 if classe in ['Tanque', 'Defensor'] else 1
             template["ataque futuro"] += 2 if classe in ["Dano", "Atacante"] else 1
@@ -511,7 +542,7 @@ def resolve_battle(room):
             None
         )
         effects_continuous = continuous.get(player_id, {})
-        future_attack = effects_continuous.get("ataque_futuro", 0)
+        future_attack = effects_continuous.get("ataque futuro", 0)
         revitalize = effects_continuous.get("revitalizar", 0)
         weaken = effects_continuous.get("debilitar", 0)
 
@@ -526,10 +557,10 @@ def resolve_battle(room):
         escudo = effect_player.get("escudo", 0)
         cura = effect_player.get("cura", 0) * 2 if revitalize > 0 else 1
         # Prioridade 4:
-        ataque_futuro = effect_oponent.get("ataque futuro", 0) 
-        habilidade = effect_player.get("habilidade", 0)
+        habilidade = effect_oponent.get("habilidade", 0)
         armadura = effect_player.get("armadura", 0)
         # Efeitos Futuros
+        ataque_futuro = effect_oponent.get("ataque futuro", 0) 
         revitalizar = effect_player.get("revitalizar", 0)
         descuido = effect_player.get("descuido", 0)
         debilitar = effect_oponent.get("debilitar", 0)
@@ -539,10 +570,12 @@ def resolve_battle(room):
         if weaken > 0:
             dano_calc = math.ceil(dano_calc / 2)
         # Combate resolver:
-        dano_final = ataque_veloz_recebido + dano_calc + descuido + habilidade
+        dano_pre_final = (ataque_veloz_recebido + dano_calc + descuido + habilidade)
         cura_final = max(0, cura - anticura_recebido)
-
-        player["hp"] -= max(0 , dano_final - armadura)
+        dano_final = max(0 , dano_pre_final - armadura)
+        print(player_id)
+        print(dano_final)
+        player["hp"] -= dano_final
         player["hp"] += cura_final
 
         if player["hp"] > 20:
@@ -550,27 +583,33 @@ def resolve_battle(room):
         if player["hp"] < 0:
             player["hp"] = 0
 
+        room["battle_continue"][player_id] = {
+            "ataque futuro": ataque_futuro,
+            "revitalizar": revitalizar,
+            "debilitar": debilitar
+        }
+
+        battle_continuous = room["battle_continue"][player_id]
+
         if vida_inicial > player["hp"]:
             changes[player_id] = {
                 "type": "damaged",
-                "value": max(0, dano_final - cura_final)
+                "value": max(0, dano_final - cura_final),
+                "battle_continuous": battle_continuous
             }
         elif vida_inicial < player["hp"]:
             changes[player_id] = {
                 "type": "healed",
-                "value": max(0, cura_final - dano_final)
+                "value": max(0, cura_final - dano_final),
+                "battle_continuous": battle_continuous
             }
         else:
             changes[player_id] = {
                 "type": "neutral",
-                "value": 0
+                "value": 0,
+                "battle_continuous": battle_continuous
             }
 
-        room["battle_continue"][player_id] = {
-            "ataque_futuro": ataque_futuro,
-            "revitalizar": revitalizar,
-            "debilitar": debilitar
-        }
         
     finalize_battle(room)
     room["game_state"]["phase"] = "battle_resolve"
@@ -675,6 +714,7 @@ def finalize_battle(room):
     
     room["selected_cards"] = {}
 
+# Tempo
 @socketio.on("time_out")
 def time_out(data):
     room_id = data["room_id"]
@@ -738,3 +778,10 @@ def battle_victory():
     if room["players_views"] == 2:
         del salas[room_id]
     return render_template("combat/result_battle.html", result=result, user_id=user_id, winner_id=winner_id, players=players)
+
+@combate.route("/api/theme-music/combate")
+def theme_music():
+
+    return {
+        "url": url_for("static", filename="sounds/battle_background.mp3")
+    }

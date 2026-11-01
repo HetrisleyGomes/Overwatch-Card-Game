@@ -619,6 +619,10 @@ def theme_music():
         return {
             "url": url_for("static", filename="sounds/legendary_themes/background_anubis.mp3")
         }
+    elif theme == "hanamura-theme":
+        return {
+            "url": url_for("static", filename="sounds/legendary_themes/background_hanamura.mp3")
+        }
     else:
         return {
             "url": url_for("static", filename="sounds/background.mp3")

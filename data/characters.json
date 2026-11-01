@@ -258,7 +258,7 @@
         "ult": "BOB, faça alguma coisa!"
       },
       "en": {
-        "nome": "Contrabandista Intergaláctica",
+        "nome": "Intergalactic Smuggler",
         "entrada": "I'm the last space smuggler you'll ever cross.",
         "ult_nome": "B.O.B.",
         "ult": "Bob! Do somethin'!"
@@ -1234,6 +1234,29 @@
     },
     "raridade": "comum",
     "img": "Doomfist_ow.png"
+  },
+  {
+    "id": "doomfist_nova_evolucao",
+    "base": "doomfist",
+    "classe": "Tanque",
+    "subclasse": "Incursor",
+    "lang": {
+      "br": {
+        "nome": "Nova Evolução",
+        "entrada": "Nosso futuro será forjado pelo conflito.",
+        "ult_nome": "Impacto meteoro",
+        "ult": "Impacto meteoro!"
+      },
+      "en": {
+        "nome": "New Evolution",
+        "entrada": "Our future will be forged in conflict.",
+        "ult_nome": "Meteor Strike",
+        "ult": "Meteor Strike!"
+      }
+    },
+    "raridade": "comum",
+    "img": "Doomfist_ow_new_evolution.png",
+    "icon_ref": "alter.png"
   },
   {
     "id": "doomfist-quebraossos",
@@ -5963,13 +5986,13 @@
     "subclasse": "Justice",
     "lang": {
       "br": {
-        "nome": "Ultrawatch",
+        "nome": "Ultrawatch Rosa",
         "entrada": "Armas operacionais. Garra funcional. Hamster animado.",
         "ult_nome": "Campo minado",
         "ult": "Área negada!"
       },
       "en": {
-        "nome": "Ultrawatch ball",
+        "nome": "Ultrawatch Pink",
         "entrada": "Weapons operational. Grapple primed. Hamster pumped.",
         "ult_nome": "Minefield",
         "ult": "Area denied!"
