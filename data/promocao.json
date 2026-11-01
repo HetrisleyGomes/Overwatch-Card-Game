@@ -484,6 +484,99 @@
       "soldado_76_dourado"
     ],
     "was_points": 0
+  },
+  {
+    "id": "watchesrebeldes",
+    "lang": {
+      "br": {
+        "nome": "Watchwers Rebeldes",
+        "description": "Pacote especial com: Ashe Contrabandista Intergalática, Baptiste Caçador de recompensas, Doomfist Quebra-ossos, Torbjorn Engenheiro espacial, e Winston Extraterreste."
+      },
+      "en": {
+        "nome": "Watcher Rebellion",
+        "description": "Special bundle featuring: Ashe Intergalactic Smuggler, Baptiste Bounty Hunter, Doomfist Bonebreaker, Torbjorn Starship Engineer, and Winston Extraterrestrial."
+      }
+    },
+    "value": 1000,
+    "buy_with_impeto": false,
+    "inicio": "11-01",
+    "fim": "11-08",
+    "itens": [
+      "ashe_contrabandista",
+      "baptiste_cacador",
+      "doomfist-quebraossos",
+      "torbjorn_engenheiro_espacial",
+      "winston_extraterreste"
+    ],
+    "was_points": 0
+  },{
+    "id": "inversowatch",
+    "lang": {
+      "br": {
+        "nome": "Líderes Inversowatch",
+        "description": "Pacote especial com: Arqui-comandante Amari, Doomfist: Comandante de ataque, Reinhardt: Cavaleiro Caído e Widowmaker: Capitã Lacorix."
+      },
+      "en": {
+        "nome": "Mirrorwatch leaders",
+        "description": "Special bundle featuring: Arch-Commandant Amari, Doomfist: Strike Commander, Reinhardt: Fallen Knight, and Widowmaker: Captain Lacorix."
+      }
+    },
+    "value": 800,
+    "buy_with_impeto": false,
+    "inicio": "11-09",
+    "fim": "11-16",
+    "itens": [
+      "arqui-comandante_amari",
+      "comandante_ataque",
+      "fallen_knight",
+      "capita_lacroix"
+    ],
+    "was_points": 0
+  },{
+    "id": "Olimpo1",
+    "lang": {
+      "br": {
+        "nome": "Deuses e Monstros do Olimpo pt.1",
+        "description": "Pacote especial com: Ramattra Poseidon, Reinhardt Minotauro, e Roadhog Ciclope."
+      },
+      "en": {
+        "nome": "Gods and Monsters of Olympus Pt. 1",
+        "description": "Special bundle featuring: Ramattra Poseidon, Reinhardt Minotaur, and Roadhog Cyclops."
+      }
+    },
+    "value": 900,
+    "buy_with_impeto": false,
+    "inicio": "11-17",
+    "fim": "11-24",
+    "itens": [
+      "ramattra_poseidon",
+      "reinhardt_minotauro",
+      "roadhog_ciclope"
+    ],
+    "was_points": 0
+  },{
+    "id": "dokiwatch_2",
+    "lang": {
+      "br": {
+        "nome": "Dokiwatch 2!",
+        "description": "Pacote especial com: Anran, D.Va, Mercy, e Tracer Heroínas de coração."
+      },
+      "en": {
+        "nome": "Dokiwatch 2!",
+        "description": "Special bundle featuring: Anran, D.Va, Mercy, and Tracer Heroes of Heart."
+      }
+    },
+    "value": 400,
+    "buy_with_impeto": false,
+    "inicio": "11-25",
+    "fim": "12-02",
+    "itens": [
+      "anran_coracao",
+      "dva_coracao",
+      "mercy_coracao",
+      "tracer_coracao"
+    ],
+    "was_points": 0
   }
   
 ]
