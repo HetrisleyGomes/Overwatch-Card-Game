@@ -10,7 +10,7 @@
             <!-- 🖼️ Foto atual -->
             <div class="profile-img-container">
                 <img id="profile-preview"
-                    src="{{ url_for('static', filename='logos/' + user.profile_img) }}"
+                    src="{{ url_for('static', filename='player_icons/' + user.profile_img) }}"
                     alt="Foto de perfil" loading="lazy">
             </div>
 
@@ -24,7 +24,7 @@
                     {% for img in inv["icons"] %}
                         {% if img.possui %}
                         <div class="img-container">
-                            <img src="{{ url_for('static', filename='logos/' + img.img) }}"
+                            <img src="{{ url_for('static', filename='player_icons/' + img.img) }}"
                             class="option-img" loading="lazy"
                             onclick="selecionarImagem('{{ img.img }}')">
                         </div>
@@ -225,7 +225,7 @@ function toggleDropdownTheme() {
 function selecionarImagem(img) {
     // atualiza preview
     document.getElementById("profile-preview").src =
-        "/static/logos/" + img;
+        "/static/player_icons/" + img;
 
     // envia para backend (opcional via fetch)
     fetch("/atualizar-foto", {

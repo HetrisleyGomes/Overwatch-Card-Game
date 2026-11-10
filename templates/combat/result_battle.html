@@ -59,7 +59,7 @@ var jogador_2 = players.find(j => j.id != userId);
 function configUserView() {
     document.getElementById("player-name").innerText = jogador_1.nome;
     avatar = document.getElementById("winner-avatar");
-    avatar.src = STATIC_URL + "logos/" + jogador_1.icone;
+    avatar.src = STATIC_URL + "player_icons/" + jogador_1.icone;
 }
 const playerDiscard = document.getElementById("player-discard");
 const enemyDiscard = document.getElementById("enemy-discard");

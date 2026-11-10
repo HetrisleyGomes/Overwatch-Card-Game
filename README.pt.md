@@ -50,7 +50,9 @@ Overwatch-Card-Game
 │   ├── font
 │   ├── icons
 │   ├── images
-│   ├── logos
+│   ├── player_icons
+│   ├── scripts
+│   ├── sounds
 │   └── styles
 ├── templates/
 ├── translate/

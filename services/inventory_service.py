@@ -3,10 +3,6 @@ from sql.controller.progress_controller import ProgressController
 from sql.repositories.progress_repository import ProgressRepository
 
 # INVENTÁRIOS ==================================================
-def get_img_logos():
-    imgs = get_icons()
-    return imgs
-
 def user_get_inventory(conn, user_id):
     repo = ProgressRepository(conn)
     ctll = ProgressController(repo)

@@ -46,8 +46,8 @@ function initializeTooltips() {
 }
 
 function configUserView() {
-    avatar1.src = STATIC_URL + "logos/" + player_1.icone;
-    avatar2.src = STATIC_URL + "logos/" + player_2.icone;
+    avatar1.src = STATIC_URL + "player_icons/" + player_1.icone;
+    avatar2.src = STATIC_URL + "player_icons/" + player_2.icone;
 
     hp1.style.width = `${(player_1.hp / 20) * 100}%`;
     hp2.style.width = `${(player_2.hp / 20) * 100}%`;
