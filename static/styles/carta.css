@@ -89,7 +89,7 @@
     border-color: var(--lendario-rarity);
 }
 .ultra {
-    border-color: var(--ultra-rarity);
+    border-image: var(--ultra-rarity) 1;
 }
 .legado {
     border-image: var(--legado-rarity) 1;
