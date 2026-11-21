@@ -2552,7 +2552,7 @@
         "nome": "Amateratsu",
         "entrada": "Eu ilumino meu próprio caminho.",
         "ult_nome": "Corrida da kitsune",
-        "ult": "Entre no mundo espiritual!"
+        "ult": "Deixe a luz do sol guiar você!"
       },
       "en": {
         "nome": "Amateratsu",
@@ -3329,7 +3329,8 @@
       }
     },
     "raridade": "ultra",
-    "img": "Mercy_ow_rose.png"
+    "img": "Mercy_ow_rose.png",
+    "evento": "extra"
   },
   {
     "id": "mizuki_comum",
@@ -5998,7 +5999,7 @@
         "ult": "Area denied!"
       }
     },
-    "raridade": "incomum",
+    "raridade": "",
     "img": "Wrecking_ball_Ultrawatch.png"
   },
   {

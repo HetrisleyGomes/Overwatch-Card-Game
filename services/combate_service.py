@@ -90,7 +90,14 @@ def initialize_battle(room_id):
     salas[room_id]["selected_cards"] = {}
 
 
-def check_class_and_subclass(classe, subclasse):
+def check_class_and_subclass(carta):
+    print('aquiiii---------------------')
+    print(carta)
+    # {'carta_id': 'bastion_classic', 'carta_nome': 'Bastion Classic', 'carta_img': 'Bastion_ow.png', 'raridade': 'epico', 'classe': 'Dano', 'subclasse': 'Classic', 'icon_ref': False, 'foil': True}
+    classe = carta['classe']
+    subclasse = carta['subclasse']
+    raridade = carta['raridade']
+
     template = {
         "golpe veloz": 0,
         "escudo": 0,
@@ -107,7 +114,7 @@ def check_class_and_subclass(classe, subclasse):
 
     match classe:
         case 'Tanque':
-            template['escudo'] += 2
+            template['escudo'] += 3
             template['ataque'] += 1
         case 'Dano':
             template['ataque'] += 2
@@ -121,20 +128,44 @@ def check_class_and_subclass(classe, subclasse):
             template["golpe veloz"] += 1
             template['ataque'] += 1
 
+    match raridade:
+        case 'ultra':
+            template["armadura"] += 2
+        case 'mitico':
+            template["escudo"] += 2 if classe == 'Tanque' else 1 if template["escudo"] > 0 else 0
+            template["ataque"] += 2 if classe == "Dano" else 1 if template["ataque"] > 0 else 0
+            template["cura"] += 2 if classe == 'Suporte' else 1 if template["cura"] > 0 else 0
+
+    if carta['icon_ref']:
+        match carta['icon_ref']:
+            case 'golden.png':
+                template['ataque'] += 1
+            case 'alter.png':
+                if template['cura'] > 0:
+                    template['cura'] += 2
+                else:
+                    template['escudo'] += 1
+            case 'jade.png':
+                template['revitalizar'] += 1
+            case 'hard_light.png':
+                template["escudo"] += 1
+            case 'losmuertos.png':
+                template['habilidade'] += 1
+
+
+
 
     match subclasse:
         case 'Incursor':
-            template["golpe veloz"] += 2
-            template["ataque"] += 1
+            template["golpe veloz"] += 3
         case 'Combatente':
             template["ataque"] += 3
         case 'Robusto':
-            template['escudo'] += 1
+            template['ataque'] += 1
             template['armadura'] += 2
 
         case 'Especialista':
-            template['ataque'] += 1
-            template["anti-cura"] += 2
+            template["anti-cura"] += 3
         case 'Artilharia':
             template["ataque"] += 1
             template["habilidade"] += 2
@@ -156,18 +187,16 @@ def check_class_and_subclass(classe, subclasse):
 
         case 'Assombrado':
             dano = template["ataque"]
-            template["golpe veloz"] += dano + 2
-            template["anti-cura"] += 1
+            template["golpe veloz"] += dano + 3
         case 'Bardo':
-            template["anti-cura"] += 1
+            template["cura"] += 1
             template["revitalizar"] += 1
             template["debilitar"] += 1
         case 'Campeão':
             template["ataque"] += 1
             template["armadura"] += 2
         case 'Caçador':
-            template["ataque futuro"] += 1
-            template["anti-cura"] += 2
+            template["anti-cura"] += 3
         case 'Carregada':
             template['habilidade'] += 4
             template["descuido"] += 2
@@ -182,9 +211,8 @@ def check_class_and_subclass(classe, subclasse):
             template['escudo'] += 2
             template['habilidade'] += 1
         case 'Elegante':
-            template["armadura"] += 2 if classe in ['Tanque', 'Defensor'] else 1
-            template["ataque futuro"] += 2 if classe in ["Dano", "Atacante"] else 1
-            template["cura"] += 2 if classe == 'Suporte' else 0
+            template["escudo"] += 2 if classe == 'Tanque' else 1
+            template["habilidade"] += 2 if classe in ["Dano", 'Suporte'] else 1
         case 'Fool':
             for i in range(2):
                 a = random.randrange(1,4)
@@ -198,16 +226,15 @@ def check_class_and_subclass(classe, subclasse):
             template["ataque"] += 2
             template["revitalizar"] += 1
         case 'Guerreiro':
+            template["ataque"] += 1
             template["ataque futuro"] += 2
-            template["armadura"] += 1
         case 'Justice':
-            template["ataque"] += 2
-            template["armadura"] += 1
+            template["ataque futuro"] += 3
         case 'Mirror':
-            re, rd, rc = template["escudo"], template["ataque"], template['cura']
+            re, ra, rc = template["escudo"], template["ataque"], template['cura']
             template["escudo"] += rc + 2 if rc > 0 else 0
             template["ataque"] += re + 2 if re > 0 else 0
-            template['cura'] += rd + 2 if rd > 0 else 0
+            template['cura'] += ra + 2 if ra > 0 else 0
         case 'Monstro':
             template["escudo"] = 0
             template["ataque"] += 4
@@ -223,7 +250,6 @@ def check_class_and_subclass(classe, subclasse):
             template["ataque"] += 2
             template["anti-cura"] += 2
             template["descuido"] += 2
-            template["cura"] = 0
         case 'Vazio':
             template["habilidade"]+= 2
             template["anti-cura"]+= 1

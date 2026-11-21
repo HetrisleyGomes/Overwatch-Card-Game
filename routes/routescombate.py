@@ -278,7 +278,7 @@ def combate_1(room_id, room):
     result = {}
     for jgdr in players:
         player_id = jgdr['id']
-        template = check_class_and_subclass(selected_cards[player_id]['classe'], selected_cards[player_id]['subclasse'])
+        template = check_class_and_subclass(selected_cards[player_id])
         result[player_id] = template
 
     room["battle_effects"] = result
@@ -348,9 +348,9 @@ def resolve_battle(room):
 
         dano_calc = max(0, ataque_recebido - escudo)
         if weaken > 0:
-            dano_calc = math.ceil(dano_calc / 2)
+            dano_calc = math.ceil((ataque_veloz_recebido + dano_calc) / 2)
         # Combate resolver:
-        dano_pre_final = (ataque_veloz_recebido + dano_calc + descuido + habilidade)
+        dano_pre_final = (dano_calc + descuido + habilidade)
         cura_final = max(0, cura - anticura_recebido)
         dano_final = max(0 , dano_pre_final - armadura)
 
