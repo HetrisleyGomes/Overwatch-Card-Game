@@ -55,7 +55,7 @@
                         %}
                         <button class="button {% if desativado %}desativado{% endif %}"
                         {% if desativado %}disabled{% endif %}
-                        onclick="comprarPack('promotion_pack', '{{ prom.id }}', {{ prom.buy_with_impeto | tojson }})">
+                        onclick="comprarPack({tipo:'promotion_pack', id:'{{ prom.id }}', buy_with_impetos:{{ prom.buy_with_impeto | tojson }} })">
                             {% if not prom['id'] in prom_log %}
                                 {{ prom.value }} {% if prom.buy_with_impeto %}{{ _('prism') }}{% else %}{{ _('point') }}{% endif %}{% if prom.value > 1 %}s{% endif %}
                             {% else %}
@@ -80,7 +80,7 @@
                 <div class="item_button">
                     <button class="button {% if user.pontos < 100 %}desativado{% endif %}"
                     {% if user.pontos < 100 %}disabled{% endif %}
-                    onclick="comprarPack('pack', 'comum')">
+                    onclick="comprarPack({tipo:'pack', id:'comum'})">
                         100 {{ _('points') }}</button>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                 <div class="item_button">
                     <button class="button {% if user.pontos < 500 %}desativado{% endif %}"
                     {% if user.pontos < 500 %}disabled{% endif %}
-                    onclick="comprarPack('pack', 'raro')">
+                    onclick="comprarPack({tipo:'pack', id:'raro'})">
                     500 {{ _('points') }}</button>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                 <div class="item_button">
                     <button class="button {% if user.pontos < 1000 %}desativado{% endif %}"
                     {% if user.pontos < 1000 %}disabled{% endif %}
-                    onclick="comprarPack('pack', 'radiante')">
+                    onclick="comprarPack({tipo:'pack', id:'radiante'})">
                     1000 {{ _('points') }}</button>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                     <div class="item_button">
                         <button class="button {% if user.pontos < 300 %}desativado{% endif %}"
                         {% if user.pontos < 300 %}disabled{% endif %}
-                        onclick="comprarPack('pack', 'especial')">
+                        onclick="comprarPack({tipo:'pack', id:'especial'})">
                         300 {{ _('points') }}</button>
                     </div>
                 </div>
@@ -137,11 +137,11 @@
             <div class="item">
                 <div class="item_name">{{ _('daily bonus') }}</div>
                 <div class="item_description">
-                    50 Pontos obitíveis diariamente.
+                    75 {{ _('daily bonus description') }}
                 </div>
                 <div class="item_button">
                     {% if not user.has_already_get_daily_bonus %}
-                            <button class="button"  onclick="comprarPack('extra', 'daily_bonus')">{{ _('get') }}</button>
+                            <button class="button"  onclick="comprarPack({tipo:'extra', id:'daily_bonus'})">{{ _('get') }}</button>
                     {% else %}
                             <button class="button desativado" disabled>{{ _('obtained') }}</button>
                     {% endif %}
@@ -149,14 +149,28 @@
             </div>
 
             <div class="item">
-                <div class="item_name">Escudo de ofensiva</div>
+                <div class="item_name">{{ _('streak shield') }}</div>
                 {% set limite = 1 if user.nivel <= 2 else (2 if user.nivel <= 5 else 3) %}
-                <div class="item_description">Mantém sua ofensiva para seu próximo login.<br/>{{ user.bloqueio_ofensiva }}/{{ limite }}</div>
-                <div class="item_button">
-                    <button class="button {% if user.pontos < 100 or limite <= user.bloqueio_ofensiva %}desativado{% endif %}"
-                        {% if user.pontos < 100 or limite <= user.bloqueio_ofensiva %}disabled{% endif %}
-                        onclick="comprarPack('extra', 'escudo')">
-                        100 {{ _('points') }}</button>
+                {% set disponivel = limite - user.bloqueio_ofensiva %}
+                <div class="item_description">
+                    {{ _('streak shield description') }}<br/>{{ user.bloqueio_ofensiva }}/{{ limite }}
+                </div>
+
+                <div class="item_button multi_item">
+                    <select class="quantidade_multi_item" id="quantidade-escudo"
+                    {% if disponivel <= 0 %}disabled{% endif %}
+                    onchange="atualizarPreco(this, 'preco-escudo')">
+                    {% for i in range(1, disponivel+1) %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                    </select>
+
+                    <button class="button {% if user.pontos < 100 or disponivel <= 0 %}desativado{% endif %}"
+                    {% if user.pontos < 100 or disponivel <= 0 %}disabled{% endif %}
+                    data-price="100"
+                    onclick="comprarPack({tipo:'extra', id:'escudo', amount:Number(document.getElementById('quantidade-escudo').value)})">
+                        <span id="preco-escudo">100</span> {{ _('points') }}
+                    </button>
                 </div>
             </div>
         </div>
@@ -173,7 +187,7 @@
                 <div class="item_button">
                     <button class="button {% if user.impetos < 1 %}desativado{% endif %}"
                     {% if user.impetos < 1 %}disabled{% endif %}
-                    onclick="comprarPack('pontos', '1', true)">
+                    onclick="comprarPack({tipo:'pontos', id:'1', buy_with_impetos:true})">
                     1  {{ _('prism') }}</button>
                 </div>
             </div>
@@ -186,7 +200,7 @@
                 <div class="item_button">
                     <button class="button {% if user.impetos < 3 %}desativado{% endif %}"
                     {% if user.impetos < 3 %}disabled{% endif %}
-                    onclick="comprarPack('pontos', '3', true)">
+                    onclick="comprarPack({tipo:'pontos', id:'3', buy_with_impetos:true})">
                     3  {{ _('prisms') }}</button>
                 </div>
             </div>
@@ -207,7 +221,7 @@
                 <div class="item_button">
                     <button class="button {% if user.pontos < tema.price or tema.possui %}desativado{% endif %}"
                     {% if user.pontos < tema.price or tema.possui %}disabled{% endif %}
-                    onclick="comprarPack('theme', '{{tema.id}}')">
+                    onclick="comprarPack({tipo:'theme', id:'{{tema.id}}'})">
                         {% if not tema.possui %}
                             {{ tema.price }} {{ _('points') }}
                         {% else %}
@@ -239,7 +253,7 @@
                 <div class="item_button">
                     <button class="button {% if user.pontos < img.price or img.possui %}desativado{% endif %}"
                     {% if user.pontos < img.price or img.possui %}disabled{% endif %}
-                    onclick="comprarPack('icone', '{{img.id}}')">
+                    onclick="comprarPack({tipo:'icone', id:'{{img.id}}'})">
                         {% if not img.possui %}
                             {{ img.price }} {{ _('points') }}
                         {% else %}
@@ -257,32 +271,60 @@
 
 
 <script>
-function comprarPack(tipo, id, buy_with_impetos=false) {
+async function comprarPack({tipo, id, amount=1, buy_with_impetos=false}) {
     const btn = event.target;
 
     if (btn.disabled) return;
+    btn && (btn.disabled = true);
+
+    console.log(`tipo: ${tipo}, id: ${id}, amount: ${amount}, buy_with_impetos: ${buy_with_impetos}`)
     
-    fetch("/comprar-pack", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ tipo: tipo, id: id, buy_with_impetos: buy_with_impetos })
-    })
-    .then(res => res.json())
-    .then(data => {
+    try {
+        const response = await fetch("/comprar-pack", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ 
+                tipo: tipo, 
+                id: id, 
+                amount: amount, 
+                buy_with_impetos: buy_with_impetos 
+            })
+        });
+        const data = await response.json();
         if (data.success) {
             alert(data.msg);
             location.reload();
-
-            // 🔥 atualizar UI sem reload
             atualizarPontos(data.pontos);
         } else {
             alert(data.erro);
         }
-    });
+    } catch (error) {
+        console.error("Erro ao realizar compra:", error);
+        if (btn) btn.disabled = false;
+    }
 };
 
+function atualizarPreco(select, precoID){
+    const saldo = {{ user.pontos | tojson }};
+    const quantidade = Number(select.value);
+    const button = select.closest(".item_button").querySelector("button");
+    
+    const precoUnitario = Number(button.dataset.price);
+    const precoTotal = precoUnitario * quantidade;
+
+    const elemento = document.getElementById(precoID)
+    elemento.textContent = precoTotal;
+
+    if (precoTotal > saldo && elemento.disabled == false){
+        elemento.classList.add("desativado");
+        elemento.disabled = true;
+    } else if (elemento.disabled == true) {
+        elemento.classList.remove("desativado");
+        elemento.disabled = false;
+    }
+};
 
 </script>
 {% endblock %}

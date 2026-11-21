@@ -12,6 +12,9 @@
     align-items: center;
     gap: 10px;
 }
+#streak{
+    margin: auto 10px;
+}
 .header-item img {
     height: 5vh;
     width: auto;
@@ -26,6 +29,21 @@
     justify-content: center;
     align-items: center;
 }
+.strak_box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 6px 6px 0;
+    & * {
+        position: absolute;
+        bottom: -8px;
+    } & span {
+        z-index: 5;
+        text-shadow: #000 1px 1px;
+    }
+}
+
 
 .subhead-event {
     background-color: var(--main-light-color);
@@ -454,8 +472,13 @@ input:checked + .slider .icon{
         font-size: 14px;
     }
     .points_box {
-        padding: 4px 6px;
-        width: 50px;
+        padding: 5px 6px;
+        width: 40px;
+    }
+    #streak{
+        margin: 20px 6px auto;
+
+        flex-direction: column-reverse;
     }
     .button {
         width: 70px;

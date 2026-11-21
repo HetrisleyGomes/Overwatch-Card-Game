@@ -238,6 +238,7 @@ def buy_store_item():
     data = request.get_json()
     type = data.get("tipo")
     id_item = data.get("id")
+    amount = data.get("amount")
     buy_with_impetos = data.get("buy_with_impetos")
 
     connection = get_db_connection()
@@ -269,12 +270,12 @@ def buy_store_item():
 
     elif type == "extra":
         if id_item == "daily_bonus":
-            user["pontos"] += 50
+            user["pontos"] += 75
             user["has_already_get_daily_bonus"] = True
             msg = "Bônus resgatado!"
         elif id_item == "escudo":
-            user["bloqueio_ofensiva"] += 1
-            price = 100
+            user["bloqueio_ofensiva"] += amount
+            price = 100 * amount
     
     elif type == 'pontos':
         if id_item == '1':

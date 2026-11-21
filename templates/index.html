@@ -9,6 +9,18 @@
         <div><span>{{ user.nome }}</span></div>
     </div>
     <div class="header-item">
+        <div class="header-item" id="streak">{{ _('streak') }} 
+            <div class="strak_box">
+            {% if user.streak > 1 or True %}
+                <img src="{{ url_for('static', filename='extras/streak.gif' ) }}" loading="lazy">
+            {% else %}
+                <img src="{{ url_for('static', filename='extras/no_streak.png' ) }}" loading="lazy">
+            {% endif %}
+                <span>
+                    {{ user.streak }}
+                </span>
+            </div>
+        </div>
         
         <div class="header-item settings-container">
             <button class="settings-button premium-button" id="settings-button">
@@ -43,7 +55,7 @@
             </div>
         </div>
 
-        <div class="header-item" id="prisms">{{ _('prisms') }}: <div class="points_box"><span id="pontos">{{ user.impetos }}</span></div></div>
+        <div class="header-item" id="prisms">{{ _('prisms') }}: <div class="points_box"><span id="prismas">{{ user.impetos }}</span></div></div>
         <div class="header-item" id="points">{{ _('points') }}: <div class="points_box"><span id="pontos">{{ user.pontos }}</span></div></div>
     </div>
 </div>

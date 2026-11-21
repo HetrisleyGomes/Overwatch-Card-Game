@@ -77,6 +77,31 @@
     height: 10vh;
     padding: 10px;
 }
+.multi_item{
+    display: flex;
+    flex-wrap: wrap;
+    & .button {
+        border-radius: 0 8px 8px 0;
+        border: none;
+        width: 140px;
+    }
+}
+.quantidade_multi_item {
+    font-family: "Big Noodle Titling";
+    font-size: 20px;
+    background: var(--button);
+    border: none;
+    width: 40px;
+    padding: 20px 0 20px 10px;
+    border-radius: 8px 0 0 8px;
+    color: var(--light-text);
+    cursor: pointer;
+    position: relative;
+    box-shadow: var(--theme-btn-shadow);
+    & option {
+        color: var(--dark-text);
+    }
+}
 
 .item_img {
     border-radius: 50%;
@@ -159,6 +184,12 @@
         padding: 10px;
         margin-bottom: auto;
     }
+    .multi_item .button {
+        width: 110px;
+    }
+    .quantidade_multi_item {
+        width: 40px;
+    }
     .loja_nav {
         gap: 3vw;
     }
@@ -188,6 +219,12 @@
     .item.promotion_pack .item_name {
         font-size: 24px;
         padding: 12px;
+    }
+    .multi_item .button {
+        width: 75px;
+    }
+    .quantidade_multi_item {
+        font-size: 18px;
     }
     .loja_nav {
         gap: 2vw;
