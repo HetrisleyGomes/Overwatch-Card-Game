@@ -11,10 +11,10 @@
     <div class="header-item">
         <div class="header-item" id="streak">{{ _('streak') }} 
             <div class="strak_box">
-            {% if user.streak > 1 or True %}
+            {% if user.streak > 1 %}
                 <img src="{{ url_for('static', filename='extras/streak.gif' ) }}" loading="lazy">
             {% else %}
-                <img src="{{ url_for('static', filename='extras/no_streak.png' ) }}" loading="lazy">
+                <img src="{{ url_for('static', filename='extras/no_streak.png' ) }}" loading="lazy" style="opacity: 0.6;">
             {% endif %}
                 <span>
                     {{ user.streak }}

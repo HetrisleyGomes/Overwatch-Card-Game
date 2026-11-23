@@ -39,7 +39,6 @@
     {% if proms %}
     <h2 class="sessao" id="pacotaco">{{ _('bundle') }}</h2>
         {% for prom in proms %}
-
             <div class="prateleira pacotaco">
                 <div class="item promotion_pack">
                     <div class="item_name">{{ prom.nome }} {% if prom.last_days %}(Últimos dias){% endif %}</div>
@@ -69,6 +68,8 @@
     
         <div class="prateleira-divider"></div>
     {% endif %}
+
+    <!----------------------------------------------------------------------------->
     <h2 class="sessao" id="pacotes">{{ _('packs') }}</h2>
         <div class="prateleira">
             <!-- PACOTE COMUM  -->
@@ -77,11 +78,25 @@
                 <div class="item_description">
                     {{ _('common pack description') }}
                 </div>
-                <div class="item_button">
-                    <button class="button {% if user.pontos < 100 %}desativado{% endif %}"
-                    {% if user.pontos < 100 %}disabled{% endif %}
+                <div class="item_button multi_item">
+                    {% set disponivel = (user.pontos / 100) | int | abs %}
+                    {% if disponivel > 9 %}
+                        {% set disponivel = 9 | int | abs %}
+                    {% endif %}
+                    <select class="quantidade_multi_item" id="quantidade-pacote-comum"
+                    {% if disponivel <= 0 %}disabled{% endif %}
+                    onchange="atualizarPreco(this, 'preco-pacote-comum')">
+                    {% for i in range(1, disponivel+1) %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                    </select>
+
+                    <button class="button {% if disponivel < 100 %}desativado{% endif %}"
+                    {% if disponivel < 100 %}disabled{% endif %}
+                    data-price="100"
                     onclick="comprarPack({tipo:'pack', id:'comum'})">
-                        100 {{ _('points') }}</button>
+                        <span id="preco-pacote-comum">100</span> {{ _('points') }}
+                    </button>
                 </div>
             </div>
             <!-- PACOTE RARO -->
@@ -90,11 +105,25 @@
                 <div class="item_description">
                     {{ _('rare pack description') }}
                 </div>
-                <div class="item_button">
-                    <button class="button {% if user.pontos < 500 %}desativado{% endif %}"
-                    {% if user.pontos < 500 %}disabled{% endif %}
+                <div class="item_button multi_item">
+                    {% set disponivel = (user.pontos / 500) | int | abs %}
+                    {% if disponivel > 9 %}
+                        {% set disponivel = 9 | int | abs %}
+                    {% endif %}
+                    <select class="quantidade_multi_item" id="quantidade-pacote-raro"
+                    {% if disponivel <= 0 %}disabled{% endif %}
+                    onchange="atualizarPreco(this, 'preco-pacote-raro')">
+                    {% for i in range(1, disponivel+1) %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                    </select>
+
+                    <button class="button {% if disponivel < 500 %}desativado{% endif %}"
+                    {% if disponivel < 500 %}disabled{% endif %}
+                    data-price="500"
                     onclick="comprarPack({tipo:'pack', id:'raro'})">
-                    500 {{ _('points') }}</button>
+                        <span id="preco-pacote-raro">500</span> {{ _('points') }}
+                    </button>
                 </div>
             </div>
             {% if user['nivel'] >= 6 %}
@@ -104,11 +133,25 @@
                 <div class="item_description">
                     {{ _('radiant pack description') }}
                 </div>
-                <div class="item_button">
-                    <button class="button {% if user.pontos < 1000 %}desativado{% endif %}"
-                    {% if user.pontos < 1000 %}disabled{% endif %}
+                <div class="item_button multi_item">
+                    {% set disponivel = (user.pontos / 1000) | int | abs %}
+                    {% if disponivel > 9 %}
+                        {% set disponivel = 9 | int | abs %}
+                    {% endif %}
+                    <select class="quantidade_multi_item" id="quantidade-pacote-radiante"
+                    {% if disponivel <= 0 %}disabled{% endif %}
+                    onchange="atualizarPreco(this, 'preco-pacote-radiante')">
+                    {% for i in range(1, disponivel+1) %}
+                        <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                    </select>
+
+                    <button class="button {% if disponivel < 1000 %}desativado{% endif %}"
+                    {% if disponivel < 1000 %}disabled{% endif %}
+                    data-price="1000"
                     onclick="comprarPack({tipo:'pack', id:'radiante'})">
-                    1000 {{ _('points') }}</button>
+                        <span id="preco-pacote-radiante">1000</span> {{ _('points') }}
+                    </button>
                 </div>
             </div>
             {% endif %}
@@ -120,16 +163,31 @@
                     <div class="item_description">
                         {{ ev.pack_description }}
                     </div>
-                    <div class="item_button">
-                        <button class="button {% if user.pontos < 300 %}desativado{% endif %}"
-                        {% if user.pontos < 300 %}disabled{% endif %}
+                    <div class="item_button multi_item">
+                        {% set disponivel = (user.pontos / 300) | int | abs %}
+                        {% if disponivel > 9 %}
+                            {% set disponivel = 9 | int | abs %}
+                        {% endif %}
+                        <select class="quantidade_multi_item" id="quantidade-pacote-evento"
+                        {% if disponivel <= 0 %}disabled{% endif %}
+                        onchange="atualizarPreco(this, 'preco-pacote-evento')">
+                        {% for i in range(1, disponivel+1) %}
+                            <option value="{{i}}">{{i}}</option>
+                        {% endfor %}
+                        </select>
+
+                        <button class="button {% if disponivel < 300 %}desativado{% endif %}"
+                        {% if disponivel < 300 %}disabled{% endif %}
+                        data-price="300"
                         onclick="comprarPack({tipo:'pack', id:'especial'})">
-                        300 {{ _('points') }}</button>
+                            <span id="preco-pacote-evento">300</span> {{ _('points') }}
+                        </button>
                     </div>
                 </div>
             {% endif %}   
         </div>
-        <div class="prateleira-divider"></div>
+    
+    <div class="prateleira-divider"></div>
     
     <h2 class="sessao" id="recursos">{{ _('recursos') }}</h2>
         <div class="prateleira">
@@ -174,7 +232,7 @@
                 </div>
             </div>
         </div>
-        <div class="prateleira-divider"></div>
+    <div class="prateleira-divider"></div>
 
     <h2 class="sessao" id="trocarpontos">{{ _('points') }}</h2>
     <!-- COMPRAR PONTOS -->
@@ -205,7 +263,7 @@
                 </div>
             </div>
         </div>
-        <div class="prateleira-divider"></div>
+    <div class="prateleira-divider"></div>
 
 
     <h2 class="sessao" id="themes">{{ _('themes') }}</h2>
@@ -234,8 +292,7 @@
             {% endif %}
             {% endfor %}
         </div>
-
-        <div class="prateleira-divider"></div>
+    <div class="prateleira-divider"></div>
 
     <h2 class="sessao" id="icones">{{ _('icons') }}</h2>
     <!-- COMPRAR IMAGENS -->
