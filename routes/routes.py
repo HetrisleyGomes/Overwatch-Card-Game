@@ -170,7 +170,7 @@ def inventory():
     classes_tips = get_classes_lang(lang)
     combate_tips = get_combat_tips(lang)
     
-    return render_template('inventario.html', user = user, mostrar_todas = show_all, cartas=cards, global_tips=global_tips, classes_tips= classes_tips, combate_tips= combate_tips)
+    return render_template('inventario.html', user = user, mostrar_todas = show_all, cartas=cards, global_tips=global_tips, classes_tips= classes_tips, combate_tips= combate_tips, lang=lang)
 
 # Coleções =========================================
 @main.route("/collection")

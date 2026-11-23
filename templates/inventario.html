@@ -112,8 +112,12 @@
 
         <div id="card-info">
             <h2 id="card-name"></h2>
-            <p>{{ _('raridade') }}: <span id="card-rarity"></span></p>
+            <div>
+                <p class="card-rarity">{{ _('raridade') }}: <span id="card-rarity"></span></p>
+                <p id="card-rarity-bonus"></p>
+            </div>
             <p id="card-class"></p> 
+            <p id="card-icon_ref"></p>
             <p id="card-subclass"></p>
             <button onclick="fecharModal()" class="close-btn">{{ _('close') }}</button>
         </div>
@@ -122,70 +126,97 @@
 
 <div class="space"></div>
 <script>
-const cards = {{ cartas | tojson }};
-const classesTips = {{ classes_tips | tojson }};
-const combateTips = {{ combate_tips | tojson }};
-const cardsById = {};
-
-cards.forEach(card => {
-    cardsById[card.id] = card;
-});
-
-const overlay = document.getElementById("card-overlay");
-
-const modalCard = document.getElementById("modal-card");
-const modalNameCard = document.getElementById("card-nome-modal");
-const modalImgCard = document.getElementById("card-img-modal");
-const modalClassCard = document.getElementById("card-classe-modal");
-const modalTextoCard = document.getElementById("entrada-modal");
-const modalUltCard = document.getElementById("ult-modal");
-
-const modalName = document.getElementById("card-name");
-const modalRarity = document.getElementById("card-rarity");
-
-const modalSubclass = document.getElementById("card-subclass");
-const modalClass = document.getElementById("card-class");
-
-
-function showCard(element){
-    const id = element.dataset.cardId;
-    const card = cardsById[id];
-    console.log(card);
-
-    modalCard.classList = 'card'
-    modalCard.classList.add(card.raridade);
-    modalCard.classList.add(card.classe.toLowerCase());
-    modalCard.classList.add(card.is_evento);
-    if (card.foil) {
-        modalCard.classList.add('foil');
+    const LEGENDA = {
+        "br": {
+            "golden.png": "Arma dourada",
+            "alter.png": "Arte alternativa",
+            "jade.png": "Carta legado de esmeralda",
+            "hard_light.png": "Luz Sólida",
+            "losmuertos.png": "Los Muertos"
+        },
+        "en": {
+            "golden.png": "Golden weapon",
+            "alter.png": "Alternative art",
+            "jade.png": "Jade legacy card",
+            "hard_light.png": "Solid Light",
+            "losmuertos.png": "Los Muertos"
+        }
     }
-    
-    modalNameCard.textContent = card.nome;
-    modalImgCard.src = "/static/images/" + card.img;
+    const currentLang = {{ lang | tojson }};
+    const cards = {{ cartas | tojson }};
+    const classesTips = {{ classes_tips | tojson }};
+    const combateTips = {{ combate_tips | tojson }};
+    const cardsById = {};
 
-    modalClassCard.textContent = classesTips[card.classe] + " - " + classesTips[card.subclasse];
-    modalTextoCard.textContent = '"' + card.entrada + '"';
-    modalUltCard.textContent = card.ult_nome + ": " + card.ult;
+    cards.forEach(card => {
+        cardsById[card.id] = card;
+    });
 
-    modalName.textContent = card.nome;
-    modalRarity.textContent = classesTips[card.raridade];
+    const overlay = document.getElementById("card-overlay");
 
-    modalClass.textContent = combateTips[card.classe];
-    modalSubclass.textContent = combateTips[card.subclasse];
+    function showCard(element){
+        const id = element.dataset.cardId;
+        const card = cardsById[id];
 
-    overlay.classList.add("open");
-}
-function fecharModal(){
-    overlay.classList.remove("open");
-}
+        const modalCard = document.getElementById("modal-card");
+        const modalNameCard = document.getElementById("card-nome-modal");
+        const modalImgCard = document.getElementById("card-img-modal");
+        const modalClassCard = document.getElementById("card-classe-modal");
+        const modalTextoCard = document.getElementById("entrada-modal");
+        const modalUltCard = document.getElementById("ult-modal");
 
-const checkbox = document.getElementById("switch-shadow");
+        const modalName = document.getElementById("card-name");
+        const modalRarity = document.getElementById("card-rarity");
+        const modalRarityBonus = document.getElementById("card-rarity-bonus");
 
-checkbox.addEventListener("change", () => {
-    const valor = checkbox.checked ? "1" : "0";
+        const modalClass = document.getElementById("card-class");
+        const modalIcon_ref = document.getElementById("card-icon_ref");
+        const modalSubclass = document.getElementById("card-subclass");
 
-    // redireciona com query param
-    window.location.href = `/inventory?all=${valor}`;
-});
+        modalCard.classList = 'card'
+        modalCard.classList.add(card.raridade);
+        modalCard.classList.add(card.classe.toLowerCase());
+        modalCard.classList.add(card.is_evento);
+        if (card.foil) {
+            modalCard.classList.add('foil');
+        }
+        
+        modalNameCard.textContent = card.nome;
+        modalImgCard.src = "/static/images/" + card.img;
+
+        modalClassCard.textContent = classesTips[card.classe] + " - " + classesTips[card.subclasse];
+        modalTextoCard.textContent = '"' + card.entrada + '"';
+        modalUltCard.textContent = card.ult_nome + ": " + card.ult;
+
+        modalName.textContent = card.nome;
+        modalRarity.textContent = classesTips[card.raridade];
+        if (card.raridade == 'ultra' || card.raridade == 'mitico'){
+            modalRarityBonus.textContent = combateTips[card.raridade]
+        } else {
+            modalRarityBonus.textContent = ''
+        }
+        if (card.icon_ref) {
+            modalIcon_ref.textContent = combateTips[card.icon_ref];
+        } else {
+            modalIcon_ref.textContent = ''
+        }
+
+        modalClass.textContent = combateTips[card.classe];
+        modalSubclass.textContent = combateTips[card.subclasse];
+
+        overlay.classList.add("open");
+    }
+    function fecharModal(){
+        overlay.classList.remove("open");
+    }
+
+    const checkbox = document.getElementById("switch-shadow");
+
+    checkbox.addEventListener("change", () => {
+        const valor = checkbox.checked ? "1" : "0";
+
+        // redireciona com query param
+        window.location.href = `/inventory?all=${valor}`;
+    });
 </script>
 {% endblock %}

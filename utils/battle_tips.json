@@ -42,7 +42,16 @@
         "ataque futuro": "Receberá este dano neste turno.",
         "revitalizar": "Dobra a sua cura neste turno.",
         "descuido": "Causa este dano a si mesmo.",
-        "debilitar": "Corta pela metade o ataque."
+        "debilitar": "Corta pela metade o ataque.",
+
+        "ultra": "Ultra: Armadura x2",
+        "mitico": "Mítico: Fortalece seu Escudo, Ataque e Cura existentes em até x2 dependendo da sua classe.",
+
+        "golden.png": "Arma dourada: Ataque x1",
+        "alter.png": "Arte alternativa: Fortalece a cura existente, ou Escudo x1",
+        "jade.png": "Arma de Esmeralda: Revitalizar (Dobra a sua cura no próximo turno)",
+        "hard_light.png": "Luz sólida: Escudo x1",
+        "losmuertos.png": "Los muertos: Habilidade x1"
     },
     "en":{
         "Tanque": "Tank: Shield x3, Attack x1",
@@ -87,7 +96,16 @@
         "ataque futuro": "Will take this damage this turn.",
         "revitalizar": "Doubles your healing on this turn.",
         "descuido": "Inflicts this damage upon himself",
-        "debilitar": "Halves the attack."
+        "debilitar": "Halves the attack.",
+
+        "ultra": "Ultra: Armor x2",
+        "mitico": "Mythic: Strengthens your existing Shield, Attack, and Heal by up to x2 depending on your class.",
+
+        "golden.png": "Golden Weapon: Attack x1",
+        "alter.png": "Alternative Art: Strengthens existing Heal, or Shield x1",
+        "jade.png": "Jade Weapon: Revitalize (Doubles your healing on the next turn)",
+        "hard_light.png": "Hard Light: Shield x1",
+        "losmuertos.png": "Los muertos: Ability x1"
     }
 
 }

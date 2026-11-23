@@ -143,6 +143,11 @@
 
 #card-info{
   line-height: 1.8;
+  font-size: 18px;
+}
+
+.card-rarity {
+  font-size: 22px;
 }
 
 .close-btn {

@@ -152,9 +152,6 @@ def check_class_and_subclass(carta):
             case 'losmuertos.png':
                 template['habilidade'] += 1
 
-
-
-
     match subclasse:
         case 'Incursor':
             template["golpe veloz"] += 3
