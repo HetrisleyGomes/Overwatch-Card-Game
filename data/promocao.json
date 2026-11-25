@@ -28,40 +28,64 @@
   },
   {
     "id": "Olimpo1",
-    "nome": "Deuses e Monstros do Olimpo pt.1",
-    "description": "Pacote especial com: Ramattra Poseidon, Reinhardt Minotauro, e Roadhog Ciclope. +300 Pontos!",
-    "value": 1,
-    "buy_with_impeto": true,
+    "lang": {
+      "br": {
+        "nome": "Deuses e Monstros do Olimpo pt.1",
+        "description": "Pacote especial com: Ramattra Poseidon, Reinhardt Minotauro, e Roadhog Ciclope."
+      },
+      "en": {
+        "nome": "Gods and Monsters of Olympus Pt. 1",
+        "description": "Special bundle featuring: Ramattra Poseidon, Reinhardt Minotaur, and Roadhog Cyclops."
+      }
+    },
+    "value": 900,
+    "buy_with_impeto": false,
     "inicio": "04-26",
     "fim": "05-06",
     "itens": [
       "ramattra_poseidon",
       "reinhardt_minotauro",
-      "roadhog_ciclope",
-      "points"
+      "roadhog_ciclope"
     ],
-    "was_points": 300
+    "was_points": 0
   },
   {
     "id": "Olimpo2",
-    "nome": "Deuses e Monstros do Olimpo pt.2",
-    "description": "Pacote especial com: Pharah Hades, Mercy vitória alada, e Widowmaker Medusa. +300 Pontos!",
-    "value": 700,
+    "lang": {
+      "br": {
+        "nome": "Deuses e Monstros do Olimpo pt.2",
+        "description": "Pacote especial com: Pharah Hades, Mercy Vitória Alada, e Widowmaker Medusa."
+      },
+      "en": {
+        "nome": "Gods and Monsters of Olympus Pt. 2",
+        "description": "Special bundle featuring: Pharah Hades, Mercy Winged Victory, e Widowmaker Medusa."
+      }
+    },
+    "value": 900,
     "buy_with_impeto": false,
     "inicio": "05-07",
     "fim": "05-17",
     "itens": [
       "pharah_hades",
       "mercy_vitoria_alada",
-      "widowmaker_medusa",
-      "points"
+      "widowmaker_medusa"
     ],
     "was_points": 0
   },
   {
     "id": "aniversaryPack",
-    "nome": "Pacotaço de aniversário Overwatch!",
-    "description": "Pacote especial com: Pharah Hades, Mercy vitória alada, e Widowmaker Medusa. +1000 Pontos!",
+    "lang": {
+      "br": {
+        "nome": "Pacotaço de aniversário Overwatch!",
+        "description": "Pacote especial com: Pharah Hades, Mercy Vitória Alada, e Widowmaker Medusa."
+      },
+      "en": {
+        "nome": "Overwatch anniversary Bundle!",
+        "description": "Special bundle featuring: Pharah Hades, Mercy Winged Victory, e Widowmaker Medusa."
+      }
+    },
+    "nome": "",
+    "description": "Pacote especial com: Bastion, Doomfist, Orisa, Symmetra e Torbjorn com frases clássicas. +1000 Pontos!",
     "value": 3,
     "buy_with_impeto": true,
     "inicio": "05-18",
@@ -101,16 +125,25 @@
   },
   {
     "id": "junkcity_dourados",
-    "nome": "Caos em Nova Junkcity: Dourados",
-    "description": "Pacote especial com: Junkrat dourado, Roadhog dourado e Rainha Junker dourada.",
-    "value": 600,
+    "lang":{
+      "br": {
+        "nome": "Caos em Nova Junkcity: Dourados",
+        "description": "Pacote especial com: Junkrat dourado, Roadhog dourado, Rainha Junker dourada e Wrecking ball dourado."
+          },
+      "en": {
+        "nome": "Chaos in New Junkcity: Golden",
+        "description": "Special bundle featuring: Junkrat, Junkqueen, Roadhog and Wrecking ball all golden."
+          }
+    },
+    "value": 800,
     "buy_with_impeto": false,
     "inicio": "06-10",
     "fim": "06-20",
     "itens": [
       "junkrat_dourado",
       "hoadhog_dourado",
-      "rainha_junker_dourado"
+      "rainha_junker_dourado",
+      "wrecking_ball_dourado"
     ],
     "was_points": 0
   },
@@ -136,21 +169,6 @@
       "hanzo_okami",
       "sombra_cacadora_demonios",
       "widowmaker_cacadora"
-    ],
-    "was_points": 0
-  },
-  {
-    "id": "copa2026",
-    "nome": "Copa 2026",
-    "description": "Pacote especial de copa homenageando os países cede, com: Sojourn dourada do Canadá, Cassidy dourado dos Estados Unidos e Sombra dourada do México.",
-    "value": 600,
-    "buy_with_impeto": false,
-    "inicio": "06-20",
-    "fim": "07-10",
-    "itens": [
-      "sojourn_dourado",
-      "cassidy_dourado",
-      "sombra_dourado"
     ],
     "was_points": 0
   },
