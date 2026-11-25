@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    color: var(--main-dark-color);
 }
 
 .deck-name {
@@ -55,6 +56,22 @@
     width: 32vw;
     height: auto;
     right: 1vw;
+}
+
+/* deck header */
+.mini-deck-header {
+    background-color: var(--main-color);
+    color: var(--light-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 4px 20px 0;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+.deck-counters {
+    display: flex;
+    gap: 10px;
 }
 
 /* DECK */
@@ -131,11 +148,19 @@
     text-align: center;
 }
 
+.mini-card-background {
+    background-color: var(--main-light-color);
+    width: stretch;
+}
+
+.mini-card-background.mitico {
+    background-color: var(--incomum-rarity);
+}
+
 .mini-card img {
     width: 100%;
     height: 74px;
     object-fit: contain;
-    background-color: var(--main-light-color);
     border-radius: 8px 8px 0 0;
 }
 
@@ -161,10 +186,10 @@
     background-color: var(--tanque-type);
 }
 .atacante {
-    background-color: var(--pack-rare-color);
+    background-color: var(--atacante-type);
 }
 .defensor {
-    background-color: var(--blue-extra-color);
+    background-color: var(--defensor-type);
 }
 
 /* RESPONSIVO */

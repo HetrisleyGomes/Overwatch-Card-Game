@@ -4,13 +4,10 @@
 <link rel="stylesheet" href="../static/styles/carta.css">
 
 <div class="deck-container">
-
     <!-- TOPO -->
     <div class="deck-header">
         <h2>Deck Builder</h2>
     </div>
-
-
 
     <!-- CONTEÚDO -->
     <div class="deck-main">
@@ -26,12 +23,19 @@
                         data-nome="{{ carta.nome }}"
                         data-img="{{ url_for('static', filename='images/' + carta.img ) }}"
                         data-classe="{{ carta.classe }}"
-                        data-base="{{ carta.base }}"     
+                        data-base="{{ carta.base }}"
+                        data-raridade="{{ carta.raridade }}"
+                        data-icon_ref="{{ carta.icon_ref }}"  
                         >
                             <div class="card-nome">{{ carta.nome }}</div>
 
                             <div class="card-img">
                                 <img src="{{ url_for('static', filename='images/' + carta.img ) }}" loading="lazy">
+                                {% if carta.icon_ref %}
+                                    <div class="icon_ref" data-tooltip="{{ carta.icon_ref }}">
+                                        <img src="{{ url_for('static', filename='icons/' + carta.icon_ref ) }}" loading="lazy">
+                                    </div>
+                                {% endif %}
                             </div>
 
                             <div class="card-classe">
@@ -50,8 +54,16 @@
 
         <aside class="aside-area">
             <!-- SEU DECK -->
-            <div class="deck-area">
+            <div class="mini-deck-header">
                 <h3>Deck</h3>
+                <div class="deck-counters">
+                    <p>{{ _('tank-counter') }}: <span id="tank-counter"></span></p> |
+                    <p>{{ _('icon-counter') }}: <span id="icon-counter"></span></p> |
+                    <p>{{ _('mitico-counter') }}: <span id="mitico-counter"></span></p>
+                </div>
+            </div>
+
+            <div class="deck-area">
                 
                 <div class="deck-slots">
                     {% for i in range(12) %}
@@ -88,9 +100,11 @@ const deckIds = {{ deck | tojson }};
 
 let deck = [];
 
-// 👉 função de validação
-function podeAdicionar(carta) {
+const tank_counter = document.getElementById("tank-counter")
+const icon_counter = document.getElementById("icon-counter")
+const mitico_counter = document.getElementById("mitico-counter")
 
+function podeAdicionar(carta) {
     // limite total
     if (deck.length >= 12) {
         alert("O deck já tem 12 cartas!");
@@ -98,9 +112,21 @@ function podeAdicionar(carta) {
     }
 
     // limite de tanques
-    const tanques = deck.filter(c => c.classe === "Tanque").length;
-    if (carta.classe === "Tanque" && tanques >= 3) {
+    const tanques = deck.filter(c => c.classe == "Tanque").length;
+    if (carta.classe == "Tanque" && tanques >= 3) {
         alert("Você só pode ter 3 Tanques!");
+        return false;
+    }
+
+    const miticas = deck.filter(c => c.raridade == "mitico").length;
+    if (carta.raridade == "mitico" && miticas >= 3) {
+        alert("Você só pode ter 3 cartas Míticas!");
+        return false;
+    }
+
+    const icon = deck.filter(c => c.icon_ref != "False" ).length;
+    if (carta.icon_ref != false && icon >= 2) {
+        alert("Você só pode ter 2 cartas com Ícone lateral!");
         return false;
     }
 
@@ -113,7 +139,30 @@ function podeAdicionar(carta) {
 
     return true;
 }
-// 👉 clicar na carta
+
+function check_counters(){
+    let inner_tank_counter = 0;
+    let inner_icon_counter = 0;
+    let inner_mitico_counter = 0;
+    for (let i = 0; i < deck.length; i++){
+        let carta = deck[i];
+        console.log(carta)
+        if (carta.classe == "Tanque"){
+            inner_tank_counter += 1
+        }
+        if (carta.raridade == "mitico"){
+            inner_mitico_counter += 1
+        }
+        if (carta.icon_ref != "False"){
+            inner_icon_counter += 1
+        }
+    }
+    tank_counter.innerText = inner_tank_counter.toString();
+    icon_counter.innerText = inner_icon_counter.toString();
+    mitico_counter.innerText = inner_mitico_counter.toString();
+}
+
+// Clicar na carta chama essa funcao
 cards.forEach(card => {
     card.addEventListener("click", () => {
         const carta = {
@@ -121,7 +170,9 @@ cards.forEach(card => {
             nome: card.dataset.nome,
             img: card.dataset.img,
             classe: card.dataset.classe,
-            base: card.dataset.base
+            base: card.dataset.base,
+            raridade: card.dataset.raridade,
+            icon_ref: card.dataset.icon_ref
         };
         if (!podeAdicionar(carta)) return;
 
@@ -142,7 +193,9 @@ cards.forEach(card => {
         mini.classList.add("mini-card");
 
         mini.innerHTML = `
-            <img src="${carta.img}">
+            <div class='mini-card-background ${carta.raridade}'>
+                <img src="${carta.img}">
+            </div>
             <span class="${carta.classe.toLowerCase()}">${carta.nome}</span>
         `;
 
@@ -163,20 +216,20 @@ cards.forEach(card => {
             deck = deck.filter(c => c.id !== carta.id);
             card.classList.remove("selected");
         };
+
+        check_counters();
     });
 });
 
 form.addEventListener("submit", (e) => {
-
     if (deck.length !== 12) {
         e.preventDefault();
         alert("O deck precisa ter exatamente 12 cartas!");
         return;
     }
 
-    // enviar apenas IDs (melhor prática)
+    // enviar apenas IDs
     const deckIds = deck.map(c => c.id);
-
     inputDeck.value = JSON.stringify(deckIds);
 });
 
@@ -184,14 +237,15 @@ form.addEventListener("submit", (e) => {
 let cartasData = {};
 
 function carregamento() {
-
     document.querySelectorAll(".card").forEach(card => {
         cartasData[card.dataset.id] = {
             id: card.dataset.id,
             nome: card.dataset.nome,
             img: card.dataset.img,
             classe: card.dataset.classe,
-            base: card.dataset.base
+            base: card.dataset.base,
+            raridade: card.dataset.raridade,
+            icon_ref: card.dataset.icon_ref
         };
     });
 
@@ -203,9 +257,10 @@ function carregamento() {
 
         const mini = document.createElement("div");
         mini.classList.add("mini-card");
-
         mini.innerHTML = `
-            <img src="${carta.img}">
+            <div class='mini-card-background ${carta.raridade}'>
+                <img src="${carta.img}">
+            </div>
             <span class="${carta.classe.toLowerCase()}">${carta.nome}</span>
         `;
 
@@ -213,7 +268,7 @@ function carregamento() {
         slot.appendChild(mini);
         slot.dataset.empty = "false";
 
-        // 🔥 marcar como selecionada
+        // marcar como selecionada
         const original = document.querySelector(`[data-id="${carta.id}"]`);
         if (original) original.classList.add("selected");
 
@@ -223,7 +278,6 @@ function carregamento() {
             slot.dataset.empty = "true";
 
             deck = deck.filter(c => c.id !== carta.id);
-
             if (original) original.classList.remove("selected");
         };
     });
@@ -233,7 +287,8 @@ function carregamento() {
 
 document.addEventListener("DOMContentLoaded", ()=>{
     if (deckIds.length != 0){
-        carregamento()
+        carregamento();
+        check_counters();
     }
 });
 

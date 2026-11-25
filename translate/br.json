@@ -86,6 +86,9 @@
         "Você só pode ter 3 Tanques!",
         "Você não pode repetir personagens!"
     ],
+    "tank-counter": "Contador de Tanques",
+    "icon-counter": "Contador de Ícones",
+    "mitico-counter": "Contador de Míticos",
 
     "ends in": "Termina em",
     "day": "dia",

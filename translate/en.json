@@ -86,6 +86,9 @@
         "You can only have 3 Tanks!",
         "You cannot use duplicate characters!"
     ],
+    "tank-counter": "Tanks Counter",
+    "icon-counter": "Icons Counter",
+    "mitico-counter": "Mythics Counter",
 
     "ends in": "Ends in",
     "day": "day",
